@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 需求迭代</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Claude Code 需求迭代</h1>
+            <div class="metadata">ID: 69df2e35-3d0c-8398-a197-caa99f58c82b | 2026/4/15 14:22:28</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/15 14:22:25</span>
+                </div>
+                <div class="message-content">我最近好像刷到anthropic的员工还是谁在分享claude code使用经验的时候说，在给claude code提需求的时候要尽量清晰，然后要让claude code在工作的时候形成循环，迭代直到满足要求。这是最省时省力的方式。 你帮我找找是哪个plog</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/15 14:22:29</span>
+                </div>
+                <div class="message-content">你说的这个“<strong>清晰需求 + 让 Claude 自己循环迭代直到满足要求</strong>”的说法，<strong>确实存在，而且基本可以定位来源了</strong>——但不是某一个“单独 viral blog”，而是：<br><br>## ✅ 最接近你描述的官方来源<br>👉 entity["company","Anthropic","AI company"] 官方工程博客：  <br>《Claude Code Best Practices》<br><br>核心思想其实就是你说的那一套，只不过官方表述更“工程化”：<br><br>### 1️⃣ 强调明确 spec（你说的“需求清晰”）<br>- 官方建议：<strong>先让 Claude 把需求“问清楚 → 写成完整 spec”</strong><br>- 示例 prompt（原文就有）：<br>&gt; “Interview me in detail… then write a complete spec” citeturn0search0<br><br>👉 这本质是：<br>&gt; 不要直接干活 → 先结构化需求<br><br>---<br><br>### 2️⃣ 强调 loop / iteration（你说的“循环直到满足”）<br>官方没有用“loop”这个词讲 prompting，但实际机制是一样的：<br><br>- <strong>tight feedback loop（紧密反馈循环）</strong><br>- <strong>course-correct early and often（不断纠偏）</strong><br><br>&gt; “The best results come from tight feedback loops.” citeturn0search0<br><br>并且明确建议：<br>- 发现偏了 → 立刻打断（Esc）<br>- 修正 → 继续执行<br>- 多次失败 → <strong>重开 session + 更好的 prompt</strong><br><br>👉 这其实就是：<br>&gt; human-in-the-loop iterative refinement<br><br>---<br><br>### 3️⃣ 更关键的一点（很多人忽略）<br>官方强调的不是“无限循环”，而是：<br><br>&gt; ❗<strong>循环 + 可验证（verification loop）</strong><br><br>- 加 test / expected output  <br>- 让 Claude 自己 check<br><br>&gt; “Give Claude a way to verify its work… highest leverage thing” citeturn0search0<br><br>👉 这才是你看到别人总结成：<br>&gt; “让它自己迭代直到满足要求”<br><br>的真正来源。<br><br>---<br><br>## 🧠 你刷到的“更像你描述的话术”的来源（高概率）<br>你看到的那种更口语化版本，很可能不是官方，而是：<br><br>### Reddit / Twitter 二次总结（非常接近你描述）<br>比如这个总结：<br><br>&gt; “Verification Loop forces Claude to critique its own output” citeturn0reddit25<br><br>还有：<br><br>&gt; 多 agent / 多轮 revision（5–15 次）效果更好 citeturn0reddit28<br><br>👉 这些内容已经非常接近你说的：<br>- 让 Claude 自己循环<br>- 一轮一轮优化<br>- 直到满意<br><br>---<br><br>## 🎯 结论（帮你还原“你看到的那个 plog”）<br>你看到的内容，大概率是这三层混合：<br><br>1. <strong>源头（官方）</strong><br>   - Anthropic Claude Code Best Practices  <br>   - 核心：spec → feedback loop → verification<br><br>2. <strong>工程师理解版本</strong><br>   - verification loop / self-critique<br>   - multi-agent loop<br><br>3. <strong>社交媒体简化版本（你刷到的）</strong><br>   - “写清楚需求”<br>   - “让 Claude 自己循环直到满足”<br><br>---<br><br>## ⚠️ 一个关键纠正（很多人理解错）<br>如果有人告诉你：<br><br>&gt; “一直让 Claude 自己 loop 就是最优解”<br><br>这是不严谨的。<br><br>官方真实建议是：<br><br>- ❌ 不是无限 loop  <br>- ✅ 是：<br>  - <strong>短反馈循环</strong><br>  - <strong>及时 reset context</strong><br>  - <strong>加入验证机制</strong><br><br>否则会出现：<br>- context 污染<br>- 错误累积<br>- hallucination reinforce<br><br>---<br><br>## 如果你想要更“工程级”的玩法<br>我可以帮你把这套方法 formalize 成一个：<br><br>👉 <strong>Claude Code 最优 prompting workflow（带模板）</strong><br><br>包括：<br>- spec阶段 prompt<br>- execution loop设计<br>- self-check机制<br>- 多agent架构（planner / coder / critic）<br><br>这个比网上那些“经验贴”要系统得多。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/15 14:24:23</span>
+                </div>
+                <div class="message-content">可以写成skill吗，还是说github上已经有了</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/15 14:24:25</span>
+                </div>
+                <div class="message-content">可以写成 skill，而且<strong>这是目前 Claude Code 最值得工程化的一类 skill</strong>。但结论先给你：<br><br>&gt; ✅ <strong>有类似思路的项目（尤其是 loop / agent / self-reflection）</strong>  <br>&gt; ❌ <strong>但没有一个“标准化、工程化、开箱即用”的 Claude Code skill 完整实现你说的这套方法</strong><br><br>换句话说：<strong>你这个方向是有空位的，可以做成一个很有价值的工具。</strong><br><br>---<br><br># 🧠 现状：GitHub 上已有的“相似但不完整”的方案<br><br>## 1️⃣ MCP / Agent 类（接近，但不是 Claude Code 原生 skill）<br>- entity["software","LangChain","LLM orchestration framework"]  <br>- entity["software","AutoGPT","autonomous agent framework"]  <br>- entity["software","CrewAI","multi-agent orchestration framework"]  <br><br>这些已经实现了：<br>- 多 agent（planner / executor / critic）<br>- loop / iteration<br>- self-reflection<br><br>👉 但问题：<br>- ❌ 不贴合 Claude Code workflow<br>- ❌ 没有 terminal-native 体验<br>- ❌ 没有“随写随改代码”的闭环<br><br>---<br><br>## 2️⃣ Claude Code 相关生态（更接近，但还缺核心 loop）<br>你前面提到的：<br>- ssh mcp<br>- skills 插件<br>- 一些 automation repo<br><br>👉 这些基本只解决：<br>- 工具接入<br>- 能力扩展<br><br>但缺的是：<br>&gt; ❗<strong>“如何让 Claude 自己工作”的策略层（strategy layer）</strong><br><br>---<br><br>## 3️⃣ Prompt 模板类（最接近你说的“plog”）<br>GitHub 上很多：<br><br>- “self-reflection prompt”<br>- “critic loop prompt”<br>- “plan-execute-revise”<br><br>👉 但问题：<br>- ❌ 只是 prompt，不是系统<br>- ❌ 没有状态管理（iteration state）<br>- ❌ 没有 stopping condition<br><br>---<br><br># 🚧 为什么现在还没有成熟实现？<br><br>因为你说的这套本质是：<br><br>&gt; <strong>LLM 工作流编排系统（LLM workflow orchestrator）</strong><br><br>而 Claude Code 本身：<br>- 是 REPL + agent<br>- 不是 workflow engine<br><br>所以缺一个中间层：<br><br><pre><code class="language-text">用户
+ ↓
+[你的 skill / orchestrator]
+ ↓
+Claude Code（执行）</code></pre><br><br>---<br><br># 🧩 如果你要做 skill，正确抽象是这个<br><br>我建议你不要做成“prompt skill”，而是做：<br><br>&gt; ✅ <strong>Loop-Oriented Execution Skill（循环执行引擎）</strong><br><br>---<br><br>## 🔧 核心模块设计<br><br>### 1️⃣ Spec Builder（需求结构化）<br><pre><code class="language-text">先问问题 → 输出 structured spec</code></pre><br><br>---<br><br>### 2️⃣ Planner<br><pre><code class="language-text">把 spec → 拆成 steps</code></pre><br><br>---<br><br>### 3️⃣ Executor（Claude Code 本体）<br><pre><code class="language-text">逐步执行</code></pre><br><br>---<br><br>### 4️⃣ Critic（关键）<br><pre><code class="language-text">检查：
+- 是否满足 spec？
+- 是否有 bug？
+- 是否偏离目标？</code></pre><br><br>---<br><br>### 5️⃣ Loop Controller（核心差异点🔥）<br><br><pre><code class="language-text">while not satisfied:
+    execute
+    critique
+    refine</code></pre><br><br>必须加：<br><br>- max_iter（防死循环）<br>- reset策略（context污染）<br>- early stop<br><br>---<br><br>### 6️⃣ Verifier（高价值点）<br>比如：<br>- 单元测试<br>- schema check<br>- diff check<br><br>👉 这就是 Anthropic 说的：<br>&gt; “Give Claude a way to verify its work”<br><br>---<br><br># 🧱 Skill 形态（怎么落地）<br><br>你可以做成三种层级：<br><br>---<br><br>## 🥉 低配版（其实很多人停在这）<br>👉 一个超级 prompt：<br><br><pre><code class="language-text">You are an iterative coding agent...
+Loop until the task is fully solved.
+After each step:
+1. Critique your output
+2. Improve it
+3. Repeat until criteria met</code></pre><br><br>问题：<br>- 不可控<br>- 不稳定<br><br>---<br><br>## 🥈 中配版（推荐起点）<br>👉 skill + 状态管理（JSON）<br><br><pre><code class="language-json">{
+  "goal": "...",
+  "spec": {...},
+  "iterations": [
+    {
+      "plan": "...",
+      "action": "...",
+      "result": "...",
+      "critique": "..."
+    }
+  ]
+}</code></pre><br><br>👉 Claude 每轮更新这个 state<br><br>---<br><br>## 🥇 高配版（你可以做论文/产品的）<br>👉 真正的 orchestrator：<br><br>- 多 agent：<br>  - planner<br>  - coder<br>  - critic<br>- tool calling<br>- test execution<br>- rollback<br><br>👉 这已经接近：<br><br>&gt; Claude Code + AutoGPT 的融合体<br><br>---<br><br># 🚀 给你一个可行项目方向（很值得做）<br><br>## 项目名建议<br>- <code>claude-loop</code><br>- <code>spec-driven-coder</code><br>- <code>iterative-code-agent</code><br>- <code>cc-orchestrator</code><br><br>---<br><br>## 一句话定位<br>&gt; <strong>让 Claude Code 从“会写代码” → “会自己把事情做完”</strong><br><br>---<br><br>## 核心卖点（差异化）<br>你要抓住这三点：<br><br>### 1️⃣ 显式 loop（别人没有）<br>不是 prompt，而是：<br>- 有状态<br>- 可控制<br><br>---<br><br>### 2️⃣ verification-first（关键）<br>不是生成 → 而是：<br>- 生成 → 验证 → 修复<br><br>---<br><br>### 3️⃣ 可中断 + 可恢复<br>符合 Claude Code 的使用习惯<br><br>---<br><br># 📊 我给你的判断（很直接）<br><br>这个方向：<br><br>- ❌ 不是新 idea（学术/agent 领域早有）<br>- ✅ 但在 Claude Code 生态里是<strong>明显缺口</strong><br>- ✅ 非常适合：<br>  - 开源项目<br>  - 论文系统实现<br>  - 产品 MVP<br><br>---<br><br># 如果你要我帮你继续往下做<br><br>我可以直接帮你：<br><br>### 👉 1. 设计一个 <strong>可运行的 skill prompt + state schema</strong><br>（你可以马上用）<br><br>### 👉 2. 或者直接给你：<br>- GitHub repo 结构<br>- CLI + Claude Code 集成方式<br>- 最小可运行 demo<br><br>### 👉 3. 甚至可以上升到论文：<br>&gt; “Spec-driven Iterative Code Generation with Verification Loops”<br><br>你下一步更想走哪条：<br>👉 <strong>实用工具（马上用）</strong>  <br>👉 <strong>开源项目（GitHub）</strong>  <br>👉 <strong>论文级系统设计</strong></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/15 14:26:15</span>
+                </div>
+                <div class="message-content">我大概理解了，skill的话是不是就像是服务于某次静态的调用。而我们需要的是整个服务流？我最近其实在用类似的skills集，叫https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep 。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/15 14:26:18</span>
+                </div>
+                <div class="message-content">你这个理解<strong>基本是对的，但可以再精确一点</strong>——否则后面系统设计会走偏。<br><br>---<br><br># 🧠 一句话校正你的认知<br><br>&gt; ❌ Skill ≠ “静态调用”  <br>&gt; ✅ Skill = “<strong>能力模块（stateless or weak-state）</strong>”  <br>&gt; ❗你要做的是：<strong>workflow / orchestrator（强状态 + 控制流）</strong><br><br>---<br><br># 🔍 用你提到的项目来对比分析<br><br>你在用的这个：<br><br>👉 entity["software","Auto Claude Code Research In Sleep","GitHub project"]  <br><br>本质上已经<strong>非常接近 orchestrator 了</strong>，但它的问题也正好说明了你的判断为什么“差一点点”。<br><br>---<br><br>## 🧩 它现在做的事情（本质）<br><br>这个项目一般是：<br><br><pre><code class="language-text">预定义多个 skills / prompts
+↓
+按顺序执行（research → write → refine）
+↓
+有一定 loop（但比较隐式）</code></pre><br><br>👉 它其实是：<br><br>&gt; <strong>Scripted workflow（脚本式流程）</strong><br><br>---<br><br>## ❗核心问题（也是你下一步的机会）<br><br>### 1️⃣ Loop 是“写死的”，不是“决策驱动的”<br>- 固定轮数 / 固定流程<br>- 没有：<br>  - stop condition<br>  - success criteria<br><br>👉 ❌ 不是真正的 iterative system  <br>👉 ✅ 更像“多轮 prompt pipeline”<br><br>---<br><br>### 2️⃣ 没有显式 state machine<br>它的状态是：<br>- 分散在 prompt 里<br>- 或者上下文里<br><br>👉 缺点：<br>- 不可控<br>- 不可 debug<br>- 不可恢复<br><br>---<br><br>### 3️⃣ 没有 verification loop（关键缺失）<br>也就是 Anthropic 强调的：<br><br>&gt; ❗“让模型有能力判断自己是否完成”<br><br>它现在通常只是：<br>- “再润色一下”<br>- “再改进一下”<br><br>而不是：<br>- ✅ 是否满足 spec？<br>- ✅ 是否正确？<br>- ✅ 是否可以停止？<br><br>---<br><br># 🧠 正确抽象（你现在该建立的模型）<br><br>你可以把整个系统分成三层：<br><br>---<br><br>## 🥉 Layer 1：Skill（你现在用的）<br><br><pre><code class="language-text">- 写代码
+- 查资料
+- 总结</code></pre><br><br>👉 特点：<br>- 原子能力<br>- 可复用<br>- 不关心全局<br><br>---<br><br>## 🥈 Layer 2：Workflow（你现在用的项目）<br><br><pre><code class="language-text">Step1 → Step2 → Step3</code></pre><br><br>👉 特点：<br>- 有流程<br>- 但流程是“写死的”<br><br>---<br><br>## 🥇 Layer 3：Orchestrator（你要做的🔥）<br><br><pre><code class="language-text">while not done:
+    decide_next_action()
+    execute_skill()
+    evaluate()</code></pre><br><br>👉 特点：<br>- 动态决策<br>- 有状态<br>- 有目标函数<br><br>---<br><br># 🔥 关键区别（最重要的一点）<br><br>你现在缺的不是：<br><br>&gt; ❌ 更多 skill  <br>&gt; ❌ 更复杂 prompt  <br><br>而是：<br><br>&gt; ✅ <strong>控制权（control loop）</strong><br><br>---<br><br># 🧪 举个非常具体的对比<br><br>## ❌ 现在的方式（Auto research 项目）<br><br><pre><code class="language-text">1. 搜资料
+2. 写总结
+3. 改进 3 次</code></pre><br><br>问题：<br>- 改 3 次是拍脑袋<br>- 可能第 1 次就够了<br>- 也可能 10 次都不够<br><br>---<br><br>## ✅ 你应该做的（orchestrator）<br><br><pre><code class="language-python">while True:
+    result = generate()
+    score = evaluate(result)
+
+    if score &gt; threshold:
+        break
+
+    result = refine(result)</code></pre><br><br>👉 这里的关键：<br>- 有 <strong>objective function</strong><br>- 有 <strong>stop condition</strong><br><br>---<br><br># 🧠 你可以怎么升级你现在这个项目<br><br>我给你一个<strong>最低成本升级路径（很实用）</strong>：<br><br>---<br><br>## ✅ Step 1：加一个“完成判定器”（最关键）<br><br>新增一个 skill：<br><br><pre><code class="language-text">You are a strict evaluator.
+
+Given:
+- original task
+- current output
+
+Decide:
+1. Is the task fully solved? (yes/no)
+2. What is missing?</code></pre><br><br>👉 这一步就已经把系统从：<br>- pipeline → iterative system<br><br>---<br><br>## ✅ Step 2：引入 loop 控制<br><br><pre><code class="language-text">max_iter = 8
+
+for i in range(max_iter):
+    do_task()
+    evaluate()
+
+    if done:
+        break</code></pre><br><br>---<br><br>## ✅ Step 3：结构化 state（很关键）<br><br>用 JSON 存：<br><br><pre><code class="language-json">{
+  "task": "...",
+  "status": "in_progress",
+  "iterations": [
+    {
+      "output": "...",
+      "evaluation": "...",
+      "score": 0.6
+    }
+  ]
+}</code></pre><br><br>---<br><br>## ✅ Step 4（进阶）：分 agent<br><br>- planner<br>- executor<br>- critic（最重要）<br><br>---<br><br># 🚀 你这个方向的真实价值（直说）<br><br>如果你把这个做好：<br><br>### 👉 在工程上<br>你会得到：<br>- 一个比普通 Claude Code <strong>强一档的自动化系统</strong><br><br>---<br><br>### 👉 在研究上（非常关键）<br>这其实就是：<br><br>&gt; <strong>LLM-based iterative optimization system</strong><br><br>可以直接写成：<br>- self-refinement<br>- test-time compute scaling<br>- agentic loop<br><br>---<br><br># 🎯 最后给你一个判断标准<br><br>以后你可以用一句话判断你系统的层级：<br><br>&gt; ❓“如果我把 prompt 改了，系统行为会不会完全变？”<br><br>- 会 → ❌ 你还是在 prompt engineering  <br>- 不会 → ✅ 你已经在做系统设计（orchestrator）<br><br>---<br><br># 如果你下一步想更具体<br><br>我可以直接帮你做这三件事之一：<br><br>### 1️⃣ 把你现在那个 repo 改造成“带 loop 的版本”（最实用）<br>→ 给你具体改哪里<br><br>### 2️⃣ 设计一个 Claude Code 原生 orchestrator（带 skill 调度）<br><br>### 3️⃣ 抽象成论文框架（如果你想发 paper）<br><br>你选一个，我可以直接给你“可落地方案”，不是概念图那种。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/15 14:33:12</span>
+                </div>
+                <div class="message-content">能不能通过能力的编排来完成，比如我有一个project manager、programmer、conductor、designer等，像公司一样运转，直到满足客户的需求</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/15 14:33:14</span>
+                </div>
+                <div class="message-content">可以，而且你这个思路本质上就是：<br><br>&gt; ✅ <strong>Multi-agent orchestration（多角色编排） + goal-driven loop（目标驱动循环）</strong><br><br>但我先给你一个更“工程真实”的判断：<br><br>&gt; ❗<strong>“像公司一样运转”是对的抽象，但如果不加约束，会直接失控（成本爆炸 + 质量下降）</strong><br><br>所以关键不是“多角色”，而是：<br><br>&gt; 🔥 <strong>谁拥有控制权（control authority）+ 何时停止（termination condition）</strong><br><br>---<br><br># 🧠 正确架构：不是“公司”，而是“有 CEO 的公司”<br><br>你提到的角色：<br><br>- project manager  <br>- programmer  <br>- conductor  <br>- designer  <br><br>👉 这些都可以有，但必须有一个核心：<br><br>&gt; ✅ <strong>Orchestrator（相当于 CEO / runtime）</strong><br><br>---<br><br># 🏗️ 推荐架构（可以直接落地）<br><br>## 🥇 核心控制流（最重要）<br><br><pre><code class="language-python">while not done:
+    task = orchestrator.decide_next_step(state)
+
+    result = agent.execute(task)
+
+    evaluation = critic.evaluate(result)
+
+    state.update(result, evaluation)
+
+    if evaluation.pass:
+        done = True</code></pre><br><br>👉 注意：<br>- ❗不是 agent 自己 loop  <br>- ✅ 是 orchestrator 控制 loop<br><br>---<br><br># 🧩 角色如何设计（你提的那些怎么落地）<br><br>我帮你“工程化重命名”一下，更清晰：<br><br>---<br><br>## 1️⃣ Orchestrator（你说的 conductor，但更强）<br>职责：<br>- 决定下一步干什么<br>- 调用谁<br>- 是否结束<br><br>👉 唯一有：<br>- <strong>全局 state</strong><br>- <strong>决策权</strong><br><br>---<br><br>## 2️⃣ Planner（project manager 的一部分）<br>职责：<br>- 把 goal → 拆任务<br><br>输出：<br><br><pre><code class="language-json">{
+  "tasks": [
+    "design API",
+    "implement function",
+    "write tests"
+  ]
+}</code></pre><br><br>---<br><br>## 3️⃣ Executor（programmer）<br>职责：<br>- 写代码 / 执行任务<br><br>👉 这是 Claude Code 本体<br><br>---<br><br>## 4️⃣ Designer（可选）<br>职责：<br>- UI / system design / architecture<br><br>👉 只在特定任务触发<br><br>---<br><br>## 5️⃣ Critic（🔥最关键）<br>职责：<br>- 判断是否完成<br>- 找问题<br><br>输出：<br><br><pre><code class="language-json">{
+  "pass": false,
+  "issues": ["missing edge case", "wrong logic"]
+}</code></pre><br><br>---<br><br>## 6️⃣ Verifier（建议加）<br>职责：<br>- 客观验证（不是语言判断）<br><br>例如：<br>- 跑 test<br>- check schema<br>- diff<br><br>---<br><br># ⚠️ 最大坑（90%人会踩）<br><br>## ❌ 坑 1：让 agent 自己协作（自由讨论）<br><br><pre><code class="language-text">PM: 我觉得这样
+Engineer: 我觉得那样
+Designer: 我优化一下</code></pre><br><br>👉 结果：<br>- token 爆炸<br>- 无收敛<br>- 幻觉叠加<br><br>---<br><br>## ❌ 坑 2：没有 stop condition<br><br>👉 系统会：<br>- 无限优化<br>- 或过早结束<br><br>---<br><br>## ❌ 坑 3：没有 objective function<br><br>👉 “做好”是不可计算的<br><br>必须变成：<br><br><pre><code class="language-text">- tests pass?
+- spec satisfied?
+- score &gt; threshold?</code></pre><br><br>---<br><br># 🔥 正确范式（你应该追求的）<br><br>你要的其实是：<br><br>&gt; <strong>Spec-driven Multi-Agent Iterative System</strong><br><br>---<br><br>## 核心三件事（缺一不可）<br><br>### 1️⃣ Spec（目标函数）<br><pre><code class="language-json">{
+  "goal": "...",
+  "requirements": [...],
+  "acceptance_criteria": [...]
+}</code></pre><br><br>---<br><br>### 2️⃣ Loop（不是多 agent，而是这个）<br><pre><code class="language-text">Plan → Execute → Critique → Decide → Repeat</code></pre><br><br>---<br><br>### 3️⃣ Termination（关键）<br><pre><code class="language-text">if all criteria satisfied:
+    stop</code></pre><br><br>---<br><br># 🧪 给你一个最小可运行设计（可以直接实现）<br><br>## 👉 agent registry<br><br><pre><code class="language-python">agents = {
+    "planner": Planner(),
+    "coder": Coder(),
+    "critic": Critic()
+}</code></pre><br><br>---<br><br>## 👉 orchestrator<br><br><pre><code class="language-python">def run(task):
+
+    state = init_state(task)
+
+    for i in range(8):
+
+        next_action = decide(state)
+
+        agent = agents[next_action.agent]
+
+        result = agent.run(next_action)
+
+        evaluation = critic.run(result, state)
+
+        state.update(result, evaluation)
+
+        if evaluation.pass:
+            return result
+
+    return state.best_result</code></pre><br><br>---<br><br># 🚀 和你现在项目的关系（关键 insight）<br><br>你现在用的那个：<br><br>👉 Auto-claude-code-research-in-sleep<br><br>是：<br><br>&gt; ✅ 多角色 + pipeline<br><br>你要做的是：<br><br>&gt; 🔥 <strong>多角色 + 动态控制流（decision loop）</strong><br><br>---<br><br># 🎯 最关键的设计决策（我帮你定一下）<br><br>如果你真的要做这个系统，我建议你：<br><br>## ❗不要做“通用公司模拟器”<br><br>而是做：<br><br>&gt; ✅ <strong>面向 coding / research 的 task-specific orchestrator</strong><br><br>否则：<br>- 复杂度爆炸<br>- 无法收敛<br><br>---<br><br># 📌 一句话总结你的问题<br><br>&gt; ✔️ 可以用“角色编排”  <br>&gt; ❗但本质不是“角色”，而是“控制循环”  <br><br>---<br><br># 如果你要继续深入（建议下一步）<br><br>我可以帮你直接做这三种之一：<br><br>### 1️⃣ 👉 给你一个 <strong>Claude Code 可直接用的 multi-agent skill（带 loop）</strong><br>（你可以马上跑）<br><br>### 2️⃣ 👉 把你现在那个 repo 改成 orchestrator 架构（逐文件改）<br><br>### 3️⃣ 👉 设计一个“可以发论文”的系统（含实验设计）<br><br>你现在这个方向，其实已经踩在：<br><br>&gt; <strong>agent systems + LLM test-time scaling</strong><br><br>的交叉点上了，这个是可以做出东西的。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/15 14:42:33</span>
+                </div>
+                <div class="message-content">能不能做一个loop everything的skill，不管是什么任务，claude code都先像那个Anthropic 官方工程博客：<br>《Claude Code Best Practices》那样运作</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/15 14:42:36</span>
+                </div>
+                <div class="message-content">可以做，但我先把关键结论说清楚：<br><br>&gt; ✅ <strong>可以做一个“loop everything”的通用 skill</strong>  <br>&gt; ❗但必须把它设计成：<strong>“受控的通用 orchestrator”</strong>  <br>&gt; ❌ 不能是“无脑循环代理”，否则一定失控（token、时间、质量全崩）<br><br>你想复现的，本质是把 entity["organization","Anthropic","AI company"] 在《Claude Code Best Practices》里的隐含流程<strong>产品化</strong>。<br><br>---<br><br># 🧠 正确抽象（你要做的不是 skill，而是）<br><br>&gt; 🔥 <strong>Meta-Skill（元技能）= 所有任务的统一执行协议（execution protocol）</strong><br><br>它的作用不是“做某件事”，而是：<br><br><pre><code class="language-text">任何任务
+↓
+统一进入：Spec → Plan → Execute → Critique → Verify → Loop
+↓
+直到满足要求</code></pre><br><br>---<br><br># 🏗️ 通用 Loop Skill 的正确架构<br><br>## ✅ 1️⃣ 总入口（统一协议）<br><br>所有任务先被重写为：<br><br><pre><code class="language-json">{
+  "goal": "...",
+  "constraints": [...],
+  "acceptance_criteria": [...]
+}</code></pre><br><br>👉 这一步就是 Anthropic 强调的：<br>&gt; 先把任务变成 <strong>可验证的 spec</strong><br><br>---<br><br>## ✅ 2️⃣ 核心控制循环（必须固定下来）<br><br><pre><code class="language-python">for i in range(max_iter):
+
+    plan = planner(state)
+
+    result = executor(plan)
+
+    critique = critic(result, spec)
+
+    verified = verifier(result)
+
+    if critique.pass and verified.pass:
+        break
+
+    state = update(state)</code></pre><br><br>👉 这就是你要的“loop everything”，但注意：<br><br>- ❗loop 是 <strong>受控的</strong><br>- ❗不是 agent 自己随便 loop<br><br>---<br><br>## ✅ 3️⃣ 必须有的四个 agent（最小集合）<br><br>你说的那些角色可以简化为：<br><br>### ① Planner<br>- 把任务拆解<br><br>### ② Executor（Claude Code 本体）<br>- 执行（写代码 / 查资料）<br><br>### ③ Critic（核心）<br>- 判断“是否完成”<br><br>### ④ Verifier（关键差异点🔥）<br>- 客观验证（不是语言）<br><br>---<br><br># ⚠️ 为什么“通用 loop”很难（核心问题）<br><br>## ❌ 问题 1：不同任务的“完成条件”不同<br><br>- 写代码 → tests pass<br>- 写论文 → 逻辑完整<br>- 查资料 → 覆盖充分<br><br>👉 所以：<br><br>&gt; ❗<strong>你必须动态生成 evaluation criteria</strong><br><br>---<br><br>## ❌ 问题 2：loop 会“过拟合任务描述”<br><br>表现为：<br>- 一直在改 wording<br>- 不真正解决问题<br><br>👉 解决：<br><br>- 引入 <strong>external signal（测试 /工具）</strong><br><br>---<br><br>## ❌ 问题 3：成本不可控<br><br>👉 必须加：<br><br><pre><code class="language-python">max_iter = 6
+budget_tokens = X
+early_stop_if_no_progress = True</code></pre><br><br>---<br><br># 🔥 一个可落地的“通用 skill”设计（给你直接用）<br><br>我给你一个可以直接塞进 Claude Code 的版本：<br><br>---<br><br>## 🧩 Skill: <code>loop_everything</code><br><br><pre><code class="language-text">You are an orchestrator agent that MUST solve the user's task through iterative refinement.
+
+## Phase 1: Specification
+- Rewrite the user's request into:
+  - goal
+  - constraints
+  - acceptance criteria
+- Ask clarification questions if needed
+
+## Phase 2: Iterative Loop (max 6 iterations)
+
+For each iteration:
+
+1. PLAN
+- Decide the next best action
+
+2. EXECUTE
+- Perform the action
+
+3. CRITIQUE
+- Evaluate:
+  - Is the goal satisfied?
+  - What is missing?
+  - What is incorrect?
+
+4. VERIFY (if possible)
+- Use objective checks:
+  - tests
+  - structure
+  - consistency
+
+5. DECIDE
+- If all acceptance criteria met → STOP
+- Else → refine and continue
+
+## Rules:
+- Do NOT loop blindly
+- Stop early if solved
+- Reset approach if stuck for 2 iterations</code></pre><br><br>---<br><br># 🧠 再升级一层（这是关键差异点）<br><br>你如果只做到上面，其实还是：<br><br>&gt; ❌ 强 prompt  <br>&gt; ❌ 弱系统  <br><br>---<br><br>## ✅ 真正的“系统版 loop everything”<br><br>你需要再加两件事：<br><br>---<br><br>### 1️⃣ 显式 state（非常关键）<br><br><pre><code class="language-json">{
+  "iteration": 3,
+  "best_result": "...",
+  "progress_score": 0.7,
+  "history": [...]
+}</code></pre><br><br>👉 防止：<br>- 上下文漂移<br>- 重复错误<br><br>---<br><br>### 2️⃣ progress tracking（很关键）<br><br><pre><code class="language-text">if score 没提升 2 次:
+    change strategy</code></pre><br><br>👉 这是：<br>&gt; <strong>test-time scaling 的核心技巧</strong><br><br>---<br><br># 🚀 你这个东西的本质（讲清楚）<br><br>你想做的其实是：<br><br>&gt; <strong>Universal Task Solver for Claude Code</strong><br><br>如果做对了，它就是：<br><br>- Claude Code 的“操作系统层”<br>- 而不是一个 skill<br><br>---<br><br># 📊 现实评价（很直接）<br><br>## ✅ 能做吗？<br>✔️ 能，而且很有价值<br><br>## ❗难点在哪？<br>- evaluation（最难）<br>- stop condition<br>- cost control<br><br>## 🚀 做出来会怎样？<br>- 比普通 Claude Code <strong>强一个数量级</strong><br>- 接近：<br>  - AutoGPT（但更稳）<br>  - Devin-lite（但更可控）<br><br>---<br><br># 🎯 我建议你的下一步（非常具体）<br><br>不要直接做“通用 everything”，而是：<br><br>## 👉 Phase 1（最稳）<br>做一个：<br><br>&gt; <strong>loop-coding skill（只针对 coding）</strong><br><br>因为：<br>- verification 简单（tests）<br>- 容易闭环<br><br>---<br><br>## 👉 Phase 2<br>再扩展到：<br>- research<br>- writing<br><br>---<br><br># 如果你要继续，我可以直接给你：<br><br>### 1️⃣ 👉 Claude Code 可用的完整 skill（带 state + loop）<br>（不是概念，是真能跑）<br><br>### 2️⃣ 👉 把你现在那个 repo 改成“loop everything 架构”<br><br>### 3️⃣ 👉 或者帮你设计一个“能发论文”的版本（很有潜力）<br><br>你现在这个方向，其实已经非常接近：<br><br>&gt; <strong>下一代 agent 系统的核心范式了</strong></div>
+            </div></div></div></body></html>

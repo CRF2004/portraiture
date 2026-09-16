@@ -1,0 +1,106 @@
+\section{Experiments}
+
+\subsection{Data and metrics}
+
+The benchmark contains 257 replay examples from one user's GPT chat history. The fixed chronological split has 179 train, 38 validation, and 40 test examples. After tightening the \texttt{topic\_shift} relabel rule, the fixed test split remains imbalanced: 17 \emph{follow-up clarification}, 12 \emph{topic shift}, 3 \emph{request how-to}, 3 \emph{compare options}, 2 \emph{provide more context}, 2 \emph{ask for example}, and 1 \emph{ask why}. We also evaluate five random episode splits and five random conversation splits.
+
+We report accuracy and macro-F1. Accuracy measures overall action prediction, but macro-F1 is the primary decision metric because the label distribution is imbalanced and minority actions matter for replay fidelity. Given the small test set ($n=40$), we compute bootstrap 95\% confidence intervals (10\,000 resamples) and McNemar's test with Yates' correction for key pairwise comparisons.
+
+\subsection{Main fixed-split results}
+
+Table~\ref{tab:fixed} shows fixed held-out results with bootstrap 95\% CIs. The Off baseline scores zero because chronological train/test periods differ and Jaccard word overlap lacks CJK-aware tokenization or state hints. The lexical context NN achieves the highest accuracy and macro-F1. We do not detect a significant paired accuracy difference from the learned router (McNemar $\chi^2=3.20$, $p=0.074$), but this is not a non-inferiority result and CIs are wide.
+
+\begin{table}[tbp]
+\centering
+\small
+\begin{tabular}{lcc}
+\toprule
+Variant & Test Accuracy & Test Macro-F1 \\
+\midrule
+Off (no state) & 0.0000 & 0.0000 \\
+Heuristic state hint & 0.0750 & 0.0858 \\
+State prior (majority per state) & 0.2750 & 0.0816 \\
+Learned state router & 0.2250 & 0.3039 \\
+Logistic regression (TF-IDF) & 0.3000 & 0.1729 \\
+Lexical context NN (CJK n-gram) & \textbf{0.3500} & \textbf{0.3839} \\
+\bottomrule
+\end{tabular}
+\caption{Fixed held-out replay results ($n=40$). All methods are leakage-free. 95\% CIs: lexical acc [0.20, 0.50], F1 [0.15, 0.53]; learned acc [0.10, 0.35], F1 [0.09, 0.43]; LR acc [0.18, 0.45], F1 [0.07, 0.28].}
+\label{tab:fixed}
+\end{table}
+
+\subsection{State routing ablation}
+
+We test whether state routing adds signal beyond lexical similarity by running the lexical baseline with and without the learned router. Table~\ref{tab:state_ablation} shows the central result: predictions are 40/40 identical. State hints are either already implied by CJK-aware context similarity or too weak to override nearest-neighbor rankings; earlier state-only gains were artifacts of weak Jaccard word overlap.
+
+\begin{table}[tbp]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Variant & Test Accuracy & Test Macro-F1 \\
+\midrule
+Lexical context NN (no state) & 0.3500 & 0.3839 \\
+Lexical + learned state router & 0.3500 & 0.3839 \\
+\bottomrule
+\end{tabular}
+\caption{State routing ablation. Enabling the learned router produces identical predictions (40/40), so state hints add no marginal signal beyond CJK-aware lexical similarity.}
+\label{tab:state_ablation}
+\end{table}
+
+\subsection{Embedding baselines}
+
+We test whether sentence-transformer embeddings outperform the CJK-aware lexical tokenizer. BGE-small-zh-v1.5 and MiniLM-L12-v2 use cosine similarity on L2-normalized embeddings with the same k-NN voting and state-routing protocol as the lexical baseline.
+
+\begin{table}[tbp]
+\centering
+\begin{tabular}{lccc}
+\toprule
+Variant & Dim & Accuracy & Macro-F1 \\
+\midrule
+Lexical CJK n-gram (production) & — & 0.3500 & 0.3839 \\
+\midrule
+BGE-small-zh-v1.5 & 512 & 0.3000 & 0.0659 \\
+\quad + state router & 512 & 0.3000 & 0.0659 \\
+MiniLM-L12-v2 & 384 & 0.3500 & 0.1602 \\
+\quad + state router & 384 & 0.3500 & 0.1602 \\
+\bottomrule
+\end{tabular}
+\caption{Embedding baselines vs.\ lexical baseline. Both embedding models match or underperform the CJK lexical tokenizer, and state routing adds zero marginal signal (40/40 identical for both models).}
+\label{tab:embedding}
+\end{table}
+
+Neither embedding model exceeds the CJK lexical baseline: MiniLM matches accuracy (0.35) but has much lower macro-F1 (0.16 vs.\ 0.38), while BGE underperforms on both metrics. State routing again adds zero signal (40/40 identical for both models), so the bottleneck is not simply the absence of pretrained semantics; a well-tuned domain tokenizer already captures much of the relevant similarity structure.
+
+\subsection{Random split sensitivity}
+
+Table~\ref{tab:robust} reports mean and standard deviation across five random episode and five random conversation splits. Lexical context retrieval has the best macro-F1 point estimates, while gaps are small under conversation splits. The state-prior baseline obtains moderate accuracy but very low macro-F1, indicating collapse toward dominant labels.
+
+\begin{table}[tbp]
+\centering
+\small
+\begin{tabular}{llcc}
+\toprule
+Split strategy & Variant & Accuracy & Macro-F1 \\
+\midrule
+Episode & Off & $0.1390 \pm 0.1019$ & $0.1065 \pm 0.0615$ \\
+Episode & Heuristic & $0.2214 \pm 0.1559$ & $0.2142 \pm 0.0765$ \\
+Episode & Learned & $0.3669 \pm 0.1202$ & $0.2523 \pm 0.0485$ \\
+Episode & Lexical NN & $\mathbf{0.3754 \pm 0.1029}$ & $\mathbf{0.3102 \pm 0.0597}$ \\
+Episode & State prior & $0.2885 \pm 0.0964$ & $0.0790 \pm 0.0356$ \\
+\midrule
+Conversation & Off & $0.2139 \pm 0.0971$ & $0.1628 \pm 0.0588$ \\
+Conversation & Heuristic & $0.3144 \pm 0.1119$ & $0.2383 \pm 0.0508$ \\
+Conversation & Learned & $0.4035 \pm 0.1644$ & $0.3035 \pm 0.0895$ \\
+Conversation & Lexical NN & $\mathbf{0.4043 \pm 0.1443}$ & $\mathbf{0.3164 \pm 0.0742}$ \\
+Conversation & State prior & $0.2040 \pm 0.0932$ & $0.0593 \pm 0.0364$ \\
+\bottomrule
+\end{tabular}
+\caption{Random split sensitivity. Lexical context retrieval has the highest macro-F1 point estimates after tightening the proxy labels, but variance is high and only five splits are used.}
+\label{tab:robust}
+\end{table}
+
+\subsection{Interpretation and validity}
+
+Six conclusions follow. First, lexical retrieval has the highest point estimates across split strategies and similarity methods. Second, we do not detect a significant paired accuracy gap between learned routing and lexical retrieval at $n=40$ (McNemar $\chi^2=3.20$, $p=0.074$), but uncertainty is large. Third, state routing adds no marginal signal on top of lexical retrieval. Fourth, this null result replicates for both embedding models. Fifth, logistic regression falls between state-only methods and lexical NN. Sixth, wide bootstrap CIs show that point estimates are fragile at this scale.
+
+Episode splits reduce dependence on one favorable chronology, while conversation splits move whole conversations between train and test. Lexical retrieval remains strong under both. The state-prior sanity check mainly improves accuracy (0.275) while macro-F1 stays near zero (0.082), consistent with majority-mode memorization. Reproducibility artifacts are included in the evaluation module.

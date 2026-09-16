@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods部分改进建议</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Methods部分改进建议</h1>
+            <div class="metadata">ID: 6a0c1df6-625c-83ec-9382-ff8b98a87642 | 2026/5/19 16:23:59</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/19 16:23:57</span>
+                </div>
+                <div class="message-content">你觉得目前methods部分会不会写得有点问题？会不会太散了</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/19 16:23:58</span>
+                </div>
+                <div class="message-content">我觉得 <strong>Methods 不是“写错了”，但确实有点散，而且散的原因不是小标题太多，而是它同时承担了太多任务</strong>：介绍方法、解释医学动机、证明算子选择合理、交代模型、交代统计、提前回应审稿质疑。这些内容都重要，但现在放在一起后，读者会觉得主线被打断。fileciteturn0file0<br><br>最明显的问题有 4 个。<br><br><strong>第一，Methods 的主线不够“单线程”。</strong>  <br>你现在 III-A 说四阶段协议，III-B 讲数据集，III-C 讲疾病面板，III-D 讲扰动，III-E 讲指标和证据分层，III-F 讲模型，III-G 讲统计。逻辑上都对，但阅读体验上像是在不断切换视角：一会儿是 protocol，一会儿是 clinical rationale，一会儿是 operator justification，一会儿是 architecture benchmark，一会儿是 statistical testing。读者需要自己拼出“到底一次实验是怎么跑的”。<br><br>我建议 Methods 的核心叙事改成：<br><br>&gt; 我们先定义要审计什么疾病和通路 → 再说明数据从哪里来 → 再说明每个模型怎么训练 → 再说明如何对每个模型做 matched-control perturbation → 再说明怎么算 ASS/CDDC → 最后说明如何定 evidence tier 和统计检验。<br><br>也就是把它写成“实验流水线”，而不是“概念模块集合”。<br><br><strong>第二，Perturbation Design 现在信息量过密，是最散的地方。</strong>  <br>III-D 里面同时讲了：扰动分类、线性插值为什么选、zero-masking 为什么不好、local window、global transformation、每个疾病窗口、样本量、random window、logit averaging、R-peak exclusion。这一节太像把 Supplement 里的技术细节压进正文了。<br><br>尤其是 operator selection 这一段现在有点抢戏。你的主方法其实是 <strong>matched-control pathway audit</strong>，不是“线性插值优于 zero-masking”。但现在 III-D1 写得很重，会让读者误以为论文贡献之一是 operator benchmark。这个当然是重要支撑，但正文里应该压缩成：<br><br>&gt; Primary operator was linear interpolation because the preregistered operator battery showed that zero-masking introduced boundary artifacts and inflated control effects; details are in Supplement.<br><br>正文保留 Fig. 2 和一句关键理由就够了，不要在 Methods 里展开太多“为什么 zero-masking 不行”。否则会稀释主贡献。<br><br><strong>第三，Evidence tiers 的定义有点绕，而且可能被审稿人抓。</strong>  <br>你现在的 Pathway-supported 定义要求 internal 和 external ASS 都 CI lower bound &gt; 0；Evidence-limited 又包括 external CI crosses zero；Not supported 是 ASS≤0。这个思路是对的，但表述有几个风险：<br><br>1. “when available for this model” 会让规则看起来不完全统一。  <br>2. “external evidence is not yet available” 这句话在完整论文里容易显得奇怪，因为你其实对三个 raw-signal architecture 都做了外部验证。  <br>3. tier 是 per architecture-disease pair，但前文又有 disease-level audit panel，读者可能混淆到底 tier 是疾病级别、模型级别，还是 architecture-level consistency。<br><br>建议把规则改得更硬一点：<br><br>| Tier | 建议定义 |<br>|---|---|<br>| Pathway-supported | Internal ASS &gt; 0 且 CI lower bound &gt; 0；External ASS &gt; 0 且 CI lower bound &gt; 0 |<br>| Evidence-limited | Internal ASS &gt; 0 且 CI lower bound &gt; 0，但 external ASS &gt; 0 的 CI 跨 0 |<br>| Not supported | Internal ASS ≤ 0，或 external ASS ≤ 0 |<br><br>如果某些模型没有 external，就不要放进主 tier，或者明确写成 “not tiered”。不要让 “evidence-limited” 同时包含“没有 external”和“external CI 跨零”，这两个语义不一样。<br><br><strong>第四，模型部分 III-F 有点像 Results 的前置铺垫。</strong>  <br>模型架构写得比较详细，但和 pathway audit 的关系没有足够突出。比如 SE-ResNet、Transformer 的结构细节、参数量、patch size、MLP ratio、training protocol 都放在 Methods 正文，技术上没错，但会让 Methods 变成“模型论文”的味道。<br><br>如果你的贡献是 audit protocol，正文里 III-F 可以压缩为：<br><br>&gt; We used four model families to instantiate the audit across three representation levels: summary-feature XGBoost, timing-enriched XGBoost, ResNet, SE-ResNet, and Transformer. ResNet is the primary raw-signal audit model; SE-ResNet and Transformer test architecture sensitivity. Full architectural details are in Appendix.<br><br>然后把具体参数量、kernel size、patch size、optimizer 这些放 Appendix。正文保留一个表格即可。<br><br>我建议 Methods 改成下面这个结构，会更紧：<br><br><pre><code class="language-text">III. METHODS
+
+A. Study Design and Audit Workflow
+- 一句话定义 matched-control pathway audit
+- 图 1 对应四步流程
+- 明确 primary unit: architecture × disease pair
+
+B. Datasets and External Validation
+- CODE-15% internal
+- PTB-XL fold 10 external
+- preprocessing
+- label circularity risk 简短说明，别写太长
+
+C. Disease-Pathway Definitions and Matched Controls
+- 表 I
+- 每个 disease 的 target pathway 和 controls
+- clinical anchoring 简短解释
+
+D. Model Training and Representation Levels
+- XGBoost simple
+- XGBoost Clinical-MVP
+- ResNet / SE-ResNet / Transformer
+- 训练协议简写，细节放 Appendix
+
+E. Matched-Control Perturbation Protocol
+- local window perturbation
+- global transformation
+- primary operator: linear interpolation
+- random-window、R-peak exclusion、sample sizes
+- operator battery 放 Supplement，只保留结论
+
+F. Audit Metrics and Evidence Tiers
+- ΔAUROC
+- ASS
+- CDDC
+- PSS secondary
+- tier rules
+
+G. Statistical Analysis
+- patient-level bootstrap
+- DeLong/permutation secondary
+- BH-FDR for external ASS tests</code></pre><br><br>一句话判断：<strong>Methods 现在不是缺内容，而是“内容过满、层级不够干净”。</strong> 最该改的是把 operator-selection、模型细节、统计细节从主线里降权，让读者始终知道这篇论文的方法核心是：<br><br>&gt; 用医学预定义 target region 和 matched controls，比 target perturbation 是否超过 strongest control，再用 external dataset 检查这个 pathway claim 是否稳定。<br><br>你现在 Methods 需要围绕这句话重新收束。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/19 16:27:09</span>
+                </div>
+                <div class="message-content">你觉得目前methods部分会不会写得有点问题？会不会太散了。或者你给我一个更清晰的大纲</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/19 16:27:19</span>
+                </div>
+                <div class="message-content">我觉得<strong>Methods 不是“完全有问题”，但确实有点散</strong>。核心问题不是内容缺，而是现在把“研究设计、数据集、疾病面板、扰动算子、指标、模型、统计”都写得很完整，但读者读的时候会感觉：<strong>每一节都重要，但主线层级不够清楚</strong>。<br><br>尤其是你现在的 Methods 开头其实已经有一个很好的四阶段框架：疾病面板 → matched-control perturbation → audit metrics / evidence tiers → external validation fileciteturn1file1。问题是后面展开时，又把 operator selection、local/global perturbation、model ladder、external setting、统计检验都铺开了，导致读者会迷路：<strong>到底这篇论文的方法核心是 audit protocol，还是 operator comparison，还是 multi-architecture validation？</strong><br><br>我的判断是：<strong>应该重排 Methods，让它围绕一个主问题展开：如何判定一个模型是否真正使用了疾病相关 ECG pathway。</strong><br><br>---<br><br>## 建议 Methods 改成这个大纲<br><br>### III. METHODS<br><br>### A. Study Design and Audit Logic  <br>这一节只回答：<strong>我们的方法整体在干什么。</strong><br><br>建议写成三句话主线：<br><br>1. 常规 discrimination metrics 不能判断模型是否用了医学上相关的 signal pathway。  <br>2. 所以我们提出 matched-control pathway audit：目标 pathway 的扰动效果必须超过最强 matched control。  <br>3. 最后用外部数据集 frozen-weight transfer 检查 pathway conclusion 是否能跨数据集成立。<br><br>这里保留你现在的四阶段概述，但可以压缩。现在这部分其实写得不错，问题是后面没有始终围绕它组织。<br><br>---<br><br>### B. Datasets and Transfer Setting  <br>这一节放数据集，不要混入太多解释性讨论。<br><br>内容顺序建议：<br><br>1. CODE-15%：训练 / 内部 audit 数据集  <br>2. PTB-XL fold 10：外部验证数据集  <br>3. preprocessing：采样率、长度、lead order、normalization  <br>4. frozen transfer setting：strict frozen / calibrated / oracle  <br>5. label circularity risk：放在最后，作为解释限制<br><br>你现在 Dataset 部分信息是有价值的，尤其 CODE-15% 自动标签和 PTB-XL 心内科医生验证标签的差异，这能支撑 external validation 的必要性 fileciteturn1file0。但建议不要在这里写得太像 Discussion，点到即可。<br><br>---<br><br>### C. Disease-Centered Pathway Definitions  <br>这一节回答：<strong>五个疾病各自的医学 target pathway 和 matched controls 是什么。</strong><br><br>这里建议直接保留 Table I，并在正文里只讲设计原则：<br><br>1. target region 来自临床 ECG 诊断标准  <br>2. matched controls 是解剖相邻但机制不同的区域  <br>3. ambiguous pathway 不强行假设，而是作为 hypothesis-testing<br><br>你现在 Table I 很重要，1AVB、CRBBB、CLBBB、SBRAD、AFIB 的 expected pathway / controls / ambiguous pathway 都已经列清楚了 fileciteturn1file3。但正文可以更短，不要重复表格。<br><br>---<br><br>### D. Perturbation Protocol  <br>这一节是 Methods 的核心，但现在略显杂。建议拆成三个小节：<br><br>#### D1. Primary Perturbation Operator  <br>先讲为什么用 linear interpolation。<br><br>这里可以写：<br><br>- 所有 target 和 controls 使用同一个 operator；<br>- primary operator 是 linear interpolation；<br>- 选择原因是 continuity-preserving，避免 zero-masking 的 hard-boundary artifact；<br>- zero-masking 和 beat-conditioned inpainting 只作为 sensitivity disclosure，不进入 primary tiering。<br><br>这个逻辑你现在已经写了，尤其提到 linear interpolation 保持局部连续性、zero-masking 会引入 hard discontinuities fileciteturn1file3。但我建议不要在 Methods 主文里反复强调“preregistered four-operator battery”的细节，把细节放 Supplement，否则主线会被 operator comparison 抢走。<br><br>#### D2. Local Window Perturbation  <br>放 1AVB、CRBBB、CLBBB、AFIB atrial-window。<br><br>写清楚：<br><br>- 窗口如何相对 R-peak 定义；<br>- 多导联是否同时扰动；<br>- random window 怎么处理；<br>- R-peak 检测失败样本如何排除。<br><br>#### D3. Global Transformation  <br>放 SBRAD 和 AFIB RR regularization。<br><br>这里要特别注意：<strong>SBRAD 是 global target + local controls 的 hybrid design</strong>，AFIB 同时有 atrial-window 和 RR regularization。这个地方如果不讲清楚，读者会觉得 AFIB/SBRAD 的 protocol 和前面的 local perturbation 不是同一种东西。<br><br>---<br><br>### E. Audit Metrics and Evidence Tiers  <br>这一节回答：<strong>扰动之后怎么判定 supported / not supported。</strong><br><br>建议顺序：<br><br>1. ΔAUROC：clean 到 perturbed 的性能下降  <br>2. ASS：target drop − strongest control drop  <br>3. CDDC：internal 和 external 是否同方向  <br>4. evidence tiers：Pathway-supported / Evidence-limited / Not supported  <br>5. bootstrap CI 和 multiplicity control 简单说明<br><br>你现在 ASS 的定义很清楚，而且明确说 positive ASS 表示 target 比所有 matched controls 更 disruptive，negative ASS 表示至少一个 control 更 disruptive fileciteturn1file2。这一节建议保留为 Methods 的“判定规则中心”。<br><br>---<br><br>### F. Models and Representation Ladder  <br>这一节应该降级处理。它是“方法实例化对象”，不是方法核心。<br><br>建议写成：<br><br>1. XGBoost simple features：low-access baseline  <br>2. XGBoost Clinical-MVP：timing-enriched baseline  <br>3. ResNet：primary raw-signal audit model  <br>4. SE-ResNet / Transformer：architecture sensitivity checks  <br>5. 训练设置一句话概括，详细超参放 Appendix<br><br>你现在模型部分写得太细，容易让读者以为这篇论文的贡献之一是模型架构。但其实你想强调的是 audit protocol，不是 ResNet/Transformer 本身。<br><br>---<br><br>### G. Statistical Analysis  <br>这一节可以保留，但压缩。<br><br>建议分三块：<br><br>1. patient-level bootstrap：所有 audit CI 的主方法  <br>2. model performance comparison：DeLong / permutation，作为 secondary  <br>3. external pathway multiplicity：15 个 external ASS tests 的 BH-FDR<br><br>这部分现在不是问题，但长度可以压一点。<br><br>---<br><br>## 更清晰的 Methods 结构版本<br><br>可以直接改成这样：<br><br><pre><code class="language-text">III. METHODS
+
+A. Study Design: Matched-Control Pathway Audit
+   - Core question: does the model rely on disease-relevant ECG pathways?
+   - Four-step audit workflow
+   - Internal audit + external frozen-weight validation
+
+B. Datasets and Transfer Setting
+   - CODE-15% internal cohort
+   - PTB-XL external cohort
+   - preprocessing and frozen transfer protocol
+   - label-source asymmetry and circularity risk
+
+C. Disease-Centered Pathway Definitions
+   - five-disease audit panel
+   - target pathway, matched controls, ambiguous pathways
+   - clinical anchoring principles
+   - Table I
+
+D. Perturbation Protocol
+   D1. Primary operator: linear interpolation
+   D2. Local-window perturbations
+   D3. Global transformations and hybrid protocols
+   D4. matched subset construction and implementation details
+
+E. Audit Metrics and Evidence Classification
+   - ΔAUROC
+   - ASS
+   - CDDC
+   - evidence tiers
+   - bootstrap CI and external multiplicity control
+
+F. Model Instantiations
+   - representation ladder
+   - XGBoost simple / Clinical-MVP
+   - ResNet as primary audit model
+   - SE-ResNet and Transformer as sensitivity checks
+
+G. Statistical Analysis
+   - bootstrap
+   - model comparison tests
+   - BH-FDR for external pathway tests</code></pre><br><br>---<br><br>## 我建议你重点改的地方<br><br>第一，<strong>把 operator comparison 降权</strong>。它很重要，但它是“为什么选 linear interpolation”的支撑，不应该在 Methods 主文里抢走 audit protocol 的主线。现在读者可能会觉得你一会儿在讲 matched-control，一会儿在讲 operator artifact，焦点有点飘。<br><br>第二，<strong>把模型部分压缩</strong>。Methods 里模型细节过多，会让文章看起来像“我训练了很多模型”，而不是“我提出了一个 audit framework”。SE-ResNet 和 Transformer 应该明确写成 architecture sensitivity checks，而不是并列贡献。<br><br>第三，<strong>把 AFIB 和 SBRAD 的 protocol 讲得更层次化</strong>。因为它们不是单纯 local-window perturbation，容易让审稿人觉得方法不统一。你要主动说：local pathway 和 global pathway 对应不同 intervention class，这是设计选择，不是临时拼接。<br><br>第四，<strong>检查 Fig. 1</strong>。你现在 Fig. 1 页面里还有红色批注，而且图中 “Supportive evidence / Narrow support / Transfer-stressed” 这类措辞和正文的三档 evidence tier 不完全一致。这个很危险，Methods 里既然已经定义了 Pathway-supported / Evidence-limited / Not supported，图也必须完全统一。否则审稿人会觉得分类标准前后不一致。<br><br>总的来说：<strong>Methods 不是散到不能用，但现在像“把所有方法材料都放进来了”，还不是“围绕一个审稿人能复述的 protocol 组织起来”。</strong> 你要把它改成：先定义 audit 问题，再定义 disease pathway，再定义 perturbation，再定义判定规则，最后才是模型和统计。这样读起来会清楚很多。</div>
+            </div></div></div></body></html>

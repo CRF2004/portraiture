@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedGemma 中文适配分析</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MedGemma 中文适配分析</h1>
+            <div class="metadata">ID: 6a184bcc-bf2c-83ec-b775-0cf1285e1899 | 2026/5/28 22:06:23</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/28 22:06:21</span>
+                </div>
+                <div class="message-content">medgemma的中文适配能力怎么样？有测过吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/28 22:06:23</span>
+                </div>
+                <div class="message-content">我先核对一下 MedGemma 的官方资料和公开评测，重点看它是否支持中文、有没有中文医学评测结果，而不是凭印象下结论。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/28 22:06:56</span>
+                </div>
+                <div class="message-content">结论：<strong>MedGemma 可以处理中英文混合/中文输入，但目前公开证据不足，不能说它已经“中文医疗适配得很好”。</strong> 更准确的说法是：<strong>有中文使用迹象，但缺少公开、可复现的中文医学基准成绩。</strong><br><br>它的优势来自底座 <strong>Gemma 3</strong>：Gemma 3 官方称支持 140+ 语言；Google 也说 MedGemma 在医学训练后尽量保留了 Gemma 的非英语能力。citeturn326099search0turn392819view0 但 MedGemma 的技术报告公开列出的训练/评测主要是 MedQA、MedMCQA、PubMedQA、MMLU Med、AfriMed-QA、MedXpertQA、AgentClinic 等，基本不是中文医疗场景；报告里我也没看到 CMB、CMExam、MedBench 这类中文医学基准成绩。citeturn691778view1 官方模型卡还明确说，安全评测的一个限制是“主要是英文 prompts”。citeturn980789view0<br><br>有没有“测过中文”？<strong>有一点，但不是严格 benchmark。</strong> Google Research 博文提到台湾长庚纪念医院研究人员认为 MedGemma 对繁体中文医学文献配合良好，也能回答医护人员问题。citeturn392819view0 这说明它在繁中医学文本上有实际探索，但这不是公开排行榜分数，也不等同于大陆中文临床语境、简体中文指南、医保/药品名/中医术语等都可靠。<br><br>我会这样判断：<br><br>| 场景 | 预期表现 |<br>|---|---|<br>| 中文医学术语理解、论文摘要、医学问答草稿 | 可能可用，但要人工校对 |<br>| 繁体中文医学文献/台湾语境 | 有正面早期反馈 |<br>| 简体中文临床指南、药品名、病历结构化 | 需要本地 RAG/微调验证 |<br>| 中文医学考试/CMB/CMExam/MedBench | 目前没看到官方公开成绩 |<br>| 真实诊疗建议 | 不建议裸用 |<br><br>真正要评中文适配，应该跑 <strong>CMB、CMExam、MedBench</strong> 加内部病历/检验报告任务。CMB 论文特别强调，直接翻译英文医学评测会和中国本地医学语境不匹配；MedBench 也专门用中国执医考试、规培考试、主治医师考试和真实临床病例来评估中文医学能力。citeturn205881view0turn205881view1<br><br>我的建议很直接：<strong>MedGemma 可以当中文医疗应用的底座候选，但不要把它当“已完成中文医疗适配”的模型。</strong> 如果你要做中文产品，至少加三件事：中文医学 RAG、本地术语/指南适配、CMB/MedBench/内部病例集回归测试。文本任务优先试 27B；影像+文本任务再看 4B/1.5 多模态。</div>
+            </div></div></div></body></html>

@@ -1,0 +1,75 @@
+{
+  "input": "data/processed/personaconvbench/smoke_replay_examples.jsonl",
+  "splits": {
+    "train": 8782,
+    "val": 976,
+    "test": 3433
+  },
+  "train_users": 1087,
+  "test_users": 320,
+  "test_label_distribution": {
+    "agree_or_affirm": 215,
+    "ask_question": 1335,
+    "cite_evidence": 87,
+    "disagree_or_correct": 310,
+    "elaborate_argument": 7,
+    "humor_or_reaction": 65,
+    "personal_experience": 593,
+    "short_reply": 262,
+    "topic_branch": 559
+  },
+  "results": [
+    {
+      "variant": "majority",
+      "n": 3433,
+      "accuracy": 0.3888727060879697,
+      "macro_f1": 0.06222035794183445,
+      "prediction_distribution": {
+        "ask_question": 3433
+      }
+    },
+    {
+      "variant": "subreddit_prior",
+      "n": 3433,
+      "accuracy": 0.3888727060879697,
+      "macro_f1": 0.06222035794183445,
+      "prediction_distribution": {
+        "ask_question": 3433
+      }
+    },
+    {
+      "variant": "tfidf_nn",
+      "n": 3433,
+      "accuracy": 0.2898339644625692,
+      "macro_f1": 0.1320952325406753,
+      "prediction_distribution": {
+        "agree_or_affirm": 119,
+        "ask_question": 1814,
+        "cite_evidence": 82,
+        "disagree_or_correct": 210,
+        "elaborate_argument": 4,
+        "humor_or_reaction": 10,
+        "personal_experience": 503,
+        "short_reply": 124,
+        "topic_branch": 567
+      }
+    },
+    {
+      "variant": "tfidf_lr",
+      "n": 3433,
+      "accuracy": 0.18555199533935335,
+      "macro_f1": 0.1292862812357977,
+      "prediction_distribution": {
+        "agree_or_affirm": 252,
+        "ask_question": 616,
+        "cite_evidence": 404,
+        "disagree_or_correct": 482,
+        "elaborate_argument": 30,
+        "humor_or_reaction": 242,
+        "personal_experience": 484,
+        "short_reply": 282,
+        "topic_branch": 641
+      }
+    }
+  ]
+}

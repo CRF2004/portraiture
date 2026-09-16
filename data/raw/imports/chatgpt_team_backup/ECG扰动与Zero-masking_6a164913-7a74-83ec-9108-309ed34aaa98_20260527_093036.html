@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG扰动与Zero-masking</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ECG扰动与Zero-masking</h1>
+            <div class="metadata">ID: 6a164913-7a74-83ec-9108-309ed34aaa98 | 2026/5/27 09:30:36</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/27 09:30:35</span>
+                </div>
+                <div class="message-content">"Second, the perturbation operator itself is<br>rarely treated as an auditable methodological variable: the most<br>common choice, zero-masking, introduces hard-boundary ar<br>tifacts whose influence on explanation conclusions is seldom<br>quantified " 这个观点正确吗？能找到支持ECG扰动时通常用zero-masking这个论点的参考文献吗？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/27 09:30:36</span>
+                </div>
+                <div class="message-content">我会把这个判断拆成两部分核查：一是“zero-masking 在 ECG 扰动/遮挡解释里是否常见”，二是“它是否会引入边界或分布外伪影、且常缺少量化审计”。我先找能直接支撑这两点的 ECG/时间序列解释文献。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/27 09:32:30</span>
+                </div>
+                <div class="message-content">可以说<strong>基本正确，但建议把 “the most common choice” 稍微降调</strong>。我能找到强支撑说明 zero-masking/setting-to-zero 是 ECG 扰动解释中<strong>常用、甚至被作者称为 frequently used 的方案</strong>；但如果写成 “the most common choice”，最好有系统综述逐篇统计，否则审稿人可能会追问“most common”的定量依据。<br><br>更稳妥的改写：<br><br>&gt; Second, the perturbation operator itself is rarely treated as an auditable methodological variable. In ECG XAI, zero-masking, or setting signal samples/segments to zero, is a frequently used occlusion baseline; however, it can introduce abrupt jumps to zero and out-of-distribution noise, whose influence on explanation conclusions is often not explicitly quantified.<br><br>可支持的文献如下：<br><br>| 论点 | 可引用文献 |<br>|---|---|<br>| ECG XAI 中确实有人直接把扰动区间设为 0 | Paralič et al. 2023 在 12-lead ECG perturbation-based XAI 中明确写道：对选定扰动区间，“values … are set to zero”。他们还指出 ECG perturbation methods 通过 erasing/masking/changing 部分 ECG 来观察模型输出变化。citeturn577647view0turn577647view1 |<br>| setting values to zero 是“frequently used scheme”，且会引入噪声/突变 | Goettling et al. 2024 的 xECGArch 论文明确把“setting values zero”称为 frequently used scheme，并指出它会引入噪声，因为模型没有在“sudden jumps to zero”的数据上训练；他们还发现 zero perturbation 会使随机扰动也很早、很大地改变 loss，使得很难区分 loss 变化来自真实相关性还是噪声。citeturn462649view2turn462649view1 |<br>| zero vs interpolation 会改变 XAI 方法排名/结论 | 同一篇 xECGArch 论文显示：用 zero perturbation 时，ITG 看起来最好；但用 linear interpolation 时，DTD 更可信。作者明确说这与 zero perturbation 的结果相冲突。citeturn462649view0turn462649view1 |<br>| 生物医学/ECG 时序 occlusion 中也使用 zero-value window occlusion | Resta et al. 2021 的 biomedical signals occlusion 方法包括 ECG/PPG 等时序信号；实验中使用 zero values 或 mean value 作 occlusion，并在 windowed occlusion 中报告“occluding the input signals with zero values”。在 ECG-only PTBDB 分类实验中也比较了 zero 与 mean occlusion。citeturn226558view0turn226558view2 |<br>| “解释结论很少被系统评估/量化”有综述支持 | Salih et al. 2024 对 cardiology XAI evaluation 的综述发现：37% 只用文献结果评价 XAI，11% 用临床专家，11% 用 proxy/statistical analysis，43% 完全没有评估 XAI；文中还说解释评估这一步在当前文献中仍很少应用。citeturn285477view0 |<br><br>所以，你原句的核心判断是站得住的：<strong>zero-masking 在 ECG 扰动解释中常见；它确实可能引入非生理的突变/分布外噪声；并且很多 cardiac/ECG XAI 工作没有充分量化解释可靠性。</strong>  <br>但建议避免直接写 “most common choice”，除非你补一个系统统计。用 <strong>“a frequently used/default occlusion baseline”</strong> 会更严谨。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/27 09:34:41</span>
+                </div>
+                <div class="message-content">你把这个表格给我拓展一下，增加引用格式、url两个字段</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/27 09:34:43</span>
+                </div>
+                <div class="message-content">我会把表格扩成可直接放进论文/文献综述的版本，并把“引用格式”写成接近 APA/IEEE 的完整条目；URL 单独列出，方便你管理文献。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/27 09:34:59</span>
+                </div>
+                <div class="message-content">可以。下面我按 <strong>APA 风格</strong>把表格扩展成“论点—证据—引用格式—URL”的版本。注意：最强的一条是 Goettling et al. 2024，因为它直接把 zero perturbation 称为 <strong>“frequently used scheme of setting values zero”</strong>，并指出会造成 sudden jumps to zero / noise。citeturn432817view0turn432817view1<br><br>| 论点 | 证据/用途 | 引用格式 | URL |<br>|---|---|---|---|<br>| ECG perturbation-based XAI 中直接使用 zero-masking / setting-to-zero | Paralič et al. 在 12-lead ECG 的 perturbation explanation 方法中明确写道：被扰动区间的 values “are set to zero”。适合支撑“ECG 扰动解释中存在 zero-masking 实践”。citeturn466707view2 | Paralič, J., Kolárik, M., Paraličová, Z., Lohaj, O., &amp; Jozefík, A. (2023). *Perturbation-Based Explainable AI for ECG Sensor Data*. <strong>Applied Sciences, 13</strong>(3), 1805. https://doi.org/10.3390/app13031805 | https://www.mdpi.com/2076-3417/13/3/1805 |<br>| zero-masking / setting-to-zero 是 ECG XAI 中 frequently used 的扰动方案 | Goettling et al. 明确称其为 “frequently used scheme of setting values zero”，这是支持“常用”的最直接文献。但它支持的是 <strong>frequently used</strong>，不是严格统计意义上的 <strong>most common</strong>。citeturn432817view0 | Goettling, M., Hammer, A., Malberg, H., et al. (2024). *xECGArch: A trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features*. <strong>Scientific Reports, 14</strong>, 13122. https://doi.org/10.1038/s41598-024-63656-x | https://www.nature.com/articles/s41598-024-63656-x |<br>| zero-masking 会引入 hard-boundary / out-of-distribution artifacts | Goettling et al. 指出 setting values to zero 会引入 noise，因为模型并未在包含 “sudden jumps to zero” 的数据上训练；这直接支持你句子里的 hard-boundary artifact / OOD artifact 论点。citeturn432817view1 | Goettling, M., Hammer, A., Malberg, H., et al. (2024). *xECGArch: A trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features*. <strong>Scientific Reports, 14</strong>, 13122. https://doi.org/10.1038/s41598-024-63656-x | https://www.nature.com/articles/s41598-024-63656-x |<br>| 扰动算子会改变 explanation 结论 / XAI 方法排名 | Goettling et al. 比较 linear interpolation 与 setting-to-zero 后发现，不同 perturbation scheme 会让不同 XAI 方法看起来更优；zero perturbation 下 ITG 表现最好，而 interpolation 下 DTD 更可信。适合支撑“perturbation operator 本身应被审计”。citeturn432817view2turn432817view1 | Goettling, M., Hammer, A., Malberg, H., et al. (2024). *xECGArch: A trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features*. <strong>Scientific Reports, 14</strong>, 13122. https://doi.org/10.1038/s41598-024-63656-x | https://www.nature.com/articles/s41598-024-63656-x |<br>| 生物医学时序信号 occlusion 中常见 zero-value window occlusion，且包括 ECG 实验 | Resta et al. 提出用于 biomedical signals 的 occlusion explanation，说明 windowed occlusion 中使用 zero values；其 PTBDB 分类实验是 ECG-only，并比较 zero 与 mean occlusion。citeturn612012view3 | Resta, M., Monreale, A., &amp; Bacciu, D. (2021). *Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals*. <strong>Entropy, 23</strong>(8), 1064. https://doi.org/10.3390/e23081064 | https://www.mdpi.com/1099-4300/23/8/1064 |<br>| cardiac / ECG XAI 中解释评估不足，很多研究没有系统量化 explanation quality | Salih et al. 对 cardiac AI XAI evaluation 的综述显示，43% 的研究完全没有评估所用 XAI，只有部分研究使用专家、proxy 或统计分析评价解释质量。适合支撑“影响 seldom quantified / rarely audited”。citeturn700087view3turn937226view0 | Salih, A. M., Galazzo, I. B., Gkontra, P., et al. (2024). *A review of evaluation approaches for explainable AI with applications in cardiology*. <strong>Artificial Intelligence Review, 57</strong>, 240. https://doi.org/10.1007/s10462-024-10852-w | https://link.springer.com/article/10.1007/s10462-024-10852-w |<br><br>建议你的原句改成更稳的版本：<br><br>&gt; Second, the perturbation operator itself is rarely treated as an auditable methodological variable: a frequently used choice in ECG occlusion analysis is zero-masking, or setting signal samples/segments to zero, which can introduce hard-boundary and out-of-distribution artifacts; the downstream influence of this design choice on explanation conclusions is often insufficiently quantified.</div>
+            </div></div></div></body></html>

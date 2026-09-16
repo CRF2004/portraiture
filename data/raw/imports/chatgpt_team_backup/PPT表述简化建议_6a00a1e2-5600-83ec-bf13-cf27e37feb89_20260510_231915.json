@@ -1,0 +1,697 @@
+{
+  "title": "PPT表述简化建议",
+  "create_time": 1778426355.053346,
+  "update_time": 1778426821.116942,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a00a1e2-5600-83ec-bf13-cf27e37feb89",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.progressive.com",
+    "physionet.org",
+    "https://www.statefarm.com",
+    "https://github.com/openclaw/openclaw"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "34b09a96-2453-4f59-a1af-c85fe853f380"
+      ]
+    },
+    "34b09a96-2453-4f59-a1af-c85fe853f380": {
+      "id": "34b09a96-2453-4f59-a1af-c85fe853f380",
+      "message": {
+        "id": "34b09a96-2453-4f59-a1af-c85fe853f380",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "c7480e22-edb0-4fc1-9b04-8f5807dee225"
+      ]
+    },
+    "c7480e22-edb0-4fc1-9b04-8f5807dee225": {
+      "id": "c7480e22-edb0-4fc1-9b04-8f5807dee225",
+      "message": {
+        "id": "c7480e22-edb0-4fc1-9b04-8f5807dee225",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "34b09a96-2453-4f59-a1af-c85fe853f380",
+      "children": [
+        "eebc6f45-6639-4f95-884e-0d5e52628aa9"
+      ]
+    },
+    "eebc6f45-6639-4f95-884e-0d5e52628aa9": {
+      "id": "eebc6f45-6639-4f95-884e-0d5e52628aa9",
+      "message": {
+        "id": "eebc6f45-6639-4f95-884e-0d5e52628aa9",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "c7480e22-edb0-4fc1-9b04-8f5807dee225",
+      "children": [
+        "19243eca-3215-4ada-b93c-ecb22d5a30d3"
+      ]
+    },
+    "19243eca-3215-4ada-b93c-ecb22d5a30d3": {
+      "id": "19243eca-3215-4ada-b93c-ecb22d5a30d3",
+      "message": {
+        "id": "19243eca-3215-4ada-b93c-ecb22d5a30d3",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426354.719221,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "841613dc-6e3a-418b-a29b-015d8f557f60",
+          "message_source": null,
+          "turn_exchange_id": "eb8cbf41-7e5d-486d-9727-c8f25e8069a0",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "eebc6f45-6639-4f95-884e-0d5e52628aa9",
+      "children": [
+        "16d74b20-af09-4484-b6c2-32599783edd4",
+        "27f7100c-aea9-4217-9700-26f18db8de28"
+      ]
+    },
+    "16d74b20-af09-4484-b6c2-32599783edd4": {
+      "id": "16d74b20-af09-4484-b6c2-32599783edd4",
+      "message": {
+        "id": "16d74b20-af09-4484-b6c2-32599783edd4",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426354.237,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\"\"患者： 获得个性化、科学的康复方案；明确康复目标与路径，更安心。\r\n家属： 清楚了解康复计划与注意事项；减少照护压力和决策焦虑。\r\n医生： 提升方案制定效率与一致性；基于循证依据，专业可靠更省心。\r\n\"\"你帮我简化一下表述，将用于ppt展示"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "841613dc-6e3a-418b-a29b-015d8f557f60",
+          "message_source": null,
+          "turn_exchange_id": "eb8cbf41-7e5d-486d-9727-c8f25e8069a0",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "19243eca-3215-4ada-b93c-ecb22d5a30d3",
+      "children": [
+        "eb60866e-2d46-4378-bb8e-2b983a912124"
+      ]
+    },
+    "27f7100c-aea9-4217-9700-26f18db8de28": {
+      "id": "27f7100c-aea9-4217-9700-26f18db8de28",
+      "message": {
+        "id": "27f7100c-aea9-4217-9700-26f18db8de28",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426383.247,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\"\"患者： 获得个性化、科学的康复方案；明确康复目标与路径，更安心。\n家属： 清楚了解康复计划与注意事项；减少照护压力和决策焦虑。\n医生： 提升方案制定效率与一致性；基于循证依据，专业可靠更省心。\n\"\"你帮我简化一下表述，将用于ppt展示，句子尽量短且易于理解"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "request_id": "54efd257-0010-420d-b31c-81de9fb90956",
+          "message_source": null,
+          "turn_exchange_id": "3e5ac8fa-ec9d-436e-ac51-bdf49dfa2356",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "19243eca-3215-4ada-b93c-ecb22d5a30d3",
+      "children": [
+        "ce1b42fd-c9d3-471c-9b1a-d81b8aacff15"
+      ]
+    },
+    "eb60866e-2d46-4378-bb8e-2b983a912124": {
+      "id": "eb60866e-2d46-4378-bb8e-2b983a912124",
+      "message": {
+        "id": "eb60866e-2d46-4378-bb8e-2b983a912124",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426354.9628851,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "841613dc-6e3a-418b-a29b-015d8f557f60",
+          "message_type": "next",
+          "turn_exchange_id": "eb8cbf41-7e5d-486d-9727-c8f25e8069a0",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "16d74b20-af09-4484-b6c2-32599783edd4",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "16d74b20-af09-4484-b6c2-32599783edd4",
+      "children": [
+        "a15a6180-6024-475c-b80a-ecb0a772a99e"
+      ]
+    },
+    "ce1b42fd-c9d3-471c-9b1a-d81b8aacff15": {
+      "id": "ce1b42fd-c9d3-471c-9b1a-d81b8aacff15",
+      "message": {
+        "id": "ce1b42fd-c9d3-471c-9b1a-d81b8aacff15",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426385.4504051,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "54efd257-0010-420d-b31c-81de9fb90956",
+          "message_type": "next",
+          "turn_exchange_id": "3e5ac8fa-ec9d-436e-ac51-bdf49dfa2356",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "27f7100c-aea9-4217-9700-26f18db8de28",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "27f7100c-aea9-4217-9700-26f18db8de28",
+      "children": [
+        "0454c728-eb4c-46f5-ad4c-28c3266e592d"
+      ]
+    },
+    "a15a6180-6024-475c-b80a-ecb0a772a99e": {
+      "id": "a15a6180-6024-475c-b80a-ecb0a772a99e",
+      "message": {
+        "id": "a15a6180-6024-475c-b80a-ecb0a772a99e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426354.938452,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "可以压缩成更“PPT友好”的短句版本：\n\n- **患者**：获得个性化康复方案，路径清晰、更安心  \n- **家属**：明确康复计划与注意事项，降低照护与决策压力  \n- **医生**：提升方案制定效率与一致性，循证支持、更省心"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "search_result_groups": [],
+          "request_id": "841613dc-6e3a-418b-a29b-015d8f557f60",
+          "message_type": "next",
+          "turn_exchange_id": "eb8cbf41-7e5d-486d-9727-c8f25e8069a0",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "9d54453b-5030-4761-9a7d-b33f34b595f9",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "eb60866e-2d46-4378-bb8e-2b983a912124",
+      "children": []
+    },
+    "0454c728-eb4c-46f5-ad4c-28c3266e592d": {
+      "id": "0454c728-eb4c-46f5-ad4c-28c3266e592d",
+      "message": {
+        "id": "0454c728-eb4c-46f5-ad4c-28c3266e592d",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426385.481726,
+        "update_time": 1778426436.338665,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "可以改成这种更适合PPT展示的短句版本：\n\n- **患者**：获得个性化康复方案；目标清晰，更安心  \n- **家属**：了解康复计划与注意事项；降低照护与决策压力  \n- **医生**：提升方案制定效率；基于循证，更规范可靠"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "search_result_groups": [],
+          "request_id": "54efd257-0010-420d-b31c-81de9fb90956",
+          "message_type": "next",
+          "turn_exchange_id": "3e5ac8fa-ec9d-436e-ac51-bdf49dfa2356",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "e006df64-89b7-46c7-9548-8e914ee343b9",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "ce1b42fd-c9d3-471c-9b1a-d81b8aacff15",
+      "children": [
+        "e4ebead5-46ac-4ceb-a098-902892d100de"
+      ]
+    },
+    "e4ebead5-46ac-4ceb-a098-902892d100de": {
+      "id": "e4ebead5-46ac-4ceb-a098-902892d100de",
+      "message": {
+        "id": "e4ebead5-46ac-4ceb-a098-902892d100de",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426457.888,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\"\"患者： 获得专业、可信的解答；减少焦虑，建立信任。\r\n家属： 随时获取权威信息；不再反复求证，少走弯路。\r\n医生： 减少重复咨询负担；提升医患沟通效率与质量。\"\"继续"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "7c1537f3-0f55-4d3e-82f5-2d69f16e8135",
+          "message_source": null,
+          "turn_exchange_id": "93f813f6-1c55-4f36-9061-3e0428f3b40e",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0454c728-eb4c-46f5-ad4c-28c3266e592d",
+      "children": [
+        "757034ab-b8b7-4926-af4c-a2cd2dbaebee"
+      ]
+    },
+    "757034ab-b8b7-4926-af4c-a2cd2dbaebee": {
+      "id": "757034ab-b8b7-4926-af4c-a2cd2dbaebee",
+      "message": {
+        "id": "757034ab-b8b7-4926-af4c-a2cd2dbaebee",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426458.694165,
+        "update_time": 1778426497.209788,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "- **患者**：获得专业可信解答；减少焦虑，增强信任  \n- **家属**：随时获取权威信息；减少反复求证  \n- **医生**：减少重复咨询负担；提升沟通效率与质量"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "search_result_groups": [],
+          "request_id": "7c1537f3-0f55-4d3e-82f5-2d69f16e8135",
+          "message_type": "next",
+          "turn_exchange_id": "93f813f6-1c55-4f36-9061-3e0428f3b40e",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "e4ebead5-46ac-4ceb-a098-902892d100de",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "e4ebead5-46ac-4ceb-a098-902892d100de",
+      "children": [
+        "0cf7c714-63e2-4768-8cc5-d175efab840b"
+      ]
+    },
+    "0cf7c714-63e2-4768-8cc5-d175efab840b": {
+      "id": "0cf7c714-63e2-4768-8cc5-d175efab840b",
+      "message": {
+        "id": "0cf7c714-63e2-4768-8cc5-d175efab840b",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426570.974,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\"\"患者： 风险早发现、早干预；避免病情恶化，更安全。\r\n家属： 及时接收风险提醒；更从容应对突发情况。\r\n医生： 主动掌握患者风险状态；优化随访与干预策略。\r\n\"\"继续，改的更简洁有力一点"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "01b656a6-f2f3-4fce-9b96-fc17cdc7b1af",
+          "message_source": null,
+          "turn_exchange_id": "5f20ad31-0f9e-4db6-a473-5010e1a927a9",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "757034ab-b8b7-4926-af4c-a2cd2dbaebee",
+      "children": [
+        "6b63e102-6ade-4996-a3ee-59d94778c034"
+      ]
+    },
+    "6b63e102-6ade-4996-a3ee-59d94778c034": {
+      "id": "6b63e102-6ade-4996-a3ee-59d94778c034",
+      "message": {
+        "id": "6b63e102-6ade-4996-a3ee-59d94778c034",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426571.656863,
+        "update_time": 1778426667.927804,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "- **患者**：风险早发现早干预；降低恶化风险  \n- **家属**：及时接收风险提醒；应对更从容  \n- **医生**：实时掌握风险状态；优化随访干预策略"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "search_result_groups": [],
+          "request_id": "01b656a6-f2f3-4fce-9b96-fc17cdc7b1af",
+          "message_type": "next",
+          "turn_exchange_id": "5f20ad31-0f9e-4db6-a473-5010e1a927a9",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "0cf7c714-63e2-4768-8cc5-d175efab840b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "0cf7c714-63e2-4768-8cc5-d175efab840b",
+      "children": [
+        "d8edfad7-8ee7-4694-bf50-c2c29032b1cf"
+      ]
+    },
+    "d8edfad7-8ee7-4694-bf50-c2c29032b1cf": {
+      "id": "d8edfad7-8ee7-4694-bf50-c2c29032b1cf",
+      "message": {
+        "id": "d8edfad7-8ee7-4694-bf50-c2c29032b1cf",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426780.218,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\"\"\"\"患者： 获得持续动力与心理支持；更容易坚持，康复更有信心。\r\n家属： 理解患者情绪与行为变化；更好支持与陪伴。\r\n医生： 识别依从性风险，精准干预；提升长期康复效果。\r\n\"\"继续\"\""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "11503ec5-db15-42df-ac8c-cb3bd5b1e367",
+          "message_source": null,
+          "turn_exchange_id": "0250d725-84b9-42ac-acc6-cb93b5d4e652",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "6b63e102-6ade-4996-a3ee-59d94778c034",
+      "children": [
+        "cf66e91b-04a8-4341-bd8a-8b8d6384e627"
+      ]
+    },
+    "cf66e91b-04a8-4341-bd8a-8b8d6384e627": {
+      "id": "cf66e91b-04a8-4341-bd8a-8b8d6384e627",
+      "message": {
+        "id": "cf66e91b-04a8-4341-bd8a-8b8d6384e627",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778426781.144601,
+        "update_time": 1778426821.11593,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "- **患者**：获得持续支持与动力；提升坚持与信心  \n- **家属**：理解情绪与行为变化；更好陪伴支持  \n- **医生**：识别依从性风险；精准干预提升效果"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "search_result_groups": [],
+          "request_id": "11503ec5-db15-42df-ac8c-cb3bd5b1e367",
+          "message_type": "next",
+          "turn_exchange_id": "0250d725-84b9-42ac-acc6-cb93b5d4e652",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "f111f38a-e531-43ae-af1e-cb25162c8d10",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "d8edfad7-8ee7-4694-bf50-c2c29032b1cf",
+      "children": []
+    }
+  },
+  "current_node": "cf66e91b-04a8-4341-bd8a-8b8d6384e627"
+}

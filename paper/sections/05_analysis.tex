@@ -1,0 +1,43 @@
+\section{Analysis}
+
+\subsection{Where does learned routing help?}
+
+Table~\ref{tab:diagnosis} summarizes the fixed-split diagnosis after tightening the relabel rule. Rows with extremely small counts are omitted. The main change is that the old \texttt{topic\_shift} bucket no longer swallows same-thread follow-ups. Once those boundary cases are separated out, the learned router matches or exceeds the lexical NN on \texttt{compare\_options} and \texttt{follow\_up\_clarification}. The lexical baseline, however, catches more signal on \texttt{topic\_shift}, \texttt{request\_how\_to}, and \texttt{ask\_for\_example}, which gives it the overall edge.
+
+\begin{table}[tbp]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+& Off & Heuristic & Learned & Lexical NN \\
+\midrule
+\multicolumn{5}{l}{\textit{Per action-label accuracy}} \\
+\midrule
+topic\_shift & 0.000 & 0.083 & 0.417 & \textbf{0.667} \\
+request\_how\_to & 0.000 & 0.000 & 0.000 & \textbf{0.667} \\
+compare\_options & 0.000 & 0.000 & \textbf{0.333} & \textbf{0.333} \\
+follow\_up\_clarification & 0.000 & 0.000 & \textbf{0.118} & 0.059 \\
+ask\_for\_example & 0.000 & 0.000 & 0.000 & \textbf{0.500} \\
+\midrule
+\multicolumn{5}{l}{\textit{Per state-type accuracy}} \\
+\midrule
+active\_problem & 0.000 & 0.045 & \textbf{0.273} & \textbf{0.273} \\
+blocking\_issue & 0.000 & 0.333 & 0.333 & 0.333 \\
+current\_stance & 0.000 & 0.050 & 0.200 & \textbf{0.250} \\
+\bottomrule
+\end{tabular}
+\caption{Fixed-split diagnosis after relabel tightening, broken down by action label and by state type. Counts are small for some rows; this table is diagnostic rather than definitive. Corrected numbers from comprehensive re-evaluation.}
+\label{tab:diagnosis}
+\end{table}
+
+\subsection{Why does state routing add nothing to stronger similarity?}
+
+The ablation in Table~\ref{tab:state_ablation} shows zero marginal gain from state routing on lexical retrieval, and Table~\ref{tab:embedding} replicates this for both embedding models. Two mechanisms explain this. First, CJK-aware character n-gram similarity already captures topic continuity and shift patterns that the state router was designed to detect; pretrained embeddings do not add orthogonal signal at $n=40$. Second, the router is trained on the same data as the k-NN, making its predictions redundant once the similarity metric is strong. To contribute independent value, state routing would need to capture long-range goals or user preferences absent from surface similarity, but those signals are either absent or too noisy at this scale.
+
+Notably, the learned state router alone has a nontrivial macro-F1 point estimate (0.304 vs.\ 0.384 for lexical retrieval), so the problem is not that state routing has no signal under this proxy task — it is that state routing adds nothing \emph{beyond} what CJK-aware lexical similarity already captures.
+
+\subsection{What remains unsolved}
+
+The method remains weak on minority action labels such as \emph{follow-up clarification} and \emph{provide more context}, where user intent is mixed with continuation or background elaboration. These labels are the most brittle part of the proxy space. The state-prior baseline further shows why balanced metrics matter: it obtains moderate accuracy (0.275) by selecting the majority action for each state, but its macro-F1 (0.082) is far lower than either the learned router or the lexical baseline because it fails on minority labels entirely.
+
+The project also includes a discrepancy-driven refinement mechanism, but leakage-free ablation shows that train-only refinement does not improve held-out performance. This prevents an overclaim that iterative profile updates solve generalization. Refinement is best treated as a debugging and error-analysis tool, not as the main paper method.

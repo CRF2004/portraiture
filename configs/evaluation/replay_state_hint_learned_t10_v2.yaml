@@ -1,0 +1,28 @@
+inputs:
+  replay_examples: data/processed/replay/replay_examples.jsonl
+  turns: data/interim/segmented/turns.jsonl
+  messages: data/interim/normalized/messages.jsonl
+
+outputs:
+  predictions_baseline: data/processed/evaluation/state_hint_learned_t10_v2/predictions_baseline.jsonl
+  predictions_state_aware: data/processed/evaluation/state_hint_learned_t10_v2/predictions_state_aware.jsonl
+  predictions_refined: data/processed/evaluation/state_hint_learned_t10_v2/predictions_refined.jsonl
+  divergences_baseline: data/processed/evaluation/state_hint_learned_t10_v2/divergences_baseline.jsonl
+  divergences_state_aware: data/processed/evaluation/state_hint_learned_t10_v2/divergences_state_aware.jsonl
+  divergences_refined: data/processed/evaluation/state_hint_learned_t10_v2/divergences_refined.jsonl
+  refinements: data/processed/evaluation/state_hint_learned_t10_v2/refinements.jsonl
+  profile_snapshots_baseline: data/processed/evaluation/state_hint_learned_t10_v2/profile_snapshots_baseline.jsonl
+  profile_snapshots_refined: data/processed/evaluation/state_hint_learned_t10_v2/profile_snapshots_refined.jsonl
+  persona_facts: data/processed/evaluation/state_hint_learned_t10_v2/persona_facts.jsonl
+  dynamic_states: data/processed/evaluation/state_hint_learned_t10_v2/dynamic_states.jsonl
+  memory_nodes: data/processed/evaluation/state_hint_learned_t10_v2/memory_nodes.jsonl
+  metrics: data/processed/evaluation/state_hint_learned_t10_v2/metrics.jsonl
+
+task:
+  topic_shift_similarity_threshold: 0.08
+
+evaluation:
+  predictor_name: nearest_neighbor_majority_baseline_state_hint_learned_t10_v2
+  run_id: run_replay_eval_state_hint_learned_t10_v2
+  top_k: 3
+  neighbor_similarity_floor: 0.02

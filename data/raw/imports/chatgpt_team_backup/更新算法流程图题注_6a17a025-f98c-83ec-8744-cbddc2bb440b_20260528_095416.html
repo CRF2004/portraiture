@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新算法流程图题注</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>更新算法流程图题注</h1>
+            <div class="metadata">ID: 6a17a025-f98c-83ec-8744-cbddc2bb440b | 2026/5/28 09:54:16</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/28 09:54:13</span>
+                </div>
+                <div class="message-content">fig 1算法流程图的caption还是旧的，但是算法流程图已经更新了。我现在怎么改这个题注</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/28 09:54:15</span>
+                </div>
+                <div class="message-content">你这个 <strong>Fig. 1 题注确实应该跟着新版流程图改</strong>。现在图已经不是单纯“4 stages workflow”，而是上半部分 <strong>general framework</strong>，下半部分 <strong>ECG instantiation in this study</strong>。建议把 caption 改成下面这个版本：<br><br>&gt; <strong>Fig. 1. General matched-control evidence-use audit framework and ECG instantiation.</strong> The framework starts from a medical AI setting consisting of data, a trained model, and domain knowledge. Domain knowledge is used to pre-specify target evidence units and matched controls. The same perturbation operator is then applied to target and control regions, and evidence specificity is evaluated by asking whether the target perturbation exceeds the strongest matched-control effect. Audit metrics quantify target-versus-control degradation and cross-dataset consistency, including ASS and CDDC. Claim-constrained verdicts assign each model–disease pair to one of three tiers: Pathway-supported, Evidence-limited, or Not supported. In this study, the framework is instantiated for 12-lead ECG classification across four evidence forms—PR timing, QRS morphology, rate/rhythm, and atrial activity—using CODE-15% as the internal cohort, PTB-XL fold 10 as the external transfer cohort, and three raw-signal architectures: ResNet, SE-ResNet, and Transformer.<br><br>如果你想保持 IEEE caption 更短，可以用这个精简版：<br><br>&gt; <strong>Fig. 1. General matched-control evidence-use audit framework and ECG instantiation.</strong> The framework combines domain-knowledge-based evidence specification, matched-control perturbation, audit metrics, and claim-constrained verdicts. Target evidence units and matched controls are pre-specified a priori, perturbed with the same operator, and compared using ASS and cross-dataset consistency metrics. In this study, the framework is instantiated for 12-lead ECG classification across PR timing, QRS morphology, rate/rhythm, and atrial activity, using CODE-15% for internal auditing, PTB-XL fold 10 for frozen-weight external transfer, and three raw-signal architectures: ResNet, SE-ResNet, and Transformer.<br><br>我更推荐<strong>精简版</strong>，因为现在正文 Methods 里已经详细解释 Fig. 1 的四个组件，caption 不需要重复太多。你原文 page 5 的图已经显示了五个视觉模块和 ECG instantiation，所以 caption 应该突出“general framework + ECG instantiation”，不要再只说“四个阶段”。fileciteturn0file0</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/28 10:30:30</span>
+                </div>
+                <div class="message-content">JBHI有要求页数限制吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/28 10:30:47</span>
+                </div>
+                <div class="message-content">有。<strong>JBHI 对 Regular Paper 通常是硬性 12 页上限</strong>，而且不是“超过就多交钱就行”的那种；投稿和返修版本都要控制在限制内。页面限制通常包括正文、图表、参考文献，以及放在 manuscript 末尾的 supplementary material。JBHI 旧版作者说明中明确写过：Regular paper 12 页，Review paper 14 页；Regular paper 超过 8 页会产生 mandatory overlength page charges。citeturn386727search9<br><br>另外，IEEE 最新 APC/费用表里，JBHI 的 <strong>Regular paper 8 页以内不产生 overlength charge</strong>，超页费是 <strong>$250/$350 per page</strong> 这一档。citeturn386727search12<br><br>所以你现在这篇要注意：你上传的 PDF 是 <strong>21 页</strong>，明显超过 JBHI Regular Paper 的常规页数要求。fileciteturn0file0<br><br>我的建议很直接：<br><br><strong>目标版面：先压到 12 页以内。</strong>  <br>如果想避免强制超页费，理想是 <strong>8 页以内</strong>，但你这篇内容量很大，8 页基本不现实；更现实的目标是 <strong>12 页内 + 大量 Supplementary Material</strong>。<br><br>优先压缩顺序：<br><br>1. <strong>Related Work 大幅压缩</strong>：现在太长，可以压到 0.8–1 页。<br>2. <strong>Methods 精简流程性重复</strong>：Fig. 1 已经表达流程，正文不要重复图里每个模块。<br>3. <strong>Results 中把大量数值表移到 Supplementary</strong>：正文只保留主表和主图。<br>4. <strong>Supplementary Table S1、S5、S9 等不要放主文</strong>。<br>5. <strong>Discussion 合并小节</strong>：保留核心解释，不要逐结果再复述一遍。<br><br>你的 Fig. 1 caption 也要精简，caption 太长也会吃版面。对于 JBHI，我会把主文控制成：<strong>5 个主图以内、3–4 个主表以内，其他全部 supplementary</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/28 10:31:44</span>
+                </div>
+                <div class="message-content">Supplementary Material不算在页面基数里吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/28 10:32:05</span>
+                </div>
+                <div class="message-content">严格说：<strong>不要默认 Supplementary Material 不算。对 JBHI 来说，风险点在于它怎么提交。</strong><br><br>我查到的 JBHI 相关说明里，规则写得比较严：<strong>Regular paper 的 12 页限制包含 supplementary material</strong>；并且有编辑部回复称，如果 supplementary material 是放在 manuscript 末尾、references 之后，它会计入页数。citeturn437907search1<br><br>但 IEEE 通用作者中心又说明：supplementary files 可以作为<strong>单独文件</strong>上传，并标记为 supplementary。citeturn626879search0 这就造成一个实际区别：<br><br><strong>如果 Supplementary/Appendix 是合并在主 PDF 里：大概率算页数。</strong>  <br><strong>如果是 ScholarOne 里单独上传的 Supplementary Material 文件：通常不算主文页数，但要看 JBHI 当前投稿系统/作者指南是否允许。</strong><br><br>你现在这个 PDF 是 <strong>21 页</strong>，如果这 21 页都是一个主 manuscript PDF，哪怕后面写的是 “Supplementary Material”，也很可能被按总页数处理，风险很高。fileciteturn0file0<br><br>我建议你按最稳妥的做法处理：<br><br>主文 PDF：压到 <strong>12 页以内</strong>，最好 10–12 页。  <br>Supplementary：做成<strong>单独的 supplementary PDF 或 ZIP</strong>，在 ScholarOne 上传时选择 Supplementary Material，不要接在主文 references 后面。  <br>正文里只写：<code>Additional implementation details and extended results are provided in the Supplementary Material.</code><br><br>对于你这篇，Supplementary 里可以放：<br><br>Methods 细节、网络结构、operator comparison battery、所有 S 表、扩展统计、敏感性分析、额外图。主文只保留核心框架、主结果、Fig. 1–4、Table I/主性能表/主外部验证表。<br><br>最安全的一句话：<strong>JBHI 主文不要带 Supplementary 一起凑成一个 21 页 PDF；拆开提交。</strong></div>
+            </div></div></div></body></html>

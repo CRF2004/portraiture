@@ -1,0 +1,2158 @@
+{
+  "title": "GPT-5.4 调试行为分析",
+  "create_time": 1779103672.97998,
+  "update_time": 1779103885.800605,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a0af75b-e654-83ec-8f1e-141054d1dbc5",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://github.com/lmarena/arena-hard-auto",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+    "https://openai.com/index/introducing-gpt-5-4/",
+    "https://lmsys.org/blog/2023-05-03-arena/?utm_source=chatgpt.com",
+    "https://developers.openai.com/api/docs/guides/advanced-usage?utm_source=chatgpt.com",
+    "https://lmsys.org/blog/2023-05-03-arena/",
+    "https://developers.openai.com/api/docs/guides/advanced-usage",
+    "https://developers.openai.com/api/docs/models/gpt-5.4",
+    "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb?utm_source=chatgpt.com",
+    "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb",
+    "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/?utm_source=chatgpt.com",
+    "https://www.openai.com",
+    "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+    "physionet.org",
+    "https://github.com/lmarena/arena-hard-auto?utm_source=chatgpt.com",
+    "https://openai.com/index/introducing-gpt-5-4/?utm_source=chatgpt.com",
+    "https://developers.openai.com/api/docs/models/gpt-5.4?utm_source=chatgpt.com"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "b7ef1107-e3e9-48fa-b1b7-71ebbb6b56f7"
+      ]
+    },
+    "b7ef1107-e3e9-48fa-b1b7-71ebbb6b56f7": {
+      "id": "b7ef1107-e3e9-48fa-b1b7-71ebbb6b56f7",
+      "message": {
+        "id": "b7ef1107-e3e9-48fa-b1b7-71ebbb6b56f7",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "2a07d7ea-2369-4150-90ab-0ff5d3ae0f67"
+      ]
+    },
+    "2a07d7ea-2369-4150-90ab-0ff5d3ae0f67": {
+      "id": "2a07d7ea-2369-4150-90ab-0ff5d3ae0f67",
+      "message": {
+        "id": "2a07d7ea-2369-4150-90ab-0ff5d3ae0f67",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b7ef1107-e3e9-48fa-b1b7-71ebbb6b56f7",
+      "children": [
+        "85235818-c19e-4a6a-bb30-7ae43606f98f"
+      ]
+    },
+    "85235818-c19e-4a6a-bb30-7ae43606f98f": {
+      "id": "85235818-c19e-4a6a-bb30-7ae43606f98f",
+      "message": {
+        "id": "85235818-c19e-4a6a-bb30-7ae43606f98f",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2a07d7ea-2369-4150-90ab-0ff5d3ae0f67",
+      "children": [
+        "d9038d76-56ff-47a3-b601-94b36bf660d9"
+      ]
+    },
+    "d9038d76-56ff-47a3-b601-94b36bf660d9": {
+      "id": "d9038d76-56ff-47a3-b601-94b36bf660d9",
+      "message": {
+        "id": "d9038d76-56ff-47a3-b601-94b36bf660d9",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "85235818-c19e-4a6a-bb30-7ae43606f98f",
+      "children": [
+        "30c9eb36-efdf-4d23-8c93-f9d0cd65426b"
+      ]
+    },
+    "30c9eb36-efdf-4d23-8c93-f9d0cd65426b": {
+      "id": "30c9eb36-efdf-4d23-8c93-f9d0cd65426b",
+      "message": {
+        "id": "30c9eb36-efdf-4d23-8c93-f9d0cd65426b",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103672.650694,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_source": null,
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d9038d76-56ff-47a3-b601-94b36bf660d9",
+      "children": [
+        "e4764d08-6b2a-4137-8c67-bde6f310abc7"
+      ]
+    },
+    "e4764d08-6b2a-4137-8c67-bde6f310abc7": {
+      "id": "e4764d08-6b2a-4137-8c67-bde6f310abc7",
+      "message": {
+        "id": "e4764d08-6b2a-4137-8c67-bde6f310abc7",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103670.84,
+        "update_time": 1779103698.458303,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我在claude code调用gpt5.4去排查bug，结果他老是简单检查一下然后告诉我可能出错的地方，然后问\"如果你愿意，我下一步......\"，明明都没查出问题就停下来问我。gpt5.4就是这样的吗？还是说我用的api中转站注水了"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_source": null,
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "30c9eb36-efdf-4d23-8c93-f9d0cd65426b",
+      "children": [
+        "24d75c26-eb9c-404b-9865-f3b5a308d55c"
+      ]
+    },
+    "24d75c26-eb9c-404b-9865-f3b5a308d55c": {
+      "id": "24d75c26-eb9c-404b-9865-f3b5a308d55c",
+      "message": {
+        "id": "24d75c26-eb9c-404b-9865-f3b5a308d55c",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103672.8220017,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_type": "next",
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "e4764d08-6b2a-4137-8c67-bde6f310abc7",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e4764d08-6b2a-4137-8c67-bde6f310abc7",
+      "children": [
+        "f9f074fa-29b2-4270-823f-c0f463a7858f"
+      ]
+    },
+    "f9f074fa-29b2-4270-823f-c0f463a7858f": {
+      "id": "f9f074fa-29b2-4270-823f-c0f463a7858f",
+      "message": {
+        "id": "f9f074fa-29b2-4270-823f-c0f463a7858f",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103672.8723712,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "chime_version": 1,
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_type": "next",
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "24d75c26-eb9c-404b-9865-f3b5a308d55c",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "24d75c26-eb9c-404b-9865-f3b5a308d55c",
+      "children": [
+        "099cdb34-70c0-44e9-a6be-8344c49b594a"
+      ]
+    },
+    "099cdb34-70c0-44e9-a6be-8344c49b594a": {
+      "id": "099cdb34-70c0-44e9-a6be-8344c49b594a",
+      "message": {
+        "id": "099cdb34-70c0-44e9-a6be-8344c49b594a",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103673.816506,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "4f6da0eb-0edd-4925-9990-8df5f137e4e6"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_type": "next",
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "4f6da0eb-0edd-4925-9990-8df5f137e4e6",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779103672.8370824,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f9f074fa-29b2-4270-823f-c0f463a7858f",
+      "children": [
+        "19ca4978-f667-4012-8488-b9322eb53a90"
+      ]
+    },
+    "19ca4978-f667-4012-8488-b9322eb53a90": {
+      "id": "19ca4978-f667-4012-8488-b9322eb53a90",
+      "message": {
+        "id": "19ca4978-f667-4012-8488-b9322eb53a90",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103672.867645,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我先把这个问题拆开看：一部分是模型行为本身，另一部分是 Claude Code / API 中转站 / prompt 配置导致的“提前停手”。这个判断不能只凭一次体验下结论。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "is_thinking_preamble_message": true,
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_type": "next",
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "099cdb34-70c0-44e9-a6be-8344c49b594a",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "099cdb34-70c0-44e9-a6be-8344c49b594a",
+      "children": [
+        "f95fca4d-db1f-4840-a1df-91e712df8ab5"
+      ]
+    },
+    "f95fca4d-db1f-4840-a1df-91e712df8ab5": {
+      "id": "f95fca4d-db1f-4840-a1df-91e712df8ab5",
+      "message": {
+        "id": "f95fca4d-db1f-4840-a1df-91e712df8ab5",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779103676.4168384,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "site:platform.openai.com/docs GPT-5.4 OpenAI model",
+              "site:platform.openai.com/docs OpenAI models GPT-5.4",
+              "site:openai.com GPT-5.4 model"
+            ]
+          },
+          "chime_version": 1,
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_type": "next",
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "007b07b7-1236-41c7-a307-4d7e86dc9be6",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "19ca4978-f667-4012-8488-b9322eb53a90",
+      "children": [
+        "61b8afa1-28a1-4067-83d0-fbdd98456ebc"
+      ]
+    },
+    "61b8afa1-28a1-4067-83d0-fbdd98456ebc": {
+      "id": "61b8afa1-28a1-4067-83d0-fbdd98456ebc",
+      "message": {
+        "id": "61b8afa1-28a1-4067-83d0-fbdd98456ebc",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103681.136854,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 8s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 8,
+          "reasoning_start_time": 1779103672.8370824,
+          "reasoning_end_time": 1779103681.1293123,
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_type": "next",
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "e648fc3f-43fe-4440-80cd-5dedb6cff266",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f95fca4d-db1f-4840-a1df-91e712df8ab5",
+      "children": [
+        "47438f50-04c0-480a-ace9-41ee5849c88a"
+      ]
+    },
+    "47438f50-04c0-480a-ace9-41ee5849c88a": {
+      "id": "47438f50-04c0-480a-ace9-41ee5849c88a",
+      "message": {
+        "id": "47438f50-04c0-480a-ace9-41ee5849c88a",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1779103680.408429,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "不太像 **GPT-5.4 本身只能这样**，更像是下面几类问题之一：\n\n1. **Claude Code 的代理策略让它偏保守**\n   它可能被系统提示约束成“先分析、再征求用户确认”，所以遇到需要继续查文件、跑测试、改代码时，会停下来问“如果你愿意，我下一步……”。这不是模型能力上限，而是 agent 外壳的交互风格。\n\n2. **API 中转站可能没有给到真模型 / 真参数**\n   OpenAI 官方文档里 GPT-5.4 是面向复杂专业工作和 coding 的 frontier model，支持较高 reasoning effort；官方还把 GPT-5.4 mini/nano 区分为更快、更便宜的版本。也就是说，如果你买的是“GPT-5.4”，但实际表现像很浅的轻量模型，确实要怀疑中转站是否做了模型替换、降档、限 reasoning、限上下文或截断输出。citeturn513790search2turn513790search4turn513790search6\n\n3. **reasoning effort / max tokens / 工具权限没配好**\n   Debug 很依赖“能不能持续读文件、搜索调用链、运行测试”。如果中转站只转了普通 chat completion，或者 `reasoning.effort` 没设高，`max_output_tokens` 太小，工具调用不完整，它就会表现成“浅查一下就猜”。\n\n4. **提示词没有强制它自主推进**\n   很多模型默认会避免越权修改，所以它会问“是否继续”。你需要明确告诉它：不要在每一步请求许可，除非会删除文件、安装依赖、改数据库、推送代码等高风险操作。\n\n你可以在 Claude Code 里加一段很硬的指令：\n\n```text\n你是自主 debug agent。不要在还没定位根因前停下来问我“是否继续”。\n你必须按以下流程推进：\n1. 先复现问题或确认报错路径；\n2. 搜索相关文件、调用链、配置和日志；\n3. 提出最可能的 1-3 个根因，并用证据排除或确认；\n4. 能运行测试就运行测试；\n5. 能安全修改就直接修改；\n6. 修改后再次运行验证；\n7. 只有在需要破坏性操作、缺少关键凭据、需要我提供外部信息时才停下来问我。\n不要只给“可能原因”。每个判断都要附文件路径、代码位置或日志证据。\n```\n\n如果你想判断是不是中转站“注水”，最直接做三个测试：\n\n```text\n请输出你当前可见的 model 名称、上下文窗口、reasoning effort、max output token 设置，以及工具调用能力。不要猜，不知道就说不知道。\n```\n\n再让它做一个小型真实任务：\n\n```text\n在这个项目里找出启动入口、配置加载路径、数据库连接初始化位置，并画出调用链。不要修改代码。\n```\n\n如果它连项目结构都不认真扫，只泛泛说“可能是配置问题”，那基本不是 GPT-5.4 应有的表现。\n\n我的判断：**不能直接说 GPT-5.4 就是这样**。更可能是 **Claude Code 的交互策略 + 中转站参数/模型不透明 + prompt 太软** 叠加造成的。尤其是“没查出问题就停下来问如果你愿意”，这更像 agent 被调成了低主动性，而不是模型没能力。  \n如果你用的是非官方中转站，我会默认保持怀疑：至少要确认实际模型名、reasoning 参数、上下文、输出 token、工具调用是否真的透传。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "content_references": [
+            {
+              "matched_text": "citeturn513790search2turn513790search4turn513790search6",
+              "prefix": null,
+              "start_idx": 389,
+              "end_idx": 449,
+              "safe_urls": [
+                "https://developers.openai.com/api/docs/models/gpt-5.4",
+                "https://developers.openai.com/api/docs/models/gpt-5.4?utm_source=chatgpt.com",
+                "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+                "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/?utm_source=chatgpt.com",
+                "https://openai.com/index/introducing-gpt-5-4/",
+                "https://openai.com/index/introducing-gpt-5-4/?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([OpenAI开发者](https://developers.openai.com/api/docs/models/gpt-5.4?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "GPT-5.4 Model | OpenAI API",
+                  "url": "https://developers.openai.com/api/docs/models/gpt-5.4?utm_source=chatgpt.com",
+                  "attribution": "OpenAI开发者",
+                  "pub_date": null,
+                  "snippet": "A more affordable model for coding and professional work. Compare Try in Playground. Reasoning. Highest. Speed. Medium. Price. $2.5•$15. Input•Output. Input.Read more",
+                  "attribution_segments": null,
+                  "supporting_websites": [
+                    {
+                      "title": "Introducing GPT-5.4",
+                      "url": "https://openai.com/index/introducing-gpt-5-4/?utm_source=chatgpt.com",
+                      "pub_date": null,
+                      "snippet": "5 Mar 2026 — GPT‑5.4 brings together the best of our recent advances in reasoning, coding, and agentic workflows into a single frontier model. It ...Read more",
+                      "attribution": "OpenAI"
+                    },
+                    {
+                      "title": "Introducing GPT-5.4 mini and nano",
+                      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/?utm_source=chatgpt.com",
+                      "pub_date": null,
+                      "snippet": "17 Mar 2026 — GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and ...",
+                      "attribution": "OpenAI"
+                    }
+                  ],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 2
+                    },
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 4
+                    },
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 6
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 1470,
+              "end_idx": 1471,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "GPT-5.4 Model | OpenAI API",
+                  "url": "https://developers.openai.com/api/docs/models/gpt-5.4?utm_source=chatgpt.com",
+                  "attribution": "OpenAI开发者"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://developers.openai.com/api/docs/models/gpt-5.4",
+            "https://developers.openai.com/api/docs/models/gpt-5.4?utm_source=chatgpt.com",
+            "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+            "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/?utm_source=chatgpt.com",
+            "https://openai.com/index/introducing-gpt-5-4/",
+            "https://openai.com/index/introducing-gpt-5-4/?utm_source=chatgpt.com"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "chatgpt.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://chatgpt.com/?utm_source=chatgpt.com",
+                  "title": "ChatGPT",
+                  "snippet": "ChatGPT is your AI chatbot for everyday use. Chat with the most advanced AI to explore ideas, solve problems, and learn faster.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "attribution": "chatgpt.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://chatgpt.com/auth/login?utm_source=chatgpt.com",
+                  "title": "ChatGPT Login",
+                  "snippet": "Log in or sign up. Continue with Google. Continue with Apple. Continue with phone. OR. Continue. Try it first. ChatGPT. Terms of use|Privacy policy.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "attribution": "chatgpt.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://chatgpt.com/gpts?utm_source=chatgpt.com",
+                  "title": "Explore GPTs",
+                  "snippet": "Discover and create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "attribution": "chatgpt.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "openai.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://platform.openai.com/docs/models/whisper?utm_source=chatgpt.com",
+                  "title": "Page not found | OpenAI API",
+                  "snippet": "Designing delightful frontends with GPT-5.4 · From prompts to products: One year of Responses · Using skills to accelerate OSS maintenance · Building frontend ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/gpt-5/?utm_source=chatgpt.com",
+                  "title": "GPT-5 is here",
+                  "snippet": "As a coding collaborator, GPT‑5 tackles complex tasks end-to-end and delivers more readily usable code, better design, and is more effective at debugging.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/introducing-gpt-5-4/?utm_source=chatgpt.com",
+                  "title": "Introducing GPT-5.4",
+                  "snippet": "5 Mar 2026 — GPT‑5.4 brings together the best of our recent advances in reasoning, coding, and agentic workflows into a single frontier model. It ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/?utm_source=chatgpt.com",
+                  "title": "Introducing GPT-5.4 mini and nano",
+                  "snippet": "17 Mar 2026 — GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini?utm_source=chatgpt.com",
+                  "title": "GPT-5.4 mini Model | OpenAI API",
+                  "snippet": "GPT-5.4 mini brings the strengths of GPT-5.4 to a faster, more efficient model designed for high-volume workloads. Learn more in our latest model guide.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/chatgpt/?utm_source=chatgpt.com",
+                  "title": "Introducing ChatGPT",
+                  "snippet": "30 Nov 2022 — We've trained a model called ChatGPT which interacts in a conversational way. The dialogue format makes it possible for ChatGPT to answer ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://developers.openai.com/api/docs/models/gpt-5.4-pro?utm_source=chatgpt.com",
+                  "title": "GPT-5.4 pro Model | OpenAI API",
+                  "snippet": "GPT-5.4 pro uses more compute to think harder and provide consistently better answers. GPT-5.4 pro is available in the Responses API only to enable support ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/introducing-gpt-5-5/?utm_source=chatgpt.com",
+                  "title": "Introducing GPT-5.5",
+                  "snippet": "23 Apr 2026 — Introducing GPT-5.5, our smartest model yet—faster, more capable, and built for complex tasks like coding, research, and data analysis ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense/?utm_source=chatgpt.com",
+                  "title": "Trusted access for the next era of cyber defense",
+                  "snippet": "14 Apr 2026 — This is a version of GPT‑5.4 which lowers the refusal boundary for legitimate cybersecurity work and enables new capabilities for advanced ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/gpt-4/?utm_source=chatgpt.com",
+                  "title": "GPT-4",
+                  "snippet": "It can generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user's ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://academy.openai.com/public/clubs/work-users-ynjqu/resources/latest-model?utm_source=chatgpt.com",
+                  "title": "Introducing GPT-5.3 Instant, GPT-5.4 Thinking, and ...",
+                  "snippet": "5 days ago — GPT-5.4 Thinking is designed for work that's harder to do in a single pass: multi-step reasoning, long context, tool-heavy workflows, and ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://developers.openai.com/api/docs/models/gpt-5.4-nano?utm_source=chatgpt.com",
+                  "title": "GPT-5.4 nano Model | OpenAI API",
+                  "snippet": "GPT-5.4 nano is designed for tasks where speed and cost matter most like classification, data extraction, ranking, and sub-agents.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/gpt-5-4-thinking-system-card/?utm_source=chatgpt.com",
+                  "title": "GPT-5.4 Thinking System Card",
+                  "snippet": "5 Mar 2026 — GPT‑5.4 Thinking is the latest reasoning model in the GPT‑5 series, and explained in our blog⁠. The comprehensive safety mitigation approach ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://developers.openai.com/api/docs/models/all?utm_source=chatgpt.com",
+                  "title": "All models | OpenAI API",
+                  "snippet": "Version of GPT-5.5 that produces smarter and more precise responses. GPT-5.4. A more affordable model for coding and professional work.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 20
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer?utm_source=chatgpt.com",
+                  "title": "Generative pre-trained transformer",
+                  "snippet": "A generative pre-trained transformer (GPT) is a type of large language model (LLM) that is widely used in generative artificial intelligence chatbots.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "attribution": "wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "google.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://cloud.google.com/discover/what-is-gpt?utm_source=chatgpt.com",
+                  "title": "What is GPT and how does it work?",
+                  "snippet": "4 Dec 2025 — GPT, or a generative pre-trained transformer, is a type of large language model (LLM) that utilizes deep learning to produce human-like text.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "attribution": "google.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "ibm.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.ibm.com/think/topics/gpt?utm_source=chatgpt.com",
+                  "title": "What is GPT (generative pretrained transformer)?",
+                  "snippet": "Generative pretrained transformers (GPTs) are a family of large language models (LLMs) based on a transformer deep learning architecture.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": null,
+                  "attribution": "ibm.com"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "request_id": "d12c4cfd-8950-49c1-b67c-b2168d5f7a72",
+          "message_type": "next",
+          "turn_exchange_id": "584eec23-627d-4b83-93f5-438d32660f75",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "61b8afa1-28a1-4067-83d0-fbdd98456ebc",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "61b8afa1-28a1-4067-83d0-fbdd98456ebc",
+      "children": [
+        "f5d73673-90b2-4f6c-9450-632de19899e3"
+      ]
+    },
+    "f5d73673-90b2-4f6c-9450-632de19899e3": {
+      "id": "f5d73673-90b2-4f6c-9450-632de19899e3",
+      "message": {
+        "id": "f5d73673-90b2-4f6c-9450-632de19899e3",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103772.273,
+        "update_time": 1779103814.875752,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "怎么去检查中转站是否有注水呢？我直接问的话它确实会说自己是gpt5.4。网上有相关的工具吗"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "96b75750-cb6a-4a40-92b3-9175779e8168",
+          "message_source": null,
+          "turn_exchange_id": "00919e67-4560-4da5-8301-d55cbb1969bd",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "47438f50-04c0-480a-ace9-41ee5849c88a",
+      "children": [
+        "34321b2c-519f-4950-830b-d885cdd51b87"
+      ]
+    },
+    "34321b2c-519f-4950-830b-d885cdd51b87": {
+      "id": "34321b2c-519f-4950-830b-d885cdd51b87",
+      "message": {
+        "id": "34321b2c-519f-4950-830b-d885cdd51b87",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103774.593976,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "05a2dc19-a2ba-46d9-ad6e-8e209ec8577f"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "96b75750-cb6a-4a40-92b3-9175779e8168",
+          "message_type": "next",
+          "turn_exchange_id": "00919e67-4560-4da5-8301-d55cbb1969bd",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "05a2dc19-a2ba-46d9-ad6e-8e209ec8577f",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779103774.4596615,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f5d73673-90b2-4f6c-9450-632de19899e3",
+      "children": [
+        "2403611a-8d2f-401a-ab04-4604788c5ed1"
+      ]
+    },
+    "2403611a-8d2f-401a-ab04-4604788c5ed1": {
+      "id": "2403611a-8d2f-401a-ab04-4604788c5ed1",
+      "message": {
+        "id": "2403611a-8d2f-401a-ab04-4604788c5ed1",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103773.855464,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我会按“能验证什么、不能验证什么”来讲。模型自称基本没有证明力，真正有用的是看 API 返回元数据、行为指纹、延迟/价格/上下文/工具能力这些外部证据。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "is_thinking_preamble_message": true,
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "96b75750-cb6a-4a40-92b3-9175779e8168",
+          "message_type": "next",
+          "turn_exchange_id": "00919e67-4560-4da5-8301-d55cbb1969bd",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "34321b2c-519f-4950-830b-d885cdd51b87",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "34321b2c-519f-4950-830b-d885cdd51b87",
+      "children": [
+        "f5ad5da2-3c27-44e7-9a15-59e49c66e844"
+      ]
+    },
+    "f5ad5da2-3c27-44e7-9a15-59e49c66e844": {
+      "id": "f5ad5da2-3c27-44e7-9a15-59e49c66e844",
+      "message": {
+        "id": "f5ad5da2-3c27-44e7-9a15-59e49c66e844",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779103776.8829916,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "LLM API proxy model verification tool detect model spoofing benchmark",
+              "OpenAI API response model field usage include usage tokens system_fingerprint",
+              "LLM model identification benchmark tool chatbot arena style API"
+            ]
+          },
+          "chime_version": 1,
+          "request_id": "96b75750-cb6a-4a40-92b3-9175779e8168",
+          "message_type": "next",
+          "turn_exchange_id": "00919e67-4560-4da5-8301-d55cbb1969bd",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "603483c1-9216-4b35-a064-5804f1d3bcbe",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2403611a-8d2f-401a-ab04-4604788c5ed1",
+      "children": [
+        "1198d8c2-49f9-4800-a1df-f6f9dd6b075e"
+      ]
+    },
+    "1198d8c2-49f9-4800-a1df-f6f9dd6b075e": {
+      "id": "1198d8c2-49f9-4800-a1df-f6f9dd6b075e",
+      "message": {
+        "id": "1198d8c2-49f9-4800-a1df-f6f9dd6b075e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103779.509043,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 5s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 5,
+          "reasoning_start_time": 1779103774.4596615,
+          "reasoning_end_time": 1779103779.5038087,
+          "request_id": "96b75750-cb6a-4a40-92b3-9175779e8168",
+          "message_type": "next",
+          "turn_exchange_id": "00919e67-4560-4da5-8301-d55cbb1969bd",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "babe44b4-2ff8-4722-b252-278c345b6b76",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f5ad5da2-3c27-44e7-9a15-59e49c66e844",
+      "children": [
+        "d8726e3f-424c-443e-9ef8-af64d81feda4"
+      ]
+    },
+    "d8726e3f-424c-443e-9ef8-af64d81feda4": {
+      "id": "d8726e3f-424c-443e-9ef8-af64d81feda4",
+      "message": {
+        "id": "d8726e3f-424c-443e-9ef8-af64d81feda4",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1779103778.849753,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "可以查，但要先说清楚：**没有一个工具能 100% 证明“这一定是真 GPT-5.4”**。因为中转站可以伪造 `model` 字段、包装返回格式、甚至转发给别的模型后再改字段。你能做的是做一组“验货”：查元数据、查参数透传、查上下文、查计费、查行为表现。证据越多，可信度越高。\n\n## 1. 直接问模型“你是谁”没用\n\n这个基本没有证明力。任何模型只要系统提示里写“你是 GPT-5.4”，它就会这么回答。\n\n真正应该看的是：\n\n```json\nmodel\nusage\nsystem_fingerprint\nfinish_reason\nreasoning/output token usage\n响应延迟\n上下文长度\n工具调用表现\n价格是否合理\n```\n\nOpenAI 官方 API 返回里通常会有 `usage` 字段用于 token 统计；一些接口还会提供类似 `system_fingerprint` 的后端指纹，用来标识模型权重/基础设施组合变化。citeturn875513search1turn875513search18\n\n## 2. 先写个最小测试脚本，看返回原始 JSON\n\n不要只看 Claude Code 里的聊天内容，要直接打中转站 API，看它返回什么。\n\n```python\nfrom openai import OpenAI\nimport json, time\n\nclient = OpenAI(\n    api_key=\"你的中转站key\",\n    base_url=\"https://你的中转站地址/v1\"\n)\n\nstart = time.time()\n\nresp = client.chat.completions.create(\n    model=\"gpt-5.4\",\n    messages=[\n        {\"role\": \"system\", \"content\": \"You are a careful debugging assistant.\"},\n        {\"role\": \"user\", \"content\": \"Return exactly this JSON: {\\\"ok\\\":true}. Do not add anything else.\"}\n    ],\n    temperature=0,\n    max_tokens=100,\n)\n\nprint(\"latency:\", time.time() - start)\nprint(json.dumps(resp.model_dump(), indent=2, ensure_ascii=False))\n```\n\n重点看：\n\n```text\nmodel 是否真返回 gpt-5.4\nusage 是否完整\nprompt_tokens / completion_tokens 是否合理\nsystem_fingerprint 是否存在\nfinish_reason 是否经常 length\n有没有奇怪字段缺失\n```\n\n如果连 `usage` 都没有、返回格式不标准、`model` 永远只是你请求的那个字符串，那就要小心。它可能只是兼容 OpenAI 格式，不代表真的走了 OpenAI。\n\n## 3. 测“参数是否真的透传”\n\n很多中转站的注水不是换模型，而是把高级参数吞掉，比如 reasoning effort、max tokens、tool calls。\n\n你可以测试：\n\n```python\nresp = client.chat.completions.create(\n    model=\"gpt-5.4\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"认真推理：一个项目启动失败，日志显示 ECONNREFUSED 127.0.0.1:5432。请列出排查步骤，不要泛泛而谈。\"}\n    ],\n    temperature=0,\n    max_tokens=2000,\n)\n\nprint(json.dumps(resp.model_dump(), indent=2, ensure_ascii=False))\n```\n\n再换不同参数，比如：\n\n```python\nmax_tokens=200\nmax_tokens=4000\ntemperature=0\ntemperature=1\n```\n\n观察输出是否明显变化。\n\n如果你设置 `max_tokens=4000`，它还是每次几百字就停，而且 `finish_reason` 不是正常结束，而是奇怪截断，说明中转站可能私下限流/限输出。\n\n## 4. 测上下文窗口，最容易抓包\n\n很多假的高级模型会在长上下文上露馅。你可以构造一个长 prompt，把关键信息藏在很前面或中间。\n\n例如：\n\n```python\nsecret = \"XJH-82917-CONTEXT-NEEDLE\"\n\nlong_text = \"无关内容。\\n\" * 30000\n\nmessages = [\n    {\"role\": \"user\", \"content\": f\"\"\"\n请记住这个暗号：{secret}\n\n下面是大量无关文本：\n{long_text}\n\n现在回答：最开始给你的暗号是什么？只输出暗号。\n\"\"\"}\n]\n\nresp = client.chat.completions.create(\n    model=\"gpt-5.4\",\n    messages=messages,\n    temperature=0,\n    max_tokens=100,\n)\n\nprint(resp.choices[0].message.content)\nprint(resp.usage)\n```\n\n如果它号称超长上下文，但 10 万 token 左右就频繁丢针、报错、乱答，那很可疑。当然这个测试不等于证明假，只能说明上下文能力不符合宣传。\n\n## 5. 测“调试能力”比问身份更有效\n\n你遇到的问题是 Claude Code 里 debug 不主动，所以可以做一个固定测试集。比如准备一个小项目，故意埋 3 个 bug：\n\n```text\nbug1: 环境变量名写错\nbug2: async 函数没 await\nbug3: 路径大小写在 Linux 下失效\n```\n\n然后让模型：\n\n```text\n你不能只猜。请读取项目结构，定位启动入口，复现错误，找出根因，给出最小修改，并说明每个修改对应的证据。除非需要删除文件、安装依赖或访问外部服务，否则不要问我是否继续。\n```\n\n如果它每次只看一两个文件就说“可能是环境变量问题，如果你愿意我下一步……”，这说明实际 agent 配置很差，或者模型/中转站能力不够。\n\n## 6. 看价格和延迟是否合理\n\n这是很现实的判断。\n\n如果中转站卖的“GPT-5.4”价格明显低到离谱，同时延迟非常短、输出很浅，那大概率不是完整能力。真正的高端推理模型在复杂任务上通常不会像小模型一样秒回长答案。\n\n你可以记录 20 次请求：\n\n```text\n任务类型\n输入 token\n输出 token\n延迟\n是否成功工具调用\n是否完整返回 usage\n输出质量\n```\n\n如果“GPT-5.4”和便宜模型在延迟、长度、错误模式上几乎一样，就要怀疑。\n\n## 7. 网上有没有工具？\n\n有，但它们主要做**评测**，不是“验真伪”。\n\n可以看这些方向：\n\n| 工具/平台 | 用途 | 能不能证明模型真伪 |\n|---|---|---|\n| **LMArena / Chatbot Arena** | 人类偏好对战评测 | 不能验你的 API，但能对比风格和能力 |\n| **Arena-Hard-Auto** | 自动化开放式评测，和 LMArena 相关性较高 | 可以测能力异常，但不能证明身份 |\n| **OpenAI Evals / lm-evaluation-harness** | 跑标准 benchmark | 能发现能力降档 |\n| **HELM / Inspect AI** | 更系统的模型评测框架 | 适合严肃测试 |\n| **自建 needle-in-haystack 测试** | 测上下文是否缩水 | 很适合抓中转站问题 |\n\nArena-Hard-Auto 是一个开源自动评测工具，目标是评估指令模型表现，并声称与 LMArena/Chatbot Arena 有较高相关性；LMArena/Chatbot Arena 本身是基于匿名模型对战和人类偏好的评测平台。citeturn875513search8turn875513search5\n\n但重点是：**这些工具只能证明“它表现不像官方 GPT-5.4”，不能数学证明“它不是”。**\n\n## 8. 我建议你这样排查\n\n按优先级来：\n\n第一，**拿同一个 prompt 分别打官方 OpenAI 和中转站**。不要用 Claude Code，直接 Python API。看原始 JSON、usage、延迟、输出质量。\n\n第二，**测试长上下文和复杂 debug**。这是最容易暴露降档的地方。\n\n第三，**检查 Claude Code 配置**。有时不是中转站注水，而是 Claude Code 的 agent prompt 太保守。你需要加硬约束：\n\n```text\n不要在定位根因前停止。不要说“如果你愿意我下一步”。除非需要危险操作或缺少凭据，否则继续自主排查。每一步必须给出文件路径、日志或代码证据。\n```\n\n第四，**看中转站是否支持官方高级参数**。如果 reasoning effort、tool calls、usage、stream usage 都不透明，建议别拿它做严肃 coding/debug。\n\n我的判断是：  \n**“模型自称是 GPT-5.4”完全不可信；要用 API 元数据 + 长上下文 + 固定 bug 测试 + 官方对照组来验。** 如果中转站不给完整 usage、不给真实模型映射、价格明显异常、复杂任务表现像小模型，那就别纠结了，基本可以按“有降档风险”处理。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn875513search1turn875513search18",
+              "prefix": null,
+              "start_idx": 428,
+              "end_idx": 471,
+              "safe_urls": [
+                "https://developers.openai.com/api/docs/guides/advanced-usage",
+                "https://developers.openai.com/api/docs/guides/advanced-usage?utm_source=chatgpt.com",
+                "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb",
+                "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([OpenAI开发者](https://developers.openai.com/api/docs/guides/advanced-usage?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Advanced usage | OpenAI API",
+                  "url": "https://developers.openai.com/api/docs/guides/advanced-usage?utm_source=chatgpt.com",
+                  "attribution": "OpenAI开发者",
+                  "pub_date": null,
+                  "snippet": "To see how many tokens are used by an API call, check the usage field in the API response (e.g., response['usage']['total_tokens'] ). Chat models like gpt ...Read more",
+                  "attribution_segments": null,
+                  "supporting_websites": [
+                    {
+                      "title": "Reproducible_outputs_with_the_...",
+                      "url": "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb?utm_source=chatgpt.com",
+                      "pub_date": null,
+                      "snippet": "In the response, check the system_fingerprint field. The system fingerprint is an identifier for the current combination of model weights, infrastructure ...Read more",
+                      "attribution": "GitHub"
+                    }
+                  ],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 1
+                    },
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 18
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn875513search8turn875513search5",
+              "prefix": null,
+              "start_idx": 3574,
+              "end_idx": 3616,
+              "safe_urls": [
+                "https://github.com/lmarena/arena-hard-auto",
+                "https://github.com/lmarena/arena-hard-auto?utm_source=chatgpt.com",
+                "https://lmsys.org/blog/2023-05-03-arena/",
+                "https://lmsys.org/blog/2023-05-03-arena/?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([GitHub](https://github.com/lmarena/arena-hard-auto?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Arena-Hard-Auto: An automatic LLM benchmark.",
+                  "url": "https://github.com/lmarena/arena-hard-auto?utm_source=chatgpt.com",
+                  "attribution": "GitHub",
+                  "pub_date": null,
+                  "snippet": "Arena-Hard-Auto is an automatic evaluation tool for instruction-tuned LLMs. Arena-Hard-Auto has the highest correlation and separability to LMArena (Chatbot ...Read more",
+                  "attribution_segments": null,
+                  "supporting_websites": [
+                    {
+                      "title": "Chatbot Arena: Benchmarking LLMs in the Wild with Elo ...",
+                      "url": "https://lmsys.org/blog/2023-05-03-arena/?utm_source=chatgpt.com",
+                      "pub_date": null,
+                      "snippet": "3 May 2023 — We present Chatbot Arena, a benchmark platform for large language models (LLMs) that features anonymous, randomized battles in a crowdsourced manner.Read more",
+                      "attribution": "LMSYS Org"
+                    }
+                  ],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 8
+                    },
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 5
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 4224,
+              "end_idx": 4225,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "Advanced usage | OpenAI API",
+                  "url": "https://developers.openai.com/api/docs/guides/advanced-usage?utm_source=chatgpt.com",
+                  "attribution": "OpenAI开发者"
+                },
+                {
+                  "title": "Arena-Hard-Auto: An automatic LLM benchmark.",
+                  "url": "https://github.com/lmarena/arena-hard-auto?utm_source=chatgpt.com",
+                  "attribution": "GitHub"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://developers.openai.com/api/docs/guides/advanced-usage",
+            "https://developers.openai.com/api/docs/guides/advanced-usage?utm_source=chatgpt.com",
+            "https://github.com/lmarena/arena-hard-auto",
+            "https://github.com/lmarena/arena-hard-auto?utm_source=chatgpt.com",
+            "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb",
+            "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb?utm_source=chatgpt.com",
+            "https://lmsys.org/blog/2023-05-03-arena/",
+            "https://lmsys.org/blog/2023-05-03-arena/?utm_source=chatgpt.com"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Large_language_model?utm_source=chatgpt.com",
+                  "title": "Large language model",
+                  "snippet": "A large language model (LLM) is a neural network trained on a vast amount of text for natural language processing tasks, especially language generation.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "attribution": "wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "openlm.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://openlm.ai/chatbot-arena/?utm_source=chatgpt.com",
+                  "title": "Chatbot Arena +",
+                  "snippet": "6 days ago — This leaderboard is based on the following benchmarks. Arena - a crowdsourced, randomized battle platform for large language models (LLMs).Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "attribution": "openlm.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "cloudflare.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.cloudflare.com/learning/ai/what-is-large-language-model/?utm_source=chatgpt.com",
+                  "title": "What is a large language model (LLM)?",
+                  "snippet": "A large language model (LLM) is a type of artificial intelligence (AI) program that can recognize and generate text, among other tasks.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "attribution": "cloudflare.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "github.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/openai/openai-python/issues/720?utm_source=chatgpt.com",
+                  "title": "Issue with system_fingerprint Returning as \"None\" in ...",
+                  "snippet": "7 Nov 2023 — Issue with system_fingerprint Returning as \"None\" in OpenAI API Response #720 ... total_tokens - response.usage.prompt_tokens table = f ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/openai/openai-cookbook/blob/main/examples/Reproducible_outputs_with_the_seed_parameter.ipynb?utm_source=chatgpt.com",
+                  "title": "Reproducible_outputs_with_the_...",
+                  "snippet": "In the response, check the system_fingerprint field. The system fingerprint is an identifier for the current combination of model weights, infrastructure ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "attribution": "github.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "lmsys.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://lmsys.org/blog/2023-05-03-arena/?utm_source=chatgpt.com",
+                  "title": "Chatbot Arena: Benchmarking LLMs in the Wild with Elo ...",
+                  "snippet": "3 May 2023 — We present Chatbot Arena, a benchmark platform for large language models (LLMs) that features anonymous, randomized battles in a crowdsourced manner.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "attribution": "lmsys.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "amazon.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://aws.amazon.com/what-is/large-language-model/?utm_source=chatgpt.com",
+                  "title": "What is LLM? - Large Language Models Explained",
+                  "snippet": "Large language models, also known as LLMs, are very large deep learning models that are pre-trained on vast amounts of data. The underlying transformer is a ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "attribution": "amazon.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "openai.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://community.openai.com/t/issue-with-token-usage-in-streaming-responses/892449?utm_source=chatgpt.com",
+                  "title": "Issue with Token Usage in Streaming Responses - Bugs",
+                  "snippet": "3 Aug 2024 — According to the Api Docs,token usage should be included in the response chunks when using the stream_options parameter. Here's my setup: API ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://community.openai.com/t/tokens-usage-on-response-api-with-previous-message/1327213?utm_source=chatgpt.com",
+                  "title": "Tokens usage on Response API with previous message",
+                  "snippet": "28 Jul 2025 — Hello All I use the chat (text only) on APIs. I like the responses API though it is not really production grade yet.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://community.openai.com/t/openai-api-get-usage-tokens-in-response-when-set-stream-true/141866?utm_source=chatgpt.com",
+                  "title": "get usage tokens in response when set stream=True - API",
+                  "snippet": "8 Apr 2023 — In general, we can get tokens usage from response.usage.total_tokens, but when i set the parameter stream to True, for example:Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 24
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "google.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://developers.google.com/machine-learning/crash-course/llm?utm_source=chatgpt.com",
+                  "title": "Introduction to Large Language Models | Machine Learning",
+                  "snippet": "9 Jan 2026 — This course module provides an overview of language models and large language models (LLMs), covering concepts including tokens, n-grams, ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "attribution": "google.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://cloud.google.com/ai/llms?utm_source=chatgpt.com",
+                  "title": "Large Language Models (LLMs) with Google AI",
+                  "snippet": "A large language model (LLM) is a statistical language model, trained on a massive amount of data, that can be used to generate and translate text and other ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 23
+                  },
+                  "pub_date": null,
+                  "attribution": "google.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "openvino.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://docs.openvino.ai/2026/model-server/ovms_docs_rest_api_chat.html?utm_source=chatgpt.com",
+                  "title": "OpenAI API chat/completions endpoint",
+                  "snippet": "Values > 1.0 encourage the model to use new tokens, while values < 1.0 encourage the model to repeat tokens. 1.0 means no penalty. frequency_penalty. ✓. ✓. ✓.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "attribution": "openvino.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/pdf/2403.04132?utm_source=chatgpt.com",
+                  "title": "Chatbot Arena: An Open Platform for Evaluating LLMs by ...",
+                  "snippet": "by WL Chiang · 2024 · Cited by 1527 — Classification of LLM benchmarks: We categorize along two dimensions: whether the questions are from a static dataset or a live, fresh source, ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "attribution": "arxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arena.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arena.ai/how-it-works?utm_source=chatgpt.com",
+                  "title": "How Arena Works | AI Model Evaluation & Benchmarking",
+                  "snippet": "Learn how Arena benchmarks and compares frontier AI models using human preferences and real-world evaluations.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "attribution": "arena.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "medium.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://medium.com/data-science-at-microsoft/how-large-language-models-work-91c362f5b78f?utm_source=chatgpt.com",
+                  "title": "How Large Language Models Work. From zero to ChatGPT",
+                  "snippet": "To summarize, all we are doing here is to train a neural network (the LLM) to predict the next word in a given sequence of words, no matter if ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "attribution": "medium.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://cobusgreyling.medium.com/openai-json-mode-seeding-6aeb6f7664b0?utm_source=chatgpt.com",
+                  "title": "OpenAI JSON Mode & Seeding - Cobus Greyling - Medium",
+                  "snippet": "Also visible is the newly added system fingerprint parameter, here is an example fingerprint returned: system_fingerprint='fp_eeff13170a' . The ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "attribution": "medium.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://trylks-is-trylks.medium.com/%EF%B8%8F-chatbot-arena-the-ultimate-llm-benchmarking-tool-e220c1ac484f?utm_source=chatgpt.com",
+                  "title": "Chatbot Arena: The Ultimate LLM Benchmarking Tool | by trylks",
+                  "snippet": "The newly added materials include notebooks and samples showing how to use Vertex AI Gemini API. This API allows access to the two models ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": null,
+                  "attribution": "medium.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "latent.space",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.latent.space/p/lmarena?utm_source=chatgpt.com",
+                  "title": "In the Arena: How LMSys changed LLM Benchmarking ...",
+                  "snippet": "1 Nov 2024 — LMArena's leads on pioneering LLM evals with ChatBot Arena and MT-Bench, adjusting for human bias with Style Control, and replacing static benchmarks with ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "attribution": "latent.space"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "microsoft.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-are-large-language-models-llms?utm_source=chatgpt.com",
+                  "title": "What are large language models (LLMs)?",
+                  "snippet": "Large language models (LLMs) are advanced AI systems that understand and generate natural language, or human-like text, using the data they've been trained on ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "attribution": "microsoft.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/answers/questions/5845915/azure-openai-realtime-api-token-usage-from-respons?utm_source=chatgpt.com",
+                  "title": "Azure OpenAI Realtime API: Token usage from `response. ...",
+                  "snippet": "1 Apr 2026 — Problem I'm using the Azure OpenAI Realtime API (gpt-realtime-mini-2025-12-15) via the .NET OpenAI.Realtime SDK to measure token consumption. The response.done ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 21
+                  },
+                  "pub_date": null,
+                  "attribution": "microsoft.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "anythingllm.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://anythingllm.com/?utm_source=chatgpt.com",
+                  "title": "AnythingLLM | The all-in-one AI application for everyone",
+                  "snippet": "Stay local fully with our built-in LLM provider running any model you want. Or leverage enterprise models from OpenAI, Azure, AWS, and more.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 20
+                  },
+                  "pub_date": null,
+                  "attribution": "anythingllm.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "liip.ch",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.liip.ch/en/blog/blind-testing-your-chatbot-arena-style?utm_source=chatgpt.com",
+                  "title": "Blind testing your chatbot, Arena style · Blog",
+                  "snippet": "24 Feb 2026 — Over time, we developed evaluation sets, automated scoring with LLM-as-a-Judge, and various ways to measure chatbot quality. Max wrote about ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 22
+                  },
+                  "pub_date": null,
+                  "attribution": "liip.ch"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "youtube.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.youtube.com/watch?v=vBlhoAIb0iE&utm_source=chatgpt.com",
+                  "title": "In the Arena: How LMSys changed LLM Benchmarking Forever",
+                  "snippet": "LMArena's leads on pioneering LLM evals with ChatBot Arena and MT-Bench, adjusting for human bias with Style Control, and replacing static",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 25
+                  },
+                  "pub_date": null,
+                  "attribution": "youtube.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "databricks.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.databricks.com/blog/what-are-large-language-models?utm_source=chatgpt.com",
+                  "title": "What are Large Language Models (LLM)?",
+                  "snippet": "Language models are a type of generative AI (GenAI) that use natural language processing (NLP) to understand and generate human language.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 26
+                  },
+                  "pub_date": null,
+                  "attribution": "databricks.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "langflow.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://docs.langflow.org/1.8.0/api-openai-responses?utm_source=chatgpt.com",
+                  "title": "OpenAI Responses API",
+                  "snippet": "OpenAI Responses API. Langflow includes an endpoint that is compatible with the OpenAI Responses API. It is available at POST /api/v1/responses .Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 27
+                  },
+                  "pub_date": null,
+                  "attribution": "langflow.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "reddit.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ij4c7h/unpopular_opinion_the_chatbot_arena_benchmark_is/?utm_source=chatgpt.com",
+                  "title": "Unpopular opinion. The chatbot arena benchmark is not ...",
+                  "snippet": "It is not necessarily an hard benchmark, rather it is a benchmark of \"what if the LLM would answer common queries for search engines\"?Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 28
+                  },
+                  "pub_date": null,
+                  "attribution": "reddit.com"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "code_blocks": {
+            "0": {
+              "id": "0pw3z0",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "jwfef7",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "z4mn8x",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "mad558",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "4": {
+              "id": "o522g8",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "5": {
+              "id": "1px1vz",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "6": {
+              "id": "aami79",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "7": {
+              "id": "9tbqoq",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "8": {
+              "id": "w5mcin",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "9": {
+              "id": "ijmgxo",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "request_id": "96b75750-cb6a-4a40-92b3-9175779e8168",
+          "message_type": "next",
+          "turn_exchange_id": "00919e67-4560-4da5-8301-d55cbb1969bd",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "1198d8c2-49f9-4800-a1df-f6f9dd6b075e",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "1198d8c2-49f9-4800-a1df-f6f9dd6b075e",
+      "children": [
+        "4f62f2eb-61cc-49cc-8a0c-0c3a9b1a55ad"
+      ]
+    },
+    "4f62f2eb-61cc-49cc-8a0c-0c3a9b1a55ad": {
+      "id": "4f62f2eb-61cc-49cc-8a0c-0c3a9b1a55ad",
+      "message": {
+        "id": "4f62f2eb-61cc-49cc-8a0c-0c3a9b1a55ad",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103857.165,
+        "update_time": 1779103885.263797,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "这种测法感觉都不太能直接确定啊"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "cd483ace-183e-40ba-b1c6-f476b604a6bb",
+          "message_source": null,
+          "turn_exchange_id": "0395fd31-ae5e-4b90-99f7-5cc9f88ef78e",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d8726e3f-424c-443e-9ef8-af64d81feda4",
+      "children": [
+        "0ce8ccbf-173f-4d42-ad5d-15116ffe0084"
+      ]
+    },
+    "0ce8ccbf-173f-4d42-ad5d-15116ffe0084": {
+      "id": "0ce8ccbf-173f-4d42-ad5d-15116ffe0084",
+      "message": {
+        "id": "0ce8ccbf-173f-4d42-ad5d-15116ffe0084",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103859.5569,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "e41b9eba-e759-44d8-8b0b-07b0e15f2518"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "cd483ace-183e-40ba-b1c6-f476b604a6bb",
+          "message_type": "next",
+          "turn_exchange_id": "0395fd31-ae5e-4b90-99f7-5cc9f88ef78e",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "e41b9eba-e759-44d8-8b0b-07b0e15f2518",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779103859.4245267,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4f62f2eb-61cc-49cc-8a0c-0c3a9b1a55ad",
+      "children": [
+        "ae1a3c01-3d7c-4fd5-b7a1-ed072630f687"
+      ]
+    },
+    "ae1a3c01-3d7c-4fd5-b7a1-ed072630f687": {
+      "id": "ae1a3c01-3d7c-4fd5-b7a1-ed072630f687",
+      "message": {
+        "id": "ae1a3c01-3d7c-4fd5-b7a1-ed072630f687",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103860.00859,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 1 秒"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 0,
+          "reasoning_start_time": 1779103859.4245267,
+          "reasoning_end_time": 1779103859.9813745,
+          "request_id": "cd483ace-183e-40ba-b1c6-f476b604a6bb",
+          "message_type": "next",
+          "turn_exchange_id": "0395fd31-ae5e-4b90-99f7-5cc9f88ef78e",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "0ce8ccbf-173f-4d42-ad5d-15116ffe0084",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0ce8ccbf-173f-4d42-ad5d-15116ffe0084",
+      "children": [
+        "fcce8441-8d5d-4aa5-8241-87d10e8bf679"
+      ]
+    },
+    "fcce8441-8d5d-4aa5-8241-87d10e8bf679": {
+      "id": "fcce8441-8d5d-4aa5-8241-87d10e8bf679",
+      "message": {
+        "id": "fcce8441-8d5d-4aa5-8241-87d10e8bf679",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779103858.767263,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "对，你这个感觉是对的：**这种测法基本不能“直接确定”，只能提高怀疑度。**\n\n原因很简单：只要中转站在你和真实模型之间做代理，它就有能力伪造几乎所有你能看到的东西：\n\n- `model` 字段可以伪造；\n- “我是 GPT-5.4”可以靠系统提示伪造；\n- `usage` 可以伪造；\n- 响应格式可以仿 OpenAI；\n- 甚至它也可以部分请求走真模型、部分请求走便宜模型，做动态降级；\n- 它还可以在简单任务上用真模型，在复杂/长上下文上降级，你很难一次测出来。\n\n所以严格说：\n\n> **除非你直接调用官方 API，或者中转站提供可验证的官方转发凭证，否则你无法从客户端 100% 证明它没注水。**\n\n你能做的是分层判断。\n\n## 最硬的验证方式\n\n### 1. 看账单 / 供应链证明\n\n你让中转站提供：\n\n```text\n每次请求对应的上游 provider\n上游 request_id\n上游实际 model\n上游 usage\n上游错误码\n是否原样透传\n是否有 fallback / cache / routing\n```\n\n但问题是：它给你的这些也可能是自己生成的。除非它能提供和官方平台可对账的记录，否则还是信任问题。\n\n### 2. 用官方 API 做对照组\n\n这是最实际的方式。\n\n同一个任务，同一个 prompt，同样参数：\n\n```text\n官方 OpenAI GPT-5.4\n中转站 GPT-5.4\n中转站便宜模型\n```\n\n然后对比：\n\n```text\n是否能持续 debug\n是否会主动读完整项目\n是否能跑测试\n是否定位根因\n是否输出风格明显降档\n长上下文是否稳定\n复杂推理是否明显浅\n```\n\n这也不是数学证明，但如果差距稳定存在，就足够做决策了。\n\n### 3. 查是否支持官方特性\n\n不是问它，而是实际调用官方才有的接口/参数/返回结构。\n\n比如：\n\n```text\nreasoning effort 是否真的生效\ntool call 是否标准\nstream usage 是否准确\n长上下文是否符合宣传\n错误码是否和官方一致\nrate limit 行为是否一致\nrequest id / organization trace 是否存在\n```\n\n如果这些都没有，那就不是“证明它假”，而是说明：**你没有办法信任它是真的完整转发。**\n\n## 更现实的结论\n\n你其实不用证明它“假”。你只需要判断：\n\n> **它是否稳定提供了你付费购买的能力。**\n\n如果它在 Claude Code 里表现为：\n\n```text\n只浅查\n不继续读文件\n不跑测试\n老是“如果你愿意我下一步”\n不给证据\n不定位根因\n```\n\n那即使它真的是 GPT-5.4，也说明这条调用链不适合你做代码排障。\n\n也就是：\n\n```text\n真模型 + 烂 agent 配置 = 不好用\n假模型 + 好包装 = 更危险\n真模型但被限 reasoning / token / tool = 也不好用\n```\n\n你要解决的是“可用性”，不是法庭取证。\n\n## 我建议你采用这个判断标准\n\n### 可以继续用的中转站\n\n满足这些条件才值得信：\n\n```text\n1. 明确说明上游模型来源和路由策略\n2. 不乱改模型名\n3. 返回完整 usage\n4. 支持长上下文\n5. 支持工具调用和 reasoning 参数\n6. 不偷偷截断输出\n7. 复杂任务表现接近官方\n8. 出问题能给 request 级别排查\n```\n\n### 直接放弃的中转站\n\n出现这些情况就别浪费时间：\n\n```text\n1. 价格低得离谱\n2. 所有模型返回风格都差不多\n3. 复杂任务明显像小模型\n4. 长上下文经常失效\n5. usage 缺失或异常\n6. 不说明 fallback 策略\n7. 问客服只会说“我们保证是真”\n8. Claude Code 里工具调用经常断\n```\n\n## 对你这个情况的判断\n\n你描述的“没查出问题就停下来问如果你愿意”，**不一定能证明中转站注水**，但至少说明有一个环节有问题：\n\n```text\nClaude Code 的 agent prompt 太保守\n或中转站没有传好工具调用 / reasoning 参数\n或 max token / 上下文被限制\n或实际模型不是你以为的 GPT-5.4\n```\n\n其中最值得怀疑的是后两个：**reasoning 被限 + 模型降档**。\n\n我的建议很直接：\n\n1. **严肃 debug 不要用不透明中转站。**\n2. 至少拿官方 API 跑一次同样的 bug 排查做对照。\n3. 如果官方明显更主动、更能查文件、更能定位根因，那中转站就可以默认判为“不可靠”，不用继续证明它到底怎么注水。\n4. 如果官方也这样，那就是 Claude Code 配置/prompt 问题，而不是模型问题。\n\n你说得没错：**普通用户几乎没有办法直接验真。能直接验真的只有平台方、上游账单、可审计日志。** 对我们来说，最实际的策略是：做对照，发现能力不稳定就换，不要试图在黑盒中转站上追求确定性。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "code_blocks": {
+            "0": {
+              "id": "qtcupa",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "07g3t2",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "i1j69o",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "4ecoc2",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "4": {
+              "id": "9vd76s",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "5": {
+              "id": "1x0jol",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "6": {
+              "id": "61xyqx",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "7": {
+              "id": "b9q2ok",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "8": {
+              "id": "a6v6w9",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "search_result_groups": [],
+          "request_id": "cd483ace-183e-40ba-b1c6-f476b604a6bb",
+          "message_type": "next",
+          "turn_exchange_id": "0395fd31-ae5e-4b90-99f7-5cc9f88ef78e",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "ae1a3c01-3d7c-4fd5-b7a1-ed072630f687",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "ae1a3c01-3d7c-4fd5-b7a1-ed072630f687",
+      "children": []
+    }
+  },
+  "current_node": "fcce8441-8d5d-4aa5-8241-87d10e8bf679"
+}

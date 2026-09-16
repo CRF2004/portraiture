@@ -1,0 +1,51 @@
+{
+  "date": "2026-06-28",
+  "auditor": "executor-self-audit-external-reviewer-unavailable",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "Historical user text is real, but next-action ground truth labels are rule-derived proxy labels, not human or official benchmark labels."
+    },
+    "score_normalization": {
+      "status": "pass",
+      "details": "Accuracy and macro-F1 are computed from raw counts; no self-normalized score was found."
+    },
+    "result_existence": {
+      "status": "pass",
+      "details": "Main fixed-split and robustness claims are backed by existing metrics files."
+    },
+    "dead_code": {
+      "status": "warn",
+      "details": "Main metric functions are called; some diagnostic/reporting scripts are not part of the current claim path."
+    },
+    "scope": {
+      "status": "warn",
+      "details": "Single-user, 257-example proxy replay benchmark with 5 random episode and 5 random conversation robustness splits."
+    },
+    "manual_label_audit": {
+      "status": "warn",
+      "details": "Manual spot audit of 12 high-risk candidates found 6 clear label errors, 1 borderline case, and 5 acceptable labels. The dominant noise mode is topic_shift overuse on same-thread refinements."
+    },
+    "eval_type": "self_supervised_proxy"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Learned state routing improves replay next-action prediction over no-state and heuristic baselines.",
+      "impact": "supported_with_qualifier"
+    },
+    {
+      "id": "C2",
+      "claim": "Dynamic state is more useful than current static persona/refinement mechanisms.",
+      "impact": "supported_with_qualifier"
+    },
+    {
+      "id": "C3",
+      "claim": "The system is a complete personal digital twin.",
+      "impact": "unsupported"
+    }
+  ],
+  "paper_writing_gate": "ready_with_warnings"
+}

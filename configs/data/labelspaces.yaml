@@ -1,0 +1,97 @@
+persona_fields:
+  - planning_preference
+  - explanation_preference
+  - risk_preference
+  - decision_style
+  - interaction_style
+  - topic_interest
+  - constraint_preference
+  - long_term_goal
+
+dynamic_state_types:
+  - current_goal
+  - active_problem
+  - time_pressure
+  - uncertainty_level
+  - emotional_tone
+  - current_stance
+  - blocking_issue
+
+prediction_tasks:
+  - next_user_action
+  - next_question_type
+  - next_intent_label
+  - next_topic_shift
+
+action_label_groups:
+  clarify:
+    - ask_definition
+    - ask_why
+    - follow_up_clarification
+  expand:
+    - ask_for_example
+    - provide_more_context
+  plan:
+    - request_how_to
+    - feasibility_check
+  compare:
+    - compare_options
+  challenge:
+    - challenge_or_refine
+  shift:
+    - topic_shift
+
+divergence_types:
+  - memory_failure
+  - persona_misalignment
+  - state_under_specified
+  - reasoning_mismatch
+  - action_selection_error
+  - surface_only_match
+
+divergence_subtypes:
+  memory_failure:
+    - missing_explicit_fact
+    - wrong_event_order
+    - stale_memory_selected
+    - memory_conflict_unresolved
+  persona_misalignment:
+    - trait_overgeneralized
+    - short_term_behavior_overfit
+    - unsupported_persona_fact
+    - persona_conflict_unresolved
+  state_under_specified:
+    - goal_shift_missed
+    - time_pressure_missed
+    - stance_change_missed
+    - blocking_issue_missed
+  reasoning_mismatch:
+    - wrong_priority_order
+    - wrong_tradeoff_focus
+    - wrong_intent_inference
+    - wrong_conclusion_style
+  action_selection_error:
+    - candidate_set_missing
+    - ranking_error
+    - task_label_too_coarse
+    - wrong_turn_boundary
+  surface_only_match:
+    - lexical_match_only
+    - tone_match_only
+    - template_like_response
+
+label_boundary_notes:
+  clarify:
+    - follow_up_clarification: same-topic follow-up that asks for a detail, confirmation, or small correction rather than a new topic.
+    - ask_definition: asking what something means or asking for a definition, not a procedure.
+  expand:
+    - provide_more_context: adds diagnostic information, evidence, or observations without challenging the prior answer.
+    - ask_for_example: asks for a concrete example rather than a definition or procedure.
+  plan:
+    - request_how_to: asks for steps or procedure, including how to do or set something up.
+    - feasibility_check: asks whether something can be done or is possible, not how to do it.
+  challenge:
+    - challenge_or_refine: pushes back on the prior answer or refines the reasoning.
+  shift:
+    - topic_shift: moves to a new topic or goal; do not use for same-topic follow-up questions.
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedGemma微调参数文档</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MedGemma微调参数文档</h1>
+            <div class="metadata">ID: 6a1549e5-31dc-83ec-8022-1405b17a9ac2 | 2026/5/26 15:21:22</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/26 15:21:17</span>
+                </div>
+                <div class="message-content">帮我找找medgemma-27b-it 的官方微调文档，我想看看有没有官方推荐的参数</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/26 15:21:22</span>
+                </div>
+                <div class="message-content">我会直接找官方来源（Google/Health AI Developer Foundations、Hugging Face 模型卡或官方示例 notebook），重点看是否写了微调脚本和推荐超参。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/26 15:21:55</span>
+                </div>
+                <div class="message-content">我找到了官方路径：核心不是一篇“27B 专属调参表”，而是官方 MedGemma 文档 + 官方 GitHub/Colab 微调 notebook；模型卡明确说 27B 可按同样方式微调，但需要更多算力。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/26 15:21:55</span>
+                </div>
+                <div class="message-content">找到了。<strong>官方没有给 <code>medgemma-27b-it</code> 单独发布一套“推荐微调参数表”</strong>；官方做法是：用 MedGemma 官方微调 notebook 作为模板，模型卡说明 27B 可以类似方式微调，但会需要更多时间和算力。<code>google/medgemma-27b-it</code> 是 27B 多模态版本；如果你只做文本，另一个官方模型是 <code>google/medgemma-27b-text-it</code>。citeturn277390view1turn179199view0<br><br>### 官方文档入口<br><br>1. <strong>MedGemma 官方开发者文档：Fine-tuning 部分</strong>  <br>   官方写明 MedGemma 可以 fine-tune，并给了 LoRA 微调 notebook 和 RL notebook。citeturn277390view0<br><br>2. <strong>官方 GitHub notebooks 目录</strong>  <br>   里面的 <code>Fine-tune with Hugging Face</code> 是用 Hugging Face + SFT + LoRA/QLoRA 的官方示例；<code>Reinforcement Learning with Hugging Face</code> 是官方 RL/GRPO 示例。citeturn421582view2<br><br>3. <strong><code>google/medgemma-27b-it</code> Hugging Face 模型卡</strong>  <br>   模型卡明确说 27B 可按 4B 微调 notebook 类似方式微调，但需要更多时间和计算资源。citeturn277390view1<br><br>---<br><br>## 官方 SFT/QLoRA notebook 里的默认参数<br><br>这个 notebook 默认是 <code>google/medgemma-4b-it</code>，但官方说 27B 可以类似方式改 <code>model_id</code> 后跑。默认资源要求是 <strong>支持 bfloat16、至少 40GB 显存的 GPU</strong>，Colab 示例用 A100；27B 实际会更吃资源。citeturn942197view0turn277390view1<br><br><strong>QLoRA / 量化加载：</strong><br><br><pre><code class="language-python">load_in_4bit=True
+bnb_4bit_use_double_quant=True
+bnb_4bit_quant_type="nf4"
+bnb_4bit_compute_dtype=torch.bfloat16
+bnb_4bit_quant_storage=torch.bfloat16</code></pre><br><br><strong>LoRA 参数：</strong><br><br><pre><code class="language-python">lora_alpha=16
+lora_dropout=0.05
+r=16
+bias="none"
+target_modules="all-linear"
+task_type="CAUSAL_LM"
+modules_to_save=["lm_head", "embed_tokens"]</code></pre><br><br><strong>SFTConfig 训练参数：</strong><br><br><pre><code class="language-python">num_train_epochs=1
+learning_rate=2e-4
+per_device_train_batch_size=4
+per_device_eval_batch_size=4
+gradient_accumulation_steps=4
+gradient_checkpointing=True
+optim="adamw_torch_fused"
+logging_steps=50
+save_strategy="epoch"
+eval_strategy="steps"
+eval_steps=50
+bf16=True
+max_grad_norm=0.3
+warmup_ratio=0.03
+lr_scheduler_type="linear"
+report_to="tensorboard"</code></pre><br><br>这些来自官方 <code>fine_tune_with_hugging_face.ipynb</code>。citeturn678047view0turn678047view2<br><br>---<br><br>## 官方 RL/GRPO notebook 里的参数<br><br>官方还有一个 RL notebook，目标是 MedQA 医学问答，用 LoRA + GRPO。默认是 <code>google/medgemma-1.5-4b-it</code>，不是 27B，但可以作为官方 RL 调参参考。它说明 A100 40GB 上大约 1700 steps 要跑很久。citeturn871558view0<br><br><strong>GRPO 参数：</strong><br><br><pre><code class="language-python">learning_rate=5e-6
+per_device_train_batch_size=3
+gradient_accumulation_steps=4
+num_generations=4
+max_completion_length=1024
+max_steps=1700
+logging_steps=20
+save_steps=100
+eval_strategy="steps"
+eval_steps=100
+use_vllm=True
+vllm_mode="colocate"
+vllm_gpu_memory_utilization=0.30
+bf16=True
+gradient_checkpointing=True</code></pre><br><br><strong>RL LoRA 参数：</strong><br><br><pre><code class="language-python">r=64
+lora_alpha=64
+target_modules="all-linear"
+task_type="CAUSAL_LM"</code></pre><br><br>来源是官方 <code>reinforcement_learning_with_hugging_face.ipynb</code>。citeturn871558view0<br><br>---<br><br>## 还有一个官方技术报告里的“全参 SFT”参考<br><br>MedGemma 技术报告里，Google 对多模态任务做过 full-parameter SFT；他们 sweep 了三个学习率：<code>1e-7</code>、<code>5e-7</code>、<code>1e-6</code>，训练 1 epoch，然后按验证集选 checkpoint。这个不是 LoRA/QLoRA 参数，更像是官方实验设置。citeturn830586view0<br><br>我的建议：你如果要微调 <code>medgemma-27b-it</code>，先按官方 QLoRA 配置走，但把 batch size 从 4 降到 1 或 2，再用 <code>gradient_accumulation_steps</code> 补等效 batch；<code>learning_rate=2e-4</code> 可以作为 LoRA 起点，医疗任务数据少的话同时试 <code>1e-4</code>、<code>5e-5</code>。27B 不要盲目照抄 4B 的 batch 参数，显存会是第一瓶颈。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/26 15:22:37</span>
+                </div>
+                <div class="message-content">帮我找找medgemma-27b-text-it 的官方微调文档，我想看看有没有官方推荐的参数</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/26 15:22:42</span>
+                </div>
+                <div class="message-content">我会先找官方来源（Google/Health AI、Hugging Face 官方模型卡、官方 notebook 或 GitHub），重点看有没有 LoRA/QLoRA、学习率、batch size、epoch、precision 等推荐配置。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/26 15:23:17</span>
+                </div>
+                <div class="message-content">找到了。<strong>官方有微调文档，但没有看到专门针对 <code>google/medgemma-27b-text-it</code> 单独给一套“推荐超参”的页面</strong>。官方给的是 MedGemma 通用 fine-tuning notebook；它当前示例主要是 <code>medgemma-4b-it</code> 视觉+文本任务。<code>27b-text-it</code> 的模型卡也只是链接到这个 fine-tuning notebook。citeturn813426view0turn672239view0<br><br>## 官方入口<br><br>1. <strong>MedGemma 官方开发者文档：Fine-tuning</strong><br>   <br>   Google 明确说 MedGemma 可以用自己的医疗数据微调，并给了 sample notebook。citeturn798157view0  <br>   官方 overview 也说示例使用 <strong>LoRA</strong>，并链接到 notebook。citeturn813426view1<br><br>2. <strong>Hugging Face 官方模型卡：<code>google/medgemma-27b-text-it</code></strong><br>   <br>   模型卡里写了 <code>27B</code> 是 <strong>text only</strong>，并在 Examples 里链接了 Fine-tuning notebook。citeturn813426view0<br><br>3. <strong>Google-Health/medgemma 官方 GitHub fine-tuning notebook</strong><br>   <br>   这个 notebook 标题是 “Fine-tune MedGemma with Hugging Face”，使用 TRL 的 <code>SFTTrainer</code> + QLoRA。官方 notebook 说明 QLoRA 是 4-bit 量化冻结基座，只训练 LoRA adapter。citeturn491888view0<br><br>## 官方 notebook 里的主要参数<br><br>官方 MedGemma fine-tuning notebook 里能直接摘到的参数如下：<br><br>| 类别 | 参数 | 官方 notebook 示例值 |<br>|---|---:|---:|<br>| QLoRA quantization | <code>load_in_4bit</code> | <code>True</code> |<br>| QLoRA quantization | <code>bnb_4bit_use_double_quant</code> | <code>True</code> |<br>| QLoRA quantization | <code>bnb_4bit_quant_type</code> | <code>"nf4"</code> |<br>| precision | <code>torch_dtype</code> | <code>torch.bfloat16</code> |<br>| LoRA | <code>r</code> | <code>16</code> |<br>| LoRA | <code>lora_alpha</code> | <code>16</code> |<br>| LoRA | <code>lora_dropout</code> | <code>0.05</code> |<br>| LoRA | <code>bias</code> | <code>"none"</code> |<br>| LoRA | <code>target_modules</code> | <code>"all-linear"</code> |<br>| training | <code>num_train_epochs</code> | <code>1</code> |<br>| training | <code>learning_rate</code> | <code>2e-4</code> |<br>| training | <code>per_device_train_batch_size</code> | <code>4</code> |<br>| training | <code>per_device_eval_batch_size</code> | <code>4</code> |<br>| training | <code>gradient_accumulation_steps</code> | <code>4</code> |<br>| training | <code>gradient_checkpointing</code> | <code>True</code> |<br>| optimizer | <code>optim</code> | <code>"adamw_torch_fused"</code> |<br>| eval/logging | <code>eval_steps</code> / <code>logging_steps</code> | <code>50</code> / <code>50</code> |<br>| scheduler | <code>lr_scheduler_type</code> | <code>"linear"</code> |<br>| warmup | <code>warmup_ratio</code> | <code>0.03</code> |<br>| gradient clipping | <code>max_grad_norm</code> | <code>0.3</code> |<br>| precision | <code>bf16</code> | <code>True</code> |<br><br>这些值来自官方 MedGemma notebook 的 <code>BitsAndBytesConfig</code>、<code>LoraConfig</code> 和 <code>SFTConfig</code> 代码块。citeturn491888view0turn491888view2turn491888view3<br><br>## 对 <code>medgemma-27b-text-it</code> 的实用判断<br><br>因为 <code>medgemma-27b-text-it</code> 是 <strong>text-only</strong>，官方模型卡示例使用的是 <code>AutoModelForCausalLM</code>、<code>AutoTokenizer</code>、<code>torch.bfloat16</code> 和 <code>device_map="auto"</code>。citeturn813426view0  <br>所以你微调 27B text 版时，不要照搬 4B 多模态 notebook 里的 <code>AutoModelForImageTextToText</code> / image collator；模型加载应改成 text-only CausalLM 路线。<br><br>另外，Google 的通用 Gemma 文本 QLoRA 官方文档给了一套更偏文本 SFT 的参数：<code>r=16</code>、<code>lora_alpha=16</code>、<code>lora_dropout=0.05</code>、<code>target_modules="all-linear"</code>；训练部分示例是 <code>num_train_epochs=3</code>、<code>per_device_train_batch_size=1</code>、<code>learning_rate=5e-5</code>、<code>max_grad_norm=0.3</code>、<code>lr_scheduler_type="constant"</code>。citeturn457656view0<br><br>我的建议：<strong>如果你微调 27B text-it，从更保守的文本 QLoRA 配置起步：<code>lr=5e-5</code>、batch size 1、LoRA r=16、alpha=16、dropout=0.05；显存够再加 batch 或 grad accumulation。</strong> 官方 MedGemma notebook 的 <code>2e-4</code> 更像小模型/示例任务的快速配置，27B 上直接用可能偏激进。</div>
+            </div></div></div></body></html>

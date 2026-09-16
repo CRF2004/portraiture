@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFIB 检测特征分析</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AFIB 检测特征分析</h1>
+            <div class="metadata">ID: 6a06bcb3-45b4-83ec-8659-81dc94d78dd4 | 2026/5/15 14:27:02</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/15 14:27:01</span>
+                </div>
+                <div class="message-content">翻译："" Feature-Space Cross-Check for the AFIB Discovery Case<br>[Supplementary]: Feature-group permutation importance on<br>XGBoost Clinical-MVP confirms that AV Conduction Timing<br>features dominate AFIB detection (∆AUROC= 0.179 [0.171,<br>0.188]), exceeding Rhythm &amp; Rate features (∆AUROC=<br>0.077; Supplementary Table S7). This complements the<br>ResNet perturbation results with an important methodological<br>point: different model classes emphasize overlapping but non<br>identical information channels, so single-model auditing risks<br>over-interpretation.""</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/15 14:27:02</span>
+                </div>
+                <div class="message-content"><strong>AFIB 发现案例的特征空间交叉验证</strong><br><br>[补充材料]：在 XGBoost Clinical-MVP 上进行的特征组置换重要性分析表明，<strong>房室传导时序（AV Conduction Timing）特征</strong>在 AFIB 检测中占主导作用（∆AUROC = 0.179 [0.171, 0.188]），超过了<strong>节律与心率（Rhythm &amp; Rate）特征</strong>（∆AUROC = 0.077；补充表 S7）。这一结果与 ResNet 扰动实验结果形成互补，并指出了一个重要的方法学问题：<strong>不同类型的模型会强调相互重叠但并不完全相同的信息通道，因此，仅基于单一模型进行审计容易导致过度解释。</strong></div>
+            </div></div></div></body></html>

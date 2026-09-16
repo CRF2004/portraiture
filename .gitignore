@@ -1,0 +1,16 @@
+
+# Server retirement archive
+.env
+.env.*
+!.env.example
+!.env.template
+!*.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+venv/
+.venv/
+node_modules/
+*.log
+*.json.lock*

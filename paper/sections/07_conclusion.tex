@@ -1,0 +1,5 @@
+\section{Conclusion}
+
+We presented a proxy replay benchmark for personal GPT chat logs and evaluated explicit dynamic-state routing for next-action prediction within a broader persona/state/memory pipeline. After tightening the \texttt{topic\_shift} relabel rule, a CJK-aware lexical context baseline achieves the highest point estimates (0.35 accuracy, 0.38 macro-F1), while the learned state router scores 0.23 accuracy and 0.30 macro-F1; we do not detect a significant paired accuracy difference at $n=40$ (McNemar $p=0.074$). A direct ablation shows that state routing contributes zero additional signal on top of lexical retrieval (40/40 identical predictions), and this null result replicates across BGE-small-zh and MiniLM. The state-prior baseline confirms that balanced metrics are necessary.
+
+The broader implication is methodological: personal digital-twin research needs measurable replay tasks before making strong user-fidelity claims, and state-aware methods must be evaluated against strong lexical comparators with uncertainty estimates. Future work should add stronger multi-user runs, behavior-chain metrics, and better calibrated models.

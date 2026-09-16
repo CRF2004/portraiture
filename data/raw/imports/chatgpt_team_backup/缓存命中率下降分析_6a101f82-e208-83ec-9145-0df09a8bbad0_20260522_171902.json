@@ -1,0 +1,800 @@
+{
+  "title": "缓存命中率下降分析",
+  "create_time": 1779441542.865018,
+  "update_time": 1779441595.257947,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a101f82-e208-83ec-9145-0df09a8bbad0",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.openai.com"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "dcc7f058-66de-4d75-8d5b-42821e0f55fc"
+      ]
+    },
+    "dcc7f058-66de-4d75-8d5b-42821e0f55fc": {
+      "id": "dcc7f058-66de-4d75-8d5b-42821e0f55fc",
+      "message": {
+        "id": "dcc7f058-66de-4d75-8d5b-42821e0f55fc",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "9e9e817e-dd49-4518-8bc4-4786fb909f24"
+      ]
+    },
+    "9e9e817e-dd49-4518-8bc4-4786fb909f24": {
+      "id": "9e9e817e-dd49-4518-8bc4-4786fb909f24",
+      "message": {
+        "id": "9e9e817e-dd49-4518-8bc4-4786fb909f24",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "dcc7f058-66de-4d75-8d5b-42821e0f55fc",
+      "children": [
+        "607bb59c-fadf-44f4-a947-0ee84c57d74c"
+      ]
+    },
+    "607bb59c-fadf-44f4-a947-0ee84c57d74c": {
+      "id": "607bb59c-fadf-44f4-a947-0ee84c57d74c",
+      "message": {
+        "id": "607bb59c-fadf-44f4-a947-0ee84c57d74c",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9e9e817e-dd49-4518-8bc4-4786fb909f24",
+      "children": [
+        "63493ee4-a92f-42dc-8297-45c7c6e459ab"
+      ]
+    },
+    "63493ee4-a92f-42dc-8297-45c7c6e459ab": {
+      "id": "63493ee4-a92f-42dc-8297-45c7c6e459ab",
+      "message": {
+        "id": "63493ee4-a92f-42dc-8297-45c7c6e459ab",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "607bb59c-fadf-44f4-a947-0ee84c57d74c",
+      "children": [
+        "1d33bcea-cc56-4158-a271-17d7af3afca2"
+      ]
+    },
+    "1d33bcea-cc56-4158-a271-17d7af3afca2": {
+      "id": "1d33bcea-cc56-4158-a271-17d7af3afca2",
+      "message": {
+        "id": "1d33bcea-cc56-4158-a271-17d7af3afca2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441542.377587,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_source": null,
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "63493ee4-a92f-42dc-8297-45c7c6e459ab",
+      "children": [
+        "b705434a-10ee-4401-a557-ff64d12bfeca"
+      ]
+    },
+    "b705434a-10ee-4401-a557-ff64d12bfeca": {
+      "id": "b705434a-10ee-4401-a557-ff64d12bfeca",
+      "message": {
+        "id": "b705434a-10ee-4401-a557-ff64d12bfeca",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441538.872,
+        "update_time": 1779441592.649846,
+        "content": {
+          "content_type": "multimodal_text",
+          "parts": [
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_0000000047b07207a437e92cbf546081",
+              "size_bytes": 33113,
+              "width": 535,
+              "height": 272,
+              "fovea": null,
+              "metadata": {
+                "dalle": null,
+                "gizmo": null,
+                "generation": null,
+                "container_pixel_height": null,
+                "container_pixel_width": null,
+                "emu_omit_glimpse_image": null,
+                "emu_patches_override": null,
+                "lpe_keep_patch_ijhw": null,
+                "lpe_delta_encoding_channel": null,
+                "sanitized": true,
+                "asset_pointer_link": null,
+                "watermarked_asset_pointer": null,
+                "is_no_auth_placeholder": null
+              }
+            },
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_0000000029d47207a4b7726d0f00c190",
+              "size_bytes": 30737,
+              "width": 517,
+              "height": 268,
+              "fovea": null,
+              "metadata": {
+                "dalle": null,
+                "gizmo": null,
+                "generation": null,
+                "container_pixel_height": null,
+                "container_pixel_width": null,
+                "emu_omit_glimpse_image": null,
+                "emu_patches_override": null,
+                "lpe_keep_patch_ijhw": null,
+                "lpe_delta_encoding_channel": null,
+                "sanitized": true,
+                "asset_pointer_link": null,
+                "watermarked_asset_pointer": null,
+                "is_no_auth_placeholder": null
+              }
+            },
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_00000000e3c071fa8f565fe2f874ae93",
+              "size_bytes": 31435,
+              "width": 602,
+              "height": 309,
+              "fovea": null,
+              "metadata": {
+                "dalle": null,
+                "gizmo": null,
+                "generation": null,
+                "container_pixel_height": null,
+                "container_pixel_width": null,
+                "emu_omit_glimpse_image": null,
+                "emu_patches_override": null,
+                "lpe_keep_patch_ijhw": null,
+                "lpe_delta_encoding_channel": null,
+                "sanitized": true,
+                "asset_pointer_link": null,
+                "watermarked_asset_pointer": null,
+                "is_no_auth_placeholder": null
+              }
+            },
+            "我deepseek-v4-pro的缓冲命中率怎么下降了这么多。今天差了600万token"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "attachments": [
+            {
+              "id": "file_0000000047b07207a437e92cbf546081",
+              "size": 33113,
+              "name": "image(9).png",
+              "mime_type": "image/png",
+              "width": 535,
+              "height": 272,
+              "source": "local",
+              "library_file_id": "libfile_51677c00e2c88191a433160015030c45",
+              "is_big_paste": false
+            },
+            {
+              "id": "file_0000000029d47207a4b7726d0f00c190",
+              "size": 30737,
+              "name": "image(10).png",
+              "mime_type": "image/png",
+              "width": 517,
+              "height": 268,
+              "source": "local",
+              "library_file_id": "libfile_a718705f5ecc8191a10ed9c71e799ae9",
+              "is_big_paste": false
+            },
+            {
+              "id": "file_00000000e3c071fa8f565fe2f874ae93",
+              "size": 31435,
+              "name": "image(11).png",
+              "mime_type": "image/png",
+              "width": 602,
+              "height": 309,
+              "source": "local",
+              "library_file_id": "libfile_9f4b8e4ece4081918302175894eaa929",
+              "is_big_paste": false
+            }
+          ],
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2",
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_source": null,
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "1d33bcea-cc56-4158-a271-17d7af3afca2",
+      "children": [
+        "a58ab5fe-3cfe-44ab-8a0e-29aedc74846f"
+      ]
+    },
+    "a58ab5fe-3cfe-44ab-8a0e-29aedc74846f": {
+      "id": "a58ab5fe-3cfe-44ab-8a0e-29aedc74846f",
+      "message": {
+        "id": "a58ab5fe-3cfe-44ab-8a0e-29aedc74846f",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441542.5610764,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_type": "next",
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "b705434a-10ee-4401-a557-ff64d12bfeca",
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-b1253335-d632-4f46-a46b-6d55c346b075",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b705434a-10ee-4401-a557-ff64d12bfeca",
+      "children": [
+        "63a72bb1-7df7-40c6-9208-ce75395dd59d"
+      ]
+    },
+    "63a72bb1-7df7-40c6-9208-ce75395dd59d": {
+      "id": "63a72bb1-7df7-40c6-9208-ce75395dd59d",
+      "message": {
+        "id": "63a72bb1-7df7-40c6-9208-ce75395dd59d",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441543.936522,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "计算缓冲命中率差异",
+              "content": "用户提到buffer命中率下降并提供了相关数据。通过比较不同日期的命中率，我们可以发现输入总量变化，且缓存命中率降低了约7.84个百分点。假设今天保持昨天命中率，缓存缺失约3.2M token。分析过程中，也可能与API缓存策略有关。",
+              "chunks": [
+                "用户提到buffer命中率下降并提供了相关数据。",
+                "通过比较不同日期的命中率，我们可以发现输入总量变化，且缓存命中率降低了约7.84个百分点。",
+                "假设今天保持昨天命中率，缓存缺失约3.2M token。",
+                "分析过程中，也可能与API缓存策略有关。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "16d72529-1421-4ded-8b77-5aa8864f0b96"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_type": "next",
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "16d72529-1421-4ded-8b77-5aa8864f0b96",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779441542.6398084,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a58ab5fe-3cfe-44ab-8a0e-29aedc74846f",
+      "children": [
+        "ae92a773-8b20-43a5-adaa-c140a028b23e"
+      ]
+    },
+    "ae92a773-8b20-43a5-adaa-c140a028b23e": {
+      "id": "ae92a773-8b20-43a5-adaa-c140a028b23e",
+      "message": {
+        "id": "ae92a773-8b20-43a5-adaa-c140a028b23e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441542.633109,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "unknown",
+          "response_format_name": null,
+          "text": "cached_22=35810784\nuncached_22=4998603\nout_22=187638\ncached_21=49092096\nuncached_21=2262948\nout_21=339510\ncached_18=38574592\nuncached_18=1230735\nout_18=187847\nfor d,c,u,o in [('5/22',cached_22,uncached_22,out_22),('5/21',cached_21,uncached_21,out_21),('5/18',cached_18,uncached_18,out_18)]:\n    inp=c+u\n    total=inp+o\n    print(d, \"input\", inp, \"cache rate input\", c/inp, \"uncached rate\", u/inp, \"total incl out cache\", c/(c+u+o))\n# differences\ninp22=cached_22+uncached_22\nhit21=cached_21/(cached_21+uncached_21)\nhit18=cached_18/(cached_18+uncached_18)\nexpected_cached_today_at_21 = hit21*inp22\nexpected_unc_today_at_21 = (1-hit21)*inp22\nprint(hit21, expected_cached_today_at_21, expected_unc_today_at_21, \"miss extra\", uncached_22-expected_unc_today_at_21, \"cached short\", expected_cached_today_at_21-cached_22)\nprint(hit18, hit18*inp22, (1-hit18)*inp22, uncached_22-(1-hit18)*inp22)\nprint(\"total diff 21-22\", (cached_21+uncached_21+out_21)-(cached_22+uncached_22+out_22))\nprint(\"cached diff\", cached_21-cached_22, \"uncached diff\", uncached_22-uncached_21, \"input diff\", (cached_21+uncached_21)-(cached_22+uncached_22)) \n# if 5/22 uncached was 6m short? Maybe difference from baseline.\nprint((cached_22+uncached_22)*hit21-cached_22)\n"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_type": "next",
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "afebf1d6-59ce-40e8-ad86-27a352f94557",
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-b1253335-d632-4f46-a46b-6d55c346b075",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "计算缓存和未缓存命中率",
+          "reasoning_titles": [
+            "计算缓存和未缓存命中率"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779441542.6398084,
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "python",
+        "channel": null
+      },
+      "parent": "63a72bb1-7df7-40c6-9208-ce75395dd59d",
+      "children": [
+        "8d66f8dc-26d2-46df-8dbd-60d5316e475d"
+      ]
+    },
+    "8d66f8dc-26d2-46df-8dbd-60d5316e475d": {
+      "id": "8d66f8dc-26d2-46df-8dbd-60d5316e475d",
+      "message": {
+        "id": "8d66f8dc-26d2-46df-8dbd-60d5316e475d",
+        "author": {
+          "role": "tool",
+          "name": "python",
+          "metadata": {}
+        },
+        "create_time": 1779441562.521547,
+        "update_time": 1779441564.3071034,
+        "content": {
+          "content_type": "execution_output",
+          "text": "5/22 input 40809387 cache rate input 0.877513401512255 uncached rate 0.12248659848774499 total incl out cache 0.8734971379020795\n5/21 input 51355044 cache rate input 0.9559352339372935 uncached rate 0.04406476606270652 total incl out cache 0.949657018029404\n5/18 input 39805327 cache rate input 0.9690811483598665 uncached rate 0.030918851640133492 total incl out cache 0.9645293969415881\n0.9559352339372935 39011130.90868255 1798256.0913174553 miss extra 3200346.9086825447 cached short 3200346.9086825475\n0.9690811483598665 39547607.61782221 1261779.382177794 3736823.617822206\ntotal diff 21-22 10697529\ncached diff 13281312 uncached diff 2735655 input diff 10545657\n3200346.9086825475\n"
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_complete": true,
+          "aggregate_result": {
+            "status": "success",
+            "run_id": "e921c577-4f8c-4e43-af2d-bddff08e332e",
+            "start_time": 1779441562.521547,
+            "update_time": 1779441564.3071034,
+            "code": "cached_22=35810784\nuncached_22=4998603\nout_22=187638\ncached_21=49092096\nuncached_21=2262948\nout_21=339510\ncached_18=38574592\nuncached_18=1230735\nout_18=187847\nfor d,c,u,o in [('5/22',cached_22,uncached_22,out_22),('5/21',cached_21,uncached_21,out_21),('5/18',cached_18,uncached_18,out_18)]:\n    inp=c+u\n    total=inp+o\n    print(d, \"input\", inp, \"cache rate input\", c/inp, \"uncached rate\", u/inp, \"total incl out cache\", c/(c+u+o))\n# differences\ninp22=cached_22+uncached_22\nhit21=cached_21/(cached_21+uncached_21)\nhit18=cached_18/(cached_18+uncached_18)\nexpected_cached_today_at_21 = hit21*inp22\nexpected_unc_today_at_21 = (1-hit21)*inp22\nprint(hit21, expected_cached_today_at_21, expected_unc_today_at_21, \"miss extra\", uncached_22-expected_unc_today_at_21, \"cached short\", expected_cached_today_at_21-cached_22)\nprint(hit18, hit18*inp22, (1-hit18)*inp22, uncached_22-(1-hit18)*inp22)\nprint(\"total diff 21-22\", (cached_21+uncached_21+out_21)-(cached_22+uncached_22+out_22))\nprint(\"cached diff\", cached_21-cached_22, \"uncached diff\", uncached_22-uncached_21, \"input diff\", (cached_21+uncached_21)-(cached_22+uncached_22)) \n# if 5/22 uncached was 6m short? Maybe difference from baseline.\nprint((cached_22+uncached_22)*hit21-cached_22)\n",
+            "end_time": 1779441564.3071034,
+            "final_expression_output": null,
+            "in_kernel_exception": null,
+            "system_exception": null,
+            "messages": [
+              {
+                "message_type": "stream",
+                "time": 1779441563.9655893,
+                "stream_name": "stdout",
+                "sender": "server",
+                "text": "5/22 input 40809387 cache rate input 0.877513401512255 uncached rate 0.12248659848774499 total incl out cache 0.8734971379020795\n5/21 input 51355044 cache rate input 0.9559352339372935 uncached rate 0.04406476606270652 total incl out cache 0.949657018029404\n5/18 input 39805327 cache rate input 0.9690811483598665 uncached rate 0.030918851640133492 total incl out cache 0.9645293969415881\n0.9559352339372935 39011130.90868255 1798256.0913174553 miss extra 3200346.9086825447 cached short 3200346.9086825475\n0.9690811483598665 39547607.61782221 1261779.382177794 3736823.617822206\ntotal diff 21-22 10697529\ncached diff 13281312 uncached diff 2735655 input diff 10545657\n3200346.9086825475\n"
+              }
+            ],
+            "jupyter_messages": [
+              {
+                "msg_type": "status",
+                "parent_header": {
+                  "msg_id": "61db5c7a-fccbce1fc06cda81b54f341b_1846_14",
+                  "version": "5.3"
+                },
+                "content": {
+                  "execution_state": "busy"
+                }
+              },
+              {
+                "msg_type": "execute_input",
+                "parent_header": {
+                  "msg_id": "61db5c7a-fccbce1fc06cda81b54f341b_1846_14",
+                  "version": "5.3"
+                }
+              },
+              {
+                "msg_type": "stream",
+                "parent_header": {
+                  "msg_id": "61db5c7a-fccbce1fc06cda81b54f341b_1846_14",
+                  "version": "5.3"
+                },
+                "content": {
+                  "name": "stdout",
+                  "text": "5/22 input 40809387 cache rate input 0.877513401512255 uncached rate 0.12248659848774499 total incl out cache 0.8734971379020795\n5/21 input 51355044 cache rate input 0.9559352339372935 uncached rate 0.04406476606270652 total incl out cache 0.949657018029404\n5/18 input 39805327 cache rate input 0.9690811483598665 uncached rate 0.030918851640133492 total incl out cache 0.9645293969415881\n0.9559352339372935 39011130.90868255 1798256.0913174553 miss extra 3200346.9086825447 cached short 3200346.9086825475\n0.9690811483598665 39547607.61782221 1261779.382177794 3736823.617822206\ntotal diff 21-22 10697529\ncached diff 13281312 uncached diff 2735655 input diff 10545657\n3200346.9086825475\n"
+                }
+              },
+              {
+                "msg_type": "status",
+                "parent_header": {
+                  "msg_id": "61db5c7a-fccbce1fc06cda81b54f341b_1846_14",
+                  "version": "5.3"
+                },
+                "content": {
+                  "execution_state": "idle"
+                }
+              }
+            ],
+            "timeout_triggered": null
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_type": "next",
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "ae92a773-8b20-43a5-adaa-c140a028b23e",
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-b1253335-d632-4f46-a46b-6d55c346b075",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "计算缓存和未缓存命中率",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779441542.6398084,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ae92a773-8b20-43a5-adaa-c140a028b23e",
+      "children": [
+        "f528be50-e0ce-4e5c-bab8-3828c4bda1e0"
+      ]
+    },
+    "f528be50-e0ce-4e5c-bab8-3828c4bda1e0": {
+      "id": "f528be50-e0ce-4e5c-bab8-3828c4bda1e0",
+      "message": {
+        "id": "f528be50-e0ce-4e5c-bab8-3828c4bda1e0",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441574.118048,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "解析缓存命中率下降原因",
+              "content": "缓存命中率下降导致约320万token未命中（按昨日报告），如果按常规97%，则为374万token。5/22相较5/21总tokens减少10.7M，缓存与未缓存分别下降和增加。可能原因包括：前缀变化、缓存敏感性、TTL/驱逐等。",
+              "chunks": [
+                "缓存命中率下降导致约320万token未命中（按昨日报告），如果按常规97%，则为374万token。",
+                "5/22相较5/21总tokens减少10.7M，缓存与未缓存分别下降和增加。",
+                "可能原因包括：前缀变化、缓存敏感性、TTL/驱逐等。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "a43b7d32-b3b1-4167-b7fe-e66cc9e4f374"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_type": "next",
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "a43b7d32-b3b1-4167-b7fe-e66cc9e4f374",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779441542.6398084,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8d66f8dc-26d2-46df-8dbd-60d5316e475d",
+      "children": [
+        "aa6a6fc6-feb2-4918-ac37-7b76fdb3b685"
+      ]
+    },
+    "aa6a6fc6-feb2-4918-ac37-7b76fdb3b685": {
+      "id": "aa6a6fc6-feb2-4918-ac37-7b76fdb3b685",
+      "message": {
+        "id": "aa6a6fc6-feb2-4918-ac37-7b76fdb3b685",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441576.193613,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 33s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 33,
+          "reasoning_start_time": 1779441542.6398084,
+          "reasoning_end_time": 1779441576.1891725,
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_type": "next",
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "f528be50-e0ce-4e5c-bab8-3828c4bda1e0",
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f528be50-e0ce-4e5c-bab8-3828c4bda1e0",
+      "children": [
+        "7da76189-a440-40cb-b144-84db04d41d5c"
+      ]
+    },
+    "7da76189-a440-40cb-b144-84db04d41d5c": {
+      "id": "7da76189-a440-40cb-b144-84db04d41d5c",
+      "message": {
+        "id": "7da76189-a440-40cb-b144-84db04d41d5c",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779441564.711108,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "从截图看，**确实不是小波动，是命中率明显掉了**。\n\n| 日期 | 命中缓存输入 | 未命中缓存输入 | 输入总量 | 缓存命中率 |\n|---|---:|---:|---:|---:|\n| 2026-05-18 | 38.57M | 1.23M | 39.81M | **96.91%** |\n| 2026-05-21 | 49.09M | 2.26M | 51.36M | **95.59%** |\n| 2026-05-22 | 35.81M | 5.00M | 40.81M | **87.75%** |\n\n今天 5/22 相比昨天 5/21：\n\n- 总输入少了约 **1055 万 token**\n- 但未命中缓存反而多了约 **274 万 token**\n- 缓存命中率从 **95.59% 掉到 87.75%**\n- 按昨天的命中率算，今天本应只有约 **180 万未命中**\n- 实际是 **500 万未命中**\n- 所以今天额外未命中大约 **320 万 input token**\n\n你说“差了 600 万 token”，如果是按成本感受或者按平时 96%～97% 命中率预期来算，体感接近是合理的；但按截图严格折算，**缓存额外损失大概是 320 万～374 万 input token**，不是完整 600 万。\n\n最可能的原因不是模型输出问题，而是**前缀缓存被打断了**。DeepSeek 这类缓存一般对“前面完全相同的一段 token”敏感，只要靠前位置变了，后面一大段都可能不命中。\n\n重点排查这几个：\n\n1. **system prompt / tools schema / RAG 上下文今天变了**  \n   比如工具列表顺序、JSON schema、函数描述、知识库片段顺序，只要变动在前面，缓存命中会大跌。\n\n2. **把时间戳、请求 ID、用户 ID、随机 trace 放在了 prompt 前面**  \n   这很常见。每天日期、会话 ID、动态 metadata 如果放在 system 或开头，会让本来能复用的长前缀全部失效。  \n   正确做法是：稳定内容放最前，动态内容尽量放最后。\n\n3. **今天请求更分散，复用前缀少了**  \n   比如昨天大量请求来自同一个工作流，今天来自多个项目、多个 agent、多个 prompt 模板，命中率自然会掉。\n\n4. **agent 动态注入 memory / 文件 / 检索结果的位置变了**  \n   如果 RAG 结果被塞在系统提示词附近，且每次不同，会严重破坏缓存。最好把固定模板放前面，检索结果靠后。\n\n5. **模型名或路由变了**  \n   例如 `deepseek-v4-pro` 实际后端版本、区域、供应商路由、fallback 模型发生变化，也可能导致缓存不可复用。这个需要看服务商后台日志确认。\n\n我建议你马上做一个简单定位：抽今天和昨天各 20 条请求，把**前 2000～8000 token 的 prompt 做 hash**。如果 hash 今天每条都不一样，而昨天大量相同，问题就在 prompt 组装；如果 hash 基本一样但仍不命中，才更像是供应商缓存侧、模型版本或路由问题。\n\n最该先查的是：**今天有没有新增日期、trace、session、memory、tools schema 或 RAG 内容被放到了 prompt 开头。** 这个最容易造成你截图里这种从 95%+ 掉到 88% 的情况。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "search_result_groups": [],
+          "request_id": "wfr_019e4efb1948755cac869eb800bd597d",
+          "message_type": "next",
+          "turn_exchange_id": "b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "aa6a6fc6-feb2-4918-ac37-7b76fdb3b685",
+          "async_source": "saserver-australiasoutheast-prod.fck9d:conversation-turn-cae64ba1-7736-440f-a941-12c0cd0909f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-b1253335-d632-4f46-a46b-6d55c346b075",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "aa6a6fc6-feb2-4918-ac37-7b76fdb3b685",
+      "children": []
+    }
+  },
+  "current_node": "7da76189-a440-40cb-b144-84db04d41d5c"
+}

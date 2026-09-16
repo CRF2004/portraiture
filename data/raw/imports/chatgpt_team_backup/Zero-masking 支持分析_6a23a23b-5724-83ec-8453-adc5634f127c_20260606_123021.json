@@ -1,0 +1,4717 @@
+{
+  "title": "Zero-masking 支持分析",
+  "create_time": 1780720221.010076,
+  "update_time": 1780720356.218362,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a23a23b-5724-83ec-8453-adc5634f127c",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://docs.google.com/document/d/",
+    "https://www.mdpi.com/2076-3417/13/3/1805",
+    "https://www.mdpi.com/1099-4300/23/8/1064",
+    "https://developer.aliyun.com/article/1174401",
+    "https://www.openai.com",
+    "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.119.006513"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "49eef20f-a2fa-4a6d-afad-3f69e1140a06"
+      ]
+    },
+    "49eef20f-a2fa-4a6d-afad-3f69e1140a06": {
+      "id": "49eef20f-a2fa-4a6d-afad-3f69e1140a06",
+      "message": {
+        "id": "49eef20f-a2fa-4a6d-afad-3f69e1140a06",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "9ff76231-33e3-4030-99eb-f5696dea399e"
+      ]
+    },
+    "9ff76231-33e3-4030-99eb-f5696dea399e": {
+      "id": "9ff76231-33e3-4030-99eb-f5696dea399e",
+      "message": {
+        "id": "9ff76231-33e3-4030-99eb-f5696dea399e",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "49eef20f-a2fa-4a6d-afad-3f69e1140a06",
+      "children": [
+        "50b15aee-51bc-4770-9306-65c20a473ef6"
+      ]
+    },
+    "50b15aee-51bc-4770-9306-65c20a473ef6": {
+      "id": "50b15aee-51bc-4770-9306-65c20a473ef6",
+      "message": {
+        "id": "50b15aee-51bc-4770-9306-65c20a473ef6",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9ff76231-33e3-4030-99eb-f5696dea399e",
+      "children": [
+        "ef1e5383-0f81-43aa-8cfe-19184665f474"
+      ]
+    },
+    "ef1e5383-0f81-43aa-8cfe-19184665f474": {
+      "id": "ef1e5383-0f81-43aa-8cfe-19184665f474",
+      "message": {
+        "id": "ef1e5383-0f81-43aa-8cfe-19184665f474",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720219.318,
+        "update_time": 1780720261.343345,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "“ a frequently\r\nused choice in ECG occlusion analysis is zero-masking—setting\r\nsignal samples or segments to zero” 这个论点能不能被\"\"[8] J. Paraliˇc, M. Kol´arik, Z. Paraliˇcov´a, O. Lohaj, and A. Jozef´ık,\r\n“Perturbation-based explainable AI for ECG sensor data,” Applied\r\nSciences, vol. 13, no. 3, p. 1805, 2023.\r\n[9] M. Resta, A. Monreale, and D. Bacciu, “Occlusion-based explanations\r\nin deep recurrent models for biomedical signals,” Entropy, vol. 23, no. 8,\r\np. 1064, 2021.\"\" 所支持？"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_source": null,
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "50b15aee-51bc-4770-9306-65c20a473ef6",
+      "children": [
+        "005717cc-ba13-4a6b-a8c3-8be8d96a373b"
+      ]
+    },
+    "005717cc-ba13-4a6b-a8c3-8be8d96a373b": {
+      "id": "005717cc-ba13-4a6b-a8c3-8be8d96a373b",
+      "message": {
+        "id": "005717cc-ba13-4a6b-a8c3-8be8d96a373b",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720220.835589,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "ef1e5383-0f81-43aa-8cfe-19184665f474",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ef1e5383-0f81-43aa-8cfe-19184665f474",
+      "children": [
+        "482ea318-5fe1-400f-9048-533ebde1d169"
+      ]
+    },
+    "482ea318-5fe1-400f-9048-533ebde1d169": {
+      "id": "482ea318-5fe1-400f-9048-533ebde1d169",
+      "message": {
+        "id": "482ea318-5fe1-400f-9048-533ebde1d169",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720220.8811638,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "api_tool_v2_files_developer_prompt",
+          "exclusive_key": "api_tool_v2_files_developer_prompt",
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "005717cc-ba13-4a6b-a8c3-8be8d96a373b",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "005717cc-ba13-4a6b-a8c3-8be8d96a373b",
+      "children": [
+        "e5de4f18-3569-47f5-8ae7-259cc25c41c3"
+      ]
+    },
+    "e5de4f18-3569-47f5-8ae7-259cc25c41c3": {
+      "id": "e5de4f18-3569-47f5-8ae7-259cc25c41c3",
+      "message": {
+        "id": "e5de4f18-3569-47f5-8ae7-259cc25c41c3",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720221.806492,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "e8ca9028-ab46-41ad-aa6d-2431c6a214e2"
+        },
+        "status": "in_progress",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "e8ca9028-ab46-41ad-aa6d-2431c6a214e2",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "skip_reasoning_title": "跳过",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "482ea318-5fe1-400f-9048-533ebde1d169",
+      "children": [
+        "a2623375-7b4f-4180-a414-ac50553c8fbe"
+      ]
+    },
+    "a2623375-7b4f-4180-a414-ac50553c8fbe": {
+      "id": "a2623375-7b4f-4180-a414-ac50553c8fbe",
+      "message": {
+        "id": "a2623375-7b4f-4180-a414-ac50553c8fbe",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720220.872658,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我会按“能支持什么强度的表述”来判断：先看两篇是否真的使用 zero-masking，再看它们能不能支撑 “frequently used choice” 这种频率性判断。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "is_thinking_preamble_message": true,
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "e5de4f18-3569-47f5-8ae7-259cc25c41c3",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "e5de4f18-3569-47f5-8ae7-259cc25c41c3",
+      "children": [
+        "929a6471-0c96-4d9e-8e19-940fac9c92dc"
+      ]
+    },
+    "929a6471-0c96-4d9e-8e19-940fac9c92dc": {
+      "id": "929a6471-0c96-4d9e-8e19-940fac9c92dc",
+      "message": {
+        "id": "929a6471-0c96-4d9e-8e19-940fac9c92dc",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720224.02972,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "Paralic Perturbation-Based Explainable AI for ECG Sensor Data set to zero ECG perturbation",
+              "Resta Monreale Bacciu Occlusion-based explanations deep recurrent models biomedical signals zero"
+            ]
+          },
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "0542e67e-3066-45cd-a6a5-465086c96762",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a2623375-7b4f-4180-a414-ac50553c8fbe",
+      "children": [
+        "c5bf0866-6ac6-478c-a892-e47e39264bba"
+      ]
+    },
+    "c5bf0866-6ac6-478c-a892-e47e39264bba": {
+      "id": "c5bf0866-6ac6-478c-a892-e47e39264bba",
+      "message": {
+        "id": "c5bf0866-6ac6-478c-a892-e47e39264bba",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720220.872658,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"search_query\":[{\"q\":\"Paralic Perturbation-Based Explainable AI for ECG Sensor Data set to zero ECG perturbation\"},{\"q\":\"Resta Monreale Bacciu Occlusion-based explanations deep recurrent models biomedical signals zero\"}],\"response_length\":\"short\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "2a179ca6-dacf-4ef1-a72c-9101c1da5867",
+          "reasoning_status": "is_reasoning",
+          "search_queries": [
+            {
+              "type": "search",
+              "q": "Paralic Perturbation-Based Explainable AI for ECG Sensor Data set to zero ECG perturbation"
+            },
+            {
+              "type": "search",
+              "q": "Resta Monreale Bacciu Occlusion-based explanations deep recurrent models biomedical signals zero"
+            }
+          ],
+          "search_display_string": "正在搜索网页",
+          "searched_display_string": "已搜索网页",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索文献验证引用支持声明",
+          "reasoning_titles": [
+            "搜索文献验证引用支持声明"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "929a6471-0c96-4d9e-8e19-940fac9c92dc",
+      "children": [
+        "a26debd5-31ab-443e-8239-d74199dff7cc"
+      ]
+    },
+    "a26debd5-31ab-443e-8239-d74199dff7cc": {
+      "id": "a26debd5-31ab-443e-8239-d74199dff7cc",
+      "message": {
+        "id": "a26debd5-31ab-443e-8239-d74199dff7cc",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720224.0296168,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "Paralic Perturbation-Based Explainable AI for ECG Sensor Data set to zero ECG perturbation",
+              "Resta Monreale Bacciu Occlusion-based explanations deep recurrent models biomedical signals zero"
+            ]
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "c5bf0866-6ac6-478c-a892-e47e39264bba",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索文献验证引用支持声明",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "c5bf0866-6ac6-478c-a892-e47e39264bba",
+      "children": [
+        "9cfe7b35-6068-43fd-9aed-0b77489af14d"
+      ]
+    },
+    "9cfe7b35-6068-43fd-9aed-0b77489af14d": {
+      "id": "9cfe7b35-6068-43fd-9aed-0b77489af14d",
+      "message": {
+        "id": "9cfe7b35-6068-43fd-9aed-0b77489af14d",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720224.0257373,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "by J Paralič · 2023 · Cited by 5 — In this article we focus on the explainability of black-box models for stream data from 12-lead ECG. We designed and implemented a perturbation explainability ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805/review_report",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "31 Jan 2023 — The authors propose a perturbation-based method for explaining predictions made by a deep network using ECG data. I agree that explainable AI – ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "restasupport.co.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://restasupport.co.uk/",
+                  "title": "RESTA: Award-Winning Resilience Training for Schools",
+                  "snippet": "RESTA supports schools to build educational resilience through psychologically informed training, practice and whole-organisation development.",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "restasupport.co.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.researchgate.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/367642939_Perturbation-Based_Explainable_AI_for_ECG_Sensor_Data",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "13 Oct 2025 — Therefore, in this article we focus on the explainability of black-box models for stream data from 12-lead ECG. We designed and implemented a ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": 1675123200,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "en.wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Simone_Resta",
+                  "title": "Simone Resta",
+                  "snippet": "Simone Resta (born 14 September 1970) is an Italian engineer who currently works as the Deputy Technical Director for Mercedes-AMG F1 Team.Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": 1591970073,
+                  "result_source": "bright",
+                  "attribution": "en.wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "pmc.ncbi.nlm.nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13056371/",
+                  "title": "Explainable artificial intelligence in electrocardiography - PMC",
+                  "snippet": "by A Taleban · 2025 · Cited by 2 — 3.1. Perturbation-Based techniques. Perturbation-based explanation methods represent one of the most widely applied approaches in ECG ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.resta.it",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.resta.it/en/",
+                  "title": "Resta Computerized Bedding Equipments",
+                  "snippet": "Resta srl, specialized in the manufacturing of computerized equipment for the production of mattresses, quilts, bedspreads and pillows, has been the global ...",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.resta.it"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/html/2508.17294v1",
+                  "title": "Explainable AI (XAI) for Arrhythmia detection from ...",
+                  "snippet": "24 Aug 2025 — This study investigates the application of Explainable AI (XAI) techniques specifically adapted for time-series ECG analysis. Using the MIT-BIH ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "arxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "it.linkedin.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://it.linkedin.com/company/resta-srl",
+                  "title": "Resta - Computerized Bedding Equipment",
+                  "snippet": "Resta offers a complete range of machineries, covering the production of mattresses, quilts, bedspreads and pillows.Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "it.linkedin.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "play.google.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://play.google.com/store/apps/details?hl=en_ZA&id=com.ordertech.resta",
+                  "title": "Resta | ريستا – Apps on Google Play",
+                  "snippet": "6 Apr 2026 — Enjoy the best meals with the “Resta” application - your ideal destination for pizza, pies, shawarma, and spiced potatoes. The application ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "play.google.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "jogs.one",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://jogs.one/icigs_1000_14/",
+                  "title": "Explainable AI decision model for ECG data of cardiac ...",
+                  "snippet": "The decision taken by the AI model for any particular patient's ECG can be interpreted using the ShAP plot, highlighting the abnormal ECG waves. We made a web ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": 1650412800,
+                  "result_source": "bright",
+                  "attribution": "jogs.one"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "en.wiktionary.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wiktionary.org/wiki/resta",
+                  "title": "resta",
+                  "snippet": "resta · Catalan · French · Italian · Ladin · Latin · Old English · Old Frisian ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "en.wiktionary.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.kjim.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.kjim.org/journal/view.php?number=170993",
+                  "title": "Explainable paroxysmal atrial fibrillation diagnosis using ...",
+                  "snippet": "by Y Jin · 2025 · Cited by 2 — In this study, we demonstrate the development and analysis of an explainable deep learning algorithm applied to ECG data for early PAF detection ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.kjim.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.deepl.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.deepl.com/en/translator/q/es/resta/en/subtract/24fb087",
+                  "title": "resta - translated from Spanish to English",
+                  "snippet": "resta noun, feminine toolbar.listen (plural: restas f)—. Linguee Dictionary ... subtraction n toolbar.listen (plural: subtractions) ... deduction n toolbar.listen.Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.deepl.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "dr.ntu.edu.sg",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://dr.ntu.edu.sg/entities/publication/aaa75e1d-7c9f-45e5-9a74-3b7fb0cf51ab",
+                  "title": "Explainable AI model for ECG signal assessment - DR-NTU",
+                  "snippet": "by SJT Low · 2023 — The use of artificial intelligence (AI) systems can automate the onerous task of manually interpreting ECG parameters to detect cardiac diseases.",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "dr.ntu.edu.sg"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "restaforte.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://restaforte.com/",
+                  "title": "Resta Forte: Johanna Urquhart | Leadership Coaching and ...",
+                  "snippet": "A ten-month group programme for women in middle and early senior leadership. Covers the full range of what it means to lead well — and stay well — over time.Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "restaforte.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.frontiersin.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2025.1659971/full",
+                  "title": "ECG-XPLAIM: eXPlainable Locally-adaptive Artificial ...",
+                  "snippet": "by P Pantelidis · 2025 · Cited by 6 — In this study, we introduce ECG-XPLAIM—an eXPlainable, Locally-adaptive Artificial Intelligence Model designed for ECG classification. By ...Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": 1760572800,
+                  "result_source": "bright",
+                  "attribution": "www.frontiersin.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "worldresta.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://worldresta.com/",
+                  "title": "RESTA Inc.",
+                  "snippet": "RESTA is a Japanese operated second-hand clothing supplier. Operating a chain of 24-hour, unmanned second-hand clothing stores in Japan.Read more",
+                  "ref_id": {
+                    "turn_index": 505049,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": 1740607648,
+                  "result_source": "bright",
+                  "attribution": "worldresta.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "4659c25d-de2b-4cc4-93aa-401a9ed6a7e7",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索文献验证引用支持声明",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a26debd5-31ab-443e-8239-d74199dff7cc",
+      "children": [
+        "e8331c70-fad3-460e-bdb9-dd92346383b9"
+      ]
+    },
+    "e8331c70-fad3-460e-bdb9-dd92346383b9": {
+      "id": "e8331c70-fad3-460e-bdb9-dd92346383b9",
+      "message": {
+        "id": "e8331c70-fad3-460e-bdb9-dd92346383b9",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720225.387216,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn505049search0\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "2175117d-f7ca-4e6c-92e6-84466bc47c85",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索开放的Paralic线索",
+          "reasoning_titles": [
+            "搜索开放的Paralic线索"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "9cfe7b35-6068-43fd-9aed-0b77489af14d",
+      "children": [
+        "fee64264-28ef-49fc-9874-2545d9ca259a"
+      ]
+    },
+    "fee64264-28ef-49fc-9874-2545d9ca259a": {
+      "id": "fee64264-28ef-49fc-9874-2545d9ca259a",
+      "message": {
+        "id": "fee64264-28ef-49fc-9874-2545d9ca259a",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720226.2194247,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data | MDPI",
+                  "snippet": "Total lines: 501\n",
+                  "ref_id": {
+                    "turn_index": 683900,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "e8331c70-fad3-460e-bdb9-dd92346383b9",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索开放的Paralic线索",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e8331c70-fad3-460e-bdb9-dd92346383b9",
+      "children": [
+        "48e48cd7-f207-46bc-8348-2d4023e15455"
+      ]
+    },
+    "48e48cd7-f207-46bc-8348-2d4023e15455": {
+      "id": "48e48cd7-f207-46bc-8348-2d4023e15455",
+      "message": {
+        "id": "48e48cd7-f207-46bc-8348-2d4023e15455",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720227.3800685,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "\"Occlusion-based explanations in deep recurrent models for biomedical signals\" Entropy 2021"
+            ]
+          },
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "33ff43a6-ba27-4779-8a04-ee87aefa7aab",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "fee64264-28ef-49fc-9874-2545d9ca259a",
+      "children": [
+        "90d9d61f-dff5-4a7b-86c1-81611cb8c0b4"
+      ]
+    },
+    "90d9d61f-dff5-4a7b-86c1-81611cb8c0b4": {
+      "id": "90d9d61f-dff5-4a7b-86c1-81611cb8c0b4",
+      "message": {
+        "id": "90d9d61f-dff5-4a7b-86c1-81611cb8c0b4",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720226.437329,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"search_query\":[{\"q\":\"\\\"Occlusion-based explanations in deep recurrent models for biomedical signals\\\" Entropy 2021\"}],\"response_length\":\"short\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "48e48cd7-f207-46bc-8348-2d4023e15455",
+          "reasoning_status": "is_reasoning",
+          "search_queries": [
+            {
+              "type": "search",
+              "q": "\"Occlusion-based explanations in deep recurrent models for biomedical signals\" Entropy 2021"
+            }
+          ],
+          "search_display_string": "正在搜索网页",
+          "searched_display_string": "已搜索网页",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索带有\"Entropy\"的精确标题",
+          "reasoning_titles": [
+            "搜索带有\"Entropy\"的精确标题"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "48e48cd7-f207-46bc-8348-2d4023e15455",
+      "children": [
+        "b25e4f61-a190-4716-89b4-c78533a366a5"
+      ]
+    },
+    "b25e4f61-a190-4716-89b4-c78533a366a5": {
+      "id": "b25e4f61-a190-4716-89b4-c78533a366a5",
+      "message": {
+        "id": "b25e4f61-a190-4716-89b4-c78533a366a5",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720227.3799648,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "\"Occlusion-based explanations in deep recurrent models for biomedical signals\" Entropy 2021"
+            ]
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "90d9d61f-dff5-4a7b-86c1-81611cb8c0b4",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索带有\"Entropy\"的精确标题",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "90d9d61f-dff5-4a7b-86c1-81611cb8c0b4",
+      "children": [
+        "f95f4f69-2acb-4bd0-9905-b6bba2d337c1"
+      ]
+    },
+    "f95f4f69-2acb-4bd0-9905-b6bba2d337c1": {
+      "id": "f95f4f69-2acb-4bd0-9905-b6bba2d337c1",
+      "message": {
+        "id": "f95f4f69-2acb-4bd0-9905-b6bba2d337c1",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720227.3768418,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy 2021, 23, 1064. https://doi.org/10.3390/e23081064. AMA ...Read more",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064/notes",
+                  "title": "Article Versions Notes",
+                  "snippet": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy 2021, 23, 1064. https://doi.org/10.3390/e23081064. AMA Style. Resta M ...",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "pubmed.ncbi.nlm.nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/34441204/",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy (Basel). 2021 Aug 17;23(8):1064. doi: 10.3390/e23081064 ...Read more",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pubmed.ncbi.nlm.nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.researchgate.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/353973630_Occlusion-Based_Explanations_in_Deep_Recurrent_Models_for_Biomedical_Signals",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "12 Aug 2021 — Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. MDPI. Entropy. August 2021; 23(8):1064. DOI:10.3390/e23081064.Read more",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": 1629158400,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/figure/A-visualization-of-sub-signal-occlusion-contributions-for-an-ECG-signal-from-CBPEDS-The_fig3_353973630",
+                  "title": "A visualization of sub-signal occlusion contributions for an ECG ...",
+                  "snippet": "... Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals | The biomedical field is characterized by an ever-increasing production of ...",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "dblp.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://dblp.org/rec/journals/entropy/RestaMB21.html",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for ...",
+                  "snippet": "Michele Resta , Anna Monreale , Davide Bacciu : Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy 23(8): 1064 (2021).",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": 739324800,
+                  "result_source": "bright",
+                  "attribution": "dblp.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "bibbase.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://bibbase.org/network/publication/resta-monreale-bacciu-occlusionbasedexplanationsindeeprecurrentmodelsforbiomedicalsignals-2021",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for ...",
+                  "snippet": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Resta, M., Monreale, A., & Bacciu, D. Entropy, 2021.",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "bibbase.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "scienceon.kisti.re.kr",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://scienceon.kisti.re.kr/srch/selectPORSrchArticle.do?cn=NART115759275",
+                  "title": "[논문]Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals 원문보기. Entropy, v.23 no.8, 2021년, pp.1064 -. Resta, Michele (Computer Science ...",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "scienceon.kisti.re.kr"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.preprints.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.preprints.org/manuscript/202405.1865",
+                  "title": "Explainable AI for Interpretation of Ovarian Tumor ...",
+                  "snippet": "28 May 2024 — Resta, M., Monreale, A., & Bacciu, D. (2021). Occlusion-based explanations in deep recurrent models for biomedical signals. Entropy, 23(8), 1064 ...Read more",
+                  "ref_id": {
+                    "turn_index": 558578,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.preprints.org"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "0410dbe6-bec1-4c8f-87a4-4f488a37690f",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索带有\"Entropy\"的精确标题",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b25e4f61-a190-4716-89b4-c78533a366a5",
+      "children": [
+        "db8e163c-34e1-4957-beac-4be6406c9766"
+      ]
+    },
+    "db8e163c-34e1-4957-beac-4be6406c9766": {
+      "id": "db8e163c-34e1-4957-beac-4be6406c9766",
+      "message": {
+        "id": "db8e163c-34e1-4957-beac-4be6406c9766",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720228.757868,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn558578search0\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "a2dc9ea7-2991-4bdb-84c4-f8ed9b74123a",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索包含Entropy的Resta来源",
+          "reasoning_titles": [
+            "搜索包含Entropy的Resta来源"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "f95f4f69-2acb-4bd0-9905-b6bba2d337c1",
+      "children": [
+        "b9956479-9b64-49db-b291-d70a7973d874"
+      ]
+    },
+    "b9956479-9b64-49db-b291-d70a7973d874": {
+      "id": "b9956479-9b64-49db-b291-d70a7973d874",
+      "message": {
+        "id": "b9956479-9b64-49db-b291-d70a7973d874",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720229.3751333,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 114319,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "db8e163c-34e1-4957-beac-4be6406c9766",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索包含Entropy的Resta来源",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "db8e163c-34e1-4957-beac-4be6406c9766",
+      "children": [
+        "7d18d411-3e93-4019-8776-d55ef5529e31"
+      ]
+    },
+    "7d18d411-3e93-4019-8776-d55ef5529e31": {
+      "id": "7d18d411-3e93-4019-8776-d55ef5529e31",
+      "message": {
+        "id": "7d18d411-3e93-4019-8776-d55ef5529e31",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720229.73584,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"find\":[{\"ref_id\":\"turn114319view0\",\"pattern\":\"zero\"},{\"ref_id\":\"turn114319view0\",\"pattern\":\"occluded with zero\"},{\"ref_id\":\"turn114319view0\",\"pattern\":\"occlusion with zero\"},{\"ref_id\":\"turn114319view0\",\"pattern\":\"baseline\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "42605bac-c6f5-4303-9a76-42a83d31ef41",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "打开Resta环绕方法，检测遮挡",
+          "reasoning_titles": [
+            "打开Resta环绕方法，检测遮挡"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "b9956479-9b64-49db-b291-d70a7973d874",
+      "children": [
+        "410c0dc3-80ed-4d3e-8508-eab9673fe87e"
+      ]
+    },
+    "410c0dc3-80ed-4d3e-8508-eab9673fe87e": {
+      "id": "410c0dc3-80ed-4d3e-8508-eab9673fe87e",
+      "message": {
+        "id": "410c0dc3-80ed-4d3e-8508-eab9673fe87e",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720231.8077078,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 125543,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 125543,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 125543,
+                    "ref_type": "view",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 125543,
+                    "ref_type": "view",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "7d18d411-3e93-4019-8776-d55ef5529e31",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "打开Resta环绕方法，检测遮挡",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "7d18d411-3e93-4019-8776-d55ef5529e31",
+      "children": [
+        "09963c4e-b260-449b-92db-23b8403e465a"
+      ]
+    },
+    "09963c4e-b260-449b-92db-23b8403e465a": {
+      "id": "09963c4e-b260-449b-92db-23b8403e465a",
+      "message": {
+        "id": "09963c4e-b260-449b-92db-23b8403e465a",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720232.092294,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"find\":[{\"ref_id\":\"turn114319view0\",\"pattern\":\"mean value\"},{\"ref_id\":\"turn114319view0\",\"pattern\":\"zero value\"},{\"ref_id\":\"turn114319view0\",\"pattern\":\"occlusion value\"},{\"ref_id\":\"turn114319view0\",\"pattern\":\"value used to replace\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f57f8fab-6ac1-4933-99f1-abca9a3e5d43",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找方法行和闭塞值",
+          "reasoning_titles": [
+            "查找方法行和闭塞值"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "410c0dc3-80ed-4d3e-8508-eab9673fe87e",
+      "children": [
+        "8559ebc1-2a92-4684-8e74-8756bfc23f26"
+      ]
+    },
+    "8559ebc1-2a92-4684-8e74-8756bfc23f26": {
+      "id": "8559ebc1-2a92-4684-8e74-8756bfc23f26",
+      "message": {
+        "id": "8559ebc1-2a92-4684-8e74-8756bfc23f26",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720233.9061751,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 256209,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 256209,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 256209,
+                    "ref_type": "view",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 256209,
+                    "ref_type": "view",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "0a65c70e-f8d6-41ca-a13b-3ae9defed6cb",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找方法行和闭塞值",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "09963c4e-b260-449b-92db-23b8403e465a",
+      "children": [
+        "c11c5c68-fece-4f57-a608-654cc859751c"
+      ]
+    },
+    "c11c5c68-fece-4f57-a608-654cc859751c": {
+      "id": "c11c5c68-fece-4f57-a608-654cc859751c",
+      "message": {
+        "id": "c11c5c68-fece-4f57-a608-654cc859751c",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720238.908536,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "审视\"常用选择\"在ECG分析中的应用",
+              "content": "我觉得需要更多的文献支持来证明“零遮蔽”在ECG缺失分析中被广泛应用。文献[8]支持ECG的零遮蔽，[9]则探讨了医学信号遮蔽，包括ECG，但不完全支持“常用”的说法。因此，或许可以改为“一个常见的选择”。",
+              "chunks": [
+                "我觉得需要更多的文献支持来证明“零遮蔽”在ECG缺失分析中被广泛应用。",
+                "文献[8]支持ECG的零遮蔽，[9]则探讨了医学信号遮蔽，包括ECG，但不完全支持“常用”的说法。",
+                "因此，或许可以改为“一个常见的选择”。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "57f3cb6d-03e9-4849-afa7-6a0f24aab496"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "5236cbef-e2d0-4e3f-9cae-2523c230c813",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8559ebc1-2a92-4684-8e74-8756bfc23f26",
+      "children": [
+        "dbfe9f46-ecda-4ece-bfb0-4a6c7a942111"
+      ]
+    },
+    "dbfe9f46-ecda-4ece-bfb0-4a6c7a942111": {
+      "id": "dbfe9f46-ecda-4ece-bfb0-4a6c7a942111",
+      "message": {
+        "id": "dbfe9f46-ecda-4ece-bfb0-4a6c7a942111",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720239.337285,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "ECG explainable AI occlusion zero masking perturbation samples set to zero",
+              "ECG occlusion sensitivity zero masking deep learning explanation ECG segments zero"
+            ]
+          },
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f67a205c-9ddb-4613-a97e-b9db392c6c76",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "c11c5c68-fece-4f57-a608-654cc859751c",
+      "children": [
+        "d58bd6a9-4295-4448-a9fe-a85b7e56bd12"
+      ]
+    },
+    "d58bd6a9-4295-4448-a9fe-a85b7e56bd12": {
+      "id": "d58bd6a9-4295-4448-a9fe-a85b7e56bd12",
+      "message": {
+        "id": "d58bd6a9-4295-4448-a9fe-a85b7e56bd12",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720234.216748,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"search_query\":[{\"q\":\"ECG explainable AI occlusion zero masking perturbation samples set to zero\"},{\"q\":\"ECG occlusion sensitivity zero masking deep learning explanation ECG segments zero\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "cd68e6e9-c560-4b5d-9a0c-145cec7b624b",
+          "reasoning_status": "is_reasoning",
+          "search_queries": [
+            {
+              "type": "search",
+              "q": "ECG explainable AI occlusion zero masking perturbation samples set to zero"
+            },
+            {
+              "type": "search",
+              "q": "ECG occlusion sensitivity zero masking deep learning explanation ECG segments zero"
+            }
+          ],
+          "search_display_string": "正在搜索网页",
+          "searched_display_string": "已搜索网页",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索ECG零掩蔽与扰动方法文献",
+          "reasoning_titles": [
+            "搜索ECG零掩蔽与扰动方法文献"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "dbfe9f46-ecda-4ece-bfb0-4a6c7a942111",
+      "children": [
+        "98a361eb-200a-431c-bb2e-160b006636c6"
+      ]
+    },
+    "98a361eb-200a-431c-bb2e-160b006636c6": {
+      "id": "98a361eb-200a-431c-bb2e-160b006636c6",
+      "message": {
+        "id": "98a361eb-200a-431c-bb2e-160b006636c6",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720239.3371844,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "ECG explainable AI occlusion zero masking perturbation samples set to zero",
+              "ECG occlusion sensitivity zero masking deep learning explanation ECG segments zero"
+            ]
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "d58bd6a9-4295-4448-a9fe-a85b7e56bd12",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索ECG零掩蔽与扰动方法文献",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d58bd6a9-4295-4448-a9fe-a85b7e56bd12",
+      "children": [
+        "9de26928-740b-48f0-aac3-5aaf19117ad9"
+      ]
+    },
+    "9de26928-740b-48f0-aac3-5aaf19117ad9": {
+      "id": "9de26928-740b-48f0-aac3-5aaf19117ad9",
+      "message": {
+        "id": "9de26928-740b-48f0-aac3-5aaf19117ad9",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720239.3334801,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.nhcs.com.sg",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.nhcs.com.sg/news/murmurs/understanding-electrocardiogram-ecg",
+                  "title": "Understanding Electrocardiogram (ECG) - Murmurs | NHCS",
+                  "snippet": "23 Jul 2021 — An ECG is a quick and easily accessible test used to detect and diagnose certain heart conditions. The standard ECG has 12 leads.Read more",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": 1627012800,
+                  "result_source": "bright",
+                  "attribution": "www.nhcs.com.sg"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "en.wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Electrocardiography",
+                  "title": "Electrocardiography",
+                  "snippet": "Among other things, an ECG can be used to measure the rate and rhythm of heartbeats, the size and position of the heart chambers, the presence of any damage to ...Read more",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": 1030525161,
+                  "result_source": "bright",
+                  "attribution": "en.wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.singhealth.com.sg",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.singhealth.com.sg/tests-procedures/electrocardiogram",
+                  "title": "Electrocardiogram (ECG)",
+                  "snippet": "Electrocardiogram (ECG) is a non-invasive (does not require an incision into the body) test that records the electrical activity of the heart.Read more",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.singhealth.com.sg"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.ncbi.nlm.nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.ncbi.nlm.nih.gov/books/NBK2214/",
+                  "title": "Conquering the ECG - Cardiology Explained - NCBI Bookshelf",
+                  "snippet": "The electrocardiogram (ECG) is the oldest and most enduring tool of the cardiologist. A basic knowledge of the ECG will enhance the understanding of cardiology.Read more",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.ncbi.nlm.nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.mayoclinic.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mayoclinic.org/tests-procedures/ekg/about/pac-20384983",
+                  "title": "Electrocardiogram (ECG or EKG)",
+                  "snippet": "2 Apr 2024 — An electrocardiogram (ECG or EKG) is a quick test to check the heartbeat. It records the electrical signals in the heart.Read more",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mayoclinic.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "litfl.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://litfl.com/ecg-library/basics/",
+                  "title": "EKG basics - ECG Library",
+                  "snippet": "ECG Basics including Rate, Rhythm, Axis calculations and interpretation of P, Q, R, S, T U waves, segments and basic ECG calculations.",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "litfl.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.healthdirect.gov.au",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.healthdirect.gov.au/electrocardiogram-ecg",
+                  "title": "Electrocardiogram - ECG or EKG",
+                  "snippet": "An electrocardiogram is a medical test, commonly called an ECG or EKG, that uses a machine to measure and record the electrical activity in the heart. Read ...Read more",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.healthdirect.gov.au"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.uptodate.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.uptodate.com/contents/ecg-tutorial-basic-principles-of-electrocardiography-analysis",
+                  "title": "ECG tutorial: Basic principles of electrocardiography analysis",
+                  "snippet": "9 Mar 2026 — INTRODUCTION. The electrocardiogram (ECG) is a graphical representation of the cardiac electrical cycle. It is the most important test for ...",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.uptodate.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/abs/2512.23347",
+                  "title": "ECG-RAMBA: Zero-Shot ECG Generalization by Morphology-Rhythm Disentanglement and Long-Range Modeling",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "academia",
+                    "ref_index": 16
+                  },
+                  "pub_date": 1767003292,
+                  "result_source": "labrador",
+                  "attribution": "arxiv.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/abs/2605.19258",
+                  "title": "ExECG: An Explainable AI Framework for ECG models",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "academia",
+                    "ref_index": 17
+                  },
+                  "pub_date": 1779156604,
+                  "result_source": "labrador",
+                  "attribution": "arxiv.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/abs/2310.00818",
+                  "title": "ECG-SL: Electrocardiogram(ECG) Segment Learning, a deep learning method for ECG signal",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "academia",
+                    "ref_index": 18
+                  },
+                  "pub_date": 1696202275,
+                  "result_source": "labrador",
+                  "attribution": "arxiv.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/abs/2510.21551",
+                  "title": "Interpretable Multimodal Zero-Shot ECG Diagnosis via Structured Clinical Knowledge Alignment",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 936349,
+                    "ref_type": "academia",
+                    "ref_index": 19
+                  },
+                  "pub_date": 1761318549,
+                  "result_source": "labrador",
+                  "attribution": "arxiv.org"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "98a361eb-200a-431c-bb2e-160b006636c6",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索ECG零掩蔽与扰动方法文献",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "98a361eb-200a-431c-bb2e-160b006636c6",
+      "children": [
+        "7baeb9ac-2bc6-439e-b803-604cc5f4ef91"
+      ]
+    },
+    "7baeb9ac-2bc6-439e-b803-604cc5f4ef91": {
+      "id": "7baeb9ac-2bc6-439e-b803-604cc5f4ef91",
+      "message": {
+        "id": "7baeb9ac-2bc6-439e-b803-604cc5f4ef91",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720242.357072,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "寻找相关综述支持广泛应用的扰动方法",
+              "content": "我的搜索结果不太理想。也许寻找一篇关于2025年“可解释的人工智能在心电图中的应用”综述文章，这可能会提供对扰动方法广泛应用的支持。我会继续寻找相关的最新研究。",
+              "chunks": [
+                "我的搜索结果不太理想。",
+                "也许寻找一篇关于2025年“可解释的人工智能在心电图中的应用”综述文章，这可能会提供对扰动方法广泛应用的支持。",
+                "我会继续寻找相关的最新研究。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "cd68e6e9-c560-4b5d-9a0c-145cec7b624b"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "e4ba74ed-8015-43c0-bc2e-6c7b30a4897c",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9de26928-740b-48f0-aac3-5aaf19117ad9",
+      "children": [
+        "a1fe2bbd-a06c-4cd9-8b65-c189fac5e61b"
+      ]
+    },
+    "a1fe2bbd-a06c-4cd9-8b65-c189fac5e61b": {
+      "id": "a1fe2bbd-a06c-4cd9-8b65-c189fac5e61b",
+      "message": {
+        "id": "a1fe2bbd-a06c-4cd9-8b65-c189fac5e61b",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720240.635886,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn505049search4\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "7baeb9ac-2bc6-439e-b803-604cc5f4ef91",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索2025年可解释AI在心电图中的应用评论",
+          "reasoning_titles": [
+            "搜索2025年可解释AI在心电图中的应用评论"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "7baeb9ac-2bc6-439e-b803-604cc5f4ef91",
+      "children": [
+        "f404088d-211a-4045-be6c-d28c802dda59"
+      ]
+    },
+    "f404088d-211a-4045-be6c-d28c802dda59": {
+      "id": "f404088d-211a-4045-be6c-d28c802dda59",
+      "message": {
+        "id": "f404088d-211a-4045-be6c-d28c802dda59",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720241.6843498,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "pmc.ncbi.nlm.nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13056371/",
+                  "title": "Checking your browser - reCAPTCHA",
+                  "snippet": "Total lines: 3\n",
+                  "ref_id": {
+                    "turn_index": 543397,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "9a0f1760-c311-4497-b7ef-cb4a157ce21c",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索2025年可解释AI在心电图中的应用评论",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a1fe2bbd-a06c-4cd9-8b65-c189fac5e61b",
+      "children": [
+        "17267f6b-aff7-41dd-a608-64e1e0b3ab87"
+      ]
+    },
+    "17267f6b-aff7-41dd-a608-64e1e0b3ab87": {
+      "id": "17267f6b-aff7-41dd-a608-64e1e0b3ab87",
+      "message": {
+        "id": "17267f6b-aff7-41dd-a608-64e1e0b3ab87",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720243.374226,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "\"Perturbation-based explanation methods\" \"widely applied\" ECG XAI",
+              "\"Explainable artificial intelligence in electrocardiography\" \"Perturbation-Based techniques\" \"widely applied\""
+            ]
+          },
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "d6771e4d-1394-4829-9030-a6e3efb45ea9",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f404088d-211a-4045-be6c-d28c802dda59",
+      "children": [
+        "359b722f-ed72-4c43-be01-6fb7ab613da5"
+      ]
+    },
+    "359b722f-ed72-4c43-be01-6fb7ab613da5": {
+      "id": "359b722f-ed72-4c43-be01-6fb7ab613da5",
+      "message": {
+        "id": "359b722f-ed72-4c43-be01-6fb7ab613da5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720241.97263,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"search_query\":[{\"q\":\"\\\"Perturbation-based explanation methods\\\" \\\"widely applied\\\" ECG XAI\"},{\"q\":\"\\\"Explainable artificial intelligence in electrocardiography\\\" \\\"Perturbation-Based techniques\\\" \\\"widely applied\\\"\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "17267f6b-aff7-41dd-a608-64e1e0b3ab87",
+          "reasoning_status": "is_reasoning",
+          "search_queries": [
+            {
+              "type": "search",
+              "q": "\"Perturbation-based explanation methods\" \"widely applied\" ECG XAI"
+            },
+            {
+              "type": "search",
+              "q": "\"Explainable artificial intelligence in electrocardiography\" \"Perturbation-Based techniques\" \"widely applied\""
+            }
+          ],
+          "search_display_string": "正在搜索网页",
+          "searched_display_string": "已搜索网页",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索心电图XAI中的扰动法应用",
+          "reasoning_titles": [
+            "搜索心电图XAI中的扰动法应用"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "17267f6b-aff7-41dd-a608-64e1e0b3ab87",
+      "children": [
+        "3e94fe1f-c747-4db2-accc-0a3dd5756540"
+      ]
+    },
+    "3e94fe1f-c747-4db2-accc-0a3dd5756540": {
+      "id": "3e94fe1f-c747-4db2-accc-0a3dd5756540",
+      "message": {
+        "id": "3e94fe1f-c747-4db2-accc-0a3dd5756540",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720243.374116,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "\"Perturbation-based explanation methods\" \"widely applied\" ECG XAI",
+              "\"Explainable artificial intelligence in electrocardiography\" \"Perturbation-Based techniques\" \"widely applied\""
+            ]
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "359b722f-ed72-4c43-be01-6fb7ab613da5",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索心电图XAI中的扰动法应用",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "359b722f-ed72-4c43-be01-6fb7ab613da5",
+      "children": [
+        "f5d401cc-4d4e-41fa-b4a0-4abaaeeb5c31"
+      ]
+    },
+    "f5d401cc-4d4e-41fa-b4a0-4abaaeeb5c31": {
+      "id": "f5d401cc-4d4e-41fa-b4a0-4abaaeeb5c31",
+      "message": {
+        "id": "f5d401cc-4d4e-41fa-b4a0-4abaaeeb5c31",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780720243.368962,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.merriam-webster.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.merriam-webster.com/dictionary/perturbation",
+                  "title": "PERTURBATION Definition & Meaning",
+                  "snippet": "22 Apr 2026 — The meaning of PERTURBATION is the action of perturbing : the state of being perturbed. How to use perturbation in a sentence.",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.merriam-webster.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.ibm.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.ibm.com/think/topics/explainable-ai",
+                  "title": "What is Explainable AI (XAI)?",
+                  "snippet": "Explainable AI is used to describe an AI model, its expected impact and potential biases. It helps characterize model accuracy, fairness, transparency and ...Read more",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.ibm.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "dictionary.cambridge.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://dictionary.cambridge.org/dictionary/english/perturbation",
+                  "title": "PERTURBATION | English meaning - Cambridge Dictionary",
+                  "snippet": "a small change in the regular movement of an object: Perturbations in the orbit of the planet Uranus led to the discovery of Neptune in 1846.",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "dictionary.cambridge.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "en.wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Explainable_artificial_intelligence",
+                  "title": "Explainable artificial intelligence",
+                  "snippet": "The main focus is on the reasoning behind the decisions or predictions made by the AI algorithms, to make them more understandable and transparent. ... This ...Read more",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": 1500284625,
+                  "result_source": "bright",
+                  "attribution": "en.wikipedia.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Perturbation_theory",
+                  "title": "Perturbation theory",
+                  "snippet": "Perturbation theory comprises methods for finding an approximate solution to a problem, by starting from the exact solution of a related, simpler problem.",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": 1034255883,
+                  "result_source": "bright",
+                  "attribution": "en.wikipedia.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Perturbation",
+                  "title": "Perturbation",
+                  "snippet": "Perturbation (biology), an alteration of the function of a biological system, induced by external or internal mechanisms; Perturbation function, mathematical ...",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": 1133540433,
+                  "result_source": "bright",
+                  "attribution": "en.wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.mathworks.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mathworks.com/help/nav/ref/inssensor.perturbations.html",
+                  "title": "Perturbation defined on object - MATLAB",
+                  "snippet": "Returns the list of property perturbations, perturbs, defined on the object, obj. The returned perturbs lists all the perturbable properties.",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mathworks.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.fiddler.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.fiddler.ai/explainable-ai",
+                  "title": "Explainable AI",
+                  "snippet": "Explainable AI (XAI) refers to techniques and methods that make machine learning model decisions transparent and understandable to humans. It helps users ...Read more",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.fiddler.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www2.ph.ed.ac.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www2.ph.ed.ac.uk/~ldeldebb/docs/QM/lect17.pdf",
+                  "title": "Perturbation Theory",
+                  "snippet": "Perturbation theory is extremely successful in dealing with those cases that can be mod- elled as a “small deformation” of a system that we can solve ...",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www2.ph.ed.ac.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.nature.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41592-023-02144-y",
+                  "title": "scPerturb: harmonized single-cell perturbation data",
+                  "snippet": "by S Peidli · 2024 · Cited by 186 — We collect a set of 44 publicly available single-cell perturbation–response datasets with molecular readouts, including transcriptomics, proteomics and ...",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.nature.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.splunk.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.splunk.com/en_us/blog/learn/explainability-vs-interpretability.html",
+                  "title": "Explainable vs. Interpretable Artificial Intelligence",
+                  "snippet": "23 Jul 2024 — Explainability is the ability to describe the behavior of a system in understandable language to humans. Explainability helps us understand what ...Read more",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.splunk.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.youtube.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.youtube.com/watch?v=9sLAwpmuPF4",
+                  "title": "How To Say Perturbation",
+                  "snippet": "Learn how to say Perturbation with EmmaSaying free pronunciation tutorials. Definition and meaning can be found here: ...",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.youtube.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "luvina.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://luvina.net/explainable-vs-interpretable-ai-full-comparison-guide/",
+                  "title": "Explainable vs Interpretable AI: Full Comparison Guide",
+                  "snippet": "A technique called explainable artificial intelligence (XAI) helps people understand complicated models of artificial intelligence by explaining the causes for ...Read more",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": 1762847372,
+                  "result_source": "bright",
+                  "attribution": "luvina.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "english.stackexchange.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://english.stackexchange.com/questions/502843/why-does-perturbation-mean-small-change-while-perturb-means-greatly-disturb",
+                  "title": "why does \"perturbation\" mean small change while ...",
+                  "snippet": "25 Jun 2019 — I only recently looked into the etymology of the word \"disturb\", which means \"per-turb\", completely (through, thoroughly) + disturb, which translated ...",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "english.stackexchange.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.sei.cmu.edu",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.sei.cmu.edu/blog/what-is-explainable-ai/",
+                  "title": "What is Explainable AI? | CMU Software Engineering Institute",
+                  "snippet": "17 Jan 2022 — Explainable artificial intelligence is a powerful tool in answering critical How? and Why? questions about AI systems and can be used to ...",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.sei.cmu.edu"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/abs/2412.00800",
+                  "title": "[2412.00800] A Comprehensive Guide to Explainable AI",
+                  "snippet": "by W Hsieh · 2024 · Cited by 52 — This book offers a comprehensive guide to XAI, bridging foundational concepts with advanced methodologies.Read more",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "arxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.qlik.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.qlik.com/us/augmented-analytics/explainable-ai",
+                  "title": "What is Explainable AI? Benefits & Best Practices",
+                  "snippet": "Explainable AI (XAI) refers to a set of techniques and processes that help you understand the rationale behind the output of a machine learning algorithm.Read more",
+                  "ref_id": {
+                    "turn_index": 286769,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.qlik.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a23a260283c83208eaa954e704d2a79",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "493dbab4-f08a-47c8-b570-87ad978df58f",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索心电图XAI中的扰动法应用",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "3e94fe1f-c747-4db2-accc-0a3dd5756540",
+      "children": [
+        "093004f6-3be4-4527-89c7-69c95104e91a"
+      ]
+    },
+    "093004f6-3be4-4527-89c7-69c95104e91a": {
+      "id": "093004f6-3be4-4527-89c7-69c95104e91a",
+      "message": {
+        "id": "093004f6-3be4-4527-89c7-69c95104e91a",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720250.623878,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "考虑\"广泛应用\"的表述及文献引用",
+              "content": "可能不太需要引用搜索结果，但如果从Taleban的结果中提到“扰动方法在ECG中广泛应用”，却不能引用被屏蔽的内容。搜索结果可以引用，但是否足够相关？引用时可以提及\"需复审更广泛的主张\"。另外，\"频繁使用\"的表述稍显宽泛，需要谨慎使用。",
+              "chunks": [
+                "可能不太需要引用搜索结果，但如果从Taleban的结果中提到“扰动方法在ECG中广泛应用”，却不能引用被屏蔽的内容。",
+                "搜索结果可以引用，但是否足够相关？",
+                "引用时可以提及\"需复审更广泛的主张\"。另外，\"频繁使用\"的表述稍显宽泛，需要谨慎使用。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "e86e23f2-6f38-4ba8-bb15-e154a825f321"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "e86e23f2-6f38-4ba8-bb15-e154a825f321",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780720220.8575969,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f5d401cc-4d4e-41fa-b4a0-4abaaeeb5c31",
+      "children": [
+        "da035c5f-1e52-455e-8911-902507303d8c"
+      ]
+    },
+    "da035c5f-1e52-455e-8911-902507303d8c": {
+      "id": "da035c5f-1e52-455e-8911-902507303d8c",
+      "message": {
+        "id": "da035c5f-1e52-455e-8911-902507303d8c",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780720254.958114,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 33s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 33,
+          "reasoning_start_time": 1780720220.8575969,
+          "reasoning_end_time": 1780720254.7692518,
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "093004f6-3be4-4527-89c7-69c95104e91a",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "093004f6-3be4-4527-89c7-69c95104e91a",
+      "children": [
+        "20b61312-b35c-46d4-b205-fd923fc10b7f"
+      ]
+    },
+    "20b61312-b35c-46d4-b205-fd923fc10b7f": {
+      "id": "20b61312-b35c-46d4-b205-fd923fc10b7f",
+      "message": {
+        "id": "20b61312-b35c-46d4-b205-fd923fc10b7f",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1780720245.400597,
+        "update_time": 1780720356.214992,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "可以支持，但**支持强度不完全够**。\n\n这两篇能很好支持这句话的后半部分：**zero-masking = 将 ECG/生理信号片段置零**。Paralič et al. 明确写到其 ECG perturbation 方法会“remove, mask, or alter”部分 ECG，并且在其实现中“selected interval ... set to zero”。citeturn683900view0 Resta et al. 也明确在 biomedical signal occlusion 中使用 zero values，并且在 PTBDB ECG 分类任务中比较了 zero 与 mean 两种 occlusion value。citeturn256209view0turn256209view2\n\n但它们**不太足以单独支撑** “**frequently used choice**” 这个频率性判断。因为：\n\n1. **[8] Paralič et al.** 是一个 ECG-specific 的 zero-masking 实例，能证明“ECG perturbation/occlusion 中有人这样做”。  \n2. **[9] Resta et al.** 是 biomedical signals 的 occlusion 方法论文，包含 ECG/PTBDB 实验，也能作为 zero occlusion 在 ECG/生理信号中的实例。  \n3. 但“frequently used” 暗示你已经观察到文献中较多方法都这样做，最好还要有综述或多篇 ECG XAI/occlusion 文献共同支撑，而不只是两篇例子。\n\n更稳的写法是：\n\n> A simple and commonly adopted perturbation choice in ECG and biomedical-signal occlusion analysis is zero-masking, i.e., replacing signal samples or segments with zeros [8], [9].\n\n如果你想更审稿安全，可以进一步降调：\n\n> Zero-masking has been used as a perturbation operator in ECG and biomedical-signal occlusion analysis, where selected signal intervals are replaced by zeros [8], [9].\n\n如果你一定要保留 **frequently used**，建议再补 1 篇 ECG XAI review 或 2–3 篇 ECG occlusion/perturbation 实证论文。仅靠这两篇，审稿人挑剔的话可能会说：它们证明了“used”，但没有证明“frequently used”。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn683900view0",
+              "prefix": null,
+              "start_idx": 187,
+              "end_idx": 209,
+              "safe_urls": [
+                "https://www.mdpi.com/2076-3417/13/3/1805"
+              ],
+              "refs": [],
+              "alt": "([MDPI](https://www.mdpi.com/2076-3417/13/3/1805))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data | MDPI",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "attribution": "MDPI",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn256209view0turn256209view2",
+              "prefix": null,
+              "start_idx": 326,
+              "end_idx": 364,
+              "safe_urls": [
+                "https://www.mdpi.com/1099-4300/23/8/1064"
+              ],
+              "refs": [],
+              "alt": "([MDPI](https://www.mdpi.com/1099-4300/23/8/1064))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "attribution": "MDPI",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [
+                    {
+                      "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                      "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                      "pub_date": null,
+                      "snippet": null,
+                      "result_source": null,
+                      "attribution": "MDPI"
+                    }
+                  ],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 5,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    },
+                    {
+                      "turn_index": 5,
+                      "ref_type": "view",
+                      "ref_index": 2
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 1259,
+              "end_idx": 1260,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data | MDPI",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "attribution": "MDPI"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://www.mdpi.com/1099-4300/23/8/1064",
+            "https://www.mdpi.com/2076-3417/13/3/1805"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805?utm_source=chatgpt.com",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "by J Paralič · 2023 · Cited by 5 — In this article we focus on the explainability of black-box models for stream data from 12-lead ECG. We designed and implemented a perturbation explainability ...Rea...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805/review_report?utm_source=chatgpt.com",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "31 Jan 2023 — The authors propose a perturbation-based method for explaining predictions made by a deep network using ECG data. I agree that explainable AI – ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy 2021, 23, 1064. https://doi.org/10.3390/e23081064. AMA ...Read more",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064/notes?utm_source=chatgpt.com",
+                  "title": "Article Versions Notes",
+                  "snippet": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy 2021, 23, 1064. https://doi.org/10.3390/e23081064. AMA Style. Resta M ...",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "nhcs.com.sg",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.nhcs.com.sg/news/murmurs/understanding-electrocardiogram-ecg?utm_source=chatgpt.com",
+                  "title": "Understanding Electrocardiogram (ECG) - Murmurs | NHCS",
+                  "snippet": "23 Jul 2021 — An ECG is a quick and easily accessible test used to detect and diagnose certain heart conditions. The standard ECG has 12 leads.Read more",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nhcs.com.sg"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "merriam-webster.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.merriam-webster.com/dictionary/perturbation?utm_source=chatgpt.com",
+                  "title": "PERTURBATION Definition & Meaning",
+                  "snippet": "22 Apr 2026 — The meaning of PERTURBATION is the action of perturbing : the state of being perturbed. How to use perturbation in a sentence.",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "merriam-webster.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "restasupport.co.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://restasupport.co.uk/?utm_source=chatgpt.com",
+                  "title": "RESTA: Award-Winning Resilience Training for Schools",
+                  "snippet": "RESTA supports schools to build educational resilience through psychologically informed training, practice and whole-organisation development.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "restasupport.co.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13056371/?utm_source=chatgpt.com",
+                  "title": "Explainable artificial intelligence in electrocardiography - PMC",
+                  "snippet": "by A Taleban · 2025 · Cited by 2 — 3.1. Perturbation-Based techniques. Perturbation-based explanation methods represent one of the most widely applied approaches in ECG ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/34441204/?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy (Basel). 2021 Aug 17;23(8):1064. doi: 10.3390/e23081064 ...Read more",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.ncbi.nlm.nih.gov/books/NBK2214/?utm_source=chatgpt.com",
+                  "title": "Conquering the ECG - Cardiology Explained - NCBI Bookshelf",
+                  "snippet": "The electrocardiogram (ECG) is the oldest and most enduring tool of the cardiologist. A basic knowledge of the ECG will enhance the understanding of cardiology.Read more",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Simone_Resta?utm_source=chatgpt.com",
+                  "title": "Simone Resta",
+                  "snippet": "Simone Resta (born 14 September 1970) is an Italian engineer who currently works as the Deputy Technical Director for Mercedes-AMG F1 Team.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wikipedia.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Electrocardiography?utm_source=chatgpt.com",
+                  "title": "Electrocardiography",
+                  "snippet": "Among other things, an ECG can be used to measure the rate and rhythm of heartbeats, the size and position of the heart chambers, the presence of any damage to ...Read more",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wikipedia.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Explainable_artificial_intelligence?utm_source=chatgpt.com",
+                  "title": "Explainable artificial intelligence",
+                  "snippet": "The main focus is on the reasoning behind the decisions or predictions made by the AI algorithms, to make them more understandable and transparent. ... This ...Read more",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wikipedia.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Perturbation_theory?utm_source=chatgpt.com",
+                  "title": "Perturbation theory",
+                  "snippet": "Perturbation theory comprises methods for finding an approximate solution to a problem, by starting from the exact solution of a related, simpler problem.",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wikipedia.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Perturbation?utm_source=chatgpt.com",
+                  "title": "Perturbation",
+                  "snippet": "Perturbation (biology), an alteration of the function of a biological system, induced by external or internal mechanisms; Perturbation function, mathematical ...",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "ibm.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.ibm.com/think/topics/explainable-ai?utm_source=chatgpt.com",
+                  "title": "What is Explainable AI (XAI)?",
+                  "snippet": "Explainable AI is used to describe an AI model, its expected impact and potential biases. It helps characterize model accuracy, fairness, transparency and ...Read more",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "ibm.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "researchgate.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/367642939_Perturbation-Based_Explainable_AI_for_ECG_Sensor_Data?utm_source=chatgpt.com",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "13 Oct 2025 — Therefore, in this article we focus on the explainability of black-box models for stream data from 12-lead ECG. We designed and implemented a ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/353973630_Occlusion-Based_Explanations_in_Deep_Recurrent_Models_for_Biomedical_Signals?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "12 Aug 2021 — Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. MDPI. Entropy. August 2021; 23(8):1064. DOI:10.3390/e23081064.Read more",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/figure/A-visualization-of-sub-signal-occlusion-contributions-for-an-ECG-signal-from-CBPEDS-The_fig3_353973630?utm_source=chatgpt.com",
+                  "title": "A visualization of sub-signal occlusion contributions for an ECG ...",
+                  "snippet": "... Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals | The biomedical field is characterized by an ever-increasing production of ...",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "singhealth.com.sg",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.singhealth.com.sg/tests-procedures/electrocardiogram?utm_source=chatgpt.com",
+                  "title": "Electrocardiogram (ECG)",
+                  "snippet": "Electrocardiogram (ECG) is a non-invasive (does not require an incision into the body) test that records the electrical activity of the heart.Read more",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "singhealth.com.sg"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "cambridge.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://dictionary.cambridge.org/dictionary/english/perturbation?utm_source=chatgpt.com",
+                  "title": "PERTURBATION | English meaning - Cambridge Dictionary",
+                  "snippet": "a small change in the regular movement of an object: Perturbations in the orbit of the planet Uranus led to the discovery of Neptune in 1846.",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "cambridge.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "dblp.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://dblp.org/rec/journals/entropy/RestaMB21.html?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for ...",
+                  "snippet": "Michele Resta , Anna Monreale , Davide Bacciu : Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy 23(8): 1064 (2021).",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "dblp.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "bibbase.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://bibbase.org/network/publication/resta-monreale-bacciu-occlusionbasedexplanationsindeeprecurrentmodelsforbiomedicalsignals-2021?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for ...",
+                  "snippet": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Resta, M., Monreale, A., & Bacciu, D. Entropy, 2021.",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "bibbase.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "mayoclinic.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mayoclinic.org/tests-procedures/ekg/about/pac-20384983?utm_source=chatgpt.com",
+                  "title": "Electrocardiogram (ECG or EKG)",
+                  "snippet": "2 Apr 2024 — An electrocardiogram (ECG or EKG) is a quick test to check the heartbeat. It records the electrical signals in the heart.Read more",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mayoclinic.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "resta.it",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.resta.it/en/?utm_source=chatgpt.com",
+                  "title": "Resta Computerized Bedding Equipments",
+                  "snippet": "Resta srl, specialized in the manufacturing of computerized equipment for the production of mattresses, quilts, bedspreads and pillows, has been the global ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "resta.it"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "litfl.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://litfl.com/ecg-library/basics/?utm_source=chatgpt.com",
+                  "title": "EKG basics - ECG Library",
+                  "snippet": "ECG Basics including Rate, Rhythm, Axis calculations and interpretation of P, Q, R, S, T U waves, segments and basic ECG calculations.",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "litfl.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/html/2508.17294v1?utm_source=chatgpt.com",
+                  "title": "Explainable AI (XAI) for Arrhythmia detection from ...",
+                  "snippet": "24 Aug 2025 — This study investigates the application of Explainable AI (XAI) techniques specifically adapted for time-series ECG analysis. Using the MIT-BIH ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "arxiv.org"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/abs/2412.00800?utm_source=chatgpt.com",
+                  "title": "[2412.00800] A Comprehensive Guide to Explainable AI",
+                  "snippet": "by W Hsieh · 2024 · Cited by 52 — This book offers a comprehensive guide to XAI, bridging foundational concepts with advanced methodologies.Read more",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "arxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "kisti.re.kr",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://scienceon.kisti.re.kr/srch/selectPORSrchArticle.do?cn=NART115759275&utm_source=chatgpt.com",
+                  "title": "[논문]Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals 원문보기. Entropy, v.23 no.8, 2021년, pp.1064 -. Resta, Michele (Computer Science ...",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "kisti.re.kr"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "healthdirect.gov.au",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.healthdirect.gov.au/electrocardiogram-ecg?utm_source=chatgpt.com",
+                  "title": "Electrocardiogram - ECG or EKG",
+                  "snippet": "An electrocardiogram is a medical test, commonly called an ECG or EKG, that uses a machine to measure and record the electrical activity in the heart. Read ...Read more",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "healthdirect.gov.au"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "mathworks.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mathworks.com/help/nav/ref/inssensor.perturbations.html?utm_source=chatgpt.com",
+                  "title": "Perturbation defined on object - MATLAB",
+                  "snippet": "Returns the list of property perturbations, perturbs, defined on the object, obj. The returned perturbs lists all the perturbable properties.",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mathworks.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "linkedin.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://it.linkedin.com/company/resta-srl?utm_source=chatgpt.com",
+                  "title": "Resta - Computerized Bedding Equipment",
+                  "snippet": "Resta offers a complete range of machineries, covering the production of mattresses, quilts, bedspreads and pillows.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "linkedin.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "uptodate.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.uptodate.com/contents/ecg-tutorial-basic-principles-of-electrocardiography-analysis?utm_source=chatgpt.com",
+                  "title": "ECG tutorial: Basic principles of electrocardiography analysis",
+                  "snippet": "9 Mar 2026 — INTRODUCTION. The electrocardiogram (ECG) is a graphical representation of the cardiac electrical cycle. It is the most important test for ...",
+                  "ref_id": {
+                    "turn_index": 6,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "uptodate.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "fiddler.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.fiddler.ai/explainable-ai?utm_source=chatgpt.com",
+                  "title": "Explainable AI",
+                  "snippet": "Explainable AI (XAI) refers to techniques and methods that make machine learning model decisions transparent and understandable to humans. It helps users ...Read more",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "fiddler.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "preprints.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.preprints.org/manuscript/202405.1865?utm_source=chatgpt.com",
+                  "title": "Explainable AI for Interpretation of Ovarian Tumor ...",
+                  "snippet": "28 May 2024 — Resta, M., Monreale, A., & Bacciu, D. (2021). Occlusion-based explanations in deep recurrent models for biomedical signals. Entropy, 23(8), 1064 ...Read more",
+                  "ref_id": {
+                    "turn_index": 2,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "preprints.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "google.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://play.google.com/store/apps/details?hl=en_ZA&id=com.ordertech.resta&utm_source=chatgpt.com",
+                  "title": "Resta | ريستا – Apps on Google Play",
+                  "snippet": "6 Apr 2026 — Enjoy the best meals with the “Resta” application - your ideal destination for pizza, pies, shawarma, and spiced potatoes. The application ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "google.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "ed.ac.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www2.ph.ed.ac.uk/~ldeldebb/docs/QM/lect17.pdf?utm_source=chatgpt.com",
+                  "title": "Perturbation Theory",
+                  "snippet": "Perturbation theory is extremely successful in dealing with those cases that can be mod- elled as a “small deformation” of a system that we can solve ...",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "ed.ac.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "jogs.one",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://jogs.one/icigs_1000_14/?utm_source=chatgpt.com",
+                  "title": "Explainable AI decision model for ECG data of cardiac ...",
+                  "snippet": "The decision taken by the AI model for any particular patient's ECG can be interpreted using the ShAP plot, highlighting the abnormal ECG waves. We made a web ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "jogs.one"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "nature.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41592-023-02144-y?utm_source=chatgpt.com",
+                  "title": "scPerturb: harmonized single-cell perturbation data",
+                  "snippet": "by S Peidli · 2024 · Cited by 186 — We collect a set of 44 publicly available single-cell perturbation–response datasets with molecular readouts, including transcriptomics, proteomics and ...",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nature.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "wiktionary.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wiktionary.org/wiki/resta?utm_source=chatgpt.com",
+                  "title": "resta",
+                  "snippet": "resta · Catalan · French · Italian · Ladin · Latin · Old English · Old Frisian ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wiktionary.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "kjim.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.kjim.org/journal/view.php?number=170993&utm_source=chatgpt.com",
+                  "title": "Explainable paroxysmal atrial fibrillation diagnosis using ...",
+                  "snippet": "by Y Jin · 2025 · Cited by 2 — In this study, we demonstrate the development and analysis of an explainable deep learning algorithm applied to ECG data for early PAF detection ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "kjim.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "splunk.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.splunk.com/en_us/blog/learn/explainability-vs-interpretability.html?utm_source=chatgpt.com",
+                  "title": "Explainable vs. Interpretable Artificial Intelligence",
+                  "snippet": "23 Jul 2024 — Explainability is the ability to describe the behavior of a system in understandable language to humans. Explainability helps us understand what ...Read more",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "splunk.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "deepl.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.deepl.com/en/translator/q/es/resta/en/subtract/24fb087?utm_source=chatgpt.com",
+                  "title": "resta - translated from Spanish to English",
+                  "snippet": "resta noun, feminine toolbar.listen (plural: restas f)—. Linguee Dictionary ... subtraction n toolbar.listen (plural: subtractions) ... deduction n toolbar.listen.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "deepl.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "youtube.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.youtube.com/watch?v=9sLAwpmuPF4&utm_source=chatgpt.com",
+                  "title": "How To Say Perturbation",
+                  "snippet": "Learn how to say Perturbation with EmmaSaying free pronunciation tutorials. Definition and meaning can be found here: ...",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "youtube.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "ntu.edu.sg",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://dr.ntu.edu.sg/entities/publication/aaa75e1d-7c9f-45e5-9a74-3b7fb0cf51ab?utm_source=chatgpt.com",
+                  "title": "Explainable AI model for ECG signal assessment - DR-NTU",
+                  "snippet": "by SJT Low · 2023 — The use of artificial intelligence (AI) systems can automate the onerous task of manually interpreting ECG parameters to detect cardiac diseases.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "ntu.edu.sg"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "luvina.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://luvina.net/explainable-vs-interpretable-ai-full-comparison-guide/?utm_source=chatgpt.com",
+                  "title": "Explainable vs Interpretable AI: Full Comparison Guide",
+                  "snippet": "A technique called explainable artificial intelligence (XAI) helps people understand complicated models of artificial intelligence by explaining the causes for ...Read more",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "luvina.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "restaforte.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://restaforte.com/?utm_source=chatgpt.com",
+                  "title": "Resta Forte: Johanna Urquhart | Leadership Coaching and ...",
+                  "snippet": "A ten-month group programme for women in middle and early senior leadership. Covers the full range of what it means to lead well — and stay well — over time.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "restaforte.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "stackexchange.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://english.stackexchange.com/questions/502843/why-does-perturbation-mean-small-change-while-perturb-means-greatly-disturb?utm_source=chatgpt.com",
+                  "title": "why does \"perturbation\" mean small change while ...",
+                  "snippet": "25 Jun 2019 — I only recently looked into the etymology of the word \"disturb\", which means \"per-turb\", completely (through, thoroughly) + disturb, which translated ...",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "stackexchange.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "frontiersin.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2025.1659971/full?utm_source=chatgpt.com",
+                  "title": "ECG-XPLAIM: eXPlainable Locally-adaptive Artificial ...",
+                  "snippet": "by P Pantelidis · 2025 · Cited by 6 — In this study, we introduce ECG-XPLAIM—an eXPlainable, Locally-adaptive Artificial Intelligence Model designed for ECG classification. By ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "frontiersin.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "cmu.edu",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.sei.cmu.edu/blog/what-is-explainable-ai/?utm_source=chatgpt.com",
+                  "title": "What is Explainable AI? | CMU Software Engineering Institute",
+                  "snippet": "17 Jan 2022 — Explainable artificial intelligence is a powerful tool in answering critical How? and Why? questions about AI systems and can be used to ...",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "cmu.edu"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "worldresta.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://worldresta.com/?utm_source=chatgpt.com",
+                  "title": "RESTA Inc.",
+                  "snippet": "RESTA is a Japanese operated second-hand clothing supplier. Operating a chain of 24-hour, unmanned second-hand clothing stores in Japan.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "worldresta.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "qlik.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.qlik.com/us/augmented-analytics/explainable-ai?utm_source=chatgpt.com",
+                  "title": "What is Explainable AI? Benefits & Best Practices",
+                  "snippet": "Explainable AI (XAI) refers to a set of techniques and processes that help you understand the rationale behind the output of a machine learning algorithm.Read more",
+                  "ref_id": {
+                    "turn_index": 8,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "qlik.com"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e9b31bed47ec5bebd816155442a99",
+          "message_type": "next",
+          "turn_exchange_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "working_turn_id": "bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "da035c5f-1e52-455e-8911-902507303d8c",
+          "async_source": "saserver-newzealandnorth-prod.fck9d:conversation-turn-67992e7d-4420-49fd-b250-ab74aa828453:NZ",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-bd4d84d4-8225-4ae0-b192-fcc8a49277be",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "da035c5f-1e52-455e-8911-902507303d8c",
+      "children": []
+    }
+  },
+  "current_node": "20b61312-b35c-46d4-b205-fd923fc10b7f"
+}

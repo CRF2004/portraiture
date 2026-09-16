@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对照扰动选择方法</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>对照扰动选择方法</h1>
+            <div class="metadata">ID: 6a0d86d0-cb30-83ec-9b67-cff27e347bec | 2026/5/20 18:03:19</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 18:03:15</span>
+                </div>
+                <div class="message-content">论文有没有说清楚对照扰动的选择方法？有没有必要说这个？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 18:03:17</span>
+                </div>
+                <div class="message-content">有说，但<strong>还不够“审稿人友好”</strong>。现在论文里已经交代了对照扰动的基本选择逻辑：对照区域是“anatomically adjacent but physiologically distinct”，例如 1AVB 的 PR-target 对照 QRS/ST/random，BBB 的 QRS-target 对照 ST/random/PR timing，AFIB 的 atrial window 对照 ST/shifted pre-QRS/QRS；Table I、Table II 和 Methods III-C/III-D 都在讲这个。论文也明确说 matched control 不是随便选的，而是用来测试“target 是否比最强对照更重要”，即 ASS 的核心定义。fileciteturn0file0<br><br>但我觉得<strong>有必要再说清楚一点</strong>，因为这是你整篇文章方法学成立的关键之一。审稿人很可能会问：<br><br>“为什么这些 control 是合理的？为什么不是别的区域？random window 算不算太弱？QRS control 对 1AVB 会不会太强？SBRAD 的 global target 和 local controls 是否公平？”<br><br>你现在有回应这些问题的材料，但分散在 Methods、Table I、Table II、1AVB sensitivity、Discussion 里。建议加一个很短的小段，放在 <strong>III-C Disease-Centered Audit Panel</strong> 或 <strong>III-D Perturbation Design</strong> 开头/结尾，专门叫：<br><br><strong>Control-region selection rationale</strong><br><br>可以写成这样：<br><br>&gt; Matched controls were selected to satisfy three criteria. First, they had to be anatomically proximate to the target pathway so that the comparison was not trivially easy. Second, they had to represent a physiologically distinct signal component, making them plausible alternative information channels rather than irrelevant background. Third, they had to be perturbable under the same operator and windowing protocol whenever possible, so that target-control differences reflected pathway specificity rather than intervention differences. For example, the 1AVB PR-target window was compared with an adjacent non-overlapping QRS control because QRS morphology is a plausible shortcut for automated 1AVB labels, whereas ST and random non-PR windows provide weaker anatomical controls. For BBB, ST and random non-QRS windows test whether QRS morphology dominates nearby non-QRS signal. For AFIB, shifted pre-QRS and ST controls test whether atrial-window effects exceed neighboring non-atrial intervals. For SBRAD, because rate is a global property, local QRS/ST/random controls were used as morphology-based alternatives rather than identical local-window controls.<br><br>这个段落的价值很大：<br><br>1. <strong>防止审稿人觉得 control 是 post hoc 选的。</strong>  <br>   你文章强调 “predefine / preregistered / disease-centered”，那 control 选择也要显得是规则化的，而不是看到结果后挑的。<br><br>2. <strong>解释 1AVB 的 QRS control 为什么合理。</strong>  <br>   这点尤其重要。你的 1AVB 结论是“PR sensitivity exists but not PR specificity”，但如果读者觉得 QRS control 过强或不公平，就会攻击 ASS 结论。你要主动说：QRS 正是 plausible shortcut，所以它是必要的 strong matched control。<br><br>3. <strong>解释 SBRAD 的 hybrid control。</strong>  <br>   SBRAD 的 target 是 global rate normalization，而 controls 是 local QRS/ST/random。这个最容易被质疑“不同类 perturbation 不可比”。你需要明确：这不是为了做完全同形扰动，而是为了测试“rate information 是否超过 morphology alternatives”。<br><br>4. <strong>让 Table I / II 更有方法学支撑。</strong>  <br>   现在 Table I、II 列得很清楚，但缺少一段“选择原则”。加这一段之后，表格就不是清单，而是规则的实例化。<br><br>我的建议是：<strong>必须补，但不用长。</strong>  <br>一段 150–220 words 足够。你现在论文已经很长了，不要再扩一大节。最合适的位置是 <strong>III-C Clinical anchoring</strong> 后面，因为那里已经在说 target/control grounded in ECG diagnostic criteria。加完后，Discussion 里可以不用再展开，只在 limitations 里承认：control choices remain clinically motivated design choices, not unique ground truth.</div>
+            </div></div></div></body></html>

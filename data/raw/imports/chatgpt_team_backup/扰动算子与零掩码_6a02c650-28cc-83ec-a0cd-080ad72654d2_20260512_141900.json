@@ -1,0 +1,396 @@
+{
+  "title": "扰动算子与零掩码",
+  "create_time": 1778566740.350997,
+  "update_time": 1778567133.522525,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a02c650-28cc-83ec-a0cd-080ad72654d2",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.statefarm.com",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+    "https://www.progressive.com",
+    "physionet.org",
+    "https://github.com/openclaw/openclaw"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "f969cdab-588c-499d-857d-441f6d0fd9d3"
+      ]
+    },
+    "f969cdab-588c-499d-857d-441f6d0fd9d3": {
+      "id": "f969cdab-588c-499d-857d-441f6d0fd9d3",
+      "message": {
+        "id": "f969cdab-588c-499d-857d-441f6d0fd9d3",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "4fe556f2-bb5a-4271-a40a-fc45b36f0c3c"
+      ]
+    },
+    "4fe556f2-bb5a-4271-a40a-fc45b36f0c3c": {
+      "id": "4fe556f2-bb5a-4271-a40a-fc45b36f0c3c",
+      "message": {
+        "id": "4fe556f2-bb5a-4271-a40a-fc45b36f0c3c",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f969cdab-588c-499d-857d-441f6d0fd9d3",
+      "children": [
+        "b13fc2ea-aaa4-4a5a-834d-77cc90de88c9"
+      ]
+    },
+    "b13fc2ea-aaa4-4a5a-834d-77cc90de88c9": {
+      "id": "b13fc2ea-aaa4-4a5a-834d-77cc90de88c9",
+      "message": {
+        "id": "b13fc2ea-aaa4-4a5a-834d-77cc90de88c9",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4fe556f2-bb5a-4271-a40a-fc45b36f0c3c",
+      "children": [
+        "59861fd8-40f7-4d8a-9015-f334da59fbb6"
+      ]
+    },
+    "59861fd8-40f7-4d8a-9015-f334da59fbb6": {
+      "id": "59861fd8-40f7-4d8a-9015-f334da59fbb6",
+      "message": {
+        "id": "59861fd8-40f7-4d8a-9015-f334da59fbb6",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778566740.082458,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "6dc730d7-5703-4ebc-81da-589b850577fa",
+          "message_source": null,
+          "turn_exchange_id": "cc9eb85c-d37e-4c55-bb59-dbe799338aad",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b13fc2ea-aaa4-4a5a-834d-77cc90de88c9",
+      "children": [
+        "f5b3ab8a-a91c-4eac-a7b1-8dfa912ceba8"
+      ]
+    },
+    "f5b3ab8a-a91c-4eac-a7b1-8dfa912ceba8": {
+      "id": "f5b3ab8a-a91c-4eac-a7b1-8dfa912ceba8",
+      "message": {
+        "id": "f5b3ab8a-a91c-4eac-a7b1-8dfa912ceba8",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778566737.214,
+        "update_time": 1778566744.233251,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "翻译：\"\"1. The perturbation operator critically determines ASS\r\nsign—and zero-masking creates artifacts. A preregistered\r\n8-run validity battery (Table XI) tested three operators on\r\nResNet (CLBBB/QRS and 1AVB/PR) plus an SE-ResNet\r\nsentinel. Under zero-masking, CLBBB ASS= −0.010 (95%\r\nCI [−0.011, −0.008]) because ST-segment occlusion causes\r\nan artifactually large AUROC drop (∆ = 0.706). This is a\r\nhard-boundary artifact: zero-masking creates a sharp signal\r\ndiscontinuity that convolutional filters respond to strongly,\r\nindependent of the physiological content of the occluded\r\nregion. Linear interpolation eliminates the boundary and re\r\nstores interpretable behavior: ST ∆AUROC drops to 0.166\r\nwhile QRS target ∆AUROC remains stable at 0.322, yield\r\ning CLBBB ASS= +0.083 (95% CI [0.073, 0.094]). Beat\r\nconditioned inpainting is too conservative to discriminate\r\n(all deltas ≈ 0). The validity battery therefore (i) identifies\r\nlinear interpolation as the preferred operator for matched\r\ncontrol perturbation studies, (ii) reveals that the previously\r\nreported “ST-segment universal disruptor” finding is largely\r\na zero-masking artifact, and (iii) demonstrates that operator\r\nsensitivity is itself a diagnostic—conclusions that depend on\r\nthe perturbation operator are fragile and should not be treated\r\nas evidence of pathway specificity.\"\""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "6dc730d7-5703-4ebc-81da-589b850577fa",
+          "message_source": null,
+          "turn_exchange_id": "cc9eb85c-d37e-4c55-bb59-dbe799338aad",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "59861fd8-40f7-4d8a-9015-f334da59fbb6",
+      "children": [
+        "8e3599ae-532c-4f4e-910e-b745f2c736b4"
+      ]
+    },
+    "8e3599ae-532c-4f4e-910e-b745f2c736b4": {
+      "id": "8e3599ae-532c-4f4e-910e-b745f2c736b4",
+      "message": {
+        "id": "8e3599ae-532c-4f4e-910e-b745f2c736b4",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778566740.2932212,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "6dc730d7-5703-4ebc-81da-589b850577fa",
+          "message_type": "next",
+          "turn_exchange_id": "cc9eb85c-d37e-4c55-bb59-dbe799338aad",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "f5b3ab8a-a91c-4eac-a7b1-8dfa912ceba8",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f5b3ab8a-a91c-4eac-a7b1-8dfa912ceba8",
+      "children": [
+        "f7214c04-a2b4-451b-adab-42a1ba266587"
+      ]
+    },
+    "f7214c04-a2b4-451b-adab-42a1ba266587": {
+      "id": "f7214c04-a2b4-451b-adab-42a1ba266587",
+      "message": {
+        "id": "f7214c04-a2b4-451b-adab-42a1ba266587",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778566740.291633,
+        "update_time": 1778566779.66591,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "**翻译：**\n\n---\n\n**1. 扰动算子在决定 ASS 符号方面起关键作用——而零掩码（zero-masking）会产生伪影。**  \n一项预注册的 8 轮有效性测试（表 XI）在 ResNet（CLBBB/QRS 与 1AVB/PR）以及一个 SE-ResNet 哨兵模型上评估了三种扰动算子。\n\n在零掩码条件下，由于 ST 段被遮挡导致 AUROC 出现人为的大幅下降（Δ = 0.706），CLBBB 的 ASS 为 −0.010（95% CI [−0.011, −0.008]）。  \n这是一种“硬边界伪影”：零掩码会产生突兀的信号不连续，而卷积滤波器会对此产生强烈响应，这种响应与被遮挡区域的生理学内容无关。\n\n线性插值消除了该边界效应，并恢复了可解释的行为：ST 的 ΔAUROC 降至 0.166，而 QRS 目标的 ΔAUROC 保持稳定在 0.322，从而使 CLBBB 的 ASS 变为 +0.083（95% CI [0.073, 0.094]）。\n\nBeat-conditioned inpainting 则过于保守，几乎无法区分（所有 Δ≈0）。\n\n因此，该有效性测试表明：  \n(i) 线性插值是匹配对照扰动研究中更优的算子；  \n(ii) 先前关于“ST 段是通用干扰因素”的结论主要源于零掩码伪影；  \n(iii) 扰动算子本身具有诊断意义——那些依赖特定扰动算子的结论是脆弱的，不应被视为通路特异性证据。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "search_result_groups": [],
+          "request_id": "6dc730d7-5703-4ebc-81da-589b850577fa",
+          "message_type": "next",
+          "turn_exchange_id": "cc9eb85c-d37e-4c55-bb59-dbe799338aad",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "8e3599ae-532c-4f4e-910e-b745f2c736b4",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "8e3599ae-532c-4f4e-910e-b745f2c736b4",
+      "children": [
+        "31e56f36-827b-4c49-b3ce-a26f4e97f58e"
+      ]
+    },
+    "31e56f36-827b-4c49-b3ce-a26f4e97f58e": {
+      "id": "31e56f36-827b-4c49-b3ce-a26f4e97f58e",
+      "message": {
+        "id": "31e56f36-827b-4c49-b3ce-a26f4e97f58e",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778567124.821,
+        "update_time": 1778567131.782676,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "翻译：\"\"Preregistered validity battery: To test whether matched\r\ncontrol conclusions are operator-artifacts rather than pathway\r\nspecific signal use, we conducted an 8-run confirmatory bat\r\ntery with preregistered hypotheses, endpoints, and pass/fail\r\ncriteria (see Supplement for full preregistration block). Pri\r\nmary: ResNet; Sentinel: SE-ResNet. Disease-pathway pairs:\r\nCLBBB/QRS (expected positive specificity) and 1AVB/PR\r\n(expected non-specific). Three operators: zero-masking, lin\r\near interpolation (continuity-preserving), and beat-conditioned\r\ninpainting (amplitude-aligned adjacent-beat replacement). Ad\r\nditional dimensions: dose-response (40/80/160/240 ms), lead\r\nlocal specificity (precordial V1/V2/V6 vs limb leads). All runs\r\nuse identical matched positive/negative subsets and patient\r\nlevel bootstrap CIs (1,000 iterations). The preregistered pri\r\nmary endpoint requires ASS> 0 with CI lower bound > 0 for\r\n≥2of 3 operators (CLBBB) and ASS≤ 0 with CI upper bound\r\n≤0for ≥2of3operators (1AVB). Secondary endpoints: dose\r\nresponse monotonicity and lead-local specificity.\"\""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "4bcfce9c-e4d5-9b79-bf53-1a661a79c201",
+          "message_source": null,
+          "turn_exchange_id": "8fca2c39-c5a7-43c5-9c46-ac29917fffef",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f7214c04-a2b4-451b-adab-42a1ba266587",
+      "children": [
+        "6899070d-e2a4-4862-82b0-8fa49671bcb6"
+      ]
+    },
+    "6899070d-e2a4-4862-82b0-8fa49671bcb6": {
+      "id": "6899070d-e2a4-4862-82b0-8fa49671bcb6",
+      "message": {
+        "id": "6899070d-e2a4-4862-82b0-8fa49671bcb6",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778567127.838896,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "**翻译：**\n\n---\n\n**预注册有效性测试：**  \n为检验“匹配对照结论”是否实际上是由扰动算子引起的伪影，而非真实的通路特异性信号，我们进行了一个包含 8 次运行的确认性实验，并预先注册了假设、评价指标与通过/失败标准（完整预注册内容见补充材料）。\n\n主要模型为 ResNet；哨兵模型为 SE-ResNet。  \n疾病-通路配对包括：CLBBB/QRS（预期具有正向特异性）以及 1AVB/PR（预期为非特异性）。\n\n使用三种扰动算子：零掩码（zero-masking）、线性插值（保持连续性）以及 beat-conditioned inpainting（基于相邻心搏幅度对齐的替换方法）。\n\n额外分析维度包括：剂量-反应关系（40/80/160/240 ms）以及导联局部特异性（胸前导联 V1/V2/V6 vs 肢体导联）。\n\n所有实验均使用相同的匹配正负样本子集，并采用患者级 bootstrap 置信区间（1,000 次迭代）。\n\n预注册的主要终点要求：  \n- 对于 CLBBB：在 ≥3 种算子中至少 2 种满足 ASS > 0 且置信区间下界 > 0  \n- 对于 1AVB：在 ≥3 种算子中至少 2 种满足 ASS ≤ 0 且置信区间上界 ≤ 0  \n\n次要终点包括：剂量-反应的单调性，以及导联局部特异性。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "search_result_groups": [],
+          "request_id": "4bcfce9c-e4d5-9b79-bf53-1a661a79c201",
+          "message_type": "next",
+          "turn_exchange_id": "8fca2c39-c5a7-43c5-9c46-ac29917fffef",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "31e56f36-827b-4c49-b3ce-a26f4e97f58e",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "31e56f36-827b-4c49-b3ce-a26f4e97f58e",
+      "children": []
+    }
+  },
+  "current_node": "6899070d-e2a4-4862-82b0-8fa49671bcb6"
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med-V1 Checker 使用方法</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Med-V1 Checker 使用方法</h1>
+            <div class="metadata">ID: 6a0d1b58-98d8-83ec-80a4-013a1391b6cb | 2026/5/20 10:24:44</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:24:43</span>
+                </div>
+                <div class="message-content">你帮我看一下这篇"https://arxiv.org/abs/2603.05308"，它这个模型怎么使用，可以用于做checker吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:24:44</span>
+                </div>
+                <div class="message-content">我先看论文页面和关键信息，重点确认模型类型、代码/权重是否公开、输入输出形式，以及它是否适合作为 verifier/checker。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:25:08</span>
+                </div>
+                <div class="message-content">可以。<strong>Med-V1 本质上就是一个医学/生物医学领域的 evidence checker / attribution checker</strong>：输入一段“证据文章/摘要”和一个“claim”，输出这个证据对 claim 的支持程度，分数是 <code>-2, -1, 0, 1, 2</code>，并给出解释。它不是通用事实判断器，而是判断“给定 source 是否支持这个 claim”。论文页也明确说它用于 hallucination detection、claim verification 和 biomedical evidence attribution。citeturn292603view0<br><br>## 它怎么用<br><br>官方提供了两个 3B 模型：<br><br>- <code>ncbi/Med-V1-L3B</code>：基于 Llama-3.2-3B-Instruct 微调。<br>- <code>ncbi/Med-V1-Q3B</code>：基于 Qwen2.5-3B-Instruct 微调。<br><br>两个官方说性能相近，示例默认用 L3B。citeturn898073view1<br><br>安装环境大概是：<br><br><pre><code class="language-bash">pip install torch transformers tqdm</code></pre><br><br>官方要求 Python 3.8+、<code>torch&gt;=2.1.0</code>、<code>transformers&gt;=4.51.0</code>；仓库里的 requirements 固定为 <code>torch==2.2.2</code>、<code>tqdm==4.65.0</code>、<code>transformers==4.51.3</code>。citeturn898073view1turn920493view1<br><br>单条推理的最小用法可以这样写：<br><br><pre><code class="language-python">import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import re
+
+model_path = "ncbi/Med-V1-Q3B"   # 或 "ncbi/Med-V1-L3B"
+
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model = AutoModelForCausalLM.from_pretrained(
+    model_path,
+    device_map="auto",
+    torch_dtype="auto",
+)
+model.eval()
+
+if tokenizer.pad_token is None:
+    tokenizer.pad_token_id = tokenizer.eos_token_id
+
+generator = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+)
+
+system_prompt = """You are a fact-checking expert trained in evidence-based medicine. Your task is to evaluate how strongly an *article* agrees or disagrees with a *claim*. The *article* is retrieved from a search engine using the *claim* as the query.
+
+Use the following five-point scale:
+ - **-2 Strong Contradiction** – The article clearly and directly refutes the claim.
+ - **-1 Partial Contradiction** – The article provides mixed or indirect evidence against the claim.
+ - ** 0 Neutral / Unrelated** – The article does not address the claim, offers insufficient information, or is irrelevant to the claim.
+ - ** 1 Partial Agreement** – The article offers some indirect or tentative support for the claim.
+ - ** 2 Strong Agreement** – The article explicitly and strongly supports the claim.
+
+Note that the *article* might not describe the exact same subjects, interventions, or measurements as the *claim*. In this case, please note the difference and assign a score of 0.
+
+Output in two parts only and do not output anything else:
+&lt;think&gt;[your detailed, step‐by‐step explanation for scoring]&lt;/think&gt;
+&lt;score&gt;[the integer score only, i.e., -2, -1, 0, 1, or 2]&lt;/score&gt;"""
+
+article = """这里放 PubMed abstract、论文片段、指南段落等证据文本。"""
+claim = """这里放你要检查的医学 claim。"""
+
+user_prompt = f"""Article:
+{article}
+
+Claim:
+{claim}"""
+
+messages = [
+    {"role": "system", "content": system_prompt},
+    {"role": "user", "content": user_prompt},
+]
+
+with torch.no_grad():
+    out = generator(
+        messages,
+        do_sample=False,
+        max_new_tokens=1024,
+        temperature=None,
+        top_p=None,
+    )
+
+raw = out[0]["generated_text"][-1]["content"]
+print(raw)
+
+score = re.search(r"&lt;score&gt;(.*?)&lt;/score&gt;", raw, re.S)
+score = int(score.group(1).strip()) if score else None
+print("score =", score)</code></pre><br><br>官方示例也是用 <code>transformers.pipeline("text-generation")</code>，输入 chat messages，输出 <code>&lt;think&gt;...&lt;/think&gt;</code> 和 <code>&lt;score&gt;...&lt;/score&gt;</code>。分数含义是：<code>2</code> 强支持、<code>1</code> 部分支持、<code>0</code> 无关/证据不足、<code>-1</code> 部分反驳、<code>-2</code> 强反驳。citeturn977029view0<br><br>## 能不能做 checker？<br><br><strong>能，但要定义清楚它 check 的是什么。</strong><br><br>适合做：<br><br>1. <strong>Citation checker</strong>  <br>   给它“引用的论文摘要/全文片段 + 生成答案里的 claim”，判断这条 citation 是否真的支撑这个 claim。<br><br>2. <strong>Medical claim verifier</strong>  <br>   给它“检索到的 PubMed abstract + 医学断言”，判断证据支持、反驳还是无关。<br><br>3. <strong>RAG answer checker</strong>  <br>   把模型回答拆成 claims，再用检索出来的证据逐条检查。论文自己也把它用于 LLM 回答的幻觉/引用有效性分析。citeturn292603view0turn898073view1<br><br>4. <strong>临床指南 misattribution checker</strong>  <br>   论文提到它可自动识别临床指南中的高风险 evidence misattribution。citeturn292603view0<br><br>不适合直接做：<br><br>1. <strong>通用事实真伪判断器</strong>  <br>   官方特别强调：Med-V1 只判断“给定 source 是否支持 claim”，不是判断 claim 在现实世界中是否绝对真实。一个真实 claim 也可能被某篇小样本研究反驳；一个错误 claim 也可能被某篇机制性文章间接支持。citeturn898073view1turn977029view1<br><br>2. <strong>非医学领域 checker</strong>  <br>   它训练和评测都偏 biomedical evidence attribution。拿去 check 法律、金融、普通百科事实，可能能跑，但可靠性没有保证。<br><br>3. <strong>独立医疗决策系统</strong>  <br>   Hugging Face 模型卡明确说其输出不应用于直接诊断或医疗决策，仍需要临床专业人员审查。citeturn977029view0<br><br>## 推荐的 checker 架构<br><br>比较靠谱的 pipeline 是：<br><br><pre><code class="language-text">用户答案 / 模型答案
+        ↓
+claim extraction：拆成原子 claim
+        ↓
+retrieval：为每个 claim 检索 PubMed / guideline / paper chunks
+        ↓
+Med-V1：逐个判断 source 是否支持 claim
+        ↓
+聚合：
+  score ≥ 1: supported
+  score = 0: not enough evidence / unrelated
+  score ≤ -1: contradicted
+        ↓
+输出报告：claim、evidence、score、rationale</code></pre><br><br>生产里不要只用一个证据片段。更合理的是每个 claim 检索 top-k 篇文章，然后聚合多个 Med-V1 分数。例如：<br><br><pre><code class="language-python">def aggregate(scores):
+    if any(s &lt;= -1 for s in scores):
+        return "contradicted"
+    if any(s &gt;= 1 for s in scores):
+        return "supported"
+    return "not_supported"</code></pre><br><br>更严格一点可以用：<br><br><pre><code class="language-python">def aggregate_strict(scores):
+    if any(s == -2 for s in scores):
+        return "strongly_contradicted"
+    if any(s == 2 for s in scores):
+        return "strongly_supported"
+    if any(s == -1 for s in scores):
+        return "partially_contradicted"
+    if any(s == 1 for s in scores):
+        return "partially_supported"
+    return "neutral_or_unrelated"</code></pre><br><br>## 我的判断<br><br><strong>可以用它做 checker，而且它的定位正是“医学证据 checker”。</strong> 但你不要把它当成“真理裁判”。它更像一个 <strong>source-grounded verifier</strong>：给定证据，它判断证据和 claim 的关系。<br><br>如果你的场景是医学 RAG、论文引用核验、PubMed 证据归因、临床指南引用检查，它很合适。  <br>如果你的场景是通用 hallucination checker，建议只把它用于 biomedical 子模块，其他领域用对应领域的 verifier 或更强的通用 LLM。</div>
+            </div></div></div></body></html>

@@ -1,0 +1,6 @@
+2026.6.8 - User uploaded new data file (chatgpt_personal_backup)
+2026.6.9 - Pipeline re-run with 149 conversations → 257 replay examples (was 20/59)
+  Results: baseline=53.70% state_aware=56.42% refined=64.20%
+  Key finding: persona+refinement adds +10.5pp marginal gain (was +3.4pp with old small dataset)
+  Main confusion: topic_shift misclassified as ask_why (29 cases in baseline)
+  Next: relabel_candidates v1 exported (40 candidates), ready for manual label review

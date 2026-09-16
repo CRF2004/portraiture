@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百川小尺寸医学模型</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>百川小尺寸医学模型</h1>
+            <div class="metadata">ID: 6a0d187c-7428-83ec-a7fb-f85e746e6d05 | 2026/5/20 10:12:14</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:12:12</span>
+                </div>
+                <div class="message-content">百川有小尺寸的开源医学模型吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:12:14</span>
+                </div>
+                <div class="message-content">我先核一下最新公开资料，重点看“百川/baichuan”“医学/医疗”“开源”“小尺寸/轻量模型”这几个条件是否同时满足。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:12:28</span>
+                </div>
+                <div class="message-content">有，但要看你说的“小尺寸”到什么程度。<br><br>目前公开能确认的百川医学/医疗相关开源模型主要有这些：<br><br>| 模型 | 参数量 | 是否医学方向 | 是否算小尺寸 |<br>|---|---:|---|---|<br>| <strong>Baichuan-M1-14B</strong> | 14B | 医疗场景优化，从零训练，提供 Base / Instruct | <strong>相对小</strong>，但不是 7B 级 |<br>| <strong>Baichuan-M2-32B</strong> | 32B/33B | 医疗增强推理模型 | 中等偏大，但有量化版，可单卡部署说法 |<br>| <strong>BaichuanMed-OCR-7B</strong> | 约 7B/8B | 医学 OCR / 图文理解方向 | <strong>小尺寸</strong>，但不是通用医学问答模型 |<br>| <strong>Baichuan-M3-235B</strong> | 235B | 新一代医疗增强模型 | 不小，属于大模型 |<br><br>所以结论是：<strong>有“小一点”的开源医学模型，最典型是 Baichuan-M1-14B；如果你要 7B 级通用医学问答模型，百川目前公开主线里没有明确的 Baichuan-Med-7B 通用问答模型。</strong> 7B 级更接近的是 <strong>BaichuanMed-OCR-7B</strong>，但它偏医学 OCR/图文任务，不是纯文本医疗问答。citeturn914369search0turn137461search15<br><br>如果你是想本地部署医疗问答，优先看：<br><br>1. <strong>Baichuan-M1-14B-Instruct</strong>：医疗能力更对口，体量还能接受。  <br>2. <strong>Baichuan-M2-32B 的量化版</strong>：能力更强，但显存压力更大。Hugging Face 上也能看到 M2/M3 的 GGUF/GPTQ/FP8 等版本。citeturn137461search2turn137461search15  <br>3. <strong>BaichuanMed-OCR-7B</strong>：只有在你要处理病历、报告、影像文字识别/医学图文理解时才优先考虑。citeturn137461search15<br><br>一句话：<strong>百川有开源医学模型，但“小尺寸通用医疗问答”最接近的是 14B 的 Baichuan-M1，不是 7B。</strong></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:17:14</span>
+                </div>
+                <div class="message-content">med gemma有多小尺寸的</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:17:17</span>
+                </div>
+                <div class="message-content"><strong>MedGemma 最小是 4B。</strong><br><br>公开的 MedGemma 主要尺寸是：<br><br>| 模型 | 参数量 | 类型 |<br>|---|---:|---|<br>| <strong>MedGemma 4B / MedGemma 1.5 4B</strong> | <strong>4B</strong> | 多模态：医学图像 + 文本输入，文本输出 |<br>| <strong>MedGemma 27B</strong> | 27B | 文本-only 版本；后续也有 27B 多模态版本 |<br><br>Google 官方资料写明 MedGemma 发布为 <strong>4B 和 27B</strong> 两个参数规模；MedGemma 1.5 也保留了 <strong>4B</strong> 版本，并增强了医疗影像相关能力。citeturn876871search2turn876871search4turn876871search14<br><br>所以如果你在找“很小的医学模型”，<strong>MedGemma 目前没有 1B/2B/3B 医学版，最小就是 4B</strong>。实际部署上，4B 量化后通常比 7B/14B 轻很多，适合单卡或较强消费级显卡尝试；但医疗推理能力通常不如 27B。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:17:36</span>
+                </div>
+                <div class="message-content">开源吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:17:41</span>
+                </div>
+                <div class="message-content"><strong>算开放权重，但不等同于完全“开源”。</strong><br><br>MedGemma 的模型权重在 <strong>Hugging Face</strong> 上公开可申请/同意条款后下载；Google 官方也把它称为 <strong>open models for health AI development</strong>。但访问时需要同意 <strong>Health AI Developer Foundation terms of use</strong>，所以它不是那种 MIT/Apache-2.0 式“想怎么用就怎么用”的开源模型。citeturn768579search0turn768579search4<br><br>更准确地说：<br><br>| 问法 | 答案 |<br>|---|---|<br>| 权重公开吗？ | <strong>公开，但需同意使用条款</strong> |<br>| 能本地部署吗？ | <strong>可以</strong> |<br>| 能商用吗？ | <strong>要看 Google 的 HAI-DEF / Gemma 相关条款</strong> |<br>| 是 OSI 意义上的完全开源吗？ | <strong>不是很建议这么叫</strong>，更准确叫 <strong>开放权重模型</strong> |<br>| 最小版本 | <strong>MedGemma 4B / MedGemma 1.5 4B</strong> |<br><br>所以你要找能本地跑的小医学模型，<strong>MedGemma 4B 是可以考虑的开放权重选择</strong>；但如果你的项目要商用或进医疗场景，必须先读清楚许可和医疗免责声明。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:20:07</span>
+                </div>
+                <div class="message-content">京医千询-8B模型开源吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:20:14</span>
+                </div>
+                <div class="message-content"><strong>是的，京医千询/JoyMed-8B 已开源。</strong><br><br>目前官方 GitHub 仓库是 <strong>jdh-algo/JoyMed</strong>，仓库显示为 <strong>Public</strong>，并标注 <strong>Apache-2.0 license</strong>；README 里也明确列出 <strong>JoyMed-8B-v1.0，参数量 8B，提供 Hugging Face 地址</strong>。citeturn442467view0turn442467view1<br><br>关键点：<br><br>| 项目 | 情况 |<br>|---|---|<br>| 模型名 | <strong>JoyMed-8B-v1.0 / 京医千询-8B</strong> |<br>| 是否开源 | <strong>是</strong> |<br>| 许可证 | GitHub 仓库标注 <strong>Apache-2.0</strong> |<br>| 参数量 | <strong>8B</strong> |<br>| 平台 | GitHub + Hugging Face |<br>| 还有更大版本吗 | 有，<strong>JoyMed-32B-v1.0</strong> |<br><br>不过注意一点：它是<strong>医疗多模态/医学推理模型</strong>，不是单纯的通用文本医疗问答模型。官方介绍里强调它覆盖医学图像理解、文本问答、医学文档理解、医学报告生成等任务。citeturn442467view0<br><br>所以你如果在比较小模型：<strong>MedGemma 4B 更小，JoyMed-8B 更大但医疗中文/多模态方向更对口。</strong></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:35:48</span>
+                </div>
+                <div class="message-content">京医千询-8B、medgemma-4b支持swift微调吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:35:49</span>
+                </div>
+                <div class="message-content">我会按 ModelScope 的 <strong>ms-swift/SWIFT 微调框架</strong> 来判断；重点核对这两个模型的架构、是否在 SWIFT 支持列表里，以及不在列表时能不能按基座模型兜底。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:36:07</span>
+                </div>
+                <div class="message-content">结论：<br><br>| 模型 | 是否支持 ms-swift 微调 | 判断 |<br>|---|---|---|<br>| <strong>MedGemma-4B</strong> | <strong>支持</strong> | SWIFT 官方支持列表里已有 <code>google/medgemma-4b-pt</code> 和 <code>google/medgemma-4b-it</code>，模型类型是 <code>gemma3_vision</code>，要求 <code>transformers&gt;=4.49</code>。citeturn960851view1 |<br>| <strong>京医千询 / JoyMed-8B</strong> | <strong>不确定，官方未直接列入 SWIFT 支持列表</strong> | 我在 SWIFT 支持模型表里没查到 <code>JoyMed</code> 或“京医”；JoyMed 官方 README 主要给的是 vLLM 推理方式，并要求 <code>transformers==5.2.*</code>、<code>--trust-remote-code</code>。citeturn219440view0turn219440view1turn960851view0 |<br><br>更实用地说：<br><br><strong>MedGemma-4B 可以直接优先用 SWIFT。</strong>  <br>它在 SWIFT 文档里明确列出，按 <code>gemma3_vision</code> 跑 LoRA/SFT 是正路。<br><br><strong>JoyMed-8B 不建议你默认认为能直接用 SWIFT。</strong>  <br>它虽然是开源 8B 医疗多模态模型，官方模型库给了 <code>JoyMed-8B-v1.0</code>，但当前公开文档没有看到 SWIFT 的原生适配项。citeturn219440view3 如果它底层确实兼容某个 SWIFT 已支持架构，比如 Qwen3-VL / Qwen2.5-VL 一类，可能可以通过指定相近 <code>model_type</code> 或自定义模型接入来跑；但这属于“需要实测/改适配”，不是开箱即用。<br><br>我的建议很直接：<br><br>如果你要<strong>尽快微调成功</strong>：选 <strong>MedGemma-4B + SWIFT</strong>。  <br>如果你要<strong>中文医疗 + 文档/图像能力</strong>：JoyMed-8B 值得试，但先用官方 vLLM 推理跑通，再看 <code>config.json</code> 里的 <code>model_type</code> / <code>architectures</code>，确认能否映射到 SWIFT 的 Qwen-VL 系模型类型。SWIFT 本身支持大量文本和多模态模型，包括 Qwen 系、InternVL、LLaVA 等，但 JoyMed 目前不是官方列表里的名字。citeturn718209view2</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:37:24</span>
+                </div>
+                <div class="message-content">你帮我看下JoyMed-8B底层是什么模型？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 10:38:14</span>
+                </div>
+                <div class="message-content">我查了公开页面后，<strong>不能负责任地说 JoyMed-8B 的底座已经被官方明确写成某个具体基座</strong>，因为官方 README 没直接写 “base model = xxx”，我也没能直接读到它的 <code>config.json</code>。<br><br>但从公开信息看，<strong>最可能的底层方向是 Qwen3-VL 8B 系，而不是 Llama / Gemma / 纯文本 Qwen</strong>。<br><br>依据是：<br><br>1. <strong>JoyMed-8B 是多模态模型</strong>，官方介绍它做医学图像理解、文档理解、医学报告生成等任务，不是纯文本 LLM。官方 benchmark 里也把它和 <strong>Qwen3-VL 8B / Qwen3-VL 32B、MedGemma、HuatuoGPT-V、Lingshu、Citrus-V</strong> 等视觉语言模型放在一起比较。citeturn172217view0<br><br>2. Hugging Face 公开索引里把 <code>jdh-algo/JoyMed-8B-v1.0</code> 标成 <strong>Image-Text-to-Text，约 9B</strong>，这也说明它是视觉语言模型。citeturn932632search4<br><br>3. 官方运行方式要求 <code>vllm serve ... --mm-encoder-tp-mode data ... --trust-remote-code</code>，并要求升级到 <code>transformers==5.2.*</code>，这更像是新一代多模态架构/自定义 remote code，而不是普通 Llama/Qwen 文本模型。citeturn172217view0<br><br><strong>我的判断：JoyMed-8B 大概率是基于 Qwen3-VL-8B 一类视觉语言架构做的医疗后训练/强化训练，但目前公开 README 没有把“底座模型”明说。</strong><br><br>对你前面问的 <strong>SWIFT 微调</strong>，结论要保守一点：<br><br>| 项目 | 判断 |<br>|---|---|<br>| 直接按 <code>qwen3_vl</code> 接 SWIFT | <strong>值得尝试</strong> |<br>| 直接按普通 Qwen3-8B 文本模型接 | <strong>不建议</strong> |<br>| 确认是否能无改动支持 | <strong>必须看本地 <code>config.json</code></strong> |<br>| 最关键字段 | <code>model_type</code>、<code>architectures</code>、<code>auto_map</code> |<br><br>你下载后可以直接跑：<br><br><pre><code class="language-bash">cat config.json | grep -E "model_type|architectures|auto_map|vision|qwen"</code></pre><br><br>如果看到类似：<br><br><pre><code class="language-json">"model_type": "qwen3_vl"</code></pre><br><br>或：<br><br><pre><code class="language-json">"architectures": ["Qwen3VLForConditionalGeneration"]</code></pre><br><br>那基本就能按 <strong>Qwen3-VL 系</strong>去尝试 SWIFT 适配。  <br>如果 <code>auto_map</code> 指向 JoyMed 自己的 custom modeling 文件，那就说明它需要 <code>trust_remote_code</code>，SWIFT 可能要自定义注册，不能直接开箱跑。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 10:59:50</span>
+                </div>
+                <div class="message-content">https://www.modelscope.cn/models/unsloth/medgemma-1.5-4b-it/files 这个可以swift微调是吧</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 11:00:00</span>
+                </div>
+                <div class="message-content">对，<strong>这个 <code>unsloth/medgemma-1.5-4b-it</code> 原则上可以用 SWIFT 微调</strong>，但要注意：它不是 SWIFT 官方表里直接列名的 <code>google/medgemma-4b-it</code>，而是 Unsloth 转存/优化版本。<br><br>判断依据：<br><br>SWIFT 官方支持 <strong>MedGemma 4B IT/PT</strong>，对应 <code>model_type</code> 是 <strong><code>gemma3_vision</code></strong>，依赖要求是 <strong><code>transformers&gt;=4.49</code></strong>。citeturn310838view1  <br>而 MedGemma 1.5 4B 官方说明里明确说它是 <strong>Gemma 3 variants</strong>，用于医疗文本和图像理解，属于同一类 <strong>Gemma 3 Vision / MedGemma 4B 多模态架构</strong>。citeturn390092view2<br><br>所以你可以先这样试：<br><br><pre><code class="language-bash">swift sft \
+  --model unsloth/medgemma-1.5-4b-it \
+  --model_type gemma3_vision \
+  --train_type lora \
+  --dataset your_dataset.jsonl \
+  --torch_dtype bfloat16 \
+  --num_train_epochs 1 \
+  --per_device_train_batch_size 1 \
+  --gradient_accumulation_steps 8 \
+  --learning_rate 1e-4 \
+  --save_steps 500 \
+  --output_dir output/medgemma15_lora</code></pre><br><br>如果你用的是 <strong>ModelScope 地址</strong>，也可以写成：<br><br><pre><code class="language-bash">swift sft \
+  --model unsloth/medgemma-1.5-4b-it \
+  --model_type gemma3_vision \
+  --train_type lora \
+  --dataset your_dataset.jsonl</code></pre><br><br>关键是这几个点：<br><br>| 项目 | 建议 |<br>|---|---|<br>| <code>model_type</code> | 用 <strong><code>gemma3_vision</code></strong> |<br>| 微调方式 | 优先 <strong>LoRA / QLoRA</strong> |<br>| 数据 | 文本 SFT 可以；图文 SFT 要按 SWIFT 多模态格式 |<br>| 依赖 | 至少 <code>transformers&gt;=4.49</code>，实际建议用较新的 SWIFT 环境 |<br>| 风险 | Unsloth 版本如果改了文件结构，可能需要改用 <code>google/medgemma-4b-it</code> 或 <code>google/medgemma-1.5-4b-it</code> 原版 |<br><br>我建议你先跑一个最小 smoke test，不要一上来正式训练：<br><br><pre><code class="language-bash">swift infer \
+  --model unsloth/medgemma-1.5-4b-it \
+  --model_type gemma3_vision</code></pre><br><br>如果推理能加载，再上 <code>swift sft</code>。如果这里报 <code>config</code>、<code>processor</code>、<code>vision_tower</code>、<code>chat_template</code> 相关错误，直接换 Google 原版 MedGemma 1.5 4B 或 SWIFT 官方表里的 <code>google/medgemma-4b-it</code> 更稳。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 11:02:20</span>
+                </div>
+                <div class="message-content">modelscope的话怎么下载模型到指定文件夹？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 11:02:27</span>
+                </div>
+                <div class="message-content">可以，用 <strong>ModelScope CLI 的 <code>--local_dir</code></strong> 最直接。<br><br>以你这个模型为例：<br><br><pre><code class="language-bash">pip install -U modelscope</code></pre><br><br><pre><code class="language-bash">modelscope download \
+  --model unsloth/medgemma-1.5-4b-it \
+  --local_dir /data/models/medgemma-1.5-4b-it</code></pre><br><br><code>--local_dir</code> 会把模型文件直接放到你指定的目录；ModelScope 官方文档也说明，<code>local_dir</code> 优先级高于 <code>cache_dir</code>。citeturn438107search0turn438107search3<br><br>如果你只是想改默认缓存目录，也可以这样：<br><br><pre><code class="language-bash">export MODELSCOPE_CACHE=/data/modelscope_cache
+
+modelscope download \
+  --model unsloth/medgemma-1.5-4b-it</code></pre><br><br>或者用 Python 下载：<br><br><pre><code class="language-python">from modelscope import snapshot_download
+
+model_dir = snapshot_download(
+    "unsloth/medgemma-1.5-4b-it",
+    local_dir="/data/models/medgemma-1.5-4b-it"
+)
+
+print(model_dir)</code></pre><br><br>我更建议你用第一种 <code>--local_dir</code>，后面 SWIFT 微调时直接写本地路径：<br><br><pre><code class="language-bash">swift sft \
+  --model /data/models/medgemma-1.5-4b-it \
+  --model_type gemma3_vision \
+  --train_type lora \
+  --dataset your_dataset.jsonl</code></pre><br><br>如果下载 gated/需要登录的模型，先执行：<br><br><pre><code class="language-bash">modelscope login</code></pre><br><br>或：<br><br><pre><code class="language-bash">modelscope login --token YOUR_TOKEN</code></pre></div>
+            </div></div></div></body></html>

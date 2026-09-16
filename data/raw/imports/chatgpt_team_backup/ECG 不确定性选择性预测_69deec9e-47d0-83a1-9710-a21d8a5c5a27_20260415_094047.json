@@ -1,0 +1,1207 @@
+{
+  "title": "ECG 不确定性选择性预测",
+  "create_time": 1776217247.461491,
+  "update_time": 1776219500.161115,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "69deec9e-47d0-83a1-9710-a21d8a5c5a27",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://arxiv.org/abs/2107.03342?utm_source=chatgpt.com",
+    "https://www.mdpi.com/2073-8994/17/5/794",
+    "https://www.nature.com/articles/s43856-024-00464-4",
+    "https://www.mdpi.com/2073-8994/17/5/794?utm_source=chatgpt.com",
+    "https://github.com/m42-health/healthbench",
+    "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+    "https://arxiv.org/abs/2107.03342",
+    "https://physionet.org/content/ptb-xl-plus/1.0.1/",
+    "https://www.nature.com/articles/s43856-024-00464-4?utm_source=chatgpt.com",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/?utm_source=chatgpt.com",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": null,
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "1b790065-3bc9-4a0c-b090-d0f574fc421f"
+      ]
+    },
+    "1b790065-3bc9-4a0c-b090-d0f574fc421f": {
+      "id": "1b790065-3bc9-4a0c-b090-d0f574fc421f",
+      "message": {
+        "id": "1b790065-3bc9-4a0c-b090-d0f574fc421f",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "53e34bde-1d19-4f43-83c9-bdcc885de55e"
+      ]
+    },
+    "53e34bde-1d19-4f43-83c9-bdcc885de55e": {
+      "id": "53e34bde-1d19-4f43-83c9-bdcc885de55e",
+      "message": {
+        "id": "53e34bde-1d19-4f43-83c9-bdcc885de55e",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "1b790065-3bc9-4a0c-b090-d0f574fc421f",
+      "children": [
+        "9925c7b4-943e-4310-9ead-3ce74f85578b"
+      ]
+    },
+    "9925c7b4-943e-4310-9ead-3ce74f85578b": {
+      "id": "9925c7b4-943e-4310-9ead-3ce74f85578b",
+      "message": {
+        "id": "9925c7b4-943e-4310-9ead-3ce74f85578b",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "53e34bde-1d19-4f43-83c9-bdcc885de55e",
+      "children": [
+        "8e71459d-e71b-424b-ace7-ea9cc20c68f3"
+      ]
+    },
+    "8e71459d-e71b-424b-ace7-ea9cc20c68f3": {
+      "id": "8e71459d-e71b-424b-ace7-ea9cc20c68f3",
+      "message": {
+        "id": "8e71459d-e71b-424b-ace7-ea9cc20c68f3",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776217246.893474,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "ff8c2d45-8583-45e8-a546-909fa8223518",
+          "message_source": null,
+          "turn_exchange_id": "ea54cb4b-4663-4655-8cef-705e88f09c18",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9925c7b4-943e-4310-9ead-3ce74f85578b",
+      "children": [
+        "ee95e527-b41b-485d-a870-cd65394b121e"
+      ]
+    },
+    "ee95e527-b41b-485d-a870-cd65394b121e": {
+      "id": "ee95e527-b41b-485d-a870-cd65394b121e",
+      "message": {
+        "id": "ee95e527-b41b-485d-a870-cd65394b121e",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776217241.175,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "《Nested Evaluation of Selective Prediction for ECG\nDiagnosis: Confidence Uncertainty Outperforms\nKnowledge-Graph Disagreement》 有没有类似的论文研究？"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "ff8c2d45-8583-45e8-a546-909fa8223518",
+          "message_source": null,
+          "turn_exchange_id": "ea54cb4b-4663-4655-8cef-705e88f09c18",
+          "resolved_model_slug": "gpt-5-3",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8e71459d-e71b-424b-ace7-ea9cc20c68f3",
+      "children": [
+        "064ca372-777e-4eb9-bf90-a11b8873db21"
+      ]
+    },
+    "064ca372-777e-4eb9-bf90-a11b8873db21": {
+      "id": "064ca372-777e-4eb9-bf90-a11b8873db21",
+      "message": {
+        "id": "064ca372-777e-4eb9-bf90-a11b8873db21",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776217247.4035637,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "ff8c2d45-8583-45e8-a546-909fa8223518",
+          "message_type": "next",
+          "turn_exchange_id": "ea54cb4b-4663-4655-8cef-705e88f09c18",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "ee95e527-b41b-485d-a870-cd65394b121e",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ee95e527-b41b-485d-a870-cd65394b121e",
+      "children": [
+        "fbcd5258-9622-431c-8ee7-3fa9eec2527c"
+      ]
+    },
+    "fbcd5258-9622-431c-8ee7-3fa9eec2527c": {
+      "id": "fbcd5258-9622-431c-8ee7-3fa9eec2527c",
+      "message": {
+        "id": "fbcd5258-9622-431c-8ee7-3fa9eec2527c",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776217247.7634299,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [
+            {
+              "matched_text": "entity[\"<entity_category>\", \"<entity_name>\", \"<city, state/province, country | address>\"]",
+              "prefix": null,
+              "start_idx": 3185,
+              "end_idx": 3277,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "<entity_name>",
+              "prompt_text": "<entity_name>",
+              "type": "entity",
+              "name": "<entity_name>",
+              "category": "<entity_category>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "<city, state/province, country | address>"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<ref_id>\", \"<entity_name>\"]",
+              "prefix": null,
+              "start_idx": 3341,
+              "end_idx": 3379,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "<entity_name>",
+              "prompt_text": "<entity_name>",
+              "type": "entity",
+              "name": "<entity_name>",
+              "category": "<ref_id>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\",1]",
+              "prefix": null,
+              "start_idx": 6886,
+              "end_idx": 6930,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "product[\"turnXproductY\", \"Levi's Jeans 500\", {\"render_as\":\"hero\", \"description\":\"$single-sentence-product-description\"}]",
+              "prefix": null,
+              "start_idx": 6992,
+              "end_idx": 7115,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "product[\"turnXproductY\", \"Product Name\", {\"render_as\":\"block\", \"description\":\"$single-sentence-product-description\"}]",
+              "prefix": null,
+              "start_idx": 7187,
+              "end_idx": 7307,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "products{\"selections\":[[\"turnXproductY\",\"Display title\"],[\"turnXproductZ,turnXproductW\",\"Merged card title\"]],\"tags\":[\"optional tag\",\"optional tag\"]}",
+              "prefix": null,
+              "start_idx": 7854,
+              "end_idx": 8006,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\"]",
+              "prefix": null,
+              "start_idx": 8527,
+              "end_idx": 8569,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_1_FROM_TOOL>\",\"Product A\"]",
+              "prefix": null,
+              "start_idx": 8673,
+              "end_idx": 8723,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product A",
+              "prompt_text": "Product A",
+              "type": "entity",
+              "name": "Product A",
+              "category": "<PRODUCT_REF_1_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_2_FROM_TOOL>\",\"Product B\"]",
+              "prefix": null,
+              "start_idx": 8726,
+              "end_idx": 8776,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product B",
+              "prompt_text": "Product B",
+              "type": "entity",
+              "name": "Product B",
+              "category": "<PRODUCT_REF_2_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_3_FROM_TOOL>\",\"Product C\"]",
+              "prefix": null,
+              "start_idx": 8779,
+              "end_idx": 8829,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product C",
+              "prompt_text": "Product C",
+              "type": "entity",
+              "name": "Product C",
+              "category": "<PRODUCT_REF_3_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_4_FROM_TOOL>\",\"Product D\"]",
+              "prefix": null,
+              "start_idx": 8832,
+              "end_idx": 8882,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product D",
+              "prompt_text": "Product D",
+              "type": "entity",
+              "name": "Product D",
+              "category": "<PRODUCT_REF_4_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_5_FROM_TOOL>\",\"Product E\"]",
+              "prefix": null,
+              "start_idx": 8885,
+              "end_idx": 8935,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product E",
+              "prompt_text": "Product E",
+              "type": "entity",
+              "name": "Product E",
+              "category": "<PRODUCT_REF_5_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "explore_more{\\\"selections\\\":[[\\\"turn0product1\\\",\\\"Product Title\\\"],[\\\"turn0product2\\\",\\\"Product Title\\\"],...]}",
+              "prefix": null,
+              "start_idx": 9531,
+              "end_idx": 9644,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\"]",
+              "prefix": null,
+              "start_idx": 14927,
+              "end_idx": 14969,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            }
+          ],
+          "resolved_model_slug": "gpt-5-3",
+          "request_id": "ff8c2d45-8583-45e8-a546-909fa8223518",
+          "message_type": "next",
+          "turn_exchange_id": "ea54cb4b-4663-4655-8cef-705e88f09c18",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "064ca372-777e-4eb9-bf90-a11b8873db21",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "assistant",
+        "channel": null
+      },
+      "parent": "064ca372-777e-4eb9-bf90-a11b8873db21",
+      "children": [
+        "48ac2d15-7715-4e11-83c9-2e307f858229"
+      ]
+    },
+    "48ac2d15-7715-4e11-83c9-2e307f858229": {
+      "id": "48ac2d15-7715-4e11-83c9-2e307f858229",
+      "message": {
+        "id": "48ac2d15-7715-4e11-83c9-2e307f858229",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776217247.397249,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "unknown",
+          "response_format_name": null,
+          "text": "search(\"\\u300aNested Evaluation of Selective Prediction for ECG\\nDiagnosis: Confidence Uncertainty Outperforms\\nKnowledge-Graph Disagreement\\u300b \\u6709\\u6ca1\\u6709\\u7c7b\\u4f3c\\u7684\\u8bba\\u6587\\u7814\\u7a76\\uff1f\")"
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-3",
+          "request_id": "ff8c2d45-8583-45e8-a546-909fa8223518",
+          "message_type": "next",
+          "turn_exchange_id": "ea54cb4b-4663-4655-8cef-705e88f09c18",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "fbcd5258-9622-431c-8ee7-3fa9eec2527c",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web",
+        "channel": null
+      },
+      "parent": "fbcd5258-9622-431c-8ee7-3fa9eec2527c",
+      "children": [
+        "f89af310-58cd-4ae0-b117-eaf2738cf4b8"
+      ]
+    },
+    "f89af310-58cd-4ae0-b117-eaf2738cf4b8": {
+      "id": "f89af310-58cd-4ae0-b117-eaf2738cf4b8",
+      "message": {
+        "id": "f89af310-58cd-4ae0-b117-eaf2738cf4b8",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1776217248.8335826,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "Nested Evaluation of Selective Prediction ECG diagnosis confidence uncertainty knowledge graph disagreement similar papers"
+            ]
+          },
+          "request_id": "ff8c2d45-8583-45e8-a546-909fa8223518",
+          "message_type": "next",
+          "turn_exchange_id": "ea54cb4b-4663-4655-8cef-705e88f09c18",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "e7be1ae2-8f8b-4474-b1ab-72dcfac4b21d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "48ac2d15-7715-4e11-83c9-2e307f858229",
+      "children": [
+        "b617d473-0b6c-4b11-82e0-90e470a6f408"
+      ]
+    },
+    "b617d473-0b6c-4b11-82e0-90e470a6f408": {
+      "id": "b617d473-0b6c-4b11-82e0-90e470a6f408",
+      "message": {
+        "id": "b617d473-0b6c-4b11-82e0-90e470a6f408",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1776217249.78441,
+        "update_time": 1776219500.123564,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "你提到的这篇：\n\n> *Nested Evaluation of Selective Prediction for ECG Diagnosis: Confidence Uncertainty Outperforms Knowledge-Graph Disagreement*\n\n本质上是在做三件事的交叉：\n\n1. **Selective prediction / abstention（选择性预测）**\n2. **Uncertainty vs. alternative signals（如KG disagreement）**\n3. **医学场景（ECG诊断）**\n\n类似工作的确不少，但**同时把“选择性预测 + 不确定性 + 外部知识（KG）对比”结合得这么明确的论文，其实还不算多**。我给你按“研究脉络”拆开，并列出最接近的论文类型（含你可以直接 follow 的方向）。\n\n---\n\n# 一、最直接相关：ECG + 不确定性 + selective prediction\n\n### 1️⃣ 不确定性驱动的 selective prediction（强相关）\n\n- entity[\"paper\",\"Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms\",\"ECG uncertainty paper\"]  \n  👉 核心：用 **epistemic + aleatoric uncertainty** 做 triage / selective prediction  \n\n关键点：\n- 用 MC dropout / ensemble 等得到预测分布\n- 用 variance 作为 uncertainty\n- 可以“拒绝预测”（abstain）\n\n> 本质上就是你那篇 paper 的 baseline 类型  \n> ——“confidence/uncertainty > decision threshold → 保留，否则拒绝” citeturn0search1  \n\n---\n\n### 2️⃣ 显式优化“低置信度拒绝”的模型\n\n- entity[\"paper\",\"A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification\",\"ECG uncertainty Dirichlet\"]  \n\n关键贡献：\n- 用 Dirichlet / evidential deep learning\n- 直接输出 uncertainty（不是后处理）\n- 用 uncertainty threshold 做 selective prediction  \n\n实验现象：\n- 降低不确定性阈值 → 性能持续提升（典型 selective prediction曲线） citeturn0search2  \n\n👉 这类论文和你那篇的**核心对照组是完全一致的**\n\n---\n\n# 二、Selective prediction / uncertainty evaluation（方法论层）\n\n这类不是 ECG-specific，但方法和你提到的论文几乎同一条线。\n\n### 3️⃣ selective prediction evaluation 经典问题\n\n- entity[\"paper\",\"Revisiting the Evaluation of Uncertainty Estimation and Its Application to Explore Model Complexity-Uncertainty Trade-Off\",\"uncertainty evaluation paper\"]  \n\n核心：\n- selective prediction = **risk–coverage tradeoff**\n- 提出更合理的 evaluation metrics  \n\n👉 你那篇“Nested evaluation”其实就在做类似的事情（更复杂版本）\n\n---\n\n### 4️⃣ 不确定性综述（框架性）\n\n- entity[\"paper\",\"A Survey of Uncertainty in Deep Neural Networks\",\"uncertainty survey\"]  \n\n关键分类：\n- epistemic vs aleatoric\n- calibration vs selective prediction  \n\n👉 你那篇 paper 的理论基础几乎都在这里 citeturn0academia14  \n\n---\n\n# 三、Knowledge Graph + 医疗诊断（对照方向）\n\n你那篇的一个亮点是：\n\n> 用 **KG disagreement 作为 alternative uncertainty signal**\n\n类似思路可以在以下方向找到：\n\n---\n\n### 5️⃣ 医疗KG + ECG / 诊断模型\n\n- entity[\"paper\",\"Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis\",\"SJTU ECG KG model\"]  \n\n特点：\n- 用医学知识增强模型\n- 提供“解释性决策路径”\n\n👉 但注意：\n- 这类工作**很少把 KG disagreement 当 uncertainty proxy**\n- 更多是“增强模型”，而不是“评估信号” citeturn0search0  \n\n---\n\n### 6️⃣ 不确定知识图谱（理论基础）\n\n- entity[\"paper\",\"Embedding Uncertain Knowledge Graphs\",\"UKGE\"]  \n\n核心思想：\n- KG 本身就有 uncertainty（confidence score）\n\n👉 你那篇 paper 实际是在做：\n\n> 用 KG consistency → proxy uncertainty  \n\n这在 KG 领域是合理的扩展\n\n---\n\n# 四、和你这篇最“结构上类似”的研究模式\n\n如果抽象一下，这篇论文其实属于：\n\n### 👉 “多视角 uncertainty proxy 对比” 研究\n\n类似的套路在这些方向很常见：\n\n---\n\n## 模式 A：model uncertainty vs ensemble disagreement\n- deep ensemble disagreement\n- MC dropout variance\n\n👉 和你 paper 中：\n- confidence uncertainty ✔\n- KG disagreement ✔  \n完全同构\n\n---\n\n## 模式 B：internal vs external knowledge inconsistency\n- model vs rule-based system\n- model vs ontology\n\n👉 你这篇其实是：\n> neural model vs KG reasoning 的 disagreement\n\n---\n\n## 模式 C：selective prediction benchmarking\n- 不同 uncertainty signal → risk-coverage 曲线比较\n\n👉 “Nested evaluation”就是在做这个\n\n---\n\n# 五、给你总结一下“最近最接近的论文类型”\n\n如果你要找“类似论文”，可以重点搜这几类关键词：\n\n### 🔹 1. ECG + uncertainty + triage\n- uncertainty-guided triage\n- ECG abstention learning\n\n### 🔹 2. selective prediction + healthcare\n- risk-coverage medical AI\n- abstention in diagnosis\n\n### 🔹 3. multi-source uncertainty\n- disagreement-based uncertainty\n- ensemble vs knowledge-based uncertainty\n\n### 🔹 4. knowledge graph + uncertainty\n- KG consistency / contradiction detection\n- neuro-symbolic uncertainty\n\n---\n\n# 六、一个关键判断（很重要）\n\n你这篇 paper 的**真正创新点不是“uncertainty”本身**，而是：\n\n> 👉 **证明：KG disagreement ≠ 好的 uncertainty proxy**\n\n换句话说，它在做：\n\n- uncertainty signal 的 **validity study**\n\n而不是：\n- 提出新模型\n\n---\n\n# 七、如果你想继续往这个方向做（建议）\n\n可以考虑这些更前沿的切入点：\n\n### 1️⃣ 多源 uncertainty 融合\n- model uncertainty\n- KG disagreement\n- clinician disagreement  \n\n👉 做 calibration / fusion\n\n---\n\n### 2️⃣ uncertainty → downstream decision\n- triage policy learning\n- cost-sensitive abstention\n\n---\n\n### 3️⃣ 反向问题（更有意思）\n> 为什么 KG disagreement 不好？\n\n可能原因：\n- KG coverage sparse\n- rule rigidity\n- mismatch with data distribution\n\n---\n\n如果你愿意，我可以帮你做一件更“论文级”的事情：\n\n👉 **把这篇 paper 放到完整 research landscape 里（含可以投 JBI / Nature Digital Medicine 的选题方向）**  \n甚至可以帮你找“能发的改进点”。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "entity[\"paper\",\"Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms\",\"ECG uncertainty paper\"]",
+              "prefix": null,
+              "start_idx": 486,
+              "end_idx": 626,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms",
+              "prompt_text": "Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms",
+              "type": "entity",
+              "name": "Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms",
+              "category": "paper",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "ECG uncertainty paper"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "OxOgFwUuY-eW7pBe"
+            },
+            {
+              "matched_text": "citeturn0search1",
+              "prefix": null,
+              "start_idx": 892,
+              "end_idx": 911,
+              "safe_urls": [
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/",
+                "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms - PMC",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/?utm_source=chatgpt.com",
+                  "attribution": "PMC",
+                  "pub_date": 1620432000,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "entity[\"paper\",\"A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification\",\"ECG uncertainty Dirichlet\"]",
+              "prefix": null,
+              "start_idx": 947,
+              "end_idx": 1114,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification",
+              "prompt_text": "A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification",
+              "type": "entity",
+              "name": "A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification",
+              "category": "paper",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "ECG uncertainty Dirichlet"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "3b6AbcEHHYlcO6AP"
+            },
+            {
+              "matched_text": "citeturn0search2",
+              "prefix": null,
+              "start_idx": 1296,
+              "end_idx": 1315,
+              "safe_urls": [
+                "https://www.mdpi.com/2073-8994/17/5/794",
+                "https://www.mdpi.com/2073-8994/17/5/794?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([MDPI](https://www.mdpi.com/2073-8994/17/5/794?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification | MDPI",
+                  "url": "https://www.mdpi.com/2073-8994/17/5/794?utm_source=chatgpt.com",
+                  "attribution": "MDPI",
+                  "pub_date": 1747699200,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 2
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "entity[\"paper\",\"Revisiting the Evaluation of Uncertainty Estimation and Its Application to Explore Model Complexity-Uncertainty Trade-Off\",\"uncertainty evaluation paper\"]",
+              "prefix": null,
+              "start_idx": 1494,
+              "end_idx": 1667,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Revisiting the Evaluation of Uncertainty Estimation and Its Application to Explore Model Complexity-Uncertainty Trade-Off",
+              "prompt_text": "Revisiting the Evaluation of Uncertainty Estimation and Its Application to Explore Model Complexity-Uncertainty Trade-Off",
+              "type": "entity",
+              "name": "Revisiting the Evaluation of Uncertainty Estimation and Its Application to Explore Model Complexity-Uncertainty Trade-Off",
+              "category": "paper",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "uncertainty evaluation paper"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "L1EPh5WMmpTUXz9j"
+            },
+            {
+              "matched_text": "entity[\"paper\",\"A Survey of Uncertainty in Deep Neural Networks\",\"uncertainty survey\"]",
+              "prefix": null,
+              "start_idx": 1829,
+              "end_idx": 1918,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "A Survey of Uncertainty in Deep Neural Networks",
+              "prompt_text": "A Survey of Uncertainty in Deep Neural Networks",
+              "type": "entity",
+              "name": "A Survey of Uncertainty in Deep Neural Networks",
+              "category": "paper",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "uncertainty survey"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "dCqgsf9oeEC8ONbk"
+            },
+            {
+              "matched_text": "citeturn0academia14",
+              "prefix": null,
+              "start_idx": 2018,
+              "end_idx": 2040,
+              "safe_urls": [
+                "https://arxiv.org/abs/2107.03342",
+                "https://arxiv.org/abs/2107.03342?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([arXiv](https://arxiv.org/abs/2107.03342?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "A Survey of Uncertainty in Deep Neural Networks",
+                  "url": "https://arxiv.org/abs/2107.03342?utm_source=chatgpt.com",
+                  "attribution": "arXiv",
+                  "pub_date": 1625675968,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "academia",
+                      "ref_index": 14
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "entity[\"paper\",\"Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis\",\"SJTU ECG KG model\"]",
+              "prefix": null,
+              "start_idx": 2204,
+              "end_idx": 2348,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis",
+              "prompt_text": "Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis",
+              "type": "entity",
+              "name": "Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis",
+              "category": "paper",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "SJTU ECG KG model"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "m6l6NopiBcu7vmz2"
+            },
+            {
+              "matched_text": "citeturn0search0",
+              "prefix": null,
+              "start_idx": 2462,
+              "end_idx": 2481,
+              "safe_urls": [
+                "https://www.nature.com/articles/s43856-024-00464-4",
+                "https://www.nature.com/articles/s43856-024-00464-4?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([Nature](https://www.nature.com/articles/s43856-024-00464-4?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis | Communications Medicine",
+                  "url": "https://www.nature.com/articles/s43856-024-00464-4?utm_source=chatgpt.com",
+                  "attribution": "Nature",
+                  "pub_date": 1709078400,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "entity[\"paper\",\"Embedding Uncertain Knowledge Graphs\",\"UKGE\"]",
+              "prefix": null,
+              "start_idx": 2515,
+              "end_idx": 2579,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Embedding Uncertain Knowledge Graphs",
+              "prompt_text": "Embedding Uncertain Knowledge Graphs",
+              "type": "entity",
+              "name": "Embedding Uncertain Knowledge Graphs",
+              "category": "paper",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "UKGE"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "wehxugxPtnlHu9Cy"
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 4444,
+              "end_idx": 4444,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms - PMC",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/?utm_source=chatgpt.com",
+                  "attribution": "PMC"
+                },
+                {
+                  "title": "A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification | MDPI",
+                  "url": "https://www.mdpi.com/2073-8994/17/5/794?utm_source=chatgpt.com",
+                  "attribution": "MDPI"
+                },
+                {
+                  "title": "A Survey of Uncertainty in Deep Neural Networks",
+                  "url": "https://arxiv.org/abs/2107.03342?utm_source=chatgpt.com",
+                  "attribution": "arXiv"
+                },
+                {
+                  "title": "Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis | Communications Medicine",
+                  "url": "https://www.nature.com/articles/s43856-024-00464-4?utm_source=chatgpt.com",
+                  "attribution": "Nature"
+                }
+              ],
+              "has_images": false
+            },
+            {
+              "type": "followup_a",
+              "matched_text": "把这篇 paper 放到完整 research landscape 里（含可以投 JBI / Nature Digital Medicine 的选题方向）",
+              "start_idx": 4346,
+              "end_idx": 4423,
+              "alt": "把这篇 paper 放到完整 research landscape 里（含可以投 JBI / Nature Digital Medicine 的选题方向）",
+              "prompt_text": "把这篇 paper 放到完整 research landscape 里（含可以投 JBI / Nature Digital Medicine 的选题方向）"
+            },
+            {
+              "type": "followup_a",
+              "matched_text": "帮你找“能发的改进点”",
+              "start_idx": 4432,
+              "end_idx": 4443,
+              "alt": "帮你找“能发的改进点”",
+              "prompt_text": "帮你找能发的改进点"
+            }
+          ],
+          "safe_urls": [
+            "https://arxiv.org/abs/2107.03342",
+            "https://arxiv.org/abs/2107.03342?utm_source=chatgpt.com",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9707930/?utm_source=chatgpt.com",
+            "https://www.mdpi.com/2073-8994/17/5/794",
+            "https://www.mdpi.com/2073-8994/17/5/794?utm_source=chatgpt.com",
+            "https://www.nature.com/articles/s43856-024-00464-4",
+            "https://www.nature.com/articles/s43856-024-00464-4?utm_source=chatgpt.com"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "oup.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://academic.oup.com/ehjdh/article-abstract/2/3/401/6272223?utm_source=chatgpt.com",
+                  "title": "Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms | European Heart Journal - Digital Health | Oxford Academic",
+                  "snippet": "TRAINING DATA LABELLING  The UMCU-Triage DNN performs a comprehensive ECG triage task and classifies ECGs into one of four distinct triage categories based on how promptly a cardiologist must be consu...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": 1620432000,
+                  "attribution": "oup.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "nature.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s44325-024-00010-0?utm_source=chatgpt.com",
+                  "title": "Multi-expert ensemble ECG diagnostic algorithm using mutually exclusive–symbiotic correlation between 254 hierarchical multiple labels | npj Cardiovascular Health",
+                  "snippet": "18. Hannun, A. Y. et al. Cardiologist-level arrhythmia detection and classification in ambulatory electrocardiograms using a deep neural network. Nat. Med. 25, 65–69 (2019).  19. Natarajan, A. et al....",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": 1719878400,
+                  "attribution": "nature.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41746-025-01932-4?utm_source=chatgpt.com",
+                  "title": "Interpretable arrhythmia detection in ECG scans using deep learning ensembles: a genetic programming approach | npj Digital Medicine",
+                  "snippet": "37. Miró-Nicolau, M., Jaume-i-Capó, A. & Moyà-Alcover, G. Meta-evaluating stability measures: MAX-sensitivity and AVG-sensitivity. in Explainable Artificial Intelligence (eds. Longo, L., Lapuschkin, S...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": 1762387200,
+                  "attribution": "nature.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s44325-025-00099-x?utm_source=chatgpt.com",
+                  "title": "Interpretable multimodal zero shot ECG diagnosis via structured clinical knowledge alignment | npj Cardiovascular Health",
+                  "snippet": "38. Na, Y., Park, M., Tae, Y. & Joo, S. Guiding masked representation learning to capture spatio-temporal relationship of electrocardiogram. In International Conference on Learning Representations htt...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": 1767484800,
+                  "attribution": "nature.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41746-025-02074-3?utm_source=chatgpt.com",
+                  "title": "Diagnosis of cardiac conditions from 12-lead electrocardiogram through natural language supervision | npj Digital Medicine",
+                  "snippet": "DEMOGRAPHIC STRATIFICATION  To evaluate algorithmic fairness of the ECG-CLIP and identify potential performance disparities, we conducted a comprehensive analysis stratified by age and sex subgroups f...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": 1763510400,
+                  "attribution": "nature.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "researchgate.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/379080093_Uncertainty_in_Graph_Neural_Networks_A_Survey?utm_source=chatgpt.com",
+                  "title": "(PDF) Uncertainty in Graph Neural Networks: A Survey",
+                  "snippet": "Self-training. In graph self-training, i.e., pseudo-labeling, [  51  ] propose one of the initial works that  expand the labeled set with top  K  conﬁdent nodes, quantiﬁed through maximal softmax prob...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": 1710115200,
+                  "attribution": "researchgate.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "jst.go.jp",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.jstage.jst.go.jp/browse/pjsai/JSAI2019/0/_contents/-char/en?from=1&utm_source=chatgpt.com",
+                  "title": "Proceedings of the Annual Conference of JSAI",
+                  "snippet": "(2) It is shown how the constraint patterns can be mined form interaction data, and how they can be used for various applications.  View full abstract  Download PDF (180K)  * CTransE : Confidence-Base...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": 1559347200,
+                  "attribution": "jst.go.jp"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv-troller.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv-troller.com/?q=paper%3A+2601.22645&utm_source=chatgpt.com",
+                  "title": "arXiv Troller",
+                  "snippet": "ECG-Reasoning-Benchmark: A Benchmark for Evaluating Clinical Reasoning Capabilities in ECG Interpretation  Jungwoo Oh, Hyunseung Chung, Junhee Lee et al.  arXiv:2603.14326  Authors: Jungwoo Oh, Hyunse...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "attribution": "arxiv-troller.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11722092/?utm_source=chatgpt.com",
+                  "title": "Foundation model of ECG diagnosis: Diagnostics and explanations of any form and rhythm on ECG - PMC",
+                  "snippet": "FIGURE 4.  Open in a new tab  Module validity and interpretability analysis of KED  (A) Comparison of learning paradigms between AugCL and UniCL.  (B) A t-SNE diagram illustrating the query generation...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": 1734393600,
+                  "attribution": "nih.gov"
+                }
+              ]
+            }
+          ],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-3",
+          "request_id": "ff8c2d45-8583-45e8-a546-909fa8223518",
+          "message_type": "next",
+          "turn_exchange_id": "ea54cb4b-4663-4655-8cef-705e88f09c18",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "f89af310-58cd-4ae0-b117-eaf2738cf4b8",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "f89af310-58cd-4ae0-b117-eaf2738cf4b8",
+      "children": []
+    }
+  },
+  "current_node": "b617d473-0b6c-4b11-82e0-90e470a6f408"
+}

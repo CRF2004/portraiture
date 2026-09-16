@@ -1,0 +1,310 @@
+{
+  "title": "Skill安装与Token消耗",
+  "create_time": 1775807556.338584,
+  "update_time": 1775807566.455413,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "69d8ac30-a760-8322-bdd0-790ed6ddbb19",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": null,
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "46749452-7cd2-4953-82c2-2371daa9ece5"
+      ]
+    },
+    "46749452-7cd2-4953-82c2-2371daa9ece5": {
+      "id": "46749452-7cd2-4953-82c2-2371daa9ece5",
+      "message": {
+        "id": "46749452-7cd2-4953-82c2-2371daa9ece5",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "cde59b21-1b74-4e81-8b36-2ece7ba3dd8e"
+      ]
+    },
+    "cde59b21-1b74-4e81-8b36-2ece7ba3dd8e": {
+      "id": "cde59b21-1b74-4e81-8b36-2ece7ba3dd8e",
+      "message": {
+        "id": "cde59b21-1b74-4e81-8b36-2ece7ba3dd8e",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "46749452-7cd2-4953-82c2-2371daa9ece5",
+      "children": [
+        "821d114e-1310-432c-97db-445155ab1937"
+      ]
+    },
+    "821d114e-1310-432c-97db-445155ab1937": {
+      "id": "821d114e-1310-432c-97db-445155ab1937",
+      "message": {
+        "id": "821d114e-1310-432c-97db-445155ab1937",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "cde59b21-1b74-4e81-8b36-2ece7ba3dd8e",
+      "children": [
+        "0d1634b4-981d-478f-b64e-e5afaa9edecc"
+      ]
+    },
+    "0d1634b4-981d-478f-b64e-e5afaa9edecc": {
+      "id": "0d1634b4-981d-478f-b64e-e5afaa9edecc",
+      "message": {
+        "id": "0d1634b4-981d-478f-b64e-e5afaa9edecc",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775807556.123159,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "dfd1f1e8-479c-4a86-9ffe-5f2e6567dcc2",
+          "message_source": null,
+          "turn_exchange_id": "c91cfc35-2a6d-4460-bd21-3576e0d11a89",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "821d114e-1310-432c-97db-445155ab1937",
+      "children": [
+        "7761b7e9-9110-493d-a3b4-7445cad765dc"
+      ]
+    },
+    "7761b7e9-9110-493d-a3b4-7445cad765dc": {
+      "id": "7761b7e9-9110-493d-a3b4-7445cad765dc",
+      "message": {
+        "id": "7761b7e9-9110-493d-a3b4-7445cad765dc",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775807552.936,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "claude code如果安装了很多skill的话，但不使用会浪费token吗"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "dfd1f1e8-479c-4a86-9ffe-5f2e6567dcc2",
+          "message_source": null,
+          "turn_exchange_id": "c91cfc35-2a6d-4460-bd21-3576e0d11a89",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0d1634b4-981d-478f-b64e-e5afaa9edecc",
+      "children": [
+        "db2e90fc-b15c-4d27-922b-a1899ead7b71"
+      ]
+    },
+    "db2e90fc-b15c-4d27-922b-a1899ead7b71": {
+      "id": "db2e90fc-b15c-4d27-922b-a1899ead7b71",
+      "message": {
+        "id": "db2e90fc-b15c-4d27-922b-a1899ead7b71",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775807556.2315576,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "dfd1f1e8-479c-4a86-9ffe-5f2e6567dcc2",
+          "message_type": "next",
+          "turn_exchange_id": "c91cfc35-2a6d-4460-bd21-3576e0d11a89",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "7761b7e9-9110-493d-a3b4-7445cad765dc",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "7761b7e9-9110-493d-a3b4-7445cad765dc",
+      "children": [
+        "325d0355-6018-45b2-b1e6-8bf1fe72a99e"
+      ]
+    },
+    "325d0355-6018-45b2-b1e6-8bf1fe72a99e": {
+      "id": "325d0355-6018-45b2-b1e6-8bf1fe72a99e",
+      "message": {
+        "id": "325d0355-6018-45b2-b1e6-8bf1fe72a99e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775807556.231306,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "结论先说清楚：**“安装很多 skill 但不使用”，通常不会直接消耗 token**。真正决定 token 消耗的是**运行时是否被加载/触发/注入上下文**。\n\n但这里有几个关键细节，容易被误解，我拆开讲。\n\n---\n\n## 1. Skill “安装”本身不消耗 token\n无论是 Claude Code 还是类似 MCP/skills 体系：\n\n- skill 只是**本地配置 / 文件 / 注册表**\n- 不执行、不读取 → **不会产生任何 API token 消耗**\n\n所以：\n> 装 100 个 skill ≠ 自动耗 token\n\n---\n\n## 2. 什么时候会“间接耗 token”\n真正可能增加 token 消耗的是下面三种情况：\n\n### A. 启动时自动加载 skill 内容\n如果系统设计是：\n- 启动 Claude Code 时\n- 把所有 skill description / schema / prompt\n- 一次性塞进 context\n\n那么：\n\n👉 skill 越多 → **system prompt 越长 → 每次请求 token 增加**\n\n但注意：\n- 这是“一次性上下文成本”\n- 不是持续消耗\n\n---\n\n### B. MCP / skill registry 被注入上下文\n有些实现会：\n\n- 把所有 tool / skill 列表注入模型\n- 或动态生成 tool schema\n\n这会导致：\n\n👉 tool 数量越多 → **每次 request token baseline 更高**\n\n---\n\n### C. skill 被候选召回（tool selection）\n更高级的 agent 框架可能会：\n\n- 每次推理前把“可用 skills”一起放进 prompt\n- 让模型决定用哪个\n\n这时：\n\n👉 skill 越多 → prompt 越长 → token 上升\n\n---\n\n## 3. 不使用 skill ≠ 不影响 token（关键点）\n你要区分两个概念：\n\n| 行为 | 是否消耗 token |\n|------|------|\n| skill 安装 | ❌ 不消耗 |\n| skill 未加载 | ❌ 不消耗 |\n| skill 列表被注入 prompt | ⚠️ 消耗（固定开销） |\n| skill 被调用 | ✅ 消耗（额外 tool call + output） |\n\n---\n\n## 4. 实际工程结论（非常重要）\n在 Claude Code / MCP 实践里通常是：\n\n### ✔ 小规模 skill（<20）\n- 基本无影响\n- 可以全部常驻\n\n### ⚠ 中规模（20–100）\n- 可能增加 system prompt token\n- 但通常仍可接受\n\n### ❌ 大规模（100+）\n如果设计不好：\n- tool/schema injection 会明显拖 token\n- 甚至影响 reasoning quality（注意力稀释）\n\n---\n\n## 5. 优化建议（更工程化）\n如果你担心 token 或性能：\n\n### 方案 1：lazy loading skills（推荐）\n- 只注册 metadata\n- 真正 schema 按需加载\n\n### 方案 2：skill grouping\n例如：\n\n```\nmedical_skills/\ndevops_skills/\nresearch_skills/\n```\n\n按 session 或任务加载\n\n### 方案 3：tool router（类似 MCP gateway）\n- 先让 router 决定 skill 子集\n- 再注入模型\n\n---\n\n## 6. 一句话总结\n> **skill 不用不会耗 token，但“被加载进 prompt 的 skill 描述”会消耗 token，规模越大影响越明显。**\n\n---\n\n如果你愿意，可以把你现在的 skill 架构贴一下，我可以帮你判断：  \n- 当前是否“隐性 token 泄漏”  \n- 是否适合做 MCP gateway / skill router 优化"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "code_blocks": {
+            "0": {
+              "id": "j7tyt2",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "search_result_groups": [],
+          "request_id": "dfd1f1e8-479c-4a86-9ffe-5f2e6567dcc2",
+          "message_type": "next",
+          "turn_exchange_id": "c91cfc35-2a6d-4460-bd21-3576e0d11a89",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "db2e90fc-b15c-4d27-922b-a1899ead7b71",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "db2e90fc-b15c-4d27-922b-a1899ead7b71",
+      "children": []
+    }
+  },
+  "current_node": "325d0355-6018-45b2-b1e6-8bf1fe72a99e"
+}

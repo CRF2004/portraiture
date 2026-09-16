@@ -1,0 +1,437 @@
+{
+  "title": "AI在生物医学中的应用",
+  "create_time": 1777638708.508386,
+  "update_time": 1777638766.951657,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "69f49ce5-c204-8322-9923-df564ba9a4c3",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://github.com/m42-health/healthbench",
+    "https://physionet.org/content/ptb-xl-plus/1.0.1/",
+    "physionet.org"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "b4cdeee4-0ef7-4d68-b1cf-ea8ad4a0bbf4"
+      ]
+    },
+    "b4cdeee4-0ef7-4d68-b1cf-ea8ad4a0bbf4": {
+      "id": "b4cdeee4-0ef7-4d68-b1cf-ea8ad4a0bbf4",
+      "message": {
+        "id": "b4cdeee4-0ef7-4d68-b1cf-ea8ad4a0bbf4",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "5c7b3c6e-4fd9-45b3-a512-5e4818dbd4f9"
+      ]
+    },
+    "5c7b3c6e-4fd9-45b3-a512-5e4818dbd4f9": {
+      "id": "5c7b3c6e-4fd9-45b3-a512-5e4818dbd4f9",
+      "message": {
+        "id": "5c7b3c6e-4fd9-45b3-a512-5e4818dbd4f9",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b4cdeee4-0ef7-4d68-b1cf-ea8ad4a0bbf4",
+      "children": [
+        "57cd189b-4652-4b11-9230-471fa17f32e0"
+      ]
+    },
+    "57cd189b-4652-4b11-9230-471fa17f32e0": {
+      "id": "57cd189b-4652-4b11-9230-471fa17f32e0",
+      "message": {
+        "id": "57cd189b-4652-4b11-9230-471fa17f32e0",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "5c7b3c6e-4fd9-45b3-a512-5e4818dbd4f9",
+      "children": [
+        "01fcda72-ff26-49c8-88f1-de34932bb1b2"
+      ]
+    },
+    "01fcda72-ff26-49c8-88f1-de34932bb1b2": {
+      "id": "01fcda72-ff26-49c8-88f1-de34932bb1b2",
+      "message": {
+        "id": "01fcda72-ff26-49c8-88f1-de34932bb1b2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1777638706.284664,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "63b0ffe1-5475-408f-8647-2aa776171ab8",
+          "message_source": null,
+          "turn_exchange_id": "df224483-fb16-4ea2-9d74-369a033b5e9a",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "57cd189b-4652-4b11-9230-471fa17f32e0",
+      "children": [
+        "585c50ef-edb5-4fd1-ab4a-678fa4dfc1a4"
+      ]
+    },
+    "585c50ef-edb5-4fd1-ab4a-678fa4dfc1a4": {
+      "id": "585c50ef-edb5-4fd1-ab4a-678fa4dfc1a4",
+      "message": {
+        "id": "585c50ef-edb5-4fd1-ab4a-678fa4dfc1a4",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1777638705.323,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "# 角色\n你是一名资深的医学与人工智能领域审稿专家，熟悉Journal of Biomedical and Health Informatics 的学术标准与评审流程。你曾在人工智能医学交叉领域发表或评审多篇高质量论文，熟悉科研论文的学术规范、逻辑结构、创新性与方法学严谨性要求。\n\n# 审稿任务\n请你严格、系统地对以下论文进行审稿，论文主题为“人工智能（尤其是大语言模型，LLM）与生物医学的结合”。你的目标是从多个角度提供专业、学术化的审稿意见，帮助作者改进论文质量，以达到北大核心期刊的发表标准。\n\n# 审稿维度\n请从以下方面系统性地进行审阅与评估：\n1. 整体评价与科学价值  \n   - 论文选题的创新性与前沿性是否突出？  \n   - 是否具有明确的科研意义和社会/医学价值？  \n\n2. 内容质量与逻辑性  \n   - 研究问题是否明确，论证是否严谨？  \n   - 文章结构是否清晰（摘要、引言、方法、结果、讨论、结论）？  \n   - 逻辑链是否顺畅、论点是否有数据支撑？  \n\n3. 方法与实验设计  \n   - 模型、算法、数据来源与实验设计是否合理？  \n   - 是否具备可重复性与科学性？  \n   - 方法是否符合伦理及科研规范？  \n\n4. 结果与讨论部分  \n   - 结果展示是否清晰、完整？  \n   - 图表、数据分析是否规范（如均值±SD、显著性标注等）？  \n   - 讨论是否结合最新文献，是否能合理解释结果？  \n   - 是否分析了研究局限与未来改进方向？  \n\n5. 语言与格式规范  \n   - 是否符合北大核心学术期刊写作规范？  \n   - 英文摘要、关键词、图表说明是否准确？  \n   - 是否存在语法、术语不一致或引用不规范的问题？  \n\n6. 总体建议（必须输出）  \n   请用以下分类之一总结你的总体结论：  \n   ✅ 接受（Accept）：内容完整，质量高，可直接发表。  \n   🟡 小修后接收（Minor Revision）：结构合理但需少量修改。  \n   🟠 大修后重审（Major Revision）：存在逻辑或方法学问题，需大幅修改。 \n   🔴 拒稿（Reject）：存在严重缺陷或学术质量不达标。  \n\n# 输出格式\n请严格按照以下结构输出审稿意见：\n一、总体评价  \n（简要评价论文选题意义、创新性与整体质量）\n\n二、主要优点  \n（列出论文在理论、方法或应用方面的亮点）\n\n三、存在问题与修改建议  \n（从逻辑、方法、实验、数据、讨论、语言规范等角度逐条指出）\n\n四、编辑建议  \n（给出你的总体判断：接受/小修/大修/拒稿，并简述理由）\n\n# 输出要求\n- 语气：专业、学术、客观  \n- 格式：条理清晰，分点列述  \n- 内容：针对性强、可操作性高  \n- 若发现重大逻辑或伦理问题，请明确指出并说明原因。\n\n# 输入内容\n论文全文如下（或节选）：\n\"\"\"\n{在此粘贴论文正文或摘要}\n\"\"\""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "attachments": [
+            {
+              "id": "file_0000000001087208892c91ecf7c4ffdb",
+              "size": 363316,
+              "name": "main.pdf",
+              "file_token_size": 33023,
+              "source": "local",
+              "is_big_paste": false
+            }
+          ],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "63b0ffe1-5475-408f-8647-2aa776171ab8",
+          "message_source": null,
+          "turn_exchange_id": "df224483-fb16-4ea2-9d74-369a033b5e9a",
+          "resolved_model_slug": "gpt-5-3",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "01fcda72-ff26-49c8-88f1-de34932bb1b2",
+      "children": [
+        "7f9197c1-5d9d-4a98-a849-b148c3626e9a"
+      ]
+    },
+    "7f9197c1-5d9d-4a98-a849-b148c3626e9a": {
+      "id": "7f9197c1-5d9d-4a98-a849-b148c3626e9a",
+      "message": {
+        "id": "7f9197c1-5d9d-4a98-a849-b148c3626e9a",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1777638706.6025357,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_browsing_display",
+          "result": "",
+          "summary": "",
+          "assets": null,
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "command": "spinner",
+          "status": "running",
+          "request_id": "63b0ffe1-5475-408f-8647-2aa776171ab8",
+          "message_type": "next",
+          "turn_exchange_id": "df224483-fb16-4ea2-9d74-369a033b5e9a",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "585c50ef-edb5-4fd1-ab4a-678fa4dfc1a4",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "585c50ef-edb5-4fd1-ab4a-678fa4dfc1a4",
+      "children": [
+        "1530e2d3-85e2-4aa6-9c6b-ca73901e16ed"
+      ]
+    },
+    "1530e2d3-85e2-4aa6-9c6b-ca73901e16ed": {
+      "id": "1530e2d3-85e2-4aa6-9c6b-ca73901e16ed",
+      "message": {
+        "id": "1530e2d3-85e2-4aa6-9c6b-ca73901e16ed",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1777638708.3619933,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_0000000001087208892c91ecf7c4ffdb",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 1\n\n1\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 2\n\nFrom Clinical Features to Raw Signals in 12-Lead\nECG: A Patient-Level Benchmark with External\n\nValidation and Targeted Perturbation Analysis\nAnonymous\n\nAbstract—Background: Large-scale ECG classification models\nrequire robust patient-level validation to assess generalizability.\nHowever, different model classes may extract different informa-\ntion pathways for the same cardiac condition, and whether deep\nlearning exploits clinically meaningful signal segments remains\nunderexplored.\n\nMethods: We conducted patient-level held-out validation on\nCODE-15% (345,797 samples, 233,771 patients) for 5 cardiac\nconditions: 1st-degree AV block (1AVB), complete right/left\nbundle branch blocks (CRBBB/CLBBB), sinus bradycardia\n(SBRAD), and atrial fibrillation (AFIB). We compared three\napproaches: (1) XGBoost with simple summary features—rhythm\nstatistics (RR intervals, HRV, 14D) and crude amplitude statistics\n(per-lead mean/std/min/max, 84D); (2) XGBoost with Clinical-\nMVP features adding AV conduction timing (PR interval, QRS\nduration, QRS axis, R/S ratio) and signal quality metrics (110D\ntotal); and (3) 1D ResNet on raw 12-lead signals. Patient-level\nsplitting (60/20/20) prevented data leakage. To investigate model\nreliance on specific signal segments, we performed three per-\nturbation experiments with matched controls: PR-window occlu-\nsion (160ms) targeting 1AVB, QRS-complex occlusion targeting\nBBB, and RR-interval regularization targeting AFIB. Statistical\nrobustness was assessed via multi-seed training, bootstrap CIs\n(n = 1000), and Holm-Bonferroni corrected pairwise model\ncomparisons. Cross-dataset feature validation was performed\nby training XGBoost on PTB-XL+ 12SL features (783D) using\nofficial patient-level folds.\n\nResults: Feature ablation revealed that information path-\nway importance depends on model class: rhythm features\n(14D) excelled at SBRAD/AFIB, amplitude features (84D) ex-\ncelled at BBB, but 1AVB detection remained weak (F1=0.0808,\nAUROC=0.682) due to missing PR-interval timing. Clinical-\nMVP features (110D) substantially improved 1AVB (F1=0.447,\nAUROC=0.961) and overall Micro-F1 to 0.654 (+27.7% vs simple\nfeatures). 1D ResNet achieved Micro-F1=0.736±0.003, outper-\nforming both feature-based approaches; SE-ResNet (channel\nattention) yielded no detectable improvement (Micro-F1=0.736,\n∆ =+0.0002, all per-disease ∆F1 within multi-seed variance).\nA lightweight 1D transformer (1.4M parameters, identical conv\nstem and data splits) underperformed ResNet substantially\n(Micro-F1=0.605, ∆ = −0.131), indicating that ResNet’s con-\nvolutional inductive bias is better suited for ECG signals than\npatch-based self-attention at comparable parameter counts. Per-\nturbation experiments provided evidence consistent with disease-\nspecific model reliance: PR-window occlusion degraded 1AVB\nAUROC from 0.985 to 0.760 (∆ = −0.225) with anatomical\nspecificity (ST control: ∆ = −0.005); QRS occlusion degraded\nCRBBB AUROC from 0.991 to 0.494 (∆ = −0.497) and\nCLBBB from 0.991 to 0.645 (∆ = −0.346); RR regularization\nshowed an inconclusive effect on AFIB (AUROC 0.980→0.973,\n∆ = −0.007, indistinguishable from beat-permutation control\n∆ = −0.008). Cross-dataset PTB-XL+ XGBoost (783D) achieved\n\nManuscript submitted for blind review to IEEE Journal of Biomedical and\nHealth Informatics.\n\nMicro-F1=0.777. Frozen-model external validation of CODE-\ntrained ResNet on PTB-XL raw signals was performed using a\n3-tier framework: the primary endpoint—strict frozen transfer\nwith no target-domain tuning—achieved Micro-F1=0.571 (AU-\nROC preserved: 1AVB=0.937, CRBBB=0.995, CLBBB=0.995,\nSBRAD=0.950, AFIB=0.972). Threshold recalibration on fold\n9 (calibrated tier, Micro-F1=0.681 [0.651, 0.711]) recovered\nsubstantial performance, while the best-possible tier (oracle\nthresholds, Micro-F1=0.694) established the upper bound. The\nstrict-frozen-to-calibrated gap reflects threshold miscalibration,\nnot model degradation (AUROC identical across tiers). CLBBB\ntransferred near-perfectly (∆F1= −0.010) while 1AVB showed\nthe largest domain gap (∆F1= −0.124). PR>200ms rule\nbaseline using NeuroKit2 ECG delineation (AUROC=0.783,\nsensitivity=0.873) showed that PR prolongation is highly sensitive\nfor 1AVB, while ResNet (AUROC=0.937, ∆ = +0.154, DeLong\np < 10−6) provides additional discriminative information beyond\nPR interval alone. Residual label circularity cannot be defini-\ntively excluded without physician adjudication of CODE labels.\nBootstrap CIs and DeLong tests provided statistical evidence for\nResNet superiority across all diseases.\n\nConclusions: Information pathways in ECG classification\nare model-dependent: different model classes extract differ-\nent clinically meaningful signal channels from the same task.\nRhythm features suffice for rhythm disorders in XGBoost, but\nResNet captures AFIB through atrial activity (P/f-wave region)\nrather than RR irregularity alone (atrial inpainting ∆AUROC=\n−0.112 on PTB-XL, −0.142 on CODE; p = 0.0002 for both\ndatasets vs ST control). Clinical-MVP features incorporating\ntiming measurements closed > 50% of the ResNet perfor-\nmance gap for 1AVB. Two perturbation pathways showed large,\nanatomically specific effects: PR timing→1AVB (∆AUROC=\n−0.225) and QRS morphology→BBB (∆AUROC= −0.497/-\n0.346), whileRR→AFIB was inconclusive (∆ = −0.007). Frozen-\nmodel external validation on PTB-XL raw signals preserved\nAUROC> 0.93 across all diseases on human-validated labels\n(strict frozen Micro-F1=0.571; calibrated=0.681). The transfer\ngap pattern was consistent with the perturbation hierarchy,\nsuggesting an observational association between identified path-\nways and generalization. These findings provide a perturbation-\nsupported, externally-tested framework linking deep learning\nbehavior to clinically interpretable signal segments, with pathway\nalignment rather than model size explaining performance and\ntransfer behavior.\n\nIndex Terms—ECG classification, patient-level validation, deep\nlearning, feature engineering, perturbation analysis, cross-dataset\nvalidation, occlusion analysis\n\nI. INTRODUCTION\n\nA. Background\n\nElectrocardiogram (ECG) classification using machine\nlearning has shown promise for automated cardiac diagnosis\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 3\n\n[1]–[3]. However, most studies focus on internal validation or\nsmall held-out cohorts, limiting generalizability assessment.\nFurthermore, different cardiac conditions require different in-\nformation pathways: rhythm disorders depend on RR-interval\npatterns, conduction blocks require morphology analysis, and\natrioventricular blocks need precise PR-interval measurement.\nWhether deep learning models rely on these clinically mean-\ningful signal segments or exploit spurious correlations remains\nan open question.\n\nB. Related Work\n\nLarge-scale ECG datasets: PTB-XL [4] (21k samples)\nand CODE-15% [5] (345k samples) enabled large-scale val-\nidation studies. Ribeiro et al. [1] achieved cardiologist-level\nperformance on CODE using 1D ResNet-based architecture.\nHowever, these studies focused on aggregate performance\nwithout investigating disease-specific feature requirements or\nvalidating learned mechanisms.\n\nHandcrafted ECG features: PTB-XL+ [6] introduced 166\nhandcrafted features including morphology, rhythm, and tim-\ning measurements (QRS duration, PR interval, QT interval,\naxis, fiducial points). While comprehensive, the feature set re-\nquires complex fiducial point detection (P/QRS/T onset/offset),\nwhich can be fragile on noisy signals. Our work systemat-\nically compares simple summary features against clinically-\ninformed features incorporating AV conduction timing, iden-\ntifying which information pathways are essential for each\ncondition.\n\nDeep learning for ECG: Recent work [1], [2], [7] demon-\nstrated that end-to-end deep learning on raw signals achieves\nstrong performance. However, the mechanisms by which deep\nlearning succeeds where handcrafted features fail remain un-\nderexplored. Our work bridges this gap through both feature\nengineering (adding timing features to close the gap) and\nperturbation-based analysis (PR-window occlusion to inves-\ntigate learned mechanisms).\n\nPatient-level validation: Most ECG classification studies\nreport internal validation or small held-out cohorts. Our work\nprovides rigorous patient-level held-out validation on 345k\nsamples, with detailed failure-mode analysis, perturbation-\nbased interpretability experiments, and multi-seed statistical\nrobustness assessment.\n\nC. Motivation\n\nThe CODE-15% dataset [5] provides a large-scale Brazil-\nian ECG cohort (345,797 samples) for patient-level held-\nout validation. Unlike prior work focusing solely on model\nperformance, we investigate why certain conditions fail with\nspecific feature sets, whether adding clinically-informed fea-\ntures closes the gap, and whether deep learning relies on\nclinically meaningful signal segments, providing interpretable\ninsights into ECG classification.\n\nD. Contributions\n\n1) Model-dependent information pathways: Provided ev-\nidence through ablation studies that different model\n\nclasses extract different clinically meaningful signal\nchannels from the same ECG task—pathway alignment,\nnot model size alone, explains performance differences.\n\n2) Failure-mode analysis: Quantified why 1AVB detection\nfails with simple features (missing PR-interval timing)\nthrough detailed score distribution and clinical mecha-\nnism analysis.\n\n3) Clinical-MVP baseline: Showed that adding AV con-\nduction timing features (PR interval, QRS duration, QRS\naxis) closes > 50% of the 1AVB performance gap,\nsupporting the timing information hypothesis.\n\n4) Multi-pathway perturbation evidence: Three perturba-\ntion experiments with matched controls provide evidence\nconsistent with ResNet relying on clinically meaningful\nsignal segments: strong effects for PR timing→1AVB\n(AUROC 0.985→0.760, ∆ = −0.225) and QRS\nmorphology→BBB (CRBBB AUROC 0.991→0.494,\n∆ = −0.497; CLBBB 0.991→0.645, ∆ = −0.346),\nand an inconclusive effect for RR irregularity→AFIB\n(AUROC 0.980→0.973, ∆ = −0.007, indistinguishable\nfrom beat-permutation control ∆ = −0.008).\n\n5) Frozen-model external validation with 3-tier frame-\nwork: CODE-trained ResNet transferred to PTB-XL\nraw signals in three tiers. Primary endpoint—strict\nfrozen (CODE thresholds, no target-domain tuning,\nMicro-F1=0.571)—provides evidence for model-level\ngeneralization with preserved AUROC (all > 0.93)\non human-validated labels. Calibrated transfer (fold-\n9 thresholds, Micro-F1=0.681) shows performance re-\ncovery via standard recalibration, and best possible\n(oracle, Micro-F1=0.694) establishes the upper bound.\nPR>200ms rule baseline via NeuroKit2 delineation\n(AUROC=0.783, sensitivity=0.873) identifies PR pro-\nlongation while ResNet (AUROC=0.937, ∆ = +0.154)\ncaptures additional discriminative information.\n\n6) Statistical rigor: Multi-seed training (3 seeds ×\n2 patient splits) showed training stability (Micro-F1\nSD=0.0025), with bootstrap CIs (n = 1, 000) and De-\nLong tests providing complementary statistical evidence\nfor model comparisons.\n\n7) Handcrafted vs deep learning comparison: Direct\ncomparison on identical patient-level splits across three\nfeature regimes (simple, clinical, raw signal).\n\nII. METHODS\n\nA. Dataset\n\nCODE-15%: Brazilian ECG dataset with 345,797 12-lead\nrecordings (400Hz, 10-second duration) from 233,771 patients.\nTarget conditions: 1AVB (1.65%), CRBBB (2.80%), CLBBB\n(1.74%), SBRAD (1.62%), AFIB (2.03%).\n\nLabel source: Labels were derived from the CODE\ndataset’s automated ECG interpretation system, which assigns\ndiagnostic codes based on algorithmic analysis of ECG fea-\ntures. These labels represent the automated diagnostic output\nrather than physician-confirmed diagnoses. Multi-label classi-\nfication is supported: among the 5 evaluated conditions, 93.8%\nof samples have zero positive labels, 5.2% have exactly one,\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 4\n\nand 1.0% have two or more. The most common co-occurrence\nis CRBBB+1AVB (0.33% of samples). One-vs-rest evaluation\ntreats each disease independently; micro-F1 pools all per-\nsample predictions equally while macro-F1 averages per-\ndisease F1 scores.\n\nPatient-level split: 60% train (207,232 samples), 20% vali-\ndation (69,045 samples), 20% test (69,520 samples). Random\nseed 42 for reproducibility. Patient-level splitting ensures no\npatient appears in multiple splits, preventing data leakage from\npatient-specific patterns.\n\nB. Approach 1: XGBoost + Simple Summary Features (98D)\n\nFeature extraction (98 dimensions):\n• Rhythm features (14): RR intervals\n\n(Mean/Std/Min/Max/Median/Range), HR (Mean/Std),\nHRV (RMSSD/SDNN/pNN50/CV), RR Irregularity,\nQRS Count\n\n• Amplitude features (84): Per-lead statistics\n(Mean/Std/Min/Max/Range/RMS/PeakToPeak) for\n12 leads\n\nNote on feature limitations: These features are intention-\nally simple summary statistics. They do NOT include com-\nprehensive clinical ECG measurements such as QRS duration,\nPR interval, QT interval, QRS axis, P-wave duration, T-wave\nmorphology, or fiducial point timing (P/QRS/T onset/offset).\nComprehensive feature sets like PTB-XL+ [6] include 166\nsuch measurements but require complex fiducial detection. Our\ngoal is to identify limitations of simple features to motivate\nboth clinical feature engineering and deep learning approaches.\n\nModel: XGBoost with one-vs-rest strategy per disease.\nHyperparameters (nestimators = 100, max depth = 8,\nlearning rate = 0.1) were selected via 5-fold cross-\nvalidation on the training set, searching over max depth ∈\n{4, 6, 8, 10} and learning rate ∈ {0.01, 0.05, 0.1, 0.2}, with\nnestimators determined by early stopping (patience=10 on val-\nidation log-loss). scale pos weight was set inversely pro-\nportional to class prevalence for class balancing. The same\nhyperparameter search protocol was applied to all feature sets\n(rhythm-only, amplitude-only, combined, clinical-MVP).\n\nThreshold tuning: Per-label optimal thresholds were se-\nlected on the validation set by maximizing F1 score. The\nsame protocol was applied identically to all methods: for each\ndisease, we swept 50 candidate thresholds uniformly spaced\nbetween 0.01 and 0.99 on the validation set and selected the\nthreshold that maximized per-disease F1. The tuned thresholds\nwere then applied to the test set.\n\nC. Approach 2: XGBoost + Clinical-MVP Features (110D)\n\nTo test whether adding AV conduction timing features\ncloses the 1AVB detection gap, we designed a Clinical-MVP\n(Clinically Meaningful Vital Parameters) feature set organized\ninto four physiological blocks:\n\nBlock 1—Rhythm & Rate (11 features): Heart rate\n(mean, std, min, max), RR interval statistics (mean, std, min,\nmax, median, range), and RR variability (RMSSD, SDNN,\nCV, pNN50, RR irregularity index). Computed from R-peak\npositions detected via NeuroKit2’s Elgendi algorithm [8].\n\nBlock 2—AV Conduction Timing (12 features): PR in-\nterval (mean, std, min, max, median), PR segment duration,\nand P-wave duration metrics. P-waves were detected as the\nmaximum amplitude point in an 80–200ms window preceding\neach R-peak (Lead II), with PR interval computed as the\ntemporal distance from P-wave peak to subsequent R-peak\n[9]. Physiological constraints (PR ∈ [80, 400]ms, P-wave\n∈ [60, 140]ms) were applied to filter implausible detections.\n\nBlock 3—QRS Morphology & Conduction (8 features):\nQRS duration (mean, std, min, max) estimated from gradient\nzero-crossings around R-peaks; QRS frontal axis computed\nfrom net deflection in leads I and aVF [10]; R/S amplitude\nratio per lead (mean, std); and terminal S-wave amplitude.\n\nBlock 4—Signal Quality (4 features): Baseline wander\nindex (low-frequency power ratio), signal-to-noise ratio, lead\ndropout count, and electrode contact quality score computed\nfrom the coefficient of variation across leads.\n\nAdditionally, per-lead amplitude statistics (72 features:\nmean, std, min, max, range, RMS for 12 leads) were included,\nmatching the amplitude block from the simple feature set.\nTotal: 35 clinical features + 72 amplitude features + 3\nmetadata features = 110 dimensions.\n\nImplementation: Feature extraction used NeuroKit2 [8]\nexclusively for R-peak detection (fast, ∼2ms/sample), with\ncustom SciPy signal processing for P-wave detection, QRS\nduration estimation, QRS axis computation, and R/S ratio cal-\nculation. This hybrid approach achieved ∼50 samples/second\nextraction speed, processing all 345,797 samples in approxi-\nmately 2 hours.\n\nD. Approach 3: 1D ResNet on Raw Signals\n\nArchitecture:\n• Input: Raw 12-lead ECG (12 × 4096), z-score normal-\n\nized per lead\n• Preprocessing: Original signals (4000 samples at 400Hz,\n\n10s duration) were resampled to 4096 samples via linear\ninterpolation, extending the temporal window to 10.24s.\nThis preserves the full 10s recording while providing a\npower-of-two input length compatible with 4× downsam-\npling stages.\n\n• Backbone: 4 ResNet stages with residual blocks:\n– Stage 1: 2 blocks, 64 channels, kernel=7, stride=2\n– Stage 2: 2 blocks, 128 channels, kernel=7, stride=2\n– Stage 3: 2 blocks, 256 channels, kernel=7, stride=2\n– Stage 4: 2 blocks, 512 channels, kernel=7, stride=2\n\n• Residual block: Conv1D → BatchNorm → ReLU →\nConv1D → BatchNorm → skip connection → ReLU\n\n• Pooling: AdaptiveAvgPool1D(1) → flatten to 512-dim\nvector\n\n• Classifier: Dropout(0.2) → Linear(512 → 5) → Sigmoid\n• Loss: BCEWithLogitsLoss with per-class weights (in-\n\nverse prevalence)\n• Parameters: 1.2M trainable parameters\n• Complexity: 0.8 GFLOPs per sample\nTraining: Adam optimizer (lr=0.001), ReduceLROn-\n\nPlateau scheduler (factor=0.5, patience=5), early stopping\n(patience=10 on validation loss), batch size 64, trained for\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 5\n\nup to 50 epochs (early stopping typically triggered at epoch\n23–28). Training time: 2.5 hours on A100 GPU (single run).\n\nMulti-seed training: To assess statistical robustness, we\ntrained 4 independent ResNet runs: 3 with different model\ninitialization seeds (42, 123, 456) on the primary patient\nsplit (seed=42), and 1 on a second independent patient split\n(seed=123) with model seed 42. All other hyperparameters\nwere identical. This enables estimation of both within-split\nvariance (model seed sensitivity) and cross-split generalization\n(patient split sensitivity).\n\nCompetitive DL baseline—SE-ResNet: To address\nwhether modern architectural enhancements provide additional\nbenefit, we trained an SE-ResNet-1D (Squeeze-and-Excitation\nResNet) with identical architecture, hyperparameters,\nand data splits as the baseline ResNet. SE blocks\nadd channel-wise attention after each residual block:\nAdaptiveAvgPool1d → Linear(C, C//16) →\nReLU → Linear(C//16, C) → Sigmoid →\nchannel-wise multiply, introducing 87K additional\nparameters (1.3M total). The SE reduction ratio was set to 16\nfollowing standard practice [7]. Training converged at epoch\n10 (early stopping, best val Micro-F1=0.7410).\n\nCompetitive DL baseline—Lightweight 1D Transformer:\nTo test whether a patch-based self-attention architecture pro-\nvides advantages over the convolutional ResNet for ECG sig-\nnals, we trained a lightweight 1D transformer with an identical\nconv stem (Conv1d(12→64, k=15, s=2) → BN → ReLU →\nMaxPool(k=3, s=2)), producing 64-channel × 1024-length\nfeatures. A patch embedding layer (Conv1d(64→160, k=16,\ns=16)) partitioned features into 64 patches of dimension\n160. A learnable CLS token was prepended, and learnable\n1D position embeddings were added. A 4-layer Transformer\nencoder (d=160, heads=8, MLP ratio=4, gelu activation, pre-\nnorm, dropout=0.1) processed the sequence, and the CLS\ntoken output was fed to a linear classifier (160→5). Total\nparameters: 1,424,293 (comparable to ResNet’s 1.2M). Train-\ning used the identical protocol as ResNet: Adam (lr=0.001),\nReduceLROnPlateau (factor=0.5, patience=3), early stopping\n(patience=10 on validation loss), batch size 128. Training\ncompleted 50 epochs (val Micro-F1=0.6168, no early stop\ntriggered).\n\nThreshold tuning: Same validation-based approach as XG-\nBoost.\n\nE. PR-Window Occlusion Experiment\n\nTo test whether ResNet relies on PR-segment information\nfor 1AVB detection, we performed a counterfactual occlusion\nexperiment:\n\nHypothesis: If ResNet uses PR-segment timing for 1AVB\nclassification, occluding the PR segment should cause a larger\ndegradation in 1AVB prediction probability than occluding a\ncontrol region of equal length.\n\nSample selection: All 1AVB-positive samples from the\ntest set (n = 1, 084) plus an equal number of matched\n1AVB-negative controls (n = 1, 084), totaling 2,168 samples.\nSamples with fewer than 3 detectable R-peaks were excluded\n(54 samples, 2.5%).\n\nOcclusion conditions (within-subject design):\n1) PR-window occlusion: For each heartbeat, a 160ms\n\nwindow centered at (R peak − 120ms) was set to zero,\ntargeting the PR segment including the P-wave and PR\ninterval\n\n2) ST-segment occlusion (anatomical control): A 160ms\nwindow centered at (R peak + 80ms) was set to zero,\ntargeting the ST segment which should be irrelevant for\n1AVB detection\n\n3) Random-window occlusion (spatial control): A ran-\ndom 160ms window (excluding QRS) was set to zero\n\n4) Clean (baseline): Original unmodified signal\nMeasurement: For each condition, we computed the\n\nResNet-predicted 1AVB probability for every sample. The\nprimary metric was the paired probability change (∆prob)\non 1AVB-positive samples: ∆prob = p(1AVB | clean) −\np(1AVB | occluded). Positive ∆prob indicates the model\nreduced its 1AVB confidence when that segment was occluded.\n\nBootstrap CI: 95% confidence intervals on paired effects\nwere computed via patient-level bootstrap (n = 1, 000 itera-\ntions).\n\nF. Extended Perturbation Experiments\n\nTo validate additional disease-specific pathways beyond\nPR-segment/1AVB, we performed two additional perturbation\nexperiments:\n\nQRS occlusion → BBB (CRBBB + CLBBB): For BBB-\npositive samples (n = 3, 184) and matched negative controls\n(n = 3, 184), a 160ms window centered at each R-peak\nwas zero-masked across all 12 leads. The QRS complex\nis clinically diagnostic for BBB (widened QRS > 120ms,\ncharacteristic rSR′ pattern). Two anatomical controls followed\nthe same protocol: ST-segment occlusion (160ms at R peak\n+ 40ms) and random-window occlusion (160ms excluding\nQRS). The same R-peak detection, matched-subset protocol,\nand patient-level paired bootstrap (n = 1, 000) were used as\nin the PR occlusion experiment.\n\nRR regularization → AFIB: For AFIB-positive samples\n(n = 1, 256) and matched negative controls (n = 1, 256),\neach heartbeat (bounded by midpoints between consecutive\nR-peaks) was time-warped to the median RR interval length,\npreserving per-beat QRS morphology while destroying RR-\ninterval irregularity. Beat-order permutation served as a func-\ntional control: beats were randomly permuted, preserving the\nset of RR intervals but destroying their temporal order. If\nResNet relies on RR irregularity for AFIB detection, RR\nregularization should cause greater degradation than beat per-\nmutation.\n\nG. Statistical Comparisons\n\nModel comparison: Pairwise model comparisons (ResNet\nvs XGBoost Simple, ResNet vs XGBoost Clinical-MVP, XG-\nBoost Clinical-MVP vs Simple) were performed per disease\non the shared test set (n = 69, 203). For AUROC, we used\nthe DeLong test [11] for paired comparisons on identical\ntest samples. For F1, we used vectorized paired permutation\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 6\n\ntests with 5,000 resamples: swap masks were generated si-\nmultaneously for all permutations, predictions were swapped\nbetween models per sample, and per-disease F1 differences\nwere recomputed without Python-level loops over permuta-\ntions. Two-sided p-values were computed as the proportion of\n|permuted ∆F1| ≥ |observed ∆F1|. Holm-Bonferroni correc-\ntion for this family of 18 comparisons (3 model pairs × 5\ndiseases + 3 macro-F1) was applied.\n\nCross-dataset validation: XGBoost models (nestimators =\n100, max depth = 8, learning rate = 0.1) were trained\non PTB-XL+ 12SL features (783D) using official PTB-XL\npatient-level folds (1–8 train, 9 validation for threshold tuning,\n10 test). Labels were mapped from SCP-ECG codes to the\n5 target diseases using strict primary diagnostic codes only.\nPTB-XL fold 10 (n = 2, 198) is fully human-validated; folds\n1–9 contain automated labels.\n\nH. Frozen-Model External Validation\n\nTo assess model-level generalization, the CODE-trained 1D\nResNet was applied without fine-tuning to PTB-XL [4] raw\n12-lead signals. PTB-XL contains 21,799 10-second 12-lead\nECGs from 18,885 patients at 500Hz (PhysioNet). Official\npatient-level folds were used: folds 1–8 for reference, fold\n9 (n = 2, 183) for threshold recalibration, and fold 10\n(n = 2, 198) for testing. Fold 10 labels are fully human-\nvalidated by cardiologists.\n\nPreprocessing: Signals were downsampled from 500Hz to\n400Hz via Fourier resampling to match CODE-15% input\nrate, then trimmed/padded to 4,096 samples (10.24s). Z-score\nnormalization was applied per lead. Lead order (I, II, III, AVR,\nAVL, AVF, V1–V6) matched CODE-15% ordering.\n\nLabel mapping: SCP-ECG diagnostic codes were mapped\nto the 5 target diseases using strict primary code matching\n(same mapping as Section 2.7 cross-dataset validation). Only\nfold 10 labels are human-validated.\n\nPR rule baseline: To test for label circularity, PR inter-\nvals were computed using NeuroKit2’s wavelet-based ECG\ndelineation (ecg_delineate, peaks method) on the original\n500Hz signal. P-wave onsets identified via wavelet decom-\nposition of the P-QRS-T complex; PR interval measured as\nR-peak to P-onset time per beat (median across valid beats,\nphysiological bounds 80–400ms). PR>200ms threshold yields\nbinary predictions; PR interval as continuous score yields\nAUROC. DeLong test compares ResNet AUROC against PR\ninterval AUROC.\n\nEvaluation: Identical protocol to CODE-15% test set eval-\nuation. Thresholds were recalibrated on fold 9 (F1-max per\ndisease). Bootstrap CIs (n = 1, 000, patient-level) and DeLong\ntests were computed. Total inference time: approximately 5\nminutes on a single GPU.\n\nI. Evaluation Metrics\n\nPer-disease: F1 score, AUROC, AUPRC, Sensitivity, Speci-\nficity.\n\nOverall: Micro-F1, Macro-F1.\n\nIII. RESULTS\n\nA. Feature Ablation Study\n\nWe performed ablation studies to identify model-dependent\ninformation pathways:\n\nKey findings:\n• Disease-specific information pathways: Rhythm fea-\n\ntures excel at rhythm disorders (SBRAD F1=0.64,\nAFIB F1=0.54) but fail on BBB (CRBBB/CLBBB\nF1< 0.10). Amplitude features excel at BBB (CRBBB\nF1=0.67, CLBBB F1=0.65) but fail on rhythm disorders\n(SBRAD/AFIB F1< 0.19).\n\n• Feature complementarity: Combined features achieved\n3.3× improvement over rhythm-only (Micro-F1: 0.5121\nvs 0.1547) and 1.8× over amplitude-only (0.5121 vs\n0.2898).\n\n• 1AVB remains weak: Even with combined features,\n1AVB F1=0.0808, suggesting missing information be-\nyond rhythm and amplitude.\n\nB. Combined Simple Features Performance\n\nDetailed per-disease metrics with combined simple features\n(98D):\n\nC. 1AVB Failure-Mode Analysis\n\nTo understand why 1AVB detection fails with simple fea-\ntures, we performed detailed analysis:\n\nScore distribution:\n• Positive samples (n = 1137): mean=0.333,\n\nmedian=0.301, std=0.202\n• Negative samples (n = 68383): mean=0.214,\n\nmedian=0.170, std=0.161\n• Severe overlap: the tuned threshold (0.594, selected on\n\nvalidation set) captured only a subset of positive samples,\nand only 22.1% of positive samples exceeded the default\n0.5 threshold, illustrating the fundamental difficulty of\nseparating this class with the available features\n\nComparison with internal controls:\n• BBB diseases (CRBBB/CLBBB): AUROC > 0.96,\n\nAUPRC > 0.67\n• Rhythm disorders (SBRAD/AFIB): AUROC > 0.96,\n\nAUPRC > 0.56\n• 1AVB: AUROC=0.68, AUPRC=0.04 (far below other\n\nconditions)\nClinical interpretation: 1AVB is defined by PR interval\n\n> 200ms (P-wave onset to QRS onset), requiring precise AV\nconduction timing. Rhythm features capture RR intervals but\nlack PR-interval information. Amplitude features capture QRS\nmorphology but not P-wave timing. This explains why BBB\n(QRS-dominant) and rhythm disorders (RR-dominant) succeed\nwhile 1AVB (PR-dominant) fails.\n\nD. 1D ResNet and SE-ResNet on Raw Signals\n\nBaseline 1D ResNet:\nSE-ResNet (channel attention, SE reduction=16):\nKey findings:\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 7\n\nTABLE I\nFEATURE ABLATION STUDY: PER-DISEASE F1 SCORES\n\nFeature Set Micro-F1 Macro-F1 1AVB CRBBB CLBBB SBRAD AFIB\n\nRhythm-only (14D) 0.1547 0.2783 0.0578 0.0950 0.0545 0.6447 0.5395\nAmplitude-only (84D) 0.2898 0.3448 0.0662 0.6746 0.6461 0.1845 0.1524\nCombined (98D) 0.5121 0.5262 0.0808 0.6779 0.6675 0.6402 0.5643\n\nTABLE II\nCOMBINED SIMPLE FEATURES (98D): PER-DISEASE PERFORMANCE\n\nDisease F1 AUROC AUPRC Sens. Spec. Type\n\n1AVB 0.0808 0.6820 0.0397 0.1293 0.9656 Conduction\nCRBBB 0.6779 0.9719 0.6781 0.7175 0.9886 BBB\nCLBBB 0.6675 0.9805 0.6787 0.6376 0.9952 BBB\nSBRAD 0.6402 0.9880 0.5929 0.7960 0.9880 Rhythm\nAFIB 0.5643 0.9687 0.5650 0.6155 0.9887 Rhythm\n\nOverall: Micro-F1: 0.5121, Macro-F1: 0.5262\n\nTABLE III\n1D RESNET ON RAW SIGNALS: PER-DISEASE PERFORMANCE\n\nDisease F1 AUROC AUPRC Sens. Spec.\n\n1AVB 0.5731 0.9850 0.5423 0.6458 0.9903\nCRBBB 0.8080 0.9945 0.8149 0.8840 0.9913\nCLBBB 0.8029 0.9957 0.8214 0.8542 0.9948\nSBRAD 0.6690 0.9927 0.6439 0.7975 0.9897\nAFIB 0.7739 0.9902 0.7657 0.8065 0.9949\n\nOverall: Micro-F1: 0.7359, Macro-F1: 0.7254\n\nTABLE IV\nSE-RESNET ON RAW SIGNALS: PER-DISEASE PERFORMANCE\n\nDisease F1 AUROC AUPRC Sens. Spec.\n\n1AVB 0.5670 0.9843 0.5462 0.6541 0.9896\nCRBBB 0.8086 0.9938 0.7989 0.8949 0.9909\nCLBBB 0.8109 0.9957 0.8131 0.8472 0.9954\nSBRAD 0.6674 0.9927 0.6481 0.7420 0.9916\nAFIB 0.7718 0.9913 0.7770 0.8065 0.9948\n\nOverall: Micro-F1: 0.7361, Macro-F1: 0.7251\n\n• Substantial improvement over simple features (ResNet\nMicro-F1: 0.7359 vs 0.5121, +43.7%; SE-ResNet:\n0.7361)\n\n• 1AVB significant improvement: F1 improved from\n0.0808 to 0.5731 (7.1× improvement), AUROC from\n0.6820 to 0.9850\n\n• All diseases achieve AUROC > 0.98, indicating strong\ndiscriminative features learned end-to-end\n\n• Consistent improvements across all conditions, not just\n1AVB\n\n• SE attention provides no detectable benefit: SE-ResNet\nachieves near-identical performance to baseline ResNet\n(Micro-F1: 0.7361 vs 0.7359, ∆ = +0.0002; Macro-\nF1: 0.7251 vs 0.7254, ∆ = −0.0003), indicating no\ndetectable benefit from channel-wise attention in this\ntraining setup and architecture configuration\n\nLightweight 1D Transformer (patch-based, 1.4M\nparams):\n\nKey findings:\n\n• Transformer substantially underperforms ResNet:\n\nMicro-F1=0.6045 vs 0.7359 (∆ = −0.1314, −17.9%),\ndespite comparable parameter count (1.42M vs 1.2M).\nThis suggests that the convolutional inductive bias\nof ResNet—local connectivity, translation equivariance,\nand hierarchical spatial structure—may be better suited\nfor raw ECG signal processing than patch-based self-\nattention at this scale, though tokenization design choices\n(patch size, stride, beat-awareness) have not been isolated\nand may contribute to the observed gap.\n\n• SBRAD is particularly weak (F1=0.2844 vs ResNet\n0.6690): Transformer performance on rhythm disorders\nis substantially lower than ResNet, consistent with the\ninterpretation that fixed patch partitioning reduces sensi-\ntivity to long-range temporal patterns (RR intervals span\nmultiple seconds) that convolutional networks capture\nthrough hierarchical receptive fields.\n\n• BBB detection is preserved (CRBBB F1=0.8048,\nCLBBB F1=0.8066): These are near-ResNet-level, sug-\ngesting that QRS morphology patterns are local enough to\nbe captured within patches and attended across patches.\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 8\n\nTABLE V\nLIGHTWEIGHT 1D TRANSFORMER ON RAW SIGNALS\n\nDisease F1 AUROC AUPRC Sens. Spec.\n\n1AVB 0.4021 0.9643 0.3607 0.4170 0.9895\nCRBBB 0.8048 0.9935 0.7929 0.8762 0.9913\nCLBBB 0.8066 0.9957 0.8163 0.8893 0.9940\nSBRAD 0.2844 0.9261 0.2179 0.3370 0.9819\nAFIB 0.5848 0.9771 0.5696 0.6616 0.9889\n\nOverall: Micro-F1: 0.6045, Macro-F1: 0.5765\n\n• AUROC degradation follows the perturbation hier-\narchy: QRS-based diseases (CRBBB/CLBBB) maintain\nAUROC> 0.99, PR-based 1AVB drops to 0.964 (from\n0.985), and rhythm-based SBRAD drops to 0.926 (from\n0.993). This is consistent with the perturbation finding\nthat local morphological features (QRS) transfer robustly\nwhile temporally distributed features (rhythm) are more\nfragile.\n\n• Negative result with methodological value: This com-\nparison provides evidence that ResNet’s architectural\nchoice is not arbitrary—simply substituting a modern\ntransformer architecture at comparable scale degrades\nperformance, highlighting the importance of inductive\nbias alignment with signal structure in medical time-\nseries analysis.\n\nE. Comparison: Handcrafted vs Raw-Signal Deep Learning\n\nKey observations:\n\n1) Feature complementarity: Combined simple features\n(98D) achieved 3.3× improvement over rhythm-only\nthrough complementarity\n\n2) Clinical-MVP closes the 1AVB gap: Adding AV con-\nduction timing features (PR interval, QRS duration,\nQRS axis) improved 1AVB F1 from 0.0808 to 0.4472\n(5.5× improvement) and AUROC from 0.682 to 0.961,\nconsistent with timing information being the critical\nmissing component for 1AVB detection\n\n3) Clinical-MVP improves overall performance: Micro-\nF1 improved from 0.5121 to 0.6542 (+27.7%), with\nconsistent gains across all diseases except SBRAD\n(−2.0%, likely due to threshold sensitivity on the vali-\ndation set)\n\n4) ResNet retains advantage: Raw-signal deep learn-\ning still outperforms Clinical-MVP (ResNet Micro-F1:\n0.7359 vs 0.6542), suggesting end-to-end learning cap-\ntures additional temporal patterns beyond explicit timing\nmeasurements\n\n5) ResNet substantially improves 1AVB: F1=0.5731\nvs Clinical-MVP 0.4472 (28% relative improvement),\nAUROC=0.985 vs 0.961\n\n6) SE attention yields no detectable improvement: SE-\nResNet performs equivalently to baseline ResNet across\nall metrics (Micro-F1 ∆ = +0.0002, Macro-F1 ∆ =\n−0.0003). We find no detectable benefit from channel-\nwise attention in this setup—all per-disease differences\nfall within multi-seed training variance (SD< 0.004) and\n\npermutation tests confirm statistical indistinguishability\n(all p > 0.17)\n\n7) Transformer underperforms ResNet by a wide mar-\ngin: The 1D Transformer achieves Micro-F1=0.6045\nvs ResNet’s 0.7359 (∆ = −0.131, −17.9%), with\nthe largest gaps in rhythm disorders (SBRAD: 0.2844\nvs 0.6690, AFIB: 0.5848 vs 0.7739). This negative\nresult suggests that convolutional inductive biases (lo-\ncal connectivity, translation equivariance) are better\naligned with ECG signal structure than patch-based\nself-attention at comparable parameter counts, provid-\ning architectural evidence for ResNet’s effectiveness in\nmedical time-series analysis.\n\nF. Statistical Robustness Analysis (Bootstrap CI)\n\nWe performed patient-level bootstrap resampling (n = 1000\niterations) to assess statistical robustness. In each iteration, we\nresampled patients with replacement and computed predictions\non all samples from the resampled patient set. All metrics (F1,\nAUROC, AUPRC, sensitivity, specificity, PPV, NPV) were\nrecomputed from predictions, with per-label thresholds fixed at\nthe values tuned on the original validation set. 95% confidence\nintervals were obtained via the percentile method (2.5th and\n97.5th percentiles of the bootstrap distribution).\n\nClinical interpretation of PPV/NPV: Positive Predictive\nValue (PPV) and Negative Predictive Value (NPV) answer: “If\nthe model predicts positive/negative, what is the probability the\npatient truly has/doesn’t have the disease?”\n\nKey findings:\n1) Low prevalence limits PPV: All diseases have low\n\nprevalence (1.6–2.8%), resulting in moderate PPV even\nwith high sensitivity/specificity. This is a fundamental\nchallenge in rare disease detection.\n\n2) 1AVB shows dramatic PPV improvement: XGBoost\nSimple PPV=0.059 (only 5.9% of positive predictions\nare correct) vs ResNet PPV=0.529 (52.9% correct)\n→ 9× improvement. This indicates ResNet’s superior\nability to reduce false positives for this challenging\ncondition.\n\n3) NPV universally high (> 98.5%): Due to low preva-\nlence, negative predictions are highly reliable for both\nmodels. This is clinically valuable for ruling out disease.\n\n4) ResNet consistently improves PPV: Across all dis-\neases, ResNet achieves higher PPV than XGBoost Sim-\nple, reducing false positive burden in clinical workflows.\n\nAdditional key findings:\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 9\n\nTABLE VI\nPERFORMANCE COMPARISON ACROSS METHODS\n\nMethod Micro-F1 1AVB CRBBB CLBBB SBRAD AFIB\n\nRhythm-only (14D) 0.1547 0.0578 0.0950 0.0545 0.6447 0.5395\nAmplitude-only (84D) 0.2898 0.0662 0.6746 0.6461 0.1845 0.1524\nXGBoost Simple (98D) 0.5121 0.0808 0.6779 0.6675 0.6402 0.5643\nXGBoost Clinical-MVP (110D) 0.6542 0.4472 0.7243 0.7367 0.6274 0.6877\n1D ResNet (Raw) 0.7359 0.5731 0.8080 0.8029 0.6690 0.7739\nSE-ResNet-1D (Raw) 0.7361 0.5670 0.8086 0.8109 0.6674 0.7718\n1D Transformer (Raw) 0.6045 0.4021 0.8048 0.8066 0.2844 0.5848\n\nTABLE VII\nBOOTSTRAP 95% CONFIDENCE INTERVALS WITH CLINICAL METRICS\n\nDis. Model AUROC F1 Sens. Spec. PPV NPV\n\n1AVB XGBoost 0.682 [0.664,0.699] 0.081 [0.069,0.094] 0.129 [0.109,0.150] 0.966 [0.964,0.967] 0.059 [0.049,0.071] 0.985 [0.985,0.986]\nResNet 0.985 [0.983,0.987] 0.573 [0.547,0.596] 0.646 [0.614,0.675] 0.990 [0.989,0.991] 0.529 [0.495,0.563] 0.994 [0.994,0.995]\n\nCRBBB XGBoost 0.972 [0.968,0.975] 0.678 [0.660,0.696] 0.718 [0.694,0.742] 0.989 [0.988,0.990] 0.645 [0.619,0.672] 0.992 [0.991,0.993]\nResNet 0.995 [0.994,0.995] 0.808 [0.794,0.822] 0.884 [0.868,0.899] 0.991 [0.990,0.992] 0.745 [0.722,0.768] 0.997 [0.996,0.997]\n\nCLBBB XGBoost 0.981 [0.977,0.984] 0.668 [0.645,0.691] 0.638 [0.610,0.666] 0.995 [0.995,0.996] 0.702 [0.667,0.736] 0.994 [0.993,0.994]\nResNet 0.996 [0.995,0.997] 0.803 [0.784,0.821] 0.854 [0.831,0.876] 0.995 [0.994,0.996] 0.746 [0.717,0.775] 0.997 [0.997,0.998]\n\nSBRAD XGBoost 0.988 [0.986,0.990] 0.640 [0.620,0.660] 0.796 [0.771,0.819] 0.988 [0.987,0.989] 0.522 [0.496,0.548] 0.997 [0.996,0.997]\nResNet 0.993 [0.992,0.994] 0.669 [0.650,0.690] 0.798 [0.774,0.820] 0.990 [0.989,0.991] 0.562 [0.537,0.588] 0.997 [0.996,0.997]\n\nAFIB XGBoost 0.969 [0.964,0.973] 0.564 [0.539,0.590] 0.615 [0.584,0.645] 0.989 [0.988,0.990] 0.531 [0.499,0.562] 0.992 [0.991,0.993]\nResNet 0.990 [0.988,0.992] 0.774 [0.755,0.793] 0.807 [0.784,0.831] 0.995 [0.994,0.996] 0.766 [0.739,0.793] 0.996 [0.996,0.997]\n\nOverall XGBoost – Micro: 0.512 [0.502,0.522] – – – –\nMacro: 0.526 [0.517,0.535]\n\nResNet – Micro: 0.736 [0.727,0.744] – – – –\nMacro: 0.725 [0.717,0.734]\n\n5) Tight confidence intervals across all metrics indicate\nrobust, stable performance for both models\n\n6) Non-overlapping CIs support statistical significance:\nResNet Micro-F1 [0.727, 0.744] vs XGBoost [0.502,\n0.522] → 22.4 percentage point improvement is statis-\ntically significant\n\n7) 1AVB shows largest improvement: ResNet F1=0.573\nvs XGBoost F1=0.081 → 7.1× improvement with non-\noverlapping CIs\n\n8) AUROC CIs extremely narrow (< 0.005 width for\nResNet), indicating consistent discrimination ability\n\nG. Clinical-MVP Feature Results\nThe Clinical-MVP feature set (110D) incorporating AV con-\n\nduction timing measurements achieved substantially improved\nperformance over the simple feature set:\n\nComparison with simple features (98D):\nKey findings:\n1) Timing features are essential for 1AVB: Adding PR\n\ninterval and QRS duration improved 1AVB AUROC\nfrom 0.682 to 0.961, consistent with AV conduction\ntiming being the critical missing information pathway\nfor 1AVB detection\n\n2) Broad improvement: All diseases except SBRAD\nshowed improvement, suggesting timing features pro-\nvide complementary information beyond rhythm and\namplitude for multiple conditions\n\n3) Remaining gap to ResNet: Clinical-MVP Micro-F1\n(0.6542) closes approximately 55% of the gap between\n\nsimple features (0.5121) and ResNet (0.7359), indicating\nthat while explicit timing measurements capture much\nof the relevant information, end-to-end learning still\nextracts additional predictive features from raw signals\n\n4) Clinical feasibility: The feature extraction pipeline is\ncomputationally practical (∼2 hours for 345k samples),\ndemonstrating that clinically-informed feature engineer-\ning at scale is feasible using hybrid NeuroKit2 + custom\nsignal processing\n\nH. Multi-Seed Statistical Robustness\nTo assess the stability of ResNet results across random seeds\n\nand patient splits, we trained 4 independent models:\nWithin-split variance (split seed=42, 3 model seeds):\nCross-split generalization (split 42 vs split 123, same\n\nmodel seed=42):\nKey findings:\n1) Extremely low within-split variance: Standard devi-\n\nation across 3 model seeds is < 0.004 for all per-\ndisease F1 scores and 0.0025 for Micro-F1, indicating\nthat ResNet training is highly stable and results are not\nseed-dependent\n\n2) Negligible cross-split sensitivity: The difference be-\ntween two independent patient splits is +0.0061 Micro-\nF1, well within one standard deviation of within-split\nvariance, indicating that the patient split protocol gener-\nalizes reliably\n\n3) AUROC is nearly invariant: AUROC standard devia-\ntions are < 0.0006 within-split and cross-split AUROC\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 10\n\nTABLE VIII\nCLINICAL-MVP FEATURES (110D): PER-DISEASE PERFORMANCE\n\nDisease F1 AUROC AUPRC Sens. Spec. PPV\n\n1AVB 0.4472 0.9610 0.4143 0.4881 0.9884 0.4126\nCRBBB 0.7243 0.9805 0.7296 0.7769 0.9895 0.6784\nCLBBB 0.7367 0.9901 0.7538 0.7490 0.9950 0.7249\nSBRAD 0.6274 0.9867 0.6038 0.7327 0.9895 0.5486\nAFIB 0.6877 0.9814 0.7203 0.7173 0.9927 0.6603\n\nOverall: Micro-F1: 0.6542, Macro-F1: 0.6447\n\nTABLE IX\nSIMPLE VS CLINICAL-MVP FEATURE COMPARISON\n\nMetric Simple (98D) Clinical-MVP (110D) Improvement\n\nMicro-F1 0.5121 0.6542 +27.7%\n1AVB F1 0.0808 0.4472 +453%\n1AVB AUROC 0.6820 0.9610 +40.9%\nCRBBB F1 0.6779 0.7243 +6.8%\nAFIB F1 0.5643 0.6877 +21.9%\n\nTABLE X\nMULTI-SEED WITHIN-SPLIT VARIANCE (MEAN ± SD)\n\nDisease F1 (mean ± SD) AUROC (mean ± SD)\n\n1AVB 0.5726 ± 0.0003 0.9846 ± 0.0006\nCRBBB 0.8096 ± 0.0037 0.9942 ± 0.0002\nCLBBB 0.8059 ± 0.0017 0.9952 ± 0.0003\nSBRAD 0.6714 ± 0.0031 0.9926 ± 0.0002\nAFIB 0.7679 ± 0.0030 0.9906 ± 0.0004\nOverall Micro-F1: 0.7358 ± 0.0025 –\n\ndeltas are < 0.0022, showing consistent discriminative\nability regardless of initialization or data partition\n\n4) Addresses single-seed limitation: These results provide\nevidence against the concern that single-seed training\nmay produce unstable or non-representative results\n\nI. PR-Window Occlusion: Perturbation Evidence for PR-\nSegment Reliance\n\nOverall degradation:\nPaired probability effects (1AVB-positive samples, n =\n\n1, 030):\nKey findings:\n1) PR-window occlusion causes severe 1AVB degrada-\n\ntion: AUROC drops from 0.985 to 0.760 (∆ = −0.226),\na 23% relative decrease, indicating that ResNet heavily\ndepends on PR-segment information for 1AVB classifi-\ncation\n\n2) Anatomical specificity: ST-segment occlusion (same\nduration, adjacent region) causes minimal degradation\n(∆AUROC= −0.005), indicating the effect is specific\nto the PR segment rather than general signal disruption\n\n3) Random occlusion shows intermediate effect\n(∆AUROC= −0.034): occluding any segment degrades\nperformance somewhat (expected due to information\nloss), but the PR-segment effect is 6.7× larger than\nrandom occlusion and 43× larger than ST occlusion\n\n4) Perturbation-based interpretation: The paired analysis\nshows that occluding the PR segment causes a +32.7%\n\nTABLE XI\nCROSS-SPLIT GENERALIZATION\n\nDisease ∆F1 ∆AUROC\n\n1AVB +0.0114 +0.0017\nCRBBB +0.0152 +0.0001\nCLBBB −0.0034 +0.0002\nSBRAD −0.0060 +0.0008\nAFIB +0.0233 +0.0021\nOverall Micro-F1 ∆: +0.0061 –\n\nTABLE XII\nPR-WINDOW OCCLUSION: 1AVB PERFORMANCE DEGRADATION\n\nCondition 1AVB AUROC 1AVB F1 ∆AUROC\n\nClean (baseline) 0.9853 0.7826 –\nPR-window occluded 0.7597 0.2200 −0.2256\nST-segment occluded (control) 0.9801 0.6193 −0.0052\nRandom-window occluded (control) 0.9516 0.4559 −0.0337\n\nincrease in false-negative probability (model reverses its\ncorrect positive prediction) on true 1AVB cases, with\ntight bootstrap CIs indicating statistical reliability\n\n5) Interpretive insight: This provides perturbation-based\nevidence consistent with ResNet having learned to ex-\ntract PR-interval timing information from raw signals,\nsupporting the hypothesis that end-to-end learning can\ndiscover clinically meaningful features without explicit\nfiducial point detection\n\nJ. Perturbation Robustness: Beyond Zero-Masking\n\nA potential concern with zero-masking occlusion is that\nreplacing signal segments with zeros creates “off-manifold”\nsamples—inputs outside the distribution of natural ECG\nsignals—which could induce artifacts rather than revealing\ngenuine feature reliance. To address this, we compared three\nPR-window occlusion methods on the PTB-XL external vali-\ndation set (fold 10, matched 1AVB+/− subset, n = 155):\n\n1) Zero-masking (original method): Replace PR window\nwith zeros\n\n2) Inpainting (continuity-preserving): Linear interpolation\nbetween window endpoints, maintaining signal continu-\nity\n\n3) Gaussian noise (statistics-preserving): Replace with\nGaussian noise matching local signal power\n\nKey findings: All three perturbation methods substan-\ntially degrade 1AVB AUROC, providing converging ev-\nidence that PR-segment information is genuinely impor-\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 11\n\nTABLE XIII\nPAIRED PROBABILITY EFFECTS OF PR-WINDOW OCCLUSION\n\nOcclusion ∆Prob Mean 95% CI\n\nPR-window +0.3273 [0.3094, 0.3445]\nST-segment (control) +0.1316 [0.1211, 0.1423]\nRandom-window (control) +0.2036 [0.1897, 0.2176]\n\nTABLE XIV\nPERTURBATION ROBUSTNESS: MULTIPLE PR-OCCLUSION METHODS ON\n\nPTB-XL\n\nMethod 1AVB AUROC ∆AUROC\n\nClean (baseline) 0.954 –\nZero-masking 0.852 −0.102\nInpainting 0.729 −0.225\nGaussian noise 0.902 −0.052\n\ntant for 1AVB classification. Critically, inpainting—the\nmost “on-manifold” method—causes the largest degrada-\ntion (∆AUROC= −0.225), 2.2× larger than zero-masking\n(∆AUROC= −0.102). This finding is inconsistent with\nthe concern that zero-masking effects are primarily artifacts\nof off-manifold inputs: a continuity-preserving perturbation\nthat maintains the natural signal envelope produces an even\nstronger effect, which would not be expected if zero-masking\nartifacts were the dominant mechanism. Gaussian noise causes\nthe smallest degradation (∆AUROC= −0.052), suggesting\nthat local signal statistics alone are insufficient and that the\ntemporal structure of the PR segment is what matters. Per-\nsample ∆prob correlations between methods are moderate\n(zero/inpaint r = 0.20, zero/noise r = 0.30, inpaint/noise\nr = 0.48), indicating that the three perturbation types affect\nthe model through partially distinct mechanisms while con-\nverging on the same conclusion: PR-segment information is\ncritical for 1AVB detection.\n\nK. Extended Perturbations: QRS→BBB and RR→AFIB\n\nTo extend the perturbation framework beyond PR-\nsegment/1AVB, we performed two additional experiments\ntargeting the remaining disease-specific pathways identified in\nour feature ablation study (Section 3.1):\n\nQRS occlusion → BBB (matched subset: 3,184 positive\n+ 3,184 negative, 209 failed R-peak detection): For CRBBB\nand CLBBB, a 160ms window centered at the R-peak (QRS\ncomplex) was zero-masked, with ST-segment and random-\nwindow controls following the same protocol as the PR\nocclusion experiment.\n\nPaired probability effects (BBB-positive samples):\nRR regularization → AFIB (matched subset: 1,256 posi-\n\ntive + 1,256 negative, 113 failed): Each heartbeat was time-\nwarped to the median RR interval, preserving per-beat QRS\nmorphology while destroying RR-interval irregularity. Beat-\norder permutation served as a functional control (preserves\nRR interval set but destroys temporal order).\n\nPaired probability effects (AFIB-positive samples): RR-\nregularized ∆Prob= +0.083 [0.075, 0.090].\n\nKey findings:\n\nTABLE XV\nQRS OCCLUSION: BBB PERFORMANCE DEGRADATION\n\nCondition CRBBB AUROC CLBBB AUROC CRBBB ∆AUROC CLBBB ∆AUROC\n\nClean 0.991 0.991 – –\nQRS-occluded 0.494 0.645 −0.497 −0.346\nST-occluded (control) 0.880 0.971 −0.111 −0.020\nRandom-occluded (control) 0.983 0.987 −0.008 −0.004\n\nTABLE XVI\nPAIRED PROBABILITY EFFECTS OF QRS OCCLUSION\n\nOcclusion CRBBB ∆Prob 95% CI CLBBB ∆Prob\n95% CI\n\nQRS-window +0.415 [0.401, 0.430] +0.287\n[0.273, 0.301]\n\n1) QRS occlusion devastates BBB detection: CRBBB\nAUROC drops from 0.991 to 0.494 (near chance),\nconsistent with ResNet critically depending on QRS-\ncomplex information for bundle branch block classi-\nfication. This aligns with clinical ECG interpretation\nwhere widened QRS (> 120ms) and characteristic QRS\nmorphology define BBB.\n\n2) Anatomical specificity: ST occlusion (adjacent region,\nsame duration) causes much smaller degradation for\nCLBBB (∆AUROC= −0.020 vs −0.346 for QRS), and\nminimal effect for CRBBB once QRS is intact. Random\nocclusion has negligible effect (∆AUROC< −0.01),\nconsistent with QRS-specific model reliance.\n\n3) AFIB shows minimal RR-dependence: RR regular-\nization degraded AFIB AUROC by only 0.007, and\nthe beat-permutation control showed nearly identical\ndegradation (∆ = −0.008). This small effect, in-\ndistinguishable from the control condition, suggests\nthat RR-interval irregularity alone is not the primary\npathway for AFIB detection in ResNet. Alternative\nmechanisms—such as P-wave morphology changes (fib-\nrillatory waves replacing organized P-waves) or ag-\ngregate rhythm statistics—may be more important and\nrequire targeted perturbation experiments for validation.\n\n4) Evidence summary: Two perturbation effects\nshowed large, anatomically specific degradations:\nPR occlusion→1AVB (∆AUROC= −0.225, ST\ncontrol ∆ = −0.005) and QRS occlusion→BBB\n(∆AUROC= −0.497/ − 0.346, ST control\n∆ = −0.111). The RR regularization→AFIB\nperturbation showed an effect indistinguishable\nfrom its control condition (∆ = −0.007 vs −0.008),\nindicating that RR irregularity alone is insufficient to\nexplain AFIB detection. P-wave-aware perturbation\nexperiments are needed to investigate alternative AFIB\npathways.\n\nL. Rule-Based Baseline Comparison\n\nTo validate the necessity of machine learning approaches,\nwe implemented simple rule-based baselines for SBRAD using\nwell-established clinical thresholds (HR < 60 bpm). We\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 12\n\nTABLE XVII\nRR REGULARIZATION: AFIB PERFORMANCE DEGRADATION\n\nCondition AFIB AUROC ∆AUROC\n\nClean 0.980 –\nRR-regularized 0.973 −0.007\nBeat-permuted (control) 0.972 −0.008\n\nTABLE XVIII\nRULE-BASED VS MACHINE LEARNING PERFORMANCE (SBRAD)\n\nMethod Approach SBRAD F1 SBRAD AUROC\n\nPan-Tompkins HR threshold 0.151 0.939\nSimple Threshold HR threshold 0.157 0.709\nDerivative-based HR threshold 0.145 0.877\nRule-based (avg) HR threshold 0.151 0.842\nXGBoost Simple 98D features 0.640 [0.620,0.660] 0.988 [0.986,0.990]\nXGBoost Clinical-MVP 110D features 0.627 0.987\nResNet Raw signals 0.669 [0.650,0.690] 0.993 [0.992,0.994]\n\ntested three distinct R-peak detection algorithms to ensure\nrobustness:\n\nDetection algorithms:\n1) Pan-Tompkins-like: Bandpass filter (5–15Hz) →\n\nderivative → squaring → moving average → peak\ndetection\n\n2) Simple Threshold: Direct amplitude thresholding at\n50% of maximum signal amplitude\n\n3) Derivative-based: Squared first derivative with adaptive\nthresholding\n\nEach algorithm was evaluated on the test set for SBRAD\nclassification.\n\nAnalysis: All three R-peak detection algorithms showed\nconsistent performance (F1≈0.15), indicating this is not\nalgorithm-specific. While rule-based methods achieve some\ndetection capability, their performance is severely limited\ncompared to ML approaches. ML methods achieve 4–5×\nbetter F1 scores, showing that learned representations substan-\ntially outperform simple signal processing for real-world ECG\nclassification.\n\nM. Statistical Model Comparison\n\nWe performed formal paired permutation tests for F1 across\nthree model comparisons (XGBoost Simple vs XGBoost\nClinical-MVP vs 1D ResNet), in addition to DeLong tests for\nAUROC. For each comparison, we performed 5,000 paired\nvectorized permutations on the test set (n = 69, 203): for\neach permutation, binary predictions were randomly swapped\nbetween models per sample, and per-disease F1 differences\nwere recomputed. Two-sided p-values were computed as the\nproportion of |permuted ∆F1| ≥ |observed ∆F1|. Holm-\nBonferroni correction was applied across 18 comparisons (3\nmodel pairs × 5 diseases + 3 macro-F1 comparisons). All\nthree comparisons shared the identical test set, enabling fully\npaired statistical testing.\n\nPaired permutation test results (F1, 5,000 permutations):\nSE-ResNet vs ResNet (5,000 paired permutations, iden-\n\ntical test set):\n\nNo per-disease comparison approaches significance (all p >\n0.17), and Macro-F1 is near-identical (∆ = −0.0003, p =\n0.6158). All per-disease F1 differences fall within the multi-\nseed training variance (SD< 0.004). SE-ResNet and ResNet\nare statistically indistinguishable on this benchmark. We find\nno detectable benefit from channel-wise attention for 1D ECG\nsignal classification under this training setup and architecture\nconfiguration.\n\n1D Transformer vs ResNet (5,000 paired permutations,\nidentical test set, own optimal thresholds):\n\nThe Transformer substantially and significantly underper-\nforms ResNet overall (Macro-F1 ∆ = −0.149, p < 0.0002).\nHowever, the effect is disease-dependent: BBB detection is\nstatistically indistinguishable between the two architectures\n(CRBBB: ∆ = −0.003, p = 0.299; CLBBB: ∆ = +0.004,\np = 0.440), while 1AVB, SBRAD, and AFIB are signifi-\ncantly worse with the Transformer (all p < 0.0002). SBRAD\nshows the largest gap (∆F1= −0.385), consistent with the\ninterpretation that fixed patch partitioning is associated with\nreduced sensitivity to temporally distributed features such as\nRR-interval patterns. The preserved BBB performance aligns\nwith the perturbation finding that QRS morphology is a spa-\ntially localized feature well captured within individual patches.\n\nF1 with 95% bootstrap CIs:\nKey findings:\n1) All three macro comparisons are significant: Simple\n\nvs Clinical-MVP (∆Macro-F1= +0.1040, p < 0.0002),\nClinical-MVP vs ResNet (∆Macro-F1= +0.1758, p <\n0.0002), Simple vs ResNet (∆Macro-F1= +0.2798,\np < 0.0002). Holm-Bonferroni correction across all 18\ncomparisons (15 per-disease + 3 macro) confirms 17/18\nsignificant at α = 0.05.\n\n2) SBRAD is the only non-significant per-disease com-\nparison (Simple vs Clinical-MVP: ∆F1= −0.0067,\np = 0.3568), consistent with SBRAD being well cap-\ntured by simple rhythm features and not benefiting from\nadditional timing features.\n\n3) ResNet vs both XGBoost models is universally sig-\nnificant: All 10 per-disease comparisons (5 diseases ×\n2 XGBoost variants) are significant with p < 0.0002.\nThe smallest ResNet advantage is over Clinical-MVP\nfor SBRAD (∆F1= +0.1834) and the largest is over\nSimple for 1AVB (∆F1= +0.5131).\n\n4) 1AVB shows the largest feature gap:\nSimple→Clinical-MVP (+0.3292) and Clinical-\nMVP→ResNet (+0.1839) both show large\nimprovements, consistent with AV conduction timing\nfeatures and end-to-end learning each contributing\nsubstantially to 1AVB detection.\n\n5) For AUROC comparisons, DeLong tests [11] provide\nformal paired hypothesis testing. All ResNet vs XG-\nBoost AUROC comparisons are significant (DeLong\np < 10−6 for all diseases).\n\nN. Cross-Dataset Feature Validation (PTB-XL+)\nTo assess whether feature-level findings generalize beyond\n\nCODE-15%, we trained identical XGBoost models on PTB-\nXL+ 12SL features (783 comprehensive clinical features)\n\n\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 13\n\nTABLE XIX\nPAIRED PERMUTATION TEST RESULTS: F1 DIFFERENCES\n\nDisease Simple F1 Clinical-MVP F1 ResNet F1 S. vs C. ∆F1 (p) C. vs R. ∆F1 (p)\nS. vs R. ∆F1 (p)\n\n1AVB 0.0600 0.3892 0\nThe file is too long and its contents have been truncated.",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "63b0ffe1-5475-408f-8647-2aa776171ab8",
+          "message_type": "next",
+          "turn_exchange_id": "df224483-fb16-4ea2-9d74-369a033b5e9a",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "7f9197c1-5d9d-4a98-a849-b148c3626e9a",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "7f9197c1-5d9d-4a98-a849-b148c3626e9a",
+      "children": [
+        "b5095b31-39d4-4cd2-90c3-7236d57d709b"
+      ]
+    },
+    "b5095b31-39d4-4cd2-90c3-7236d57d709b": {
+      "id": "b5095b31-39d4-4cd2-90c3-7236d57d709b",
+      "message": {
+        "id": "b5095b31-39d4-4cd2-90c3-7236d57d709b",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1777638708.4827335,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "The file contents provided above are truncated/partial snippets. The complete content for these files IS accessible via querying.\n\nIf the user asks a question related to these files, and the provided snippets do not clearly answer it, you **MUST** use the `file_search` tool to search the full document contents before responding.\n\n## How to invoke the file_search tool\nIf the user's query isn't sufficiently answered by the provided snippets, parsed text, or images, you should invoke `file_search.msearch`.\nTo search the full content of the available files, you **must** send one message with recipient `to=file_search.msearch` in the analysis channel. Your message should be structured exactly as follows:\n```\n{\n  'queries': ['Example query 1', 'Example query 2']  // List of up to five queries to search for.\n}\n```\n\nCarefully balance the number of `file_search` calls and the quality of your response with the latency incurred by `file_search` calls.\n\nImportant guidelines for query formatting:\n- Your message must be a valid JSON object. Do not include any extraneous text, backticks, markdown formatting, or comments beyond what is shown.\n- The `queries` field must be a list of strings.\n- One of the queries **MUST** exactly match the user's original question, but stripped of any extraneous details, and with ambiguous references clearly resolved using context from the conversation. It **MUST** be a complete sentence.\n- Even if you suspect the user meant something else, one query **MUST** still be their original question.\n\n## How to handle results from file_search\nThe file search tool will respond with the relevant search results from the full files. After you receive these results:\n- Carefully evaluate each result to determine its relevance and quality.\n- Use the high-quality and relevant results to inform your answer to the user's question.\n- When possible, reuse information from prior file_search results and avoid repeating identical queries.\n\n## Tool usage instructions and ordering\nWhen the user asks a question, carefully consider whether the provided snippets sufficiently answer the query, whether you need to invoke `file_search.msearch`, or another available tool (such as `web`, if available) should be used instead.\n\nTool-ordering Guidelines:\n1. For queries related to uploaded files, if snippets are insufficient, strongly prefer invoking `file_search.msearch` over other tools.\n    - Avoid using `web.run`, `python` analysis, or any other tools until you have either:\n        - Confirmed with high confidence the answer is not in the files, or\n        - Have high confidence `file_search_tool` queries are not sufficient to answer the query.\n2. Avoid usage of `web_search/web.run` for queries related to uploaded files\n    - Carefully consider whether the user's query is better answered by web search results rather than available snippets or results from `file_search_tool`.\n    - Unless the user's query is clearly unrelated to the uploaded files, prefer using `file_search.msearch`. You can always follow up with a web search if necessary for a more complete response.\n3. Avoid using `python` unless necessary or requested by user.\n    - If the user's query is answerable from the parsed text and images from the uploaded files, or from `file_search_tool`, do not invoke `python`.\n\nAlways keep this instruction in mind for the rest of the conversation, as the user may reference these files or ask related questions later on."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_visually_hidden_from_conversation": false,
+          "command": "prompt",
+          "request_id": "63b0ffe1-5475-408f-8647-2aa776171ab8",
+          "message_type": "next",
+          "turn_exchange_id": "df224483-fb16-4ea2-9d74-369a033b5e9a",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "1530e2d3-85e2-4aa6-9c6b-ca73901e16ed",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "1530e2d3-85e2-4aa6-9c6b-ca73901e16ed",
+      "children": [
+        "b37292ef-d4fc-45bc-9041-16cb8793094c"
+      ]
+    },
+    "b37292ef-d4fc-45bc-9041-16cb8793094c": {
+      "id": "b37292ef-d4fc-45bc-9041-16cb8793094c",
+      "message": {
+        "id": "b37292ef-d4fc-45bc-9041-16cb8793094c",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1777638708.501774,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "63b0ffe1-5475-408f-8647-2aa776171ab8",
+          "message_type": "next",
+          "turn_exchange_id": "df224483-fb16-4ea2-9d74-369a033b5e9a",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "b5095b31-39d4-4cd2-90c3-7236d57d709b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b5095b31-39d4-4cd2-90c3-7236d57d709b",
+      "children": [
+        "18d65fc6-88fd-48c5-8409-b28ff23132da"
+      ]
+    },
+    "18d65fc6-88fd-48c5-8409-b28ff23132da": {
+      "id": "18d65fc6-88fd-48c5-8409-b28ff23132da",
+      "message": {
+        "id": "18d65fc6-88fd-48c5-8409-b28ff23132da",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1777638708.400002,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "以下为基于你提供论文内容的系统性审稿意见（按 JBHI 审稿标准执行，偏严格）：\n\n---\n\n# 一、总体评价  \n\n该论文围绕**ECG智能诊断中的“信息路径（information pathways）”问题**展开，结合大规模数据（CODE-15%、PTB-XL）与多模型对比（XGBoost、ResNet、Transformer），并引入**扰动实验（perturbation analysis）+跨数据集验证**，试图回答一个关键问题：  \n\n> 深度学习模型是否真正利用了“临床有意义的信号片段”？  \n\n从选题来看：  \n- **前沿性：较强（符合当前“可解释AI + 医疗可信性”的核心议题）**  \n- **科学价值：较高（尤其是“机制层面验证 + 外部验证”的组合）**  \n- **临床意义：明确（连接PR/QRS/RR与具体疾病）**  \n\n但需要明确一点：  \n👉 这篇论文的核心贡献不是“模型性能”，而是**机制解释 + 方法论框架**  \n\n总体质量评价：  \n- 已达到**JBHI潜在可审稿水平**  \n- 但仍存在**关键方法学与论证层面的缺口**  \n\n---\n\n# 二、主要优点  \n\n## 1. 研究问题清晰且具有深度  \n- 明确区分三类信息路径：  \n  - Rhythm（RR）  \n  - Morphology（QRS）  \n  - Timing（PR）  \n- 提出“model-dependent pathways”这一概念，有一定原创性  \n\n👉 这是论文最核心的理论贡献  \n\n---\n\n## 2. 数据规模与验证设计非常扎实  \n- CODE-15%（34万样本）+ PTB-XL 外部验证  \n- **patient-level split（避免数据泄漏）**  \n- 多seed + bootstrap + DeLong test  \n\n👉 在工程严谨性上，明显高于很多同类论文  \n\n---\n\n## 3. 扰动实验设计具有说服力  \n三类关键实验：\n\n- PR-window → 1AVB  \n- QRS occlusion → BBB  \n- RR regularization → AFIB  \n\n优点：  \n- 有**anatomical control（ST segment）**  \n- 有**random control**  \n- 有**多种扰动方式（mask / inpaint / noise）**\n\n👉 这一部分接近**机制因果验证（causal probing）**，是亮点  \n\n---\n\n## 4. 临床解释与结果高度一致  \n例如：  \n- PR → 1AVB  \n- QRS → BBB  \n- RR → AFIB（不成立）\n\n👉 **负结果（AFIB）反而增强可信度**  \n\n---\n\n## 5. 外部验证设计非常规范  \n- strict frozen / calibrated / oracle 三层框架  \n- 区分：  \n  - 模型能力  \n  - 阈值问题  \n\n👉 这一点非常符合**临床部署思维**  \n\n---\n\n## 6. “负结果”具有学术价值  \n- Transformer显著不如ResNet  \n- SE模块无提升  \n\n👉 说明论文并非“结果导向”，而是**问题导向**  \n\n---\n\n# 三、存在问题与修改建议（重点）  \n\n以下为决定是否能发表的关键问题：\n\n---\n\n## ❗问题1：标签可靠性（严重问题）\n\n论文明确写到：\n\n> 标签来自 automated ECG interpretation system（非医生标注）\n\n这会导致：\n\n### 核心风险：\n- **label leakage / circularity**\n- 模型可能学习的是“规则系统的输出”，而非真实疾病\n\n虽然作者有提到：\n> Residual label circularity cannot be excluded  \n\n但这远远不够。\n\n---\n\n### 修改建议（必须）：\n\n至少补充以下之一：\n\n1. **子集人工标注验证（强烈建议）**\n2. 或引用已有文献证明该label系统可靠性  \n3. 或增加：\n   - label noise sensitivity analysis  \n   - weak supervision讨论  \n\n否则：  \n👉 **在医学期刊中这是致命缺陷**\n\n---\n\n## ❗问题2：扰动实验的“因果性”仍然不足\n\n虽然设计很好，但仍然属于：\n\n> observational + counterfactual simulation  \n\n问题在于：\n\n- occlusion ≠ true causal intervention  \n- 可能破坏分布（distribution shift）\n\n---\n\n### 具体问题：\n\n- zero masking / inpainting 都可能引入artifact  \n- 模型 degradation ≠ reliance  \n\n---\n\n### 修改建议：\n\n需要加强论证：\n\n1. 明确说明：  \n   👉 这是“evidence consistent with”，不是因果证明  \n\n2. 建议增加：\n   - **gradient-based attribution 对照**\n   - 或 integrated gradients / CAM 对照分析  \n\n3. 或补一句关键限制：  \n   > “This does not establish causal necessity”\n\n---\n\n## ❗问题3：AFIB结论存在过度解读风险  \n\n论文结论：\n\n> AFIB not driven by RR irregularity  \n\n但实验仅证明：\n\n> RR regularization ≈ beat permutation  \n\n问题：\n\n- RR信息被破坏方式可能不充分  \n- 模型可能使用：\n  - P-wave absence  \n  - frequency-domain features  \n\n---\n\n### 修改建议：\n\n必须改为更严谨表达：\n\n❌ 当前问题：\n> RR is not primary pathway  \n\n✅ 建议改为：\n> RR irregularity alone is insufficient  \n\n并补充：\n- future work: P-wave perturbation  \n\n---\n\n## ❗问题4：Transformer对比不完全公平  \n\n当前实验：\n\n- 1D Transformer（patch-based）\n- 参数量接近  \n\n但问题：\n\n### 潜在不公平点：\n- patch size 固定  \n- 未使用：\n  - relative position encoding  \n  - time-series specific transformer（如Informer, TimesNet）\n\n---\n\n### 修改建议：\n\n需要补充说明：\n\n1. 该实验仅代表：\n   > “naive patch-based transformer baseline”  \n\n2. 明确限制：\n   > does not generalize to all transformer architectures  \n\n否则 reviewer 很容易质疑：\n\n👉 “你只是实现得不好”\n\n---\n\n## ❗问题5：Clinical-MVP特征工程可能存在误差传播  \n\n问题点：\n\n- P-wave detection（自定义算法）  \n- QRS duration estimation  \n\n这些：\n\n👉 在噪声ECG中非常不稳定  \n\n---\n\n### 修改建议：\n\n必须补充：\n\n1. detection failure rate  \n2. feature extraction error analysis  \n3. robustness discussion  \n\n否则：\n\n👉 会被认为是“feature engineering bias”\n\n---\n\n## ❗问题6：缺少临床落地讨论  \n\n虽然性能很好，但缺乏：\n\n- clinical workflow integration  \n- real-world deployment  \n\n---\n\n### 建议补充：\n\n- inference latency  \n- false positive cost  \n- triage use case  \n\n---\n\n## ❗问题7：论文略长且信息密度过高  \n\n问题：\n\n- tables过多（>15个）  \n- 信息重复（如多个similar结果）  \n\n---\n\n### 修改建议：\n\n- 合并部分表格（尤其 VI–X）  \n- 将部分内容放入 supplementary  \n\n---\n\n# 四、编辑建议  \n\n## 🟠 结论：大修后重审（Major Revision）\n\n---\n\n## 理由：\n\n### 优势：\n- 选题重要（解释性 + 医疗AI）  \n- 方法完整（多模型 + 外部验证 + 扰动）  \n- 数据规模大  \n- 结果具有一致性  \n\n---\n\n### 但存在关键问题：\n\n1. **标签来源不可靠（最严重）**  \n2. 扰动实验的因果性表述不严谨  \n3. AFIB结论存在过度外推  \n4. Transformer对比不公平  \n5. 特征工程误差未分析  \n\n---\n\n## 如果修改到位，该论文潜力：\n\n👉 **JBHI中上水平论文（甚至可能成为引用较高工作）**\n\n---\n\n# （额外一句“审稿人视角直白评价”）\n\n这篇论文其实已经有一个很强的核心：\n\n> “用扰动 + 外部验证，把深度学习的黑箱行为映射到临床可解释信号结构”\n\n但目前的问题是：\n\n👉 **你在“证明机制”，但证据还不够严谨**\n\n把这点补强，这篇文章就不只是“性能论文”，而是：\n\n**机制型医学AI论文（更有价值）**"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-3",
+          "search_result_groups": [],
+          "request_id": "63b0ffe1-5475-408f-8647-2aa776171ab8",
+          "message_type": "next",
+          "turn_exchange_id": "df224483-fb16-4ea2-9d74-369a033b5e9a",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "b37292ef-d4fc-45bc-9041-16cb8793094c",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "b37292ef-d4fc-45bc-9041-16cb8793094c",
+      "children": []
+    }
+  },
+  "current_node": "18d65fc6-88fd-48c5-8409-b28ff23132da"
+}

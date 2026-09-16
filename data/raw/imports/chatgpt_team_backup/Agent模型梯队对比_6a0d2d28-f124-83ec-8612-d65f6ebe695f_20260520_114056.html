@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent模型梯队对比</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Agent模型梯队对比</h1>
+            <div class="metadata">ID: 6a0d2d28-f124-83ec-8612-d65f6ebe695f | 2026/5/20 11:40:56</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 11:40:54</span>
+                </div>
+                <div class="message-content">在agent使用场景下，claude-opus-4.6大概算在什么梯队？gpt5.4呢</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 11:40:55</span>
+                </div>
+                <div class="message-content">我会先核对这两个型号是否真实发布、各自的最新公开评测/定价/上下文能力，再按“agent 使用场景”而不是单纯聊天能力来分梯队。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 11:41:10</span>
+                </div>
+                <div class="message-content">截至 <strong>2026-05-20</strong>，在 <strong>agent 场景</strong>里，我会这么分：<br><br>| 模型 | 大概梯队 | 更适合的 agent 场景 | 主要短板 |<br>|---|---:|---|---|<br>| <strong>Claude Opus 4.6</strong> | <strong>S / S-</strong> | 代码 agent、终端任务、长链路执行、复杂推理、企业工作流 | 成本高；现在已不是 Anthropic 最新 Opus，Opus 4.7 已发布 |<br>| <strong>GPT-5.4</strong> | <strong>S / S+ 边缘</strong> | 通用 agent、知识工作 agent、浏览/工具调用、文档/表格/法律/金融类长任务、computer use | 现在也已被 GPT-5.5 取代；纯 coding 可能要看具体 scaffold |<br><br>我的判断：<strong>Claude Opus 4.6 是顶级 coding/terminal agent 模型；GPT-5.4 是更偏“全能型专业工作 agent”的顶级模型。</strong>  <br>Anthropic 自称 Opus 4.6 在 Terminal-Bench 2.0 等 agentic coding eval 上达到 SOTA，并强调 coding、agents、enterprise workflows；Terminal-Bench 公开榜上也能看到多个 Claude Opus 4.6 agent 条目排在前列。citeturn102331view0turn102331view4<br><br><strong>GPT-5.4 我会给更高一点的泛化评分。</strong> OpenAI 把它定位为“frontier model for complex professional work”，API 文档显示它有 1,050,000 context window，支持 text/image 输入，reasoning effort 到 xhigh；OpenAI 发布页也引用 Mercor 说 GPT-5.4 在 APEX-Agents 专业服务类长程 agent benchmark 上登顶，场景包括 slide decks、financial models、legal analysis。citeturn102331view2turn102331view1<br><br>但有个关键现实：<strong>这两个都不是当前最新的绝对旗舰。</strong> Claude 侧已经有 <strong>Opus 4.7</strong>；OpenAI 侧已经有 <strong>GPT-5.5</strong>，OpenAI 自己的 GPT-5.5 发布页给出的对比里，GPT-5.5 在 Terminal-Bench 2.0、tool use、computer use、专业任务等多项指标上超过 GPT-5.4。citeturn119888search4turn102331view5<br><br>我的实用排序大概是：<br><br><strong>通用 agent / 办公自动化 / 多工具调用：</strong>  <br>GPT-5.5 &gt; GPT-5.4 ≈ Claude Opus 4.7 &gt; Claude Opus 4.6<br><br><strong>代码 agent / repo 修改 / terminal 操作：</strong>  <br>GPT-5.5 / Claude Opus 4.7 / Claude Opus 4.6 都是第一梯队；Opus 4.6 仍然很强，不是“过气模型”。<br><br><strong>长上下文 agent：</strong>  <br>GPT-5.4 的 1M 级上下文很有优势，但长上下文不等于长任务稳定性；真正做 agent 还要看工具调用、checkpoint、错误恢复、成本和你的 scaffold。<br><br>一句话：<strong>Opus 4.6 算 S 级 coding-agent 模型；GPT-5.4 算 S 级通用-agent 模型，而且在知识工作/工具链/长上下文上更像全能主力。</strong> 如果你现在要选生产环境，别只看模型名，优先拿你的真实任务跑 20–50 个 case，通常差异会比公开榜单更诚实。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/20 11:42:00</span>
+                </div>
+                <div class="message-content">麻烦你根据bench来判断，不要根据外部评价</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 11:42:01</span>
+                </div>
+                <div class="message-content">好，那就把“厂商说法/社区口碑”降权，只看可复查的 benchmark。这里要注意：不同 bench 测的是不同 agent 能力，不能简单平均。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/20 11:42:32</span>
+                </div>
+                <div class="message-content">可以。<strong>只按 benchmark 来看</strong>，我会给这个结论：<br><br>| 场景 | Claude Opus 4.6 | GPT-5.4 | bench 结论 |<br>|---|---:|---:|---|<br>| <strong>Coding agent / repo 修 bug</strong> | <strong>S / S+</strong> | <strong>S</strong> | Opus 4.6 略强，但不是代差 |<br>| <strong>Terminal / shell / 系统任务 agent</strong> | <strong>S</strong> | <strong>S+</strong> | GPT-5.4 在 OpenAI 报告的 Terminal-Bench 2.0 分数更高，但公开 leaderboard 口径不完全一致 |<br>| <strong>Computer-use / GUI 操作 agent</strong> | <strong>S</strong> | <strong>S+</strong> | GPT-5.4 明显强 |<br>| <strong>Tool-use / 多工具编排</strong> | <strong>S</strong> | <strong>S / S+</strong> | 两者都强；GPT-5.4 在 BrowseComp、Toolathlon、MCP Atlas 数据很硬 |<br>| <strong>知识工作 agent：表格、文档、金融、法律、PPT</strong> | <strong>S</strong> | <strong>S+</strong> | GPT-5.4 更像这一类的旗舰 |<br>| <strong>长上下文 / 大代码库</strong> | <strong>S</strong> | <strong>S</strong> | 两者都有 1M 级上下文；实际看 harness 和上下文管理 |<br><br>## 具体 benchmark 依据<br><br><strong>Claude Opus 4.6 的强项在 coding-agent。</strong> Anthropic 官方写到 Opus 4.6 在 SWE-bench Verified 上做了 25 次 trial 平均，prompt 修改后看到 <strong>81.42%</strong>；它也声称 Opus 4.6 在 Terminal-Bench 2.0、HLE、GDPval-AA、BrowseComp 等多项评测领先。这个数据说明它不是普通 S，而是 coding-agent 的第一梯队上沿。citeturn480800view0<br><br><strong>GPT-5.4 的强项在“泛 agent”：computer use、工具使用、知识工作。</strong> OpenAI 官方 benchmark 里，GPT-5.4 在 <strong>SWE-Bench Pro Public 57.7%</strong>、<strong>Terminal-Bench 2.0 75.1%</strong>、<strong>OSWorld-Verified 75.0%</strong>、<strong>BrowseComp 82.7%</strong>、<strong>Toolathlon 54.6%</strong>、<strong>MCP Atlas 67.2%</strong>、<strong>Tau2-bench Telecom 98.9%</strong>。这些更偏真实 agent 能力，而不是单纯写代码。citeturn458686view0<br><br><strong>公开 Terminal-Bench leaderboard 要单独看。</strong> 它显示 <strong>Claude Code + Claude Opus 4.6 为 58.0%±2.9，排第 52</strong>；同页也有多种 agent harness 的差异，说明 Terminal-Bench 非常吃 scaffold/harness，不能把“模型裸能力”直接等同于排行榜分数。citeturn545727view1<br><br>所以我会这样定级：<br><br><strong>Claude Opus 4.6：S 级，偏 coding-agent 的 S+ 边缘。</strong>  <br>它在 SWE-bench Verified、代码审查、长代码库、多步修复这类任务上很强。要做 Cursor/Devin/Claude Code 这种“理解 repo → 修改 → 测试 → 迭代”的 agent，它是顶级候选。<br><br><strong>GPT-5.4：S+ 级泛 agent，coding 是 S。</strong>  <br>它不是只靠代码分数赢，而是 <strong>OSWorld、BrowseComp、MCP Atlas、Toolathlon、GDPval/知识工作</strong> 这些更接近“能不能完成复杂工作流”的 bench 更全面。做办公自动化、浏览器/电脑操作、文档表格/PPT、金融法律分析、多工具调用，它更像全能型旗舰。<br><br>我的最终判断：<br><br><strong>如果你的 agent 主要是 coding / repo 修复 / terminal 开发任务：Claude Opus 4.6 ≈ GPT-5.4，Opus 4.6 略偏优。</strong>  <br><strong>如果你的 agent 是通用工作流 / computer use / 多工具 / 文档表格研究：GPT-5.4 更高一档。</strong><br><br>一句话：<strong>Opus 4.6 是 coding-agent 顶级；GPT-5.4 是泛用 agent 顶级。</strong></div>
+            </div></div></div></body></html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Medical SFT Data</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Latest Medical SFT Data</h1>
+            <div class="metadata">ID: 6a03533b-1390-83ec-a6bd-a85054b48ddc | 2026/5/13 00:20:12</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/13 00:20:09</span>
+                </div>
+                <div class="message-content">帮我找一下latest medical SFT training data</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/13 00:20:14</span>
+                </div>
+                <div class="message-content">如果你要找 <strong>2025–2026 最新、还能真正用于 medical LLM SFT 的数据集</strong>，目前比较值得关注的其实已经从早期的 MedInstruct / ChatDoctor，转向了：<br><br>- medical reasoning SFT<br>- CoT / o1-style medical reasoning<br>- 多轮临床对话<br>- structured clinical NLP instruction<br>- multimodal medical instruction tuning<br><br>下面我按“现在业内真正还在用/值得用”的维度给你筛一下。<br><br>---<br><br># 1. 最新一代：Medical Reasoning SFT（最值得关注）<br><br>## urlOctoMed/Medical-Reasoning-SFT-Megahttps://huggingface.co/datasets/OctoMed/Medical-Reasoning-SFT-Mega<br><br>- 2025 年的数据<br>- 173 万条<br>- 带 reasoning trace（CoT）<br>- 医学推理风格非常接近 DeepSeek-R1/o1 路线<br>- 结构很适合：<br>  - Qwen3.x<br>  - Llama 3.x<br>  - DeepSeek distilled 系列<br>  - medical reasoning agent<br><br>核心字段：<br><br><pre><code class="language-python">{
+  "system_prompt": "...",
+  "question": "...",
+  "answer": "...",
+  "responses": "&lt;think&gt;...&lt;/think&gt; final answer"
+}</code></pre><br><br>特点：<br><br>- 明确区分：<br>  - reasoning<br>  - final answer<br>- 非常适合：<br>  - SFT + GRPO<br>  - reasoning distillation<br>  - test-time scaling<br>  - verifier training<br><br>规模和质量目前都属于第一梯队。 citeturn0search1<br><br>---<br><br>## urlOctoMed/II-Medical-SFThttps://huggingface.co/datasets/OctoMed/II-Medical-SFT<br><br>这个比上面更偏：<br><br>- step-by-step medical CoT<br>- reasoning alignment<br>- “think then answer”<br><br>220 万条。<br><br>如果你们准备做：<br><br>- 医疗推理<br>- 医疗 agent<br>- differential diagnosis<br>- reasoning robustness<br><br>这个其实非常适合。 citeturn0search4<br><br>---<br><br># 2. HuatuoGPT-o1 系路线（现在国内很多人在用）<br><br>## urlFreedomIntelligence/medical-o1-reasoning-SFThttps://huggingface.co/datasets/FreedomIntelligence/medical-o1-reasoning-SFT<br><br>这个现在非常火。<br><br>特点：<br><br>- 2025 年更新<br>- 专门给 HuatuoGPT-o1 做的<br>- verifier-based filtering<br>- GPT-4o 生成<br>- 医学可验证问题（verifiable medical problems）<br><br>重点是：<br><br>它不是普通 instruction dataset。<br><br>它本质是：<br><br>&gt; 医疗版 o1 reasoning corpus<br><br>很适合：<br><br>- reasoning SFT<br>- DeepSeek-R1 风格蒸馏<br>- long-CoT 医疗模型<br><br>而且很多 Qwen 医疗微调现在直接拿它做基础。 citeturn0search6turn0search7<br><br>---<br><br># 3. Microsoft 的 MediFlow / MediPhi（非常强）<br><br>## urlmicrosoft/MediPhi-Instructhttps://huggingface.co/microsoft/MediPhi-Instruct<br><br>微软 2025 ACL 的东西。<br><br>里面提到：<br><br>- MediFlow<br>- 250 万 instruction 数据<br>- 14 类 clinical NLP tasks<br>- 98 种 document types<br>- JSON structured output support<br><br>这类数据和传统 QA 最大区别：<br><br>它不是“医学问答”。<br><br>它是：<br><br>&gt; 临床 NLP instruction alignment<br><br>包括：<br><br>- ICD coding<br>- radiology<br>- entity extraction<br>- summarization<br>- structured output<br>- clinical IE<br><br>如果你们以后要做：<br><br>- EMR agent<br>- 病历结构化<br>- 医疗知识图谱<br>- 医疗信息抽取<br><br>这一类数据价值非常高。 citeturn0search2<br><br>---<br><br># 4. FineMed-SFT（目前性价比很高）<br><br>## urlhongzhouyu/FineMed-SFThttps://huggingface.co/datasets/hongzhouyu/FineMed-SFT<br><br>73 万条。<br><br>优点：<br><br>- 已经针对 Qwen2.5 / QwQ 风格做过适配<br>- reasoning 风格比较稳定<br>- 适合小模型<br>- 很适合：<br>  - 7B<br>  - 8B<br>  - 4B<br><br>比一些超大 medical corpus 更容易训稳。 citeturn0search5<br><br>---<br><br># 5. 老一代但仍有用的数据<br><br>## urllavita medical instruction tuning collectionhttps://huggingface.co/collections/lavita/medical-instruction-tuning-datasets<br><br>里面包括：<br><br>- MedInstruct<br>- ChatDoctor<br>- Alpaca-Med<br>- PMC-LLaMA instructions<br><br>这些现在的问题：<br><br>### 优点<br><br>- instruction 格式标准<br>- 便于快速起步<br>- 小模型容易收敛<br><br>### 缺点<br><br>- reasoning 很弱<br>- hallucination 较重<br>- 医学严谨性不足<br>- 很多是 GPT-3.5 时代 synthetic<br><br>现在更适合：<br><br>- warmup SFT<br>- alignment initialization<br>- multi-stage curriculum<br><br>不太适合直接当最终 SFT 主体。 citeturn0search0<br><br>---<br><br># 如果是你们现在这种“医疗问答 + KG + reasoning”方向<br><br>我会建议：<br><br>## 第一阶段：通用 medical instruction<br><br>用：<br><br>- MedInstruct<br>- ChatDoctor<br>- FineMed-SFT<br><br>目标：<br><br>- 学会医学语气<br>- 学会医疗 instruction following<br><br>---<br><br>## 第二阶段：reasoning SFT<br><br>加入：<br><br>- medical-o1-reasoning-SFT<br>- OctoMed reasoning datasets<br><br>目标：<br><br>- differential diagnosis<br>- clinical reasoning<br>- step-by-step thinking<br><br>---<br><br>## 第三阶段：你们自己的 KG augmentation<br><br>你们已经有：<br><br>- HiTA<br>- OMAHA<br>- 检验检查知识图谱<br><br>其实非常适合做：<br><br><pre><code class="language-text">KG-grounded instruction tuning</code></pre><br><br>例如：<br><br><pre><code class="language-json">{
+  "instruction": "...",
+  "kg_context": "...",
+  "response": "..."
+}</code></pre><br><br>这会比纯 medical QA 更有论文价值。<br><br>---<br><br># 目前一个明显趋势<br><br>2026 已经越来越不流行：<br><br><pre><code class="language-text">question -&gt; answer</code></pre><br><br>而更流行：<br><br><pre><code class="language-text">question
+-&gt; reasoning trace
+-&gt; verification
+-&gt; structured output
+-&gt; grounded evidence</code></pre><br><br>也就是：<br><br>- CoT<br>- verifier<br>- grounded reasoning<br>- agentic clinical workflow<br><br>这是现在 medical SFT 的主方向。<br><br>---<br><br>如果你愿意，我还能继续帮你整理：<br><br>1. 医疗 SFT 数据集质量排行榜  <br>2. 哪些适合 Qwen3.6-4B / 8B  <br>3. 哪些适合中文医疗  <br>4. 哪些 hallucination 最严重  <br>5. 哪些最适合继续做 DPO / GRPO  <br>6. 医疗 reasoning 数据清洗 pipeline  <br>7. 医疗 SFT 的推荐 curriculum  <br>8. 哪些数据已经被 benchmark 污染  <br>9. 如何把你们 KG 自动生成 SFT 数据  <br>10. 现在最新 medical agent training corpus<br><br></div>
+            </div></div></div></body></html>

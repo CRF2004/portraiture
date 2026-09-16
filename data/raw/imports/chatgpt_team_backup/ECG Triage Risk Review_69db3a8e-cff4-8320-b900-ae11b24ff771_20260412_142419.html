@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Triage Risk Review</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ECG Triage Risk Review</h1>
+            <div class="metadata">ID: 69db3a8e-cff4-8320-b900-ae11b24ff771 | 2026/4/12 14:24:19</div>
+        </div>
+        <div class="conversation">
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/12 14:24:19</span>
+                </div>
+                <div class="message-content">我先通读全文并对照方法、结果、讨论和附录，重点核查研究设计是否自洽、是否存在统计与可重复性问题。接下来我会给出偏严格的审稿意见；这篇稿件里已经能看到几处会直接影响发表资格的关键问题。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/12 14:24:19</span>
+                </div>
+                <div class="message-content">一、总体评价  <br><br>该稿件选题具有现实意义，聚焦 ECG 分诊中的不确定性识别、选择性预测和知识图谱可解释性，这一组合方向本身具有一定前沿性，也契合临床决策支持的研究热点。作者还加入了阈值扫描、风险-覆盖分析、成本敏感性分析、提示词扰动测试和失败分析，显示出较强的工程意识与应用导向。fileciteturn0file0  <br><br>但从北大核心期刊的审稿标准看，当前稿件存在较明显的“研究问题定义不统一、方法学闭环不足、统计报告与结果呈现前后矛盾、参考文献规范性不足”等问题。尤其是任务类型、标签结构、阈值选择方式、结果表述之间存在多处自洽性不足，导致论文目前更接近“概念验证草稿”而非可直接进入发表流程的定稿。fileciteturn0file0  <br><br>二、主要优点  <br><br>1. 研究主题有临床价值。稿件试图将知识图谱用于 ECG 结果的风险富集与人工复核分流，而不是将 KG 仅作为独立分类器，这种“黑箱模型 + 规则验证器”的思路比单纯提升分类精度更贴近真实分诊场景。fileciteturn0file0  <br><br>2. 文章结构基本完整。全文覆盖摘要、引言、相关工作、方法、实验、讨论、结论与附录，且主动提供了局限性、未来工作、计算效率和可复现性检查表，说明作者具备较强的规范意识。fileciteturn0file0  <br><br>3. 实验维度较丰富。稿件不仅报告总体准确率，还报告 coverage、AURC、ECE、Brier score、亚组分析、阈值稳定性和 prompt 扰动结果，说明作者尝试从多个侧面评估系统行为，而不是只给出单一指标。fileciteturn0file0  <br><br>4. 讨论部分没有完全回避局限。作者明确承认这是单中心回顾性研究，没有外部验证，也指出阈值选择存在与评估同折的问题，这一点比很多同类稿件更诚实。fileciteturn0file0  <br><br>三、存在问题与修改建议  <br><br>1. 研究对象与任务定义前后不一致，属于核心问题。方法部分将任务写成多标签形式，记为 \(y_i \in \{0,1\}^K\)，并据此定义 4 个 diagnostic conditions；但实验中的数据统计又呈现为 4 个互斥诊断类别，且总和正好等于样本总数，更像单标签多分类任务。与此同时，verifier conflict node 的定义又基于“4 个条件的逐项不一致比例”。这会直接影响模型输出层、损失函数、评价指标和临床解释方式。建议作者首先明确：到底是多标签、单标签多分类，还是层级式分诊任务，并据此统一全文所有公式、结果和表格。fileciteturn0file0  <br><br>2. 知识图谱构建过程过于模糊，缺乏可验证性。稿件仅说明使用 GPT-4o 从 ECG 模式中抽取规则，并“按临床指南验证后存入图谱”，但没有给出提示词模板、规则筛选标准、临床专家参与方式、专家数量、独立复核流程，也没有报告规则质量评价与一致性指标。对于医学 AI 论文，这部分是方法学可信度的关键，建议补充：KG 构建流程图、人工审核机制、规则数目、剔除规则的标准、以及至少一项专家一致性统计。fileciteturn0file0  <br><br>3. 阈值选择存在明显的评估泄漏风险。文中明确写到成本最优阈值 \(t^*=0.42\) 是在“同一组 5-fold CV folds 上”选择并评估的，作者自己也承认需要 nested CV 才能避免乐观偏倚。既然阈值是研究结论的一部分，就不能把同一数据折既用于调参又用于报告性能。建议使用内层选择阈值、外层评估性能的 nested CV，或至少在独立验证集上完成阈值确定。fileciteturn0file0  <br><br>4. 对照组设置偏弱，且统计结论不足以支撑优势主张。当前主要比较对象只有 confidence-based rejection，而没有纳入 conformal prediction、深度集成、温度校准后拒绝、或其他常见 selective prediction 基线。更重要的是，文中 McNemar 检验显示 KG verifier 与 confidence rejection 差异不显著（p=0.34），但正文仍多处使用“更优”“改进”等措辞。若主结论只是可解释性优势，而非统计性能优势，则应将性能表述降级为“相当”或“趋势更优”，并明确区分显著结果与探索性趋势。fileciteturn0file0  <br><br>5. 结果表述存在前后不一致。主结果中 Table I 报告 KG verifier 92.5% accuracy、+0.2 pp gain；但后文 Table VI 又写成 92.0–93.0%、+0.0 到 +0.4 pp，且 confidence rejection 的数值范围也不同。类似地，正文多次出现 70–74% coverage、71% coverage、72.8% coverage 等不同口径。对于核心期刊，这类内部矛盾会严重削弱可信度。建议全文统一一个主结果表，并删去与主结果冲突的重复表格。fileciteturn0file0  <br><br>6. “内部阈值稳定性”目前证据强度有限。作者用 20 个阈值映射到 5 个离散 operating points，再以这 5 个点的标准差 0.0067 证明稳定性。但这更多反映 conflict score 只有 5 个离散取值，而不是模型在真实扰动、跨样本漂移、跨中心场景下的稳健性。建议将“稳定性”改为“在本数据集与本阈值网格上的局部平稳性”，并增加 bootstrap、时间切分或外部数据验证。fileciteturn0file0  <br><br>7. 亚组分析有探索性价值，但目前统计学支撑不足。稿件强调低置信度样本提升最大（+6.5 pp），但没有看到交互作用检验、分层比较的多重检验校正，也没有证明这一结论不是由路由规则本身带来的结构性偏差。建议作者把这些分析明确标为 exploratory，并补充置信区间、交互项模型或置换检验。fileciteturn0file0  <br><br>8. 成本分析和端到端性能投影偏理论化，临床外推过强。文中给出理想化 reviewer accuracy 85–95% 时的端到端收益，但 reviewer 的真实准确率、工作负荷、分诊环境与病例构成都没有实测。当前这些数值更像情景推演，而不是临床效果证据。建议将结论限定为“决策分析上的潜在收益”，避免暗示实际临床获益。fileciteturn0file0  <br><br>9. prompt 相关实验样本量过小，且指标定义不够规范。40 个 stratified samples 的 prompt perturbation 只能说明“初步可用”，不足以支持“鲁棒”或“可复现”的强表述；同时 parse rate、add rate 等术语缺少严格定义，且没有给出统计检验。建议扩充样本量、定义每个指标的计算方式，并报告方差来源。fileciteturn0file0  <br><br>10. 可复现性与学术规范不足。附录中的 Reproducibility Checklist 里代码仓库还是 “[TODO: GitHub repository URL]”，数据又声明不可公开，而模型调用依赖 GPT-4o 及 DMXapi 商业网关；同时没有看到完整的 prompt、随机种子、软件版本和运行环境说明。这使得他人几乎无法独立复现。更严重的是，参考文献中出现大量占位符式作者名，如 “A. Author”“C. Author”“G. Author”等，这在正式学术写作中是不可接受的，属于硬伤。fileciteturn0file0  <br><br>11. 语言与排版仍需大幅校正。文中存在明显的术语不统一、符号异常和排版问题，例如 “parse rate”“add rate” 等表述不够规范，表格中出现“¿90%”这类字符异常，且同一结果在正文、表格、附录之间的口径不一致。若投核心期刊，英文表达、图表标题、缩略语首次出现说明、单位与百分比格式都需要全面修订。fileciteturn0file0  <br><br>四、编辑建议  <br><br><strong>总体判断：🔴 拒稿。</strong>  <br><br>理由是：该稿件虽然选题有价值，也具备一定方法组合创新，但目前存在基础性学术问题，包括任务定义不一致、阈值选择与评估存在泄漏、主结果表述前后冲突、参考文献明显不规范、可复现性严重不足。即便进行大修，也需要接近“重写式修改”才能达到北大核心期刊的基本要求。就当前版本而言，不建议接收。fileciteturn0file0</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/12 14:24:19</span>
+                </div>
+                <div class="message-content"># 角色<br>你是一名资深的医学与人工智能领域审稿专家，熟悉北大核心期刊的学术标准与评审流程。你曾在人工智能医学交叉领域发表或评审多篇高质量论文，熟悉科研论文的学术规范、逻辑结构、创新性与方法学严谨性要求。<br><br># 审稿任务<br>请你严格、系统地对以下论文进行审稿，论文主题为“Knowledge-Graph-Augmented Risk Enrichment for<br>ECG Triage: An Internally Validated Single-Dataset<br>Study with Scenario-Based Threshold Analysis”。你的目标是从多个角度提供专业、学术化的审稿意见，帮助作者改进论文质量，以达到北大核心期刊的发表标准。 <br><br># 审稿维度<br>请从以下方面系统性地进行审阅与评估：<br>1. 整体评价与科学价值  <br>   - 论文选题的创新性与前沿性是否突出？  <br>   - 是否具有明确的科研意义和社会/医学价值？  <br><br>2. 内容质量与逻辑性  <br>   - 研究问题是否明确，论证是否严谨？  <br>   - 文章结构是否清晰（摘要、引言、方法、结果、讨论、结论）？  <br>   - 逻辑链是否顺畅、论点是否有数据支撑？  <br><br>3. 方法与实验设计  <br>   - 模型、算法、数据来源与实验设计是否合理？  <br>   - 是否具备可重复性与科学性？  <br>   - 方法是否符合伦理及科研规范？  <br><br>4. 结果与讨论部分  <br>   - 结果展示是否清晰、完整？  <br>   - 图表、数据分析是否规范（如均值±SD、显著性标注等）？  <br>   - 讨论是否结合最新文献，是否能合理解释结果？  <br>   - 是否分析了研究局限与未来改进方向？  <br><br>5. 语言与格式规范  <br>   - 是否符合北大核心学术期刊写作规范？  <br>   - 英文摘要、关键词、图表说明是否准确？  <br>   - 是否存在语法、术语不一致或引用不规范的问题？  <br><br>6. 总体建议（必须输出）  <br>   请用以下分类之一总结你的总体结论：  <br>   ✅ 接受（Accept）：内容完整，质量高，可直接发表。  <br>   🟡 小修后接收（Minor Revision）：结构合理但需少量修改。  <br>   🟠 大修后重审（Major Revision）：存在逻辑或方法学问题，需大幅修改。 <br>   🔴 拒稿（Reject）：存在严重缺陷或学术质量不达标。  <br><br># 输出格式<br>请严格按照以下结构输出审稿意见：<br>一、总体评价  <br>（简要评价论文选题意义、创新性与整体质量）<br><br>二、主要优点  <br>（列出论文在理论、方法或应用方面的亮点）<br><br>三、存在问题与修改建议  <br>（从逻辑、方法、实验、数据、讨论、语言规范等角度逐条指出）<br><br>四、编辑建议  <br>（给出你的总体判断：接受/小修/大修/拒稿，并简述理由）<br><br># 输出要求<br>- 语气：专业、学术、客观  <br>- 格式：条理清晰，分点列述  <br>- 内容：针对性强、可操作性高  <br>- 若发现重大逻辑或伦理问题，请明确指出并说明原因。<br><br># 输入内容 <br>论文全文见pdf</div>
+            </div></div></div></body></html>

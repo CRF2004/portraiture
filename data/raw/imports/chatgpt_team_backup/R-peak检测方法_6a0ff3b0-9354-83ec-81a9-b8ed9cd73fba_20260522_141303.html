@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R-peak检测方法</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>R-peak检测方法</h1>
+            <div class="metadata">ID: 6a0ff3b0-9354-83ec-81a9-b8ed9cd73fba | 2026/5/22 14:13:03</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/22 14:13:02</span>
+                </div>
+                <div class="message-content">[object Object]<br>我想请教一下，这里R-peak一般是怎么看的？有这么多波峰，一般是看某个区间内的最高峰吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/22 14:13:03</span>
+                </div>
+                <div class="message-content">是的，R-peak（R波峰）本质上就是 <strong>QRS复合波里最尖、最高的那个主峰</strong>，但实际检测时并不是“全局最高峰”，而是：<br><br>&gt; <strong>在一个合理的时间窗口（RR interval 预期范围）内寻找局部最大峰。</strong><br><br>你这张图里已经做了 RR regularization（RR间期规则化），每两个虚线之间大约 480 ms，所以算法会默认：<br><br>- 下一次心跳大概会出现在 480 ms 后<br>- 然后在那个时间窗附近找“最像R波”的峰<br><br>图里那些真正被识别为 R-peak 的位置，是这些特别尖锐的大峰：<br><br>- ~3850 ms<br>- ~4300 ms<br>- ~4800 ms<br>- ~5300 ms<br><br>而不是所有小波峰。<br><br>---<br><br>## 为什么不能直接选“最高峰”？<br><br>因为 ECG 里会有很多干扰：<br><br>- P波<br>- T波<br>- 噪声<br>- 肌电干扰<br>- 基线漂移<br><br>有时候 T 波甚至比 R 波还高。<br><br>所以真正的 R-peak 检测一般会结合：<br><br>### 1. 幅值（amplitude）<br><br>R波通常比较高。<br><br>---<br><br>### 2. 尖锐程度（斜率 / slope）<br><br>R波上升下降非常快。<br><br>QRS复合波的高频特征很明显。<br><br>---<br><br>### 3. 时间约束（refractory period）<br><br>比如：<br><br>- 人不可能 100 ms 连续跳两次心<br>- 所以检测到一个 R 后，<br>  接下来 200~300 ms 内的峰会被忽略<br><br>这就是你说的：<br><br>&gt; “是不是在某个区间内取最高峰？”<br><br>实际上很多算法就是这么干的。<br><br>---<br><br>## 最经典的做法：Pan–Tompkins<br><br>经典 ECG R-peak 检测流程：<br><br>1. Bandpass filter<br>2. 求导（增强斜率）<br>3. 平方（突出尖峰）<br>4. Moving window integration<br>5. 在窗口里找局部最大值<br>6. 用 RR interval 做校正<br><br>核心思想：<br><br>&gt; “既高，又尖，而且时间位置合理”的峰，<br>才认为是 R-peak。<br><br>---<br><br>## 你这张图里的情况<br><br>比如 4300 ms 附近：<br><br>虽然前后有很多小波峰：<br><br>- 4200 ms<br>- 4250 ms<br>- 4350 ms<br><br>但真正被选中的：<br><br>- 是那个局部区域内最尖锐、最显著的峰<br><br>因此判定为 R。<br><br>---<br><br>## 一个非常实用的经验<br><br>如果你是人工看 ECG：<br><br>### R峰通常满足：<br><br>- 最尖<br>- 最窄<br>- 上升最快<br>- 周期性出现<br><br>而不是单纯“最高”。<br><br>---<br><br>## 简单理解（很重要）<br><br>很多R-peak算法本质就是：<br><br><pre><code class="language-text">预测下一次心跳大概在哪
+↓
+在那个窗口内
+找最像QRS的局部最大峰
+↓
+更新RR interval
+↓
+继续下一次</code></pre><br><br>你图里的 “480 ms” 就是在做这个节律约束。</div>
+            </div></div></div></body></html>

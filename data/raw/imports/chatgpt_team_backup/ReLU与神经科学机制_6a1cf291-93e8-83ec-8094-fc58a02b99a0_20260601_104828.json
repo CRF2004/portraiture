@@ -1,0 +1,509 @@
+{
+  "title": "ReLU与神经科学机制",
+  "create_time": 1780282108.701331,
+  "update_time": 1780282464.733573,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a1cf291-93e8-83ec-8094-fc58a02b99a0",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://docs.google.com/document/d/",
+    "https://www.openai.com"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "241e6b15-28e2-42ca-a61f-3924f432bf8d"
+      ]
+    },
+    "241e6b15-28e2-42ca-a61f-3924f432bf8d": {
+      "id": "241e6b15-28e2-42ca-a61f-3924f432bf8d",
+      "message": {
+        "id": "241e6b15-28e2-42ca-a61f-3924f432bf8d",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "85892514-4dec-4314-b754-bcd19284efbd"
+      ]
+    },
+    "85892514-4dec-4314-b754-bcd19284efbd": {
+      "id": "85892514-4dec-4314-b754-bcd19284efbd",
+      "message": {
+        "id": "85892514-4dec-4314-b754-bcd19284efbd",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "241e6b15-28e2-42ca-a61f-3924f432bf8d",
+      "children": [
+        "de872ef1-be46-4426-8e05-98b520a1a7ca"
+      ]
+    },
+    "de872ef1-be46-4426-8e05-98b520a1a7ca": {
+      "id": "de872ef1-be46-4426-8e05-98b520a1a7ca",
+      "message": {
+        "id": "de872ef1-be46-4426-8e05-98b520a1a7ca",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "85892514-4dec-4314-b754-bcd19284efbd",
+      "children": [
+        "84e347fb-c9b0-4ae1-be95-fcd767419c7d"
+      ]
+    },
+    "84e347fb-c9b0-4ae1-be95-fcd767419c7d": {
+      "id": "84e347fb-c9b0-4ae1-be95-fcd767419c7d",
+      "message": {
+        "id": "84e347fb-c9b0-4ae1-be95-fcd767419c7d",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "de872ef1-be46-4426-8e05-98b520a1a7ca",
+      "children": [
+        "cbeecd4f-1fbb-4506-9d7f-85716595d1e4"
+      ]
+    },
+    "cbeecd4f-1fbb-4506-9d7f-85716595d1e4": {
+      "id": "cbeecd4f-1fbb-4506-9d7f-85716595d1e4",
+      "message": {
+        "id": "cbeecd4f-1fbb-4506-9d7f-85716595d1e4",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780282105.436,
+        "update_time": 1780282132.929515,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "sigmoid容易梯度消失，最终人们更喜欢用ReLU来替代了。但是ReLU不符合神经科学的设计吧。人们为什么不是去优化更新公式，而是去设计一个不太符合神经科学的激活函数？直觉来说，自然演化出来的神经科学机制会不会更精确高效？"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-fd1f30da-3d1f-4519-8b71-ae959d57ee56",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-fd1f30da-3d1f-4519-8b71-ae959d57ee56:IN",
+          "request_id": "wfr_019e81138b28774cb95982f3847fc8e0",
+          "message_source": null,
+          "turn_exchange_id": "6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "84e347fb-c9b0-4ae1-be95-fcd767419c7d",
+      "children": [
+        "8c54d94d-98d4-4dac-813c-1e554d0bab78"
+      ]
+    },
+    "8c54d94d-98d4-4dac-813c-1e554d0bab78": {
+      "id": "8c54d94d-98d4-4dac-813c-1e554d0bab78",
+      "message": {
+        "id": "8c54d94d-98d4-4dac-813c-1e554d0bab78",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780282108.5625224,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "wfr_019e81138b28774cb95982f3847fc8e0",
+          "message_type": "next",
+          "turn_exchange_id": "6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "cbeecd4f-1fbb-4506-9d7f-85716595d1e4",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-fd1f30da-3d1f-4519-8b71-ae959d57ee56:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "cbeecd4f-1fbb-4506-9d7f-85716595d1e4",
+      "children": [
+        "94394cb2-c722-42c0-91b9-2a5815067ea9"
+      ]
+    },
+    "94394cb2-c722-42c0-91b9-2a5815067ea9": {
+      "id": "94394cb2-c722-42c0-91b9-2a5815067ea9",
+      "message": {
+        "id": "94394cb2-c722-42c0-91b9-2a5815067ea9",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780282111.377839,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "d5f7f347-0060-419e-885e-f2ebe72c4543"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e81138b28774cb95982f3847fc8e0",
+          "message_type": "next",
+          "turn_exchange_id": "6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "d5f7f347-0060-419e-885e-f2ebe72c4543",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780282108.6068642,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-fd1f30da-3d1f-4519-8b71-ae959d57ee56:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8c54d94d-98d4-4dac-813c-1e554d0bab78",
+      "children": [
+        "75431039-cf9a-4ca0-9241-629cc9e36284"
+      ]
+    },
+    "75431039-cf9a-4ca0-9241-629cc9e36284": {
+      "id": "75431039-cf9a-4ca0-9241-629cc9e36284",
+      "message": {
+        "id": "75431039-cf9a-4ca0-9241-629cc9e36284",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780282113.176697,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 4s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 4,
+          "reasoning_start_time": 1780282108.6068642,
+          "reasoning_end_time": 1780282113.1688979,
+          "request_id": "wfr_019e81138b28774cb95982f3847fc8e0",
+          "message_type": "next",
+          "turn_exchange_id": "6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "94394cb2-c722-42c0-91b9-2a5815067ea9",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-fd1f30da-3d1f-4519-8b71-ae959d57ee56:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "94394cb2-c722-42c0-91b9-2a5815067ea9",
+      "children": [
+        "9fcf90a5-7a76-457e-89b3-f74ed007bd09"
+      ]
+    },
+    "9fcf90a5-7a76-457e-89b3-f74ed007bd09": {
+      "id": "9fcf90a5-7a76-457e-89b3-f74ed007bd09",
+      "message": {
+        "id": "9fcf90a5-7a76-457e-89b3-f74ed007bd09",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780282108.600189,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "你的直觉有价值，但这里有几个关键误区需要拆开。\n\n**第一，ReLU 并没有那么“不符合神经科学”。**  \n如果把神经元看成“输入不到阈值就基本不放电，超过阈值后放电率随输入增强而增加”，那么 ReLU：\n\n\\[\nf(x)=\\max(0,x)\n\\]\n\n反而比 sigmoid 更像一种粗糙的“阈值—放电率”模型。真实神经元当然不是无限线性的，也有饱和、时序、脉冲、适应性、噪声、神经调质等复杂机制。但从“低于阈值沉默，高于阈值响应”这个角度看，ReLU 并不荒谬。\n\nsigmoid 更像早期人们对“神经元输出在 0 到 1 之间”的数学抽象，但它有个大问题：两端饱和。输入很大或很小时，导数接近 0，梯度就传不动了。\n\n---\n\n**第二，为什么不优先优化更新公式？因为梯度消失不只是优化器的问题。**\n\n更新公式大概是：\n\n\\[\nw \\leftarrow w - \\eta \\nabla_w L\n\\]\n\n你当然可以改学习率、动量、Adam、RMSProp、初始化、归一化等等。人们也确实这么做了。\n\n但问题在于：如果反向传播时，梯度在每一层都乘上一个很小的导数，比如 sigmoid 的导数最大也只有 0.25，那么很多层之后：\n\n\\[\n0.25^{10}, 0.25^{20}, 0.25^{50}\n\\]\n\n会迅速接近 0。也就是说，优化器拿到的梯度本身已经很弱了。你再怎么设计更新公式，也是在“拿着几乎没有信号的梯度”做文章。\n\nReLU 的优势是直接改变了信号传播结构：正区间导数是 1，不会像 sigmoid 那样持续压缩梯度。\n\n所以这不是“大家懒得优化更新公式”，而是发现：**激活函数、初始化、归一化、残差连接、优化器要一起配合。ReLU 是其中一个非常便宜但有效的改动。**\n\n---\n\n**第三，机器学习的目标和生物神经系统的目标不一样。**\n\n大脑不是为了最小化交叉熵、跑 GPU 矩阵乘法、用反向传播训练 70 层网络而演化出来的。它要解决的是：\n\n生存、低功耗、在线学习、持续适应、运动控制、感知整合、鲁棒性、社会行为、身体反馈、局部学习、化学调节、发育约束。\n\n深度学习系统的目标通常是：\n\n在大数据集上，用大量矩阵运算，稳定快速地优化一个明确损失函数。\n\n这两个系统都叫“神经网络”，但约束完全不同。生物机制可能在能耗、鲁棒性、小样本适应、连续学习上更强；但不代表它的每个细节都适合直接搬到现代人工神经网络里。\n\n---\n\n**第四，自然演化出来的机制不一定“精确高效”，而是“足够能活”。**\n\n进化不是工程师。它不会从零设计一个全局最优系统，而是在已有结构上不断打补丁。很多生物机制是历史路径依赖的产物。\n\n比如眼睛、脊椎、代谢系统、免疫系统，都非常厉害，但也有明显的工程缺陷。大脑同样如此。它很强，但它不是为现代深度学习训练范式优化的。\n\n所以“自然演化出来的机制会不会更精确高效？”答案是：\n\n**在自然环境和生物约束下，可能非常高效；在 GPU 上训练深层可微模型时，不一定。**\n\n---\n\n**第五，其实研究者一直在借鉴神经科学，只是不会照搬。**\n\n很多思想都和神经科学有关系，比如：\n\n注意力机制、稀疏激活、脉冲神经网络、局部学习、Hebbian learning、预测编码、能量模型、神经调制、记忆系统、强化学习。\n\n但真正落地时，研究者通常会问一个更现实的问题：\n\n**这个机制能不能稳定训练？能不能扩展？能不能并行？能不能在数据和硬件上表现好？**\n\nReLU 成功不是因为它“更像大脑”，而是因为它在工程上非常合适：简单、便宜、梯度好传、产生稀疏激活、训练深层网络更稳定。\n\n---\n\n我的看法是：  \n**神经科学是重要灵感来源，但不是人工智能设计的最高标准。**\n\n更好的路线不是“完全模仿大脑”，也不是“完全无视大脑”，而是理解大脑为什么这样工作，然后抽象出适合机器系统的原则。\n\nReLU 就是这种思路下的产物之一：它不是真实神经元，但抓住了“阈值激活”和“非饱和传播”这两个对深度网络很有用的特征。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "search_result_groups": [],
+          "request_id": "wfr_019e81138b28774cb95982f3847fc8e0",
+          "message_type": "next",
+          "turn_exchange_id": "6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "75431039-cf9a-4ca0-9241-629cc9e36284",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-fd1f30da-3d1f-4519-8b71-ae959d57ee56:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-6b0e8adc-c31e-4821-8ba5-c35fe96a9067",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "75431039-cf9a-4ca0-9241-629cc9e36284",
+      "children": [
+        "bad8d98b-9254-4833-aaf7-be0a8268b00d"
+      ]
+    },
+    "bad8d98b-9254-4833-aaf7-be0a8268b00d": {
+      "id": "bad8d98b-9254-4833-aaf7-be0a8268b00d",
+      "message": {
+        "id": "bad8d98b-9254-4833-aaf7-be0a8268b00d",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780282442.371,
+        "update_time": 1780282463.476289,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "所以从底层来说，机器系统和生物系统之间的固有差异就是工程设计和神经科学之间差异的原因吗"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-59bf5a61-95fa-44f0-9271-a646bdea3ddf",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-59bf5a61-95fa-44f0-9271-a646bdea3ddf:IN",
+          "request_id": "wfr_019e8119a0427e10973ca43efa798250",
+          "message_source": null,
+          "turn_exchange_id": "3e99dec9-0d53-4ad8-9279-635e48e57e14",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9fcf90a5-7a76-457e-89b3-f74ed007bd09",
+      "children": [
+        "61c8677c-bd98-4d97-a0f7-e34d1e2205b5"
+      ]
+    },
+    "61c8677c-bd98-4d97-a0f7-e34d1e2205b5": {
+      "id": "61c8677c-bd98-4d97-a0f7-e34d1e2205b5",
+      "message": {
+        "id": "61c8677c-bd98-4d97-a0f7-e34d1e2205b5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780282445.448315,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "是的，**底层差异是主要原因之一**。更准确地说：\n\n> 工程设计和神经科学设计的差异，不是因为某一边“更聪明”，而是因为它们面对的物理载体、优化目标、约束条件和可用学习机制都不一样。\n\n可以从四层看。\n\n**第一，硬件载体不同。**  \n机器学习主要跑在 GPU/TPU 上，擅长大规模矩阵乘法、同步并行计算、精确数值更新。生物大脑是湿件系统，靠脉冲、电化学信号、局部连接、神经递质、噪声和时间动态工作。\n\n所以工程上会偏爱 ReLU、矩阵乘法、反向传播、批量训练，因为这些东西适合硅基硬件。大脑则偏爱局部信号、稀疏放电、异步计算和低功耗，因为这些适合生物组织。\n\n**第二，优化目标不同。**  \n人工神经网络的目标通常很明确：最小化一个损失函数，比如分类错误、预测误差、语言建模损失。\n\n生物系统的目标不是一个干净的 loss function，而是长期生存、繁殖、能耗控制、运动协调、探索环境、社会互动、身体稳态等一堆混合目标。\n\n所以人工系统会设计成“容易求导、容易训练、容易扩展”；生物系统会演化成“够鲁棒、够省能、能实时适应”。\n\n**第三，学习机制不同。**  \n现代深度学习大量依赖反向传播：先前向算输出，再把误差信号一层层传回去，精确调整参数。\n\n大脑很可能没有这种全局、精确、同步的反向传播机制。它更多依赖局部学习规则、突触可塑性、奖励信号、注意调制、睡眠巩固、发育过程和环境交互。\n\n这就导致设计偏好完全不同。  \n在反向传播体系里，ReLU 很好，因为它让梯度流动顺畅。  \n在生物体系里，一个神经元的价值不只在于“导数好不好”，还在于放电模式、时序编码、能耗、连接稳定性和局部调节。\n\n**第四，工程系统可以“作弊”。**  \n机器系统可以用很多生物没有的手段：全局损失函数、海量标注数据、批处理、浮点矩阵乘法、统一时钟、显式梯度、反复遍历数据集、复制模型、回滚 checkpoint。\n\n这些不一定“像大脑”，但非常有效。\n\n反过来，大脑也有机器系统没有的优势：低功耗、小样本学习、持续学习、身体嵌入、鲁棒感知、因果互动、主动探索、终身适应。\n\n所以两边不是简单的谁先进谁落后，而是各自在自己的约束下走出了不同路线。\n\n一个很好的总结是：\n\n> **人工神经网络追求的是在现有计算硬件和数学优化框架下高效训练；生物神经系统追求的是在生命约束下稳定生存和适应。**\n\n因此，工程设计不必完全符合神经科学。真正重要的是：它是否服务于当前系统的目标和约束。\n\n不过你的直觉仍然值得保留：  \n未来 AI 想在低功耗、持续学习、具身智能、小样本泛化、鲁棒性上继续进步，很可能还要重新向生物系统借很多东西。ReLU、反向传播、大模型这条路很强，但不等于已经覆盖了智能的全部可能性。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "search_result_groups": [],
+          "request_id": "wfr_019e8119a0427e10973ca43efa798250",
+          "message_type": "next",
+          "turn_exchange_id": "3e99dec9-0d53-4ad8-9279-635e48e57e14",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "bad8d98b-9254-4833-aaf7-be0a8268b00d",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-59bf5a61-95fa-44f0-9271-a646bdea3ddf:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-3e99dec9-0d53-4ad8-9279-635e48e57e14",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "bad8d98b-9254-4833-aaf7-be0a8268b00d",
+      "children": []
+    }
+  },
+  "current_node": "61c8677c-bd98-4d97-a0f7-e34d1e2205b5"
+}

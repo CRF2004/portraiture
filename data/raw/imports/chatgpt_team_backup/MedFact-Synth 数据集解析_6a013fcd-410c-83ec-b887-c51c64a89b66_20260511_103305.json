@@ -1,0 +1,1470 @@
+{
+  "title": "MedFact-Synth 数据集解析",
+  "create_time": 1778466785.752153,
+  "update_time": 1778467283.522379,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a013fcd-410c-83ec-b887-c51c64a89b66",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.progressive.com",
+    "physionet.org",
+    "https://github.com/openclaw/openclaw",
+    "https://www.statefarm.com",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "774060e0-07d2-4f14-a1ad-a13362a2a0d5"
+      ]
+    },
+    "774060e0-07d2-4f14-a1ad-a13362a2a0d5": {
+      "id": "774060e0-07d2-4f14-a1ad-a13362a2a0d5",
+      "message": {
+        "id": "774060e0-07d2-4f14-a1ad-a13362a2a0d5",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "4f32e79a-0dc1-432b-b553-54167408ace7"
+      ]
+    },
+    "4f32e79a-0dc1-432b-b553-54167408ace7": {
+      "id": "4f32e79a-0dc1-432b-b553-54167408ace7",
+      "message": {
+        "id": "4f32e79a-0dc1-432b-b553-54167408ace7",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "774060e0-07d2-4f14-a1ad-a13362a2a0d5",
+      "children": [
+        "9cf16e30-124a-4e09-b559-63f3082c1155"
+      ]
+    },
+    "9cf16e30-124a-4e09-b559-63f3082c1155": {
+      "id": "9cf16e30-124a-4e09-b559-63f3082c1155",
+      "message": {
+        "id": "9cf16e30-124a-4e09-b559-63f3082c1155",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4f32e79a-0dc1-432b-b553-54167408ace7",
+      "children": [
+        "a16c98b4-151f-458d-8993-1f6354bc7e14"
+      ]
+    },
+    "a16c98b4-151f-458d-8993-1f6354bc7e14": {
+      "id": "a16c98b4-151f-458d-8993-1f6354bc7e14",
+      "message": {
+        "id": "a16c98b4-151f-458d-8993-1f6354bc7e14",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778466785.560692,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "89bc4902-efd1-4554-bb0d-9d72a4612a2e",
+          "message_source": null,
+          "turn_exchange_id": "4a8aae68-812e-41e7-acb9-3a21b48cae9f",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9cf16e30-124a-4e09-b559-63f3082c1155",
+      "children": [
+        "4b87e31a-d309-46f4-b07f-b9278fc9e854"
+      ]
+    },
+    "4b87e31a-d309-46f4-b07f-b9278fc9e854": {
+      "id": "4b87e31a-d309-46f4-b07f-b9278fc9e854",
+      "message": {
+        "id": "4b87e31a-d309-46f4-b07f-b9278fc9e854",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778466785.01,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "https://huggingface.co/datasets/ncbi/MedFact-Synth 这个数据集的格式怎么理解？我想把它整理成微调的形式，要怎么做？"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "89bc4902-efd1-4554-bb0d-9d72a4612a2e",
+          "message_source": null,
+          "turn_exchange_id": "4a8aae68-812e-41e7-acb9-3a21b48cae9f",
+          "resolved_model_slug": "gpt-5-5",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a16c98b4-151f-458d-8993-1f6354bc7e14",
+      "children": [
+        "f6acbf40-aac6-497a-af64-bdab1d8ffccb"
+      ]
+    },
+    "f6acbf40-aac6-497a-af64-bdab1d8ffccb": {
+      "id": "f6acbf40-aac6-497a-af64-bdab1d8ffccb",
+      "message": {
+        "id": "f6acbf40-aac6-497a-af64-bdab1d8ffccb",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778466785.6981897,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "89bc4902-efd1-4554-bb0d-9d72a4612a2e",
+          "message_type": "next",
+          "turn_exchange_id": "4a8aae68-812e-41e7-acb9-3a21b48cae9f",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "4b87e31a-d309-46f4-b07f-b9278fc9e854",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4b87e31a-d309-46f4-b07f-b9278fc9e854",
+      "children": [
+        "18772dca-e757-4765-9722-0988fb7b1aef"
+      ]
+    },
+    "18772dca-e757-4765-9722-0988fb7b1aef": {
+      "id": "18772dca-e757-4765-9722-0988fb7b1aef",
+      "message": {
+        "id": "18772dca-e757-4765-9722-0988fb7b1aef",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778466785.723946,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "citations": [],
+          "content_references": [
+            {
+              "matched_text": "entity[\"<entity_category>\", \"<entity_name>\", \"<city, state/province, country | address>\"]",
+              "prefix": null,
+              "start_idx": 3185,
+              "end_idx": 3277,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "<entity_name>",
+              "prompt_text": "<entity_name>",
+              "type": "entity",
+              "name": "<entity_name>",
+              "category": "<entity_category>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "<city, state/province, country | address>"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "iy-knBu-62cG0Gbh"
+            },
+            {
+              "matched_text": "entity[\"<ref_id>\", \"<entity_name>\"]",
+              "prefix": null,
+              "start_idx": 3341,
+              "end_idx": 3379,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "<entity_name>",
+              "prompt_text": "<entity_name>",
+              "type": "entity",
+              "name": "<entity_name>",
+              "category": "<ref_id>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "XyfNQqxzKvCRqhXN"
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\",1]",
+              "prefix": null,
+              "start_idx": 6886,
+              "end_idx": 6930,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "Mza_HceKvlJ3yRRM"
+            },
+            {
+              "matched_text": "product[\"turnXproductY\", \"Levi's Jeans 500\", {\"render_as\":\"hero\", \"description\":\"$single-sentence-product-description\"}]",
+              "prefix": null,
+              "start_idx": 6992,
+              "end_idx": 7115,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "product[\"turnXproductY\", \"Product Name\", {\"render_as\":\"block\", \"description\":\"$single-sentence-product-description\"}]",
+              "prefix": null,
+              "start_idx": 7187,
+              "end_idx": 7307,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "products{\"selections\":[[\"turnXproductY\",\"Display title\"],[\"turnXproductZ,turnXproductW\",\"Merged card title\"]],\"tags\":[\"optional tag\",\"optional tag\"]}",
+              "prefix": null,
+              "start_idx": 7854,
+              "end_idx": 8006,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\"]",
+              "prefix": null,
+              "start_idx": 8527,
+              "end_idx": 8569,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "Mza_HceKvlJ3yRRM"
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_1_FROM_TOOL>\",\"Product A\"]",
+              "prefix": null,
+              "start_idx": 8673,
+              "end_idx": 8723,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product A",
+              "prompt_text": "Product A",
+              "type": "entity",
+              "name": "Product A",
+              "category": "<PRODUCT_REF_1_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "2O6REpxTJ1kp7XB2"
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_2_FROM_TOOL>\",\"Product B\"]",
+              "prefix": null,
+              "start_idx": 8726,
+              "end_idx": 8776,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product B",
+              "prompt_text": "Product B",
+              "type": "entity",
+              "name": "Product B",
+              "category": "<PRODUCT_REF_2_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "p5kycc60hSAojyfr"
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_3_FROM_TOOL>\",\"Product C\"]",
+              "prefix": null,
+              "start_idx": 8779,
+              "end_idx": 8829,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product C",
+              "prompt_text": "Product C",
+              "type": "entity",
+              "name": "Product C",
+              "category": "<PRODUCT_REF_3_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "mzMGmsXQ9upbmNRm"
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_4_FROM_TOOL>\",\"Product D\"]",
+              "prefix": null,
+              "start_idx": 8832,
+              "end_idx": 8882,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product D",
+              "prompt_text": "Product D",
+              "type": "entity",
+              "name": "Product D",
+              "category": "<PRODUCT_REF_4_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "RVXp_nHkNfZhQckS"
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_5_FROM_TOOL>\",\"Product E\"]",
+              "prefix": null,
+              "start_idx": 8885,
+              "end_idx": 8935,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product E",
+              "prompt_text": "Product E",
+              "type": "entity",
+              "name": "Product E",
+              "category": "<PRODUCT_REF_5_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "kYnxUNgMW4J82VMi"
+            },
+            {
+              "matched_text": "explore_more{\\\"selections\\\":[[\\\"turn0product1\\\",\\\"Product Title\\\"],[\\\"turn0product2\\\",\\\"Product Title\\\"],...]}",
+              "prefix": null,
+              "start_idx": 9531,
+              "end_idx": 9644,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\"]",
+              "prefix": null,
+              "start_idx": 14927,
+              "end_idx": 14969,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": "Mza_HceKvlJ3yRRM"
+            }
+          ],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5",
+          "request_id": "89bc4902-efd1-4554-bb0d-9d72a4612a2e",
+          "message_type": "next",
+          "turn_exchange_id": "4a8aae68-812e-41e7-acb9-3a21b48cae9f",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "f6acbf40-aac6-497a-af64-bdab1d8ffccb",
+          "can_save": false
+        },
+        "recipient": "assistant",
+        "channel": null
+      },
+      "parent": "f6acbf40-aac6-497a-af64-bdab1d8ffccb",
+      "children": [
+        "0717f751-20cf-4630-a98f-c280cef820a7"
+      ]
+    },
+    "0717f751-20cf-4630-a98f-c280cef820a7": {
+      "id": "0717f751-20cf-4630-a98f-c280cef820a7",
+      "message": {
+        "id": "0717f751-20cf-4630-a98f-c280cef820a7",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778466785.6957989,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "unknown",
+          "response_format_name": null,
+          "text": "search(\"https://huggingface.co/datasets/ncbi/MedFact-Synth \\u8fd9\\u4e2a\\u6570\\u636e\\u96c6\\u7684\\u683c\\u5f0f\\u600e\\u4e48\\u7406\\u89e3\\uff1f\\u6211\\u60f3\\u628a\\u5b83\\u6574\\u7406\\u6210\\u5fae\\u8c03\\u7684\\u5f62\\u5f0f\\uff0c\\u8981\\u600e\\u4e48\\u505a\\uff1f\")"
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5",
+          "request_id": "89bc4902-efd1-4554-bb0d-9d72a4612a2e",
+          "message_type": "next",
+          "turn_exchange_id": "4a8aae68-812e-41e7-acb9-3a21b48cae9f",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "18772dca-e757-4765-9722-0988fb7b1aef",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web",
+        "channel": null
+      },
+      "parent": "18772dca-e757-4765-9722-0988fb7b1aef",
+      "children": [
+        "d6808cc4-b721-481f-aaac-0d0de3684748"
+      ]
+    },
+    "d6808cc4-b721-481f-aaac-0d0de3684748": {
+      "id": "d6808cc4-b721-481f-aaac-0d0de3684748",
+      "message": {
+        "id": "d6808cc4-b721-481f-aaac-0d0de3684748",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1778466786.3863573,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "ncbi MedFact-Synth dataset format Hugging Face"
+            ]
+          },
+          "request_id": "89bc4902-efd1-4554-bb0d-9d72a4612a2e",
+          "message_type": "next",
+          "turn_exchange_id": "4a8aae68-812e-41e7-acb9-3a21b48cae9f",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "ce24ae51-4aa8-46f7-b900-f45d815efc30",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0717f751-20cf-4630-a98f-c280cef820a7",
+      "children": [
+        "f8931a8c-548a-4d7f-ac4c-386290c9d5f8"
+      ]
+    },
+    "f8931a8c-548a-4d7f-ac4c-386290c9d5f8": {
+      "id": "f8931a8c-548a-4d7f-ac4c-386290c9d5f8",
+      "message": {
+        "id": "f8931a8c-548a-4d7f-ac4c-386290c9d5f8",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1778466786.851938,
+        "update_time": 1778466889.440338,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "这个数据集本质上是一个 **“医学事实验证（medical fact-checking）+ rationale generation”** 数据集。  \n它不是传统的 instruction-following QA，而是：\n\n> 给定一个医学 claim（断言） + 一篇 article（证据文献）  \n> 模型需要判断：\n> - 支持 / 反对 / 中立 的程度\n> - 并生成推理解释（rationale）\n\n数据集主页已经把字段定义得比较清楚了。citeturn0search0\n\n---\n\n# 一、先理解它到底是什么任务\n\n它的数据结构：\n\n```text\nclaim + source(article)\n    ↓\n生成：\n    synthetic_label (-2~2)\n    assistant_prompt（推理+结论）\n```\n\n本质上类似：\n\n```text\n输入：\nClaim: XXX\nArticle: YYY\n\n输出：\nThis article partially supports the claim because...\nLabel: +1\n```\n\n---\n\n# 二、字段怎么理解（核心）\n\n下面是最关键的字段：\n\n| 字段 | 含义 | 微调是否保留 |\n|---|---|---|\n| claim | 待验证断言 | ✅ |\n| source | 证据文献 | ✅ |\n| synthetic_label | 标签（-2~2） | ✅ |\n| assistant_prompt | 模型推理结果 | ✅ |\n| user_prompt | 已经构造好的用户输入 | 可选 |\n| system_prompt | system instruction | 可选 |\n| claim_potential | support/refute（生成时的意图） | ❌通常不用 |\n| pmid | PubMed ID | ❌通常不用 |\n\n---\n\n# 三、synthetic_label 怎么理解\n\n这是 5 分类：\n\n| label | 含义 |\n|---|---|\n| -2 | Strong Contradiction |\n| -1 | Partial Contradiction |\n| 0 | Neutral |\n| +1 | Partial Support |\n| +2 | Strong Support |\n\n这意味着：\n\n这个数据集既可以做：\n\n---\n\n## 1. 分类任务（推荐）\n\n输入：\n\n```text\nClaim + Article\n```\n\n输出：\n\n```text\n2\n```\n\n或者：\n\n```text\nStrong Support\n```\n\n---\n\n## 2. CoT/Rationale 微调（更推荐）\n\n输入：\n\n```text\nClaim + Article\n```\n\n输出：\n\n```text\nThe article directly supports...\nTherefore the label is +2.\n```\n\n这其实就是 assistant_prompt 的用途。\n\n---\n\n# 四、assistant_prompt 是什么\n\n这是最容易误解的地方。\n\n它其实已经是：\n\n> 一个完整的 reasoning answer\n\n里面包含：\n\n- 思维链（think）\n- rationale\n- 最终标签\n\n例如：\n\n```text\n<think>\nThe article discusses...\n...\n</think>\n\nThe article strongly supports the claim.\nLabel: 2\n```\n\n因此：\n\n# 这个数据集天然适合：\n\n- SFT\n- CoT SFT\n- reasoning distillation\n- verifier training\n- reward modeling\n\n---\n\n# 五、推荐你怎么整理成微调格式\n\n这取决于你要训练什么。\n\n---\n\n# 方案1（最推荐）：Instruction SFT\n\n这是最标准的。\n\n## 转换后：\n\n```json\n{\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a biomedical fact-checking expert.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Claim: ...\\n\\nArticle: ...\"\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"The article partially supports...\"\n    }\n  ]\n}\n```\n\n这是最适合：\n\n- Qwen\n- Llama\n- DeepSeek\n- Mistral\n- Meditron\n\n这类 chat model 的。\n\n---\n\n# 方案2：纯分类微调\n\n如果你想训练 verifier：\n\n```json\n{\n  \"text\": \"Claim: ... Article: ...\",\n  \"label\": 2\n}\n```\n\n适合：\n\n- BERT\n- BioBERT\n- PubMedBERT\n- DeBERTa\n\n---\n\n# 方案3：Chain-of-Thought 微调（非常适合）\n\n你可以保留 `<think>`：\n\n```json\n{\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Claim: ...\\n\\nArticle: ...\"\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"<think>...</think>\\n\\nLabel: +1\"\n    }\n  ]\n}\n```\n\n这很适合：\n\n- reasoning SFT\n- medical rationale generation\n- verifier reasoning\n\n其实这个数据集就是朝这个方向设计的。citeturn0search0\n\n---\n\n# 六、实际推荐的数据整理方式（非常重要）\n\n我建议你：\n\n# 不要直接使用 user_prompt / assistant_prompt\n\n而是：\n\n# 自己重新构造\n\n因为原始 prompt：\n\n- 很长\n- 冗余\n- 有大量模板文字\n- token 浪费严重\n\n---\n\n# 推荐重构方式\n\n## 输入\n\n```text\nClaim:\n{claim}\n\nArticle:\n{source}\n```\n\n---\n\n## 输出（简洁版）\n\n```text\nReasoning:\n{rationale}\n\nVerdict: Strong Support\n```\n\n---\n\n# 七、如何从 assistant_prompt 提取 rationale\n\nassistant_prompt 里面通常：\n\n```text\n<think>\n...\n</think>\n```\n\n你可以：\n\n---\n\n## 保留 think\n\n适合 reasoning model：\n\n```python\nreasoning = assistant_prompt\n```\n\n---\n\n## 去掉 think，只保留最终解释\n\n适合普通 SFT：\n\n```python\nimport re\n\nclean = re.sub(r\"<think>.*?</think>\", \"\", text, flags=re.S)\n```\n\n---\n\n# 八、推荐的数据格式（最终）\n\n我最推荐这个：\n\n```json\n{\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a biomedical evidence verification expert.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Claim:\\n...\\n\\nArticle:\\n...\"\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"<think>...</think>\\n\\nVerdict: Partial Support\"\n    }\n  ]\n}\n```\n\n这是目前最通用的 chat-SFT 格式。\n\n---\n\n# 九、HuggingFace 读取代码\n\n你可以直接：\n\n```python\nfrom datasets import load_dataset\n\nds = load_dataset(\"ncbi/MedFact-Synth\")\n```\n\n然后：\n\n```python\nsample = ds[\"train\"][0]\n\nprint(sample.keys())\n```\n\n会看到：\n\n```python\ndict_keys([\n    'idx',\n    'claim_pmid',\n    'claim_potential',\n    'claim',\n    'source_pmid',\n    'source',\n    'synthetic_label',\n    'system_prompt',\n    'user_prompt',\n    'assistant_prompt'\n])\n```\n\n---\n\n# 十、一个完整转换脚本（推荐）\n\n```python\nfrom datasets import load_dataset\nimport json\n\nlabel_map = {\n    -2: \"Strong Contradiction\",\n    -1: \"Partial Contradiction\",\n     0: \"Neutral\",\n     1: \"Partial Support\",\n     2: \"Strong Support\"\n}\n\nds = load_dataset(\"ncbi/MedFact-Synth\", split=\"train\")\n\noutput = []\n\nfor x in ds:\n\n    user = f\"\"\"Claim:\n{x['claim']}\n\nArticle:\n{x['source']}\"\"\"\n\n    assistant = f\"\"\"{x['assistant_prompt']}\n\nVerdict: {label_map[int(x['synthetic_label'])]}\"\"\"\n\n    output.append({\n        \"messages\": [\n            {\n                \"role\": \"system\",\n                \"content\": \"You are a biomedical evidence verification expert.\"\n            },\n            {\n                \"role\": \"user\",\n                \"content\": user\n            },\n            {\n                \"role\": \"assistant\",\n                \"content\": assistant\n            }\n        ]\n    })\n\nwith open(\"medfact_sft.jsonl\", \"w\") as f:\n    for item in output:\n        f.write(json.dumps(item) + \"\\n\")\n```\n\n---\n\n# 十一、这个数据集真正适合什么\n\n这个数据集非常适合：\n\n| 任务 | 适合程度 |\n|---|---|\n| 医学RAG verifier | ⭐⭐⭐⭐⭐ |\n| claim verification | ⭐⭐⭐⭐⭐ |\n| evidence attribution | ⭐⭐⭐⭐⭐ |\n| medical reasoning SFT | ⭐⭐⭐⭐⭐ |\n| 医学分类 | ⭐⭐⭐ |\n| 通用问答 | ⭐ |\n\n因为它不是 QA 数据集。\n\n---\n\n# 十二、你需要特别注意的问题\n\n这个数据集：\n\n# article 非常长\n\n很多 source：\n\n- 3000~10000 token\n\n所以：\n\n---\n\n## 必须考虑：\n\n### 1. 截断\n\n例如：\n\n```python\nsource[:4000]\n```\n\n---\n\n### 2. chunk\n\n或者：\n\n```python\nabstract only\n```\n\n---\n\n### 3. 长上下文模型\n\n例如：\n\n- Qwen3-32B\n- DeepSeek-R1\n- Llama-4\n- Longformer\n\n---\n\n# 十三、一个更高级的思路（很适合你）\n\n你最近在做：\n\n- 医学知识图谱\n- 医学推理\n- 可解释性\n\n这个数据集特别适合做：\n\n# “claim-level verifier”\n\n例如：\n\n```text\n模型生成医学结论\n    ↓\nMedFact verifier 判断：\n    support / contradiction\n```\n\n这其实已经接近：\n\n- retrieval verifier\n- hallucination detection\n- evidence attribution\n\n方向了。\n\n---\n\n数据集主页：  \nurlMedFact-Synth Datasetturn0search0"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn0search0",
+              "prefix": null,
+              "start_idx": 228,
+              "end_idx": 247,
+              "safe_urls": [
+                "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+                "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([Hugging Face](https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "ncbi/MedFact-Synth · Datasets at Hugging Face",
+                  "url": "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com",
+                  "attribution": "Hugging Face",
+                  "pub_date": null,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn0search0",
+              "prefix": null,
+              "start_idx": 2646,
+              "end_idx": 2665,
+              "safe_urls": [
+                "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+                "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([Hugging Face](https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "ncbi/MedFact-Synth · Datasets at Hugging Face",
+                  "url": "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com",
+                  "attribution": "Hugging Face",
+                  "pub_date": null,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "urlMedFact-Synth Datasetturn0search0",
+              "prefix": null,
+              "start_idx": 5828,
+              "end_idx": 5868,
+              "safe_urls": [
+                "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+                "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com"
+              ],
+              "refs": [
+                {
+                  "turn_index": 0,
+                  "ref_type": "search",
+                  "ref_index": 0
+                }
+              ],
+              "alt": "[MedFact-Synth Dataset](https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com)",
+              "prompt_text": null,
+              "type": "alt_text",
+              "render_as": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 5868,
+              "end_idx": 5868,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "ncbi/MedFact-Synth · Datasets at Hugging Face",
+                  "url": "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com",
+                  "attribution": "Hugging Face"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+            "https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "huggingface.co",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.co/datasets/ncbi/MedFact-Synth/tree/main?utm_source=chatgpt.com",
+                  "title": "ncbi/MedFact-Synth at main",
+                  "snippet": "DATASETS:  * * *  ncbi  /  MedFact-Synth  like [Button: 2]  Follow  Image NLM/DIR BioNLP Group [Button: 92]  Tasks: Text Generation Text Classification  Modalities: Tabular Text  Formats: parquet  La...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.co/ncbi/datasets?utm_source=chatgpt.com",
+                  "title": "ncbi (NLM/DIR BioNLP Group)",
+                  "snippet": "NLM/DIR BioNLP Group  https://www.ncbi.nlm.nih.gov/research/bionlp/  ncbi-nlp  Activity Feed  Follow  Image  Image  Image  96  AI & ML INTERESTS  None defined yet.  RECENT ACTIVITY  qiaojin  updated...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.co/datasets/ncbi/MedFact-Synth/commit/56a3002cdd070bc7de8a438c7562e27e8e28a293?utm_source=chatgpt.com",
+                  "title": "Add link to paper and GitHub repository · ncbi/MedFact-Synth at 56a3002",
+                  "snippet": "DATASETS:  * * *  ncbi  /  MedFact-Synth  like [Button: 2]  Follow  Image NLM/DIR BioNLP Group [Button: 108]  Tasks: Text Generation Text Classification  Modalities: Tabular Text  Formats: parquet  L...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.co/datasets/ncbi/MedFact-Synth/tree/refs%2Fconvert%2Fparquet/default?utm_source=chatgpt.com",
+                  "title": "ncbi/MedFact-Synth at refs/convert/parquet",
+                  "snippet": "DATASETS:  * * *  ncbi  /  MedFact-Synth  like [Button: 1]  Follow  Image NLM/DIR BioNLP Group [Button: 96]  Tasks: Text Generation Text Classification  Modalities: Tabular Text  Formats: parquet  La...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.co/ncbi/models?utm_source=chatgpt.com",
+                  "title": "ncbi (NLM/DIR BioNLP Group)",
+                  "snippet": "NLM/DIR BioNLP Group  https://www.ncbi.nlm.nih.gov/research/bionlp/  ncbi-nlp  Activity Feed  Follow  Image  Image  Image  104  AI & ML INTERESTS  None defined yet.  RECENT ACTIVITY  qiaojin  updated...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.co/ncbi/Med-V1-L3B?utm_source=chatgpt.com",
+                  "title": "ncbi/Med-V1-L3B · Hugging Face",
+                  "snippet": "ncbi  /  Med-V1-L3B   Safetensors llama  arxiv: 2603.05308  License: llama3.2  Model card Files xet Community 1  * Med-V1: Small Language Models for Zero-shot and Scalable Biomedical Evidence Attribu...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": 1772668800,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.co/datasets?other=medical&p=70&sort=trending&utm_source=chatgpt.com",
+                  "title": "Datasets – Hugging Face",
+                  "snippet": "[Input: Search models, datasets, users...]  * Models * Datasets * Spaces  EDIT DATASETS FILTERS  * [Button: Main ] * [Button: Tasks ] * [Button: Libraries ] * [Button: Languages ] * [Button: Licenses...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://api-inference.huggingface.co/papers?q=synthetic+media&utm_source=chatgpt.com",
+                  "title": "Daily Papers - Hugging Face",
+                  "snippet": "MEDSYNTH: REALISTIC, SYNTHETIC MEDICAL DIALOGUE-NOTE PAIRS  Physicians spend significant time documenting clinical encounters, a burden that contributes to professional burnout. To address this, robu...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.co"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://api-inference.huggingface.co/OpenMed/OpenMed-ZeroShot-NER-Pathology-Base-220M?utm_source=chatgpt.com",
+                  "title": "OpenMed/OpenMed-ZeroShot-NER-Pathology-Base-220M · Hugging Face",
+                  "snippet": "OpenMed-ZeroShot-NER-Pathology-Base-220M  like [Button: 0]  Follow  Image OpenMed [Button: 1.23k]  Token Classification GLiNER PyTorch English entity recognition named-entity-recognition zero-shot ze...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": 1754179200,
+                  "attribution": "huggingface.co"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "huggingface.tw",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://huggingface.tw/docs/datasets/create_dataset?utm_source=chatgpt.com",
+                  "title": "建立數據集 - Hugging Face 文件",
+                  "snippet": "建立數據集  資料集 (DATASETS)  [Select]  搜尋文件  [Select] [Select]  立即開始  🤗 Datasets 快速入門 安裝  教學課程  概述 從 Hub 載入數據集 認識你的數據集 預處理 建立數據集 將數據集分享至 Hub  操作指南  總覽  一般用法  載入 處理 串流 與 PyTorch 搭配使用 與 TensorFlow 搭配使用 與 Num...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "attribution": "huggingface.tw"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "deepwiki.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://deepwiki.com/huggingface/datasets/7.1-dataset-cards-and-documentation?utm_source=chatgpt.com",
+                  "title": "Dataset Cards and Documentation | huggingface/datasets | DeepWiki",
+                  "snippet": "DATASET CARDS AND DOCUMENTATION  Relevant source files  * src/datasets/utils/resources/__init__.py * src/datasets/utils/resources/creators.json * src/datasets/utils/resources/multilingualities.json *...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "attribution": "deepwiki.com"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5",
+          "code_blocks": {
+            "0": {
+              "id": "lee0m4",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "lmq7lr",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "m86xtl",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "i3c8s4",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "4": {
+              "id": "7r8b98",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "5": {
+              "id": "56vg90",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "6": {
+              "id": "x2miww",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "7": {
+              "id": "83lzml",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "8": {
+              "id": "62g0kq",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "9": {
+              "id": "axjhzl",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "10": {
+              "id": "tzrvta",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "11": {
+              "id": "mywg75",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "12": {
+              "id": "7mdc52",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "13": {
+              "id": "5mm3pf",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "14": {
+              "id": "wv7e74",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "15": {
+              "id": "ieeapg",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "16": {
+              "id": "9755jc",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "17": {
+              "id": "msoiyi",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "18": {
+              "id": "5wdyei",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "19": {
+              "id": "ok2dwf",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "20": {
+              "id": "ztoj1n",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "21": {
+              "id": "s2yb5g",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "22": {
+              "id": "w2h0sx",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "23": {
+              "id": "5usw59",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "request_id": "89bc4902-efd1-4554-bb0d-9d72a4612a2e",
+          "message_type": "next",
+          "turn_exchange_id": "4a8aae68-812e-41e7-acb9-3a21b48cae9f",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "62f8167f-7d3d-406d-8418-1d835383f1df",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "d6808cc4-b721-481f-aaac-0d0de3684748",
+      "children": [
+        "d8d27a45-3cef-4955-81b7-fb7af2fc7658",
+        "6db904f0-4870-45aa-8d50-725fe84202a8"
+      ]
+    },
+    "d8d27a45-3cef-4955-81b7-fb7af2fc7658": {
+      "id": "d8d27a45-3cef-4955-81b7-fb7af2fc7658",
+      "message": {
+        "id": "d8d27a45-3cef-4955-81b7-fb7af2fc7658",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778467027.458,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我需要从本地加载数据集（已经下载好了），"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "ae24602b-65d4-4bb6-b208-858543477d92",
+          "message_source": null,
+          "turn_exchange_id": "880c1f53-3d2a-48c2-8ddb-734fad52bd07",
+          "resolved_model_slug": "gpt-5-5",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f8931a8c-548a-4d7f-ac4c-386290c9d5f8",
+      "children": [
+        "f6a8eecf-a36e-4cde-83d8-5ad54d2795ec"
+      ]
+    },
+    "6db904f0-4870-45aa-8d50-725fe84202a8": {
+      "id": "6db904f0-4870-45aa-8d50-725fe84202a8",
+      "message": {
+        "id": "6db904f0-4870-45aa-8d50-725fe84202a8",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778467260.858,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我需要从本地加载数据集（已经下载好了），告诉我每个字段由哪些json字段拼成"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "request_id": "70ffbe3e-d7fe-4f09-905b-c1ab6b5f0b71",
+          "message_source": null,
+          "turn_exchange_id": "412fd6fb-e5d9-45c9-883a-e3a9215f344d",
+          "resolved_model_slug": "gpt-5-5",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f8931a8c-548a-4d7f-ac4c-386290c9d5f8",
+      "children": [
+        "d62a6964-9312-4002-a10a-1afb27483899"
+      ]
+    },
+    "f6a8eecf-a36e-4cde-83d8-5ad54d2795ec": {
+      "id": "f6a8eecf-a36e-4cde-83d8-5ad54d2795ec",
+      "message": {
+        "id": "f6a8eecf-a36e-4cde-83d8-5ad54d2795ec",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778467028.539382,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "如果你已经把 urlMedFact-Synth 数据集https://huggingface.co/datasets/ncbi/MedFact-Synth 下载到本地，通常有两种情况：\n\n---\n\n# 一、先看你下载后的目录结构\n\n你先：\n\n```python\nimport os\n\nfor root, dirs, files in os.walk(\"你的数据集目录\"):\n    print(root, files[:5])\n```\n\n一般会看到类似：\n\n```text\nMedFact-Synth/\n    train.parquet\n    validation.parquet\n    test.parquet\n```\n\n或者：\n\n```text\nMedFact-Synth/\n    data/\n        train-00000-of-00001.parquet\n```\n\n---\n\n# 二、最常见情况：本地 parquet 文件\n\n这是 HuggingFace datasets 最常见的格式。\n\n---\n\n## 方法1：datasets.load_dataset 加载（推荐）\n\n例如：\n\n```python\nfrom datasets import load_dataset\n\nds = load_dataset(\n    \"parquet\",\n    data_files={\n        \"train\": \"MedFact-Synth/train.parquet\",\n        \"validation\": \"MedFact-Synth/validation.parquet\",\n        \"test\": \"MedFact-Synth/test.parquet\"\n    }\n)\n\nprint(ds)\n```\n\n---\n\n## 如果只有 train\n\n```python\nds = load_dataset(\n    \"parquet\",\n    data_files=\"MedFact-Synth/train.parquet\"\n)\n```\n\n---\n\n# 三、如果是 HuggingFace cache 格式\n\n有时候你下载的是：\n\n```text\n~/.cache/huggingface/datasets/...\n```\n\n这种直接：\n\n```python\nfrom datasets import load_from_disk\n\nds = load_from_disk(\"本地目录\")\n```\n\n例如：\n\n```python\nds = load_from_disk(\"./MedFact-Synth\")\n```\n\n---\n\n# 四、如何判断该用哪个\n\n看目录里有没有：\n\n## 情况A\n\n```text\ndataset_info.json\nstate.json\ndata-00000-of-00001.arrow\n```\n\n这是：\n\n```python\nload_from_disk()\n```\n\n---\n\n## 情况B\n\n```text\ntrain.parquet\n```\n\n这是：\n\n```python\nload_dataset(\"parquet\")\n```\n\n---\n\n## 情况C\n\n```text\ntrain.jsonl\n```\n\n这是：\n\n```python\nload_dataset(\"json\")\n```\n\n---\n\n# 五、最稳妥的方法（推荐你直接这样）\n\n你可以直接：\n\n```python\nfrom datasets import load_dataset\nimport glob\n\nfiles = glob.glob(\"MedFact-Synth/**/*.parquet\", recursive=True)\n\nprint(files)\n```\n\n然后：\n\n```python\nds = load_dataset(\n    \"parquet\",\n    data_files=files\n)\n```\n\n---\n\n# 六、加载后查看结构\n\n```python\nprint(ds)\n\nsample = ds[\"train\"][0]\n\nprint(sample.keys())\n```\n\n应该能看到：\n\n```python\ndict_keys([\n    'idx',\n    'claim',\n    'source',\n    'synthetic_label',\n    'assistant_prompt',\n    ...\n])\n```\n\n---\n\n# 七、直接转 SFT 格式（本地版）\n\n你本地加载后：\n\n```python\nfrom datasets import load_dataset\nimport json\n\nds = load_dataset(\n    \"parquet\",\n    data_files=\"MedFact-Synth/train.parquet\"\n)[\"train\"]\n\noutput = []\n\nfor x in ds:\n\n    messages = [\n        {\n            \"role\": \"system\",\n            \"content\": \"You are a biomedical evidence verification expert.\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": f\"Claim:\\n{x['claim']}\\n\\nArticle:\\n{x['source']}\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": x[\"assistant_prompt\"]\n        }\n    ]\n\n    output.append({\n        \"messages\": messages\n    })\n\nwith open(\"medfact_sft.jsonl\", \""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [
+            {
+              "matched_text": "urlMedFact-Synth 数据集https://huggingface.co/datasets/ncbi/MedFact-Synth",
+              "prefix": null,
+              "start_idx": 7,
+              "end_idx": 81,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "[MedFact-Synth 数据集](https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com)",
+              "prompt_text": "[MedFact-Synth 数据集](https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com)",
+              "type": "alt_text",
+              "render_as": null
+            }
+          ],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5",
+          "finish_details": {
+            "type": "interrupted",
+            "reason": "client_stopped"
+          },
+          "is_complete": true,
+          "request_id": "ae24602b-65d4-4bb6-b208-858543477d92",
+          "message_type": "next",
+          "turn_exchange_id": "880c1f53-3d2a-48c2-8ddb-734fad52bd07",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "d8d27a45-3cef-4955-81b7-fb7af2fc7658",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "d8d27a45-3cef-4955-81b7-fb7af2fc7658",
+      "children": []
+    },
+    "d62a6964-9312-4002-a10a-1afb27483899": {
+      "id": "d62a6964-9312-4002-a10a-1afb27483899",
+      "message": {
+        "id": "d62a6964-9312-4002-a10a-1afb27483899",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778467263.018939,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "如果你已经把 urlMedFact-Synth Datasethttps://huggingface.co/datasets/ncbi/MedFact-Synth 下载到本地，通常会看到：\n\n```text\ntrain.jsonl\nvalidation.jsonl\ntest.jsonl\n```\n\n或者 parquet。\n\n这个数据集的单条数据，本质上是：\n\n```json\n{\n  \"idx\": \"...\",\n  \"claim_pmid\": \"...\",\n  \"claim_potential\": \"...\",\n  \"claim\": \"...\",\n  \"source_pmid\": \"...\",\n  \"source\": \"...\",\n  \"synthetic_label\": 2,\n  \"system_prompt\": \"...\",\n  \"user_prompt\": \"...\",\n  \"assistant_prompt\": \"...\"\n}\n```\n\n你现在真正关心的是：\n\n# “微调时，每个字段应该由哪些 json 字段拼接出来”\n\n下面直接给你对应关系。\n\n---\n\n# 一、最推荐的 SFT 格式\n\n推荐转换成：\n\n```json\n{\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"...\"},\n    {\"role\": \"user\", \"content\": \"...\"},\n    {\"role\": \"assistant\", \"content\": \"...\"}\n  ]\n}\n```\n\n---\n\n# 二、字段映射关系（核心）\n\n## 1. system\n\n来自：\n\n```python\nsystem = sample[\"system_prompt\"]\n```\n\n不过：\n\n# 实际上建议不要直接用原 system_prompt\n\n因为原始 prompt 往往很长。\n\n建议改成固定模板：\n\n```python\nsystem = \"You are a biomedical evidence verification expert.\"\n```\n\n---\n\n# 2. user\n\nuser 通常由：\n\n```python\nclaim + source\n```\n\n拼接。\n\n即：\n\n```python\nuser = f\"\"\"\nClaim:\n{sample[\"claim\"]}\n\nArticle:\n{sample[\"source\"]}\n\"\"\"\n```\n\n---\n\n# 3. assistant\n\nassistant 来自：\n\n```python\nassistant_prompt\n```\n\n即：\n\n```python\nassistant = sample[\"assistant_prompt\"]\n```\n\n但建议：\n\n# 再补一个 verdict\n\n因为 assistant_prompt 有时没有标准化输出。\n\n建议：\n\n```python\nlabel_map = {\n    -2: \"Strong Contradiction\",\n    -1: \"Partial Contradiction\",\n     0: \"Neutral\",\n     1: \"Partial Support\",\n     2: \"Strong Support\"\n}\n\nassistant = f\"\"\"\n{sample[\"assistant_prompt\"]}\n\nVerdict: {label_map[sample[\"synthetic_label\"]]}\n\"\"\"\n```\n\n---\n\n# 三、最终真正的拼接关系\n\n这是你最需要的：\n\n| SFT字段 | 由哪些原字段组成 |\n|---|---|\n| system | system_prompt（或自定义固定system） |\n| user | claim + source |\n| assistant | assistant_prompt + synthetic_label |\n\n---\n\n# 四、为什么不建议直接使用 user_prompt\n\n因为：\n\n```python\nsample[\"user_prompt\"]\n```\n\n通常长这样：\n\n```text\nYou are provided with a claim and article...\nDetermine whether...\n```\n\n问题：\n\n- 太模板化\n- token 浪费\n- instruction 重复\n- 对 SFT 没价值\n\n因此：\n\n# 更推荐自己构造\n\n即：\n\n```python\nClaim:\n...\n\nArticle:\n...\n```\n\n---\n\n# 五、推荐的最终 JSONL 格式\n\n建议最终：\n\n```json\n{\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a biomedical evidence verification expert.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Claim:\\n...\\n\\nArticle:\\n...\"\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"<think>...</think>\\n\\nVerdict: Partial Support\"\n    }\n  ]\n}\n```\n\n---\n\n# 六、本地加载方法\n\n## 如果是 json/jsonl\n\n```python\nimport json\n\ndata = []\n\nwith open(\"train.jsonl\", \"r\", encoding=\"utf-8\") as f:\n    for line in f:\n        data.append(json.loads(line))\n```\n\n---\n\n## 如果是 parquet（HF默认很常见）\n\n```python\nfrom datasets import load_dataset\n\nds = load_dataset(\n    \"parquet\",\n    data_files=\"train.parquet\"\n)\n```\n\n或者：\n\n```python\nimport pandas as pd\n\ndf = pd.read_parquet(\"train.parquet\")\n```\n\n---\n\n# 七、完整转换代码（本地版）\n\n这是你真正能直接跑的。\n\n```python\nimport json\n\nlabel_map = {\n    -2: \"Strong Contradiction\",\n    -1: \"Partial Contradiction\",\n     0: \"Neutral\",\n     1: \"Partial Support\",\n     2: \"Strong Support\"\n}\n\noutput = []\n\nwith open(\"train.jsonl\", \"r\", encoding=\"utf-8\") as f:\n\n    for line in f:\n\n        x = json.loads(line)\n\n        system = \"You are a biomedical evidence verification expert.\"\n\n        user = f\"\"\"Claim:\n{x[\"claim\"]}\n\nArticle:\n{x[\"source\"]}\"\"\"\n\n        assistant = f\"\"\"{x[\"assistant_prompt\"]}\n\nVerdict: {label_map[int(x[\"synthetic_label\"])]}\n\"\"\"\n\n        sample = {\n            \"messages\": [\n                {\n                    \"role\": \"system\",\n                    \"content\": system\n                },\n                {\n                    \"role\": \"user\",\n                    \"content\": user\n                },\n                {\n                    \"role\": \"assistant\",\n                    \"content\": assistant\n                }\n            ]\n        }\n\n        output.append(sample)\n\nwith open(\"medfact_sft.jsonl\", \"w\", encoding=\"utf-8\") as f:\n    for x in output:\n        f.write(json.dumps(x, ensure_ascii=False) + \"\\n\")\n```\n\n---\n\n# 八、如果你想做“更适合 reasoning model”的版本\n\n建议：\n\n# 保留 think\n\n因为 assistant_prompt 通常：\n\n```text\n<think>\n...\n</think>\n```\n\n这种数据很适合：\n\n- DeepSeek-R1风格\n- QwQ风格\n- reasoning distillation\n\n---\n\n# 九、如果你想做“小模型分类器”\n\n那就别 messages。\n\n直接：\n\n```json\n{\n  \"input\": \"Claim: ... Article: ...\",\n  \"label\": 2\n}\n```\n\n即可。\n\n适合：\n\n- PubMedBERT\n- BioClinicalBERT\n- DeBERTa-v3\n\n---\n\n# 十、这个数据集一个非常重要的问题\n\n很多人会忽略：\n\n# source 极长\n\n很多：\n\n```text\n3000~12000 token\n```\n\n所以你最好：\n\n---\n\n## 方案1（推荐）\n\n只保留 abstract：\n\n```python\nsource[:4000]\n```\n\n---\n\n## 方案2\n\n做 chunk：\n\n```python\nchunk_size = 2048\n```\n\n---\n\n## 方案3\n\n做 RAG retrieval\n\n而不是直接全塞。\n\n---\n\n# 十一、你现在最推荐的训练方式（结合你方向）\n\n你做医学KG + 医学推理的话：\n\n我最建议：\n\n# “Verifier SFT”\n\n即：\n\n```text\nclaim + evidence\n    ↓\n生成：\nsupport/refute + rationale\n```\n\n这和：\n\n- 医学 hallucination detection\n- retrieval verification\n- evidence attribution\n- KG reasoning verifier\n\n高度一致。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [
+            {
+              "matched_text": "urlMedFact-Synth Datasethttps://huggingface.co/datasets/ncbi/MedFact-Synth",
+              "prefix": null,
+              "start_idx": 7,
+              "end_idx": 85,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "[MedFact-Synth Dataset](https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com)",
+              "prompt_text": "[MedFact-Synth Dataset](https://huggingface.co/datasets/ncbi/MedFact-Synth?utm_source=chatgpt.com)",
+              "type": "alt_text",
+              "render_as": null
+            }
+          ],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5",
+          "code_blocks": {
+            "0": {
+              "id": "2lp847",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "7rov7a",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "mljdh9",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "fbaxof",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "4": {
+              "id": "iwqnqo",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "5": {
+              "id": "o3luwn",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "6": {
+              "id": "9669i1",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "7": {
+              "id": "scjrae",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "8": {
+              "id": "1cv2pk",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "9": {
+              "id": "8nfbkt",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "10": {
+              "id": "s6e0r5",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "11": {
+              "id": "9ftg8m",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "12": {
+              "id": "9mpsoo",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "13": {
+              "id": "7p894y",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "14": {
+              "id": "qqyumd",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "15": {
+              "id": "opvlw1",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "16": {
+              "id": "3ang8g",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "17": {
+              "id": "ul104c",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "18": {
+              "id": "2hamv0",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "19": {
+              "id": "qamoyn",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "20": {
+              "id": "mnngbp",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "21": {
+              "id": "26qemu",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "22": {
+              "id": "wkrogg",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "23": {
+              "id": "87jsqa",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "search_result_groups": [],
+          "request_id": "70ffbe3e-d7fe-4f09-905b-c1ab6b5f0b71",
+          "message_type": "next",
+          "turn_exchange_id": "412fd6fb-e5d9-45c9-883a-e3a9215f344d",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "6db904f0-4870-45aa-8d50-725fe84202a8",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "6db904f0-4870-45aa-8d50-725fe84202a8",
+      "children": []
+    }
+  },
+  "current_node": "d62a6964-9312-4002-a10a-1afb27483899"
+}

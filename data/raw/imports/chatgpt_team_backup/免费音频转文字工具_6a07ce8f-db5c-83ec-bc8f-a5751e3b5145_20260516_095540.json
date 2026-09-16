@@ -1,0 +1,1260 @@
+{
+  "title": "免费音频转文字工具",
+  "create_time": 1778896540.969463,
+  "update_time": 1778896553.40195,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a07ce8f-db5c-83ec-bc8f-a5751e3b5145",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://turboscribe.ai/free-transcription/Chinese",
+    "https://whisperwebui.net/",
+    "https://openai.com/index/whisper/",
+    "https://turboscribe.ai/free-transcription/Chinese?utm_source=chatgpt.com",
+    "https://github.com/openai/whisper?utm_source=chatgpt.com",
+    "https://whisperwebui.net/?utm_source=chatgpt.com",
+    "https://github.com/openai/whisper",
+    "https://www.openai.com",
+    "https://github.com/ggml-org/whisper.cpp?utm_source=chatgpt.com",
+    "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706?utm_source=chatgpt.com",
+    "https://openai.com/index/whisper/?utm_source=chatgpt.com",
+    "https://github.com/ggml-org/whisper.cpp",
+    "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706",
+    "physionet.org",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "2bee6167-cb14-4038-b88b-e93f5dec15a7"
+      ]
+    },
+    "2bee6167-cb14-4038-b88b-e93f5dec15a7": {
+      "id": "2bee6167-cb14-4038-b88b-e93f5dec15a7",
+      "message": {
+        "id": "2bee6167-cb14-4038-b88b-e93f5dec15a7",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "b05bb0b5-30f2-49d4-8236-357dc95589f2"
+      ]
+    },
+    "b05bb0b5-30f2-49d4-8236-357dc95589f2": {
+      "id": "b05bb0b5-30f2-49d4-8236-357dc95589f2",
+      "message": {
+        "id": "b05bb0b5-30f2-49d4-8236-357dc95589f2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2bee6167-cb14-4038-b88b-e93f5dec15a7",
+      "children": [
+        "76be9746-38b2-440a-b308-d12ab95a3e20"
+      ]
+    },
+    "76be9746-38b2-440a-b308-d12ab95a3e20": {
+      "id": "76be9746-38b2-440a-b308-d12ab95a3e20",
+      "message": {
+        "id": "76be9746-38b2-440a-b308-d12ab95a3e20",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b05bb0b5-30f2-49d4-8236-357dc95589f2",
+      "children": [
+        "29dd2dd1-419b-4050-8d35-6ea3a30573f8"
+      ]
+    },
+    "29dd2dd1-419b-4050-8d35-6ea3a30573f8": {
+      "id": "29dd2dd1-419b-4050-8d35-6ea3a30573f8",
+      "message": {
+        "id": "29dd2dd1-419b-4050-8d35-6ea3a30573f8",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "76be9746-38b2-440a-b308-d12ab95a3e20",
+      "children": [
+        "51acf2a3-56d4-4374-af7c-65e2f159373f"
+      ]
+    },
+    "51acf2a3-56d4-4374-af7c-65e2f159373f": {
+      "id": "51acf2a3-56d4-4374-af7c-65e2f159373f",
+      "message": {
+        "id": "51acf2a3-56d4-4374-af7c-65e2f159373f",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778896540.596766,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_source": null,
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "29dd2dd1-419b-4050-8d35-6ea3a30573f8",
+      "children": [
+        "c46269fa-485b-44c5-a4b0-42395c53f5c2"
+      ]
+    },
+    "c46269fa-485b-44c5-a4b0-42395c53f5c2": {
+      "id": "c46269fa-485b-44c5-a4b0-42395c53f5c2",
+      "message": {
+        "id": "c46269fa-485b-44c5-a4b0-42395c53f5c2",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778896539.344,
+        "update_time": 1778896551.373576,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "有没有什么免费音频转文字的工具"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_source": null,
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "51acf2a3-56d4-4374-af7c-65e2f159373f",
+      "children": [
+        "321ebf5e-cbb0-4a4d-bd37-7a989975ffdc"
+      ]
+    },
+    "321ebf5e-cbb0-4a4d-bd37-7a989975ffdc": {
+      "id": "321ebf5e-cbb0-4a4d-bd37-7a989975ffdc",
+      "message": {
+        "id": "321ebf5e-cbb0-4a4d-bd37-7a989975ffdc",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778896540.7783947,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_type": "next",
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "c46269fa-485b-44c5-a4b0-42395c53f5c2",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "c46269fa-485b-44c5-a4b0-42395c53f5c2",
+      "children": [
+        "cca236c6-3137-4a3a-8126-139b37f1e085"
+      ]
+    },
+    "cca236c6-3137-4a3a-8126-139b37f1e085": {
+      "id": "cca236c6-3137-4a3a-8126-139b37f1e085",
+      "message": {
+        "id": "cca236c6-3137-4a3a-8126-139b37f1e085",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778896540.845727,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "chime_version": 1,
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_type": "next",
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "321ebf5e-cbb0-4a4d-bd37-7a989975ffdc",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "321ebf5e-cbb0-4a4d-bd37-7a989975ffdc",
+      "children": [
+        "4d12c0a0-e63a-4fb2-892a-771e641509ef"
+      ]
+    },
+    "4d12c0a0-e63a-4fb2-892a-771e641509ef": {
+      "id": "4d12c0a0-e63a-4fb2-892a-771e641509ef",
+      "message": {
+        "id": "4d12c0a0-e63a-4fb2-892a-771e641509ef",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778896541.725952,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "e54f680b-4740-4377-81e7-bfbae5448e9c"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_type": "next",
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "e54f680b-4740-4377-81e7-bfbae5448e9c",
+          "classifier_response": "default",
+          "reasoning_start_time": 1778896540.7934058,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "cca236c6-3137-4a3a-8126-139b37f1e085",
+      "children": [
+        "9ada12ac-1c64-4ff0-b666-5f6becc197a2"
+      ]
+    },
+    "9ada12ac-1c64-4ff0-b666-5f6becc197a2": {
+      "id": "9ada12ac-1c64-4ff0-b666-5f6becc197a2",
+      "message": {
+        "id": "9ada12ac-1c64-4ff0-b666-5f6becc197a2",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778896540.839648,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我会按“真正免费/本地离线/网页省事/中文效果”几个场景来分，避免只给一堆名字。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "is_thinking_preamble_message": true,
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_type": "next",
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "4d12c0a0-e63a-4fb2-892a-771e641509ef",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "4d12c0a0-e63a-4fb2-892a-771e641509ef",
+      "children": [
+        "0b46ec01-0200-42a8-b172-8a7a95bcc6cb"
+      ]
+    },
+    "0b46ec01-0200-42a8-b172-8a7a95bcc6cb": {
+      "id": "0b46ec01-0200-42a8-b172-8a7a95bcc6cb",
+      "message": {
+        "id": "0b46ec01-0200-42a8-b172-8a7a95bcc6cb",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1778896543.6620307,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "free audio transcription tools Whisper WebUI Buzz Vibe Transcriber 2026",
+              "OpenAI Whisper GitHub free speech recognition local",
+              "free online audio transcription tool Chinese"
+            ]
+          },
+          "chime_version": 1,
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_type": "next",
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "d314ad63-8744-49b7-859a-e94913c87523",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9ada12ac-1c64-4ff0-b666-5f6becc197a2",
+      "children": [
+        "33abacb1-8d06-45a9-946d-d587ad7cfb2c"
+      ]
+    },
+    "33abacb1-8d06-45a9-946d-d587ad7cfb2c": {
+      "id": "33abacb1-8d06-45a9-946d-d587ad7cfb2c",
+      "message": {
+        "id": "33abacb1-8d06-45a9-946d-d587ad7cfb2c",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778896546.040392,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 5s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 5,
+          "reasoning_start_time": 1778896540.7934058,
+          "reasoning_end_time": 1778896546.031265,
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_type": "next",
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "9bceebaf-05bf-4c51-b9c2-c77db57c87f4",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0b46ec01-0200-42a8-b172-8a7a95bcc6cb",
+      "children": [
+        "98c44f7d-275e-4917-9dce-b437aace0f25"
+      ]
+    },
+    "98c44f7d-275e-4917-9dce-b437aace0f25": {
+      "id": "98c44f7d-275e-4917-9dce-b437aace0f25",
+      "message": {
+        "id": "98c44f7d-275e-4917-9dce-b437aace0f25",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1778896545.292158,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "有，按你的用途我建议这样选：\n\n| 场景 | 推荐工具 | 特点 |\n|---|---|---|\n| **想完全免费、隐私好** | **Whisper 本地版** | 开源免费，中文可用，音频不上传；但需要本地配置。OpenAI Whisper 本身是开源语音识别模型，支持多语言识别。citeturn908980search0turn908980search4 |\n| **电脑配置一般，想跑得快** | **whisper.cpp** | Whisper 的高性能 C/C++ 实现，支持 CPU、本地运行，也支持多种硬件加速。citeturn908980search2 |\n| **不想折腾，直接网页上传** | **TurboScribe 免费版** | 网页工具，中文音视频转文字，免费版每天 3 次转写。citeturn908980search10 |\n| **短音频临时用** | **WhisperWebUI** | 在线 Whisper 转写，支持 MP3、WAV、M4A、MP4 等，免费版适合短文件。citeturn908980search3 |\n| **英文会议/课堂录音** | **Otter.ai 免费版** | 更适合英文会议纪要，免费版有月度分钟限制。citeturn908980news29 |\n\n我的建议很直接：\n\n如果你只是偶尔转录，**先用 TurboScribe 或 WhisperWebUI**，省事。  \n如果你经常转录论文访谈、会议录音、隐私音频，**装本地 Whisper / whisper.cpp**，长期最划算。\n\n中文音频的话，优先试：\n\n1. **TurboScribe**\n2. **Whisper 本地版**\n3. **WhisperWebUI**\n\n不要太迷信“免费在线工具”，很多只是免费试用，长音频、批量导出、说话人分离通常会收费。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn908980search0turn908980search4",
+              "prefix": null,
+              "start_idx": 144,
+              "end_idx": 186,
+              "safe_urls": [
+                "https://github.com/openai/whisper",
+                "https://github.com/openai/whisper?utm_source=chatgpt.com",
+                "https://openai.com/index/whisper/",
+                "https://openai.com/index/whisper/?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([GitHub](https://github.com/openai/whisper?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "openai/whisper: Robust Speech Recognition via Large- ...",
+                  "url": "https://github.com/openai/whisper?utm_source=chatgpt.com",
+                  "attribution": "GitHub",
+                  "pub_date": null,
+                  "snippet": "Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multitasking model.Read more",
+                  "attribution_segments": null,
+                  "supporting_websites": [
+                    {
+                      "title": "Introducing Whisper",
+                      "url": "https://openai.com/index/whisper/?utm_source=chatgpt.com",
+                      "pub_date": null,
+                      "snippet": "21 Sept 2022 — Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervised data collected ...Read more",
+                      "attribution": "OpenAI"
+                    }
+                  ],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 0
+                    },
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 4
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn908980search2",
+              "prefix": null,
+              "start_idx": 271,
+              "end_idx": 295,
+              "safe_urls": [
+                "https://github.com/ggml-org/whisper.cpp",
+                "https://github.com/ggml-org/whisper.cpp?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([GitHub](https://github.com/ggml-org/whisper.cpp?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "ggml-org/whisper.cpp",
+                  "url": "https://github.com/ggml-org/whisper.cpp?utm_source=chatgpt.com",
+                  "attribution": "GitHub",
+                  "pub_date": null,
+                  "snippet": "High-performance inference of OpenAI's Whisper automatic speech recognition (ASR) model: Plain C/C++ implementation without dependencies; Apple Silicon first- ...Read more",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 2
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn908980search10",
+              "prefix": null,
+              "start_idx": 366,
+              "end_idx": 391,
+              "safe_urls": [
+                "https://turboscribe.ai/free-transcription/Chinese",
+                "https://turboscribe.ai/free-transcription/Chinese?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([turboscribe.ai](https://turboscribe.ai/free-transcription/Chinese?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Free Chinese Transcription",
+                  "url": "https://turboscribe.ai/free-transcription/Chinese?utm_source=chatgpt.com",
+                  "attribution": "turboscribe.ai",
+                  "pub_date": null,
+                  "snippet": "Transcribe your Chinese audio and video files to text ... How TurboScribe's Free Transcription Tool Works. Upload an Audio or Video ...Read more",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 10
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn908980search3",
+              "prefix": null,
+              "start_idx": 472,
+              "end_idx": 496,
+              "safe_urls": [
+                "https://whisperwebui.net/",
+                "https://whisperwebui.net/?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([WhisperWebUI](https://whisperwebui.net/?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "WhisperWebUI | Free Online Whisper Transcription & Audio to ...",
+                  "url": "https://whisperwebui.net/?utm_source=chatgpt.com",
+                  "attribution": "WhisperWebUI",
+                  "pub_date": null,
+                  "snippet": "WhisperWebUI is a free online Whisper transcription tool for audio and video. Convert MP3, WAV, M4A, MP4, and WEBM to text in minutes with 100+ languages, ...",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 3
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn908980news29",
+              "prefix": null,
+              "start_idx": 557,
+              "end_idx": 580,
+              "safe_urls": [
+                "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706",
+                "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([Lifewire](https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Otter.ai App Adds French and Spanish Transcription: What You Need to Know",
+                  "url": "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706?utm_source=chatgpt.com",
+                  "attribution": "Lifewire",
+                  "pub_date": 1729693632,
+                  "snippet": "Otter.ai has expanded its transcription services to include French and Spanish, alongside English. Users can select their preferred language for real-time recording and transcription using the Otter.ai mobile app, which is available for both Android and iOS. The service can also transcribe conversations during virtual meetings on platforms like Zoom, Microsoft Teams, and Google Meet. However, it does not offer translation between languages, so the chosen default language must be understood by the user. The app offers a free subscription with 300 transcription minutes per month and up to three imports of audio or video files for transcription. Paid subscriptions, such as the Pro plan, provide more transcription minutes and higher import limits, with tiered pricing up to Enterprise levels for larger needs.",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "news",
+                      "ref_index": 29
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 819,
+              "end_idx": 820,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "openai/whisper: Robust Speech Recognition via Large- ...",
+                  "url": "https://github.com/openai/whisper?utm_source=chatgpt.com",
+                  "attribution": "GitHub"
+                },
+                {
+                  "title": "Free Chinese Transcription",
+                  "url": "https://turboscribe.ai/free-transcription/Chinese?utm_source=chatgpt.com",
+                  "attribution": "turboscribe.ai"
+                },
+                {
+                  "title": "WhisperWebUI | Free Online Whisper Transcription & Audio to ...",
+                  "url": "https://whisperwebui.net/?utm_source=chatgpt.com",
+                  "attribution": "WhisperWebUI"
+                },
+                {
+                  "title": "Otter.ai App Adds French and Spanish Transcription: What You Need to Know",
+                  "url": "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706?utm_source=chatgpt.com",
+                  "attribution": "Lifewire"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://github.com/ggml-org/whisper.cpp",
+            "https://github.com/ggml-org/whisper.cpp?utm_source=chatgpt.com",
+            "https://github.com/openai/whisper",
+            "https://github.com/openai/whisper?utm_source=chatgpt.com",
+            "https://openai.com/index/whisper/",
+            "https://openai.com/index/whisper/?utm_source=chatgpt.com",
+            "https://turboscribe.ai/free-transcription/Chinese",
+            "https://turboscribe.ai/free-transcription/Chinese?utm_source=chatgpt.com",
+            "https://whisperwebui.net/",
+            "https://whisperwebui.net/?utm_source=chatgpt.com",
+            "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706",
+            "https://www.lifewire.com/otter-ai-french-spanish-transcriptions-8732706?utm_source=chatgpt.com"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "github.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/openai/whisper/discussions/2746?utm_source=chatgpt.com",
+                  "title": "Free local Whisper voice-to-text app for Windows and ...",
+                  "snippet": "16 Mar 2026 — Free local Whisper voice-to-text app for Windows and Linux with desktop launchers, local model cache, a working Windows installer, and Windows NVIDIA GPU ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/OpenWhispr/openwhispr?utm_source=chatgpt.com",
+                  "title": "OpenWhispr",
+                  "snippet": "OpenWhispr turns your voice into text, notes, and actions from your desktop. Press a hotkey, speak, and your words appear at your cursor. Choose between fully ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/chidiwilliams/buzz?utm_source=chatgpt.com",
+                  "title": "chidiwilliams/buzz: Buzz transcribes and translates audio ...",
+                  "snippet": "Buzz transcribes and translates audio offline on your personal computer. Powered by OpenAI's Whisper. - chidiwilliams/buzz.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": null,
+                  "attribution": "github.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "openai.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://openai.com/index/whisper/?utm_source=chatgpt.com",
+                  "title": "Introducing Whisper",
+                  "snippet": "21 Sept 2022 — Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervised data collected ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "attribution": "openai.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "voicedash.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://voicedash.ai/best-free-transcription-software/?utm_source=chatgpt.com",
+                  "title": "Best Free Transcription Software in 2026: 12 Tools ...",
+                  "snippet": "22 Jan 2026 — Best free open-source transcription software: OpenAI Whisper; Best for private offline transcription on Mac: MacWhisper; Best for lightweight ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "attribution": "voicedash.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "elevenlabs.io",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://elevenlabs.io/speech-to-text/chinese?utm_source=chatgpt.com",
+                  "title": "Free Mandarin Chinese Speech to Text Transcription",
+                  "snippet": "Free Mandarin speech to text using our advanced AI transcription tool, Scribe. Transcribe Mandarin voice, audio, and speech with industry-leading accuracy.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "attribution": "elevenlabs.io"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "whispertranscribe.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.whispertranscribe.com/?utm_source=chatgpt.com",
+                  "title": "WhisperTranscribe - Transcribe your audio with Whisper AI",
+                  "snippet": "Is WhisperTranscribe free to try? Yes, WhisperTranscribe offers a free trial with up to 60 minutes of transcription. You can experience our 95% accurate Whisper ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "attribution": "whispertranscribe.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "substack.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://jefftkaufman.substack.com/p/local-speech-recognition-with-whisper?utm_source=chatgpt.com",
+                  "title": "Local Speech Recognition with Whisper - Jeff Kaufman",
+                  "snippet": "It looks like for good local performance, the best version to use is whisper.cpp, which is a plain C/C++ implementation with support for maximum ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "attribution": "substack.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "happyscribe.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.happyscribe.com/blog/5-best-free-audio-transcription-software?utm_source=chatgpt.com",
+                  "title": "5 Best free audio transcription software in 2026",
+                  "snippet": "19 Nov 2025 — Explore the best free audio transcription tools in 2026, from free plans to secure free trials. Compare HappyScribe, Gladia, MacWhisper, ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "attribution": "happyscribe.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "medium.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://medium.com/%40lbq999/run-openai-whisper-locally-step-by-step-guide-65b35a4c19d2?utm_source=chatgpt.com",
+                  "title": "Run OpenAI Whisper Locally: Step-by-Step Guide",
+                  "snippet": "OpenAI's Whisper is a powerful speech recognition model that can be run locally. Here's a step-by-step guide to get you started.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "attribution": "medium.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "kapwing.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.kapwing.com/tools/audio-to-text/Chinese?utm_source=chatgpt.com",
+                  "title": "Chinese Audio to Text Converter — Free + Online",
+                  "snippet": "Our Chinese Audio to Text Converter uses AI to auto-generate transcripts you can edit and download. Start for free and convert Chinese audio to text online.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "attribution": "kapwing.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "sipsip.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://sipsip.ai/blog/learn/open-source-video-transcriber?utm_source=chatgpt.com",
+                  "title": "Best Open-Source Video Transcribers in 2026 (Whisper & ...",
+                  "snippet": "26 Mar 2026 — Compared the best open-source video transcribers: Whisper, AI Video Transcriber, yt-dlp, and more. When to self-host vs. use a hosted tool ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "attribution": "sipsip.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "reddit.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.reddit.com/r/OpenAI/comments/1aj61hj/ways_to_use_whisper_for_speechtotext/?utm_source=chatgpt.com",
+                  "title": "Ways to use Whisper for speech-to-text : r/OpenAI",
+                  "snippet": "I've been using a great speech-to-text feature on the OpenAI website. I go to this link, click on a green microphone icon, and then upload audio ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "attribution": "reddit.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.reddit.com/r/OpenAI/comments/1ctduvm/vibe_free_offline_transcription_with_whisper_ai/?utm_source=chatgpt.com",
+                  "title": "Vibe: Free Offline Transcription with Whisper AI : r/OpenAI",
+                  "snippet": "It's a new transcription app I created that's open source and works seamlessly on macOS, Windows, and Linux. The best part? It runs on your device using the ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 21
+                  },
+                  "pub_date": null,
+                  "attribution": "reddit.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "maestra.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://maestra.ai/tools/audio-to-text/transcribe-chinese?utm_source=chatgpt.com",
+                  "title": "Transcribe Chinese Audio to Text",
+                  "snippet": "Chinese (Mandarin) audio to text converter with real-time, free speech-to-text. Supports Simplified & Traditional characters.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "attribution": "maestra.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "whisper-ai.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.whisper-ai.org/?utm_source=chatgpt.com",
+                  "title": "Free Whisper AI - Advanced Audio to Text Converter | 100 ...",
+                  "snippet": "Transform audio to text with FREE Whisper AI's advanced speech recognition. Convert voice recordings, podcasts, interviews to accurate text transcripts.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "attribution": "whisper-ai.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "aurisai.io",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://aurisai.io/transcribe-chinese/?utm_source=chatgpt.com",
+                  "title": "Transcribe & Translate Chinese/Mandarin",
+                  "snippet": "Use Auris AI to transcribe Chinese online for FREE. Translate ... Improve your language skills with our highly accurate, AI-powered transcription tool!Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "attribution": "aurisai.io"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "talknotes.io",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://talknotes.io/transcribe-in/chinese?utm_source=chatgpt.com",
+                  "title": "AI Transcription in Chinese",
+                  "snippet": "ReviewsPricingDownloadAffiliate ProgramF.A.QBlog. Learn. How to transcribe voice memosBrainstorming AIFree toolsVoice memo transcriptionMP3 to text converter.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 20
+                  },
+                  "pub_date": null,
+                  "attribution": "talknotes.io"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "go-transcribe.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://go-transcribe.com/transcribe-chinese-audio-to-text?utm_source=chatgpt.com",
+                  "title": "Convert Chinese-audio to Text in minutes!",
+                  "snippet": "Sign up with Go Transcribe today and work with one of the most sophisticated transcription software in the market. ... Collaboration Tools. If you're a part ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 22
+                  },
+                  "pub_date": null,
+                  "attribution": "go-transcribe.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "nlsblog.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://nlsblog.org/2025/12/17/lab-notes-transcription-with-vibe-and-buzz/?utm_source=chatgpt.com",
+                  "title": "Lab Notes: Transcription with Vibe and Buzz",
+                  "snippet": "17 Dec 2025 — Vibe and Buzz are free, open-source transcription software that utilize OpenAI Whisper for accurate audio/video transcription.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 23
+                  },
+                  "pub_date": null,
+                  "attribution": "nlsblog.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "notta.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.notta.ai/en/tools/chinese-speech-to-text?utm_source=chatgpt.com",
+                  "title": "Transcribe Chinese Audio & Video to Text Online Free",
+                  "snippet": "Easily convert your Chinese voice recordings to text using Notta's online speech-to-text tool. Upload audio files, select the language, and auto-transcribe.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 24
+                  },
+                  "pub_date": null,
+                  "attribution": "notta.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "gling.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.gling.ai/chinese-transcription?utm_source=chatgpt.com",
+                  "title": "Chinese Transcription",
+                  "snippet": "Rock your transcriptions with Gling's intuitive tools. Save time and make transcription easy, even for beginners. Adapt to. Every Need. Use Gling's tool ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 25
+                  },
+                  "pub_date": null,
+                  "attribution": "gling.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "jotme.io",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://translate.jotme.io/audio-to-text/mandarin-chinese?utm_source=chatgpt.com",
+                  "title": "Free Mandarin Chinese Audio to Text Converter",
+                  "snippet": "... free audio transcription tool. Upload recordings and preview timestamped transcript segments ... Free Mandarin Chinese Audio to Text Converter. Convert ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 26
+                  },
+                  "pub_date": null,
+                  "attribution": "jotme.io"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "request_id": "ba836532-4b2a-4fb1-a4bd-06c8c55735a1",
+          "message_type": "next",
+          "turn_exchange_id": "6b73a728-1d5d-4f1f-9c8b-bf0f4057d762",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "33abacb1-8d06-45a9-946d-d587ad7cfb2c",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "33abacb1-8d06-45a9-946d-d587ad7cfb2c",
+      "children": []
+    }
+  },
+  "current_node": "98c44f7d-275e-4917-9dce-b437aace0f25"
+}

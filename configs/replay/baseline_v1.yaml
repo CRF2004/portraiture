@@ -1,0 +1,19 @@
+inputs:
+  episodes: data/interim/segmented/episodes.jsonl
+  turns: data/interim/segmented/turns.jsonl
+  messages: data/interim/normalized/messages.jsonl
+
+outputs:
+  replay_examples: data/processed/replay/replay_examples.jsonl
+  label_distribution: data/processed/replay/label_distribution.jsonl
+
+task:
+  name: next_user_action
+  min_context_turns: 1
+  max_context_turns: 5
+  topic_shift_similarity_threshold: 0.08
+
+split:
+  train: 0.7
+  val: 0.15
+  test: 0.15

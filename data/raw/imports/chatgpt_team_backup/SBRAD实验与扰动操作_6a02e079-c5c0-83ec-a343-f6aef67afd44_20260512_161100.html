@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBRAD实验与扰动操作</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SBRAD实验与扰动操作</h1>
+            <div class="metadata">ID: 6a02e079-c5c0-83ec-a343-f6aef67afd44 | 2026/5/12 16:11:00</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 16:10:56</span>
+                </div>
+                <div class="message-content">rate normalization → SBRAD (hybrid protocol): For<br>SBRAD-positive samples (n = 1,190) and matched nega<br>tive controls (n = 1,190), each heartbeat was time-warped<br>to a target rate of 75 bpm. This preserves per-beat QRS<br>morphology while eliminating slow-rate information, testing<br>whether SBRAD classification depends specifically on low<br>ventricular rate. The target perturbation operator is global<br>time-warping (not window-based), because rate is a whole<br>signal property rather than a local waveform feature. Three<br>matched anatomical controls use linear interpolation (160ms<br>window, qualified operator): QRS complex [R-peak ± 80ms],<br>ST segment [R-peak + 40ms to R-peak + 200ms], and<br>random non-QRS window (160ms, 5 random placements per<br>exam with logit averaging). This is a hybrid protocol: the<br>target perturbation is rate normalization, while all controls use<br>linear interpolation—the qualified operator established by the<br>validity battery. The same protocol was applied to all three<br>raw-signal architectures (ResNet, SE-ResNet, Transformer)<br>with identical matched positive/negative subsets and patient<br>level bootstrap CIs (1,000 iterations). The fraction of SBRAD<br>positive exams with HR change ≥ 1 bpm was recorded to<br>confirm effective perturbation delivery.<br><br><br># 这里的操作怎么理解</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 16:11:00</span>
+                </div>
+                <div class="message-content">这里本质上是在做一个<strong>“因果式验证实验”</strong>：  <br>作者想证明：<br><br>&gt; 模型识别 SBRAD（窦性心动过缓）时，真正依赖的是“心率慢”这个全局信息，而不是某些局部波形形态（QRS/ST 等）。<br><br>所以他们设计了一个非常特殊的扰动实验。<br><br>---<br><br># 一、先理解 SBRAD 是什么<br><br>SBRAD = sinus bradycardia（窦性心动过缓）<br><br>临床定义核心：<br><br>- 心律是窦性<br>- 但心率低（通常 &lt; 60 bpm）<br><br>因此：<br><br>&gt; “慢” 是这个疾病最核心的判别特征。<br><br>不像 1AVB 看 PR interval，CLBBB 看 QRS morphology。<br><br>---<br><br># 二、他们做了什么<br><br>核心操作：<br><br>&gt; 把所有 SBRAD ECG 的心率统一“拉伸/压缩”到 75 bpm。<br><br>原文：<br><br>&gt; each heartbeat was time-warped to a target rate of 75 bpm<br><br>也就是：<br><br>- 原本 45 bpm → 加快<br>- 原本 50 bpm → 加快<br>- 原本 55 bpm → 加快<br><br>最终：<br><br>- 所有 beat 的节律看起来都像 75 bpm<br><br>但：<br><br>- QRS 形状保留<br>- 波形振幅保留<br>- morphology 尽量不变<br><br>只改变：<br><br># “慢速节律”这个信息<br><br>---<br><br># 三、time-warping 怎么理解<br><br>这不是简单删点。<br><br>而是：<br><br># 时间轴缩放<br><br>比如：<br><br>原 ECG：<br><br><pre><code class="language-text">|----beat1----|--------beat2--------|</code></pre><br><br>RR interval 很长（心跳慢）<br><br>time-warp 后：<br><br><pre><code class="language-text">|--beat1--|--beat2--|</code></pre><br><br>RR interval 变短（心跳变快）<br><br>但每个 beat 内部：<br><br>- QRS 形状<br>- P wave<br>- T wave<br><br>尽量保持。<br><br>---<br><br># 四、为什么说这是 “global perturbation”<br><br>因为：<br><br># 心率是全局属性<br><br>心率来自：<br><br>\[<br>HR = \frac{60}{RR}<br>\]<br><br>它依赖：<br><br>- beat 与 beat 的间隔<br>- 整段信号的时间结构<br><br>不是某个局部窗口。<br><br>所以：<br><br>- PR interval masking → 局部 perturbation<br>- QRS masking → 局部 perturbation<br>- rate normalization → 全局 perturbation<br><br>作者因此特别强调：<br><br>&gt; not window-based<br><br>因为它不是遮挡一小段。<br><br>---<br><br># 五、为什么还要做 control<br><br>这是最关键的部分。<br><br>如果：<br><br>&gt; 你对 ECG 做了 time-warp 后模型性能下降<br><br>不能立刻说明：<br><br>&gt; 模型真的依赖 heart rate<br><br>因为：<br><br>- 任何大规模信号变换<br>- 插值<br>- 时间重采样<br><br>都可能破坏信号。<br><br>所以必须有 matched controls。<br><br>---<br><br># 六、他们的 control 是什么<br><br>他们用了三个对照扰动：<br><br>## 1. QRS perturbation<br><br><pre><code class="language-text">R peak ±80ms</code></pre><br><br>即：<br><br>QRS 周围 160ms 被线性插值替换。<br><br>---<br><br>## 2. ST segment perturbation<br><br><pre><code class="language-text">R+40ms 到 R+200ms</code></pre><br><br>即：<br><br>只破坏 ST segment。<br><br>---<br><br>## 3. random non-QRS perturbation<br><br>随机选非 QRS 区域。<br><br>---<br><br>这些 control 都：<br><br>- 使用同样的 interpolation operator<br>- 相同窗口大小（160ms）<br>- 相同统计流程<br><br>因此：<br><br># 唯一不同的是“被破坏的信息类型”<br><br>---<br><br># 七、hybrid protocol 是什么意思<br><br>这里的 hybrid 指：<br><br># target perturbation 和 controls 的操作形式不同<br><br>因为：<br><br>## target<br><br>必须用：<br><br># global time warping<br><br>否则改不了 heart rate。<br><br>---<br><br>## controls<br><br>仍然用：<br><br># linear interpolation<br><br>因为 validity battery 已经证明：<br><br>- interpolation 是“合格扰动算子”<br>- 不会引入太多 operator artifact<br><br>因此：<br><br>&gt; 虽然操作形式不同，<br>&gt; 但 controls 仍然用于验证：<br>&gt;<br>&gt; “模型下降是不是特异来自 rate 信息消失”<br><br>---<br><br># 八、他们真正验证的逻辑<br><br>如果：<br><br>## rate normalization 后<br><br>SBRAD 概率大幅下降<br><br>而：<br><br>## QRS/ST/random controls<br><br>下降不明显<br><br>则说明：<br><br># 模型真正依赖的是 slow rate<br><br>而不是：<br><br>- 某种 morphology artifact<br>- QRS shape<br>- ST shape<br>- 插值噪声<br><br>---<br><br># 九、为什么 target HR 选 75 bpm<br><br>因为：<br><br>75 bpm 是正常窦律。<br><br>所以：<br><br>- 原本 bradycardia<br>- 被“纠正”为正常 rate<br><br>如果模型真学的是：<br><br>&gt; “慢”<br><br>那么：<br><br># SBRAD probability 应该消失<br><br>---<br><br># 十、最后一句是什么意思<br><br>&gt; The fraction of SBRAD positive exams with HR change ≥ 1 bpm was recorded<br><br>意思是：<br><br>他们检查：<br><br># 扰动是否真的成功改变了心率<br><br>因为：<br><br>如果某些 ECG：<br><br>- 原本 58 bpm<br>- warp 后还是 58 bpm<br><br>那 perturbation 无效。<br><br>所以他们记录：<br><br>&gt; 有多少样本的 HR 真被改变了 ≥1 bpm<br><br>用于验证：<br><br># perturbation delivery 成功。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 16:12:04</span>
+                </div>
+                <div class="message-content">意思是他们保留波形，然后按目标心率排列，空缺的部分用线性插值填充吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 16:12:07</span>
+                </div>
+                <div class="message-content">不完全是。这里更接近：<br><br># “整体时间轴重缩放（time rescaling）”<br><br>而不是：<br><br># “重新排列 beat + 空缺插值”<br><br>你可以这样理解。<br><br>---<br><br># 一、它不是 beat 拼接重排<br><br>不是：<br><br>``<code>text id="x94ojl"<br>beat1    beat2<br><br>→ 强行拉近<br><br>beat1__插值__beat2<br><pre><code class="language-text">这种“拼接式”操作。
+
+因为这样会：
+
+- 产生明显边界 artifact
+- 破坏 rhythm continuity
+- ECG 会不自然
+
+论文也强调：
+
+&gt; preserves per-beat QRS morphology
+
+说明他们是在：
+
+# 连续时间域做 warping
+
+而不是离散拼接。
+
+---
+
+# 二、更准确的理解：时间轴压缩
+
+假设原来：
+
+- HR = 50 bpm
+- RR interval = 1.2s
+
+目标：
+
+- HR = 75 bpm
+- RR interval = 0.8s
+
+他们会把：</code></pre>text id="6f1wii"<br>1.2s 的时间轴<br><pre><code class="language-text">压缩成：</code></pre>text id="9s0ca2"<br>0.8s<br><pre><code class="language-text">于是：
+
+- beat 间隔变短
+- 节律变快
+
+但：
+
+- P/QRS/T 的相对形状尽量保留
+
+---
+
+# 三、那插值在哪里出现？
+
+关键：
+
+# 时间缩放后，采样点不再对齐
+
+比如原信号：</code></pre>text id="2obuq5"<br>x[0], x[1], x[2], x[3]<br><pre><code class="language-text">压缩后需要：</code></pre>text id="m7zkcr"<br>x[0], x[0.7], x[1.4], x[2.1]<br><pre><code class="language-text">问题：
+
+- x[0.7] 不存在
+- x[1.4] 不存在
+
+所以必须：
+
+# 插值重采样（resampling）
+
+通常：
+
+- linear interpolation
+- spline interpolation
+
+来生成新的采样值。
+
+---
+
+# 四、因此这里的插值
+
+不是：
+
+# “填补空白区域”
+
+而是：
+
+# “时间变换后的连续重采样”
+
+这是 DSP（数字信号处理）里很常见的。
+
+---
+
+# 五、整个过程更像这样
+
+原始：</code></pre>text id="mth9kf"<br>|------RR1------|------RR2------|<br><pre><code class="language-text">warp 后：</code></pre>text id="9nlwpx"<br>|---RR1---|---RR2---|<br></code>``<br><br></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 16:12:27</span>
+                </div>
+                <div class="message-content">意思是他们保留波形，然后按目标心率的紧密程度排列，空缺的部分用线性插值填充吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 16:12:31</span>
+                </div>
+                <div class="message-content">你这个理解已经很接近了，但还差一个关键点：<br><br>&gt; 它通常不是“先移动 beat 再填空缺”，  <br>&gt; 而是直接对时间轴做连续变形（time warping / resampling）。<br><br>也就是：<br><br># 本质是“时间坐标缩放”<br><br>而不是：<br><br># “拼接 + 补洞”<br><br>---<br><br>举个例子。<br><br>---<br><br># 一、原始 SBRAD ECG<br><br>假设：<br><br>- 原 HR = 50 bpm<br>- RR interval = 1.2s<br><br>信号：<br><br>``<code>text id="wtc2f9"<br>beat1 --------1.2s-------- beat2 --------1.2s-------- beat3<br><pre><code class="language-text">---
+
+# 二、目标：75 bpm
+
+75 bpm 对应：
+
+\[
+RR = \frac{60}{75} = 0.8s
+\]
+
+所以：
+
+他们想把：</code></pre>text id="e0ghso"<br>1.2s → 0.8s<br><pre><code class="language-text">---
+
+# 三、怎么做（真正的 time warping）
+
+不是：</code></pre>text id="1tlt68"<br>移动 beat<br>→ 中间空白<br>→ 插值补洞<br><pre><code class="language-text">而是：
+
+# 直接压缩时间轴
+
+原时间：</code></pre>text id="k5ep8v"<br>0s -------- 1.2s<br><pre><code class="language-text">映射成：</code></pre>text id="ejecv4"<br>0s ----- 0.8s<br><pre><code class="language-text">于是：
+
+- 所有采样点重新映射
+- 整个波形被“压缩”
+
+类似音频变速。
+
+---
+
+# 四、因此会发生什么
+
+## RR interval 变短
+
+beat 更紧密。
+
+---
+
+## P/QRS/T 也会略微变窄
+
+因为整个时间轴都压缩了。
+
+这是 unavoidable 的。
+
+但作者强调：
+
+&gt; preserves per-beat QRS morphology
+
+意思是：
+
+# 尽量保留形态而非绝对时长
+
+即：
+
+- QRS 外形还在
+- 振幅还在
+- 波形结构还在
+
+只是：
+
+- 时间尺度变化了
+
+---
+
+# 五、为什么不用“移动 beat + 填空”
+
+因为那会产生严重 artifact：
+
+比如：</code></pre>text id="6nmlv0"<br>beat1     beat2<br><pre><code class="language-text">硬移动成：</code></pre>text id="bm7u0k"<br>beat1 beat2<br><pre><code class="language-text">中间：
+
+- 接不上
+- 基线断裂
+- 波形 discontinuity
+
+模型会立刻发现：
+
+&gt; “这是人工处理过的”
+
+而不是：
+
+&gt; “rate 被改变了”
+
+---
+
+# 六、线性插值在这里的真实作用
+
+time warping 时一定需要：
+
+# resampling/interpolation
+
+因为：
+
+压缩后：
+
+原采样点：</code></pre>text id="b7ux4h"<br>t = [0,1,2,3,4]<br><pre><code class="language-text">变成：</code></pre>text id="8qdc5p"<br>t' = [0,0.7,1.4,2.1...]<br><pre><code class="language-text">新的采样位置不再落在整数点。
+
+所以：
+
+必须插值计算新值。
+
+通常：
+
+- linear interpolation
+- spline interpolation
+
+都可能用。
+
+---
+
+# 七、和他们 control 的 interpolation 不是一回事
+
+这里容易混淆。
+
+---
+
+## 在 time warping 里
+
+interpolation 是：
+
+# 重采样必需步骤
+
+用于：
+
+- 新时间坐标求值
+
+---
+
+## 在 control perturbation 里
+
+interpolation 是：
+
+# 用来“抹掉”局部信息
+
+比如：
+
+把 QRS 区域：</code></pre>text id="n8rk2k"<br>尖峰<br><pre><code class="language-text">替换成：</code></pre>text id="l2vvtg"<br>平滑过渡<br><pre><code class="language-text">这是另一种用途。
+
+---
+
+# 八、因此整个操作可以理解为</code></pre>text id="49bbtx"<br>原 ECG<br>    ↓<br>检测 R peaks<br>    ↓<br>估计当前 HR<br>    ↓<br>构造时间缩放因子<br>    ↓<br>压缩/拉伸时间轴<br>    ↓<br>重采样（插值）<br>    ↓<br>得到 75 bpm ECG<br><pre><code class="language-text">而不是：</code></pre>text id="6zcwnk"<br>移动 beat<br>→ 补空白<br></code>``<br><br>后者更像 naïve editing。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 16:13:37</span>
+                </div>
+                <div class="message-content">压缩之后一定要是整数点吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 16:13:40</span>
+                </div>
+                <div class="message-content">不需要。<br><br>这正是为什么必须做 interpolation（插值）。<br><br>---<br><br># 一、核心原因<br><br>原始 ECG 是离散采样的。<br><br>比如采样率：<br><br>\[<br>f_s = 500Hz<br>\]<br><br>意味着：<br><br>每个采样点间隔：<br><br>\[<br>\Delta t = 2ms<br>\]<br><br>所以原数据实际上是：<br><br>``<code>text id="ynh0th"<br>x[0], x[1], x[2], x[3] ...<br><pre><code class="language-text">对应时间：</code></pre>text id="w7hl8d"<br>0ms, 2ms, 4ms, 6ms ...<br><pre><code class="language-text">---
+
+# 二、time warping 后
+
+假设压缩 1.5 倍。
+
+原本：</code></pre>text id="rxg17u"<br>100ms<br><pre><code class="language-text">变成：</code></pre>text id="v22n49"<br>66.67ms<br><pre><code class="language-text">问题来了：
+
+66.67ms 不对应原采样点。
+
+因为原点只有：</code></pre>text id="4fowgz"<br>66ms<br>68ms<br><pre><code class="language-text">没有：</code></pre>text id="mxyydh"<br>66.67ms<br><pre><code class="language-text">---
+
+# 三、所以必须插值
+
+即：
+
+&gt; “估计” 66.67ms 时刻的波形值。
+
+例如线性插值：
+
+如果：</code></pre>text id="f0rrm6"<br>66ms -&gt; 0.8mV<br>68ms -&gt; 1.0mV<br><pre><code class="language-text">那么：</code></pre>text id="9m63y6"<br>66.67ms<br><pre><code class="language-text">可能估计为：</code></pre>text id="t8kclv"<br>0.867mV<br><pre><code class="language-text">---
+
+# 四、因此新采样点通常是“非整数时间”
+
+这是正常现象。
+
+实际上：
+
+# 几乎所有 resampling 都这样
+
+包括：
+
+- 音频变速
+- 图像缩放
+- 视频变帧率
+- ECG time warping
+
+---
+
+# 五、最后为什么数据还能存成数组
+
+因为最终：
+
+# 会重新采样回固定网格
+
+例如：
+
+仍然输出：</code></pre>text id="b50s4e"<br>500Hz<br><pre><code class="language-text">的新 ECG。
+
+只是：
+
+这些新点的值：
+
+- 不再直接来自原始采样
+- 而是插值得到
+
+---
+
+# 六、可以理解成
+
+原始：</code></pre>text id="c0bwdx"<br>规则时间网格<br><pre><code class="language-text">↓
+
+time warp 后：</code></pre>text id="tqadg0"<br>不规则时间坐标<br><pre><code class="language-text">↓
+
+resample：</code></pre>text id="j1r35m"<br>重新投影回规则网格<br><pre><code class="language-text">---
+
+# 七、所以“整数点”真正指什么
+
+你说的“整数点”其实有两层：
+
+---
+
+## 1. 数组索引整数
+
+这个最终一定是整数。
+
+因为数组：</code></pre>python<br>x[0], x[1], x[2]<br></code>``<br><br>只能整数索引。<br><br>---<br><br>## 2. 原始时间位置整数<br><br>这个不需要。<br><br>插值本来就是解决：<br><br># “目标位置不落在原采样点上”<br><br>的问题。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 16:15:21</span>
+                </div>
+                <div class="message-content"> beat-conditioned<br>inpainting (amplitude-aligned adjacent-beat replacement). 指的是这种方法吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 16:15:25</span>
+                </div>
+                <div class="message-content">不是。  <br>它和 time warping 是两类完全不同的操作。<br><br>你这里提到的：<br><br>&gt; beat-conditioned inpainting  <br>&gt; (amplitude-aligned adjacent-beat replacement)<br><br>本质上更接近：<br><br># “用邻近正常 beat 去替换目标区域”<br><br>而不是：<br><br># “压缩整个时间轴”<br><br>---<br><br># 一、两者核心区别<br><br>| 方法 | 本质 | 修改对象 |<br>|---|---|---|<br>| time warping | 时间轴缩放 | 全局节律 |<br>| beat-conditioned inpainting | 局部替换 | 某段波形 |<br><br>---<br><br># 二、beat-conditioned inpainting 是什么<br><br>拆开看。<br><br>---<br><br># 1. inpainting<br><br>inpainting 原本是图像领域概念：<br><br>``<code>text id="7pkd9l"<br>把缺失区域“补”出来<br><pre><code class="language-text">比如：
+
+- 去水印
+- 修复破损照片
+
+---
+
+在 ECG 里：
+
+意思是：
+
+# “把一段波形用别的波形补上”
+
+---
+
+# 2. beat-conditioned
+
+说明：
+
+# 补的内容不是随机生成
+
+而是：
+
+# 从邻近 heartbeat 条件化获得
+
+即：
+
+- 用前后 beat
+- 用同一导联附近波形
+- 用相邻 cardiac cycle
+
+作为参考。
+
+---
+
+# 3. adjacent-beat replacement
+
+这句已经非常明确了。
+
+意思是：
+
+# 用邻近 beat 替换目标 beat 区域
+
+例如：
+
+原 ECG：</code></pre>text id="o5q8x6"<br>beat1   beat2   beat3<br><pre><code class="language-text">假设：
+
+要破坏 beat2 的 PR interval。
+
+那么可能：
+
+- 从 beat1 拿对应区域
+- 对齐振幅
+- 替换进去
+
+变成：</code></pre>text id="8o85i4"<br>beat1   beat1-like(PR)   beat3<br><pre><code class="language-text">---
+
+# 三、amplitude-aligned 是什么意思
+
+这是关键。
+
+因为不同 beat：
+
+- baseline 不同
+- 振幅不同
+- R peak 高度不同
+
+直接复制会产生：</code></pre>text id="c3b38r"<br>跳变 discontinuity<br><pre><code class="language-text">所以：
+
+# 要先做振幅对齐
+
+例如：
+
+原 beat：</code></pre>text id="m88h7x"<br>R peak = 1.2mV<br><pre><code class="language-text">邻近 beat：</code></pre>text id="tb1s9g"<br>R peak = 0.9mV<br><pre><code class="language-text">则：
+
+先缩放：
+
+\[
+0.9 \to 1.2
+\]
+
+再替换。
+
+---
+
+# 四、它为什么比 zero masking 更高级
+
+---
+
+## zero masking
+
+直接：</code></pre>text id="n7m44p"<br>目标区域 = 0<br><pre><code class="language-text">问题：
+
+- 太假
+- 模型容易识别 artifact
+- 产生 sharp edges
+
+---
+
+## linear interpolation
+
+用直线连接：</code></pre>text id="0r0g6w"<br>/<br><pre><code class="language-text">比 zero 好。
+
+但：
+
+- 会抹平 morphology
+- 缺少真实 cardiac structure
+
+---
+
+## beat-conditioned inpainting
+
+保留：
+
+- ECG 自然纹理
+- 生理连续性
+- 波形统计特性
+
+因此：
+
+# 更像“真实 ECG”
+
+---
+
+# 五、它和 time warping 的根本差异
+
+---
+
+## beat-conditioned inpainting
+
+是：
+
+# 替换局部内容
+
+例如：
+
+- PR
+- QRS
+- ST
+
+这些局部区域。
+
+---
+
+## time warping
+
+是：
+
+# 修改整个节律时间结构
+
+不替换任何 beat。
+
+而是：
+
+- 改 RR interval
+- 改时间尺度
+
+---
+
+# 六、简单类比
+
+---
+
+## time warping
+
+像：</code></pre>text id="fpah3y"<br>把整首歌加速播放<br><pre><code class="language-text">---
+
+## beat-conditioned inpainting
+
+像：</code></pre>text id="3m8go9"<br>把一句歌词<br>替换成另一句相似歌词<br>并做音量匹配<br><pre><code class="language-text">---
+
+# 七、因此论文里：
+
+如果他们写：
+
+&gt; beat-conditioned inpainting (amplitude-aligned adjacent-beat replacement)
+
+大概率意味着：</code></pre>text id="j7s69c"<br>定位目标区域<br>→ 找邻近 beat 对应区域<br>→ 做振幅对齐<br>→ 替换目标区域<br>→ 平滑边界<br></code>``<br><br>这属于：<br><br># 生理结构保真型局部扰动。</div>
+            </div></div></div></body></html>

@@ -1,0 +1,3158 @@
+{
+  "title": "ECG XAI Zero-Masking Analysis",
+  "create_time": 1779845777.733838,
+  "update_time": 1779845818.460028,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a164a7f-b050-83ec-bfd9-42a0084dafb1",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://doi.org/10.1038/s41598-024-63656-x",
+    "https://www.nature.com/articles/s41598-024-63656-x",
+    "https://link.springer.com/article/10.1007/s10462-024-10852-w",
+    "https://doi.org/10.3390/app13031805",
+    "https://www.openai.com",
+    "https://doi.org/10.1007/s10462-024-10852-w",
+    "https://doi.org/10.3390/e23081064",
+    "https://www.mdpi.com/1099-4300/23/8/1064",
+    "https://www.mdpi.com/2076-3417/13/3/1805",
+    "https://docs.google.com/document/d/"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "db7e6a4e-b5a1-40f6-94f0-1b3463150603"
+      ]
+    },
+    "db7e6a4e-b5a1-40f6-94f0-1b3463150603": {
+      "id": "db7e6a4e-b5a1-40f6-94f0-1b3463150603",
+      "message": {
+        "id": "db7e6a4e-b5a1-40f6-94f0-1b3463150603",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "ed1cd0ba-0778-492a-8878-1932b4071be9"
+      ]
+    },
+    "ed1cd0ba-0778-492a-8878-1932b4071be9": {
+      "id": "ed1cd0ba-0778-492a-8878-1932b4071be9",
+      "message": {
+        "id": "ed1cd0ba-0778-492a-8878-1932b4071be9",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "db7e6a4e-b5a1-40f6-94f0-1b3463150603",
+      "children": [
+        "7e899775-b6ca-47e4-b21d-1f92caf9b5cf"
+      ]
+    },
+    "7e899775-b6ca-47e4-b21d-1f92caf9b5cf": {
+      "id": "7e899775-b6ca-47e4-b21d-1f92caf9b5cf",
+      "message": {
+        "id": "7e899775-b6ca-47e4-b21d-1f92caf9b5cf",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ed1cd0ba-0778-492a-8878-1932b4071be9",
+      "children": [
+        "8e7ec3fd-c9dd-4b81-88e1-2a39087bd644"
+      ]
+    },
+    "8e7ec3fd-c9dd-4b81-88e1-2a39087bd644": {
+      "id": "8e7ec3fd-c9dd-4b81-88e1-2a39087bd644",
+      "message": {
+        "id": "8e7ec3fd-c9dd-4b81-88e1-2a39087bd644",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "7e899775-b6ca-47e4-b21d-1f92caf9b5cf",
+      "children": [
+        "25ac93cb-048b-4410-9ff7-f661ca8fdaee"
+      ]
+    },
+    "25ac93cb-048b-4410-9ff7-f661ca8fdaee": {
+      "id": "25ac93cb-048b-4410-9ff7-f661ca8fdaee",
+      "message": {
+        "id": "25ac93cb-048b-4410-9ff7-f661ca8fdaee",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845776.548,
+        "update_time": 1779845815.689911,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\n| 论点 | 证据/用途 | 引用格式 | URL |\n| --- | --- | --- | --- |\n| ECG perturbation-based XAI 中直接使用 zero-masking / setting-to-zero | Paralič et al. 在 12-lead ECG 的 perturbation explanation 方法中明确写道：被扰动区间的 values “are set to zero”。适合支撑“ECG 扰动解释中存在 zero-masking 实践”。([MDPI][2]) | Paralič, J., Kolárik, M., Paraličová, Z., Lohaj, O., & Jozefík, A. (2023). *Perturbation-Based Explainable AI for ECG Sensor Data*. **Applied Sciences, 13**(3), 1805. [https://doi.org/10.3390/app13031805](https://doi.org/10.3390/app13031805) | [https://www.mdpi.com/2076-3417/13/3/1805](https://www.mdpi.com/2076-3417/13/3/1805) |\n| zero-masking / setting-to-zero 是 ECG XAI 中 frequently used 的扰动方案 | Goettling et al. 明确称其为 “frequently used scheme of setting values zero”，这是支持“常用”的最直接文献。但它支持的是 **frequently used**，不是严格统计意义上的 **most common**。([Nature][1]) | Goettling, M., Hammer, A., Malberg, H., et al. (2024). *xECGArch: A trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features*. **Scientific Reports, 14**, 13122. [https://doi.org/10.1038/s41598-024-63656-x](https://doi.org/10.1038/s41598-024-63656-x) | [https://www.nature.com/articles/s41598-024-63656-x](https://www.nature.com/articles/s41598-024-63656-x) |\n| zero-masking 会引入 hard-boundary / out-of-distribution artifacts | Goettling et al. 指出 setting values to zero 会引入 noise，因为模型并未在包含 “sudden jumps to zero” 的数据上训练；这直接支持你句子里的 hard-boundary artifact / OOD artifact 论点。([Nature][1]) | Goettling, M., Hammer, A., Malberg, H., et al. (2024). *xECGArch: A trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features*. **Scientific Reports, 14**, 13122. [https://doi.org/10.1038/s41598-024-63656-x](https://doi.org/10.1038/s41598-024-63656-x) | [https://www.nature.com/articles/s41598-024-63656-x](https://www.nature.com/articles/s41598-024-63656-x) |\n| 扰动算子会改变 explanation 结论 / XAI 方法排名 | Goettling et al. 比较 linear interpolation 与 setting-to-zero 后发现，不同 perturbation scheme 会让不同 XAI 方法看起来更优；zero perturbation 下 ITG 表现最好，而 interpolation 下 DTD 更可信。适合支撑“perturbation operator 本身应被审计”。([Nature][1]) | Goettling, M., Hammer, A., Malberg, H., et al. (2024). *xECGArch: A trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features*. **Scientific Reports, 14**, 13122. [https://doi.org/10.1038/s41598-024-63656-x](https://doi.org/10.1038/s41598-024-63656-x) | [https://www.nature.com/articles/s41598-024-63656-x](https://www.nature.com/articles/s41598-024-63656-x) |\n| 生物医学时序信号 occlusion 中常见 zero-value window occlusion，且包括 ECG 实验 | Resta et al. 提出用于 biomedical signals 的 occlusion explanation，说明 windowed occlusion 中使用 zero values；其 PTBDB 分类实验是 ECG-only，并比较 zero 与 mean occlusion。([MDPI][3]) | Resta, M., Monreale, A., & Bacciu, D. (2021). *Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals*. **Entropy, 23**(8), 1064. [https://doi.org/10.3390/e23081064](https://doi.org/10.3390/e23081064) | [https://www.mdpi.com/1099-4300/23/8/1064](https://www.mdpi.com/1099-4300/23/8/1064) |\n| cardiac / ECG XAI 中解释评估不足，很多研究没有系统量化 explanation quality | Salih et al. 对 cardiac AI XAI evaluation 的综述显示，43% 的研究完全没有评估所用 XAI，只有部分研究使用专家、proxy 或统计分析评价解释质量。适合支撑“影响 seldom quantified / rarely audited”。([Springer][4]) | Salih, A. M., Galazzo, I. B., Gkontra, P., et al. (2024). *A review of evaluation approaches for explainable AI with applications in cardiology*. **Artificial Intelligence Review, 57**, 240. [https://doi.org/10.1007/s10462-024-10852-w](https://doi.org/10.1007/s10462-024-10852-w) | [https://link.springer.com/article/10.1007/s10462-024-10852-w](https://link.springer.com/article/10.1007/s10462-024-10852-w) |\n\n建议你的原句改成更稳的版本：\n\n> Second, the perturbation operator itself is rarely treated as an auditable methodological variable: a frequently used choice in ECG occlusion analysis is zero-masking, or setting signal samples/segments to zero, which can introduce hard-boundary and out-of-distribution artifacts; the downstream influence of this design choice on explanation conclusions is often insufficiently quantified.\n\n\n你帮我核对一下这里对论文的观点提炼是否正确"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30",
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_source": null,
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8e7ec3fd-c9dd-4b81-88e1-2a39087bd644",
+      "children": [
+        "e26fb2b9-2992-447b-a62d-89c078b7b5d8"
+      ]
+    },
+    "e26fb2b9-2992-447b-a62d-89c078b7b5d8": {
+      "id": "e26fb2b9-2992-447b-a62d-89c078b7b5d8",
+      "message": {
+        "id": "e26fb2b9-2992-447b-a62d-89c078b7b5d8",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845777.5489004,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "25ac93cb-048b-4410-9ff7-f661ca8fdaee",
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "25ac93cb-048b-4410-9ff7-f661ca8fdaee",
+      "children": [
+        "063c6628-f01b-4111-982e-4458ce611305"
+      ]
+    },
+    "063c6628-f01b-4111-982e-4458ce611305": {
+      "id": "063c6628-f01b-4111-982e-4458ce611305",
+      "message": {
+        "id": "063c6628-f01b-4111-982e-4458ce611305",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845778.528794,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "294f7e8d-4539-4382-8581-32227fb7039c"
+        },
+        "status": "in_progress",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "294f7e8d-4539-4382-8581-32227fb7039c",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "skip_reasoning_title": "跳过",
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e26fb2b9-2992-447b-a62d-89c078b7b5d8",
+      "children": [
+        "ba1b9aec-4687-47f8-8a83-4604c472125b"
+      ]
+    },
+    "ba1b9aec-4687-47f8-8a83-4604c472125b": {
+      "id": "ba1b9aec-4687-47f8-8a83-4604c472125b",
+      "message": {
+        "id": "ba1b9aec-4687-47f8-8a83-4604c472125b",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845777.599433,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我会逐条核对这些论文是否真的支撑你列出的论点，重点看原文是否有“set to zero / frequently used / sudden jumps / evaluation不足”等关键表述，而不是只看摘要。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "is_thinking_preamble_message": true,
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "063c6628-f01b-4111-982e-4458ce611305",
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "063c6628-f01b-4111-982e-4458ce611305",
+      "children": [
+        "fa1d2181-73ed-483c-81f9-c62ef96e637d"
+      ]
+    },
+    "fa1d2181-73ed-483c-81f9-c62ef96e637d": {
+      "id": "fa1d2181-73ed-483c-81f9-c62ef96e637d",
+      "message": {
+        "id": "fa1d2181-73ed-483c-81f9-c62ef96e637d",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845781.18754,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "Paralič Perturbation-Based Explainable AI for ECG Sensor Data set to zero values are set to zero",
+              "Goettling xECGArch frequently used scheme setting values zero sudden jumps to zero perturbation scheme",
+              "Resta Occlusion-Based Explanations Deep Recurrent Models Biomedical Signals zero values PTBDB ECG mean occlusion",
+              "Salih review evaluation approaches explainable AI cardiology 43% studies no evaluation XAI"
+            ]
+          },
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "6048f061-25aa-49a7-a2fe-cd9813dee669",
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ba1b9aec-4687-47f8-8a83-4604c472125b",
+      "children": [
+        "821632d4-7faa-4f8d-8d14-b82c0ff02963"
+      ]
+    },
+    "821632d4-7faa-4f8d-8d14-b82c0ff02963": {
+      "id": "821632d4-7faa-4f8d-8d14-b82c0ff02963",
+      "message": {
+        "id": "821632d4-7faa-4f8d-8d14-b82c0ff02963",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845777.599433,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"search_query\":[{\"q\":\"Paralič Perturbation-Based Explainable AI for ECG Sensor Data set to zero values are set to zero\"},{\"q\":\"Goettling xECGArch frequently used scheme setting values zero sudden jumps to zero perturbation scheme\"},{\"q\":\"Resta Occlusion-Based Explanations Deep Recurrent Models Biomedical Signals zero values PTBDB ECG mean occlusion\"},{\"q\":\"Salih review evaluation approaches explainable AI cardiology 43% studies no evaluation XAI\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "ea2a0d35-f2e2-475a-bdac-719bd9d14c75",
+          "reasoning_status": "is_reasoning",
+          "search_queries": [
+            {
+              "type": "search",
+              "q": "Paralič Perturbation-Based Explainable AI for ECG Sensor Data set to zero values are set to zero"
+            },
+            {
+              "type": "search",
+              "q": "Goettling xECGArch frequently used scheme setting values zero sudden jumps to zero perturbation scheme"
+            },
+            {
+              "type": "search",
+              "q": "Resta Occlusion-Based Explanations Deep Recurrent Models Biomedical Signals zero values PTBDB ECG mean occlusion"
+            },
+            {
+              "type": "search",
+              "q": "Salih review evaluation approaches explainable AI cardiology 43% studies no evaluation XAI"
+            }
+          ],
+          "search_display_string": "正在搜索网页",
+          "searched_display_string": "已搜索网页",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "验证论文观点和引用的准确性",
+          "reasoning_titles": [
+            "验证论文观点和引用的准确性"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "fa1d2181-73ed-483c-81f9-c62ef96e637d",
+      "children": [
+        "41a3c034-fc5b-4f59-9b78-e48526a9bdb2"
+      ]
+    },
+    "41a3c034-fc5b-4f59-9b78-e48526a9bdb2": {
+      "id": "41a3c034-fc5b-4f59-9b78-e48526a9bdb2",
+      "message": {
+        "id": "41a3c034-fc5b-4f59-9b78-e48526a9bdb2",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845781.1874435,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "Paralič Perturbation-Based Explainable AI for ECG Sensor Data set to zero values are set to zero",
+              "Goettling xECGArch frequently used scheme setting values zero sudden jumps to zero perturbation scheme",
+              "Resta Occlusion-Based Explanations Deep Recurrent Models Biomedical Signals zero values PTBDB ECG mean occlusion",
+              "Salih review evaluation approaches explainable AI cardiology 43% studies no evaluation XAI"
+            ]
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "821632d4-7faa-4f8d-8d14-b82c0ff02963",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "验证论文观点和引用的准确性",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "821632d4-7faa-4f8d-8d14-b82c0ff02963",
+      "children": [
+        "a1b92114-5a78-45b0-9504-a6f66380025c"
+      ]
+    },
+    "a1b92114-5a78-45b0-9504-a6f66380025c": {
+      "id": "a1b92114-5a78-45b0-9504-a6f66380025c",
+      "message": {
+        "id": "a1b92114-5a78-45b0-9504-a6f66380025c",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845781.1840093,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "by J Paralič · 2023 · Cited by 5 — Remove, mask, or alter part of the sensory data. In our case, values in the selected interval to be perturbed are set to zero. Pass the new ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — In this paper, we propose a model agnostic explanation method, based on occlusion, that enables the learning of the input's influence on the model predictions.Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805/review_report",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "31 Jan 2023 — The authors propose a perturbation-based method for explaining predictions made by a deep network using ECG data. I agree that explainable AI – ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 29
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2075-4418/15/11/1399",
+                  "title": "Explainable Artificial Intelligence in Radiological ...",
+                  "snippet": "by M Haupt · 2025 · Cited by 40 — This systematic review synthesizes current research on the use of XAI methods in radiological cardiovascular imaging.",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 31
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "pmc.ncbi.nlm.nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11161651/",
+                  "title": "xECGArch: a trustworthy deep learning architecture for ... - PMC",
+                  "snippet": "by M Goettling · 2024 · Cited by 43 — To show the advantage of the new perturbation scheme, a comparison to the frequently used scheme of setting values zero was applied. The ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8394492/",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — In this paper, we propose a model agnostic explanation method, based on occlusion, that enables the learning of the input's influence on the model predictions.Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12912381/",
+                  "title": "Interpretable multimodal zero shot ECG diagnosis via ... - PMC",
+                  "snippet": "by J Tang · 2026 — We introduce ZETA, a novel zero-shot multimodal framework for interpretable ECG diagnosis that aligns ECG signals with structured positive and negative clinical ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9818170/",
+                  "title": "Interpretable Machine Learning Techniques in ECG-Based ...",
+                  "snippet": "by YM Ayano · 2022 · Cited by 135 — Resta M., Monreale A., Bacciu D. Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy. 2021;23:1064. doi: 10.3390/e23081064 ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13056371/",
+                  "title": "Explainable artificial intelligence in electrocardiography - PMC",
+                  "snippet": "by A Taleban · 2025 · Cited by 2 — 3.1. Perturbation-Based techniques. Perturbation-based explanation methods represent one of the most widely applied approaches in ECG ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 26
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "pubmed.ncbi.nlm.nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/39132011/",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "by AM Salih · 2024 · Cited by 80 — This review details the evaluation of XAI in cardiac AI applications ... 43% not assessing the XAI used at all. We aim to inspire additional studies ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pubmed.ncbi.nlm.nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/38849417/",
+                  "title": "xECGArch: a trustworthy deep learning architecture for ...",
+                  "snippet": "by M Goettling · 2024 · Cited by 43 — We present a novel deep learning architecture for interpretable ECG analysis (xECGArch). For the first time, short- and long-term features are analyzed.Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pubmed.ncbi.nlm.nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.researchgate.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/367642939_Perturbation-Based_Explainable_AI_for_ECG_Sensor_Data",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "13 Oct 2025 — Therefore, in this article we focus on the explainability of black-box models for stream data from 12-lead ECG. We designed and implemented a ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": 1675123200,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/353973630_Occlusion-Based_Explanations_in_Deep_Recurrent_Models_for_Biomedical_Signals",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "12 Aug 2021 — GRUβ predictions for the SCG with occluded input signals. With ECG occluded, the output prediction is a signal oscillating around zero values.Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": 1629158400,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/379951799_xECGArch_A_trustworthy_deep_learning_architecture_for_interpretable_ECG_analysis_considering_short-term_and_long-term_features",
+                  "title": "(PDF) xECGArch: A trustworthy deep learning architecture ...",
+                  "snippet": "19 Apr 2024 — To demonstrate the trustworthiness of xECGArch, perturbation analysis was used to compare 13 different xAI methods. We parameterized xECGArch ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": 1713484800,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/381258497_xECGArch_a_trustworthy_deep_learning_architecture_for_interpretable_ECG_analysis_considering_short-term_and_long-term_features",
+                  "title": "(PDF) xECGArch: a trustworthy deep learning architecture ...",
+                  "snippet": "the new perturbation scheme, a comparison to the frequently used scheme of setting values zero was applied. e latter, of course, introduces noise because the ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": 1717718400,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/376378265_A_Review_of_Evaluation_Approaches_for_Explainable_AI_With_Applications_in_Cardiology",
+                  "title": "(PDF) A Review of Evaluation Approaches for Explainable ...",
+                  "snippet": "31 Mar 2026 — p>Explainable artificial intelligence (XAI) elucidates the decision-making process of complex AI models and is important in building trust ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": 1700611200,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/319056221_Recurrent_Neural_Network_Based_Classification_of_ECG_Signal_Features_for_Obstruction_of_Sleep_Apnea_Detection",
+                  "title": "Recurrent Neural Network Based Classification of ECG ...",
+                  "snippet": "29 Jan 2026 — PDF | On Jul 1, 2017, Maowei Cheng and others published Recurrent Neural Network Based Classification of ECG Signal Features for Obstruction ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 33
+                  },
+                  "pub_date": 1498867200,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/382998203_A_review_of_evaluation_approaches_for_explainable_AI_with_applications_in_cardiology",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "9 Aug 2024 — This review details the evaluation of XAI in cardiac AI applications and has found that, of the studies examined, 37% evaluated XAI quality ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 34
+                  },
+                  "pub_date": 1723161600,
+                  "result_source": "bright",
+                  "attribution": "www.researchgate.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.researchsquare.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchsquare.com/article/rs-3654418/v1.pdf",
+                  "title": "xECGArch: A trustworthy deep learning architecture for ...",
+                  "snippet": "by M Goettling · 2024 · Cited by 43 — To show the advantage of the new perturbation scheme, a comparison to the frequently used scheme of. 371 setting values zero was applied. The ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.researchsquare.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.techrxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.techrxiv.org/doi/10.36227/techrxiv.24573304",
+                  "title": "A Review of Evaluation Approaches for Explainable AI With ...",
+                  "snippet": "by A Salih · 2023 · Cited by 80 — This review details the evaluation of XAI in cardiac AI ... 43% not assessing the XAI used at all. We aim to inspire additional ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.techrxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "link.springer.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://link.springer.com/article/10.1007/s10462-024-10852-w",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "9 Aug 2024 — This review details the evaluation of XAI in cardiac AI applications and has found that, of the studies examined, 37% evaluated XAI quality using literature ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "link.springer.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/html/2510.21551v1",
+                  "title": "Interpretable Multimodal Zero-Shot ECG Diagnosis via ...",
+                  "snippet": "24 Oct 2025 — We introduce ZETA (Zero-shot ECG Transparent Analysis), a novel framework designed for interpretable, zero-shot cardiovascular disease diagnosis ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "arxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arpi.unipi.it",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arpi.unipi.it/handle/11568/1122926",
+                  "title": "Occlusion-based explanations in deep recurrent models for ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — In this paper, we propose a model agnostic explanation method, based on occlusion, that enables the learning of the input's influence on the model predictions.Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "arpi.unipi.it"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "diposit.ub.edu",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://diposit.ub.edu/items/b9c7cfa9-5c5f-4568-bece-b342fa16c806",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "by AM Salih · 2024 · Cited by 80 — This review details the evaluation of XAI in cardiac AI ... 43% not assessing the XAI used at all. We aim to inspire additional ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "diposit.ub.edu"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "modulai.io",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://modulai.io/blog/explainability-for-ecg-data/",
+                  "title": "Explainable AI in medicine: Detecting AF in ECG data",
+                  "snippet": "11 Aug 2022 — In this post, we take a look at how explainability techniques can be used to highlight what features of an ECG are most relevant for a model predicting Atrial ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "modulai.io"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "jogs.one",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://jogs.one/icigs_1000_14/",
+                  "title": "Explainable AI decision model for ECG data of cardiac ...",
+                  "snippet": "The decision taken by the AI model for any particular patient's ECG can be interpreted using the ShAP plot, highlighting the abnormal ECG waves. We made a web ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 20
+                  },
+                  "pub_date": 1650412800,
+                  "result_source": "bright",
+                  "attribution": "jogs.one"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "peerj.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://peerj.com/articles/cs-825/",
+                  "title": "Deep learning-based electrocardiogram rhythm and beat ...",
+                  "snippet": "by A Darmawahyuni · 2022 · Cited by 44 — Deep learning-based electrocardiogram rhythm and beat features for heart abnormality classification. Research Article.Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 21
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "peerj.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "qmro.qmul.ac.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://qmro.qmul.ac.uk/jspui/handle/123456789/97835",
+                  "title": "A Review of Evaluation Approaches for Explainable AI With ...",
+                  "snippet": "by E Rauseo · 2024 · Cited by 80 — This review details the evaluation of XAI in cardiac AI applications and has found that, of the studies examined, 37% evaluated XAI quality using literature ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 22
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "qmro.qmul.ac.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "cinc.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://cinc.org/archives/2025/pdf/CinC2025-379.pdf",
+                  "title": "Clinically Interpretable Zero-Shot ECG Classification via ...",
+                  "snippet": "by LF de Souza — This work builds on that foundation by propos- ing a framework that classifies ECGs in a zero-shot manner by grounding its predictions in verifiable, text-based ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 23
+                  },
+                  "pub_date": 1762289501,
+                  "result_source": "bright",
+                  "attribution": "cinc.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.academia.edu",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.academia.edu/39333670/Recurrent_Neural_Network_Based_classification_of_ECG_signal_Features_for_Obstruction_of_Sleep_Apnea_Detection",
+                  "title": "Recurrent Neural Network Based classification of ECG ...",
+                  "snippet": "This paper introduces an OSA detection method based on Recurrent Neural network. At the first step, RR interval (time interval from one R wave to the next R ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 24
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.academia.edu"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.sciencedirect.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.sciencedirect.com/science/article/pii/S2589004226004013",
+                  "title": "A comprehensive review of explainable artificial ...",
+                  "snippet": "by K Zhang · 2026 · Cited by 1 — Studies with insufficient methodological detail regarding the XAI approach or evaluation, rendering findings non-reproducible. Articles focused ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 25
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.sciencedirect.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "pure.ulster.ac.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pure.ulster.ac.uk/files/89888309/ztab002.pdf",
+                  "title": "The effect of confounding data features on a deep learning ...",
+                  "snippet": "by R Brisk · 2021 · Cited by 22 — The aim of this study was to establish whether a DL algorithm can detect ACTCO, as defined by angiographically proven acute coron- ary occlusion, by leveraging ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 27
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "pure.ulster.ac.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "scispace.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://scispace.com/papers/a-review-of-evaluation-approaches-for-explainable-ai-with-3rxsdma1ft",
+                  "title": "A Review of Evaluation Approaches for Explainable AI With ...",
+                  "snippet": "TL;DR: The evaluation of XAI in cardiac AI applications is lacking, with only a minority of studies assessing the quality of explanations. Abstract: ...",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 28
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "scispace.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.physionet.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.physionet.org/physiobank/database/ptbdb/",
+                  "title": "PTB Diagnostic ECG Database v1.0.0",
+                  "snippet": "25 Sept 2004 — A collection of 549 high-resolution 15-lead ECGs (12 standard leads together with Frank XYZ leads), including clinical summaries for each record.Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 30
+                  },
+                  "pub_date": 1096070400,
+                  "result_source": "bright",
+                  "attribution": "www.physionet.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "medicalai.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://medicalai.com/ko/publications/?count=10&page=2",
+                  "title": "Publications",
+                  "snippet": "We propose a Zero-shot ECG diagnosis framework based on RAG for ECG analysis that incorporates expert-curated knowledge to enhance diagnostic accuracy and ...Read more",
+                  "ref_id": {
+                    "turn_index": 716061,
+                    "ref_type": "search",
+                    "ref_index": 32
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "medicalai.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a164a9538708332a37602a9ca8b6d96",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "41a3c034-fc5b-4f59-9b78-e48526a9bdb2",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "验证论文观点和引用的准确性",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "41a3c034-fc5b-4f59-9b78-e48526a9bdb2",
+      "children": [
+        "34ef382b-bc49-42e4-b2bf-a6adfb969e4e"
+      ]
+    },
+    "34ef382b-bc49-42e4-b2bf-a6adfb969e4e": {
+      "id": "34ef382b-bc49-42e4-b2bf-a6adfb969e4e",
+      "message": {
+        "id": "34ef382b-bc49-42e4-b2bf-a6adfb969e4e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845783.208339,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn716061search0\"},{\"ref_id\":\"turn716061search1\"},{\"ref_id\":\"turn716061search2\"},{\"ref_id\":\"turn716061search11\"}],\"response_length\":\"long\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "5360d8d4-296d-4fb2-ab87-61fd8e297ea2",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找开放页面内容",
+          "reasoning_titles": [
+            "查找开放页面内容"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "a1b92114-5a78-45b0-9504-a6f66380025c",
+      "children": [
+        "1415e0a2-d538-4f0a-b81f-dbe31d7928a1"
+      ]
+    },
+    "1415e0a2-d538-4f0a-b81f-dbe31d7928a1": {
+      "id": "1415e0a2-d538-4f0a-b81f-dbe31d7928a1",
+      "message": {
+        "id": "1415e0a2-d538-4f0a-b81f-dbe31d7928a1",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845784.1480083,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data | MDPI",
+                  "snippet": "Total lines: 501\n",
+                  "ref_id": {
+                    "turn_index": 648605,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "pmc.ncbi.nlm.nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11161651/",
+                  "title": "Checking your browser - reCAPTCHA",
+                  "snippet": "Total lines: 3\n",
+                  "ref_id": {
+                    "turn_index": 648605,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8394492/",
+                  "title": "Checking your browser - reCAPTCHA",
+                  "snippet": "Total lines: 3\n",
+                  "ref_id": {
+                    "turn_index": 648605,
+                    "ref_type": "view",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "pmc.ncbi.nlm.nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "link.springer.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://link.springer.com/article/10.1007/s10462-024-10852-w",
+                  "title": "A review of evaluation approaches for explainable AI with applications in cardiology | Artificial Intelligence Review | Springer Nature Link",
+                  "snippet": "Total lines: 1367\n",
+                  "ref_id": {
+                    "turn_index": 648605,
+                    "ref_type": "view",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "link.springer.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a164a9538708332a37602a9ca8b6d96",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "27cc817a-a461-4254-a0d4-cb8c9ac6fff3",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找开放页面内容",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "34ef382b-bc49-42e4-b2bf-a6adfb969e4e",
+      "children": [
+        "ab16217c-e80b-41fb-a636-43decb0a6c21"
+      ]
+    },
+    "ab16217c-e80b-41fb-a636-43decb0a6c21": {
+      "id": "ab16217c-e80b-41fb-a636-43decb0a6c21",
+      "message": {
+        "id": "ab16217c-e80b-41fb-a636-43decb0a6c21",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845784.388947,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"https://www.nature.com/articles/s41598-024-63656-x\"}],\"response_length\":\"long\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "cf1fb7c5-8430-4299-badc-32d70be2f308",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "寻找开放的Nature Direct相关文章",
+          "reasoning_titles": [
+            "寻找开放的Nature Direct相关文章"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "1415e0a2-d538-4f0a-b81f-dbe31d7928a1",
+      "children": [
+        "04189e11-0205-49ba-aea3-b6d2589e5cc2"
+      ]
+    },
+    "04189e11-0205-49ba-aea3-b6d2589e5cc2": {
+      "id": "04189e11-0205-49ba-aea3-b6d2589e5cc2",
+      "message": {
+        "id": "04189e11-0205-49ba-aea3-b6d2589e5cc2",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845785.3403752,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.nature.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "snippet": "Total lines: 699\n",
+                  "ref_id": {
+                    "turn_index": 721342,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.nature.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a164a9538708332a37602a9ca8b6d96",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "ab16217c-e80b-41fb-a636-43decb0a6c21",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "寻找开放的Nature Direct相关文章",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ab16217c-e80b-41fb-a636-43decb0a6c21",
+      "children": [
+        "2e1203be-f94d-4c8d-a416-aa98eabe67d5"
+      ]
+    },
+    "2e1203be-f94d-4c8d-a416-aa98eabe67d5": {
+      "id": "2e1203be-f94d-4c8d-a416-aa98eabe67d5",
+      "message": {
+        "id": "2e1203be-f94d-4c8d-a416-aa98eabe67d5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845785.591371,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"find\":[{\"ref_id\":\"turn721342view0\",\"pattern\":\"frequently used scheme\"},{\"ref_id\":\"turn721342view0\",\"pattern\":\"sudden jumps to zero\"},{\"ref_id\":\"turn721342view0\",\"pattern\":\"linear interpolation\"},{\"ref_id\":\"turn721342view0\",\"pattern\":\"setting values to zero\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "5616e4df-6e11-4f6c-a1d5-577e153a754e",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "探索自然方法与干扰方案的关系",
+          "reasoning_titles": [
+            "探索自然方法与干扰方案的关系"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "04189e11-0205-49ba-aea3-b6d2589e5cc2",
+      "children": [
+        "a9e18f31-2a27-47e3-9600-447b56eb49f3"
+      ]
+    },
+    "a9e18f31-2a27-47e3-9600-447b56eb49f3": {
+      "id": "a9e18f31-2a27-47e3-9600-447b56eb49f3",
+      "message": {
+        "id": "a9e18f31-2a27-47e3-9600-447b56eb49f3",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845787.026795,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.nature.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "snippet": "Total lines: 699\n",
+                  "ref_id": {
+                    "turn_index": 533359,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.nature.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "snippet": "Total lines: 699\n",
+                  "ref_id": {
+                    "turn_index": 533359,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.nature.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "snippet": "Total lines: 699\n",
+                  "ref_id": {
+                    "turn_index": 533359,
+                    "ref_type": "view",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.nature.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "snippet": "Total lines: 699\n",
+                  "ref_id": {
+                    "turn_index": 533359,
+                    "ref_type": "view",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.nature.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a164a9538708332a37602a9ca8b6d96",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "2e1203be-f94d-4c8d-a416-aa98eabe67d5",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "探索自然方法与干扰方案的关系",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2e1203be-f94d-4c8d-a416-aa98eabe67d5",
+      "children": [
+        "f94e3401-f854-4f06-8ad1-a59d51a032f5"
+      ]
+    },
+    "f94e3401-f854-4f06-8ad1-a59d51a032f5": {
+      "id": "f94e3401-f854-4f06-8ad1-a59d51a032f5",
+      "message": {
+        "id": "f94e3401-f854-4f06-8ad1-a59d51a032f5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845787.299938,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn716061search10\"}],\"response_length\":\"long\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "eca4f4f3-91d1-49e0-af55-490811c0cd25",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找Resta详细信息并打开MDPI",
+          "reasoning_titles": [
+            "查找Resta详细信息并打开MDPI"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "a9e18f31-2a27-47e3-9600-447b56eb49f3",
+      "children": [
+        "d7d13180-72a6-47c6-b1d4-4747ea89a668"
+      ]
+    },
+    "d7d13180-72a6-47c6-b1d4-4747ea89a668": {
+      "id": "d7d13180-72a6-47c6-b1d4-4747ea89a668",
+      "message": {
+        "id": "d7d13180-72a6-47c6-b1d4-4747ea89a668",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845788.1273665,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 993313,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a164a9538708332a37602a9ca8b6d96",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f94e3401-f854-4f06-8ad1-a59d51a032f5",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找Resta详细信息并打开MDPI",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f94e3401-f854-4f06-8ad1-a59d51a032f5",
+      "children": [
+        "c604b5a1-c0b1-4710-81c5-548d14d3d3e0"
+      ]
+    },
+    "c604b5a1-c0b1-4710-81c5-548d14d3d3e0": {
+      "id": "c604b5a1-c0b1-4710-81c5-548d14d3d3e0",
+      "message": {
+        "id": "c604b5a1-c0b1-4710-81c5-548d14d3d3e0",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845788.409954,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn993313view0\",\"lineno\":595},{\"ref_id\":\"turn993313view0\",\"lineno\":636},{\"ref_id\":\"turn993313view0\",\"lineno\":599}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "ef1de14d-e9ea-4c7a-8505-6788ee0d35e9",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找PTB设置线省略问题",
+          "reasoning_titles": [
+            "查找PTB设置线省略问题"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "d7d13180-72a6-47c6-b1d4-4747ea89a668",
+      "children": [
+        "50d8a81c-77af-4537-9878-361e9b1252d4"
+      ]
+    },
+    "50d8a81c-77af-4537-9878-361e9b1252d4": {
+      "id": "50d8a81c-77af-4537-9878-361e9b1252d4",
+      "message": {
+        "id": "50d8a81c-77af-4537-9878-361e9b1252d4",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779845789.6863894,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "www.mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 137014,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 137014,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "snippet": "Total lines: 1171\n",
+                  "ref_id": {
+                    "turn_index": 137014,
+                    "ref_type": "view",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.mdpi.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a164a9538708332a37602a9ca8b6d96",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "c604b5a1-c0b1-4710-81c5-548d14d3d3e0",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "查找PTB设置线省略问题",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "c604b5a1-c0b1-4710-81c5-548d14d3d3e0",
+      "children": [
+        "2ee5e0ec-18e2-4d1c-b4c8-526b8ef31820"
+      ]
+    },
+    "2ee5e0ec-18e2-4d1c-b4c8-526b8ef31820": {
+      "id": "2ee5e0ec-18e2-4d1c-b4c8-526b8ef31820",
+      "message": {
+        "id": "2ee5e0ec-18e2-4d1c-b4c8-526b8ef31820",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845796.131825,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "确认引用格式并调理表述",
+              "content": "我需要验证引用格式，确认是否需要作者名字、DOI（数字对象标识符）。Goettling的拼写是否正确也要确认。语言需要细致，避免过度泛化或误用：“常见”不一定准确，“经常用于ECG XAI”也最好修改为具体现象说明，比如“在ECG XAI验证中常用的扰动方案。”",
+              "chunks": [
+                "我需要验证引用格式，确认是否需要作者名字、DOI（数字对象标识符）。",
+                "Goettling的拼写是否正确也要确认。",
+                "语言需要细致，避免过度泛化或误用：“常见”不一定准确，“经常用于ECG XAI”也最好修改为具体现象说明，比如“在ECG XAI验证中常用的扰动方案。”"
+              ],
+              "finished": true
+            },
+            {
+              "summary": "调整表述并补充引用",
+              "content": "Resta并未提到“常见”这个说法，只是展示了用零值进行遮掩的提案。最好用“被使用于”而不是“常见”，除非有其他支持资料。我还需要检查Salih的“评估缺失”，强调应该补充引用，确保每一项事实都要有支持来源。",
+              "chunks": [
+                "Resta并未提到“常见”这个说法，只是展示了用零值进行遮掩的提案。",
+                "最好用“被使用于”而不是“常见”，除非有其他支持资料。",
+                "我还需要检查Salih的“评估缺失”，强调应该补充引用，确保每一项事实都要有支持来源。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "e28b4847-de03-46d7-a74b-f1d4faa4563d"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "e28b4847-de03-46d7-a74b-f1d4faa4563d",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779845777.6067963,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "50d8a81c-77af-4537-9878-361e9b1252d4",
+      "children": [
+        "13afdfc1-fe52-4f32-b4ea-3fa5aa1b42a0"
+      ]
+    },
+    "13afdfc1-fe52-4f32-b4ea-3fa5aa1b42a0": {
+      "id": "13afdfc1-fe52-4f32-b4ea-3fa5aa1b42a0",
+      "message": {
+        "id": "13afdfc1-fe52-4f32-b4ea-3fa5aa1b42a0",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779845799.608931,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 21s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 21,
+          "reasoning_start_time": 1779845777.6067963,
+          "reasoning_end_time": 1779845799.6002254,
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "2ee5e0ec-18e2-4d1c-b4c8-526b8ef31820",
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2ee5e0ec-18e2-4d1c-b4c8-526b8ef31820",
+      "children": [
+        "98fa4594-a930-4c1c-a576-9fef39988c5e"
+      ]
+    },
+    "98fa4594-a930-4c1c-a576-9fef39988c5e": {
+      "id": "98fa4594-a930-4c1c-a576-9fef39988c5e",
+      "message": {
+        "id": "98fa4594-a930-4c1c-a576-9fef39988c5e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1779845789.977585,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "总体判断：**大方向是对的，但有两处最好降调**。你这组证据可以支撑“ECG/biomedical time-series XAI 里存在 zero-masking/setting-to-zero 实践，并且它可能引入 OOD/noise artifact，甚至改变 XAI 方法排序”。但不要写成“most common”，也不要让 Salih et al. 看起来是在专门说“perturbation operator 的影响很少被量化”。\n\n| 论点 | 核对结果 | 建议 |\n|---|---|---|\n| **Paralič et al. 支撑 ECG perturbation XAI 直接 set to zero** | **正确。**原文明确说，在他们的方法中，被扰动 interval 的 values “are set to zero”，而且上下文就是 12-lead ECG sensor data 的 perturbation explanation。citeturn648605view0 | 可放心使用。 |\n| **Goettling et al. 支撑 zero-masking 是 frequently used scheme** | **基本正确。**他们确实写到为了比较新 perturbation scheme，使用了 “frequently used scheme of setting values zero”。citeturn533359view0 | 你已经提醒“不是 most common”，这个很稳。建议写 **a frequently used perturbation scheme**，不要写 **the dominant / most common scheme**。 |\n| **Goettling et al. 支撑 hard-boundary / OOD artifacts** | **正确，但措辞要标成你的概括。**原文说 setting values to zero 会引入 noise，因为模型没有在带有 sudden jumps to zero 的数据上训练；他们还把问题放在“unknown from training data distribution”的语境下。citeturn533359view1 | “hard-boundary artifact / OOD artifact”是合理转述，但最好写成 **can introduce abrupt zero-jump artifacts outside the training distribution**，更贴近原文。 |\n| **Goettling et al. 支撑 perturbation operator 会改变 XAI 方法排名/结论** | **正确。**线性插值下 DTD 表现最好/较好；zero perturbation 下 ITG 对两个模型导致最大 loss increase，而 DTD 分数明显变低；讨论中他们明确说 zero scheme 下 DTD 会被认为不合适，和 interpolation 结果相反。citeturn533359view2 | 这是你最强的一条证据。可以直接支撑“operator 本身应被审计”。 |\n| **Resta et al. 支撑 biomedical signal occlusion 中使用 zero-value window occlusion，并包括 ECG/PTBDB** | **部分正确。**他们确实提出 biomedical sequential signals 的 occlusion method，定义 occlusion 为用给定值替换输入片段，并在实验中用 zero values 做 windowed occlusion；PTBDB 分类实验里 ECG 是唯一输入信号，并比较 zero 和 mean occlusion。citeturn993313view0 citeturn137014view1 | 但“常见”这个词不要主要靠 Resta 支撑。Resta 更适合支撑 **zero occlusion is used in biomedical/ECG time-series explanation experiments**。 |\n| **Salih et al. 支撑 cardiac/ECG XAI evaluation 不足** | **正确，但范围要说清楚。**Salih et al. 是 cardiac AI XAI evaluation 综述，摘要中给出 37% literature-grounded、11% expert、11% proxy/statistical、43% no XAI assessment；正文也说 92 篇没有任何 XAI outcome evaluation，且 ECG 是这些未评估研究中最常见数据类型。citeturn648605view3 | 它能支撑“cardiac XAI explanation evaluation is often insufficient”，但不能单独支撑“perturbation operator 的 downstream influence seldom quantified”。后者主要靠 Goettling 的对比实验来支撑。 |\n\n我建议你的句子稍微改得更严谨一点：\n\n> Second, the perturbation operator itself is rarely treated as an auditable methodological variable. In ECG and biomedical time-series occlusion analyses, zero-masking—i.e., setting signal samples or segments to zero—is a documented and frequently used perturbation choice, but it can introduce abrupt zero-jump artifacts outside the model’s training distribution. Recent ECG evidence shows that the choice between zero-masking and interpolation can change which XAI method appears most trustworthy, while broader cardiology XAI reviews indicate that explanation quality is still often insufficiently evaluated.\n\n这个版本比你原句更稳的地方是：  \n**“rarely treated as auditable”** 被表述成综合判断；**“frequently used”** 主要挂在 Goettling 上；**“hard-boundary/OOD”** 改成更贴近原文的 **abrupt zero-jump artifacts outside training distribution**；最后一句把 Salih 的贡献限定为“broader cardiology XAI evaluation不足”，不让它承担过重论证。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn648605view0",
+              "prefix": null,
+              "start_idx": 439,
+              "end_idx": 461,
+              "safe_urls": [
+                "https://www.mdpi.com/2076-3417/13/3/1805"
+              ],
+              "refs": [],
+              "alt": "([MDPI](https://www.mdpi.com/2076-3417/13/3/1805))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data | MDPI",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "attribution": "MDPI",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn533359view0",
+              "prefix": null,
+              "start_idx": 632,
+              "end_idx": 654,
+              "safe_urls": [
+                "https://www.nature.com/articles/s41598-024-63656-x"
+              ],
+              "refs": [],
+              "alt": "([Nature](https://www.nature.com/articles/s41598-024-63656-x))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "attribution": "Nature",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 3,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn533359view1",
+              "prefix": null,
+              "start_idx": 980,
+              "end_idx": 1002,
+              "safe_urls": [
+                "https://www.nature.com/articles/s41598-024-63656-x"
+              ],
+              "refs": [],
+              "alt": "([Nature](https://www.nature.com/articles/s41598-024-63656-x))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "attribution": "Nature",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 3,
+                      "ref_type": "view",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn533359view2",
+              "prefix": null,
+              "start_idx": 1352,
+              "end_idx": 1374,
+              "safe_urls": [
+                "https://www.nature.com/articles/s41598-024-63656-x"
+              ],
+              "refs": [],
+              "alt": "([Nature](https://www.nature.com/articles/s41598-024-63656-x))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "attribution": "Nature",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 3,
+                      "ref_type": "view",
+                      "ref_index": 2
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn993313view0",
+              "prefix": null,
+              "start_idx": 1693,
+              "end_idx": 1715,
+              "safe_urls": [
+                "https://www.mdpi.com/1099-4300/23/8/1064"
+              ],
+              "refs": [],
+              "alt": "([MDPI](https://www.mdpi.com/1099-4300/23/8/1064))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "attribution": "MDPI",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 4,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn137014view1",
+              "prefix": null,
+              "start_idx": 1716,
+              "end_idx": 1738,
+              "safe_urls": [
+                "https://www.mdpi.com/1099-4300/23/8/1064"
+              ],
+              "refs": [],
+              "alt": "([MDPI](https://www.mdpi.com/1099-4300/23/8/1064))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064",
+                  "attribution": "MDPI",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 5,
+                      "ref_type": "view",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn648605view3",
+              "prefix": null,
+              "start_idx": 2118,
+              "end_idx": 2140,
+              "safe_urls": [
+                "https://link.springer.com/article/10.1007/s10462-024-10852-w"
+              ],
+              "refs": [],
+              "alt": "([Springer](https://link.springer.com/article/10.1007/s10462-024-10852-w))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "A review of evaluation approaches for explainable AI with applications in cardiology | Artificial Intelligence Review | Springer Nature Link",
+                  "url": "https://link.springer.com/article/10.1007/s10462-024-10852-w",
+                  "attribution": "Springer",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 3
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 3200,
+              "end_idx": 3201,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data | MDPI",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805",
+                  "attribution": "MDPI"
+                },
+                {
+                  "title": "xECGArch: a trustworthy deep learning architecture for interpretable ECG analysis considering short-term and long-term features | Scientific Reports",
+                  "url": "https://www.nature.com/articles/s41598-024-63656-x",
+                  "attribution": "Nature"
+                },
+                {
+                  "title": "A review of evaluation approaches for explainable AI with applications in cardiology | Artificial Intelligence Review | Springer Nature Link",
+                  "url": "https://link.springer.com/article/10.1007/s10462-024-10852-w",
+                  "attribution": "Springer"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://link.springer.com/article/10.1007/s10462-024-10852-w",
+            "https://www.mdpi.com/1099-4300/23/8/1064",
+            "https://www.mdpi.com/2076-3417/13/3/1805",
+            "https://www.nature.com/articles/s41598-024-63656-x"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "mdpi.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805?utm_source=chatgpt.com",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "by J Paralič · 2023 · Cited by 5 — Remove, mask, or alter part of the sensory data. In our case, values in the selected interval to be perturbed are set to zero. Pass the new ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/1099-4300/23/8/1064?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — In this paper, we propose a model agnostic explanation method, based on occlusion, that enables the learning of the input's influence on the model predictions.Read mo...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2076-3417/13/3/1805/review_report?utm_source=chatgpt.com",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "31 Jan 2023 — The authors propose a perturbation-based method for explaining predictions made by a deep network using ECG data. I agree that explainable AI – ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 29
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mdpi.com/2075-4418/15/11/1399?utm_source=chatgpt.com",
+                  "title": "Explainable Artificial Intelligence in Radiological ...",
+                  "snippet": "by M Haupt · 2025 · Cited by 40 — This systematic review synthesizes current research on the use of XAI methods in radiological cardiovascular imaging.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 31
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mdpi.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "nih.gov",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11161651/?utm_source=chatgpt.com",
+                  "title": "xECGArch: a trustworthy deep learning architecture for ... - PMC",
+                  "snippet": "by M Goettling · 2024 · Cited by 43 — To show the advantage of the new perturbation scheme, a comparison to the frequently used scheme of setting values zero was applied. The ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8394492/?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models for ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — In this paper, we propose a model agnostic explanation method, based on occlusion, that enables the learning of the input's influence on the model predictions.Read mo...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/39132011/?utm_source=chatgpt.com",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "by AM Salih · 2024 · Cited by 80 — This review details the evaluation of XAI in cardiac AI applications ... 43% not assessing the XAI used at all. We aim to inspire additional studies ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12912381/?utm_source=chatgpt.com",
+                  "title": "Interpretable multimodal zero shot ECG diagnosis via ... - PMC",
+                  "snippet": "by J Tang · 2026 — We introduce ZETA, a novel zero-shot multimodal framework for interpretable ECG diagnosis that aligns ECG signals with structured positive and negative clinical ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pubmed.ncbi.nlm.nih.gov/38849417/?utm_source=chatgpt.com",
+                  "title": "xECGArch: a trustworthy deep learning architecture for ...",
+                  "snippet": "by M Goettling · 2024 · Cited by 43 — We present a novel deep learning architecture for interpretable ECG analysis (xECGArch). For the first time, short- and long-term features are analyzed.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9818170/?utm_source=chatgpt.com",
+                  "title": "Interpretable Machine Learning Techniques in ECG-Based ...",
+                  "snippet": "by YM Ayano · 2022 · Cited by 135 — Resta M., Monreale A., Bacciu D. Occlusion-Based Explanations in Deep Recurrent Models for Biomedical Signals. Entropy. 2021;23:1064. doi: 10.3390/e23081064 ...Read...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13056371/?utm_source=chatgpt.com",
+                  "title": "Explainable artificial intelligence in electrocardiography - PMC",
+                  "snippet": "by A Taleban · 2025 · Cited by 2 — 3.1. Perturbation-Based techniques. Perturbation-based explanation methods represent one of the most widely applied approaches in ECG ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 26
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "nih.gov"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "researchgate.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/367642939_Perturbation-Based_Explainable_AI_for_ECG_Sensor_Data?utm_source=chatgpt.com",
+                  "title": "Perturbation-Based Explainable AI for ECG Sensor Data",
+                  "snippet": "13 Oct 2025 — Therefore, in this article we focus on the explainability of black-box models for stream data from 12-lead ECG. We designed and implemented a ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/353973630_Occlusion-Based_Explanations_in_Deep_Recurrent_Models_for_Biomedical_Signals?utm_source=chatgpt.com",
+                  "title": "Occlusion-Based Explanations in Deep Recurrent Models ...",
+                  "snippet": "12 Aug 2021 — GRUβ predictions for the SCG with occluded input signals. With ECG occluded, the output prediction is a signal oscillating around zero values.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/379951799_xECGArch_A_trustworthy_deep_learning_architecture_for_interpretable_ECG_analysis_considering_short-term_and_long-term_features?utm_source=chatgpt.com",
+                  "title": "(PDF) xECGArch: A trustworthy deep learning architecture ...",
+                  "snippet": "19 Apr 2024 — To demonstrate the trustworthiness of xECGArch, perturbation analysis was used to compare 13 different xAI methods. We parameterized xECGArch ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/381258497_xECGArch_a_trustworthy_deep_learning_architecture_for_interpretable_ECG_analysis_considering_short-term_and_long-term_features?utm_source=chatgpt.com",
+                  "title": "(PDF) xECGArch: a trustworthy deep learning architecture ...",
+                  "snippet": "the new perturbation scheme, a comparison to the frequently used scheme of setting values zero was applied. e latter, of course, introduces noise because the ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/376378265_A_Review_of_Evaluation_Approaches_for_Explainable_AI_With_Applications_in_Cardiology?utm_source=chatgpt.com",
+                  "title": "(PDF) A Review of Evaluation Approaches for Explainable ...",
+                  "snippet": "31 Mar 2026 — p>Explainable artificial intelligence (XAI) elucidates the decision-making process of complex AI models and is important in building trust ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/319056221_Recurrent_Neural_Network_Based_Classification_of_ECG_Signal_Features_for_Obstruction_of_Sleep_Apnea_Detection?utm_source=chatgpt.com",
+                  "title": "Recurrent Neural Network Based Classification of ECG ...",
+                  "snippet": "29 Jan 2026 — PDF | On Jul 1, 2017, Maowei Cheng and others published Recurrent Neural Network Based Classification of ECG Signal Features for Obstruction ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 33
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchgate.net/publication/382998203_A_review_of_evaluation_approaches_for_explainable_AI_with_applications_in_cardiology?utm_source=chatgpt.com",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "9 Aug 2024 — This review details the evaluation of XAI in cardiac AI applications and has found that, of the studies examined, 37% evaluated XAI quality ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 34
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchgate.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "researchsquare.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.researchsquare.com/article/rs-3654418/v1.pdf?utm_source=chatgpt.com",
+                  "title": "xECGArch: A trustworthy deep learning architecture for ...",
+                  "snippet": "by M Goettling · 2024 · Cited by 43 — To show the advantage of the new perturbation scheme, a comparison to the frequently used scheme of. 371 setting values zero was applied. The ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researchsquare.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "techrxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.techrxiv.org/doi/10.36227/techrxiv.24573304?utm_source=chatgpt.com",
+                  "title": "A Review of Evaluation Approaches for Explainable AI With ...",
+                  "snippet": "by A Salih · 2023 · Cited by 80 — This review details the evaluation of XAI in cardiac AI ... 43% not assessing the XAI used at all. We aim to inspire additional ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "techrxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "springer.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://link.springer.com/article/10.1007/s10462-024-10852-w?utm_source=chatgpt.com",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "9 Aug 2024 — This review details the evaluation of XAI in cardiac AI applications and has found that, of the studies examined, 37% evaluated XAI quality using literature ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "springer.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "arxiv.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arxiv.org/html/2510.21551v1?utm_source=chatgpt.com",
+                  "title": "Interpretable Multimodal Zero-Shot ECG Diagnosis via ...",
+                  "snippet": "24 Oct 2025 — We introduce ZETA (Zero-shot ECG Transparent Analysis), a novel framework designed for interpretable, zero-shot cardiovascular disease diagnosis ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "arxiv.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "unipi.it",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://arpi.unipi.it/handle/11568/1122926?utm_source=chatgpt.com",
+                  "title": "Occlusion-based explanations in deep recurrent models for ...",
+                  "snippet": "by M Resta · 2021 · Cited by 23 — In this paper, we propose a model agnostic explanation method, based on occlusion, that enables the learning of the input's influence on the model predictions.Read mo...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "unipi.it"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "ub.edu",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://diposit.ub.edu/items/b9c7cfa9-5c5f-4568-bece-b342fa16c806?utm_source=chatgpt.com",
+                  "title": "A review of evaluation approaches for explainable AI with ...",
+                  "snippet": "by AM Salih · 2024 · Cited by 80 — This review details the evaluation of XAI in cardiac AI ... 43% not assessing the XAI used at all. We aim to inspire additional ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "ub.edu"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "modulai.io",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://modulai.io/blog/explainability-for-ecg-data/?utm_source=chatgpt.com",
+                  "title": "Explainable AI in medicine: Detecting AF in ECG data",
+                  "snippet": "11 Aug 2022 — In this post, we take a look at how explainability techniques can be used to highlight what features of an ECG are most relevant for a model predicting Atrial ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "modulai.io"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "jogs.one",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://jogs.one/icigs_1000_14/?utm_source=chatgpt.com",
+                  "title": "Explainable AI decision model for ECG data of cardiac ...",
+                  "snippet": "The decision taken by the AI model for any particular patient's ECG can be interpreted using the ShAP plot, highlighting the abnormal ECG waves. We made a web ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 20
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "jogs.one"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "peerj.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://peerj.com/articles/cs-825/?utm_source=chatgpt.com",
+                  "title": "Deep learning-based electrocardiogram rhythm and beat ...",
+                  "snippet": "by A Darmawahyuni · 2022 · Cited by 44 — Deep learning-based electrocardiogram rhythm and beat features for heart abnormality classification. Research Article.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 21
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "peerj.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "qmul.ac.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://qmro.qmul.ac.uk/jspui/handle/123456789/97835?utm_source=chatgpt.com",
+                  "title": "A Review of Evaluation Approaches for Explainable AI With ...",
+                  "snippet": "by E Rauseo · 2024 · Cited by 80 — This review details the evaluation of XAI in cardiac AI applications and has found that, of the studies examined, 37% evaluated XAI quality using literature ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 22
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "qmul.ac.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "cinc.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://cinc.org/archives/2025/pdf/CinC2025-379.pdf?utm_source=chatgpt.com",
+                  "title": "Clinically Interpretable Zero-Shot ECG Classification via ...",
+                  "snippet": "by LF de Souza — This work builds on that foundation by propos- ing a framework that classifies ECGs in a zero-shot manner by grounding its predictions in verifiable, text-based ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 23
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "cinc.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "academia.edu",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.academia.edu/39333670/Recurrent_Neural_Network_Based_classification_of_ECG_signal_Features_for_Obstruction_of_Sleep_Apnea_Detection?utm_source=chatgpt.com",
+                  "title": "Recurrent Neural Network Based classification of ECG ...",
+                  "snippet": "This paper introduces an OSA detection method based on Recurrent Neural network. At the first step, RR interval (time interval from one R wave to the next R ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 24
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "academia.edu"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "sciencedirect.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.sciencedirect.com/science/article/pii/S2589004226004013?utm_source=chatgpt.com",
+                  "title": "A comprehensive review of explainable artificial ...",
+                  "snippet": "by K Zhang · 2026 · Cited by 1 — Studies with insufficient methodological detail regarding the XAI approach or evaluation, rendering findings non-reproducible. Articles focused ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 25
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "sciencedirect.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "ulster.ac.uk",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://pure.ulster.ac.uk/files/89888309/ztab002.pdf?utm_source=chatgpt.com",
+                  "title": "The effect of confounding data features on a deep learning ...",
+                  "snippet": "by R Brisk · 2021 · Cited by 22 — The aim of this study was to establish whether a DL algorithm can detect ACTCO, as defined by angiographically proven acute coron- ary occlusion, by leveraging ...Rea...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 27
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "ulster.ac.uk"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "scispace.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://scispace.com/papers/a-review-of-evaluation-approaches-for-explainable-ai-with-3rxsdma1ft?utm_source=chatgpt.com",
+                  "title": "A Review of Evaluation Approaches for Explainable AI With ...",
+                  "snippet": "TL;DR: The evaluation of XAI in cardiac AI applications is lacking, with only a minority of studies assessing the quality of explanations. Abstract: ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 28
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "scispace.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "physionet.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.physionet.org/physiobank/database/ptbdb/?utm_source=chatgpt.com",
+                  "title": "PTB Diagnostic ECG Database v1.0.0",
+                  "snippet": "25 Sept 2004 — A collection of 549 high-resolution 15-lead ECGs (12 standard leads together with Frank XYZ leads), including clinical summaries for each record.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 30
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "physionet.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "medicalai.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://medicalai.com/ko/publications/?count=10&page=2&utm_source=chatgpt.com",
+                  "title": "Publications",
+                  "snippet": "We propose a Zero-shot ECG diagnosis framework based on RAG for ECG analysis that incorporates expert-curated knowledge to enhance diagnostic accuracy and ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 32
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "medicalai.com"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "request_id": "wfr_019e671304ca73ceab963439b17c48e6",
+          "message_type": "next",
+          "turn_exchange_id": "ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "13afdfc1-fe52-4f32-b4ea-3fa5aa1b42a0",
+          "async_source": "saserver-australiacentral-prod.fck9d:conversation-turn-27305d8c-a502-4d66-80c5-fe3374dd8b30:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-ceae79ce-26be-4d8e-a8d2-42bd55103d6f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "13afdfc1-fe52-4f32-b4ea-3fa5aa1b42a0",
+      "children": []
+    }
+  },
+  "current_node": "98fa4594-a930-4c1c-a576-9fef39988c5e"
+}

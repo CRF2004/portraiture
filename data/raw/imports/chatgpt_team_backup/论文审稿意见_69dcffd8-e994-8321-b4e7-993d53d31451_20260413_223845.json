@@ -1,0 +1,672 @@
+{
+  "title": "论文审稿意见",
+  "create_time": 1776091125.172314,
+  "update_time": 1776144646.58267,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "69dcffd8-e994-8321-b4e7-993d53d31451",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://physionet.org/content/ptb-xl-plus/1.0.1/",
+    "https://doi.org/10.13026/g6h6-7g88",
+    "https://github.com/m42-health/healthbench",
+    "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": null,
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "e68bb94f-5eb7-48f7-9de1-1862c2fbf90a"
+      ]
+    },
+    "e68bb94f-5eb7-48f7-9de1-1862c2fbf90a": {
+      "id": "e68bb94f-5eb7-48f7-9de1-1862c2fbf90a",
+      "message": {
+        "id": "e68bb94f-5eb7-48f7-9de1-1862c2fbf90a",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "8b6929ad-f499-4864-9b6b-2ce39c753b58"
+      ]
+    },
+    "8b6929ad-f499-4864-9b6b-2ce39c753b58": {
+      "id": "8b6929ad-f499-4864-9b6b-2ce39c753b58",
+      "message": {
+        "id": "8b6929ad-f499-4864-9b6b-2ce39c753b58",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e68bb94f-5eb7-48f7-9de1-1862c2fbf90a",
+      "children": [
+        "dcf735c0-837d-4255-af47-bb89b84ec085"
+      ]
+    },
+    "dcf735c0-837d-4255-af47-bb89b84ec085": {
+      "id": "dcf735c0-837d-4255-af47-bb89b84ec085",
+      "message": {
+        "id": "dcf735c0-837d-4255-af47-bb89b84ec085",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8b6929ad-f499-4864-9b6b-2ce39c753b58",
+      "children": [
+        "a398b6bb-00ce-475d-b4a5-2565b89f285f"
+      ]
+    },
+    "a398b6bb-00ce-475d-b4a5-2565b89f285f": {
+      "id": "a398b6bb-00ce-475d-b4a5-2565b89f285f",
+      "message": {
+        "id": "a398b6bb-00ce-475d-b4a5-2565b89f285f",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776091124.604624,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "cb967090-a66a-4776-bd9b-4a59d69ed5e0",
+          "message_source": null,
+          "turn_exchange_id": "bee1e36a-8b22-4e8e-9ee6-6ed21821af0f",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "dcf735c0-837d-4255-af47-bb89b84ec085",
+      "children": [
+        "ea760062-f15b-49d8-a725-fb6bed8a8d6b"
+      ]
+    },
+    "ea760062-f15b-49d8-a725-fb6bed8a8d6b": {
+      "id": "ea760062-f15b-49d8-a725-fb6bed8a8d6b",
+      "message": {
+        "id": "ea760062-f15b-49d8-a725-fb6bed8a8d6b",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776091124.786,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "# 角色\r\n你是一名资深的医学与人工智能领域审稿专家，熟悉北大核心期刊的学术标准与评审流程。你曾在人工智能医学交叉领域发表或评审多篇高质量论文，熟悉科研论文的学术规范、逻辑结构、创新性与方法学严谨性要求。\r\n\r\n# 审稿任务\r\n请你严格、系统地对以下论文进行审稿，论文主题为“Nested Evaluation of Selective Prediction for ECG\r\nDiagnosis: Confidence Uncertainty Outperforms\r\nKnowledge-Graph Disagreement”。你的目标是从多个角度提供专业、学术化的审稿意见，帮助作者改进论文质量，以达到北大核心期刊的发表标准。  \n\r\n# 审稿维度\r\n请从以下方面系统性地进行审阅与评估：\r\n1. 整体评价与科学价值  \r\n   - 论文选题的创新性与前沿性是否突出？  \r\n   - 是否具有明确的科研意义和社会/医学价值？  \r\n\r\n2. 内容质量与逻辑性  \r\n   - 研究问题是否明确，论证是否严谨？  \r\n   - 文章结构是否清晰（摘要、引言、方法、结果、讨论、结论）？  \r\n   - 逻辑链是否顺畅、论点是否有数据支撑？  \r\n\r\n3. 方法与实验设计  \r\n   - 模型、算法、数据来源与实验设计是否合理？  \r\n   - 是否具备可重复性与科学性？  \r\n   - 方法是否符合伦理及科研规范？  \r\n\r\n4. 结果与讨论部分  \r\n   - 结果展示是否清晰、完整？  \r\n   - 图表、数据分析是否规范（如均值±SD、显著性标注等）？  \r\n   - 讨论是否结合最新文献，是否能合理解释结果？  \r\n   - 是否分析了研究局限与未来改进方向？  \r\n\r\n5. 语言与格式规范  \r\n   - 是否符合北大核心学术期刊写作规范？  \r\n   - 英文摘要、关键词、图表说明是否准确？  \r\n   - 是否存在语法、术语不一致或引用不规范的问题？  \r\n\r\n6. 总体建议（必须输出）  \r\n   请用以下分类之一总结你的总体结论：  \r\n   ✅ 接受（Accept）：内容完整，质量高，可直接发表。  \r\n   🟡 小修后接收（Minor Revision）：结构合理但需少量修改。  \r\n   🟠 大修后重审（Major Revision）：存在逻辑或方法学问题，需大幅修改。 \r\n   🔴 拒稿（Reject）：存在严重缺陷或学术质量不达标。  \r\n\r\n# 输出格式\r\n请严格按照以下结构输出审稿意见：\r\n一、总体评价  \r\n（简要评价论文选题意义、创新性与整体质量）\r\n\r\n二、主要优点  \r\n（列出论文在理论、方法或应用方面的亮点）\r\n\r\n三、存在问题与修改建议  \r\n（从逻辑、方法、实验、数据、讨论、语言规范等角度逐条指出）\r\n\r\n四、编辑建议  \r\n（给出你的总体判断：接受/小修/大修/拒稿，并简述理由）\r\n\r\n# 输出要求\r\n- 语气：专业、学术、客观  \r\n- 格式：条理清晰，分点列述  \r\n- 内容：针对性强、可操作性高  \r\n- 若发现重大逻辑或伦理问题，请明确指出并说明原因。\r\n\r\n# 输入内容 \r\n论文全文见pdf"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "attachments": [
+            {
+              "id": "file_000000004e5471fa9ae9810497609d2e",
+              "size": 291545,
+              "name": "main.pdf",
+              "mime_type": "application/pdf",
+              "file_token_size": 14882,
+              "source": "local",
+              "is_big_paste": false
+            }
+          ],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "cb967090-a66a-4776-bd9b-4a59d69ed5e0",
+          "message_source": null,
+          "turn_exchange_id": "bee1e36a-8b22-4e8e-9ee6-6ed21821af0f",
+          "resolved_model_slug": "gpt-5-3",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a398b6bb-00ce-475d-b4a5-2565b89f285f",
+      "children": [
+        "62320a0e-170b-499e-aee5-8933f4306ac0"
+      ]
+    },
+    "62320a0e-170b-499e-aee5-8933f4306ac0": {
+      "id": "62320a0e-170b-499e-aee5-8933f4306ac0",
+      "message": {
+        "id": "62320a0e-170b-499e-aee5-8933f4306ac0",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1776091124.7095208,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_browsing_display",
+          "result": "",
+          "summary": "",
+          "assets": null,
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "command": "spinner",
+          "status": "running",
+          "request_id": "cb967090-a66a-4776-bd9b-4a59d69ed5e0",
+          "message_type": "next",
+          "turn_exchange_id": "bee1e36a-8b22-4e8e-9ee6-6ed21821af0f",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "ea760062-f15b-49d8-a725-fb6bed8a8d6b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ea760062-f15b-49d8-a725-fb6bed8a8d6b",
+      "children": [
+        "239d39de-a500-4c25-8d5d-7355c783e9db"
+      ]
+    },
+    "239d39de-a500-4c25-8d5d-7355c783e9db": {
+      "id": "239d39de-a500-4c25-8d5d-7355c783e9db",
+      "message": {
+        "id": "239d39de-a500-4c25-8d5d-7355c783e9db",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1776091125.08883,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_000000004e5471fa9ae9810497609d2e",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n1\n\nNested Evaluation of Selective Prediction for ECG\nDiagnosis: Confidence Uncertainty Outperforms\n\nKnowledge-Graph Disagreement\nAnonymous Authors\n\nAbstract—In this single-center retrospective feasibility study,\nwe rigorously reassessed knowledge-graph (KG)-based selective\nprediction for 12-lead ECG diagnosis on an exported PTB-\nXL+ prediction cohort of 2,179 ECGs with complete base-model\nand KG scores. Selective prediction can improve clinical safety\nby deferring uncertain automated decisions, but performance\nestimates depend critically on how rejection thresholds are\nchosen. Performance was summarized across 25 outer evaluations\nfrom repeated held-out resampling of a fixed out-of-fold score\ntable (5 repeats × 5 folds); these are repeated assessments of\nthe same cohort, not 25 independent studies. We compared\nscalar confidence scores (entropy, margin, max-probability—\nwhich are monotone transforms of the same probability in binary\nclassification), calibrated confidence thresholding, and hybrid\nKG disagreement. Thresholds were selected only in inner folds\nand evaluated in disjoint outer folds to prevent optimistic bias.\nScalar confidence scores achieved the best performance (96.00–\n96.41% accuracy at 67–71% coverage; E-AURC 0.0236–0.0237).\nSign-preserving KG achieved intermediate performance (92.62%\naccuracy at 67% coverage; E-AURC 0.0684 ± 0.0118), improving\nsubstantially over the deployed abs-valued KG (88.33% accuracy\nat 76% coverage; E-AURC 0.1244 ± 0.0143) but remaining\nworse than entropy by ∆E-AURC +0.0447. Hierarchical boot-\nstrap within this repeated-resampling design gave ∆E-AURC\n+0.0447 with 95% CI [+0.0442, +0.0452]; these narrow in-\ntervals quantify within-design resampling uncertainty, not full\ntransportability uncertainty. Mechanistic analysis (computed in-\nsample for diagnostic insight) revealed KG’s poor error-detection\nability (AUROC 0.460 vs entropy 0.832). KG provided negligible\nincremental value beyond entropy (+0.05pp) and showed negative\nrisk-monotonicity (Spearman ρ = -0.044). Per-class analysis\n(n=1,628 across IMI/ASMI, LMI, PMI, LVH) showed the selective\nprediction system defers most LVH cases (87.6%), but accepted\nLVH cases had 100% error risk in this retrospective cohort (mean\n1.2 accepted samples per fold); we interpret this as a small-\nsample warning sign that LVH-specific safety is not established,\nrather than as a stable deployment rule. These findings emphasize\nthat rigorous held-out evaluation with strong uncertainty base-\nlines and mechanistic analysis is essential for credible selective-\nprediction claims in clinical AI. All conclusions are limited to\nthis single-center retrospective cohort (PTB-XL+) and require\nexternal multi-center validation before clinical interpretation.\n\nI. INTRODUCTION\n\nElectrocardiogram (ECG) interpretation is critical for car-\ndiac diagnosis, yet it remains subject to inter-observer vari-\nability and missed findings, particularly in emergency triage\nsettings [1]. Selective prediction—deferring uncertain auto-\nmated decisions to human review—can improve clinical safety,\nbut performance estimates depend critically on how rejection\nthresholds are chosen. While artificial intelligence models\nhave achieved high accuracy in ECG classification [2], the\n\nevaluation of selective prediction methods has received less\nmethodological scrutiny, particularly regarding threshold se-\nlection protocols.\n\nRecent work has proposed knowledge-graph (KG)-based\ndisagreement as a signal for selective prediction [3], [4],\narguing that structured medical reasoning may provide su-\nperior uncertainty estimates compared to model confidence\nscores. However, selective prediction evaluation requires care-\nful threshold selection protocols to avoid optimistic bias.\n\nIn this single-center retrospective feasibility study, we\nrigorously reassess KG-based selective prediction for 12-lead\nECG diagnosis using repeated held-out evaluation (5 repeats\n× 5 folds = 25 evaluations), where thresholds are selected\nonly in inner training folds and evaluated in disjoint outer test\nfolds. We compare entropy-based uncertainty, margin-based\nuncertainty, max-probability confidence, and hybrid KG dis-\nagreement (combining medical evidence with model-derived\nsignals) across coverage-conditioned accuracy and excess area\nunder the risk-coverage curve (E-AURC) [5], [6].\n\nOur findings challenge prior assumptions about KG-based\nselective prediction and highlight critical methodological is-\nsues in evaluating clinical AI systems. Under nested eval-\nuation, simple confidence-based uncertainty measures sub-\nstantially outperform KG disagreement, and combining KG\nsignals with entropy provides no practical additive value. The\nlarge performance gap (5.2× difference in E-AURC) and\nmechanistic analysis showing KG performs worse than random\nat error detection indicate that KG disagreement is not a\nreliable selective prediction signal for this ECG diagnosis task.\n\nA. Contributions\n\nOur main contributions are:\n1) Rigorous evaluation protocol: We provide a held-\n\nout evaluation framework for selective prediction (inner\nthreshold tuning, outer unbiased testing) with coverage-\nconditioned accuracy and E-AURC reporting. Base\nmodel predictions were generated via out-of-fold infer-\nence using stratified 5-fold cross-validation, ensuring no\ntest data was used during model training or threshold\ncalibration.\n\n2) Empirical falsification: We show that under proper\nheld-out evaluation, simple confidence-based uncertainty\n(entropy, margin, max-probability) substantially outper-\nforms KG disagreement on this cohort (96.41% accuracy\nat 67% coverage; E-AURC 0.0237 ± 0.0028 vs 88.33%\n\n\n\n2\n\nand 0.1244 ± 0.0143 for hybrid KG). This overturns\nthe initial hypothesis that structured medical reasoning\nwould provide superior selective prediction signals. Re-\nsults based on repeated held-out evaluation (5 repeats ×\n5 folds = 25 evaluations).\n\n3) Mechanistic failure analysis: We provide quantitative\nanalysis of why KG underperforms, showing KG has\nworse-than-random error detection (AUROC 0.460 vs\n0.832 for entropy), negligible incremental value be-\nyond entropy (+0.05pp), and negative risk-monotonicity\n(Spearman ρ = -0.044). A score-orientation audit sug-\ngests the absolute-value transformation deployed in our\nKG destroyed directional signal (-verifier conflict AU-\nROC 0.667 vs -abs(verifier conflict) AUROC 0.460),\nthough this diagnostic finding is computed in-sample\nand requires out-of-fold validation.\n\n4) Recommendations for future work: Based on our\nfindings, we propose minimum reporting standards for\nselective prediction evaluation in clinical AI: (a) held-\nout threshold selection, (b) strong uncertainty baselines\n(entropy, margin), (c) coverage-aware reporting (risk-\ncoverage curves, E-AURC), and (d) external validation\nbefore clinical claims.\n\nThese findings emphasize that nested, coverage-aware eval-\nuation and strong uncertainty baselines are essential for cred-\nible selective-prediction claims in clinical AI. We recommend\nnested, coverage-aware benchmarking against entropy and\nmargin as a minimum reporting standard for future work.\nAll conclusions are limited to this single-center retrospective\ncohort (PTB-XL+) and require external multi-center validation\nbefore clinical interpretation.\n\nThe remainder of this paper is organized as follows: Section\nII reviews related work on selective prediction and uncertainty\nquantification in medical AI. Section III describes our held-\nout evaluation protocol and the methods compared. Section IV\npresents experimental results under nested evaluation. Section\nV discusses methodological implications and failure modes.\nSection VI concludes.\n\nII. RELATED WORK\n\na) Black-Box ECG Classification: Deep learning has\nachieved remarkable success in ECG classification, with con-\nvolutional neural networks [1] and transformer architectures\n[7] reaching cardiologist-level performance on benchmark\ndatasets like PTB-XL. However, these models operate as black\nboxes, providing predictions without interpretable rationales.\nThis opacity limits clinical adoption, as physicians require\ntransparent reasoning to validate AI recommendations and\nidentify cases requiring human review.\n\nb) Selective Prediction and Uncertainty Quantification:\nSelective prediction allows models to abstain from uncertain\npredictions, improving accuracy on accepted cases at the cost\nof coverage [5], [8]. The evaluation of selective prediction\nmethods requires careful attention to threshold selection pro-\ntocols. Non-nested evaluation, where rejection thresholds are\nchosen by inspecting test-set performance, can produce opti-\nmistically biased estimates [9]. Proper nested cross-validation,\n\nwhere thresholds are selected on training data and evaluated\non disjoint test data, is essential for unbiased performance\nestimation.\n\nConfidence-based rejection using softmax probabilities is\nthe simplest approach, but modern neural networks are often\npoorly calibrated [10]. Entropy and margin-based uncertainty\nmeasures provide alternative confidence scores that may better\ncapture model uncertainty. Recent work on conformal predic-\ntion [11] provides distribution-free uncertainty quantification\nwith coverage guarantees, though these methods have not been\nwidely applied to clinical ECG classification.\n\nc) Knowledge Graphs in Medical AI: Knowledge graphs\nhave shown promise for structured medical reasoning, cap-\nturing relationships between symptoms, diagnoses, and treat-\nments [3]. Recent work has explored integrating knowledge\ngraphs with machine learning models for diagnosis [4],\nbut these approaches typically require complex multi-stage\npipelines or ensemble methods. Prior work has suggested that\nmodel-KG disagreement could provide a useful signal for\nselective prediction, but these claims have not been evaluated\nunder rigorous nested cross-validation protocols with strong\nuncertainty baselines.\n\nd) Interpretable Machine Learning for Healthcare: Post-\nhoc explanation methods like SHAP [12] provide interpretabil-\nity by attributing predictions to input features, but do not\nguarantee that the explanations reflect the model’s actual\ndecision process. Rule-based systems and decision trees offer\ninherent interpretability but typically sacrifice accuracy com-\npared to black-box models [13]. Recent work on inherently\ninterpretable models [14] demonstrates that transparency and\nperformance need not be mutually exclusive, though the trade-\noffs depend heavily on the specific task and evaluation proto-\ncol.\n\nOur work differs from prior approaches by providing a\nrigorous nested evaluation of KG-based selective prediction\nagainst strong uncertainty baselines (entropy, margin), re-\nvealing that simple confidence-based methods substantially\noutperform structured KG disagreement in our ECG diagnosis\nsetting.\n\nIII. METHOD\n\nA. Problem Formulation\n\nLet X denote the space of ECG features and Y = {0, 1} the\nspace of binary labels for a single cardiac condition. We use\na pairwise classification approach where each binary classifier\nf : X → Y is trained to detect one cardiac condition vs. all\nothers. Our goal is to evaluate selective prediction methods that\ndefer uncertain cases to human review, comparing knowledge-\ngraph-based disagreement against standard uncertainty quan-\ntification approaches.\n\nFor each condition (IMI, LMI, PMI, LVH), we train a\nseparate binary classifier and evaluate selective prediction\non that condition’s positive cases vs. negative controls. This\npairwise approach is standard in clinical ECG classification\nwhere each condition has distinct morphological features and\nclinical implications.\n\n\n\n3\n\nB. Base Model\n\nWe use XGBoost [15] as our base classifier, trained on\ncurated ECG features including morphological measurements,\nrhythm characteristics, and territory-specific patterns. For each\ncondition (IMI, LMI, PMI, LVH), we train a separate binary\nclassifier. The base model achieves 88.48% accuracy on the\nbinary classification task averaged across all conditions.\n\nC. Selective Prediction Methods\n\nWe compare five selective prediction approaches, all using\nthe same base model predictions but differing in their confi-\ndence scoring:\n\na) Entropy-based: Uses negative entropy of the softmax\ndistribution: −\n\n∑\nk pk log pk, where lower entropy indicates\n\nhigher confidence.\nb) Margin-based: Uses the difference between top-1 and\n\ntop-2 predicted class probabilities as confidence score.\nc) Max-probability: Uses the maximum softmax proba-\n\nbility as confidence score.\nd) Confidence thresholding: Uses calibrated confidence\n\nthresholding for selective prediction. Selects a confidence\nthreshold on training data to achieve target coverage, then\naccepts predictions where max(p0, p1) ≥ threshold. This pro-\nvides a coverage-controlled baseline comparable to conformal\nmethods.\n\ne) Hybrid KG disagreement: Constructs a knowledge\ngraph G encoding diagnostic rules for ECG interpretation,\ncombining 4 medical-evidence nodes (ECG morphology, ter-\nritory consistency, clinical context) with 7 model-derived\nsignals (predicted probabilities, confidence scores). The ver-\nifier conflict score measures disagreement between KG pre-\ndiction ỹ = G(x) and base model prediction ŷ = f(x). We\nacknowledge that including model-derived signals introduces\ncircularity, as the KG is not fully independent of the model\nbeing verified.\n\nD. Repeated Held-Out Evaluation Protocol\n\nTo prevent optimistic bias from test-set threshold tuning,\nwe use repeated held-out evaluation with pre-computed out-\nof-fold (OOF) predictions. Algorithm 1 provides the complete\nprocedure.\n\nPrediction provenance: Base model predictions and KG\nscores were generated via out-of-fold inference using stratified\n5-fold cross-validation. For each fold, the base model was\ntrained on the training portion only, and predictions were\ngenerated on the held-out test portion. These OOF predictions\nform a fixed score table that is then re-split 25 times (5 repeats\n× 5 folds) for threshold selection and evaluation, ensuring\ncomputational efficiency while maintaining strict separation\nbetween training and test data in each evaluation.\n\nProtocol clarification: These precomputed out-of-fold pre-\ndictions preserve label separation for threshold selection and\nouter-fold evaluation, but they do not constitute full retraining\nof the base model and KG within each outer split. We therefore\ndescribe this protocol as repeated held-out evaluation of a\nfixed OOF score table, not as full end-to-end repeated nested\ncross-validation. The results summarize 25 outer evaluations\n\nAlgorithm 1 Repeated Held-Out Evaluation for Selective\nPrediction\n\n1: Input: Dataset D = {(xi, yi)}ni=1, base model f , confi-\ndence scorer s, target coverage ctarget\n\n2: Output: Unbiased accuracy and coverage estimates\n3:\n4: Split D into 5 outer folds: D1, . . . ,D5\n\n5: for i = 1 to 5 do\n6: Dtrain ← D \\ Di, Dtest ← Di\n\n7:\n8: // Inner loop: threshold selection on training data\n\nonly\n9: Split Dtrain into 4 inner folds: D(1)\n\ntrain, . . . ,D\n(4)\ntrain\n\n10: for each threshold candidate τ ∈\n{unique values of s(x)} do\n\n11: for j = 1 to 4 do\n12: Dinner-val ← D(j)\n\ntrain\n13: Compute coverage cj(τ) and accuracy aj(τ) on\n\nDinner-val\n14: end for\n15: c̄(τ)← 1\n\n4\n\n∑4\nj=1 cj(τ), ā(τ)← 1\n\n4\n\n∑4\nj=1 aj(τ)\n\n16: end for\n17: τ∗ ← argmaxτ :|c̄(τ)−ctarget|≤0.05 ā(τ) // Select best\n\nthreshold within 5% of target\n18:\n19: // Outer evaluation: apply selected threshold to held-\n\nout test fold\n20: Compute coverage ci and accuracy ai on Dtest using\n\nthreshold τ∗\n\n21: end for\n22:\n23: // Aggregation across outer folds\n24: Report mean accuracy ā = 1\n\n5\n\n∑5\ni=1 ai and coverage c̄ =\n\n1\n5\n\n∑5\ni=1 ci\n\n25: Compute 95% bootstrap confidence intervals (10,000 sam-\nples)\n\nof the same fixed prediction cohort, not 25 independent model\ntraining and evaluation cycles.\n\nLeakage prevention: Threshold calibration uses only train-\ning data from each outer fold’s training split. Specifically,\nfor each outer fold i, threshold selection is performed via\ninner 4-fold CV on Dtrain, and the selected threshold τ∗ is\napplied to the held-out Dtest. KG verifier conflict scores are\ncomputed using only information available at inference time,\nnever using test-fold labels. This ensures complete separation\nbetween training data (used for threshold calibration) and test\ndata (used only for final evaluation).\n\nNote on terminology: We use ”repeated held-out evalua-\ntion” rather than ”repeated nested CV” to clarify that the base\nmodel and KG are trained once via OOF inference, and the 25\nevaluations come from re-splitting the fixed score table. This\nprovides unbiased threshold selection and evaluation while\navoiding the computational cost of full model retraining in\neach outer fold. The OOF training ensures no test labels are\nused in generating the scores that are later evaluated.\n\nThis repeated held-out protocol ensures that threshold se-\n\n\n\n4\n\nlection uses only training data, preventing information leakage\nfrom test sets. Critically, for each outer fold: (1) the threshold\nτ∗ is selected using only that fold’s training data via inner 4-\nfold cross-validation, (2) the selected threshold is then applied\nto the held-out test fold, and (3) test fold data is never used\nfor threshold selection. The OOF predictions ensure strict\nseparation between training and test data in each evaluation.\n\nE. Evaluation Metrics\n\na) Coverage-conditioned accuracy: For a confidence\nthreshold τ , let A(τ) = {i : s(xi) ≥ τ} denote the set of\naccepted cases. Coverage is defined as:\n\ncoverage(τ) =\n|A(τ)|\n\nn\n(1)\n\nAccuracy on accepted cases is:\n\naccuracy(τ) =\n1\n\n|A(τ)|\n∑\n\ni∈A(τ)\n\n⊮[f(xi) = yi] (2)\n\nwhere ⊮[·] is the indicator function. Higher accuracy at\nmatched coverage indicates better selective prediction.\n\nb) Risk-coverage curves: Risk is defined as risk(c) =\n1− accuracy(c) at coverage level c. Risk-coverage curves plot\nrisk vs coverage across all operating points. Methods with\nlower risk at every coverage level dominate.\n\nc) E-AURC (Excess Area Under Risk-Coverage curve):\nMeasures excess risk over an oracle selector that perfectly\nranks cases by correctness. Let riskoracle(c) denote the risk\nachieved by an oracle that accepts the ⌊cn⌋ most likely correct\npredictions. E-AURC is defined as:\n\nE-AURC =\n\n∫ 1\n\n0\n\nrisk(c) dc−\n∫ 1\n\n0\n\nriskoracle(c) dc (3)\n\nLower E-AURC indicates better risk-coverage trade-offs\nacross all operating points. E-AURC = 0 corresponds to perfect\nranking (oracle performance).\n\nF. Implementation Details\n\nThe knowledge graph is induced only on training folds and\nre-induced for each fold to prevent information leakage. For\nfusion methods, logistic regression is trained on inner training\nfolds using the same nested protocol. Bootstrap confidence\nintervals (10,000 samples) are computed for all metrics. All\ncode and data are available upon request.\n\nIV. EXPERIMENTS\n\nA. Dataset and Experimental Setup\n\nWe evaluate our methods on a subset of the PTB-XL+\ndataset [16], a comprehensive electrocardiographic feature\ndataset containing 12-lead ECGs with expert-annotated labels.\nThe primary analysis used the exported v100 prediction table\n(outputs/pairwise_vs_multilabel/predictions.csv),\nwhich contained 2,179 evaluable ECG records. We\ndefined valid base-model predictions as rows with non-\nmissing ground-truth labels, a non-missing predicted class\ncode, and all quantities required for selective-prediction\n\nanalysis (y_true_codes_json, y_hat_base_code,\nbase_entropy, base_margin, base_top1_prob,\nand verifier_conflict). In the final analysis artifact,\nno rows were missing these fields, so no additional row-level\nexclusions were applied after export. For descriptive per-class\nsafety analysis, we then restricted to the four pre-specified\ndiagnostic categories IMI/ASMI, LMI, PMI, and LVH\n(n=1,628); the remaining 551 ECGs comprised NORM and\nother diagnostic codes. PTB-XL+ was collected under IRB\napproval with appropriate patient consent.\n\nWe use repeated held-out evaluation of a fixed out-of-fold\nscore table with 5 repeats × 5 outer folds = 25 total evaluations\nto increase statistical power. For each outer fold, we use\ninner 4-fold cross-validation on the training data to select\nthe optimal rejection threshold, then evaluate on the held-out\ntest fold. This nested approach prevents optimistic bias from\ntest-set threshold tuning. All metrics are reported as mean ±\nstandard deviation across the 25 outer evaluations. Results are\nsummarized across 25 outer evaluations (5 repeats × 5 folds)\nobtained by repeated held-out resampling of a fixed out-of-\nfold score table; these are repeated assessments of the same\ncohort, not 25 independent studies.\n\nB. Methods Compared\n\nWe compare selective prediction methods using different\nconfidence scores:\n\n• Scalar confidence (entropy, margin, max-probability):\nIn binary classification, these three scores are mono-\ntone transforms of the same probability p: entropy =\n−[p log p+(1− p) log(1− p)], margin = |p− (1− p)| =\n2p − 1, max-prob = max(p, 1 − p) = p. They produce\nidentical rankings and selective prediction results.\n\n• Conformal confidence (binary): Coverage-controlled\nbaseline that selects a confidence threshold to achieve\ntarget coverage, then accepts predictions where\nmax(p0, p1) ≥ threshold.\n\n• Signed KG (sign-preserving): Uses −verifier conflict\n(without absolute value), preserving directional informa-\ntion in the 11-node KG disagreement score.\n\n• Deployed KG (with absolute value): Uses\n−|verifier conflict| as an ablation baseline; this was the\noriginally deployed scalarization choice.\n\nAll methods use the same base model predictions and\ndiffer only in their confidence scoring for selective prediction.\nWe report entropy, margin, and max-probability separately in\ntables for completeness, but they are identical by construction\nin this binary setting.\n\nC. Main Results: Repeated Held-Out Evaluation\n\nTable I presents the main repeated held-out evaluation\nresults (n=25 outer evaluations). Entropy, margin, and max-\nprobability achieve the best performance (96.41% accuracy\nat 67% coverage; E-AURC 0.0237 ± 0.0028). Signed KG\nachieves intermediate performance (92.62% accuracy at 67%\ncoverage; E-AURC 0.0684 ± 0.0118), improving markedly\nover the deployed KG (88.33% accuracy at 76% coverage;\n\n\n\n5\n\nTABLE I\nREPEATED HELD-OUT EVALUATION RESULTS (5 REPEATS × 5 FOLDS =\n\n25 EVALUATIONS). ALL METHODS USE THE SAME XGBOOST BASE MODEL\nPREDICTIONS WITH DIFFERENT CONFIDENCE SCORING FOR SELECTIVE\n\nPREDICTION. THRESHOLDS WERE SELECTED VIA INNER 4-FOLD CV ON\nTRAINING DATA AND EVALUATED ON HELD-OUT TEST FOLDS. VALUES\n\nSHOWN AS MEAN ± STANDARD DEVIATION. IN BINARY CLASSIFICATION,\nENTROPY, MARGIN, AND MAX-PROBABILITY ARE MONOTONE\n\nTRANSFORMS OF THE SAME PROBABILITY AND PRODUCE IDENTICAL\nRESULTS; WE REPORT THEM SEPARATELY FOR COMPLETENESS. SIGNED\nKG USES −VERIFIER CONFLICT (SIGN-PRESERVING); DEPLOYED KG\n\nUSES −|VERIFIER CONFLICT| (ABSOLUTE VALUE).\n\nMethod Accuracy Coverage E-AURC\n\nScalar Confidence (Entropy/Margin/Max-Prob) 96.41% ± 0.91% 67.3% 0.0237 ± 0.0028\nSigned KG (no abs; sign-preserving) 92.62% ± 0.96% 67.1% 0.0684 ± 0.0118\nDeployed KG (with abs) 88.33% ± 0.80% 75.9% 0.1244 ± 0.0143\n\nE-AURC 0.1244 ± 0.0143) but still underperforming scalar\nconfidence by 2.9× in E-AURC.\n\nMechanistic analysis (Section IV-I) revealed three reasons\nfor KG’s poor performance: (1) worse-than-random error-\ndetection ability (AUROC 0.460 vs entropy 0.832), (2) neg-\nligible incremental value beyond entropy (+0.05pp), and (3)\nnegative risk-monotonicity (Spearman ρ = -0.044).\n\nD. Risk-Coverage Analysis\nFigure 1 shows the risk-coverage curves for all methods\n\nunder nested cross-validation. Entropy and margin dominate\nacross all coverage levels, maintaining lower risk (higher\naccuracy) at every operating point. The hybrid KG curve\nclosely tracks max-probability, confirming similar selective\nprediction behavior despite the structured knowledge-graph\nrepresentation.\n\nE. E-AURC Comparison\nExcess Area Under the Risk-Coverage curve (E-AURC)\n\nprovides a single-number summary of selective prediction\nquality, measuring the excess risk over an oracle selec-\ntor. Lower E-AURC indicates better risk-coverage trade-offs\nacross all operating points.\n\nTable II presents E-AURC values for all methods. Entropy,\nmargin, and max-probability achieve E-AURC of 0.0237 ±\n0.0028, approximately 5.2× better than hybrid KG (0.1244 ±\n0.0143).\n\nF. Matched-Coverage Analysis\nTo enable direct comparison independent of threshold se-\n\nlection, Table III presents accuracy at fixed coverage levels\n(60%, 70%, 80%). Scalar confidence substantially outperforms\nboth KG variants at all coverage levels. Sign-preserving KG\nachieves intermediate performance (92.81% at 60% coverage),\nconfirming that the abs() transformation substantially degraded\nbut did not eliminate the performance gap. At 60% coverage,\nscalar confidence achieves 97.17% accuracy vs. 92.81% for\nsigned KG and 87.38% for deployed KG. At 80% coverage,\nthe gaps are +3.27pp (scalar − signed KG) and +5.79pp\n(scalar − deployed KG). This matched-coverage analysis\nconfirms that the performance gap is not an artifact of different\noperating points.\n\n0.0 0.2 0.4 0.6 0.8 1.0\nCoverage\n\n0.0\n\n0.1\n\n0.2\n\n0.3\n\n0.4\n\n0.5\n\nRi\nsk\n\n (\n1 \n\n- A\ncc\n\nur\nac\n\ny)\n\nEntropy/Margin dominate\nacross all coverage levels\n\nRisk-Coverage Curves (Nested Cross-Validation)\nEntropy\nMargin\nHybrid KG\nMax Probability\n\nFig. 1. Risk-coverage curves under nested cross-validation. Entropy and\nmargin (solid lines) dominate across all coverage levels. Hybrid KG (dashed\nblue) tracks max-probability baseline (dashed red), showing no advantage\nfrom structured medical knowledge. Risk = 1 - accuracy at each coverage\nlevel.\n\nTABLE II\nE-AURC COMPARISON ACROSS SELECTIVE PREDICTION METHODS\n\n(N=25 OUTER EVALUATIONS). EXCESS AREA UNDER THE\nRISK-COVERAGE CURVE MEASURES THE EXCESS RISK OVER AN ORACLE\nSELECTOR ACROSS ALL COVERAGE LEVELS. LOWER E-AURC INDICATES\n\nBETTER SELECTIVE PREDICTION PERFORMANCE. IN BINARY\nCLASSIFICATION, ENTROPY, MARGIN, AND MAX-PROBABILITY ARE\n\nMONOTONE TRANSFORMS OF THE SAME PROBABILITY AND ACHIEVE\nIDENTICAL E-AURC. COVERAGE-CONTROLLED CONFORMAL\n\nCONFIDENCE IS ESSENTIALLY TIED WITH ENTROPY. SIGN-PRESERVING\nKG IMPROVES MARKEDLY OVER THE DEPLOYED ABS-VALUED KG BUT\n\nREMAINS WORSE THAN SCALAR CONFIDENCE. RESULTS ARE FROM\nREPEATED HELD-OUT EVALUATION OF A FIXED OUT-OF-FOLD SCORE\n\nTABLE (5 REPEATS × 5 FOLDS).\n\nMethod E-AURC\n\nScalar Confidence (Entropy/Margin/Max-Prob) 0.0237 ± 0.0028\nConformal (Binary) 0.0236 ± 0.0038\nSigned KG (no abs; sign-preserving) 0.0684 ± 0.0118\nDeployed KG (with abs) 0.1244 ± 0.0143\n\n∆E-AURC vs Scalar Confidence\n\nConformal −0.0001 (comparable)\nSigned KG +0.0447 (2.9× worse)\nDeployed KG +0.1008 (5.2× worse)\n\nG. Calibrated Confidence Thresholding\n\nWe implemented calibrated confidence thresholding as an\nadditional baseline. This method selects a confidence threshold\non training data (via nested CV) to achieve target coverage,\nthen accepts predictions where max(p0, p1) ≥ threshold.\nCalibrated thresholding achieved 96.00% accuracy at 70.97%\ncoverage (E-AURC 0.0236 ± 0.0038), comparable to entropy,\nmargin, and max-probability methods.\n\n\n\n6\n\nTABLE III\nMATCHED-COVERAGE ANALYSIS. ACCURACY AT FIXED COVERAGE\n\nLEVELS (60%, 70%, 80%) FOR DIRECT METHOD COMPARISON. HIGHER\nACCURACY AT THE SAME COVERAGE INDICATES BETTER SELECTIVE\n\nPREDICTION. SCALAR CONFIDENCE SUBSTANTIALLY OUTPERFORMS BOTH\nKG VARIANTS AT ALL COVERAGE LEVELS, WITH THE GAP WIDENING AT\nLOWER COVERAGE (HIGHER CONFIDENCE) REGIONS. SIGN-PRESERVING\nKG (SIGNED KG) ACHIEVES INTERMEDIATE PERFORMANCE BETWEEN\n\nSCALAR CONFIDENCE AND THE DEPLOYED ABS-VALUED KG,\nCONFIRMING THAT THE ABS() TRANSFORMATION SUBSTANTIALLY\n\nDEGRADED BUT DID NOT ELIMINATE THE PERFORMANCE GAP.\n\nMethod 60% Coverage 70% Coverage 80% Coverage\n\nScalar Confidence (Entropy/Margin/Max-Prob) 97.17% 96.26% 94.32%\nSigned KG (no abs; sign-preserving) 92.81% 92.07% 91.05%\nDeployed KG (with abs) 87.38% 87.93% 88.53%\n\nDifference (Scalar − Signed KG) +4.36pp +4.19pp +3.27pp\nDifference (Scalar − Deployed KG) +9.79pp +8.33pp +5.79pp\n\nTABLE IV\nPER-CLASS SAFETY METRICS AT 67% COVERAGE OPERATING POINT\n\nCOMPUTED VIA REPEATED NESTED CROSS-VALIDATION (5 REPEATS × 5\nFOLDS = 25 EVALUATIONS). THRESHOLD SELECTED VIA INNER 4-FOLD\nCV ON TRAINING DATA ONLY, THEN APPLIED TO HELD-OUT TEST FOLD.\nRISK = 1 - ACCURACY ON ACCEPTED SAMPLES. SENSITIVITY = RECALL\n\nON ACCEPTED SAMPLES. DEFERRAL RATE = FRACTION OF SAMPLES\nREJECTED FOR HUMAN REVIEW. VALUES SHOWN AS MEAN ± STD ACROSS\n25 EVALUATIONS. TOTAL N REPRESENTS SUM ACROSS ALL FOLDS (NOT\n\nUNIQUE SAMPLES).\n\nCondition Total N Accepted Deferred Defer % Risk Sens.\n\nASMI (IMI) 176 121 55 31.3% 0.000±0.000 1.000±0.000\nLMI 8 4 3 44.2% 0.000±0.000 1.000±0.000\nPMI 132 92 39 29.8% 0.000±0.000 1.000±0.000\nLVH 11 1.2 9.6 87.6% 1.000±0.000 0.000±0.000\n\nOverall 327 218 107 32.9% 0.006±0.012 0.994±0.015\nNote: Total N = 327 represents per-fold means summed across 25\nevaluations (not unique samples). Full dataset has n=1,628 samples across\nthese 4 conditions. LVH result based on mean 1.2 accepted samples per\nfold, all misclassified; this is a small-sample warning sign, not stable\nevidence of class-specific safety.\n\nH. Per-Class Safety Analysis\n\nTable IV presents per-class safety metrics at the 67%\ncoverage operating point, computed via repeated nested cross-\nvalidation (5 repeats × 5 folds = 25 evaluations). For each\nouter fold, the confidence threshold was selected via inner 4-\nfold CV on training data only, then applied to the held-out\ntest fold. This prevents optimistic bias from test-set threshold\ntuning.\n\nClinical safety implications: The model achieves perfect\naccuracy (0% risk) on accepted ASMI, LMI, and PMI cases\nacross all 25 evaluations. However, LVH cases show 100% risk\non the small number of accepted samples (mean 1.2 out of 11\nper fold), with 87.6% deferred for human review. This pattern\nindicates the base model has fundamental difficulty with\nLVH detection, and the selective prediction system correctly\nidentifies this by deferring most LVH cases. However, the few\naccepted LVH cases that are misclassified represent high-risk\nerrors that escaped detection. This pattern supports caution\nand class-specific guardrails in future validation, but it is not\nsufficient to define a deployment rule because the accepted\nLVH sample count is very small.\n\nNote on multi-model analysis: We conducted exploratory\nanalysis across three base model families (XGBoost, Logis-\ntic Regression, MLP). Due to feature confounding (models\ntrained on XGBoost-derived meta-features), this analysis is\nhypothesis-generating only and is presented in Appendix A.\n\nI. KG Failure Mechanism Analysis\n\nTo understand why KG underperforms entropy-based meth-\nods, we conducted three quantitative mechanism tests on the\nfull dataset (n=2,179 samples, 251 errors).\n\n1) Test 4: Score-Orientation Audit: To distinguish be-\ntween a fundamental KG failure and a score construction\nissue, we tested four transforms of verifier conflict. Raw\nverifier conflict had AUROC 0.333, while -verifier conflict\nhad AUROC 0.667 (moderate error detection). However, the\ndeployed -abs(verifier conflict) had AUROC 0.460. This in-\ndicates that the absolute value transformation destroyed di-\nrectional information in the KG signal. The KG contains\nmoderate error-detection signal when used directly, but the -\nabs(.) scalarization choice substantially degraded performance.\n\n2) Test 1: Error-Detection Ability: We computed AUROC\nfor each confidence score predicting model errors. Entropy\nachieved AUROC 0.832, while KG achieved only 0.460 (worse\nthan random) with the deployed -abs(verifier conflict) trans-\nform. Notably, -verifier conflict without the absolute value\nachieved AUROC 0.667 (moderate error detection), suggesting\nthe KG has some signal that was degraded by the scalarization\nchoice.\n\n3) Test 2: Incremental Value Beyond Entropy: We fit logis-\ntic regression models predicting errors: (1) entropy only, (2)\nentropy + KG, (3) entropy + KG + interaction. Adding KG\nimproved accuracy by only 0.05 percentage points (88.48%�\n88.53%), demonstrating negligible incremental value beyond\nentropy alone.\n\n4) Test 3: Risk-Monotonicity and Score Resolution: We\nmeasured Spearman correlation between confidence scores and\ncorrectness. Entropy achieved ρ = +0.368, while KG achieved\nρ = -0.044 (negative correlation). Both methods had similar\nnumbers of unique scores ( 2,178), but KG’s risk range (0.179)\nwas substantially smaller than entropy’s (0.404), indicating\ncoarser risk separation.\n\nThese tests reveal that KG’s poor selective prediction per-\nformance stems from both implementation choices and fun-\ndamental limitations. The score-orientation audit shows that\n-verifier conflict (without abs) achieves AUROC 0.667, indi-\ncating the KG has moderate error-detection signal. However,\nthe -abs(.) scalarization destroyed this signal, yielding AUROC\n0.460. Even with the correct orientation, KG (AUROC 0.667)\nstill underperforms entropy (AUROC 0.832), suggesting both\na score construction issue and a fundamental signal gap.\n\nV. DISCUSSION\n\nA. Methodological Implications: Three-Tier Performance\nRanking\n\nOur primary finding is that repeated held-out evaluation\n(5 repeats × 5 folds = 25 outer evaluations) reveals a clear\nthree-tier ranking: scalar confidence best, sign-preserving KG\n\n\n\n7\n\nintermediate, and deployed abs-valued KG worst. Entropy,\nmargin, max-probability, and calibrated confidence threshold-\ning achieved 96.00–96.41% accuracy at 67–71% coverage (E-\nAURC 0.0236–0.0237). Sign-preserving KG achieved inter-\nmediate performance (92.62% accuracy at 67% coverage; E-\nAURC 0.0684 ± 0.0118), improving substantially over the\ndeployed abs-valued KG (88.33% at 76% coverage; E-AURC\n0.1244 ± 0.0143) but remaining worse than entropy by ∆E-\nAURC +0.0447. Hierarchical bootstrap within this repeated-\nresampling design gave a 95% CI of [+0.0442, +0.0452]\nfor the signed-KG gap. These intervals are narrow because\nbetween-repeat variation was small in this cohort; they quan-\ntify within-design resampling uncertainty, not full transporta-\nbility uncertainty, so we also report repeat-level sensitivity\nanalysis across the five repeats.\n\nThis finding reinforces the importance of proper evaluation\nprotocols for selective prediction. Threshold selection on test\ndata can introduce optimistic bias, particularly for methods\nwith more tunable parameters or more complex decision\nboundaries.\n\nB. Why Simple Baselines Dominate\nEntropy, margin, and max-probability achieved E-AURC\n\nof 0.0237 ± 0.0028. Signed KG achieved 0.0684 ± 0.0118\n( 2.9× worse than entropy), while the deployed abs-valued\nKG achieved 0.1244 ± 0.0143 ( 5.2× worse than entropy).\nMechanistic analysis revealed three fundamental weaknesses\nin KG: (1) worse-than-random error detection with the de-\nployed transform (AUROC 0.460 vs entropy 0.832), though\nsign-preserving KG achieves moderate error detection (AU-\nROC 0.667); (2) negligible incremental value beyond en-\ntropy (+0.05pp); and (3) negative risk-monotonicity (Spearman\nρ = -0.044). This ranking suggests that model confidence\nscores provide superior uncertainty quantification compared\nto model-KG disagreement in our setting.\n\nSeveral factors may explain this dominance:\n1) Direct uncertainty quantification: Entropy and margin\n\ndirectly measure the base model’s uncertainty in its own\npredictions. When the model is uncertain, these scores\nnaturally reflect that uncertainty.\n\n2) Continuous fine-grained ranking: Entropy and margin\nproduce thousands of distinct values, enabling precise\nrisk stratification. In contrast, the medical-only KG\nconflict score is binary (0 or 1), making threshold-based\nselection impossible.\n\n3) Calibration to model behavior: Confidence scores\nare derived from the same model being evaluated, en-\nsuring alignment between the uncertainty signal and\nthe model’s actual error patterns. KG disagreement, by\ncontrast, measures conflict with an external knowledge\nstructure that may not align with the model’s failure\nmodes.\n\nThe hybrid KG’s continuous verifier conflict score (2,178\nunique values) avoids the binary pathology but still achieves\nE-AURC 5.2× worse than entropy (0.1244 vs 0.0237). This\nsuggests that structured medical reasoning, as operationalized\nin our KG, does not provide better uncertainty quantification\nthan simple model confidence.\n\nC. Failure Modes of Knowledge-Graph Disagreement\n\n1) Binary Conflict Pathology: The medical-evidence-only\nKG failed catastrophically for selective prediction due to\nbinary conflict scores. With only 8.5% of cases showing\nagreement (conflict=0) and 91.5% showing disagreement (con-\nflict=1), the nested CV threshold selection cannot find a\nmeaningful operating point at 71% coverage. The algorithm\ndefaults to accepting all cases (100% coverage), rendering the\nscore useless.\n\nThis failure mode is not specific to our KG construction.\nAny disagreement-based approach that produces binary or\nnear-binary scores will face the same limitation. Selective\nprediction requires fine-grained ranking across many distinct\nconfidence levels; binary signals cannot provide this.\n\n2) Poor Risk Ranking Despite Continuous Scores: The\nhybrid KG uses a continuous score but still underperforms\nentropy/margin by a factor of 5× in E-AURC. This suggests\na deeper issue: the disagreement between model and KG\npredictions does not reliably identify cases where the model\nis likely to be wrong.\n\nPossible explanations include:\n1) KG-model correlation: The KG may disagree with the\n\nmodel on cases where both are uncertain, rather than\ncases where the model is specifically wrong. If disagree-\nment correlates with task difficulty rather than model\nerror, it will not provide a useful selective prediction\nsignal.\n\n2) Circularity in hybrid KG: Seven of 11 nodes in-\ncorporate model-derived signals (predicted probabilities,\nterritory consistency), which may cause the KG to par-\ntially echo the model’s confidence rather than providing\nindependent verification.\n\n3) Suboptimal KG construction: Our KG may not capture\nthe medical reasoning patterns that would best identify\nmodel errors. Different node designs or aggregation\nstrategies might improve performance.\n\nD. Negative Result: No Additive Value from KG Fusion\n\nCombining entropy with KG signals via logistic regression\nyielded negligible improvement (+0.04 percentage points; E-\nAURC 0.0237 vs 0.0236). This negative result suggests that\nKG features provide no practical additive value over entropy\nin our setting.\n\nThis finding is important because it demonstrates that KG\ndisagreement and entropy are largely redundant—both flag\nsimilar cases, but entropy does so more effectively.\n\nE. Recommendations for Future Work\n\nBased on our findings, we recommend the following prac-\ntices for selective prediction evaluation in clinical AI:\n\n1) Held-out threshold selection: Always use held-out\nevaluation for threshold selection. Inner folds select\nthresholds; outer folds evaluate performance. This pre-\nvents optimistic bias from test-set tuning.\n\n2) Strong uncertainty baselines: Compare against en-\ntropy, margin, and calibrated confidence as minimum\n\n\n\n8\n\nbaselines. These simple methods are often competitive\nand provide a credible reference point.\n\n3) Coverage-aware reporting: Report full risk-coverage\ncurves and E-AURC, not just accuracy at a single\noperating point. Single-point metrics can be misleading\nif the operating point was chosen favorably.\n\n4) Preregistered success criteria: For ensemble methods,\npreregister the minimum improvement threshold (e.g.,\n+1.0 percentage point) to avoid post-hoc rationalization\nof negligible gains.\n\n5) External validation: Single-center retrospective studies\nare hypothesis-generating only. Multi-center prospective\nvalidation is essential before clinical deployment.\n\nF. Limitations\nOur study has several important limitations that constrain\n\nthe generalizability of our findings:\n1) Public dataset limitations: We used a subset of PTB-\n\nXL+ (n=2,179), a publicly available research dataset.\nWhile PTB-XL+ is widely used and well-curated, it\nmay not reflect the case mix, noise characteristics, or\nprevalence patterns of real-world clinical deployments.\nPerformance may degrade when applied to data from\ndifferent hospitals, patient populations, or ECG acqui-\nsition systems. Our conclusions about method rankings\nmay not generalize to other datasets, clinical contexts,\nor ECG classification tasks. The methodological lesson\nabout evaluation protocol sensitivity is likely more gen-\neral, but the magnitude of effects and specific method\nrankings are dataset-dependent.\n\n2) Single base model family: We evaluated selective pre-\ndiction methods using only XGBoost as the base classi-\nfier. Different model architectures may exhibit different\nuncertainty characteristics, potentially changing the rel-\native performance of selective prediction methods. Our\nexploratory multi-model analysis (Appendix A) used\nfeatures derived from XGBoost predictions rather than\nraw ECG features, creating confounding that prevents\ndirect comparison across model families.\n\n3) Limited KG design space: We evaluated one specific\nKG construction approach with 11 nodes (4 medical +\n7 model-derived). Different node designs, aggregation\nstrategies, knowledge sources, or disagreement defi-\nnitions might yield better performance. Our negative\nresults do not preclude the possibility that alternative\nKG-based approaches could be competitive.\n\n4) No clinician-in-the-loop evaluation: We report accu-\nracy on accepted cases but do not measure actual human\nreviewer accuracy, workload impact, or clinical utility.\nRealistic deployment would require prospective evalu-\nation with clinicians reviewing flagged cases to assess\nwhether the selective prediction system improves diag-\nnostic accuracy and efficiency in practice. Future studies\nshould follow TRIPOD-AI and DECIDE-AI guidelines\nfor clinical AI evaluation [17], [18].\n\n5) Interpretability not validated: While entropy and mar-\ngin are simple confidence scores, we have not demon-\nstrated that clinicians find these signals actionable or\n\nthat they provide useful explanations for why cases are\nflagged for review. The clinical utility of confidence-\nbased triage remains an open question requiring user\nstudies.\n\n6) Mechanistic analysis is in-sample: The three mecha-\nnistic tests (error-detection AUROC, incremental value,\nrisk-monotonicity) are computed on the full dataset\nrather than via out-of-fold evaluation. While these tests\nprovide useful diagnostic signals about why KG un-\nderperforms, the exact magnitude estimates (+0.05pp\nincremental value, AUROC 0.460 vs 0.832) should be\ninterpreted as descriptive rather than inferential. Future\nwork should validate mechanistic findings via proper\nout-of-fold evaluation.\n\n7) Statistical inference considerations: While we report\nhierarchical bootstrap confidence intervals and effect\nsizes (dz), the narrow CIs should be interpreted with\ncaution. The repeated CV structure (5 repeats sharing\nthe same data splits) may introduce dependence that\naffects variance estimates, though our large effect sizes\nsuggest the ranking is robust. This is a known challenge\nin resampling-based evaluation [19], [20].\n\nG. Implications for Knowledge-Graph Approaches\n\nOur negative results do not imply that knowledge graphs\nare inherently unsuitable for clinical AI. Rather, they suggest\nthat model-KG disagreement, as operationalized in our study,\ndoes not provide superior uncertainty quantification compared\nto simple confidence scores.\n\nFuture work might explore alternative KG-based ap-\nproaches:\n\n1) KG-derived features for model training: Rather than\nusing KG disagreement for post-hoc selective prediction,\nincorporate KG features directly into model training to\nimprove base model performance.\n\n2) Explanation generation: Use KGs to generate human-\nreadable explanations for model predictions, rather than\nas a selective prediction signal. This would require\nprospective validation with clinicians.\n\n3) Hybrid architectures: Develop models that jointly learn\nfrom raw data and structured medical knowledge, rather\nthan treating the KG as an external verifier.\n\nThese directions may prove more fruitful than the\ndisagreement-based approach evaluated here, but they require\nrigorous nested evaluation and strong baseline comparisons to\nestablish their value.\n\nH. Appropriate Claims: What Readers May and May Not\nConclude\n\nBased on our findings, we explicitly delineate appropriate\nversus inappropriate interpretations:\n\nAppropriate claims (supported by our evidence):\n• Under repeated held-out evaluation, scalar confidence\n\n(entropy, margin, max-probability) substantially outper-\nforms KG-based selective prediction on this PTB-XL+\ncohort, with signed KG achieving intermediate perfor-\nmance.\n\n\n\n9\n\n• The deployed KG’s poor performance (E-AURC 0.1244)\nwas substantially worsened by the absolute-value scalar-\nization choice; sign-preserving KG achieved E-AURC\n0.0684 ( 1.8× improvement) but remained 2.9× worse\nthan entropy.\n\n• The KG provides negligible incremental value beyond\nentropy alone (+0.05pp) for error detection in this setting.\n\n• Rigorous held-out evaluation with strong uncertainty\nbaselines is essential for credible selective-prediction\nclaims in clinical AI.\n\n• Our conclusions are limited to this single-center retro-\nspective cohort (PTB-XL+) and this specific KG design.\n\nInappropriate claims (NOT supported by our evidence):\n• ”KGs do not work for clinical AI” — Our negative result\n\nis specific to this disagreement-based selective prediction\napproach, not KGs as a representation formalism.\n\n• ”Entropy is always better than KG” — Method rankings\nmay differ on other datasets, tasks, or KG designs.\nExternal validation is required.\n\n• ”The system is clinically safe for deployment” — We\nreport retrospective accuracy on accepted cases only;\nno clinician-in-the-loop evaluation, workload analysis, or\nprospective validation was conducted.\n\n• ”LVH detection is safe with 87.6% deferral” — Accepted\nLVH cases had 100% error risk (mean 1.2 accepted\nsamples per fold); this is a small-sample warning sign,\nnot evidence of stable class-specific safety.\n\n• ”The score-orientation fix makes KG competitive” —\nSign-preserving KG remains materially worse than en-\ntropy under repeated held-out evaluation; the sign fix\nrecovers signal but does not make KG competitive with\nstrong scalar baselines on this cohort.\n\nThis explicit claims framing follows recommendations for\nhonest reporting in clinical AI evaluation [17], [18].\n\nVI. CONCLUSION\n\nIn this single-center retrospective feasibility study, we rigor-\nously reassessed knowledge-graph-based selective prediction\nfor ECG diagnosis using repeated held-out evaluation (5\nrepeats × 5 folds = 25 evaluations), where rejection thresholds\nwere selected via inner CV on training data and evaluated\non disjoint test folds. This methodological approach with in-\ncreased statistical power revealed that simple confidence-based\nuncertainty measures substantially outperform KG disagree-\nment, and provided quantitative mechanistic understanding of\nwhy rule-based methods fail.\n\nUnder repeated nested evaluation, entropy, margin, and\nmax-probability achieved 96.41% accuracy at 67% cover-\nage (E-AURC 0.0237 ± 0.0028), while hybrid KG dis-\nagreement achieved only 88.33% at 76% coverage (E-AURC\n0.1244 ± 0.0143)—approximately 5.2× worse in E-AURC.\nMechanistic analysis (computed in-sample for diagnostic in-\nsight) revealed three fundamental weaknesses: KG’s error-\ndetection ability was worse than random with the deployed\n-abs(verifier conflict) transform (AUROC 0.460 vs 0.832). A\nscore-orientation audit showed -verifier conflict without the\nabsolute value achieves AUROC 0.667 (moderate signal),\n\nsuggesting the abs() scalarization substantially degraded the\nKG signal—though this diagnostic finding requires validation\nvia proper out-of-fold evaluation. KG provided negligible\nincremental value beyond entropy (+0.05pp), and showed\nnegative risk-monotonicity (Spearman ρ = -0.044).\n\nThis work makes four key contributions. First, we demon-\nstrate the value of repeated nested cross-validation for in-\ncreasing statistical power (n=5 to n=25 evaluations) in se-\nlective prediction evaluation. Second, we provide quantitative\nmechanistic analysis of why the evaluated KG design un-\nderperforms learned uncertainty estimates, identifying specific\nfailure modes in error detection, incremental value, and risk-\nmonotonicity (though these mechanistic tests are computed\nin-sample and should be interpreted as descriptive). Third, we\nestablish that entropy, margin, and max-probability provide\nreliable, high-performance selective prediction across multiple\nconfidence formulations, while KG disagreement substantially\nunderperforms. Fourth, we provide a methodological frame-\nwork combining nested evaluation, mechanistic analysis, and\nper-class safety assessment for credible selective prediction\nclaims. Exploratory analysis suggests method rankings may\nvary by model family, though this finding requires validation\nwith independent feature pipelines (see Appendix A).\n\nOur findings have methodological implications for evaluat-\ning selective prediction in clinical AI. We recommend repeated\nnested cross-validation (minimum 5×5), mechanistic analysis\nbeyond performance metrics, and strong uncertainty baselines\n(entropy, margin) as minimum reporting standards for future\nwork.\n\nLimitations include single-center retrospective design, lim-\nited exploration of alternative KG construction approaches,\nand lack of external validation. The multi-model robustness\nanalysis used meta-features derived from XGBoost predictions\nrather than raw ECG features, creating potential confounding\nthat limits interpretation of model-dependent rankings. Our\nconclusions about method rankings may not generalize to other\ndatasets or clinical contexts. Critical safety limitation: Per-\nclass analysis via nested CV revealed 100% risk on accepted\nLVH cases (mean 1.2 out of 11 samples per fold); this is\na small-sample warning sign, not stable evidence of class-\nspecific safety, and indicates the current system is not safe\nfor autonomous LVH diagnosis without mandatory human\nreview. Future work should evaluate on multi-center datasets\nwith models trained on raw features, explore learned KG\nedge weights and hybrid architectures, and conduct prospective\nclinician-in-the-loop studies.\n\nDespite these limitations, our results emphasize that\nmethodological rigor in evaluation protocols, mechanistic un-\nderstanding, and appropriate claim framing are essential for\ncredible selective-prediction claims in clinical AI research.\nThis study should be interpreted as hypothesis-generating fea-\nsibility evidence that motivates further validation with external\ndatasets and refined KG designs.\n\nREFERENCES\n\n[1] A. Y. Hannun, P. Rajpurkar, M. Haghpanahi, G. H. Tison, C. Bourn,\nM. P. Turakhia, and A. Y. Ng, “Cardiologist-level arrhythmia detection\nand classification in ambulatory electrocardiograms using a deep neural\nnetwork,” Nature medicine, vol. 25, no. 1, pp. 65–69, 2019.\n\n\n\n10\n\n[2] A. H. Ribeiro, M. H. Ribeiro, G. M. Paixão, D. M. Oliveira, P. R. Gomes,\nJ. A. Canazart, M. P. Ferreira, C. R. Andersson, P. W. Macfarlane,\nW. Meira Jr et al., “Automatic diagnosis of the 12-lead ecg using a\ndeep neural network,” Nature communications, vol. 11, no. 1, p. 1760,\n2020.\n\n[3] M. Rotmensch, Y. Halpern, A. Tlimat, S. Horng, and D. Sontag,\n“Learning a health knowledge graph from electronic medical records,”\nScientific reports, vol. 7, no. 1, p. 5994, 2017.\n\n[4] X. Zhang, Y. Xie, J. Wang, X. Liang, and Y. Xia, “Graph-based deep\nlearning for medical diagnosis and analysis: Past, present and future,”\nSensors, vol. 21, no. 14, p. 4758, 2020.\n\n[5] Y. Geifman and R. El-Yaniv, “Selective classification for deep neural\nnetworks,” in Advances in neural information processing systems, 2017,\npp. 4878–4887.\n\n[6] C. Cortes, G. DeSalvo, and M. Mohri, “Learning with rejection,” arXiv\npreprint arXiv:1602.04318, 2016.\n\n[7] N. Strodthoff, P. Wagner, T. Schaeffter, and W. Samek, “Deep learning\nfor ecg analysis: Benchmarks and insights from ptb-xl,” IEEE Journal\nof Biomedical and Health Informatics, vol. 25, no. 5, pp. 1519–1528,\n2020.\n\n[8] C. Chow, “On optimum recognition error and reject tradeoff,” IEEE\nTransactions on information theory, vol. 16, no. 1, pp. 41–46, 1970.\n\n[9] H. Jiang, B. Kim, M. Guan, and M. Gupta, “To trust or not to trust a\nclassifier,” Advances in neural information processing systems, vol. 31,\n2018.\n\n[10] C. Guo, G. Pleiss, Y. Sun, and K. Q. Weinberger, “On calibration of\nmodern neural networks,” International conference on machine learning,\npp. 1321–1330, 2017.\n\n[11] A. N. Angelopoulos and S. Bates, “A gentle introduction to confor-\nmal prediction and distribution-free uncertainty quantification,” arXiv\npreprint arXiv:2107.07511, 2021.\n\n[12] S. M. Lundberg and S.-I. Lee, “A unified approach to interpreting model\npredictions,” in Advances in neural information processing systems,\n2017, pp. 4765–4774.\n\n[13] C. Rudin, “Stop explaining black box machine learning models for high\nstakes decisions and use interpretable models instead,” Nature machine\nintelligence, vol. 1, no. 5, pp. 206–215, 2019.\n\n[14] R. Caruana, Y. Lou, J. Gehrke, P. Koch, M. Sturm, and N. Elhadad,\n“Intelligible models for healthcare: Predicting pneumonia risk and\nhospital 30-day readmission,” pp. 1721–1730, 2015.\n\n[15] T. Chen and C. Guestrin, “Xgboost: A scalable tree boosting system,”\nin Proceedings of the 22nd acm sigkdd international conference on\nknowledge discovery and data mining, 2016, pp. 785–794.\n\n[16] N. Strodthoff, T. Mehari, C. Nagel, P. Aston, A. Sundar, C. Graff,\nJ. K. Kanters, W. Haverkamp, O. Doessel, A. Loewe, M. Bär, and\nT. Schaeffter, “Ptb-xl+, a comprehensive electrocardiographic feature\ndataset,” 2023. [Online]. Available: https://doi.org/10.13026/g6h6-7g88\n\n[17] G. S. Collins and K. G. Moons, “Tripod+ ai statement: updated guidance\nfor reporting clinical prediction models that use regression or machine\nlearning methods,” BMJ, vol. 373, p. n1096, 2021.\n\n[18] B. Vasey, M. Nagendran, C. Campbell et al., “Decide-ai: a new reporting\nguideline for clinical evaluations of ai-based interventions,” Nature\nMedicine, vol. 27, pp. 1358–1359, 2021.\n\n[19] Y. Bengio and Y. Grandvalet, “No unbiased estimator of the variance of\nk-fold cross-validation,” Journal of machine learning research, vol. 5,\npp. 1089–1105, 2004.\n\n[20] G. C. Cawley and N. L. Talbot, “On over-fitting in model selection\nand subsequent selection bias in performance evaluation,” Journal of\nMachine Learning Research, vol. 11, no. 7, 2010.\n\nAPPENDIX\n\nTo explore whether the ranking of selective prediction\nmethods might vary across model architectures, we repeated\nthe 5×5 held-out evaluation protocol with two additional\nbase model families: Logistic Regression and Multi-Layer\nPerceptron (MLP with 128-64 hidden units).\n\nImportant limitation: This analysis is exploratory and\nhypothesis-generating, not confirmatory. Models were trained\non meta-features derived from the XGBoost base model (in-\ncluding entropy, margin, and KG-derived features like veri-\nfier conflict), not on raw ECG features. This creates confound-\ning, as KG-derived features are used both in model training\n\nTABLE V\nMULTI-MODEL ROBUSTNESS ANALYSIS (N=25 EVALUATIONS PER\n\nMODEL). E-AURC VALUES ACROSS THREE BASE MODEL FAMILIES.\nNOTE: MODELS TRAINED ON META-FEATURES DERIVED FROM XGBOOST\n\nPREDICTIONS, NOT RAW ECG FEATURES (SEE SECTION 4.2 FOR\nLIMITATION DISCUSSION). IN BINARY CLASSIFICATION, ENTROPY,\n\nMARGIN, AND MAX-PROBABILITY ARE MONOTONE TRANSFORMS AND\nPRODUCE IDENTICAL E-AURC.\n\nModel Family Scalar Confidence Hybrid KG\n\nXGBoost 0.0237 ± 0.0028 0.0684 ± 0.0118\nLogistic Regression 0.0742 ± 0.0148 0.0689 ± 0.0093\nMLP (128-64) 0.0324 ± 0.0076 0.0697 ± 0.0089\n\nLower E-AURC is better. On XGBoost, scalar confidence\noutperforms KG by 2.9×. On LogReg, KG shows a non-significant\ntrend (95% CI crosses zero). On MLP, scalar confidence\noutperforms KG by 2.2×.\n\nand as confidence scores for comparison. Results should be\ninterpreted as preliminary exploration of potential model-\ndependence, requiring validation with independent feature\npipelines.\n\nTable V shows E-AURC results across all three model\nfamilies. On XGBoost, entropy substantially outperforms KG\n(0.0237 vs 0.1244, 5.2× difference). On Logistic Regression,\nKG shows a trend toward better performance (0.0689 vs\nentropy 0.0742, difference = -0.0054), but this difference is\nnot statistically significant (approximate 95% CI [-0.0396,\n+0.0289] crosses zero). On MLP, entropy again outperforms\nKG (0.0324 vs 0.0697, 2.2× difference).\n\nThese results suggest that selective prediction method rank-\nings may be model-dependent, though the evidence is mixed.\nThe strong entropy advantage on XGBoost and MLP is\nclear, while the LogReg result shows only a non-significant\ntrend. This emphasizes the need for practitioners to validate\nselective prediction methods on their specific model family\nwith adequate statistical power, rather than assuming rankings\ntransfer universally.\n\nAll experiments in this paper were generated using a repro-\nducible pipeline. We provide the following artifacts to enable\nreplication:\n\nA. Primary Analysis Pipeline\n\nThe main results (Table I) were generated by running:\n\npython scripts/repeated_nested_cv_5x5.py\n\nThis script implements 5 repeats × 5 outer folds × 4 inner\nfolds held-out evaluation with threshold selection. Configura-\ntion parameters:\n\n• N_REPEATS = 5: Number of independent CV repeats\n• N_OUTER_FOLDS = 5: Outer test folds per repeat\n• N_INNER_FOLDS = 4: Inner training folds for thresh-\n\nold selection\n• TARGET_COVERAGE = 0.71: Target acceptance rate\n• RANDOM_SEED = 42: Random seed for reproducibility\n\nOutput is saved to outputs/nested_cv/repeated_nested_cv_5x5_results.json.\n\nhttps://doi.org/10.13026/g6h6-7g88\n\n\n11\n\nB. Signed KG Analysis\nThe sign-preserving KG variant (Table I, row 2; Table II)\n\nwas generated by:\n\npython scripts/repeated_nested_cv_5x5_signedkg.py\n\nThis script uses the same protocol as the\nprimary analysis but computes KG confidence\nscores as −verifier conflict (without absolute value)\ninstead of −|verifier conflict|. Output is saved to\noutputs/nested_cv/repeated_nested_cv_5x5_signedkg_results.json.\n\nC. Mechanistic Analysis\nThe three mechanistic tests (error detection AUROC, incre-\n\nmental value, risk-monotonicity) were generated by:\n\npython scripts/kg_mechanism_analysis.py\n\nOutput is saved to outputs/nested_cv/kg_mechanism_analysis.json.\n\nD. Matched-Coverage Analysis\nMatched-coverage analysis at 60%, 70%, and 80% coverage\n\nlevels (Table III) was generated by:\n\npython scripts/matched_coverage_analysis.py\n\nOutput is saved to outputs/nested_cv/matched_coverage_analysis.json.\n\nE. Statistical Analysis\nHierarchical bootstrap confidence intervals and effect sizes\n\nwere computed by:\n\npython scripts/compute_hierarchical_statistical_analysis.py\n\nOutput is saved to outputs/nested_cv/hierarchical_statistical_analysis.json.\n\nF. Per-Class Safety Analysis\nPer-class safety metrics (Table IV) were generated by:\n\npython scripts/compute_per_class_safety_analysis_nested.py\n\nOutput is saved to outputs/nested_cv/per_class_safety_analysis_nested.json.\n\nG. Data and Code Availability\nThe primary analysis pool\n\n(outputs/nested_cv/primary_analysis_pool.parquet)\ncontains all base model predictions and KG scores required\nto reproduce results. Due to patient privacy restrictions, raw\nECG data cannot be shared publicly. Researchers seeking to\nreplicate this work should contact the corresponding author\nfor data access arrangements.\n\nAll analysis scripts are available at: [REPOSITORY URL\nTO BE ADDED UPON PUBLICATION]\n\nH. Compute Requirements\nAll experiments were run on a standard workstation (Intel\n\ni7 CPU, 32GB RAM). Total compute time:\n• Repeated nested CV (5×5): ∼15 minutes\n• Mechanistic analysis: ∼2 minutes\n• Hierarchical bootstrap (10,000 samples): ∼5 minutes\n• Per-class safety analysis: ∼10 minutes\nTotal: ∼32 minutes for full reproduction.\n\n\n\tIntroduction\n\tContributions\n\n\tRelated Work\n\tMethod\n\tProblem Formulation\n\tBase Model\n\tSelective Prediction Methods\n\tRepeated Held-Out Evaluation Protocol\n\tEvaluation Metrics\n\tImplementation Details\n\n\tExperiments\n\tDataset and Experimental Setup\n\tMethods Compared\n\tMain Results: Repeated Held-Out Evaluation\n\tRisk-Coverage Analysis\n\tE-AURC Comparison\n\tMatched-Coverage Analysis\n\tCalibrated Confidence Thresholding\n\tPer-Class Safety Analysis\n\tKG Failure Mechanism Analysis\n\tTest 4: Score-Orientation Audit\n\tTest 1: Error-Detection Ability\n\tTest 2: Incremental Value Beyond Entropy\n\tTest 3: Risk-Monotonicity and Score Resolution\n\n\n\tDiscussion\n\tMethodological Implications: Three-Tier Performance Ranking\n\tWhy Simple Baselines Dominate\n\tFailure Modes of Knowledge-Graph Disagreement\n\tBinary Conflict Pathology\n\tPoor Risk Ranking Despite Continuous Scores\n\n\tNegative Result: No Additive Value from KG Fusion\n\tRecommendations for Future Work\n\tLimitations\n\tImplications for Knowledge-Graph Approaches\n\tAppropriate Claims: What Readers May and May Not Conclude\n\n\tConclusion\n\tReferences\n\tAppendix\n\tPrimary Analysis Pipeline\n\tSigned KG Analysis\n\tMechanistic Analysis\n\tMatched-Coverage Analysis\n\tStatistical Analysis\n\tPer-Class Safety Analysis\n\tData and Code Availability\n\tCompute Requirements",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "cb967090-a66a-4776-bd9b-4a59d69ed5e0",
+          "message_type": "next",
+          "turn_exchange_id": "bee1e36a-8b22-4e8e-9ee6-6ed21821af0f",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "62320a0e-170b-499e-aee5-8933f4306ac0",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "62320a0e-170b-499e-aee5-8933f4306ac0",
+      "children": [
+        "8832aca3-aae8-4c04-a798-971063d497e3"
+      ]
+    },
+    "8832aca3-aae8-4c04-a798-971063d497e3": {
+      "id": "8832aca3-aae8-4c04-a798-971063d497e3",
+      "message": {
+        "id": "8832aca3-aae8-4c04-a798-971063d497e3",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1776091125.1107628,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "All the files uploaded by the user have been fully loaded. Searching won't provide additional information."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_visually_hidden_from_conversation": false,
+          "request_id": "cb967090-a66a-4776-bd9b-4a59d69ed5e0",
+          "message_type": "next",
+          "turn_exchange_id": "bee1e36a-8b22-4e8e-9ee6-6ed21821af0f",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "parent_id": "239d39de-a500-4c25-8d5d-7355c783e9db",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "239d39de-a500-4c25-8d5d-7355c783e9db",
+      "children": [
+        "a9b96caf-f024-45f3-ad70-665ec9d2cbc6"
+      ]
+    },
+    "a9b96caf-f024-45f3-ad70-665ec9d2cbc6": {
+      "id": "a9b96caf-f024-45f3-ad70-665ec9d2cbc6",
+      "message": {
+        "id": "a9b96caf-f024-45f3-ad70-665ec9d2cbc6",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776091125.1238337,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "cb967090-a66a-4776-bd9b-4a59d69ed5e0",
+          "message_type": "next",
+          "turn_exchange_id": "bee1e36a-8b22-4e8e-9ee6-6ed21821af0f",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "8832aca3-aae8-4c04-a798-971063d497e3",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8832aca3-aae8-4c04-a798-971063d497e3",
+      "children": [
+        "a115d79f-433b-4d88-825c-d7ddd686dded"
+      ]
+    },
+    "a115d79f-433b-4d88-825c-d7ddd686dded": {
+      "id": "a115d79f-433b-4d88-825c-d7ddd686dded",
+      "message": {
+        "id": "a115d79f-433b-4d88-825c-d7ddd686dded",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776091125.086471,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "一、总体评价  \n\n该论文围绕“选择性预测（Selective Prediction）在心电图（ECG）诊断中的评估方法学问题”展开，核心贡献在于对知识图谱（KG）不确定性信号进行**严格嵌套评估（nested evaluation）下的再审视与“反证性研究（empirical falsification）”**。整体来看，论文具有**较强的方法学价值与一定的学术前沿性**，尤其体现在：\n\n- 针对当前临床AI中常见的“选择性预测评估不严谨”问题提出系统性修正；\n- 明确指出KG-based uncertainty在严格评估下不优于简单置信度方法，这一“负结果”具有重要科研价值；\n- 强调“评估协议（evaluation protocol）”本身对结论的决定性影响，具有较强的方法论意义。\n\n然而，从北大核心期刊标准来看，本文仍属于**方法学验证型+负结果导向研究**，在**外部验证、模型多样性、临床价值转化**方面存在明显不足，目前尚未达到直接发表水平。\n\n---\n\n二、主要优点  \n\n1. **选题具有方法学创新性与现实意义**  \n   - 针对选择性预测中“阈值选择偏置”这一关键但常被忽视的问题进行系统研究；\n   - 对KG-based方法提出反证，具有纠偏意义；\n   - 符合当前医疗AI从“性能导向”向“安全性与可靠性评估”转型的趋势。\n\n2. **评估框架设计严谨（核心亮点）**  \n   - 采用“inner threshold selection + outer evaluation”的嵌套结构；\n   - 明确区分：\n     - repeated held-out evaluation vs. nested CV  \n     - in-sample vs. out-of-fold analysis  \n   - 对数据泄露问题有清晰控制，符合TRIPOD-AI规范。\n\n3. **实验分析深度较高（不仅是性能比较）**  \n   - 引入E-AURC、risk-coverage曲线等先进指标；\n   - 提供**机制分析（mechanistic analysis）**：\n     - error detection AUROC\n     - incremental value analysis\n     - risk monotonicity\n   - 能解释“为什么KG失败”，而非仅报告结果。\n\n4. **负结果表达规范且克制**  \n   - 明确区分“可支持结论”和“不可支持结论”；\n   - 避免过度泛化（这一点在临床AI论文中较为少见，是优点）。\n\n5. **可复现性较强**  \n   - 提供脚本、pipeline说明；\n   - 明确数据处理流程与实验配置。\n\n---\n\n三、存在问题与修改建议  \n\n### （一）方法学层面核心问题  \n\n1. **“伪嵌套评估”问题（关键缺陷）**  \n   - 虽然作者强调nested evaluation，但实际上：\n     - 使用的是**固定OOF score table再切分**\n     - base model与KG未在outer loop中重新训练  \n   - 这属于：\n     > “partial nesting / post-hoc nesting on predictions”  \n\n   **问题影响：**\n   - 无法完全反映模型在真实部署中的泛化能力；\n   - 可能低估模型不确定性；\n   - 与严格nested CV（end-to-end retraining）存在系统性差异。\n\n   **建议：**\n   - 明确将方法命名为：\n     > “nested evaluation on fixed OOF predictions”  \n   - 增加对比实验：\n     - 至少1个setting：full nested retraining（哪怕是小规模）\n   - 在讨论中量化这种近似带来的偏差。\n\n---\n\n2. **KG方法设计存在“结构性不公平比较”**\n\n   - KG中包含：\n     - 7个model-derived signals  \n   - 导致：\n     - 与entropy存在**信息重叠**\n     - 甚至形成“弱蒸馏结构”\n\n   **问题本质：**\n   - KG不是独立uncertainty estimator  \n   - 比较对象不满足“独立信息源”假设  \n\n   **建议：**\n   - 增加两个对照：\n     1. **pure KG（无模型输入）**\n     2. **model-only baseline（无KG融合）**\n   - 或采用：\n     - mutual information / redundancy analysis  \n   - 明确KG是否提供“orthogonal signal”。\n\n---\n\n3. **选择性预测设定过于简化（binary-only）**\n\n   - 当前为：\n     - pairwise binary classification  \n   - 但真实ECG诊断为：\n     - multi-label / multi-class问题  \n\n   **问题：**\n   - entropy/margin在binary中退化为同一排序  \n   - 实验结论的泛化性受限  \n\n   **建议：**\n   - 至少补充：\n     - multi-label setting  \n     - 或说明为何binary setting具有代表性。\n\n---\n\n### （二）实验设计问题  \n\n4. **数据来源单一，外部有效性不足**\n\n   - 单中心 + PTB-XL+子集  \n   - 无external validation  \n\n   **建议：**\n   - 至少增加：\n     - cross-dataset验证（如PTB-XL原始 / CPSC / Chapman）\n   - 或：\n     - 明确作为“methodological study”并弱化临床结论。\n\n---\n\n5. **统计推断存在依赖性问题**\n\n   - 25次评估来自：\n     - 同一OOF预测表  \n   - 非独立样本  \n\n   **风险：**\n   - bootstrap CI偏窄  \n   - effect size被高估  \n\n   **建议：**\n   - 使用：\n     - corrected resampled t-test  \n     - 或Nadeau & Bengio correction  \n   - 或报告：\n     - effective sample size\n\n---\n\n6. **机制分析未做out-of-fold验证**\n\n   - 作者已承认为in-sample  \n   - 但仍用于支持核心结论  \n\n   **建议：**\n   - 至少对：\n     - AUROC（error detection）  \n     - incremental value  \n   做OOF版本验证。\n\n---\n\n### （三）结果与临床解释问题  \n\n7. **临床意义不足（重要短板）**\n\n   当前结果主要停留在：\n   - accuracy / E-AURC  \n\n缺少：\n   - decision impact analysis  \n   - workload reduction  \n   - false negative cost  \n\n   **建议：**\n   - 增加：\n     - decision curve analysis  \n     - net benefit  \n     - triage simulation  \n\n---\n\n8. **LVH分析存在潜在误导**\n\n   - 样本极少（mean 1.2 accepted）  \n   - 但呈现“100% risk”  \n\n   **问题：**\n   - 容易被误解为系统性失败  \n\n   **建议：**\n   - 使用：\n     - Bayesian credible interval  \n   - 或直接：\n     - 标记为“不具统计意义”。\n\n---\n\n### （四）论文结构与表达问题  \n\n9. **论文篇幅过长，信息冗余**\n\n   - 方法与discussion部分存在重复表达  \n   - 多处对“nested evaluation”的重复强调  \n\n   **建议：**\n   - 精简：\n     - 重复定义  \n     - 冗余解释  \n   - 将部分机制分析移至附录。\n\n---\n\n10. **术语与表述一致性问题**\n\n   - nested CV / held-out / repeated evaluation 混用  \n   - KG disagreement定义略显复杂  \n\n   **建议：**\n   - 增加术语表（Notation Table）  \n   - 统一命名体系。\n\n---\n\n11. **创新性表达仍可强化**\n\n   当前创新点：\n   - 主要集中在“评估方法”  \n\n   建议强化：\n   - 与已有工作（如conformal prediction）对比  \n   - 突出：\n     > “evaluation protocol as a first-class research object”\n\n---\n\n四、编辑建议  \n\n🟠 **大修后重审（Major Revision）**\n\n**理由：**\n\n该论文在方法学层面具有明显价值，尤其是对选择性预测评估范式的规范化具有重要意义，但目前仍存在以下关键问题：\n\n1. **评估框架不完全严格（非完整nested CV）**  \n2. **KG方法设计存在信息泄露/不独立问题**  \n3. **缺乏外部验证与临床转化分析**  \n4. **统计推断存在潜在偏差**  \n\n这些问题属于**方法学层面的核心缺陷**，需要通过补充实验与理论澄清进行实质性修改。\n\n---\n\n### 最终结论  \n\n该论文**具有发表潜力（特别适合方法学导向期刊）**，但当前版本：\n\n> ✔ 方法学思想先进  \n> ✘ 实验与验证仍不足以支撑强结论  \n\n建议在补充**严格验证 + 外部实验 + 方法公平性分析**后再行投稿或复审。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-3",
+          "search_result_groups": [],
+          "request_id": "cb967090-a66a-4776-bd9b-4a59d69ed5e0",
+          "message_type": "next",
+          "turn_exchange_id": "bee1e36a-8b22-4e8e-9ee6-6ed21821af0f",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "a9b96caf-f024-45f3-ad70-665ec9d2cbc6",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "a9b96caf-f024-45f3-ad70-665ec9d2cbc6",
+      "children": [
+        "fad88b9e-18ae-4037-9467-4a63ea08ba4b"
+      ]
+    },
+    "fad88b9e-18ae-4037-9467-4a63ea08ba4b": {
+      "id": "fad88b9e-18ae-4037-9467-4a63ea08ba4b",
+      "message": {
+        "id": "fad88b9e-18ae-4037-9467-4a63ea08ba4b",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776092733.439,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "claude叫我投 scientific reports，但我听说这个是出名的给钱就有的水刊。。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "a02a6239-68e7-4522-a5f1-e1c085aaef85",
+          "message_source": null,
+          "turn_exchange_id": "91e65259-d150-4d37-8d80-a700c29bdb3b",
+          "resolved_model_slug": "gpt-5-3",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a115d79f-433b-4d88-825c-d7ddd686dded",
+      "children": [
+        "2857899b-b7b8-41fe-a1e7-cb3552c6fb98"
+      ]
+    },
+    "2857899b-b7b8-41fe-a1e7-cb3552c6fb98": {
+      "id": "2857899b-b7b8-41fe-a1e7-cb3552c6fb98",
+      "message": {
+        "id": "2857899b-b7b8-41fe-a1e7-cb3552c6fb98",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1776092733.457277,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "你的这个判断需要校正一下——把 **entity[\"journal\",\"Scientific Reports\",\"Nature portfolio open access journal\"]** 简单归类为“给钱就发的水刊”是不准确的，但它确实**定位较低、审稿标准不同于顶刊**，这才是关键。\n\n我给你一个更专业、可操作的判断框架：\n\n---\n\n# 一、Scientific Reports 到底是什么水平？\n\n### 1. 期刊定位（客观）\n- 出版方：entity[\"organization\",\"Nature Publishing Group\",\"academic publisher\"]（Springer Nature）\n- 类型：**Mega Journal（大规模开放获取期刊）**\n- 审稿原则：\n  > **只审“技术正确性（technical soundness）”，不审“创新性高度”**\n\n👉 这点是本质区别\n\n---\n\n### 2. 不是“水刊”，但也不是高水平期刊\n\n更准确说法：\n\n| 维度 | 评价 |\n|------|------|\n| 是否正规 | ✅ 正规SCI期刊 |\n| 是否容易中 | ⚠️ 相对容易（比IEEE TMI/JBHI等） |\n| 是否看创新性 | ❌ 基本不严格要求 |\n| 是否有学术声誉 | ⚠️ 中等偏低 |\n| 是否“给钱就发” | ❌ 错误说法（仍然要过审） |\n\n👉 它的问题不是“水”，而是：\n> **“门槛低 + 文章质量方差极大”**\n\n---\n\n# 二、为什么很多人说它“水”？\n\n主要原因有三个：\n\n### （1）审稿标准偏“工程正确性”\n- 只要：\n  - 方法合理\n  - 实验完整\n  - 结论不过度夸大  \n👉 就可能接受\n\n而不是：\n- 必须有突破性创新（像Nature Medicine）\n\n---\n\n### （2）接收量巨大\n- 年发文量：**上万篇**\n- 导致：\n  - 平均质量被稀释\n  - 出现不少“中规中矩甚至偏弱”的论文\n\n---\n\n### （3）开放获取（要版面费）\n- APC约：$2000+\n- 容易被误解为“交钱就发”\n\n👉 但注意：\n> **收费 ≠ 水刊（否则PLOS ONE也算水刊了）**\n\n---\n\n# 三、你的这篇论文，适不适合投它？\n\n结合你这篇论文特点：\n\n### 你的论文属性（我帮你抽象一下）\n\n- 类型：**方法学评估 / 负结果研究**\n- 核心贡献：\n  - nested evaluation框架\n  - KG方法被“证伪”\n- 特点：\n  - ❌ 没有新模型\n  - ❌ 没有性能突破\n  - ✅ 有严谨实验\n  - ✅ 有方法学价值\n\n---\n\n### 这类论文在不同期刊的命运：\n\n| 期刊类型 | 结果 |\n|----------|------|\n| 顶刊（Nature Medicine / Lancet Digital Health） | ❌ 基本拒（不够impact） |\n| 强工程期刊（IEEE TMI / JBHI） | ⚠️ 边缘（缺模型创新） |\n| 方法/负结果友好期刊 | ✅ 合适 |\n| Scientific Reports | ✅ **非常匹配** |\n\n---\n\n👉 关键结论：\n\n> **Scientific Reports 非常适合“严谨但不炸裂”的论文**\n\n而你这篇：\n✔ 严谨  \n✔ 有负结果  \n✔ 有方法学贡献  \n❌ 不属于突破性模型  \n\n👉 **匹配度其实是高的**\n\n---\n\n# 四、但它是不是“最优选择”？——不一定\n\n如果你想更“学术一点”，可以考虑：\n\n### 更优（同级或略高）\n\n- entity[\"journal\",\"Journal of Biomedical Informatics\",\"Elsevier journal\"]  \n  👉 非常适合你这种方法学 + 医学AI\n\n- entity[\"journal\",\"IEEE Journal of Biomedical and Health Informatics\",\"IEEE journal\"]  \n  👉 如果你把方法再强化一点\n\n---\n\n### 更偏方法学（甚至更合适）\n\n- entity[\"journal\",\"Patterns\",\"Cell Press data science journal\"]  \n- entity[\"journal\",\"NPJ Digital Medicine\",\"Nature partner journal\"]（难度较高）\n\n---\n\n# 五、给你一个直白建议（基于你论文质量）\n\n我直接说判断：\n\n👉 你这篇论文目前状态：\n\n- ✔ 可以发\n- ❌ 但够不上强期刊（因为缺“新方法/新模型”）\n\n---\n\n### 如果你想：\n\n#### ✅ 稳妥发表（1-2个月内）\n👉 投 **Scientific Reports**\n- 命中率：中等偏高\n- 风险：较低\n\n---\n\n#### ✅ 提升一档（更推荐）\n👉 投 JBI\n- 命中率：中等\n- 回报：更有学术认可度\n\n---\n\n#### ❗ 不建议\n- IEEE TMI / Nature Medicine  \n👉 会因为“创新性不足”被拒\n\n---\n\n# 六、最终结论（重点）\n\n不要用“水刊”这种非学术标签判断期刊。\n\n更准确结论是：\n\n> **Scientific Reports 是一个“低创新门槛、强调方法正确性”的正规SCI期刊，适合严谨但非突破性的研究。**\n\n对于你这篇论文：\n\n> ✔ 投它是合理选择  \n> ❗ 但不是最优学术选择  \n\n---\n\n如果你愿意，我可以帮你做一件更关键的事：\n\n👉 **给你一个“投稿命中率排序 + 审稿人视角风险分析”清单（精确到你这篇论文）**\n\n这个会比泛泛推荐更有用。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [
+            {
+              "matched_text": "entity[\"journal\",\"Scientific Reports\",\"Nature portfolio open access journal\"]",
+              "prefix": null,
+              "start_idx": 18,
+              "end_idx": 98,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Scientific Reports",
+              "prompt_text": "Scientific Reports",
+              "type": "entity",
+              "name": "Scientific Reports",
+              "category": "journal",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "Nature portfolio open access journal"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"organization\",\"Nature Publishing Group\",\"academic publisher\"]",
+              "prefix": null,
+              "start_idx": 232,
+              "end_idx": 304,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Nature Publishing Group",
+              "prompt_text": "Nature Publishing Group",
+              "type": "entity",
+              "name": "Nature Publishing Group",
+              "category": "organization",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "academic publisher"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"journal\",\"Journal of Biomedical Informatics\",\"Elsevier journal\"]",
+              "prefix": null,
+              "start_idx": 1556,
+              "end_idx": 1631,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Journal of Biomedical Informatics",
+              "prompt_text": "Journal of Biomedical Informatics",
+              "type": "entity",
+              "name": "Journal of Biomedical Informatics",
+              "category": "journal",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "Elsevier journal"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"journal\",\"IEEE Journal of Biomedical and Health Informatics\",\"IEEE journal\"]",
+              "prefix": null,
+              "start_idx": 1659,
+              "end_idx": 1746,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "IEEE Journal of Biomedical and Health Informatics",
+              "prompt_text": "IEEE Journal of Biomedical and Health Informatics",
+              "type": "entity",
+              "name": "IEEE Journal of Biomedical and Health Informatics",
+              "category": "journal",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "IEEE journal"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"journal\",\"Patterns\",\"Cell Press data science journal\"]",
+              "prefix": null,
+              "start_idx": 1791,
+              "end_idx": 1856,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Patterns",
+              "prompt_text": "Patterns",
+              "type": "entity",
+              "name": "Patterns",
+              "category": "journal",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "Cell Press data science journal"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"journal\",\"NPJ Digital Medicine\",\"Nature partner journal\"]",
+              "prefix": null,
+              "start_idx": 1861,
+              "end_idx": 1929,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "NPJ Digital Medicine",
+              "prompt_text": "NPJ Digital Medicine",
+              "type": "entity",
+              "name": "NPJ Digital Medicine",
+              "category": "journal",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "Nature partner journal"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "type": "followup_a",
+              "matched_text": "给你一个“投稿命中率排序 + 审稿人视角风险分析”清单（精确到你这篇论文）",
+              "start_idx": 2410,
+              "end_idx": 2447,
+              "alt": "给你一个“投稿命中率排序 + 审稿人视角风险分析”清单（精确到你这篇论文）",
+              "prompt_text": "给我一个投稿命中率排序和审稿人视角风险分析清单，精确到我这篇论文"
+            }
+          ],
+          "resolved_model_slug": "gpt-5-3",
+          "search_result_groups": [],
+          "request_id": "a02a6239-68e7-4522-a5f1-e1c085aaef85",
+          "message_type": "next",
+          "turn_exchange_id": "91e65259-d150-4d37-8d80-a700c29bdb3b",
+          "model_slug": "gpt-5-3",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "fad88b9e-18ae-4037-9467-4a63ea08ba4b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "fad88b9e-18ae-4037-9467-4a63ea08ba4b",
+      "children": []
+    }
+  },
+  "current_node": "2857899b-b7b8-41fe-a1e7-cb3552c6fb98"
+}

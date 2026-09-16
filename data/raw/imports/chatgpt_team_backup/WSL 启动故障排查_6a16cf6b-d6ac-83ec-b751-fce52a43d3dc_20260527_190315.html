@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSL 启动故障排查</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WSL 启动故障排查</h1>
+            <div class="metadata">ID: 6a16cf6b-d6ac-83ec-b751-fce52a43d3dc | 2026/5/27 19:03:15</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/27 19:03:12</span>
+                </div>
+                <div class="message-content">PS C:\Users\12879&gt; wsl<br>wsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理。<br>灾难性故障 <br>错误代码: Wsl/Service/E_UNEXPECTED<br><br><br># 这是怎么回事</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/27 19:03:15</span>
+                </div>
+                <div class="message-content">我会先把这条报错拆开解释，再给你一组按风险从低到高的修复步骤。这个问题通常和 <strong>Windows 代理/WSL 网络模式/WSL 服务状态</strong> 有关，不一定是 Linux 本身坏了。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/27 19:03:24</span>
+                </div>
+                <div class="message-content">这是两个问题叠在一起了：<br><br>第一行：<br><br><pre><code class="language-powershell">wsl: 检测到 localhost 代理配置，但未镜像到 WSL。
+NAT 模式下的 WSL 不支持 localhost 代理。</code></pre><br><br>意思是：你的 Windows 里可能开了本地代理，比如 Clash、v2rayN、VPN、Fiddler，代理地址类似 <code>127.0.0.1:7890</code>。但 WSL2 默认是 <strong>NAT 网络模式</strong>，在这种模式下，WSL 里的 <code>127.0.0.1</code> 指的是 Linux 自己，不是 Windows，所以 WSL 没法直接使用 Windows 的 localhost 代理。微软文档也说明，WSL2 默认 NAT 模式下，从 Linux 访问 Windows 服务要用 Windows 主机 IP；只有 mirrored 网络模式下，Windows 和 WSL 才能互相用 <code>localhost</code> 访问。citeturn517462view0<br><br>后面的：<br><br><pre><code class="language-powershell">灾难性故障
+错误代码: Wsl/Service/E_UNEXPECTED</code></pre><br><br>这才是导致 WSL 没启动起来的核心错误。常见原因是 WSL 服务异常、<code>.wslconfig</code> 网络配置不兼容、代理配置冲突，或者 WSL 版本/Windows 版本不匹配。<br><br>先按这个顺序修：<br><br>### 1. 先重启 WSL<br><br>在 <strong>PowerShell 管理员</strong> 里运行：<br><br><pre><code class="language-powershell">wsl --shutdown
+wsl --update
+wsl --status
+wsl -l -v</code></pre><br><br>微软文档也建议修改 WSL 配置后用 <code>wsl --shutdown</code> 让配置重新生效。citeturn517462view1<br><br>然后再试：<br><br><pre><code class="language-powershell">wsl</code></pre><br><br>### 2. 临时关掉 Windows 代理/VPN<br><br>把 Clash、v2rayN、VPN、Fiddler 之类先退出。<br><br>然后检查 Windows 代理：<br><br><pre><code class="language-powershell">netsh winhttp show proxy</code></pre><br><br>如果显示有代理，先重置：<br><br><pre><code class="language-powershell">netsh winhttp reset proxy</code></pre><br><br>同时去：<br><br><pre><code class="language-text">Windows 设置 → 网络和 Internet → 代理</code></pre><br><br>把“使用代理服务器”先关掉。<br><br>### 3. 临时禁用 <code>.wslconfig</code><br><br>很多 E_UNEXPECTED 是 <code>.wslconfig</code> 配坏了导致的。你现在的位置就是：<br><br><pre><code class="language-text">C:\Users\12879</code></pre><br><br>检查有没有这个文件：<br><br><pre><code class="language-powershell">notepad $env:USERPROFILE\.wslconfig</code></pre><br><br>如果有，先改成最保守配置：<br><br><pre><code class="language-ini">[wsl2]
+networkingMode=NAT
+autoProxy=false</code></pre><br><br>保存后运行：<br><br><pre><code class="language-powershell">wsl --shutdown
+wsl</code></pre><br><br><code>.wslconfig</code> 是 WSL2 的全局配置文件，微软文档写明它放在 <code>%UserProfile%\.wslconfig</code>，用于配置 WSL2 虚拟机网络等全局设置。citeturn517462view1<br><br>### 4. 如果你确实需要 WSL 使用 Windows 代理<br><br>不要在 WSL 里用：<br><br><pre><code class="language-bash">127.0.0.1:7890</code></pre><br><br>NAT 模式下应该用 Windows 主机 IP。等 WSL 能进去后，在 WSL 里查：<br><br><pre><code class="language-bash">ip route show | grep -i default | awk '{ print $3 }'</code></pre><br><br>假设输出是：<br><br><pre><code class="language-text">172.30.96.1</code></pre><br><br>那代理应该写成：<br><br><pre><code class="language-bash">export http_proxy=http://172.30.96.1:7890
+export https_proxy=http://172.30.96.1:7890</code></pre><br><br>但你的代理软件要允许 LAN 连接，监听地址最好不是只绑定 <code>127.0.0.1</code>。<br><br>### 5. 如果还报 E_UNEXPECTED<br><br>管理员 PowerShell 里重启 WSL 服务：<br><br><pre><code class="language-powershell">Restart-Service LxssManager
+wsl --shutdown
+wsl</code></pre><br><br>还不行就执行：<br><br><pre><code class="language-powershell">wsl --version
+wsl --status
+wsl -l -v</code></pre><br><br>把这三条输出贴出来。重点看：WSL 版本、Windows 版本、你的发行版是不是 Ubuntu，以及 <code>.wslconfig</code> 里有没有 <code>networkingMode=mirrored</code>。微软文档显示 <code>networkingMode=mirrored</code>、<code>autoProxy</code> 等属于 WSL2 高级配置，并且 mirrored 需要较新的 Windows 11/WSL 支持；配置不匹配时就容易出这种网络相关启动问题。citeturn517462view1</div>
+            </div></div></div></body></html>

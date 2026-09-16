@@ -1,0 +1,374 @@
+{
+  "title": "四大核心技术架构图",
+  "create_time": 1778425802.669692,
+  "update_time": 1778425864.046163,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a009f17-fa0c-83ec-a7bc-1e954b3fbe35",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.progressive.com",
+    "https://www.statefarm.com",
+    "https://github.com/openclaw/openclaw",
+    "physionet.org"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "d2e4b164-a9f3-45c6-ab28-593624ace991"
+      ]
+    },
+    "d2e4b164-a9f3-45c6-ab28-593624ace991": {
+      "id": "d2e4b164-a9f3-45c6-ab28-593624ace991",
+      "message": {
+        "id": "d2e4b164-a9f3-45c6-ab28-593624ace991",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "69b40d16-d7fc-46e6-bbe9-e48853c7502a"
+      ]
+    },
+    "69b40d16-d7fc-46e6-bbe9-e48853c7502a": {
+      "id": "69b40d16-d7fc-46e6-bbe9-e48853c7502a",
+      "message": {
+        "id": "69b40d16-d7fc-46e6-bbe9-e48853c7502a",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d2e4b164-a9f3-45c6-ab28-593624ace991",
+      "children": [
+        "b78805a9-3095-401f-8988-8ee4deb205e8"
+      ]
+    },
+    "b78805a9-3095-401f-8988-8ee4deb205e8": {
+      "id": "b78805a9-3095-401f-8988-8ee4deb205e8",
+      "message": {
+        "id": "b78805a9-3095-401f-8988-8ee4deb205e8",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "69b40d16-d7fc-46e6-bbe9-e48853c7502a",
+      "children": [
+        "8bc42733-b8a0-4b2b-bd6e-6cc6cb16222b"
+      ]
+    },
+    "8bc42733-b8a0-4b2b-bd6e-6cc6cb16222b": {
+      "id": "8bc42733-b8a0-4b2b-bd6e-6cc6cb16222b",
+      "message": {
+        "id": "8bc42733-b8a0-4b2b-bd6e-6cc6cb16222b",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778425802.163799,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "system_hints": [
+            "picture_v2"
+          ],
+          "request_id": "a588afeb-ceed-42ba-aa0d-2386e676cc9e",
+          "message_source": null,
+          "turn_exchange_id": "7067568a-6167-488e-9390-769b3a00f5aa",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b78805a9-3095-401f-8988-8ee4deb205e8",
+      "children": [
+        "84b06c3f-3d7d-4ecf-aede-9e17a0f29508"
+      ]
+    },
+    "84b06c3f-3d7d-4ecf-aede-9e17a0f29508": {
+      "id": "84b06c3f-3d7d-4ecf-aede-9e17a0f29508",
+      "message": {
+        "id": "84b06c3f-3d7d-4ecf-aede-9e17a0f29508",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778425801.4,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "你需要帮我画出用于ppt中的项目逻辑架构图（只需要逻辑架构图）：\n直接展示“四大核心技术”，并明确其分别解决的痛点。（也就是架构图分为左右两个部分，左边是四大核心技术，右边是解决的痛点） \n\r\n    ✅️ 四大技术对应→分别如何帮助医生/患者/家属 解决了什么痛点（不建议讲功能），属于PPT的技术路线总分结构的“总”，作为过渡页不用停留很久，不需要太细致的内容，ATTRACTIVE优先\r\n优势一：科学干预方案生成：聚焦于解决专业性问题，利用多智能体协同与指南遵循技术，生成科学的出院康复档案与干预方案。\r\n优势二：安全可靠咨询：利用 MQ-RAG 等技术降低幻觉率与错误率，确保咨询回复的安全性与可信度，解决患者对专业性的疑虑。 \n优势三：主动智能预警：不再强调简单的打卡识别，而是突出底层算法对生理极限的构建与异常触发机制，展示主动干预能力。\r\n优势四：长期依从性提升：通过算法识别打卡数据异常，结合心理干预，解决长期依从性问题。\n\n然后右边则是这些功能分别给患者、家属、医生带来了什么\n\r"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "system_hints": [
+            "picture_v2"
+          ],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "a588afeb-ceed-42ba-aa0d-2386e676cc9e",
+          "message_source": null,
+          "turn_exchange_id": "7067568a-6167-488e-9390-769b3a00f5aa",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "8bc42733-b8a0-4b2b-bd6e-6cc6cb16222b",
+      "children": [
+        "8078725f-bcb3-4b3a-9b06-f02cefdaadb5"
+      ]
+    },
+    "8078725f-bcb3-4b3a-9b06-f02cefdaadb5": {
+      "id": "8078725f-bcb3-4b3a-9b06-f02cefdaadb5",
+      "message": {
+        "id": "8078725f-bcb3-4b3a-9b06-f02cefdaadb5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778425802.5563407,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "a588afeb-ceed-42ba-aa0d-2386e676cc9e",
+          "message_type": "next",
+          "turn_exchange_id": "7067568a-6167-488e-9390-769b3a00f5aa",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "84b06c3f-3d7d-4ecf-aede-9e17a0f29508",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "84b06c3f-3d7d-4ecf-aede-9e17a0f29508",
+      "children": [
+        "e10e4835-76b4-49c7-b68e-d2bc44827a03"
+      ]
+    },
+    "e10e4835-76b4-49c7-b68e-d2bc44827a03": {
+      "id": "e10e4835-76b4-49c7-b68e-d2bc44827a03",
+      "message": {
+        "id": "e10e4835-76b4-49c7-b68e-d2bc44827a03",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778425802.797328,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "python3",
+          "response_format_name": null,
+          "text": "{\"skipped_mainline\":true}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "parent_id": "8078725f-bcb3-4b3a-9b06-f02cefdaadb5",
+          "turn_exchange_id": "7067568a-6167-488e-9390-769b3a00f5aa",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "t2uay3k.sj1i4kz",
+        "channel": null
+      },
+      "parent": "8078725f-bcb3-4b3a-9b06-f02cefdaadb5",
+      "children": [
+        "612bd405-cc5a-4a8e-a8ce-9187258bbb2e"
+      ]
+    },
+    "612bd405-cc5a-4a8e-a8ce-9187258bbb2e": {
+      "id": "612bd405-cc5a-4a8e-a8ce-9187258bbb2e",
+      "message": {
+        "id": "612bd405-cc5a-4a8e-a8ce-9187258bbb2e",
+        "author": {
+          "role": "tool",
+          "name": "t2uay3k.sj1i4kz",
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "multimodal_text",
+          "parts": [
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_0000000079387208b71801aa1c4212d5",
+              "size_bytes": 1676317,
+              "width": 1536,
+              "height": 1024,
+              "fovea": null,
+              "metadata": {
+                "dalle": {
+                  "gen_id": "a02958b0-391b-4837-b7f9-2cc4aa7f9b1a",
+                  "prompt": "",
+                  "seed": null,
+                  "parent_gen_id": null,
+                  "edit_op": null,
+                  "serialization_title": "DALL-E generation metadata"
+                },
+                "gizmo": null,
+                "generation": {
+                  "gen_id": "a02958b0-391b-4837-b7f9-2cc4aa7f9b1a",
+                  "gen_size": "image",
+                  "gen_size_v2": "32",
+                  "seed": null,
+                  "parent_gen_id": null,
+                  "height": 1024,
+                  "width": 1536,
+                  "transparent_background": false,
+                  "serialization_title": "Image Generation metadata",
+                  "orientation": "landscape",
+                  "projection": "rectilinear"
+                },
+                "container_pixel_height": 1024,
+                "container_pixel_width": 1536,
+                "emu_omit_glimpse_image": null,
+                "emu_patches_override": null,
+                "lpe_keep_patch_ijhw": null,
+                "lpe_delta_encoding_channel": null,
+                "sanitized": false,
+                "asset_pointer_link": null,
+                "watermarked_asset_pointer": null,
+                "is_no_auth_placeholder": null
+              }
+            }
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "async_task_id": "imagegen_6a009fcd501c8191b2a3d2cb069405b6",
+          "async_task_title": "四大技术助力三方痛点解决",
+          "async_task_type": "image_gen",
+          "image_gen_title": "四大技术助力三方痛点解决",
+          "response_message_id": "612bd405-cc5a-4a8e-a8ce-9187258bbb2e",
+          "turn_exchange_id": "7067568a-6167-488e-9390-769b3a00f5aa",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e10e4835-76b4-49c7-b68e-d2bc44827a03",
+      "children": []
+    }
+  },
+  "current_node": "612bd405-cc5a-4a8e-a8ce-9187258bbb2e"
+}

@@ -1,0 +1,778 @@
+{
+  "title": "ECG Classifier Framework",
+  "create_time": 1779682310.244225,
+  "update_time": 1779682491.066968,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a13cc02-2b1c-83ec-9454-7c11b1807dfb",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.sciencedirect.com/science/article/pii/S1568494625017600",
+    "https://arxiv.org/abs/2603.05308",
+    "https://www.openai.com",
+    "https://github.com/pablodelucca/pixel-agents"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "3e5ff449-ac8f-4565-ae36-10af13f23fdf"
+      ]
+    },
+    "3e5ff449-ac8f-4565-ae36-10af13f23fdf": {
+      "id": "3e5ff449-ac8f-4565-ae36-10af13f23fdf",
+      "message": {
+        "id": "3e5ff449-ac8f-4565-ae36-10af13f23fdf",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "a35e4e14-f0c4-44b1-a5c9-af9e7d9913df"
+      ]
+    },
+    "a35e4e14-f0c4-44b1-a5c9-af9e7d9913df": {
+      "id": "a35e4e14-f0c4-44b1-a5c9-af9e7d9913df",
+      "message": {
+        "id": "a35e4e14-f0c4-44b1-a5c9-af9e7d9913df",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "3e5ff449-ac8f-4565-ae36-10af13f23fdf",
+      "children": [
+        "7abb9729-b96c-4b9d-b2f8-9cc7eb8505e2"
+      ]
+    },
+    "7abb9729-b96c-4b9d-b2f8-9cc7eb8505e2": {
+      "id": "7abb9729-b96c-4b9d-b2f8-9cc7eb8505e2",
+      "message": {
+        "id": "7abb9729-b96c-4b9d-b2f8-9cc7eb8505e2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a35e4e14-f0c4-44b1-a5c9-af9e7d9913df",
+      "children": [
+        "80e8be18-d99a-433c-bf8c-1caa4209452d"
+      ]
+    },
+    "80e8be18-d99a-433c-bf8c-1caa4209452d": {
+      "id": "80e8be18-d99a-433c-bf8c-1caa4209452d",
+      "message": {
+        "id": "80e8be18-d99a-433c-bf8c-1caa4209452d",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "7abb9729-b96c-4b9d-b2f8-9cc7eb8505e2",
+      "children": [
+        "bbef154e-6926-4df5-93b7-443f83372559",
+        "95c3507c-3d91-4127-a43a-0ad319dc2514"
+      ]
+    },
+    "bbef154e-6926-4df5-93b7-443f83372559": {
+      "id": "bbef154e-6926-4df5-93b7-443f83372559",
+      "message": {
+        "id": "bbef154e-6926-4df5-93b7-443f83372559",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682306.41,
+        "update_time": 1779682374.008906,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "请用一个自包含的 HTML + CSS 文件绘制一张 IEEE JBHI / biomedical AI 论文风格的 Fig. 1 框架图。不要使用外部图片、外部字体或 JavaScript。可以使用 HTML/CSS + inline SVG 绘制 ECG 波形、箭头、卡片、公式和小型结果矩阵。\r\n\r\n画布尺寸：1800px × 850px。白色背景，浅灰边框，低饱和蓝色为主色，橙色表示 target pathway intervention，灰色表示 matched controls，绿色表示 Pathway-supported，黄色表示 Evidence-limited，深灰表示 Not supported。整体风格简洁、专业、扁平化，适合 IEEE / Nature biomedical AI paper，不要 3D，不要重阴影，不要商业流程图风格。\r\n\r\n图标题：\r\n“Matched-Control Pathway Audit Framework for ECG Classifiers”\r\n\r\n副标题：\r\n“From clinical ECG criteria to falsifiable pathway-specific evidence tiers”\r\n\r\n整体采用单层横向流程图，而不是上下双层结构。用 5 个主要卡片从左到右连接，每个卡片标题使用通用审计语言，卡片内部使用 ECG 具体实例。每个卡片之间用粗箭头连接。\r\n\r\nCard 1 标题：\r\n“1. Domain-defined pathway hypotheses”\r\n内容：\r\n画一个小型 12-lead ECG 图标。\r\n列出五个 ECG 疾病，按三类分组：\r\nTiming: 1AVB → PR interval\r\nMorphology: CRBBB / CLBBB → QRS complex\r\nRhythm: SBRAD → RR/rate; AFIB → atrial activity / RR irregularity\r\n底部小字：\r\n“Clinical criteria define target pathways and plausible alternatives.”\r\n\r\nCard 2 标题：\r\n“2. Matched target-control interventions”\r\n内容：\r\n画两条简化 ECG 波形。\r\n上方标注 Target pathway，用橙色半透明窗口覆盖 PR 或 QRS 区域。\r\n下方标注 Matched controls，用灰色半透明窗口覆盖 ST segment / QRS control / shifted pre-QRS / random window。\r\n中间突出一句：\r\n“Same operator, same cohort, target vs strongest control”\r\n底部小标签：\r\n“Class I: local window”\r\n“Class II: global transform”\r\n\r\nCard 3 标题：\r\n“3. Specificity, not sensitivity alone”\r\n内容：\r\n居中显示公式：\r\nASS = ΔAUROC_target − max(ΔAUROC_control)\r\n下面画两个小型对比图：\r\nCase A: target bar > control bar → “specific”\r\nCase B: control bar > target bar → “false pathway claim”\r\n强调一句：\r\n“Target degradation alone is insufficient.”\r\n\r\nCard 4 标题：\r\n“4. Operator-controlled audit”\r\n内容：\r\n画一个小 ECG 片段，展示 linear interpolation 平滑替换窗口。\r\n旁边画一个小 warning 图标，标注：\r\n“Zero-masking can create boundary artifacts”\r\n底部写：\r\n“Primary operator: linear interpolation”\r\n“Bootstrap CI for uncertainty”\r\n\r\nCard 5 标题：\r\n“5. External transfer and evidence tiering”\r\n内容：\r\n上方画数据流：\r\nCODE-15% internal audit cohort → frozen weights → PTB-XL fold 10 external cohort\r\n标注：\r\n“no fine-tuning”\r\n“cardiologist-validated external test”\r\n下方画 3×5 小型 tier matrix：\r\nRows: ResNet, SE-ResNet, Transformer\r\nColumns: 1AVB, CRBBB, CLBBB, SBRAD, AFIB\r\n圆点颜色：\r\n1AVB: all gray\r\nCRBBB: all green\r\nCLBBB: all green\r\nSBRAD: ResNet yellow, SE-ResNet gray, Transformer gray\r\nAFIB: all gray\r\n图例：\r\nGreen = Pathway-supported\r\nYellow = Evidence-limited\r\nGray = Not supported\r\n\r\n在整张图底部加一条浅灰色横幅：\r\n“Three safeguards against false pathway claims”\r\n包含三个并列徽章：\r\n1. “Matched controls: sensitivity ≠ specificity”\r\n2. “Operator selection: avoid perturbation artifacts”\r\n3. “External transfer: avoid dataset-specific explanations”\r\n\r\n右下角用虚线灰色小框标注：\r\n“Feature-space context only”\r\n“XGBoost Simple / Clinical-MVP”\r\n“Not assigned waveform perturbation tiers”\r\n\r\n重要要求：\r\n- 图的视觉主体必须是 ECG，不要画成泛泛的 Medical AI / EHR / imaging / pathology 总框架。\r\n- 但每个模块标题要体现通用审计逻辑：pathway hypothesis, matched intervention, specificity criterion, operator control, external transfer, evidence tiering。\r\n- 不要把 AFIB 画成 supported。\r\n- 不要把 CRBBB 画成 transfer-stressed。\r\n- 不要把 XGBoost 放进 waveform perturbation tiering 主流程。\r\n- 图中文字要少，清晰可读，不要拥挤。\r\n- 输出完整 HTML 文件，包括 <style> 和所有 SVG/HTML 内容，不要解释，只输出代码。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-a90a9bd6-e191-44e2-ae5b-7c9008c6b015",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-a90a9bd6-e191-44e2-ae5b-7c9008c6b015:AU",
+          "request_id": "wfr_019e5d54ed2d7784abb1b233dcbd5634",
+          "message_source": null,
+          "turn_exchange_id": "2dd79555-a44f-4223-9078-f0f285acb442",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "80e8be18-d99a-433c-bf8c-1caa4209452d",
+      "children": [
+        "d9a4d3e7-45a6-493e-95ec-2a536348fde2"
+      ]
+    },
+    "95c3507c-3d91-4127-a43a-0ad319dc2514": {
+      "id": "95c3507c-3d91-4127-a43a-0ad319dc2514",
+      "message": {
+        "id": "95c3507c-3d91-4127-a43a-0ad319dc2514",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682410.516,
+        "update_time": 1779682481.713184,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "请用一个自包含的 HTML + CSS 文件绘制一张 IEEE JBHI / biomedical AI 论文风格的 Fig. 1 框架图。不要使用外部图片、外部字体或 JavaScript。可以使用 HTML/CSS + inline SVG 绘制 ECG 波形、箭头、卡片、公式和小型结果矩阵。\r\n\r\n画布尺寸：1800px × 850px。白色背景，浅灰边框，低饱和蓝色为主色，橙色表示 target pathway intervention，灰色表示 matched controls，绿色表示 Pathway-supported，黄色表示 Evidence-limited，深灰表示 Not supported。整体风格简洁、专业、扁平化，适合 IEEE / Nature biomedical AI paper，不要 3D，不要重阴影，不要商业流程图风格。\r\n\r\n图标题：\r\n“Matched-Control Pathway Audit Framework for ECG Classifiers”\r\n\r\n副标题：\r\n“From clinical ECG criteria to falsifiable pathway-specific evidence tiers”\r\n\r\n整体采用单层横向流程图，而不是上下双层结构。用 5 个主要卡片从左到右连接，每个卡片标题使用通用审计语言，卡片内部使用 ECG 具体实例。每个卡片之间用粗箭头连接。\r\n\r\nCard 1 标题：\r\n“1. Domain-defined pathway hypotheses”\r\n内容：\r\n画一个小型 12-lead ECG 图标。\r\n列出五个 ECG 疾病，按三类分组：\r\nTiming: 1AVB → PR interval\r\nMorphology: CRBBB / CLBBB → QRS complex\r\nRhythm: SBRAD → RR/rate; AFIB → atrial activity / RR irregularity\r\n底部小字：\r\n“Clinical criteria define target pathways and plausible alternatives.”\r\n\r\nCard 2 标题：\r\n“2. Matched target-control interventions”\r\n内容：\r\n画两条简化 ECG 波形。\r\n上方标注 Target pathway，用橙色半透明窗口覆盖 PR 或 QRS 区域。\r\n下方标注 Matched controls，用灰色半透明窗口覆盖 ST segment / QRS control / shifted pre-QRS / random window。\r\n中间突出一句：\r\n“Same operator, same cohort, target vs strongest control”\r\n底部小标签：\r\n“Class I: local window”\r\n“Class II: global transform”\r\n\r\nCard 3 标题：\r\n“3. Specificity, not sensitivity alone”\r\n内容：\r\n居中显示公式：\r\nASS = ΔAUROC_target − max(ΔAUROC_control)\r\n下面画两个小型对比图：\r\nCase A: target bar > control bar → “specific”\r\nCase B: control bar > target bar → “false pathway claim”\r\n强调一句：\r\n“Target degradation alone is insufficient.”\r\n\r\nCard 4 标题：\r\n“4. Operator-controlled audit”\r\n内容：\r\n画一个小 ECG 片段，展示 linear interpolation 平滑替换窗口。\r\n旁边画一个小 warning 图标，标注：\r\n“Zero-masking can create boundary artifacts”\r\n底部写：\r\n“Primary operator: linear interpolation”\r\n“Bootstrap CI for uncertainty”\r\n\r\nCard 5 标题：\r\n“5. External transfer and evidence tiering”\r\n内容：\r\n上方画数据流：\r\nCODE-15% internal audit cohort → frozen weights → PTB-XL fold 10 external cohort\r\n标注：\r\n“no fine-tuning”\r\n“cardiologist-validated external test”\r\n下方画 3×5 小型 tier matrix：\r\nRows: ResNet, SE-ResNet, Transformer\r\nColumns: 1AVB, CRBBB, CLBBB, SBRAD, AFIB\r\n圆点颜色：\r\n1AVB: all gray\r\nCRBBB: all green\r\nCLBBB: all green\r\nSBRAD: ResNet yellow, SE-ResNet gray, Transformer gray\r\nAFIB: all gray\r\n图例：\r\nGreen = Pathway-supported\r\nYellow = Evidence-limited\r\nGray = Not supported\r\n\r\n在整张图底部加一条浅灰色横幅：\r\n“Three safeguards against false pathway claims”\r\n包含三个并列徽章：\r\n1. “Matched controls: sensitivity ≠ specificity”\r\n2. “Operator selection: avoid perturbation artifacts”\r\n3. “External transfer: avoid dataset-specific explanations”\r\n\r\n右下角用虚线灰色小框标注：\r\n“Feature-space context only”\r\n“XGBoost Simple / Clinical-MVP”\r\n“Not assigned waveform perturbation tiers”\r\n\r\n重要要求：\r\n- 图的视觉主体必须是 ECG，不要画成泛泛的 Medical AI / EHR / imaging / pathology 总框架。\r\n- 但每个模块标题要体现通用审计逻辑：pathway hypothesis, matched intervention, specificity criterion, operator control, external transfer, evidence tiering。\r\n- 不要把 AFIB 画成 supported。\r\n- 不要把 CRBBB 画成 transfer-stressed。\r\n- 不要把 XGBoost 放进 waveform perturbation tiering 主流程。\r\n- 图中文字要少，清晰可读，不要拥挤。\r\n- 输出完整 HTML 文件，包括 <style> 和所有 SVG/HTML 内容，不要解释，只输出代码。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "stream_topic_id": "conversation-turn-eef0ac02-a025-4dd1-84ac-3f8450d7cb5a",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eef0ac02-a025-4dd1-84ac-3f8450d7cb5a:AU",
+          "request_id": "wfr_019e5d5685197ade936bdbe7b557b8f1",
+          "message_source": null,
+          "turn_exchange_id": "27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "80e8be18-d99a-433c-bf8c-1caa4209452d",
+      "children": [
+        "61cb30a7-25c1-440a-9daa-d9a5d8b364d2"
+      ]
+    },
+    "d9a4d3e7-45a6-493e-95ec-2a536348fde2": {
+      "id": "d9a4d3e7-45a6-493e-95ec-2a536348fde2",
+      "message": {
+        "id": "d9a4d3e7-45a6-493e-95ec-2a536348fde2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682310.0591633,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "wfr_019e5d54ed2d7784abb1b233dcbd5634",
+          "message_type": "next",
+          "turn_exchange_id": "2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "bbef154e-6926-4df5-93b7-443f83372559",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-a90a9bd6-e191-44e2-ae5b-7c9008c6b015:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-2dd79555-a44f-4223-9078-f0f285acb442",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "bbef154e-6926-4df5-93b7-443f83372559",
+      "children": [
+        "13399d94-5926-45f2-a51c-eb9897b62030"
+      ]
+    },
+    "61cb30a7-25c1-440a-9daa-d9a5d8b364d2": {
+      "id": "61cb30a7-25c1-440a-9daa-d9a5d8b364d2",
+      "message": {
+        "id": "61cb30a7-25c1-440a-9daa-d9a5d8b364d2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682413.3418002,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "wfr_019e5d5685197ade936bdbe7b557b8f1",
+          "message_type": "next",
+          "turn_exchange_id": "27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "95c3507c-3d91-4127-a43a-0ad319dc2514",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eef0ac02-a025-4dd1-84ac-3f8450d7cb5a:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "95c3507c-3d91-4127-a43a-0ad319dc2514",
+      "children": [
+        "eba6b61e-a049-4d91-88c7-51db9d0b1967"
+      ]
+    },
+    "13399d94-5926-45f2-a51c-eb9897b62030": {
+      "id": "13399d94-5926-45f2-a51c-eb9897b62030",
+      "message": {
+        "id": "13399d94-5926-45f2-a51c-eb9897b62030",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682310.1945984,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "chime_version": 1,
+          "request_id": "wfr_019e5d54ed2d7784abb1b233dcbd5634",
+          "message_type": "next",
+          "turn_exchange_id": "2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "d9a4d3e7-45a6-493e-95ec-2a536348fde2",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-a90a9bd6-e191-44e2-ae5b-7c9008c6b015:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d9a4d3e7-45a6-493e-95ec-2a536348fde2",
+      "children": [
+        "03cf9e20-6493-43a1-a0e0-b7f259799c49"
+      ]
+    },
+    "eba6b61e-a049-4d91-88c7-51db9d0b1967": {
+      "id": "eba6b61e-a049-4d91-88c7-51db9d0b1967",
+      "message": {
+        "id": "eba6b61e-a049-4d91-88c7-51db9d0b1967",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682413.5595334,
+        "update_time": 1779682491.06562,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "chime_version": 1,
+          "request_id": "wfr_019e5d5685197ade936bdbe7b557b8f1",
+          "message_type": "next",
+          "turn_exchange_id": "27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "61cb30a7-25c1-440a-9daa-d9a5d8b364d2",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eef0ac02-a025-4dd1-84ac-3f8450d7cb5a:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "61cb30a7-25c1-440a-9daa-d9a5d8b364d2",
+      "children": [
+        "0cb2c03b-782a-4f43-8c2a-91a926bc5189"
+      ]
+    },
+    "03cf9e20-6493-43a1-a0e0-b7f259799c49": {
+      "id": "03cf9e20-6493-43a1-a0e0-b7f259799c49",
+      "message": {
+        "id": "03cf9e20-6493-43a1-a0e0-b7f259799c49",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682311.457313,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "生成 HTML 代码",
+              "content": "用户只要求 HTML 代码，不需要额外的文件或解释。所以，我们应该直接生成包含所需内容的完整代码。页面设计要求：1800x850 像素，使用 CSS 网格排布水平卡片，并通过内联 SVG 展示内容，同时避免外部字体和 JS。确保符合规范并保持简洁。",
+              "chunks": [
+                "用户只要求 HTML 代码，不需要额外的文件或解释。",
+                "所以，我们应该直接生成包含所需内容的完整代码。",
+                "页面设计要求：1800x850 像素，使用 CSS 网格排布水平卡片，并通过内联 SVG 展示内容，同时避免外部字体和 JS。",
+                "确保符合规范并保持简洁。"
+              ],
+              "finished": true
+            },
+            {
+              "summary": "生成完整的HTML代码",
+              "content": "根据要求，我将生成包含五个卡片的HTML代码，并确保卡片从左到右排列，宽度为320px，每个卡片之间有22px的间隔。整体宽度为1688px，背景为白色，边框为浅灰色。还将使用内联SVG图标，并确保所有内容只使用系统字体，无JS。",
+              "chunks": [
+                "根据要求，我将生成包含五个卡片的HTML代码，并确保卡片从左到右排列，宽度为320px，每个卡片之间有22px的间隔。",
+                "整体宽度为1688px，背景为白色，边框为浅灰色。",
+                "还将使用内联SVG图标，并确保所有内容只使用系统字体，无JS。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "7e6fb61c-22d8-4498-ac55-91baa4c620a3"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e5d54ed2d7784abb1b233dcbd5634",
+          "message_type": "next",
+          "turn_exchange_id": "2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "7e6fb61c-22d8-4498-ac55-91baa4c620a3",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779682310.1433303,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-a90a9bd6-e191-44e2-ae5b-7c9008c6b015:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "13399d94-5926-45f2-a51c-eb9897b62030",
+      "children": [
+        "cb16728c-218d-4bd8-8ebb-11b25573dacb"
+      ]
+    },
+    "0cb2c03b-782a-4f43-8c2a-91a926bc5189": {
+      "id": "0cb2c03b-782a-4f43-8c2a-91a926bc5189",
+      "message": {
+        "id": "0cb2c03b-782a-4f43-8c2a-91a926bc5189",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682415.908618,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "生成完整HTML代码",
+              "content": "用户需要生成完整的HTML文件，包含5个水平排列的卡片和内嵌SVG的心电图波形，带有箭头、标签和矩阵。要求HTML自包含，不使用外部资源或JS，且固定尺寸为1800x850。由于没有解释要求，最终输出会是原始HTML代码，包含所有样式，确保不拥挤，且不使用JS。",
+              "chunks": [
+                "用户需要生成完整的HTML文件，包含5个水平排列的卡片和内嵌SVG的心电图波形，带有箭头、标签和矩阵。",
+                "要求HTML自包含，不使用外部资源或JS，且固定尺寸为1800x850。",
+                "由于没有解释要求，最终输出会是原始HTML代码，包含所有样式，确保不拥挤，且不使用JS。"
+              ],
+              "finished": true
+            },
+            {
+              "summary": "设计视觉布局与CSS",
+              "content": "需要仅使用系统字体，避免外部字体和图像。设计一份简单的CSS：将内容居中，设定整个页面背景为白色，边框为灰色，宽度常规为1800px，高度850px。标题放置顶部40px位置，卡片大小330px，设计五个纵向排列的卡片，宽度320px。",
+              "chunks": [
+                "需要仅使用系统字体，避免外部字体和图像。",
+                "设计一份简单的CSS：将内容居中，设定整个页面背景为白色，边框为灰色，宽度常规为1800px，高度850px。",
+                "标题放置顶部40px位置，卡片大小330px，设计五个纵向排列的卡片，宽度320px。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "501328b3-e2b6-4e96-9685-139fa6c15eb1"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e5d5685197ade936bdbe7b557b8f1",
+          "message_type": "next",
+          "turn_exchange_id": "27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "501328b3-e2b6-4e96-9685-139fa6c15eb1",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779682413.4326563,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eef0ac02-a025-4dd1-84ac-3f8450d7cb5a:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "eba6b61e-a049-4d91-88c7-51db9d0b1967",
+      "children": [
+        "735a0f16-0b78-446a-b0ec-fa15371ea68b"
+      ]
+    },
+    "cb16728c-218d-4bd8-8ebb-11b25573dacb": {
+      "id": "cb16728c-218d-4bd8-8ebb-11b25573dacb",
+      "message": {
+        "id": "cb16728c-218d-4bd8-8ebb-11b25573dacb",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682318.721154,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 8s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 8,
+          "reasoning_start_time": 1779682310.1433303,
+          "reasoning_end_time": 1779682318.7079644,
+          "request_id": "wfr_019e5d54ed2d7784abb1b233dcbd5634",
+          "message_type": "next",
+          "turn_exchange_id": "2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "03cf9e20-6493-43a1-a0e0-b7f259799c49",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-a90a9bd6-e191-44e2-ae5b-7c9008c6b015:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "03cf9e20-6493-43a1-a0e0-b7f259799c49",
+      "children": [
+        "061491de-b4e8-44c4-a6e2-4c6a974e6479"
+      ]
+    },
+    "735a0f16-0b78-446a-b0ec-fa15371ea68b": {
+      "id": "735a0f16-0b78-446a-b0ec-fa15371ea68b",
+      "message": {
+        "id": "735a0f16-0b78-446a-b0ec-fa15371ea68b",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682424.225127,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 10s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 10,
+          "reasoning_start_time": 1779682413.4326563,
+          "reasoning_end_time": 1779682424.2206542,
+          "request_id": "wfr_019e5d5685197ade936bdbe7b557b8f1",
+          "message_type": "next",
+          "turn_exchange_id": "27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "0cb2c03b-782a-4f43-8c2a-91a926bc5189",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eef0ac02-a025-4dd1-84ac-3f8450d7cb5a:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0cb2c03b-782a-4f43-8c2a-91a926bc5189",
+      "children": [
+        "1516a96e-648f-4e33-8a78-25844afc846f"
+      ]
+    },
+    "061491de-b4e8-44c4-a6e2-4c6a974e6479": {
+      "id": "061491de-b4e8-44c4-a6e2-4c6a974e6479",
+      "message": {
+        "id": "061491de-b4e8-44c4-a6e2-4c6a974e6479",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682310.132853,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n<title>Matched-Control Pathway Audit Framework for ECG Classifiers</title>\n<style>\n  :root {\n    --blue: #3f6f91;\n    --blue-dark: #254b66;\n    --blue-light: #eaf2f7;\n    --blue-line: #9db8ca;\n    --orange: #d8893a;\n    --orange-soft: rgba(216, 137, 58, 0.28);\n    --gray: #7d8790;\n    --gray-soft: rgba(125, 135, 144, 0.24);\n    --green: #5f9e72;\n    --yellow: #d9b74f;\n    --darkgray: #565d63;\n    --border: #d7dde2;\n    --text: #26323a;\n    --muted: #65717a;\n    --panel: #ffffff;\n    --banner: #f2f5f7;\n  }\n\n  * {\n    box-sizing: border-box;\n  }\n\n  body {\n    margin: 0;\n    background: #ffffff;\n    font-family: Arial, Helvetica, sans-serif;\n    color: var(--text);\n  }\n\n  .figure {\n    position: relative;\n    width: 1800px;\n    height: 850px;\n    background: #ffffff;\n    border: 1px solid var(--border);\n    overflow: hidden;\n  }\n\n  .title {\n    position: absolute;\n    top: 24px;\n    left: 60px;\n    right: 60px;\n    text-align: center;\n    font-size: 34px;\n    line-height: 1.1;\n    font-weight: 700;\n    color: var(--blue-dark);\n    letter-spacing: 0.1px;\n  }\n\n  .subtitle {\n    position: absolute;\n    top: 66px;\n    left: 60px;\n    right: 60px;\n    text-align: center;\n    font-size: 18px;\n    color: var(--muted);\n    letter-spacing: 0.2px;\n  }\n\n  .cards {\n    position: absolute;\n    top: 122px;\n    left: 50px;\n    right: 50px;\n    display: grid;\n    grid-template-columns: repeat(5, 1fr);\n    gap: 28px;\n    z-index: 2;\n  }\n\n  .card {\n    height: 555px;\n    background: var(--panel);\n    border: 1.5px solid var(--border);\n    border-top: 5px solid var(--blue);\n    border-radius: 16px;\n    padding: 20px 18px 16px 18px;\n  }\n\n  .card h2 {\n    margin: 0 0 14px 0;\n    font-size: 18px;\n    line-height: 1.25;\n    color: var(--blue-dark);\n    font-weight: 700;\n  }\n\n  .section-label {\n    font-size: 12px;\n    color: var(--muted);\n    text-transform: uppercase;\n    letter-spacing: 0.7px;\n    font-weight: 700;\n  }\n\n  .small {\n    font-size: 13px;\n    line-height: 1.35;\n    color: var(--muted);\n  }\n\n  .body-text {\n    font-size: 14px;\n    line-height: 1.35;\n  }\n\n  .group {\n    margin-top: 10px;\n    padding: 10px 12px;\n    background: #f7fafc;\n    border: 1px solid #e3ebf0;\n    border-radius: 11px;\n  }\n\n  .group-title {\n    color: var(--blue-dark);\n    font-weight: 700;\n    font-size: 14px;\n    margin-bottom: 4px;\n  }\n\n  .mono {\n    font-family: \"Courier New\", Courier, monospace;\n  }\n\n  .callout {\n    background: var(--blue-light);\n    border: 1px solid #d4e3ed;\n    border-radius: 10px;\n    padding: 10px 12px;\n    color: var(--blue-dark);\n    font-weight: 700;\n    font-size: 14px;\n    text-align: center;\n    margin: 10px 0;\n  }\n\n  .tag-row {\n    display: flex;\n    gap: 8px;\n    margin-top: 12px;\n    flex-wrap: wrap;\n  }\n\n  .tag {\n    display: inline-block;\n    padding: 5px 8px;\n    border-radius: 999px;\n    font-size: 12px;\n    font-weight: 700;\n    color: var(--blue-dark);\n    background: #eef5f9;\n    border: 1px solid #d5e5ef;\n  }\n\n  .formula {\n    margin: 14px 0 12px;\n    padding: 16px 8px;\n    background: #f8fbfd;\n    border: 1px solid #e1eaf0;\n    border-radius: 12px;\n    text-align: center;\n    color: var(--blue-dark);\n    font-size: 20px;\n    font-weight: 700;\n  }\n\n  .formula sub {\n    font-size: 12px;\n  }\n\n  .compare-row {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 12px;\n    margin-top: 12px;\n  }\n\n  .mini-panel {\n    border: 1px solid #e1e7eb;\n    border-radius: 12px;\n    padding: 8px 8px 10px;\n    background: #ffffff;\n  }\n\n  .mini-title {\n    font-size: 13px;\n    font-weight: 700;\n    color: var(--blue-dark);\n    margin-bottom: 4px;\n    text-align: center;\n  }\n\n  .emphasis {\n    margin-top: 14px;\n    font-size: 14px;\n    color: var(--darkgray);\n    font-weight: 700;\n    text-align: center;\n  }\n\n  .warning-row {\n    display: grid;\n    grid-template-columns: 78px 1fr;\n    gap: 12px;\n    align-items: center;\n    margin: 12px 0 14px;\n    padding: 12px;\n    background: #fbfaf5;\n    border: 1px solid #e5dec6;\n    border-radius: 12px;\n  }\n\n  .warning-text {\n    font-size: 13px;\n    line-height: 1.35;\n    color: #6a5b2d;\n    font-weight: 700;\n  }\n\n  .operator-list {\n    margin-top: 12px;\n    display: grid;\n    gap: 9px;\n  }\n\n  .operator-item {\n    padding: 9px 11px;\n    border-radius: 10px;\n    border: 1px solid #e3ebf0;\n    background: #f7fafc;\n    font-size: 14px;\n    color: var(--blue-dark);\n    font-weight: 700;\n  }\n\n  .flow-line {\n    display: grid;\n    grid-template-columns: 1fr 38px 1fr 38px 1fr;\n    align-items: center;\n    gap: 5px;\n    margin-top: 8px;\n  }\n\n  .flow-box {\n    min-height: 56px;\n    padding: 9px 8px;\n    border-radius: 10px;\n    border: 1px solid #d9e4eb;\n    background: #f8fbfd;\n    text-align: center;\n    font-size: 12.5px;\n    line-height: 1.25;\n    color: var(--blue-dark);\n    font-weight: 700;\n  }\n\n  .flow-note {\n    margin-top: 8px;\n    text-align: center;\n    font-size: 12px;\n    color: var(--muted);\n    font-weight: 700;\n  }\n\n  .matrix {\n    margin-top: 16px;\n    display: grid;\n    grid-template-columns: 82px repeat(5, 1fr);\n    gap: 7px 6px;\n    align-items: center;\n    font-size: 11.5px;\n  }\n\n  .matrix .head {\n    text-align: center;\n    color: var(--muted);\n    font-weight: 700;\n  }\n\n  .matrix .rowhead {\n    color: var(--blue-dark);\n    font-weight: 700;\n    text-align: right;\n    padding-right: 5px;\n  }\n\n  .dot {\n    width: 16px;\n    height: 16px;\n    border-radius: 50%;\n    margin: auto;\n    border: 1px solid rgba(0,0,0,0.08);\n  }\n\n  .green { background: var(--green); }\n  .yellow { background: var(--yellow); }\n  .gray { background: var(--darkgray); }\n\n  .legend {\n    margin-top: 14px;\n    display: grid;\n    gap: 5px;\n    font-size: 12.5px;\n    color: var(--muted);\n  }\n\n  .legend-item {\n    display: flex;\n    align-items: center;\n    gap: 7px;\n  }\n\n  .legend-dot {\n    width: 11px;\n    height: 11px;\n    border-radius: 50%;\n    display: inline-block;\n  }\n\n  .bottom-banner {\n    position: absolute;\n    left: 50px;\n    right: 50px;\n    bottom: 28px;\n    height: 88px;\n    background: var(--banner);\n    border: 1px solid var(--border);\n    border-radius: 15px;\n    display: grid;\n    grid-template-columns: 330px 1fr 1fr 1fr;\n    gap: 14px;\n    align-items: center;\n    padding: 16px 20px;\n  }\n\n  .banner-title {\n    color: var(--blue-dark);\n    font-size: 18px;\n    font-weight: 700;\n  }\n\n  .badge {\n    height: 48px;\n    background: #ffffff;\n    border: 1px solid #d9e2e8;\n    border-radius: 999px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 0 18px;\n    font-size: 14px;\n    font-weight: 700;\n    color: var(--text);\n    text-align: center;\n  }\n\n  .badge-num {\n    display: inline-flex;\n    width: 22px;\n    height: 22px;\n    border-radius: 50%;\n    align-items: center;\n    justify-content: center;\n    margin-right: 8px;\n    background: var(--blue-light);\n    color: var(--blue-dark);\n    font-size: 12px;\n    font-weight: 700;\n    flex: 0 0 auto;\n  }\n\n  .xgb-box {\n    position: absolute;\n    right: 64px;\n    bottom: 128px;\n    width: 290px;\n    height: 68px;\n    border: 1.5px dashed #9aa3aa;\n    border-radius: 12px;\n    background: rgba(255,255,255,0.92);\n    padding: 10px 13px;\n    color: var(--muted);\n    font-size: 12.5px;\n    line-height: 1.25;\n    z-index: 3;\n  }\n\n  .xgb-box strong {\n    color: var(--darkgray);\n  }\n\n  .arrow-layer {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 1800px;\n    height: 850px;\n    z-index: 1;\n    pointer-events: none;\n  }\n\n  svg text {\n    font-family: Arial, Helvetica, sans-serif;\n  }\n\n  .ecg-line {\n    fill: none;\n    stroke: var(--blue);\n    stroke-width: 3;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  .ecg-thin {\n    fill: none;\n    stroke: var(--blue);\n    stroke-width: 2.2;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  .grid-line {\n    stroke: #e6edf2;\n    stroke-width: 1;\n  }\n\n  .lead-box {\n    fill: #f8fbfd;\n    stroke: #d8e4eb;\n    stroke-width: 1;\n  }\n</style>\n</head>\n<body>\n<div class=\"figure\">\n\n  <div class=\"title\">Matched-Control Pathway Audit Framework for ECG Classifiers</div>\n  <div class=\"subtitle\">From clinical ECG criteria to falsifiable pathway-specific evidence tiers</div>\n\n  <svg class=\"arrow-layer\" viewBox=\"0 0 1800 850\" aria-hidden=\"true\">\n    <defs>\n      <marker id=\"arrowHead\" markerWidth=\"14\" markerHeight=\"12\" refX=\"12\" refY=\"6\" orient=\"auto\">\n        <path d=\"M0,0 L14,6 L0,12 Z\" fill=\"#7fa3ba\"></path>\n      </marker>\n    </defs>\n    <line x1=\"374\" y1=\"400\" x2=\"404\" y2=\"400\" stroke=\"#7fa3ba\" stroke-width=\"8\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"></line>\n    <line x1=\"714\" y1=\"400\" x2=\"744\" y2=\"400\" stroke=\"#7fa3ba\" stroke-width=\"8\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"></line>\n    <line x1=\"1054\" y1=\"400\" x2=\"1084\" y2=\"400\" stroke=\"#7fa3ba\" stroke-width=\"8\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"></line>\n    <line x1=\"1394\" y1=\"400\" x2=\"1424\" y2=\"400\" stroke=\"#7fa3ba\" stroke-width=\"8\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"></line>\n  </svg>\n\n  <div class=\"cards\">\n\n    <section class=\"card\">\n      <h2>1. Domain-defined pathway hypotheses</h2>\n\n      <svg width=\"100%\" height=\"145\" viewBox=\"0 0 292 145\" role=\"img\" aria-label=\"12-lead ECG icon\">\n        <rect x=\"8\" y=\"10\" width=\"276\" height=\"122\" rx=\"12\" fill=\"#ffffff\" stroke=\"#d7dde2\" />\n        <g>\n          <rect class=\"lead-box\" x=\"22\" y=\"25\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"88\" y=\"25\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"154\" y=\"25\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"220\" y=\"25\" width=\"42\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"22\" y=\"58\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"88\" y=\"58\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"154\" y=\"58\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"220\" y=\"58\" width=\"42\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"22\" y=\"91\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"88\" y=\"91\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"154\" y=\"91\" width=\"58\" height=\"24\" rx=\"5\" />\n          <rect class=\"lead-box\" x=\"220\" y=\"91\" width=\"42\" height=\"24\" rx=\"5\" />\n        </g>\n        <g stroke=\"#3f6f91\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n          <path d=\"M28 38 H38 l4 -6 l5 13 l4 -7 H73\" />\n          <path d=\"M94 38 h10 l4 -6 l5 13 l4 -7 h23\" />\n          <path d=\"M160 38 h10 l4 -6 l5 13 l4 -7 h23\" />\n          <path d=\"M226 38 h8 l3 -5 l4 11 l3 -6 h13\" />\n          <path d=\"M28 71 h10 l4 -5 l5 12 l4 -7 h22\" />\n          <path d=\"M94 71 h10 l4 -5 l5 12 l4 -7 h22\" />\n          <path d=\"M160 71 h10 l4 -5 l5 12 l4 -7 h22\" />\n          <path d=\"M226 71 h8 l3 -5 l4 11 l3 -6 h13\" />\n          <path d=\"M28 104 h10 l4 -5 l5 12 l4 -7 h22\" />\n          <path d=\"M94 104 h10 l4 -5 l5 12 l4 -7 h22\" />\n          <path d=\"M160 104 h10 l4 -5 l5 12 l4 -7 h22\" />\n          <path d=\"M226 104 h8 l3 -5 l4 11 l3 -6 h13\" />\n        </g>\n        <text x=\"146\" y=\"137\" text-anchor=\"middle\" font-size=\"12\" fill=\"#65717a\" font-weight=\"700\">12-lead ECG criteria</text>\n      </svg>\n\n      <div class=\"group\">\n        <div class=\"group-title\">Timing</div>\n        <div class=\"body-text\">1AVB → PR interval</div>\n      </div>\n      <div class=\"group\">\n        <div class=\"group-title\">Morphology</div>\n        <div class=\"body-text\">CRBBB / CLBBB → QRS complex</div>\n      </div>\n      <div class=\"group\">\n        <div class=\"group-title\">Rhythm</div>\n        <div class=\"body-text\">SBRAD → RR/rate<br>AFIB → atrial activity / RR irregularity</div>\n      </div>\n\n      <p class=\"small\" style=\"margin-top:14px;\">\n        Clinical criteria define target pathways and plausible alternatives.\n      </p>\n    </section>\n\n    <section class=\"card\">\n      <h2>2. Matched target-control interventions</h2>\n\n      <div class=\"section-label\">Target pathway</div>\n      <svg width=\"100%\" height=\"98\" viewBox=\"0 0 292 98\" role=\"img\" aria-label=\"Target ECG intervention\">\n        <rect x=\"8\" y=\"8\" width=\"276\" height=\"76\" rx=\"11\" fill=\"#ffffff\" stroke=\"#d7dde2\" />\n        <g>\n          <line class=\"grid-line\" x1=\"24\" y1=\"20\" x2=\"24\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"64\" y1=\"20\" x2=\"64\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"104\" y1=\"20\" x2=\"104\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"144\" y1=\"20\" x2=\"144\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"184\" y1=\"20\" x2=\"184\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"224\" y1=\"20\" x2=\"224\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"264\" y1=\"20\" x2=\"264\" y2=\"72\" />\n        </g>\n        <rect x=\"90\" y=\"19\" width=\"45\" height=\"54\" rx=\"5\" fill=\"rgba(216,137,58,0.28)\" stroke=\"#d8893a\" />\n        <path class=\"ecg-line\" d=\"M22 53 H48 C54 53 55 45 62 45 C68 45 71 53 77 53 H91 L98 45 L105 56 L116 18 L128 68 L139 53 H162 C172 53 174 43 185 43 C197 43 202 53 214 53 H270\" />\n        <text x=\"112\" y=\"88\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#d8893a\" font-weight=\"700\">PR / QRS target</text>\n      </svg>\n\n      <div class=\"section-label\" style=\"margin-top:5px;\">Matched controls</div>\n      <svg width=\"100%\" height=\"98\" viewBox=\"0 0 292 98\" role=\"img\" aria-label=\"Matched control ECG intervention\">\n        <rect x=\"8\" y=\"8\" width=\"276\" height=\"76\" rx=\"11\" fill=\"#ffffff\" stroke=\"#d7dde2\" />\n        <g>\n          <line class=\"grid-line\" x1=\"24\" y1=\"20\" x2=\"24\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"64\" y1=\"20\" x2=\"64\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"104\" y1=\"20\" x2=\"104\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"144\" y1=\"20\" x2=\"144\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"184\" y1=\"20\" x2=\"184\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"224\" y1=\"20\" x2=\"224\" y2=\"72\" />\n          <line class=\"grid-line\" x1=\"264\" y1=\"20\" x2=\"264\" y2=\"72\" />\n        </g>\n        <rect x=\"168\" y=\"19\" width=\"45\" height=\"54\" rx=\"5\" fill=\"rgba(125,135,144,0.24)\" stroke=\"#7d8790\" />\n        <path class=\"ecg-line\" d=\"M22 53 H48 C54 53 55 45 62 45 C68 45 71 53 77 53 H91 L98 45 L105 56 L116 18 L128 68 L139 53 H162 C172 53 174 43 185 43 C197 43 202 53 214 53 H270\" />\n        <text x=\"191\" y=\"88\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#7d8790\" font-weight=\"700\">ST / shifted / random</text>\n      </svg>\n\n      <div class=\"callout\">Same operator, same cohort,<br>target vs strongest control</div>\n\n      <div class=\"tag-row\">\n        <span class=\"tag\">Class I: local window</span>\n        <span class=\"tag\">Class II: global transform</span>\n      </div>\n    </section>\n\n    <section class=\"card\">\n      <h2>3. Specificity, not sensitivity alone</h2>\n\n      <div class=\"formula\">\n        ASS = ΔAUROC<sub>target</sub> − max(ΔAUROC<sub>control</sub>)\n      </div>\n\n      <div class=\"compare-row\">\n        <div class=\"mini-panel\">\n          <div class=\"mini-title\">Case A: specific</div>\n          <svg width=\"100%\" height=\"128\" viewBox=\"0 0 122 128\" role=\"img\" aria-label=\"Specific bar comparison\">\n            <line x1=\"20\" y1=\"102\" x2=\"108\" y2=\"102\" stroke=\"#cfd8df\" stroke-width=\"1.5\" />\n            <rect x=\"34\" y=\"35\" width=\"22\" height=\"67\" rx=\"3\" fill=\"#d8893a\" />\n            <rect x=\"70\" y=\"72\" width=\"22\" height=\"30\" rx=\"3\" fill=\"#7d8790\" />\n            <text x=\"45\" y=\"118\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#65717a\">target</text>\n            <text x=\"81\" y=\"118\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#65717a\">control</text>\n            <path d=\"M61 42 L77 58 L105 25\" fill=\"none\" stroke=\"#5f9e72\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n          </svg>\n        </div>\n\n        <div class=\"mini-panel\">\n          <div class=\"mini-title\">Case B: false claim</div>\n          <svg width=\"100%\" height=\"128\" viewBox=\"0 0 122 128\" role=\"img\" aria-label=\"False pathway claim bar comparison\">\n            <line x1=\"20\" y1=\"102\" x2=\"108\" y2=\"102\" stroke=\"#cfd8df\" stroke-width=\"1.5\" />\n            <rect x=\"34\" y=\"72\" width=\"22\" height=\"30\" rx=\"3\" fill=\"#d8893a\" />\n            <rect x=\"70\" y=\"35\" width=\"22\" height=\"67\" rx=\"3\" fill=\"#7d8790\" />\n            <text x=\"45\" y=\"118\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#65717a\">target</text>\n            <text x=\"81\" y=\"118\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#65717a\">control</text>\n            <path d=\"M64 31 L99 66 M99 31 L64 66\" stroke=\"#565d63\" stroke-width=\"5\" stroke-linecap=\"round\" />\n          </svg>\n        </div>\n      </div>\n\n      <div class=\"emphasis\">Target degradation alone is insufficient.</div>\n\n      <svg width=\"100%\" height=\"130\" viewBox=\"0 0 292 130\" role=\"img\" aria-label=\"Specificity criterion schematic\">\n        <rect x=\"20\" y=\"22\" width=\"252\" height=\"76\" rx=\"13\" fill=\"#f8fbfd\" stroke=\"#dbe6ec\" />\n        <circle cx=\"70\" cy=\"60\" r=\"20\" fill=\"rgba(216,137,58,0.20)\" stroke=\"#d8893a\" stroke-width=\"2\" />\n        <circle cx=\"146\" cy=\"60\" r=\"20\" fill=\"rgba(125,135,144,0.18)\" stroke=\"#7d8790\" stroke-width=\"2\" />\n        <circle cx=\"222\" cy=\"60\" r=\"20\" fill=\"rgba(125,135,144,0.18)\" stroke=\"#7d8790\" stroke-width=\"2\" />\n        <text x=\"70\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#d8893a\">T</text>\n        <text x=\"146\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#7d8790\">C1</text>\n        <text x=\"222\" y=\"64\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"700\" fill=\"#7d8790\">C2</text>\n        <path d=\"M90 60 H122\" stroke=\"#9db8ca\" stroke-width=\"3\" marker-end=\"url(#smallArrow)\" />\n        <path d=\"M166 60 H198\" stroke=\"#9db8ca\" stroke-width=\"3\" marker-end=\"url(#smallArrow)\" />\n        <defs>\n          <marker id=\"smallArrow\" markerWidth=\"10\" markerHeight=\"8\" refX=\"9\" refY=\"4\" orient=\"auto\">\n            <path d=\"M0,0 L10,4 L0,8 Z\" fill=\"#9db8ca\"></path>\n          </marker>\n        </defs>\n        <text x=\"146\" y=\"118\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#65717a\" font-weight=\"700\">Audit asks whether the target is uniquely informative.</text>\n      </svg>\n    </section>\n\n    <section class=\"card\">\n      <h2>4. Operator-controlled audit</h2>\n\n      <svg width=\"100%\" height=\"190\" viewBox=\"0 0 292 190\" role=\"img\" aria-label=\"Linear interpolation ECG window\">\n        <rect x=\"8\" y=\"12\" width=\"276\" height=\"138\" rx=\"12\" fill=\"#ffffff\" stroke=\"#d7dde2\" />\n        <g>\n          <line class=\"grid-line\" x1=\"28\" y1=\"30\" x2=\"28\" y2=\"134\" />\n          <line class=\"grid-line\" x1=\"68\" y1=\"30\" x2=\"68\" y2=\"134\" />\n          <line class=\"grid-line\" x1=\"108\" y1=\"30\" x2=\"108\" y2=\"134\" />\n          <line class=\"grid-line\" x1=\"148\" y1=\"30\" x2=\"148\" y2=\"134\" />\n          <line class=\"grid-line\" x1=\"188\" y1=\"30\" x2=\"188\" y2=\"134\" />\n          <line class=\"grid-line\" x1=\"228\" y1=\"30\" x2=\"228\" y2=\"134\" />\n          <line class=\"grid-line\" x1=\"268\" y1=\"30\" x2=\"268\" y2=\"134\" />\n        </g>\n        <rect x=\"100\" y=\"30\" width=\"58\" height=\"104\" rx=\"6\" fill=\"rgba(216,137,58,0.18)\" stroke=\"#d8893a\" stroke-dasharray=\"4 3\" />\n        <path class=\"ecg-thin\" d=\"M22 92 H48 C56 92 58 82 66 82 C75 82 78 92 86 92 H98\" />\n        <path d=\"M100 92 C116 90 139 91 158 92\" fill=\"none\" stroke=\"#d8893a\" stroke-width=\"4\" stroke-linecap=\"round\" />\n        <path class=\"ecg-thin\" d=\"M158 92 H174 C184 92 187 78 198 78 C211 78 218 92 232 92 H270\" />\n        <path d=\"M104 92 L112 83 L120 99 L130 38 L141 128 L152 92\" fill=\"none\" stroke=\"#b9c5cc\" stroke-width=\"2\" stroke-dasharray=\"4 4\" />\n        <text x=\"129\" y=\"166\" text-anchor=\"middle\" font-size=\"12\" fill=\"#d8893a\" font-weight=\"700\">linear interpolation replaces the window</text>\n      </svg>\n\n      <div class=\"warning-row\">\n        <svg width=\"78\" height=\"70\" viewBox=\"0 0 78 70\" role=\"img\" aria-label=\"Warning icon\">\n          <path d=\"M39 7 L72 63 H6 Z\" fill=\"#fbf4d8\" stroke=\"#d9b74f\" stroke-width=\"3\" />\n          <line x1=\"39\" y1=\"25\" x2=\"39\" y2=\"43\" stroke=\"#8b7524\" stroke-width=\"5\" stroke-linecap=\"round\" />\n          <circle cx=\"39\" cy=\"53\" r=\"3.5\" fill=\"#8b7524\" />\n        </svg>\n        <div class=\"warning-text\">Zero-masking can create boundary artifacts</div>\n      </div>\n\n      <div class=\"operator-list\">\n        <div class=\"operator-item\">Primary operator: linear interpolation</div>\n        <div class=\"operator-item\">Bootstrap CI for uncertainty</div>\n      </div>\n\n      <p class=\"small\" style=\"margin-top:14px;\">\n        The perturbation operator is controlled so pathway evidence is not an artifact of the editing method.\n      </p>\n    </section>\n\n    <section class=\"card\">\n      <h2>5. External transfer and evidence tiering</h2>\n\n      <div class=\"flow-line\">\n        <div class=\"flow-box\">CODE-15%<br>internal audit cohort</div>\n        <svg width=\"38\" height=\"36\" viewBox=\"0 0 38 36\" aria-hidden=\"true\">\n          <path d=\"M3 18 H30\" stroke=\"#7fa3ba\" stroke-width=\"4\" stroke-linecap=\"round\" />\n          <path d=\"M24 9 L34 18 L24 27\" fill=\"none\" stroke=\"#7fa3ba\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n        </svg>\n        <div class=\"flow-box\">frozen<br>weights</div>\n        <svg width=\"38\" height=\"36\" viewBox=\"0 0 38 36\" aria-hidden=\"true\">\n          <path d=\"M3 18 H30\" stroke=\"#7fa3ba\" stroke-width=\"4\" stroke-linecap=\"round\" />\n          <path d=\"M24 9 L34 18 L24 27\" fill=\"none\" stroke=\"#7fa3ba\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />\n        </svg>\n        <div class=\"flow-box\">PTB-XL fold 10<br>external cohort</div>\n      </div>\n      <div class=\"flow-note\">no fine-tuning · cardiologist-validated external test</div>\n\n      <div class=\"matrix\">\n        <div></div>\n        <div class=\"head\">1AVB</div>\n        <div class=\"head\">CRBBB</div>\n        <div class=\"head\">CLBBB</div>\n        <div class=\"head\">SBRAD</div>\n        <div class=\"head\">AFIB</div>\n\n        <div class=\"rowhead\">ResNet</div>\n        <div class=\"dot gray\"></div>\n        <div class=\"dot green\"></div>\n        <div class=\"dot green\"></div>\n        <div class=\"dot yellow\"></div>\n        <div class=\"dot gray\"></div>\n\n        <div class=\"rowhead\">SE-ResNet</div>\n        <div class=\"dot gray\"></div>\n        <div class=\"dot green\"></div>\n        <div class=\"dot green\"></div>\n        <div class=\"dot gray\"></div>\n        <div class=\"dot gray\"></div>\n\n        <div class=\"rowhead\">Transformer</div>\n        <div class=\"dot gray\"></div>\n        <div class=\"dot green\"></div>\n        <div class=\"dot green\"></div>\n        <div class=\"dot gray\"></div>\n        <div class=\"dot gray\"></div>\n      </div>\n\n      <div class=\"legend\">\n        <div class=\"legend-item\"><span class=\"legend-dot green\"></span>Green = Pathway-supported</div>\n        <div class=\"legend-item\"><span class=\"legend-dot yellow\"></span>Yellow = Evidence-limited</div>\n        <div class=\"legend-item\"><span class=\"legend-dot gray\"></span>Gray = Not supported</div>\n      </div>\n\n      <svg width=\"100%\" height=\"116\" viewBox=\"0 0 292 116\" role=\"img\" aria-label=\"External transfer ECG evidence\">\n        <rect x=\"18\" y=\"22\" width=\"256\" height=\"62\" rx=\"12\" fill=\"#f8fbfd\" stroke=\"#dbe6ec\" />\n        <path class=\"ecg-thin\" d=\"M34 55 H58 C64 55 66 48 72 48 C80 48 82 55 89 55 H100 L107 48 L114 58 L124 27 L135 79 L145 55 H162 C172 55 175 43 186 43 C200 43 205 55 220 55 H258\" />\n        <text x=\"146\" y=\"104\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#65717a\" font-weight=\"700\">A tier is assigned only after internal and external pathway tests.</text>\n      </svg>\n    </section>\n  </div>\n\n  <div class=\"xgb-box\">\n    <strong>Feature-space context only</strong><br>\n    XGBoost Simple / Clinical-MVP<br>\n    Not assigned waveform perturbation tiers\n  </div>\n\n  <div class=\"bottom-banner\">\n    <div class=\"banner-title\">Three safeguards against false pathway claims</div>\n    <div class=\"badge\"><span class=\"badge-num\">1</span>Matched controls: sensitivity ≠ specificity</div>\n    <div class=\"badge\"><span class=\"badge-num\">2</span>Operator selection: avoid perturbation artifacts</div>\n    <div class=\"badge\"><span class=\"badge-num\">3</span>External transfer: avoid dataset-specific explanations</div>\n  </div>\n\n</div>\n</body>\n</html>"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "search_result_groups": [],
+          "request_id": "wfr_019e5d54ed2d7784abb1b233dcbd5634",
+          "message_type": "next",
+          "turn_exchange_id": "2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "cb16728c-218d-4bd8-8ebb-11b25573dacb",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-a90a9bd6-e191-44e2-ae5b-7c9008c6b015:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-2dd79555-a44f-4223-9078-f0f285acb442",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "cb16728c-218d-4bd8-8ebb-11b25573dacb",
+      "children": []
+    },
+    "1516a96e-648f-4e33-8a78-25844afc846f": {
+      "id": "1516a96e-648f-4e33-8a78-25844afc846f",
+      "message": {
+        "id": "1516a96e-648f-4e33-8a78-25844afc846f",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779682413.402154,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=1800, initial-scale=1.0\" />\n<title>Matched-Control Pathway Audit Framework for ECG Classifiers</title>\n<style>\n  :root{\n    --blue:#587895;\n    --blue-dark:#3f5f78;\n    --blue-light:#eef5fa;\n    --blue-line:#9fb6c8;\n    --orange:#e38b3a;\n    --orange-soft:rgba(227,139,58,.24);\n    --gray:#8d98a3;\n    --gray-soft:rgba(141,152,163,.24);\n    --green:#5fa875;\n    --yellow:#d8b84d;\n    --darkgray:#5f666d;\n    --ink:#25313b;\n    --muted:#66727c;\n    --border:#d7dee5;\n    --panel:#ffffff;\n    --bg:#f7f9fb;\n  }\n\n  *{ box-sizing:border-box; }\n\n  body{\n    margin:0;\n    background:#ffffff;\n    font-family: Arial, Helvetica, sans-serif;\n    color:var(--ink);\n  }\n\n  .figure{\n    position:relative;\n    width:1800px;\n    height:850px;\n    margin:0 auto;\n    background:#ffffff;\n    border:1px solid #d9dee4;\n    overflow:hidden;\n  }\n\n  .title{\n    position:absolute;\n    top:26px;\n    width:100%;\n    text-align:center;\n    font-size:32px;\n    font-weight:700;\n    letter-spacing:.1px;\n    color:#1f2d38;\n  }\n\n  .subtitle{\n    position:absolute;\n    top:68px;\n    width:100%;\n    text-align:center;\n    font-size:18px;\n    color:#687681;\n    letter-spacing:.1px;\n  }\n\n  .flow{\n    position:absolute;\n    left:62px;\n    top:116px;\n    width:1676px;\n    height:560px;\n    display:flex;\n    gap:35px;\n    align-items:stretch;\n    z-index:2;\n  }\n\n  .card{\n    width:307px;\n    height:560px;\n    background:var(--panel);\n    border:1.4px solid var(--border);\n    border-radius:18px;\n    padding:20px 20px 18px 20px;\n    box-shadow:0 2px 8px rgba(64,80,94,.05);\n  }\n\n  .card-title{\n    min-height:50px;\n    font-size:18px;\n    line-height:1.2;\n    font-weight:700;\n    color:#223240;\n    margin-bottom:14px;\n  }\n\n  .small{\n    font-size:12px;\n    color:var(--muted);\n    line-height:1.35;\n  }\n\n  .note{\n    font-size:12px;\n    color:#596672;\n    line-height:1.35;\n  }\n\n  .label{\n    display:inline-flex;\n    align-items:center;\n    justify-content:center;\n    border-radius:999px;\n    font-size:11px;\n    font-weight:700;\n    padding:5px 9px;\n    white-space:nowrap;\n  }\n\n  .label-blue{ background:#edf5fa; color:#42637d; border:1px solid #ccdae6; }\n  .label-orange{ background:rgba(227,139,58,.13); color:#9b561b; border:1px solid rgba(227,139,58,.35); }\n  .label-gray{ background:#f2f4f6; color:#65717b; border:1px solid #dce1e5; }\n\n  .section-caption{\n    font-size:12px;\n    font-weight:700;\n    color:#4a5d6e;\n    margin-bottom:5px;\n    text-transform:uppercase;\n    letter-spacing:.45px;\n  }\n\n  .pathway-list{\n    margin-top:10px;\n    display:grid;\n    gap:8px;\n  }\n\n  .pathway-row{\n    border-left:4px solid #b8c9d8;\n    padding:6px 8px;\n    border-radius:8px;\n    background:#f7fafc;\n    font-size:13px;\n    line-height:1.3;\n  }\n\n  .pathway-row b{\n    color:#2b4052;\n  }\n\n  .pathway-row span{\n    color:#5e6b75;\n  }\n\n  .card-footer{\n    margin-top:12px;\n    padding:10px 11px;\n    background:#f8fafb;\n    border:1px solid #e5ebef;\n    border-radius:12px;\n    font-size:12px;\n    color:#5f6b74;\n    line-height:1.35;\n  }\n\n  .ecg-12{\n    width:100%;\n    height:112px;\n    border:1px solid #e0e7ed;\n    border-radius:12px;\n    background:\n      linear-gradient(#f5f8fa 1px, transparent 1px),\n      linear-gradient(90deg,#f5f8fa 1px, transparent 1px);\n    background-size:18px 18px;\n    padding:8px;\n  }\n\n  .ecg-dual{\n    margin-top:2px;\n    height:195px;\n    border:1px solid #e2e8ee;\n    border-radius:13px;\n    background:#fbfdfe;\n    padding:8px 8px 6px;\n  }\n\n  .center-callout{\n    margin:11px 0 9px;\n    padding:9px 10px;\n    border-radius:12px;\n    background:#eef5fa;\n    border:1px solid #cbdde9;\n    color:#344e63;\n    text-align:center;\n    font-size:13px;\n    font-weight:700;\n    line-height:1.25;\n  }\n\n  .tag-row{\n    display:flex;\n    gap:8px;\n    flex-wrap:wrap;\n    margin-top:8px;\n  }\n\n  .formula{\n    margin:10px auto 14px;\n    width:252px;\n    padding:15px 10px;\n    text-align:center;\n    border-radius:14px;\n    border:1.3px solid #cddce8;\n    background:#f4f9fc;\n    color:#253746;\n    font-size:20px;\n    font-weight:700;\n  }\n\n  .formula sub{\n    font-size:11px;\n    vertical-align:baseline;\n    position:relative;\n    bottom:-.2em;\n  }\n\n  .mini-cases{\n    display:grid;\n    grid-template-columns:1fr 1fr;\n    gap:10px;\n    margin-top:6px;\n  }\n\n  .case{\n    border:1px solid #e0e6eb;\n    border-radius:13px;\n    padding:9px 8px 8px;\n    background:#ffffff;\n  }\n\n  .case-title{\n    font-size:12px;\n    font-weight:700;\n    color:#394b5a;\n    margin-bottom:5px;\n  }\n\n  .case-caption{\n    margin-top:4px;\n    font-size:11px;\n    font-weight:700;\n    color:#596570;\n    text-align:center;\n    line-height:1.2;\n  }\n\n  .emphasis{\n    margin-top:14px;\n    padding:10px 12px;\n    border-radius:12px;\n    background:#fff9eb;\n    border:1px solid #ead89a;\n    color:#6f5b22;\n    font-size:13px;\n    line-height:1.3;\n    font-weight:700;\n    text-align:center;\n  }\n\n  .operator-grid{\n    display:grid;\n    grid-template-columns:1fr;\n    gap:11px;\n  }\n\n  .operator-box{\n    border:1px solid #e0e7ed;\n    border-radius:13px;\n    background:#fbfdfe;\n    padding:10px;\n  }\n\n  .warning{\n    display:flex;\n    gap:9px;\n    align-items:center;\n    padding:10px;\n    border:1px solid #ead7b2;\n    background:#fffaf1;\n    border-radius:13px;\n  }\n\n  .warning-text{\n    font-size:12px;\n    line-height:1.25;\n    color:#725421;\n    font-weight:700;\n  }\n\n  .operator-lines{\n    margin-top:10px;\n    display:grid;\n    gap:7px;\n  }\n\n  .operator-line{\n    display:flex;\n    align-items:center;\n    gap:8px;\n    font-size:13px;\n    color:#4d5c67;\n  }\n\n  .dot-small{\n    width:8px;\n    height:8px;\n    border-radius:50%;\n    background:var(--blue);\n    flex:none;\n  }\n\n  .transfer-flow{\n    margin-top:4px;\n    padding:10px 8px;\n    border:1px solid #dfe8ee;\n    border-radius:13px;\n    background:#fbfdfe;\n  }\n\n  .transfer-labels{\n    margin-top:7px;\n    display:flex;\n    justify-content:center;\n    gap:8px;\n  }\n\n  .matrix-wrap{\n    margin-top:14px;\n    border:1px solid #dde5eb;\n    border-radius:14px;\n    padding:10px 10px 9px;\n    background:#ffffff;\n  }\n\n  .matrix-title{\n    font-size:12px;\n    font-weight:700;\n    color:#405366;\n    margin-bottom:7px;\n  }\n\n  .tier-matrix{\n    display:grid;\n    grid-template-columns:74px repeat(5, 32px);\n    grid-auto-rows:26px;\n    align-items:center;\n    gap:3px 6px;\n    font-size:10.5px;\n    color:#5d6872;\n  }\n\n  .m-head{\n    text-align:center;\n    font-weight:700;\n    color:#52616d;\n  }\n\n  .m-row{\n    text-align:right;\n    padding-right:2px;\n    font-weight:700;\n    color:#4a5964;\n  }\n\n  .tier-dot{\n    width:16px;\n    height:16px;\n    border-radius:50%;\n    margin:auto;\n    border:1.2px solid rgba(0,0,0,.12);\n  }\n\n  .green{ background:var(--green); }\n  .yellow{ background:var(--yellow); }\n  .darkgray{ background:var(--darkgray); }\n\n  .legend{\n    display:grid;\n    grid-template-columns:1fr;\n    gap:4px;\n    margin-top:8px;\n    font-size:10.8px;\n    color:#5d6872;\n  }\n\n  .legend-item{\n    display:flex;\n    align-items:center;\n    gap:6px;\n  }\n\n  .legend-dot{\n    width:10px;\n    height:10px;\n    border-radius:50%;\n    border:1px solid rgba(0,0,0,.12);\n    flex:none;\n  }\n\n  .safeguards{\n    position:absolute;\n    left:64px;\n    bottom:30px;\n    width:1358px;\n    height:112px;\n    border-radius:18px;\n    border:1px solid #dfe5ea;\n    background:#f4f6f8;\n    z-index:1;\n    padding:17px 22px;\n  }\n\n  .safeguard-title{\n    text-align:center;\n    font-size:17px;\n    font-weight:700;\n    color:#3b4b58;\n    margin-bottom:14px;\n  }\n\n  .badge-row{\n    display:grid;\n    grid-template-columns:repeat(3, 1fr);\n    gap:18px;\n  }\n\n  .badge{\n    display:flex;\n    align-items:center;\n    gap:11px;\n    min-height:44px;\n    padding:9px 12px;\n    border-radius:14px;\n    background:#ffffff;\n    border:1px solid #dde5eb;\n    color:#405160;\n    font-size:14px;\n    font-weight:700;\n  }\n\n  .badge-num{\n    width:25px;\n    height:25px;\n    border-radius:50%;\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    background:#e7f0f6;\n    color:#3f627c;\n    border:1px solid #c5d8e6;\n    font-size:13px;\n    flex:none;\n  }\n\n  .xgb-box{\n    position:absolute;\n    right:64px;\n    bottom:30px;\n    width:285px;\n    height:112px;\n    border:1.8px dashed #9aa4ad;\n    border-radius:18px;\n    background:#fafbfc;\n    padding:17px 18px;\n    z-index:1;\n  }\n\n  .xgb-title{\n    font-size:14px;\n    font-weight:800;\n    color:#4e5a64;\n    margin-bottom:9px;\n  }\n\n  .xgb-line{\n    font-size:13px;\n    color:#606c76;\n    line-height:1.35;\n    font-weight:700;\n  }\n\n  .arrow-layer{\n    position:absolute;\n    left:0;\n    top:0;\n    width:1800px;\n    height:850px;\n    z-index:1;\n    pointer-events:none;\n  }\n\n  .svg-text{\n    font-family: Arial, Helvetica, sans-serif;\n  }\n</style>\n</head>\n<body>\n<div class=\"figure\">\n\n  <div class=\"title\">Matched-Control Pathway Audit Framework for ECG Classifiers</div>\n  <div class=\"subtitle\">From clinical ECG criteria to falsifiable pathway-specific evidence tiers</div>\n\n  <svg class=\"arrow-layer\" viewBox=\"0 0 1800 850\" aria-hidden=\"true\">\n    <defs>\n      <marker id=\"arrowHead\" markerWidth=\"14\" markerHeight=\"14\" refX=\"11\" refY=\"7\" orient=\"auto\">\n        <path d=\"M0,0 L12,7 L0,14 Z\" fill=\"#587895\"></path>\n      </marker>\n    </defs>\n    <line x1=\"369\" y1=\"396\" x2=\"397\" y2=\"396\" stroke=\"#587895\" stroke-width=\"7\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"/>\n    <line x1=\"711\" y1=\"396\" x2=\"739\" y2=\"396\" stroke=\"#587895\" stroke-width=\"7\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"/>\n    <line x1=\"1053\" y1=\"396\" x2=\"1081\" y2=\"396\" stroke=\"#587895\" stroke-width=\"7\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"/>\n    <line x1=\"1395\" y1=\"396\" x2=\"1423\" y2=\"396\" stroke=\"#587895\" stroke-width=\"7\" stroke-linecap=\"round\" marker-end=\"url(#arrowHead)\"/>\n  </svg>\n\n  <div class=\"flow\">\n\n    <section class=\"card\">\n      <div class=\"card-title\">1. Domain-defined pathway hypotheses</div>\n\n      <div class=\"ecg-12\">\n        <svg viewBox=\"0 0 260 96\" width=\"100%\" height=\"100%\" role=\"img\" aria-label=\"Small 12-lead ECG icon\">\n          <g class=\"svg-text\" font-size=\"8.5\" fill=\"#6b7883\" font-weight=\"700\">\n            <text x=\"2\" y=\"12\">I</text><text x=\"2\" y=\"28\">II</text><text x=\"2\" y=\"44\">III</text>\n            <text x=\"2\" y=\"60\">aVR</text><text x=\"2\" y=\"76\">V1</text><text x=\"2\" y=\"92\">V6</text>\n          </g>\n          <g fill=\"none\" stroke=\"#587895\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\">\n            <path d=\"M28 12 L48 12 L52 8 L56 16 L61 12 L83 12 L88 3 L94 23 L100 12 L126 12 L132 7 L138 18 L144 12 L170 12 L176 4 L182 21 L189 12 L230 12\"/>\n            <path d=\"M28 28 L48 28 L52 24 L56 32 L61 28 L82 28 L87 16 L94 41 L100 28 L125 28 L132 22 L138 36 L145 28 L170 28 L176 17 L183 39 L190 28 L230 28\"/>\n            <path d=\"M28 44 L50 44 L54 40 L58 48 L63 44 L84 44 L90 35 L96 56 L102 44 L126 44 L132 39 L138 52 L145 44 L170 44 L177 36 L184 55 L191 44 L230 44\"/>\n            <path d=\"M28 60 L49 60 L53 56 L57 64 L62 60 L83 60 L89 70 L95 48 L101 60 L126 60 L132 65 L139 53 L146 60 L171 60 L177 69 L184 50 L191 60 L230 60\"/>\n            <path d=\"M28 76 L50 76 L54 72 L58 80 L63 76 L82 76 L88 61 L94 88 L100 76 L126 76 L133 69 L140 85 L146 76 L171 76 L177 62 L184 87 L190 76 L230 76\"/>\n            <path d=\"M28 92 L51 92 L55 88 L59 96 L64 92 L83 92 L88 80 L94 105 L100 92 L126 92 L133 86 L140 100 L147 92 L171 92 L177 82 L184 103 L191 92 L230 92\"/>\n          </g>\n        </svg>\n      </div>\n\n      <div class=\"pathway-list\">\n        <div class=\"pathway-row\">\n          <b>Timing:</b> <span>1AVB → PR interval</span>\n        </div>\n        <div class=\"pathway-row\">\n          <b>Morphology:</b> <span>CRBBB / CLBBB → QRS complex</span>\n        </div>\n        <div class=\"pathway-row\">\n          <b>Rhythm:</b> <span>SBRAD → RR/rate; AFIB → atrial activity / RR irregularity</span>\n        </div>\n      </div>\n\n      <div class=\"card-footer\">\n        Clinical criteria define target pathways and plausible alternatives.\n      </div>\n    </section>\n\n    <section class=\"card\">\n      <div class=\"card-title\">2. Matched target-control interventions</div>\n\n      <div class=\"ecg-dual\">\n        <svg viewBox=\"0 0 260 178\" width=\"100%\" height=\"100%\" role=\"img\" aria-label=\"Target and matched control ECG interventions\">\n          <g class=\"svg-text\" font-size=\"12\" font-weight=\"700\">\n            <text x=\"5\" y=\"15\" fill=\"#a65a19\">Target pathway</text>\n            <text x=\"5\" y=\"101\" fill=\"#66727c\">Matched controls</text>\n          </g>\n\n          <rect x=\"90\" y=\"28\" width=\"38\" height=\"42\" rx=\"4\" fill=\"rgba(227,139,58,.28)\" stroke=\"#e38b3a\" stroke-width=\"1.2\"/>\n          <rect x=\"132\" y=\"114\" width=\"40\" height=\"42\" rx=\"4\" fill=\"rgba(141,152,163,.25)\" stroke=\"#8d98a3\" stroke-width=\"1.2\"/>\n          <rect x=\"184\" y=\"114\" width=\"32\" height=\"42\" rx=\"4\" fill=\"rgba(141,152,163,.18)\" stroke=\"#a2abb4\" stroke-dasharray=\"4 3\" stroke-width=\"1.2\"/>\n\n          <g fill=\"none\" stroke=\"#587895\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n            <path d=\"M8 55 L32 55 C36 49 40 49 44 55 L70 55 C75 37 82 78 89 55 L116 55 C121 50 126 50 132 55 C140 63 147 66 154 55 L184 55 C188 49 193 49 198 55 L236 55\"/>\n            <path d=\"M8 141 L32 141 C36 135 40 135 44 141 L70 141 C75 123 82 164 89 141 L116 141 C121 136 126 136 132 141 C140 149 147 152 154 141 L184 141 C188 135 193 135 198 141 L236 141\"/>\n          </g>\n\n          <g class=\"svg-text\" font-size=\"9.5\" fill=\"#7a858e\">\n            <text x=\"83\" y=\"82\">PR / QRS</text>\n            <text x=\"121\" y=\"168\">ST / shifted / random</text>\n          </g>\n        </svg>\n      </div>\n\n      <div class=\"center-callout\">Same operator, same cohort, target vs strongest control</div>\n\n      <div class=\"tag-row\">\n        <span class=\"label label-orange\">Class I: local window</span>\n        <span class=\"label label-gray\">Class II: global transform</span>\n      </div>\n\n      <div class=\"card-footer\">\n        Compare target perturbation with anatomically plausible and size-matched alternatives.\n      </div>\n    </section>\n\n    <section class=\"card\">\n      <div class=\"card-title\">3. Specificity, not sensitivity alone</div>\n\n      <div class=\"formula\">\n        ASS = ΔAUROC<sub>target</sub> − max(ΔAUROC<sub>control</sub>)\n      </div>\n\n      <div class=\"mini-cases\">\n        <div class=\"case\">\n          <div class=\"case-title\">Case A</div>\n          <svg viewBox=\"0 0 105 88\" width=\"100%\" height=\"88\" role=\"img\" aria-label=\"Specific target greater than control\">\n            <line x1=\"18\" y1=\"70\" x2=\"95\" y2=\"70\" stroke=\"#ccd6de\" stroke-width=\"1.2\"/>\n            <rect x=\"28\" y=\"23\" width=\"18\" height=\"47\" rx=\"3\" fill=\"#e38b3a\"/>\n            <rect x=\"62\" y=\"46\" width=\"18\" height=\"24\" rx=\"3\" fill=\"#8d98a3\"/>\n            <g class=\"svg-text\" font-size=\"9\" fill=\"#6a7680\" font-weight=\"700\">\n              <text x=\"24\" y=\"82\">target</text>\n              <text x=\"55\" y=\"82\">control</text>\n            </g>\n          </svg>\n          <div class=\"case-caption\">specific</div>\n        </div>\n\n        <div class=\"case\">\n          <div class=\"case-title\">Case B</div>\n          <svg viewBox=\"0 0 105 88\" width=\"100%\" height=\"88\" role=\"img\" aria-label=\"Control greater than target false pathway claim\">\n            <line x1=\"18\" y1=\"70\" x2=\"95\" y2=\"70\" stroke=\"#ccd6de\" stroke-width=\"1.2\"/>\n            <rect x=\"28\" y=\"47\" width=\"18\" height=\"23\" rx=\"3\" fill=\"#e38b3a\"/>\n            <rect x=\"62\" y=\"24\" width=\"18\" height=\"46\" rx=\"3\" fill=\"#8d98a3\"/>\n            <g class=\"svg-text\" font-size=\"9\" fill=\"#6a7680\" font-weight=\"700\">\n              <text x=\"24\" y=\"82\">target</text>\n              <text x=\"55\" y=\"82\">control</text>\n            </g>\n          </svg>\n          <div class=\"case-caption\">false pathway claim</div>\n        </div>\n      </div>\n\n      <div class=\"emphasis\">Target degradation alone is insufficient.</div>\n\n      <div class=\"card-footer\">\n        A pathway claim survives only when the target effect exceeds the strongest matched control.\n      </div>\n    </section>\n\n    <section class=\"card\">\n      <div class=\"card-title\">4. Operator-controlled audit</div>\n\n      <div class=\"operator-grid\">\n        <div class=\"operator-box\">\n          <div class=\"section-caption\">Linear interpolation window</div>\n          <svg viewBox=\"0 0 250 135\" width=\"100%\" height=\"135\" role=\"img\" aria-label=\"Linear interpolation ECG replacement\">\n            <rect x=\"87\" y=\"35\" width=\"54\" height=\"64\" rx=\"5\" fill=\"rgba(227,139,58,.19)\" stroke=\"#e38b3a\" stroke-width=\"1.2\"/>\n            <g fill=\"none\" stroke=\"#587895\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M12 70 L37 70 C42 62 48 62 53 70 L72 70 C78 45 86 99 93 70\"/>\n              <path d=\"M136 70 C143 61 151 59 161 70 C173 83 183 86 194 70 L222 70 C227 63 232 63 237 70\"/>\n            </g>\n            <line x1=\"93\" y1=\"70\" x2=\"136\" y2=\"70\" stroke=\"#e38b3a\" stroke-width=\"3.2\" stroke-linecap=\"round\"/>\n            <g class=\"svg-text\" font-size=\"10.5\" fill=\"#6b7680\" font-weight=\"700\">\n              <text x=\"83\" y=\"118\">smooth replacement</text>\n            </g>\n          </svg>\n        </div>\n\n        <div class=\"warning\">\n          <svg viewBox=\"0 0 42 42\" width=\"38\" height=\"38\" role=\"img\" aria-label=\"Warning icon\">\n            <path d=\"M21 5 L39 36 H3 Z\" fill=\"#fff2cd\" stroke=\"#d8a739\" stroke-width=\"2\"/>\n            <line x1=\"21\" y1=\"15\" x2=\"21\" y2=\"25\" stroke=\"#8a671d\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n            <circle cx=\"21\" cy=\"31\" r=\"2.2\" fill=\"#8a671d\"/>\n          </svg>\n          <div class=\"warning-text\">Zero-masking can create boundary artifacts</div>\n        </div>\n      </div>\n\n      <div class=\"operator-lines\">\n        <div class=\"operator-line\"><span class=\"dot-small\"></span><span>Primary operator: linear interpolation</span></div>\n        <div class=\"operator-line\"><span class=\"dot-small\"></span><span>Bootstrap CI for uncertainty</span></div>\n      </div>\n\n      <div class=\"card-footer\">\n        Perturbation operators are audited because artifacts can masquerade as pathway evidence.\n      </div>\n    </section>\n\n    <section class=\"card\">\n      <div class=\"card-title\">5. External transfer and evidence tiering</div>\n\n      <div class=\"transfer-flow\">\n        <svg viewBox=\"0 0 260 118\" width=\"100%\" height=\"118\" role=\"img\" aria-label=\"External transfer from CODE to PTB-XL\">\n          <defs>\n            <marker id=\"miniArrow\" markerWidth=\"10\" markerHeight=\"10\" refX=\"8\" refY=\"5\" orient=\"auto\">\n              <path d=\"M0,0 L9,5 L0,10 Z\" fill=\"#587895\"></path>\n            </marker>\n          </defs>\n          <rect x=\"7\" y=\"24\" width=\"73\" height=\"44\" rx=\"10\" fill=\"#eef5fa\" stroke=\"#c8d9e6\"/>\n          <rect x=\"94\" y=\"24\" width=\"70\" height=\"44\" rx=\"10\" fill=\"#f7fafc\" stroke=\"#cfd9e1\"/>\n          <rect x=\"178\" y=\"24\" width=\"75\" height=\"44\" rx=\"10\" fill=\"#eef8f1\" stroke=\"#c6ddce\"/>\n          <line x1=\"82\" y1=\"46\" x2=\"91\" y2=\"46\" stroke=\"#587895\" stroke-width=\"2.8\" marker-end=\"url(#miniArrow)\"/>\n          <line x1=\"166\" y1=\"46\" x2=\"175\" y2=\"46\" stroke=\"#587895\" stroke-width=\"2.8\" marker-end=\"url(#miniArrow)\"/>\n          <g class=\"svg-text\" text-anchor=\"middle\" font-weight=\"700\">\n            <text x=\"43.5\" y=\"39\" font-size=\"10.5\" fill=\"#405b72\">CODE-15%</text>\n            <text x=\"43.5\" y=\"53\" font-size=\"9.5\" fill=\"#687681\">internal</text>\n            <text x=\"129\" y=\"40\" font-size=\"10.5\" fill=\"#4a5660\">frozen</text>\n            <text x=\"129\" y=\"54\" font-size=\"9.5\" fill=\"#687681\">weights</text>\n            <text x=\"215.5\" y=\"39\" font-size=\"10.5\" fill=\"#3f7050\">PTB-XL</text>\n            <text x=\"215.5\" y=\"53\" font-size=\"9.5\" fill=\"#687681\">fold 10</text>\n          </g>\n          <g class=\"svg-text\" font-size=\"10.5\" fill=\"#6a7680\" font-weight=\"700\" text-anchor=\"middle\">\n            <text x=\"129\" y=\"92\">no fine-tuning</text>\n            <text x=\"129\" y=\"107\">cardiologist-validated external test</text>\n          </g>\n        </svg>\n      </div>\n\n      <div class=\"matrix-wrap\">\n        <div class=\"matrix-title\">Evidence tier matrix</div>\n        <div class=\"tier-matrix\">\n          <div></div>\n          <div class=\"m-head\">1AVB</div><div class=\"m-head\">CRBBB</div><div class=\"m-head\">CLBBB</div><div class=\"m-head\">SBRAD</div><div class=\"m-head\">AFIB</div>\n\n          <div class=\"m-row\">ResNet</div>\n          <div class=\"tier-dot darkgray\"></div><div class=\"tier-dot green\"></div><div class=\"tier-dot green\"></div><div class=\"tier-dot yellow\"></div><div class=\"tier-dot darkgray\"></div>\n\n          <div class=\"m-row\">SE-Res</div>\n          <div class=\"tier-dot darkgray\"></div><div class=\"tier-dot green\"></div><div class=\"tier-dot green\"></div><div class=\"tier-dot darkgray\"></div><div class=\"tier-dot darkgray\"></div>\n\n          <div class=\"m-row\">Trans.</div>\n          <div class=\"tier-dot darkgray\"></div><div class=\"tier-dot green\"></div><div class=\"tier-dot green\"></div><div class=\"tier-dot darkgray\"></div><div class=\"tier-dot darkgray\"></div>\n        </div>\n\n        <div class=\"legend\">\n          <div class=\"legend-item\"><span class=\"legend-dot green\"></span><span>Pathway-supported</span></div>\n          <div class=\"legend-item\"><span class=\"legend-dot yellow\"></span><span>Evidence-limited</span></div>\n          <div class=\"legend-item\"><span class=\"legend-dot darkgray\"></span><span>Not supported</span></div>\n        </div>\n      </div>\n    </section>\n\n  </div>\n\n  <div class=\"safeguards\">\n    <div class=\"safeguard-title\">Three safeguards against false pathway claims</div>\n    <div class=\"badge-row\">\n      <div class=\"badge\"><span class=\"badge-num\">1</span><span>Matched controls: sensitivity ≠ specificity</span></div>\n      <div class=\"badge\"><span class=\"badge-num\">2</span><span>Operator selection: avoid perturbation artifacts</span></div>\n      <div class=\"badge\"><span class=\"badge-num\">3</span><span>External transfer: avoid dataset-specific explanations</span></div>\n    </div>\n  </div>\n\n  <div class=\"xgb-box\">\n    <div class=\"xgb-title\">Feature-space context only</div>\n    <div class=\"xgb-line\">XGBoost Simple / Clinical-MVP</div>\n    <div class=\"xgb-line\">Not assigned waveform perturbation tiers</div>\n  </div>\n\n</div>\n</body>\n</html>"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "search_result_groups": [],
+          "request_id": "wfr_019e5d5685197ade936bdbe7b557b8f1",
+          "message_type": "next",
+          "turn_exchange_id": "27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "735a0f16-0b78-446a-b0ec-fa15371ea68b",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eef0ac02-a025-4dd1-84ac-3f8450d7cb5a:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-27bfd8f9-1e63-4747-be20-f5e45c80377f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "735a0f16-0b78-446a-b0ec-fa15371ea68b",
+      "children": []
+    }
+  },
+  "current_node": "1516a96e-648f-4e33-8a78-25844afc846f"
+}

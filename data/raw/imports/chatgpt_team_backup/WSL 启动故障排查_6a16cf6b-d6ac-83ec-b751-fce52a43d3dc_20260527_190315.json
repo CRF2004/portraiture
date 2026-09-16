@@ -1,0 +1,2061 @@
+{
+  "title": "WSL 启动故障排查",
+  "create_time": 1779879795.199976,
+  "update_time": 1779879874.744383,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a16cf6b-d6ac-83ec-b751-fce52a43d3dc",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.openai.com",
+    "https://learn.microsoft.com/en-us/windows/wsl/wsl-config",
+    "https://learn.microsoft.com/en-us/windows/wsl/networking",
+    "https://docs.google.com/document/d/"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "4cf5e8a0-a99b-42f7-bd98-e2ad05c3e797"
+      ]
+    },
+    "4cf5e8a0-a99b-42f7-bd98-e2ad05c3e797": {
+      "id": "4cf5e8a0-a99b-42f7-bd98-e2ad05c3e797",
+      "message": {
+        "id": "4cf5e8a0-a99b-42f7-bd98-e2ad05c3e797",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "2b813ed1-9f82-4d13-b2df-7b0ee2cb87de"
+      ]
+    },
+    "2b813ed1-9f82-4d13-b2df-7b0ee2cb87de": {
+      "id": "2b813ed1-9f82-4d13-b2df-7b0ee2cb87de",
+      "message": {
+        "id": "2b813ed1-9f82-4d13-b2df-7b0ee2cb87de",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4cf5e8a0-a99b-42f7-bd98-e2ad05c3e797",
+      "children": [
+        "3f4cce7d-a21f-424a-8ac5-f093cd9b816d"
+      ]
+    },
+    "3f4cce7d-a21f-424a-8ac5-f093cd9b816d": {
+      "id": "3f4cce7d-a21f-424a-8ac5-f093cd9b816d",
+      "message": {
+        "id": "3f4cce7d-a21f-424a-8ac5-f093cd9b816d",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2b813ed1-9f82-4d13-b2df-7b0ee2cb87de",
+      "children": [
+        "d7fd6919-ac3c-464e-b914-3a34ecf3706b"
+      ]
+    },
+    "d7fd6919-ac3c-464e-b914-3a34ecf3706b": {
+      "id": "d7fd6919-ac3c-464e-b914-3a34ecf3706b",
+      "message": {
+        "id": "d7fd6919-ac3c-464e-b914-3a34ecf3706b",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "3f4cce7d-a21f-424a-8ac5-f093cd9b816d",
+      "children": [
+        "ee15ff37-94d8-425d-bbd4-f874a90ab363"
+      ]
+    },
+    "ee15ff37-94d8-425d-bbd4-f874a90ab363": {
+      "id": "ee15ff37-94d8-425d-bbd4-f874a90ab363",
+      "message": {
+        "id": "ee15ff37-94d8-425d-bbd4-f874a90ab363",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879792.397,
+        "update_time": 1779879821.776543,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "PS C:\\Users\\12879> wsl\r\nwsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理。\r\n灾难性故障 \r\n错误代码: Wsl/Service/E_UNEXPECTED\n\n\n# 这是怎么回事"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_source": null,
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d7fd6919-ac3c-464e-b914-3a34ecf3706b",
+      "children": [
+        "81bca7e3-90d4-4e62-9d4e-ab7078247afc"
+      ]
+    },
+    "81bca7e3-90d4-4e62-9d4e-ab7078247afc": {
+      "id": "81bca7e3-90d4-4e62-9d4e-ab7078247afc",
+      "message": {
+        "id": "81bca7e3-90d4-4e62-9d4e-ab7078247afc",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879794.96312,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "ee15ff37-94d8-425d-bbd4-f874a90ab363",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ee15ff37-94d8-425d-bbd4-f874a90ab363",
+      "children": [
+        "2edcc7a0-5c72-4da7-b745-5ecf6e200aed"
+      ]
+    },
+    "2edcc7a0-5c72-4da7-b745-5ecf6e200aed": {
+      "id": "2edcc7a0-5c72-4da7-b745-5ecf6e200aed",
+      "message": {
+        "id": "2edcc7a0-5c72-4da7-b745-5ecf6e200aed",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879796.535102,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "e5f21ed1-5051-46c7-a255-0d53663aaefc"
+        },
+        "status": "in_progress",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "e5f21ed1-5051-46c7-a255-0d53663aaefc",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "skip_reasoning_title": "跳过",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "81bca7e3-90d4-4e62-9d4e-ab7078247afc",
+      "children": [
+        "2022db81-9227-4c9b-95a6-73a752b1a965"
+      ]
+    },
+    "2022db81-9227-4c9b-95a6-73a752b1a965": {
+      "id": "2022db81-9227-4c9b-95a6-73a752b1a965",
+      "message": {
+        "id": "2022db81-9227-4c9b-95a6-73a752b1a965",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879795.022694,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我会先把这条报错拆开解释，再给你一组按风险从低到高的修复步骤。这个问题通常和 **Windows 代理/WSL 网络模式/WSL 服务状态** 有关，不一定是 Linux 本身坏了。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "is_thinking_preamble_message": true,
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "2edcc7a0-5c72-4da7-b745-5ecf6e200aed",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "2edcc7a0-5c72-4da7-b745-5ecf6e200aed",
+      "children": [
+        "ed4e0298-bd0a-41e8-9b0b-c5d33fd0388e"
+      ]
+    },
+    "ed4e0298-bd0a-41e8-9b0b-c5d33fd0388e": {
+      "id": "ed4e0298-bd0a-41e8-9b0b-c5d33fd0388e",
+      "message": {
+        "id": "ed4e0298-bd0a-41e8-9b0b-c5d33fd0388e",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779879798.0152295,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "WSL detected localhost proxy configuration but not mirrored into WSL NAT mode localhost proxy not supported E_UNEXPECTED",
+              "Microsoft WSL localhost proxy configuration not mirrored NAT mode unsupported localhost proxy"
+            ]
+          },
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "2d6e0cde-847e-432c-912a-89cfd0d27d75",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2022db81-9227-4c9b-95a6-73a752b1a965",
+      "children": [
+        "b787925a-4902-41ac-9f8a-c18431bf4641"
+      ]
+    },
+    "b787925a-4902-41ac-9f8a-c18431bf4641": {
+      "id": "b787925a-4902-41ac-9f8a-c18431bf4641",
+      "message": {
+        "id": "b787925a-4902-41ac-9f8a-c18431bf4641",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879795.022694,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"search_query\":[{\"q\":\"WSL detected localhost proxy configuration but not mirrored into WSL NAT mode localhost proxy not supported E_UNEXPECTED\"},{\"q\":\"Microsoft WSL localhost proxy configuration not mirrored NAT mode unsupported localhost proxy\"}],\"response_length\":\"short\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "b011fc17-1226-424d-90dc-e722bf95a557",
+          "reasoning_status": "is_reasoning",
+          "search_queries": [
+            {
+              "type": "search",
+              "q": "WSL detected localhost proxy configuration but not mirrored into WSL NAT mode localhost proxy not supported E_UNEXPECTED"
+            },
+            {
+              "type": "search",
+              "q": "Microsoft WSL localhost proxy configuration not mirrored NAT mode unsupported localhost proxy"
+            }
+          ],
+          "search_display_string": "正在搜索网页",
+          "searched_display_string": "已搜索网页",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "Searching WSL localhost proxy error and solutions",
+          "reasoning_titles": [
+            "Searching WSL localhost proxy error and solutions"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "ed4e0298-bd0a-41e8-9b0b-c5d33fd0388e",
+      "children": [
+        "e169e6fc-e708-4721-9383-aef27148642d"
+      ]
+    },
+    "e169e6fc-e708-4721-9383-aef27148642d": {
+      "id": "e169e6fc-e708-4721-9383-aef27148642d",
+      "message": {
+        "id": "e169e6fc-e708-4721-9383-aef27148642d",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779879798.0150585,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "WSL detected localhost proxy configuration but not mirrored into WSL NAT mode localhost proxy not supported E_UNEXPECTED",
+              "Microsoft WSL localhost proxy configuration not mirrored NAT mode unsupported localhost proxy"
+            ]
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "b787925a-4902-41ac-9f8a-c18431bf4641",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "Searching WSL localhost proxy error and solutions",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b787925a-4902-41ac-9f8a-c18431bf4641",
+      "children": [
+        "12701a80-b0ea-499f-b5b1-d4fd96f8b94d"
+      ]
+    },
+    "12701a80-b0ea-499f-b5b1-d4fd96f8b94d": {
+      "id": "12701a80-b0ea-499f-b5b1-d4fd96f8b94d",
+      "message": {
+        "id": "12701a80-b0ea-499f-b5b1-d4fd96f8b94d",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779879798.0102913,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "learn.microsoft.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/install",
+                  "title": "How to install Linux on Windows with WSL",
+                  "snippet": "6 Aug 2025 — Install Windows Subsystem for Linux with the command, wsl --install. Use a Bash terminal on your Windows machine run by your preferred Linux ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "learn.microsoft.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/networking",
+                  "title": "Accessing network applications with WSL",
+                  "snippet": "6 Aug 2025 — When the WSL2 is running with the new mirrored mode, the Windows host and WSL2 VM can connect to each other using localhost (127.0.0.1) as the ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "learn.microsoft.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/wsl-config",
+                  "title": "Advanced settings configuration in WSL",
+                  "snippet": "8 Jun 2025 — A guide to the wsl.conf and .wslconfig files used for configuring settings when running multiple Linux distributions on Windows Subsystem ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "learn.microsoft.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "github.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/microsoft/WSL/issues/10753",
+                  "title": "检测到localhost 代理配置，但未镜像到WSL。NAT 模式下的 ...",
+                  "snippet": "14 Nov 2023 — NAT 模式下的WSL 不支持localhost 代理。\" on the terminal. The key point is \"Release Preview Channel\" is requisite for mirrored network in wsl2 ?",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": 1700019036,
+                  "result_source": "bright",
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/microsoft/WSL/issues/11228",
+                  "title": "config `networkingMode=mirrored` doesn't apply to wsl2",
+                  "snippet": "28 Feb 2024 — C:\\Users\\somebody>wsl wsl: localhost proxy configuration detected, but not mirrored to WSL. WSL in NAT mode does not support the localhost proxy ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": 1709180564,
+                  "result_source": "bright",
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/microsoft/WSL/issues/10794",
+                  "title": "WSL cannot use proxy with networkingMode=mirrored",
+                  "snippet": "19 Nov 2023 — You can curl http://<host_ip>:7890 -v in wsl terminal, get a 4xx status code means that you can successfully visit clash proxy in wsl. otherwise ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": 1700387752,
+                  "result_source": "bright",
+                  "attribution": "github.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "en.wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux",
+                  "title": "Windows Subsystem for Linux",
+                  "snippet": "Windows Subsystem for Linux (WSL) is a component of Microsoft Windows that allows the use of a Linux environment from within Windows, forgoing the overhead of a ...Read more",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": 1459375999,
+                  "result_source": "bright",
+                  "attribution": "en.wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "blog.junyuanhe.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://blog.junyuanhe.com/en/article/d7rdvig7/",
+                  "title": "WSL Proxy and Mirrored Networking - Jun's Blog",
+                  "snippet": "26 Mar 2026 — WSL in NAT mode does not support localhost proxies. That immediately reminded me of a long-standing headache: WSL 2 usually cannot use the ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "blog.junyuanhe.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "extratimetalk.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://extratimetalk.com/chelsea-women-departures-signal-new-wsl-era/",
+                  "title": "Chelsea Women Departures and Bunny Shaw Decision Signals Start of a New WSL Era",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": 1779804861,
+                  "result_source": "bright",
+                  "attribution": "extratimetalk.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.thewindows12.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.thewindows12.com/blog/quickly-fix-wsl-localhost-proxy-configuration-detected-but-not-mirrored-to-wsl-wsl-in-nat-mode-does-not-support-localhost-proxy/",
+                  "title": "Quickly Fix \\\"wsl: localhost proxy configuration detected but ...",
+                  "snippet": "28 Apr 2025 — Here's the specific reason: Your Windows host has a local proxy set up, such as 127.0.0.1:1080, but this proxy configuration is not properly mirrored into the ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": 1745829212,
+                  "result_source": "bright",
+                  "attribution": "www.thewindows12.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "superuser.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://superuser.com/questions/1535269/how-to-connect-wsl-to-a-windows-localhost",
+                  "title": "How to connect wsl to a windows localhost?",
+                  "snippet": "24 Mar 2020 — I'm trying to let WSL use a localhost proxy(actually its Fiddler) on my windows, but I can't see any connection like that, and downloads usually fail, ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "superuser.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "kevinskii.dev",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://kevinskii.dev/posts/wsl-networking/",
+                  "title": "Networking Considerations in WSL | kevinskii.dev",
+                  "snippet": "18 Jul 2025 — WSL in NAT mode does not support localhost proxies. And indeed, the problem was solved. I was able to curl to the server script without doing ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "kevinskii.dev"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.wslfootball.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.wslfootball.com/news/wsl/the-barclays-wsl-season-in-numbers",
+                  "title": "The Barclays WSL Season in Numbers",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": 1779870702.505,
+                  "result_source": "bright",
+                  "attribution": "www.wslfootball.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.xda-developers.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.xda-developers.com/wsl-great-but-networking-mess-heres-how-fix-it/",
+                  "title": "WSL is great, but networking is a mess — here's how I fixed it",
+                  "snippet": "28 Oct 2025 — If you want to improve your networking experience, your best bet is to use the mirrored networking mode. This option was also added in Windows ...",
+                  "ref_id": {
+                    "turn_index": 925682,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.xda-developers.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a16cf7610a48323b7122c768c0cc25b",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "d57abea2-383c-430b-a679-000e15e1c113",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "Searching WSL localhost proxy error and solutions",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e169e6fc-e708-4721-9383-aef27148642d",
+      "children": [
+        "a6ec2c5e-bc93-417f-ba56-9de58afd37a8"
+      ]
+    },
+    "a6ec2c5e-bc93-417f-ba56-9de58afd37a8": {
+      "id": "a6ec2c5e-bc93-417f-ba56-9de58afd37a8",
+      "message": {
+        "id": "a6ec2c5e-bc93-417f-ba56-9de58afd37a8",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879800.302412,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn925682search1\"},{\"ref_id\":\"turn925682search9\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "176da1d0-a4c6-42f2-a7b0-f4c380ecee8e",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索WSL网络和autoProxy设置",
+          "reasoning_titles": [
+            "搜索WSL网络和autoProxy设置"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "12701a80-b0ea-499f-b5b1-d4fd96f8b94d",
+      "children": [
+        "7c7b4e2f-9135-401c-b0d9-12161075409b"
+      ]
+    },
+    "7c7b4e2f-9135-401c-b0d9-12161075409b": {
+      "id": "7c7b4e2f-9135-401c-b0d9-12161075409b",
+      "message": {
+        "id": "7c7b4e2f-9135-401c-b0d9-12161075409b",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779879802.3054903,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "learn.microsoft.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/networking",
+                  "title": "Accessing network applications with WSL | Microsoft Learn",
+                  "snippet": "Total lines: 208\n",
+                  "ref_id": {
+                    "turn_index": 517462,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "learn.microsoft.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/wsl-config",
+                  "title": "Advanced settings configuration in WSL | Microsoft Learn",
+                  "snippet": "Total lines: 350\n",
+                  "ref_id": {
+                    "turn_index": 517462,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "learn.microsoft.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a16cf7610a48323b7122c768c0cc25b",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "7915077e-8f99-41ea-aa4a-b166514adf47",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索WSL网络和autoProxy设置",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a6ec2c5e-bc93-417f-ba56-9de58afd37a8",
+      "children": [
+        "6fe1f0a5-5718-4df9-8c3e-b70c22f3a640"
+      ]
+    },
+    "6fe1f0a5-5718-4df9-8c3e-b70c22f3a640": {
+      "id": "6fe1f0a5-5718-4df9-8c3e-b70c22f3a640",
+      "message": {
+        "id": "6fe1f0a5-5718-4df9-8c3e-b70c22f3a640",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879802.530683,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn925682search0\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "b94598d3-c39b-48ba-b70a-b461892d98d3",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "解决WSL服务失败及代理配置问题",
+          "reasoning_titles": [
+            "解决WSL服务失败及代理配置问题"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "7c7b4e2f-9135-401c-b0d9-12161075409b",
+      "children": [
+        "f21683d1-00f0-40cf-8b9c-84f7873ae042"
+      ]
+    },
+    "f21683d1-00f0-40cf-8b9c-84f7873ae042": {
+      "id": "f21683d1-00f0-40cf-8b9c-84f7873ae042",
+      "message": {
+        "id": "f21683d1-00f0-40cf-8b9c-84f7873ae042",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1779879804.2347994,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "learn.microsoft.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/install",
+                  "title": "Install WSL | Microsoft Learn",
+                  "snippet": "Total lines: 212\n",
+                  "ref_id": {
+                    "turn_index": 689855,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "learn.microsoft.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a16cf7610a48323b7122c768c0cc25b",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "a1a6a36d-54ba-4b70-a136-98173719d0ff",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "解决WSL服务失败及代理配置问题",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "6fe1f0a5-5718-4df9-8c3e-b70c22f3a640",
+      "children": [
+        "df72a08a-677d-4ffb-838b-16099950f730"
+      ]
+    },
+    "df72a08a-677d-4ffb-838b-16099950f730": {
+      "id": "df72a08a-677d-4ffb-838b-16099950f730",
+      "message": {
+        "id": "df72a08a-677d-4ffb-838b-16099950f730",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879810.357666,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "解决WSL服务启动失败问题",
+              "content": "针对Windows的localhost代理和WSL NAT设置问题，可能导致“灾难性故障 E_UNEXPECTED”。如果配置不兼容，需检查.wslconfig设置。解决步骤：\n\n1.以管理员身份运行PowerShell执行：\n   - wsl --shutdown\n   - wsl --update\n   - wsl --status\n   - wsl -l -v\n\n2. 关闭Windows代理设置：  \n   - 设置 > 网络与互联网 > 代理；禁用代理服务器。",
+              "chunks": [
+                "针对Windows的localhost代理和WSL NAT设置问题，可能导致“灾难性故障 E_UNEXPECTED”。",
+                "如果配置不兼容，需检查.wslconfig设置。",
+                "解决步骤：1.以管理员身份运行PowerShell执行：",
+                "wsl --shutdown",
+                "wsl --update",
+                "wsl --status",
+                "wsl -l -v 2.",
+                "关闭Windows代理设置：",
+                "设置 > 网络与互联网 > 代理；禁用代理服务器。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "a1a6a36d-54ba-4b70-a136-98173719d0ff"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f21683d1-00f0-40cf-8b9c-84f7873ae042",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779879795.031848,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f21683d1-00f0-40cf-8b9c-84f7873ae042",
+      "children": [
+        "7da5df86-bb54-433d-8a8a-a59bc7e96946"
+      ]
+    },
+    "7da5df86-bb54-433d-8a8a-a59bc7e96946": {
+      "id": "7da5df86-bb54-433d-8a8a-a59bc7e96946",
+      "message": {
+        "id": "7da5df86-bb54-433d-8a8a-a59bc7e96946",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779879811.005366,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 15s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 15,
+          "reasoning_start_time": 1779879795.031848,
+          "reasoning_end_time": 1779879810.9994166,
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "df72a08a-677d-4ffb-838b-16099950f730",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "df72a08a-677d-4ffb-838b-16099950f730",
+      "children": [
+        "3419ad30-20b0-4dde-8a51-f18b81ca16cf"
+      ]
+    },
+    "3419ad30-20b0-4dde-8a51-f18b81ca16cf": {
+      "id": "3419ad30-20b0-4dde-8a51-f18b81ca16cf",
+      "message": {
+        "id": "3419ad30-20b0-4dde-8a51-f18b81ca16cf",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1779879804.441979,
+        "update_time": 1779879874.741642,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "这是两个问题叠在一起了：\n\n第一行：\n\n```powershell\nwsl: 检测到 localhost 代理配置，但未镜像到 WSL。\nNAT 模式下的 WSL 不支持 localhost 代理。\n```\n\n意思是：你的 Windows 里可能开了本地代理，比如 Clash、v2rayN、VPN、Fiddler，代理地址类似 `127.0.0.1:7890`。但 WSL2 默认是 **NAT 网络模式**，在这种模式下，WSL 里的 `127.0.0.1` 指的是 Linux 自己，不是 Windows，所以 WSL 没法直接使用 Windows 的 localhost 代理。微软文档也说明，WSL2 默认 NAT 模式下，从 Linux 访问 Windows 服务要用 Windows 主机 IP；只有 mirrored 网络模式下，Windows 和 WSL 才能互相用 `localhost` 访问。citeturn517462view0\n\n后面的：\n\n```powershell\n灾难性故障\n错误代码: Wsl/Service/E_UNEXPECTED\n```\n\n这才是导致 WSL 没启动起来的核心错误。常见原因是 WSL 服务异常、`.wslconfig` 网络配置不兼容、代理配置冲突，或者 WSL 版本/Windows 版本不匹配。\n\n先按这个顺序修：\n\n### 1. 先重启 WSL\n\n在 **PowerShell 管理员** 里运行：\n\n```powershell\nwsl --shutdown\nwsl --update\nwsl --status\nwsl -l -v\n```\n\n微软文档也建议修改 WSL 配置后用 `wsl --shutdown` 让配置重新生效。citeturn517462view1\n\n然后再试：\n\n```powershell\nwsl\n```\n\n### 2. 临时关掉 Windows 代理/VPN\n\n把 Clash、v2rayN、VPN、Fiddler 之类先退出。\n\n然后检查 Windows 代理：\n\n```powershell\nnetsh winhttp show proxy\n```\n\n如果显示有代理，先重置：\n\n```powershell\nnetsh winhttp reset proxy\n```\n\n同时去：\n\n```text\nWindows 设置 → 网络和 Internet → 代理\n```\n\n把“使用代理服务器”先关掉。\n\n### 3. 临时禁用 `.wslconfig`\n\n很多 E_UNEXPECTED 是 `.wslconfig` 配坏了导致的。你现在的位置就是：\n\n```text\nC:\\Users\\12879\n```\n\n检查有没有这个文件：\n\n```powershell\nnotepad $env:USERPROFILE\\.wslconfig\n```\n\n如果有，先改成最保守配置：\n\n```ini\n[wsl2]\nnetworkingMode=NAT\nautoProxy=false\n```\n\n保存后运行：\n\n```powershell\nwsl --shutdown\nwsl\n```\n\n`.wslconfig` 是 WSL2 的全局配置文件，微软文档写明它放在 `%UserProfile%\\.wslconfig`，用于配置 WSL2 虚拟机网络等全局设置。citeturn517462view1\n\n### 4. 如果你确实需要 WSL 使用 Windows 代理\n\n不要在 WSL 里用：\n\n```bash\n127.0.0.1:7890\n```\n\nNAT 模式下应该用 Windows 主机 IP。等 WSL 能进去后，在 WSL 里查：\n\n```bash\nip route show | grep -i default | awk '{ print $3 }'\n```\n\n假设输出是：\n\n```text\n172.30.96.1\n```\n\n那代理应该写成：\n\n```bash\nexport http_proxy=http://172.30.96.1:7890\nexport https_proxy=http://172.30.96.1:7890\n```\n\n但你的代理软件要允许 LAN 连接，监听地址最好不是只绑定 `127.0.0.1`。\n\n### 5. 如果还报 E_UNEXPECTED\n\n管理员 PowerShell 里重启 WSL 服务：\n\n```powershell\nRestart-Service LxssManager\nwsl --shutdown\nwsl\n```\n\n还不行就执行：\n\n```powershell\nwsl --version\nwsl --status\nwsl -l -v\n```\n\n把这三条输出贴出来。重点看：WSL 版本、Windows 版本、你的发行版是不是 Ubuntu，以及 `.wslconfig` 里有没有 `networkingMode=mirrored`。微软文档显示 `networkingMode=mirrored`、`autoProxy` 等属于 WSL2 高级配置，并且 mirrored 需要较新的 Windows 11/WSL 支持；配置不匹配时就容易出这种网络相关启动问题。citeturn517462view1"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn517462view0",
+              "prefix": null,
+              "start_idx": 408,
+              "end_idx": 430,
+              "safe_urls": [
+                "https://learn.microsoft.com/en-us/windows/wsl/networking"
+              ],
+              "refs": [],
+              "alt": "([Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/networking))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Accessing network applications with WSL | Microsoft Learn",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/networking",
+                  "attribution": "Microsoft Learn",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn517462view1",
+              "prefix": null,
+              "start_idx": 751,
+              "end_idx": 773,
+              "safe_urls": [
+                "https://learn.microsoft.com/en-us/windows/wsl/wsl-config"
+              ],
+              "refs": [],
+              "alt": "([Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/wsl-config))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Advanced settings configuration in WSL | Microsoft Learn",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/wsl-config",
+                  "attribution": "Microsoft Learn",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn517462view1",
+              "prefix": null,
+              "start_idx": 1426,
+              "end_idx": 1448,
+              "safe_urls": [
+                "https://learn.microsoft.com/en-us/windows/wsl/wsl-config"
+              ],
+              "refs": [],
+              "alt": "([Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/wsl-config))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Advanced settings configuration in WSL | Microsoft Learn",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/wsl-config",
+                  "attribution": "Microsoft Learn",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn517462view1",
+              "prefix": null,
+              "start_idx": 2219,
+              "end_idx": 2241,
+              "safe_urls": [
+                "https://learn.microsoft.com/en-us/windows/wsl/wsl-config"
+              ],
+              "refs": [],
+              "alt": "([Microsoft Learn](https://learn.microsoft.com/en-us/windows/wsl/wsl-config))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "Advanced settings configuration in WSL | Microsoft Learn",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/wsl-config",
+                  "attribution": "Microsoft Learn",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 2241,
+              "end_idx": 2242,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "Accessing network applications with WSL | Microsoft Learn",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/networking",
+                  "attribution": "Microsoft Learn"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://learn.microsoft.com/en-us/windows/wsl/networking",
+            "https://learn.microsoft.com/en-us/windows/wsl/wsl-config"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "microsoft.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/install?utm_source=chatgpt.com",
+                  "title": "How to install Linux on Windows with WSL",
+                  "snippet": "6 Aug 2025 — Install Windows Subsystem for Linux with the command, wsl --install. Use a Bash terminal on your Windows machine run by your preferred Linux ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "microsoft.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/networking?utm_source=chatgpt.com",
+                  "title": "Accessing network applications with WSL",
+                  "snippet": "6 Aug 2025 — When the WSL2 is running with the new mirrored mode, the Windows host and WSL2 VM can connect to each other using localhost (127.0.0.1) as the ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "microsoft.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://learn.microsoft.com/en-us/windows/wsl/wsl-config?utm_source=chatgpt.com",
+                  "title": "Advanced settings configuration in WSL",
+                  "snippet": "8 Jun 2025 — A guide to the wsl.conf and .wslconfig files used for configuring settings when running multiple Linux distributions on Windows Subsystem ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "microsoft.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "github.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/microsoft/WSL/issues/10753?utm_source=chatgpt.com",
+                  "title": "检测到localhost 代理配置，但未镜像到WSL。NAT 模式下的 ...",
+                  "snippet": "14 Nov 2023 — NAT 模式下的WSL 不支持localhost 代理。\" on the terminal. The key point is \"Release Preview Channel\" is requisite for mirrored network in wsl2 ?",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/microsoft/WSL/issues/11228?utm_source=chatgpt.com",
+                  "title": "config `networkingMode=mirrored` doesn't apply to wsl2",
+                  "snippet": "28 Feb 2024 — C:\\Users\\somebody>wsl wsl: localhost proxy configuration detected, but not mirrored to WSL. WSL in NAT mode does not support the localhost proxy ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/microsoft/WSL/issues/10794?utm_source=chatgpt.com",
+                  "title": "WSL cannot use proxy with networkingMode=mirrored",
+                  "snippet": "19 Nov 2023 — You can curl http://<host_ip>:7890 -v in wsl terminal, get a 4xx status code means that you can successfully visit clash proxy in wsl. otherwise ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "github.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://github.com/microsoft/WSL?utm_source=chatgpt.com",
+                  "title": "microsoft/WSL: Windows Subsystem for Linux",
+                  "snippet": "Windows Subsystem for Linux (WSL) is a powerful way for you to run your Linux command-line tools, utilities and applications, all unmodified and directly on ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 20
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "github.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "wikipedia.org",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux?utm_source=chatgpt.com",
+                  "title": "Windows Subsystem for Linux",
+                  "snippet": "Windows Subsystem for Linux (WSL) is a component of Microsoft Windows that allows the use of a Linux environment from within Windows, forgoing the overhead of a ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wikipedia.org"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "espn.com.sg",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.espn.com.sg/soccer/story/_/id/48881938/man-city-make-bunny-shaw-one-world-highest-paid-players-sources?utm_source=chatgpt.com",
+                  "title": "Man City make Bunny Shaw one of the world's highest paid players - sources",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "espn.com.sg"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "junyuanhe.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://blog.junyuanhe.com/en/article/d7rdvig7/?utm_source=chatgpt.com",
+                  "title": "WSL Proxy and Mirrored Networking - Jun's Blog",
+                  "snippet": "26 Mar 2026 — WSL in NAT mode does not support localhost proxies. That immediately reminded me of a long-standing headache: WSL 2 usually cannot use the ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "junyuanhe.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "thephoenixnewspaper.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://thephoenixnewspaper.com/man-city-striker-and-wsl-golden-boot-winner-khadija-bunny-shaw-to-stay-at-the-reigning-champions?utm_source=chatgpt.com",
+                  "title": "Man City striker and WSL Golden Boot winner Khadija 'Bunny' Shaw to stay at the reigning champions",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "thephoenixnewspaper.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "extratimetalk.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://extratimetalk.com/chelsea-women-departures-signal-new-wsl-era/?utm_source=chatgpt.com",
+                  "title": "Chelsea Women Departures and Bunny Shaw Decision Signals Start of a New WSL Era",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "extratimetalk.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "thewindows12.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.thewindows12.com/blog/quickly-fix-wsl-localhost-proxy-configuration-detected-but-not-mirrored-to-wsl-wsl-in-nat-mode-does-not-support-localhost-proxy/?utm_source=chatgpt.com",
+                  "title": "Quickly Fix \\\"wsl: localhost proxy configuration detected but ...",
+                  "snippet": "28 Apr 2025 — Here's the specific reason: Your Windows host has a local proxy set up, such as 127.0.0.1:1080, but this proxy configuration is not properly mirrored into the ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "thewindows12.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "espn.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.espn.com/video/clip/_/id/48882899/alexia-putellas-joining-wsl-massive?utm_source=chatgpt.com",
+                  "title": "Krieger: Alexia Putellas joining the WSL would be massive",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "espn.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "superuser.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://superuser.com/questions/1535269/how-to-connect-wsl-to-a-windows-localhost?utm_source=chatgpt.com",
+                  "title": "How to connect wsl to a windows localhost?",
+                  "snippet": "24 Mar 2020 — I'm trying to let WSL use a localhost proxy(actually its Fiddler) on my windows, but I can't see any connection like that, and downloads usually fail, ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "superuser.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "chosun.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.chosun.com/english/sports-en/2026/05/27/NSSVW5NVU5CYXBCRAABKPD7FWE/?utm_source=chatgpt.com",
+                  "title": "Barcelona Legend Putellas Set for London City Lionesses Move",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "chosun.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "kevinskii.dev",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://kevinskii.dev/posts/wsl-networking/?utm_source=chatgpt.com",
+                  "title": "Networking Considerations in WSL | kevinskii.dev",
+                  "snippet": "18 Jul 2025 — WSL in NAT mode does not support localhost proxies. And indeed, the problem was solved. I was able to curl to the server script without doing ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "kevinskii.dev"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "sportcal.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.sportcal.com/news/epl-serie-a-bank-double-digit-viewership-growth-spfl-and-wsl-benefit/?utm_source=chatgpt.com",
+                  "title": "EPL, Serie A bank double-digit viewership growth, SPFL and WSL benefit",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "sportcal.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "wslfootball.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.wslfootball.com/news/wsl/the-barclays-wsl-season-in-numbers?utm_source=chatgpt.com",
+                  "title": "The Barclays WSL Season in Numbers",
+                  "snippet": "",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "wslfootball.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "xda-developers.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.xda-developers.com/wsl-great-but-networking-mess-heres-how-fix-it/?utm_source=chatgpt.com",
+                  "title": "WSL is great, but networking is a mess — here's how I fixed it",
+                  "snippet": "28 Oct 2025 — If you want to improve your networking experience, your best bet is to use the mirrored networking mode. This option was also added in Windows ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "xda-developers.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "google.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://play.google.com/store/apps/details?hl=en_SG&id=com.wsl.android&utm_source=chatgpt.com",
+                  "title": "World Surf League – Apps on Google Play",
+                  "snippet": "The World Surf League is the home of all the world's best surfers competing at the best waves around the globe to become this year's WSL World Champion.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 21
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "google.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "instagram.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.instagram.com/wsl/?hl=en&utm_source=chatgpt.com",
+                  "title": "World Surf League (@wsl)",
+                  "snippet": "The @corona #NewZealandPro is back ON! ➡️ Men's Round 3, heats 2-8 ➡️ Women's Quarterfinals ⏰ 10:05 AM local time start 35-minute heats Watch it all live at ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 22
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "instagram.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "ubuntu.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://ubuntu.com/download/wsl?utm_source=chatgpt.com",
+                  "title": "Get Ubuntu on WSL | Download",
+                  "snippet": "Download Ubuntu on WSL and access the power of a full Ubuntu terminal environment on Windows.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 23
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "ubuntu.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "reddit.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.reddit.com/r/linux4noobs/comments/9io0t5/what_is_wsl_windows_subsystem_for_linux_and_what/?utm_source=chatgpt.com",
+                  "title": "What is WSL (Windows Subsystem for Linux) and what is it ...",
+                  "snippet": "I am still struggling to understand what it is and what is it for. Can somebody pleas give me a simple, in-depth explanation of WSL?",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 24
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "reddit.com"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "code_blocks": {
+            "0": {
+              "id": "7oq4p9",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "x4bkee",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "6jebiq",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "ykh1j9",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "4": {
+              "id": "5lwmjw",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "5": {
+              "id": "yznz69",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "6": {
+              "id": "8prpba",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "7": {
+              "id": "xbc22r",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "8": {
+              "id": "xmmksm",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "9": {
+              "id": "5agb8f",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "10": {
+              "id": "krofb5",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "11": {
+              "id": "uo879y",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "12": {
+              "id": "cen0id",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "13": {
+              "id": "md3qp2",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "14": {
+              "id": "fpz2lg",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "15": {
+              "id": "u3q38e",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "16": {
+              "id": "g81z2n",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "request_id": "wfr_019e691a40d3712b915afe651b01df14",
+          "message_type": "next",
+          "turn_exchange_id": "f4740162-de38-4616-a432-9b521b64a52d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "7da5df86-bb54-433d-8a8a-a59bc7e96946",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-e431923a-b61b-4f38-b58a-770fbb5a77ef:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-f4740162-de38-4616-a432-9b521b64a52d",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "7da5df86-bb54-433d-8a8a-a59bc7e96946",
+      "children": []
+    }
+  },
+  "current_node": "3419ad30-20b0-4dde-8a51-f18b81ca16cf"
+}

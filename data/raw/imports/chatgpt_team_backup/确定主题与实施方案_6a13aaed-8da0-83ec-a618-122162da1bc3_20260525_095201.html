@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>确定主题与实施方案</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>确定主题与实施方案</h1>
+            <div class="metadata">ID: 6a13aaed-8da0-83ec-a618-122162da1bc3 | 2026/5/25 09:52:01</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:51:58</span>
+                </div>
+                <div class="message-content">你将帮我确定主题并指导我做实验（或做开发等工作都可以）、写课程设计报告书。 请你向我提问以明确主题与实施方案</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:52:44</span>
+                </div>
+                <div class="message-content">你将帮我确定主题并指导我做实验（或做开发等工作都可以）、写课程设计报告书。 请你向我提问以明确主题与实施方案 以推进课程设计的推进（需要满足课程设计任务书给出的要求，并且尽量高分）。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:52:48</span>
+                </div>
+                <div class="message-content">我先按任务书把目标压清楚：这份课程设计必须做出一个“大数据/数据分析系统”，报告里至少要有系统架构图、应用层界面展示、数据存储设计、数据分析算法实现和结果说明；评分看设计质量、能力水平、创新性。fileciteturn0file0<br><br>我会用“一个问题一个问题推进”的方式帮你定题，避免一开始选题太虚，后面做不出来。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:53:02</span>
+                </div>
+                <div class="message-content">第一个问题：<strong>这次课程设计要不要直接绑定你已有的医疗/心血管方向？</strong><br><br>我建议优先选 <strong>A</strong>，因为它最容易和你已有项目形成复用，同时比普通“客户流失分析”更有创新性。<br><br>请选择一个：<br><br><strong>A. 心血管院后康复风险预测与干预建议系统</strong>  <br>做患者数据管理、风险预测、康复依从性分析、干预建议展示。适合高分，能写出“现实应用 + 系统架构 + 数据分析 + 界面”。<br><br><strong>B. ECG 心电异常识别与数据分析系统</strong>  <br>做心电特征展示、疾病分类、模型预测、结果可视化。技术感强，但界面和业务系统感可能稍弱。<br><br><strong>C. 医疗问答/知识图谱辅助分析系统</strong>  <br>结合疾病知识图谱、患者信息、问答推荐。创新性强，但实现要控制范围，不然容易做虚。<br><br><strong>D. 保险/电商/银行客户流失分析系统</strong>  <br>最贴近任务书示例，容易做，但创新性普通，容易和别人撞题。<br><br>你先选 <strong>A/B/C/D</strong>。我推荐 <strong>A</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:54:23</span>
+                </div>
+                <div class="message-content">我想先选AB。A的话数据我不确定好不好找，我目前是只有mimic的不确定能不能用；B的话我有一篇paper在推进，可能可以复用，或者数据集之类的也有</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:54:37</span>
+                </div>
+                <div class="message-content">可以，<strong>AB 都先保留</strong>。但我建议先把它们定位成两个候选方案：<br><br><strong>A：心血管院后康复/风险管理系统</strong>  <br>优点是更像“现实应用系统”，非常贴合任务书要求的“应用层、数据存储层、数据分析层、界面展示、分析结果”。缺点是数据要认真处理。MIMIC-IV 可以用，但它是受限数据，PhysioNet 要求完成认证、培训并签署 DUA 才能访问；而且 MIMIC 数据不能随便传到第三方在线服务或 API 里处理。citeturn300611search0turn300611search3<br><br><strong>B：ECG 心电异常识别与数据分析系统</strong>  <br>优点是你已有 paper 和数据/实验积累，开发和报告都更稳。缺点是要把它包装成“大数据系统课程设计”，不能只写成模型论文。也就是说，要强调：数据采集/存储、波形管理、模型分析、结果可视化、用户界面，而不是只讲分类准确率。<br><br>从高分角度，我现在倾向于：  <br><strong>主线选 A，技术内核复用 B。</strong><br><br>也就是题目可以设计成：<br><br>&gt; <strong>面向心血管患者的多源健康数据风险分析系统设计与实现</strong><br><br>里面可以包含两个模块：<br><br>1. <strong>院后/康复风险预测模块</strong>：用结构化临床数据或模拟患者数据做风险分层。  <br>2. <strong>心电异常分析模块</strong>：复用你的 ECG 分类/分析实验，作为系统中的核心数据分析功能。<br><br>这样比单纯 A 更可实现，比单纯 B 更像一个完整系统，也更满足任务书要求。任务书明确要求课程设计报告中要有系统架构图、应用层界面、数据存储层、数据分析层，以及 Python 等工具实现界面和数据分析结果。fileciteturn0file0<br><br>我的建议是暂时不要把题目定成“康复轨迹预测”这种太大的方向，而是定成一个<strong>可落地的数据分析系统</strong>。<br><br>第二个问题：<strong>你这次课程设计更希望“稳妥完成拿高分”，还是“尽量和你正在推进的论文/项目强绑定”？</strong><br><br>请选择一个：<br><br><strong>A. 稳妥高分优先</strong>：系统功能清晰，数据容易跑通，界面和报告完整。  <br><strong>B. 论文复用优先</strong>：尽量复用你 ECG paper 的实验、图表、模型和数据。  <br><strong>C. 两者平衡</strong>：课程设计做成一个心血管数据分析系统，里面嵌入 ECG 模块，但不完全依赖论文实验。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:55:32</span>
+                </div>
+                <div class="message-content">豪，那我第一个问题选A。第二个问题选A，稳妥高分优先。工作量不用担心，我还有充足的时间</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:55:35</span>
+                </div>
+                <div class="message-content">这个选择很好：A 主题更像“系统设计”，A 稳妥高分意味着我们不追求论文级难度，而是追求系统完整、数据能跑通、报告能讲清楚。下一步最关键是把“数据来源”定稳，因为它决定实验、界面和报告叙事。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:55:49</span>
+                </div>
+                <div class="message-content">那我们就定为：<br><br><strong>主题候选名：面向心血管患者的健康风险分析与管理系统设计</strong><br><br>这个方向很适合稳妥高分，因为它能完整覆盖任务书要求的三块：<strong>系统架构图、Python 界面展示、数据分析实现与结果</strong>；任务书也明确要求系统要说明应用层、数据存储层、数据分析层，并实现界面和分析功能。fileciteturn0file0<br><br>数据上我建议别一开始就押宝 MIMIC。稳妥做法是：<br><br><strong>主数据集用 UCI Heart Failure Clinical Records</strong>：299 名心衰患者、13 个临床特征，任务可以做“死亡风险/高危患者预测”，非常贴合心血管风险管理系统。citeturn490719search0  <br><strong>备用/扩展数据集用 UCI Heart Disease</strong>：常用 14 个特征预测是否存在心脏病，适合做“心血管疾病筛查模块”。citeturn712601search1  <br><strong>MIMIC 放在报告里作为可扩展数据源</strong>：完整 MIMIC-IV 是大型 ICU/急诊电子病历数据，但正式访问有门槛；MIMIC-IV Demo 有 100 名患者，可作为系统未来扩展或数据存储设计案例。citeturn712601search2turn712601search5<br><br>所以我建议课程设计不要叫“院后康复轨迹预测”，而是叫：<br><br>&gt; <strong>面向心血管患者的健康风险分析与辅助管理系统</strong><br><br>这个题目足够现实、好实现、好写报告，也有创新空间。<br><br>第三个问题：<strong>你希望这个系统最终更偏哪一种业务场景？</strong><br><br>请选择一个：<br><br><strong>A. 医生端风险筛查系统</strong>  <br>医生上传/录入患者指标，系统预测高危风险，展示风险等级、关键影响因素、患者列表。  <br>最稳，最容易写成课程设计。<br><br><strong>B. 患者康复管理系统</strong>  <br>患者录入血压、心率、运动、用药等信息，系统给出康复风险和建议。  <br>更像应用产品，但真实数据会弱一些，可能需要模拟数据。<br><br><strong>C. 医院管理/随访工作台</strong>  <br>面向护士或随访人员，管理患者队列，筛选高危患者，安排随访优先级。  <br>系统感最强，适合高分，但界面和数据表会多一点。<br><br>我推荐 <strong>C</strong>，因为它比单纯预测模型更像“系统”，也更容易体现设计质量和创新性。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:00:55</span>
+                </div>
+                <div class="message-content">能不能做康复期间的患者健康轨迹建模，然后基于轨迹做数据分析？mimic-iv我有下载的，"UCI Heart Failure Clinical Records：299 名心衰患者"会不会不符合课程设计对"大数据"的要求？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:00:58</span>
+                </div>
+                <div class="message-content">可以做，而且这个方向比“299 条 UCI 数据做分类”更像大数据系统。关键是别把它写成“真实康复期连续监测数据”，而要把概念改准：用 MIMIC-IV 做<strong>住院/ICU期间健康状态轨迹建模</strong>，再扩展到“院后康复风险管理”的应用场景。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:01:06</span>
+                </div>
+                <div class="message-content">能做，而且我觉得<strong>这比 UCI Heart Failure 更适合高分</strong>。<br><br>但要注意一个关键表述：<strong>MIMIC-IV 不是康复期数据集</strong>。它主要是急诊、住院、ICU 电子病历数据，不是真正的“院后康复期间穿戴设备/随访数据”。MIMIC-IV 官方说明包含 ICU 患者超过 65,000 人、急诊患者超过 200,000 人，数据来源包括 hospital-wide EHR 和 ICU 系统，因此它非常适合做“大规模临床健康轨迹建模”，但不能直接说成真实康复期连续监测数据。citeturn916942search0turn916942search3<br><br>所以我建议把题目改成：<br><br>&gt; <strong>面向心血管患者的住院期健康轨迹建模与康复风险预警系统设计</strong><br><br>这个题目非常稳。它既满足课程设计任务书要求的“现实应用中的数据分析系统”，又能完整写出应用层、数据存储层、数据分析层、界面展示和 Python 数据分析实现。任务书明确要求报告里包含系统架构图、界面展示、数据存储层设计、数据分析算法和最终分析结果。fileciteturn0file0<br><br>关于你担心的 <strong>UCI Heart Failure 只有 299 条不够“大数据”</strong>，这个担心是对的。它能做课程设计，但确实不够有说服力。它更像“机器学习小实验”，不是“大数据系统设计”。如果你有 MIMIC-IV，就优先用 MIMIC-IV。UCI 可以作为备用数据集，或者放在报告里当“轻量级验证数据集”，但不要作为主数据。<br><br>我建议最终方案这样定：<br><br>## 推荐主题<br><br><strong>面向心血管患者的住院期健康轨迹建模与康复风险预警系统</strong><br><br>## 核心思想<br><br>不是只预测一次“是否死亡/是否患病”，而是把每个患者按时间切成多个状态点，例如：<br><br><strong>入院第 1 天 → 第 2 天 → 第 3 天 → 出院前</strong><br><br>每一天提取患者的生命体征、实验室检查、诊断、用药等指标，形成一条健康状态轨迹。然后系统分析：<br><br>1. 患者健康状态是在好转、稳定还是恶化；<br>2. 不同患者可以被聚成哪些轨迹类型；<br>3. 哪些患者属于高危康复风险人群；<br>4. 哪些指标导致风险升高；<br>5. 医生或随访人员应该优先关注哪些患者。<br><br>这样比普通分类高级很多，而且仍然可以稳妥实现。<br><br>## 可以做的数据分析功能<br><br>建议做 4 个模块：<br><br>### 1. 患者健康轨迹构建<br><br>从 MIMIC-IV 中抽取心血管相关患者，比如心衰、心梗、冠心病、高血压等患者。<br><br>按天聚合数据：<br><br>| 时间点 | 心率 | 血压 | 血氧 | 体温 | 白细胞 | 肌酐 | 血红蛋白 | 诊断 | 用药 | 状态评分 |<br>|---|---:|---:|---:|---:|---:|---:|---:|---|---|---:|<br>| Day 1 | ... | ... | ... | ... | ... | ... | ... | HF | ... | 72 |<br>| Day 2 | ... | ... | ... | ... | ... | ... | ... | HF | ... | 68 |<br>| Day 3 | ... | ... | ... | ... | ... | ... | ... | HF | ... | 55 |<br><br>然后定义：<br><br>- 状态评分下降：病情好转；<br>- 状态评分上升：病情恶化；<br>- 波动大：状态不稳定；<br>- 出院前仍高风险：康复风险高。<br><br>这个模块很适合写“轨迹建模”。<br><br>### 2. 轨迹类型聚类<br><br>可以用：<br><br>- K-Means；<br>- 层次聚类；<br>- DTW + 聚类；<br>- 或者更稳一点：先提取轨迹统计特征，再做 K-Means。<br><br>比如把患者分成：<br><br>| 轨迹类型 | 特征 | 解释 |<br>|---|---|---|<br>| 快速恢复型 | 风险评分持续下降 | 康复预后较好 |<br>| 稳定高危型 | 风险评分长期偏高 | 需要重点随访 |<br>| 波动恶化型 | 风险评分反复升高 | 可能存在并发症风险 |<br>| 低危稳定型 | 入院后持续低风险 | 常规管理即可 |<br><br>这个非常适合界面展示。<br><br>### 3. 康复风险预测<br><br>预测患者出院后是否需要重点随访。由于 MIMIC 没有真实院后康复标签，可以用替代标签，例如：<br><br>- 住院死亡；<br>- ICU 内死亡；<br>- 住院时间过长；<br>- 出院前高风险；<br>- 24/48 小时内病情恶化；<br>- 再次进入 ICU；<br>- 出院去向为非正常回家。<br><br>其中最稳的是：<br><br>&gt; <strong>预测患者未来 24/48 小时是否发生健康状态恶化</strong><br><br>这不需要伪造“院后康复数据”，而且完全基于 MIMIC-IV 的时间序列数据。<br><br>### 4. 影响因素解释<br><br>用 Random Forest / XGBoost / Logistic Regression 做预测，再用特征重要性解释：<br><br>- 心率升高；<br>- 血氧下降；<br>- 肌酐异常；<br>- 白细胞升高；<br>- 年龄较高；<br>- 合并症数量多；<br>- 住院前几天状态波动大。<br><br>这个部分很容易写进报告，也符合课程设计“数据分析结果”的要求。<br><br>## 系统界面可以怎么做<br><br>用 <strong>Streamlit</strong> 最稳。<br><br>界面可以有 4 页：<br><br>1. <strong>数据概览页面</strong>  <br>   展示患者数量、记录数量、心</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:01:47</span>
+                </div>
+                <div class="message-content">能不能做康复期间的患者健康轨迹建模，然后基于轨迹做数据分析？mimic-iv我有下载的，"UCI Heart Failure Clinical Records：299 名心衰患者"会不会不符合课程设计对"大数据"的要求？但我也不确定这方面数据有没有，mimic-iv好像主要是面向icu和急诊的</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:01:52</span>
+                </div>
+                <div class="message-content">可以做，而且这个方向比“299 条表格分类”更像大数据系统；但要把“康复轨迹”定义得现实一点，不能硬说 MIMIC 是康复数据。我要先核对一下 MIMIC-IV 和公开轨迹数据的适配性，再给你一个可落地方案。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:02:02</span>
+                </div>
+                <div class="message-content">能做，而且我觉得这比单纯用 UCI 299 条数据做分类更适合拿高分。你的判断是对的：<strong>UCI Heart Failure Clinical Records 作为主数据集确实偏小</strong>，虽然任务书没有明确规定数据量下限，但“大数据系统课程设计”如果只用 299 条表格数据，系统感和数据规模感都弱。任务书要求的是设计一个现实应用的数据分析系统，并包含架构、界面、数据存储和数据分析实现。fileciteturn0file0<br><br>但要注意一个关键点：<strong>MIMIC-IV 不是康复数据集</strong>。它主要是急诊、住院、ICU 场景数据。官方介绍里，MIMIC-IV 包含 ICU 患者和急诊患者数据，MIMIC-IV v3.1 规模包括超过 65,000 名 ICU 患者和超过 200,000 名急诊患者；MIMIC-IV-ED 还包含约 425,000 次急诊就诊记录。citeturn651177search0turn651177search13 所以如果我们硬写“康复期间患者轨迹”，会有一点数据语义不严谨。<br><br>更稳妥的改法是：<br><br>&gt; <strong>面向心血管患者的住院—康复衔接健康轨迹分析系统</strong><br><br>或者：<br><br>&gt; <strong>面向心血管患者的健康轨迹建模与出院后风险管理系统</strong><br><br>这样就合理了：  <br>MIMIC-IV 提供的是<strong>住院/ICU/急诊期间的生命体征、化验、诊断、用药、结局等轨迹数据</strong>；系统分析这些轨迹，然后服务于<strong>出院后康复随访优先级、风险分层、健康管理建议</strong>。这比直接声称“真实康复期数据”更严谨。<br><br>我建议你的课程设计主线这样定：<br><br>## 推荐主题<br><br><strong>面向心血管患者的健康轨迹建模与风险管理系统设计</strong><br><br>核心故事是：<br><br>患者在住院或 ICU 期间会产生连续的生命体征、实验室检查、诊断、用药等数据。系统从 MIMIC-IV 中抽取心血管相关患者，构建患者健康轨迹，识别不同轨迹模式，并预测患者风险等级，辅助医生或随访人员制定出院后康复管理优先级。<br><br>这个主题有几个好处：<br><br>第一，<strong>符合大数据课程设计</strong>。MIMIC-IV 的规模远远强于 UCI 299 条数据，能写数据采集、清洗、存储、ETL、分析建模、可视化。  <br>第二，<strong>符合现实应用</strong>。医院确实需要对心血管患者做风险分层和随访管理。  <br>第三，<strong>实验不难失控</strong>。我们不需要做复杂 Transformer 轨迹模型，课程设计可以用传统机器学习 + 聚类 + 可视化，稳定跑通。  <br>第四，<strong>比普通分类系统更有创新性</strong>。不是只预测死亡/是否患病，而是做“轨迹模式分析”。<br><br>## 具体可以做什么实验<br><br>可以分成三个分析任务。<br><br><strong>任务 1：患者健康轨迹构建</strong><br><br>从 MIMIC-IV 中抽取心血管相关患者，比如心衰、冠心病、心律失常、高血压等。然后按时间窗口整理数据：<br><br>例如以 ICU 入院后的前 24h、48h、72h 为轨迹窗口，提取：<br><br>生命体征：心率、收缩压、舒张压、平均动脉压、呼吸频率、体温、血氧饱和度。  <br>实验室检查：肌酐、尿素氮、钠、钾、白细胞、血红蛋白、乳酸等。  <br>治疗信息：用药、输液、通气、ICU 停留时间。  <br>结局标签：院内死亡、ICU 死亡、住院时长、是否再入 ICU 等。<br><br>MIMIC-IV 本身包含生命体征、实验室检查、诊断、用药等电子病历信息，适合做这种纵向轨迹建模。citeturn651177search5turn651177search7<br><br><strong>任务 2：轨迹模式聚类</strong><br><br>把患者轨迹变成特征，例如：<br><br>每个指标的均值、最大值、最小值、最后一次值、变化斜率、波动程度。  <br>然后做 K-Means、层次聚类、DBSCAN 或 PCA + KMeans。<br><br>最后可以得到几类轨迹：<br><br>低风险稳定型。  <br>血压/心率波动型。  <br>肾功能恶化型。  <br>感染/炎症升高型。  <br>多指标恶化型。<br><br>这个部分很适合写成“数据分析功能”，也很适合做图。<br><br><strong>任务 3：基于轨迹的风险预测</strong><br><br>用轨迹特征预测风险标签，比如：<br><br>院内死亡风险。  <br>ICU 停留时间是否过长。  <br>是否属于高危患者。  <br>是否需要重点随访。<br><br>模型可以用：<br><br>逻辑回归。  <br>决策树。  <br>随机森林。  <br>XGBoost / LightGBM。<br><br>课程设计里不一定追求最高性能，重点是能展示完整流程：数据清洗 → 轨迹构建 → 聚类分析 → 风险预测 → 结果展示。<br><br>## 系统界面可以怎么做<br><br>用 <strong>Streamlit</strong> 最稳。<br><br>界面可以有 4 个页面：<br><br><strong>1. 患者概览页</strong>  <br>展示患者数量、心血管患者数量、死亡率、高危比例、平均住院时长。<br><br><strong>2. 健康轨迹分析页</strong>  <br>选择某个患者，展示心率、血压、血氧、肌酐等随时间变化的曲线。<br><br><strong>3. 轨迹分群页</strong>  <br>展示不同患者轨迹聚类结果，比如 PCA 二维散点图、各类患者的指标趋势对比。<br><br><strong>4. 风险预测页</strong>  <br>输入或选择患者，系统输出风险等级、预测概率、主要风险因素、随访建议。<br><br>这样报告里的“界面展示”就不会空。任务书明确要求利用 Python 等工具实现应用层界面，并进行文字介绍。fileciteturn0file0<br><br>## 数据存储层怎么写<br><br>可以设计得像一个小型大数据系统：<br><br>原始层：MIMIC-IV CSV 文件。  <br>清洗层：用 Python/Pandas 或 PySpark 清洗。  <br>存储层：SQLite / MySQL / PostgreSQL / DuckDB。  <br>分析层：Scikit-learn、XGBoost、Pandas、Matplotlib、Plotly。  <br>应用层：Streamlit 可视化系统。<br><br>如果想体现“大数据系统”味道，可以加入：<br><br><strong>PySpark 做数据清洗和聚合</strong>。  <br>哪怕最后模型训练用 Pandas + sklearn，也可以说 Spark 负责大规模数据预处理，机器学习模块负责建模分析。<br><br>## 我不建议直接做“康复期间轨迹”的原因<br><br>真实康复期数据一般需要可穿戴设备、随访记录、家庭血压、运动记录、用药依从性等。公开的高质量心血管康复纵向数据并不好找。现在确实有很多数字健康和远程心脏康复研究关注可穿戴设备、活动监测、远程随访等，但这些研究数据通常未必公开到可以直接下载复现。citeturn651177search6turn651177search9<br><br>所以最稳妥的课程设计叙事是：<br><br>&gt; 本系统基于住院期多源医疗数据构建患者健康轨迹，识别不同风险演化模式，并为出院后的康复随访和健康管理提供辅助决策。<br><br>这样既不会和 MIMIC-IV 的数据场景冲突，又能保留“康复管理”的应用价值。<br><br>## 当前最推荐的最终题目<br><br>我建议定这个：<br><br>&gt; <strong>基于 MIMIC-IV 的心血管患者健康轨迹建模与风险管理系统设计</strong><br><br>或者更课程设计一点：<br><br>&gt; <strong>面向心血管患者的健康轨迹分析与风险预测系统设计与实现</strong><br><br>我更推荐第二个，标题更像系统设计，不像纯论文。<br><br>下一步我只问一个关键问题：  <br><strong>你想把预测目标设成哪一个？</strong><br><br><strong>A. 院内死亡风险预测</strong>：最直接，标签容易取，结果容易评价。  <br><strong>B. ICU 停留时间过长预测</strong>：更像资源管理，死亡标签压力小。  <br><strong>C. 出院后康复随访优先级预测</strong>：最贴近康复场景，但需要我们自己把 A/B 的结果转化成随访优先级。  <br><strong>D. 先做 A，再把死亡风险转化为康复随访优先级</strong>：最稳，也最好写。<br><br>我推荐 <strong>D</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:10:45</span>
+                </div>
+                <div class="message-content">em我想，任务目标能不能新颖一点，现在太学术太paper了。毕竟是课程设计嘛，我举个例子，比如我之前想过有没有可能有这样的一个“查询工具”：输入患者现在的轨迹，然后平台根据已经积累的患者轨迹数据库，推荐最有参考意义的候选患者轨迹，从而给出目标患者下一时间步甚至若干时间步可能的健康情况？这里只是一个例子，我想说的是，我们不一定要太学术地聚焦于传统的诊断任务啊、风险预测啊这些常见且难的任务</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:10:48</span>
+                </div>
+                <div class="message-content">可以，而且我觉得你这个想法<strong>比传统“死亡风险预测/疾病分类”更适合课程设计高分</strong>。<br><br>因为它不是单纯做一个模型，而是做一个有明确使用场景的系统：<br><br>&gt; <strong>医生/随访人员输入一个当前患者的健康轨迹，系统从历史患者轨迹库中检索最相似的患者，展示这些参考患者后续的健康变化，并据此辅助判断目标患者未来可能的发展趋势。</strong><br><br>这个方向可以叫：<br><br>&gt; <strong>基于相似健康轨迹检索的心血管患者辅助随访系统</strong><br><br>或者更正式一点：<br><br>&gt; <strong>面向心血管患者的健康轨迹检索与趋势辅助分析系统设计</strong><br><br>我更推荐第二个。<br><br>---<br><br>## 这个主题为什么好<br><br>它比“风险预测”更新颖，因为核心不是直接给一个黑箱预测结果，而是：<br><br><strong>当前患者轨迹 → 找相似历史患者 → 查看相似患者后续变化 → 辅助判断未来趋势</strong><br><br>这更像一个“查询工具”或“辅助决策平台”，课程设计味道更强，也更容易做界面。<br><br>同时它完全满足任务书要求：<br><br>系统架构图可以画成：数据采集层、轨迹数据库、轨迹检索模块、趋势分析模块、应用展示层。  <br>界面可以用 Python/Streamlit 实现。  <br>数据分析可以实现相似轨迹检索、轨迹聚类、后续趋势统计、风险等级辅助判断。  <br>任务书要求报告必须包含系统架构、界面展示、数据分析实现和分析结果，这个题目刚好都能覆盖。fileciteturn0file0<br><br>---<br><br>## 我建议的核心系统功能<br><br>系统不要叫“预测模型”，而是叫：<br><br><strong>健康轨迹参考系统</strong><br><br>它有 4 个核心功能：<br><br>### 1. 患者轨迹查询<br><br>用户选择或输入一个目标患者，系统展示该患者前若干小时/天的健康轨迹。<br><br>比如：<br><br>心率变化  <br>血压变化  <br>血氧变化  <br>呼吸频率变化  <br>体温变化  <br>肌酐、尿素氮、白细胞等化验指标变化<br><br>这一步负责让系统“像个系统”，不是只跑模型。<br><br>---<br><br>### 2. 相似患者轨迹检索<br><br>系统从历史数据库中找出最相似的 K 个患者。<br><br>可以用比较稳的算法：<br><br><strong>方案 1：特征向量相似度检索</strong>  <br>把患者前 24h 或 48h 的轨迹转成特征：<br><br>均值  <br>最大值  <br>最小值  <br>最后一次值  <br>变化斜率  <br>波动程度  <br>缺失率  <br><br>然后用：<br><br>余弦相似度  <br>欧氏距离  <br>KNN 检索  <br><br>这是最稳的实现。<br><br><strong>方案 2：时间序列相似度检索</strong>  <br>对心率、血压、血氧等时间序列用 DTW，也就是动态时间规整，找形状相似的轨迹。<br><br>这个更有“轨迹建模”味道，但实现稍微复杂一点。<br><br><strong>方案 3：轨迹嵌入检索</strong>  <br>用 PCA、AutoEncoder 或简单神经网络把轨迹压缩成 embedding，然后在 embedding 空间里找相似患者。<br><br>这个听起来高级，但课程设计里不一定需要上来就做。<br><br>我建议主方案用 <strong>特征向量相似度检索 + KNN</strong>，扩展部分可以写 DTW 或轨迹嵌入。<br><br>---<br><br>### 3. 相似患者后续趋势分析<br><br>找到相似患者后，不只是列出来，而是统计这些相似患者后面</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:11:36</span>
+                </div>
+                <div class="message-content">em我想，任务目标能不能新颖一点，现在太学术太paper了。毕竟是课程设计嘛，我举个例子，比如我之前想过有没有可能有这样的一个“查询工具”：输入患者现在的轨迹，然后平台根据已经积累的患者轨迹数据库，推荐最有参考意义的候选患者轨迹，从而给出目标患者下一时间步甚至若干时间步可能的健康情况？这里只是一个例子，我想说的是，我们不一定要太学术地聚焦于传统的诊断任务啊、风险预测啊这些常见且难的任务。我们课程设计主要是体现学生对课程的理解以及所学知识的应用，而不是科研上的那种对学术的追求</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:11:41</span>
+                </div>
+                <div class="message-content">你这个思路反而更适合课程设计：它不是在硬卷模型精度，而是在展示“数据采集—存储—检索—分析—可视化—辅助决策”的系统能力。这个方向可以做得新颖，而且比传统死亡预测更容易讲成一个完整平台。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:11:41</span>
+                </div>
+                <div class="message-content">可以，而且我觉得你这个方向<strong>比传统风险预测更适合课程设计高分</strong>。<br><br>你真正想做的不是“我训练一个模型预测死亡率”，而是：<br><br>&gt; <strong>基于历史患者轨迹库的相似病例检索与健康趋势参考系统</strong><br><br>这个主题更像一个“大数据系统”，也更有产品感。它满足任务书要求的现实应用、系统架构、界面展示、数据分析实现等内容。任务书明确要求报告中包含应用层、数据存储层、数据分析层，以及 Python 工具实现界面和分析功能。fileciteturn0file0<br><br>我建议题目可以定成：<br><br>## 推荐题目<br><br><strong>面向心血管患者的健康轨迹相似检索与趋势分析系统设计</strong><br><br>或者更直白一点：<br><br><strong>基于 MIMIC-IV 的心血管患者轨迹检索与健康趋势参考系统</strong><br><br>这个题目比“风险预测系统”新颖很多，而且不会太学术。<br><br>---<br><br>## 系统核心功能可以这样设计<br><br>用户输入一个目标患者当前的健康轨迹，例如最近 24 小时或 48 小时的：<br><br>心率、血压、血氧、呼吸频率、体温、肌酐、尿素氮、白细胞、血红蛋白等指标。<br><br>系统在历史患者轨迹数据库中检索：<br><br><strong>哪些历史患者在当前阶段和这个患者最相似？</strong><br><br>然后展示这些相似患者后续的发展情况，例如：<br><br>他们接下来 24 小时生命体征是稳定、改善还是恶化？  <br>他们 ICU 停留时间是否较长？  <br>他们是否进入高风险状态？  <br>他们最终转归如何？  <br>当前患者更接近哪一类历史轨迹？<br><br>注意，这里不要写成“系统准确预测患者未来病情”，那样太医学化、太重。更稳妥的表达是：<br><br>&gt; 系统基于历史相似轨迹，为目标患者提供未来健康趋势参考和相似病例辅助分析。<br><br>这既安全，又符合课程设计定位。<br><br>---<br><br>## 它和传统预测任务的区别<br><br>传统做法是：<br><br>&gt; 输入患者特征 → 模型输出死亡风险/是否高危。<br><br>你的新方案是：<br><br>&gt; 输入患者当前轨迹 → 检索历史相似轨迹 → 展示相似患者后续变化 → 给出趋势参考。<br><br>这个更像一个“临床数据查询与分析工具”，而不是单纯分类器。课程设计里会更好讲，因为它包含：<br><br>数据存储：历史患者轨迹库。  <br>数据分析：轨迹相似度计算、聚类、趋势统计。  <br>应用界面：输入患者、展示相似轨迹、展示后续走势。  <br>系统设计：检索模块、轨迹数据库、分析模块、可视化模块。<br><br>这比单纯训练一个决策树高级，也比深度学习预测更稳。<br><br>---<br><br>## 可以实现的分析方法<br><br>不需要复杂到 Transformer。课程设计可以用这些方法，足够了：<br><br>### 1. 轨迹标准化<br><br>不同患者时间长度不同，所以先统一成时间窗口。<br><br>例如：<br><br>前 24 小时，每 4 小时一个时间片。  <br>每个时间片统计平均心率、平均血压、最低血氧、最高体温等。  <br>最后得到一个固定长度的轨迹向量。<br><br>比如一个患者可以表示成：<br><br><pre><code class="language-text">[HR_0-4h, HR_4-8h, ..., SpO2_0-4h, SpO2_4-8h, ..., Creatinine_0-24h]</code></pre><br><br>### 2. 相似轨迹检索<br><br>可以实现三种相似度：<br><br><strong>欧氏距离</strong>：最简单，适合课程设计。  <br><strong>余弦相似度</strong>：适合比较趋势方向。  <br><strong>DTW 动态时间规整</strong>：更有亮点，适合处理时间错位的轨迹。<br><br>报告里可以写：<br><br>&gt; 系统采用标准化后的多变量时间序列作为患者轨迹表示，并通过相似度计算从历史轨迹库中检索 Top-K 相似患者。<br><br>### 3. 相似患者后续趋势分析<br><br>检索到 Top-10 或 Top-20 相似患者后，不是只给列表，而是分析他们后续走势。<br><br>例如展示：<br><br>相似患者后续 24h 平均心率趋势。  <br>相似患者后续 24h 血氧变化趋势。  <br>相似患者中有多少比例进入高危状态。  <br>相似患者平均 ICU 停留时间。  <br>相似患者主要结局分布。<br><br>这就是你的“下一时间步甚至若干时间步可能健康情况”。<br><br>### 4. 轨迹类型归纳<br><br>可以再加一个聚类模块：<br><br>稳定型轨迹。  <br>持续恶化型轨迹。  <br>波动恢复型轨迹。  <br>循环/呼吸不稳定型轨迹。  <br>肾功能恶化型轨迹。<br><br>然后系统告诉用户：<br><br>&gt; 当前患者最接近“波动恢复型轨迹”，历史相似患者中多数在 24—48 小时内指标趋于稳定。<br><br>这样课程设计的创新性就出来了。<br><br>---<br><br>## 系统界面可以做成这样<br><br>用 Streamlit 做四个页面：<br><br>### 页面 1：患者轨迹库概览<br><br>展示：<br><br>患者总数。  <br>心血管患者数量。  <br>轨迹样本数量。  <br>指标缺失率。  <br>不同结局分布。  <br>不同轨迹类型比例。<br><br>### 页面 2：目标患者轨迹查询<br><br>用户选择一个患者 ID，或者上传一段患者指标数据。<br><br>系统展示：<br><br>该患者当前 24h/48h 指标曲线。  <br>心率、血压、血氧、肌酐等变化趋势。  <br>当前轨迹特征摘要。<br><br>### 页面 3：相似病例推荐<br><br>系统展示 Top-K 相似患者：<br><br>患者编号。  <br>相似度分数。  <br>主要相似指标。  <br>后续走势。  <br>最终结局。<br><br>还可以画一张图：目标患者轨迹和相似患者轨迹叠加对比。<br><br>### 页面 4：健康趋势参考<br><br>展示基于相似患者群体得到的趋势：<br><br>后续 24h 指标均值曲线。  <br>高危比例。  <br>稳定/恶化/恢复分布。  <br>系统给出的随访或观察建议。<br><br>这里的建议不要写得像医疗处方，可以写成：<br><br>&gt; 建议重点关注血氧、心率波动和肾功能指标变化。<br><br>这样就够了。<br><br>---<br><br>## 报告里的系统架构可以这样写<br><br>整体架构：<br><br><pre><code class="language-text">数据源层：
+MIMIC-IV 诊断数据、生命体征数据、实验室检查数据、ICU 记录数据
+
+数据处理层：
+患者筛选、时间窗口划分、缺失值处理、异常值处理、轨迹标准化
+
+数据存储层：
+原始数据表、患者基础信息表、轨迹特征表、相似检索索引表、分析结果表
+
+数据分析层：
+轨迹构建、相似度计算、Top-K 检索、轨迹聚类、后续趋势统计
+
+应用展示层：
+患者查询、轨迹可视化、相似病例推荐、趋势参考、统计报表</code></pre><br><br>这非常贴合课程设计，不会显得只是做了一个模型。<br><br>---<br><br>## 我建议最终不要叫“预测系统”<br><br>叫“预测”会让老师期待模型性能、评价指标、AUC、准确率这些东西。<br><br>更适合叫：<br><br><strong>健康轨迹检索系统</strong>  <br><strong>相似病例推荐系统</strong>  <br><strong>健康趋势参考系统</strong>  <br><strong>患者轨迹分析平台</strong><br><br>这样更像课程设计，也更贴合你想做的查询工具。<br><br>我目前最推荐的正式题目是：<br><br>&gt; <strong>基于 MIMIC-IV 的心血管患者健康轨迹相似检索与趋势分析系统设计</strong><br><br>这个题目有三个优点：<br><br>第一，数据来源明确。  <br>第二，系统功能明确。  <br>第三，创新点明确：不是传统分类，而是轨迹检索和相似病例参考。<br><br>---<br><br>我的下一个问题是：<br><br><strong>你希望这个系统的核心输入是什么？</strong><br><br><strong>A. 选择 MIMIC-IV 中已有的某个患者 ID，然后系统检索相似历史轨迹</strong>  <br>最稳，最容易实现，适合课程设计演示。<br><br><strong>B. 手动输入一个患者最近 24h 的指标数据，然后系统检索相似轨迹</strong>  <br>更像真实产品，但界面和数据校验工作更多。<br><br><strong>C. 两者都做：既可以选择已有患者，也可以手动输入模拟患者数据</strong>  <br>最完整，演示效果最好，工作量稍大。<br><br>我推荐 <strong>C</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:14:45</span>
+                </div>
+                <div class="message-content">A</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:14:48</span>
+                </div>
+                <div class="message-content">那就先按 <strong>A：选择 MIMIC-IV 中已有患者 ID</strong> 来设计。这个选择很稳，能把系统重点放在轨迹库构建、相似检索和结果展示上，不会被手动录入界面拖累。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:14:56</span>
+                </div>
+                <div class="message-content">好，那核心输入就定为：<br><br>&gt; <strong>用户选择 MIMIC-IV 中已有的某个患者 ID / ICU stay_id，系统检索历史轨迹库中最相似的患者轨迹，并展示这些相似患者之后的健康变化。</strong><br><br>这个方向已经很清楚了。它不是传统“诊断模型”，而是一个<strong>轨迹查询与相似病例推荐系统</strong>，更有课程设计味道。<br><br>## 当前方案可以这样定<br><br>课程设计题目先暂定为：<br><br>&gt; <strong>基于 MIMIC-IV 的心血管患者健康轨迹相似检索与趋势参考系统设计</strong><br><br>系统核心流程：<br><br><pre><code class="language-text">选择目标患者
+    ↓
+提取该患者当前阶段健康轨迹
+    ↓
+在历史患者轨迹库中计算相似度
+    ↓
+返回 Top-K 相似患者
+    ↓
+统计这些相似患者后续 24h / 48h 的指标变化
+    ↓
+生成健康趋势参考与可视化结果</code></pre><br><br>这能很好覆盖任务书要求的系统架构、界面展示、数据存储层、数据分析层和 Python 数据分析实现。fileciteturn0file0<br><br>## 为什么这个方案合理<br><br>MIMIC-IV 的 ICU 模块包含 <code>icustays</code>、<code>chartevents</code>、<code>inputevents</code>、<code>outputevents</code> 等表，其中 ICU 事件表可以通过 <code>stay_id</code> 关联 ICU 住院记录；<code>chartevents</code> 记录了 ICU 期间的床旁监测和护理记录信息，适合构建患者生命体征轨迹。citeturn840819search0<br><br>MIMIC-IV 的 hospital 模块还包括 <code>admissions</code>、<code>diagnoses_icd</code>、<code>labevents</code>、<code>patients</code>、<code>prescriptions</code> 等表，可用于筛选心血管患者、补充实验室检查和住院结局信息。citeturn840819search2<br><br>所以我们可以把系统设计成：<br><br><strong>数据源层</strong>：MIMIC-IV ICU + Hosp 表。  <br><strong>轨迹库层</strong>：每个患者一次 ICU stay 对应一条健康轨迹。  <br><strong>分析层</strong>：轨迹标准化、相似度计算、Top-K 检索、后续趋势统计。  <br><strong>应用层</strong>：患者查询、相似病例推荐、趋势可视化、报告导出。<br><br>这个比“训练一个死亡预测模型”更有系统感。<br><br>## 推荐先做一个最小可落地版本<br><br>不要一开始做太复杂。先做：<br><br><strong>当前轨迹：ICU 入科后前 24 小时。</strong>  <br><strong>未来参考：后续 24 小时。</strong>  <br><strong>检索对象：心血管相关 ICU 患者。</strong>  <br><strong>核心指标：心率、收缩压/平均动脉压、呼吸频率、血氧、体温、肌酐、白细胞、血红蛋白、钾、钠。</strong><br><br>系统返回：<br><br><pre><code class="language-text">目标患者 A：
+前 24 小时轨迹与历史患者库进行匹配
+
+Top-5 相似患者：
+1. 患者 X，相似度 0.93，后续趋势：稳定
+2. 患者 Y，相似度 0.90，后续趋势：血氧下降
+3. 患者 Z，相似度 0.88，后续趋势：心率升高
+...
+
+综合趋势参考：
+相似患者中 60% 后续指标稳定，30% 出现恶化，10% 明显改善。
+需要重点关注：血氧、心率、肌酐。</code></pre><br><br>这个演示效果会很好。<br><br>## 实验部分可以这样写<br><br>你的“实验”不是传统模型训练，而是系统的数据分析验证：<br><br>1. <strong>轨迹库构建实验</strong>  <br>   从 MIMIC-IV 中筛选心血管患者，按时间窗口生成轨迹样本。<br><br>2. <strong>相似检索实验</strong>  <br>   对目标患者计算与历史患者轨迹的距离，返回 Top-K 相似患者。<br><br>3. <strong>趋势参考实验</strong>  <br>   统计相似患者后续 24h 的生命体征和实验室指标变化，形成趋势参考。<br><br>4. <strong>可视化展示实验</strong>  <br>   在 Streamlit 中展示目标患者轨迹、相似患者轨迹对比、未来趋势分布。<br><br>这里可以加一个简单评价指标，不用太学术：<br><br><strong>相似患者后续趋势一致性</strong>。  <br>例如，Top-K 相似患者中，有多少人在后续 24h 呈现相同趋势类型：稳定、改善、恶化。<br><br>这样报告会更像“系统课程设计”，又不会空。<br><br>---<br><br>下一个关键问题：<br><br><strong>你希望“当前轨迹”和“未来参考”分别用多长时间窗口？</strong><br><br>我建议选 <strong>A</strong>。<br><br><strong>A. 当前 24h → 参考后续 24h</strong>  <br>最稳，数据最多，缺失较少，适合课程设计。<br><br><strong>B. 当前 48h → 参考后续 24h</strong>  <br>轨迹更充分，但会损失 ICU stay 较短的患者。<br><br><strong>C. 当前 24h → 参考后续 48h</strong>  <br>更像“若干时间步预测”，但后续数据缺失会更多。<br><br><strong>D. 当前 48h → 参考后续 48h</strong>  <br>最完整，但数据筛选会更严格，工作量和缺失处理更多。<br><br>我的建议是 <strong>A</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:16:56</span>
+                </div>
+                <div class="message-content">A</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:16:59</span>
+                </div>
+                <div class="message-content">好，时间窗口就定为：<br><br>&gt; <strong>当前轨迹：ICU 入科后前 24 小时</strong>  <br>&gt; <strong>趋势参考：后续 24 小时</strong><br><br>这样最稳。数据覆盖率会比 48h 高，系统逻辑也清楚：<br><br><pre><code class="language-text">目标患者前 24h 轨迹
+        ↓
+检索历史库中前 24h 最相似的患者
+        ↓
+观察这些相似患者第 24h—48h 的变化
+        ↓
+给出目标患者后续趋势参考</code></pre><br><br>这已经能很好满足课程设计要求：有现实应用场景，有数据存储层，有数据分析层，也能做 Python 界面展示和分析结果。fileciteturn0file0<br><br>下一步要定的是：<strong>轨迹由哪些指标组成</strong>。<br><br>我建议不要一开始搞太多，否则 MIMIC 表连接和缺失值处理会拖慢进度。<br><br>请选择：<br><br><strong>A. 仅生命体征轨迹</strong>  <br>包括心率、血压、呼吸频率、血氧、体温等。  <br>优点：数据密集、最容易跑通。缺点：临床信息稍弱。<br><br><strong>B. 生命体征 + 关键实验室检查</strong>  <br>生命体征基础上，加肌酐、白细胞、血红蛋白、钠、钾等。  <br>优点：更像真实健康轨迹，报告更有说服力。缺点：需要处理缺失值。<br><br><strong>C. 生命体征 + 实验室检查 + 治疗/用药信息</strong>  <br>再加入用药、通气、升压药等治疗信息。  <br>优点：系统很完整。缺点：实现复杂度明显上升。<br><br>我推荐 <strong>B</strong>：足够稳，也比只看生命体征更有“健康轨迹建模”的味道。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:18:36</span>
+                </div>
+                <div class="message-content">B，但是没有治疗等操作的话，这里的查询会不会不准？比如对目标患者下一状态的查询，可能某个候选患者轨迹在这一步其实是接受了治疗的，而目标患者并没有？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:18:39</span>
+                </div>
+                <div class="message-content">你这个担心是对的，而且说明这个选题可以做得更成熟：相似轨迹检索不是“只看指标曲线像不像”，还要考虑这些曲线背后的治疗干预，否则参考价值会被混杂因素污染。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:18:50</span>
+                </div>
+                <div class="message-content">对，这个问题非常关键。<strong>如果完全不考虑治疗操作，相似轨迹检索确实可能“不准”</strong>。<br><br>比如两个患者前 24h 的心率、血压、血氧很像：<br><br><pre><code class="language-text">患者 A：后续没有强干预，病情恶化
+患者 B：后续接受升压药/机械通气/大量补液，指标稳定</code></pre><br><br>如果系统只看到“前 24h 轨迹相似”，然后直接用患者 B 的后续稳定轨迹去参考患者 A，就会产生误导。这里本质上是<strong>治疗干预混杂</strong>：后续状态不只由当前健康轨迹决定，也受治疗行为影响。<br><br>所以你刚才选的 <strong>B：生命体征 + 关键实验室检查</strong> 是可以的，但我建议升级成：<br><br>&gt; <strong>B+：生命体征 + 关键实验室检查 + 粗粒度治疗状态标签</strong><br><br>不是把治疗细节全建模进去，而是加几个“是否发生过关键干预”的标记。这样不会把系统复杂度拉爆，又能让查询逻辑更严谨。<br><br>MIMIC-IV 是支持这么做的。它的 ICU 模块包含 <code>chartevents</code>、<code>inputevents</code>、<code>outputevents</code>、<code>procedureevents</code> 等事件表，<code>inputevents</code> 记录静脉输入和液体输入，<code>procedureevents</code> 记录 ICU 内相关操作；这些事件表都可以通过 <code>stay_id</code> 和 ICU stay 关联。citeturn796172search0 MIMIC 官方也说明 ICU 模块包含小时级生命体征、液体管理和其他记录信息。citeturn796172search3<br><br>## 我建议这样处理<br><br>不要做完整治疗建模，只加三个层次：<br><br>### 第一层：轨迹相似度<br><br>用前 24h 的生命体征和实验室检查计算相似度：<br><br>心率、平均动脉压、血氧、呼吸频率、体温、肌酐、白细胞、血红蛋白、钠、钾等。<br><br>这是主相似度。<br><br>### 第二层：干预状态过滤<br><br>在检索相似患者时，加入粗粒度条件：<br><br><pre><code class="language-text">是否机械通气
+是否使用升压药/血管活性药
+是否大量补液
+是否进行关键 ICU 操作</code></pre><br><br>比如目标患者前 24h 没有机械通气，那么优先检索同样没有机械通气的患者。目标患者使用了升压药，就优先匹配同样使用升压药的患者。<br><br>这样系统不是盲目推荐“指标相似”的人，而是推荐：<br><br>&gt; <strong>健康轨迹相似 + 治疗状态相近</strong> 的历史患者。<br><br>### 第三层：结果展示时明确标注治疗背景<br><br>相似病例列表里加一列：<br><br><pre><code class="language-text">患者ID | 相似度 | 后续趋势 | 是否机械通气 | 是否升压药 | 是否大量补液</code></pre><br><br>这样即使某个候选患者后续变好了，用户也能看到：<br><br>&gt; 他变好可能和治疗干预有关。<br><br>这比假装系统能直接预测未来要严谨很多。<br><br>## 报告里可以把它写成创新点<br><br>可以写：<br><br>&gt; 本系统不仅基于生命体征和实验室检查构建患者健康轨迹，还引入关键治疗状态作为相似病例检索的上下文约束，避免仅凭指标曲线相似导致参考病例偏差。<br><br>这个说法很适合课程设计。任务书要求系统要有数据分析层和应用层界面展示，你这里就能把“相似度计算 + 上下文过滤 + 趋势展示”写成一个完整的数据分析功能，而不是普通分类模型。fileciteturn0file0<br><br>## 但不要把目标写成“精准预测下一状态”<br><br>建议报告中这样表述：<br><br>不建议写：<br><br>&gt; 系统预测目标患者下一时间步病情。<br><br>建议写：<br><br>&gt; 系统基于历史相似患者轨迹，为目标患者提供后续健康趋势参考。<br><br>或者：<br><br>&gt; 系统检索与目标患者当前轨迹和治疗背景相近的历史病例，并统计其后续指标变化，为临床观察和随访管理提供参考。<br><br>这样就避开了医学因果和治疗决策的坑。<br><br>## 最推荐的最终方案<br><br>现在我建议我们把系统定为：<br><br>&gt; <strong>基于 MIMIC-IV 的心血管患者健康轨迹相似检索与趋势参考系统</strong><br><br>核心数据包括：<br><br><pre><code class="language-text">生命体征轨迹：
+心率、平均动脉压、血氧、呼吸频率、体温
+
+实验室检查轨迹：
+肌酐、白细胞、血红蛋白、钠、钾、尿素氮
+
+治疗状态标签：
+机械通气、升压药/血管活性药、补液/输入量、关键 ICU 操作</code></pre><br><br>其中治疗状态不一定参与复杂建模，主要用于：<br><br><strong>过滤相似病例</strong>、<strong>解释后续趋势</strong>、<strong>增强系统可信度</strong>。<br><br>下一个问题：<strong>治疗状态标签你想做到什么程度？</strong><br><br><strong>A. 不加入治疗标签，只在报告限制里说明</strong>  <br>最简单，但方案说服力弱。<br><br><strong>B. 加入 2—3 个粗粒度治疗标签：机械通气、升压药、补液量</strong>  <br>最推荐，稳妥且明显提升系统质量。<br><br><strong>C. 做更完整的治疗事件轨迹：用药、通气、液体、操作都按时间窗口建模</strong>  <br>最完整，但工作量和数据清洗难度明显增加。<br><br>我建议选 <strong>B</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:19:22</span>
+                </div>
+                <div class="message-content">B，但是没有治疗等操作的话，这里的查询会不会不准？比如对目标患者下一状态的查询，可能某个候选患者轨迹在这一步其实是接受了治疗的，而目标患者并没有？但是又引入治疗又感觉变麻烦了。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:19:28</span>
+                </div>
+                <div class="message-content">你这个担心非常关键，而且说明你已经在从“模型演示”转向“系统可信性”思考了。这里不能装作治疗不存在，否则报告里容易被老师问住。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:19:28</span>
+                </div>
+                <div class="message-content">会，<strong>你这个担心是对的</strong>。<br><br>如果只用生命体征 + 检验指标做相似轨迹检索，会出现一个问题：<br><br>&gt; 两个患者前 24h 看起来很像，但其中一个在第 20h 接受了升压药、机械通气、补液、利尿等治疗，另一个没有。那他们后续 24h 的变化就不能简单理解为“相似健康轨迹自然发展”。<br><br>这在医学数据里叫<strong>治疗混杂</strong>。课程设计里不需要把它做成很复杂的因果推断，但必须在系统设计上处理一下，否则“根据历史相似轨迹推测下一状态”这个逻辑会显得不严谨。<br><br>我建议采用一个折中方案：<strong>B+ 方案</strong>。<br><br>## 推荐方案：生命体征 + 检验为主，加入“轻量治疗上下文”<br><br>也就是说，轨迹本体仍然用：<br><br>&gt; 心率、血压、血氧、呼吸频率、体温、肌酐、白细胞、血红蛋白、钠、钾等。<br><br>但在检索相似患者时，额外加入几个非常粗粒度的治疗上下文标签，不做复杂治疗建模。<br><br>例如每个患者前 24h 增加：<br><br><pre><code class="language-text">是否使用升压药：是 / 否
+是否机械通气或呼吸支持：是 / 否
+是否存在大量补液或液体管理：是 / 否
+是否使用利尿相关治疗：是 / 否</code></pre><br><br>甚至更简单一点，可以只做三个标签：<br><br><pre><code class="language-text">循环支持：有 / 无
+呼吸支持：有 / 无
+液体管理：有 / 无</code></pre><br><br>这样系统不是完整模拟治疗过程，而是避免把“治疗背景完全不同”的患者硬放在一起比较。<br><br>## 系统逻辑可以改成这样<br><br>原来是：<br><br><pre><code class="language-text">目标患者前 24h 轨迹
+→ 检索最相似患者
+→ 查看相似患者后续 24h 趋势</code></pre><br><br>现在改成：<br><br><pre><code class="language-text">目标患者前 24h 生理轨迹 + 治疗上下文
+→ 先筛选治疗背景相近的历史患者
+→ 再计算生命体征和检验轨迹相似度
+→ 返回 Top-K 相似患者
+→ 统计这些患者后续 24h 健康趋势</code></pre><br><br>这样报告里就可以写得很稳：<br><br>&gt; 系统并不直接预测患者自然病程，而是在相似生理状态和相近治疗背景下，检索历史相似病例，并提供后续健康趋势参考。<br><br>这句话很关键。它能避免被质疑“你怎么知道未来变化不是治疗导致的”。<br><br>## 为什么这个方案适合课程设计<br><br>它不会把工作量炸开，但能明显提升系统设计质量和创新性。任务书要求的是现实应用的数据分析系统，包含架构、界面、存储和数据分析实现，不要求做复杂临床因果推断。fileciteturn0file0<br><br>你这个系统如果加入“治疗上下文匹配”，就会比普通轨迹检索高级很多：<br><br>普通版：<br><br>&gt; 找生理指标相似的患者。<br><br>升级版：<br><br>&gt; 找生理指标相似、且治疗背景相近的患者。<br><br>这就是一个很好的课程设计创新点。<br><br>## 实验可以设计成一个亮点<br><br>你可以做一个小对比实验：<br><br><strong>实验 1：不考虑治疗上下文的轨迹检索</strong>  <br>只用生命体征 + 检验指标找 Top-K 相似患者。<br><br><strong>实验 2：考虑治疗上下文的轨迹检索</strong>  <br>先按治疗背景筛选，再做轨迹相似度计算。<br><br>然后比较：<br><br><pre><code class="language-text">Top-K 相似患者是否变化
+后续趋势分布是否更集中
+稳定 / 恶化 / 改善比例是否更清晰
+系统推荐结果是否更有解释性</code></pre><br><br>这不需要复杂指标，也能体现你对数据分析系统设计的理解。<br><br>## 最终定位建议<br><br>不要把系统写成：<br><br>&gt; 预测患者未来病情。<br><br>而是写成：<br><br>&gt; 基于历史患者轨迹库的相似病例检索与健康趋势参考系统。<br><br>更准确的表述是：<br><br>&gt; 系统根据目标患者当前 24 小时的健康轨迹，在治疗背景相近的历史患者中检索相似轨迹，并统计这些历史患者后续 24 小时的健康变化，为医护人员提供趋势参考。<br><br>这个表述既新颖，又不夸大。<br><br>我的建议是：<strong>选 B+，不要选纯 B，也不要上升到完整治疗建模。</strong><br><br>下一个问题：你愿不愿意加入这三个轻量治疗上下文标签？<br><br><strong>A. 加入：循环支持、呼吸支持、液体管理</strong>  <br>最平衡，系统可信度明显提升。<br><br><strong>B. 只加入：是否使用升压药、是否机械通气</strong>  <br>最简单，容易实现。<br><br><strong>C. 暂时不加入治疗信息，只在报告中作为局限性说明</strong>  <br>最省事，但系统说服力弱一些。<br><br>我推荐 <strong>A</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:21:00</span>
+                </div>
+                <div class="message-content">A</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:21:05</span>
+                </div>
+                <div class="message-content">好，那我们采用 <strong>B+ 方案</strong>：<br><br>&gt; <strong>生命体征 + 实验室检查作为轨迹主体，加入轻量治疗上下文：循环支持、呼吸支持、液体管理。</strong><br><br>这样系统定位就很稳了：<br><br>&gt; 系统不是直接“预测疾病未来”，而是在<strong>相似生理轨迹 + 相近治疗背景</strong>下，检索历史相似患者，并统计这些患者后续 24 小时的健康变化，为医护人员提供趋势参考。<br><br>这比普通分类任务更像课程设计里的“大数据分析系统”，也能覆盖任务书要求的系统架构、界面展示、数据存储层、数据分析层和 Python 实现。fileciteturn0file0<br><br>目前方案可以固定为：<br><br><pre><code class="language-text">题目：
+基于 MIMIC-IV 的心血管患者健康轨迹相似检索与趋势参考系统设计
+
+输入：
+目标患者 ICU 入科后前 24h 的健康轨迹
+
+轨迹主体：
+生命体征 + 实验室检查
+
+治疗上下文：
+循环支持、呼吸支持、液体管理
+
+分析方法：
+先筛选治疗背景相近的患者
+再计算健康轨迹相似度
+返回 Top-K 相似患者
+统计相似患者后续 24h 趋势
+
+输出：
+相似病例列表、轨迹对比图、后续趋势分布、重点关注指标</code></pre><br><br>三个治疗上下文可以暂时这样定义：<br><br>| 标签 | 含义 | 系统中的作用 |<br>|---|---|---|<br>| 循环支持 | 是否存在升压药、强心药等循环支持行为 | 避免把血压相似但治疗强度完全不同的患者混在一起 |<br>| 呼吸支持 | 是否存在机械通气、氧疗或相关呼吸支持 | 避免把血氧趋势相似但呼吸干预不同的患者直接比较 |<br>| 液体管理 | 是否存在明显补液、出入量管理或利尿相关操作 | 辅助解释血压、肾功能、循环状态变化 |<br><br>注意：这些标签不用做得特别医学精细。课程设计重点是系统设计和数据分析流程，不是临床治疗建模。<br><br>下一个关键问题：<strong>心血管患者队列怎么筛选？</strong><br><br>请选择一个：<br><br><strong>A. 广义心血管患者队列</strong>  <br>用 ICD 诊断筛选心血管相关患者，比如心衰、冠心病、心律失常、高血压等。  <br>优点：数据量更大，符合“大数据”感觉；缺点：患者异质性更强。<br><br><strong>B. 心衰患者队列</strong>  <br>只筛选心力衰竭相关患者。  <br>优点：主题集中，轨迹解释更清楚；缺点：样本量会少一些。<br><br><strong>C. 全部 ICU 患者队列</strong>  <br>不限制心血管疾病，只做 ICU 健康轨迹检索。  <br>优点：数据量最大，实现最稳；缺点：和“心血管患者”主题弱一些。<br><br>我推荐 <strong>A</strong>：广义心血管患者队列。既有数据规模，也能保持主题聚焦。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 10:22:33</span>
+                </div>
+                <div class="message-content">能不能做冠心病的？我不太确定数据量怎么样</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:22:38</span>
+                </div>
+                <div class="message-content">可以做冠心病，而且它比“广义心血管”更聚焦，报告会更像一个真实业务场景。数据量不能凭感觉判断，最稳的做法是先用 ICD 诊断表跑一次队列统计；我下面直接给你可用的筛选口径和计数方案。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 10:22:59</span>
+                </div>
+                <div class="message-content">可以做冠心病，而且我建议把它作为<strong>主队列</strong>。不过报告里最好写成：<br><br>&gt; <strong>冠心病/缺血性心脏病患者健康轨迹相似检索与趋势参考系统</strong><br><br>原因是 MIMIC-IV 里通常不是直接有一个“冠心病=true”的字段，而是通过 ICD 诊断代码筛选。ICD-10 里缺血性心脏病范围是 <strong>I20–I25</strong>，包括心绞痛、急性心肌梗死、慢性缺血性心脏病等；ICD-9 里对应范围通常是 <strong>410–414</strong>。citeturn588344search7turn705090search0<br><br>数据量我倾向于认为<strong>够用</strong>。MIMIC-IV v3.1 官方说明包含 546,028 次住院和 94,458 次 ICU stay，ICU 模块里有高频生命体征、液体管理等数据，hosp 模块里有诊断、实验室检查、用药等信息。citeturn608496search0turn608496search4 但真正剩多少，要看你筛选后还要求“ICU stay ≥ 48h、前 24h 有足够轨迹、后 24h 有后续数据”，所以必须先跑一次计数。<br><br>你可以先用这个 SQL 看规模：<br><br><pre><code class="language-sql">-- 1. 冠心病/缺血性心脏病住院记录数量
+WITH cad_adm AS (
+    SELECT DISTINCT subject_id, hadm_id
+    FROM mimiciv_hosp.diagnoses_icd
+    WHERE
+        (icd_version = 9  AND SUBSTRING(icd_code, 1, 3) BETWEEN '410' AND '414')
+        OR
+        (icd_version = 10 AND SUBSTRING(icd_code, 1, 3) BETWEEN 'I20' AND 'I25')
+)
+SELECT
+    COUNT(DISTINCT subject_id) AS n_patients,
+    COUNT(DISTINCT hadm_id) AS n_admissions
+FROM cad_adm;</code></pre><br><br>再看有 ICU stay、且满足 48 小时窗口的数据量：<br><br><pre><code class="language-sql">-- 2. 有 ICU stay 且 ICU 停留时间 &gt;= 48h 的冠心病样本
+WITH cad_adm AS (
+    SELECT DISTINCT subject_id, hadm_id
+    FROM mimiciv_hosp.diagnoses_icd
+    WHERE
+        (icd_version = 9  AND SUBSTRING(icd_code, 1, 3) BETWEEN '410' AND '414')
+        OR
+        (icd_version = 10 AND SUBSTRING(icd_code, 1, 3) BETWEEN 'I20' AND 'I25')
+),
+cad_icu AS (
+    SELECT
+        i.subject_id,
+        i.hadm_id,
+        i.stay_id,
+        i.intime,
+        i.outtime,
+        EXTRACT(EPOCH FROM (i.outtime - i.intime)) / 3600.0 AS icu_hours
+    FROM mimiciv_icu.icustays i
+    INNER JOIN cad_adm c
+        ON i.subject_id = c.subject_id
+       AND i.hadm_id = c.hadm_id
+)
+SELECT
+    COUNT(DISTINCT subject_id) AS n_patients,
+    COUNT(DISTINCT hadm_id) AS n_admissions,
+    COUNT(DISTINCT stay_id) AS n_icu_stays,
+    COUNT(*) FILTER (WHERE icu_hours &gt;= 48) AS n_icu_stays_ge_48h
+FROM cad_icu;</code></pre><br><br>如果 <code>n_icu_stays_ge_48h</code> 有几百以上，这个课程设计就完全够做。哪怕只有几百，也比 UCI 299 条更像“大数据系统”，因为你处理的是 MIMIC 多表、多时间点、多指标轨迹，不是单表分类。任务书要求的是结合现实应用设计数据分析系统，并实现架构、界面和数据分析功能，不是硬性要求数据必须达到百万级。fileciteturn0file0<br><br>我建议最终题目改成：<br><br>&gt; <strong>基于 MIMIC-IV 的冠心病患者健康轨迹相似检索与趋势参考系统设计</strong><br><br>队列口径先这样定：<br><br><pre><code class="language-text">疾病范围：
+冠心病/缺血性心脏病患者
+
+ICD-9：
+410–414
+
+ICD-10：
+I20–I25
+
+时间窗口：
+ICU 入科后前 24h 作为查询轨迹
+ICU 入科后 24–48h 作为趋势参考窗口
+
+轨迹指标：
+生命体征 + 实验室检查
+
+治疗上下文：
+循环支持、呼吸支持、液体管理</code></pre><br><br>为了防止样本被筛太少，我建议报告里不要写“单纯冠状动脉粥样硬化患者”，而是写<strong>冠心病/缺血性心脏病患者</strong>。这样既符合临床主题，又能保证数据量。<br><br>下一个问题：你想把队列口径定成哪一种？<br><br><strong>A. 冠心病/缺血性心脏病广义队列：I20–I25、410–414</strong>  <br>最稳，数据量最大，我推荐这个。<br><br><strong>B. 急性冠脉综合征/心梗相关队列：I21、I22、410 等</strong>  <br>更聚焦，但样本会少，病情更急重。<br><br><strong>C. 慢性冠心病队列：I25、414 等</strong>  <br>更像长期管理，但 ICU 轨迹可能不如急性患者典型。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 11:05:20</span>
+                </div>
+                <div class="message-content">你先给我个初步的定位和实施方案吧</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 11:05:24</span>
+                </div>
+                <div class="message-content">我先把它整理成一个可以直接往下执行的课程设计方案：定位要新颖，但实现要稳；报告叙事要像“数据分析系统”，不是论文实验。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 11:05:36</span>
+                </div>
+                <div class="message-content">可以。我们先把课程设计定位为一个<strong>新颖但稳妥可落地的“大数据查询与分析系统”</strong>，而不是传统论文式预测任务。<br><br>## 一、初步定位<br><br>建议题目暂定为：<br><br>&gt; <strong>基于 MIMIC-IV 的冠心病患者健康轨迹相似检索与趋势参考系统设计</strong><br><br>更通俗地说，这个系统做的是：<br><br>&gt; 用户选择一个冠心病患者的 ICU 入科后前 24 小时健康轨迹，系统从历史患者轨迹库中检索治疗背景相近、生命体征和检验指标变化相似的患者，并展示这些相似患者后续 24 小时的健康趋势，作为临床观察和康复管理的参考。<br><br>这个定位比“死亡风险预测”“疾病诊断分类”更新颖，也更像课程设计里的系统开发。它能完整覆盖任务书要求的<strong>系统架构图、界面展示、数据存储层、数据分析层、Python 实现和分析结果</strong>。fileciteturn0file0<br><br>MIMIC-IV 适合这个方向，因为它是住院电子病历关系型数据库，包含实验室检查、用药、生命体征等住院期间信息；ICU 模块中也有 <code>chartevents</code>、<code>inputevents</code>、<code>outputevents</code>、<code>procedureevents</code> 等事件表，并可通过 <code>stay_id</code> 关联 ICU stay。citeturn454485search10turn454485search0<br><br>---<br><br>## 二、不要叫“康复轨迹预测”，要叫“趋势参考”<br><br>这里要讲严谨一点：<br><br>MIMIC-IV 主要是医院住院和 ICU 数据，不是真正的院外康复随访数据。所以我们不要写成：<br><br>&gt; 系统预测患者康复期间未来病情。<br><br>更稳妥的说法是：<br><br>&gt; 系统基于住院/ICU 期间健康轨迹，检索历史相似病例，并为后续观察、出院后康复随访优先级和健康管理提供趋势参考。<br><br>这个表达更安全，也更符合数据来源。<br><br>---<br><br>## 三、推荐系统名称和核心功能<br><br>系统名称可以叫：<br><br>&gt; <strong>CHD-Trajectory：冠心病患者健康轨迹相似检索与趋势参考系统</strong><br><br>核心功能分成 5 个模块：<br><br>### 1. 冠心病患者队列构建<br><br>从 MIMIC-IV 中筛选冠心病/缺血性心脏病患者。<br><br>建议 ICD 筛选口径：<br><br><pre><code class="language-text">ICD-9：410–414
+ICD-10：I20–I25</code></pre><br><br>ICD-10 的 I20–I25 对应缺血性心脏病，包括心绞痛、急性心肌梗死、慢性缺血性心脏病等；冠心病常用 ICD-9 410–414 和 ICD-10 I20–I25 作为编码范围。citeturn454485search2turn454485search17<br><br>### 2. 患者健康轨迹构建<br><br>以 ICU 入科时间为起点：<br><br><pre><code class="language-text">当前轨迹窗口：0–24h
+趋势参考窗口：24–48h</code></pre><br><br>前 24 小时用于检索相似患者，后 24 小时用于展示这些相似患者后续如何变化。<br><br>轨迹指标暂定为：<br><br><strong>生命体征：</strong><br><br><pre><code class="language-text">心率 HR
+平均动脉压 MAP / 收缩压 SBP / 舒张压 DBP
+呼吸频率 RR
+血氧 SpO2
+体温 Temperature</code></pre><br><br><strong>实验室检查：</strong><br><br><pre><code class="language-text">肌酐 Creatinine
+尿素氮 BUN
+白细胞 WBC
+血红蛋白 Hemoglobin
+钠 Sodium
+钾 Potassium
+乳酸 Lactate，可选</code></pre><br><br><strong>轻量治疗上下文：</strong><br><br><pre><code class="language-text">循环支持：是否使用升压药/强心相关治疗
+呼吸支持：是否存在机械通气/氧疗相关记录
+液体管理：是否存在明显补液、出入量或利尿相关操作</code></pre><br><br>这不是完整治疗建模，只是避免把治疗背景完全不同的患者硬比较。<br><br>---<br><br>## 四、系统分析逻辑<br><br>核心流程可以这样设计：<br><br><pre><code class="language-text">用户选择目标患者 stay_id
+        ↓
+系统读取目标患者 0–24h 健康轨迹
+        ↓
+提取生命体征、检验指标、治疗上下文
+        ↓
+筛选治疗背景相近的历史患者
+        ↓
+计算轨迹相似度
+        ↓
+返回 Top-K 相似患者
+        ↓
+统计相似患者 24–48h 后续趋势
+        ↓
+展示趋势参考、相似病例列表和关键指标变化</code></pre><br><br>重点不是“预测得准不准”，而是：<br><br>&gt; 系统如何组织、存储、检索和分析大规模医疗轨迹数据。<br><br>这个非常贴合大数据系统课程设计。<br><br>---<br><br>## 五、推荐实现方案<br><br>### 技术栈<br><br>建议这样配：<br><br><pre><code class="language-text">数据处理：Python + Pandas / PySpark
+数据库：DuckDB 或 SQLite
+建模分析：scikit-learn、tslearn 可选
+可视化：Plotly / Matplotlib
+应用界面：Streamlit
+报告绘图：draw.io / PowerPoint / Python</code></pre><br><br>如果你想体现“大数据系统”味道，可以用：<br><br><pre><code class="language-text">PySpark：做 MIMIC 多表清洗、筛选、聚合
+DuckDB：做本地分析型数据库
+Streamlit：做应用层界面</code></pre><br><br>这套组合比单纯 Pandas 更像“大数据系统”，但实现难度仍然可控。<br><br>---<br><br>## 六、数据表设计<br><br>报告里可以设计 5 张核心表。<br><br>### 1. 患者基础信息表 <code>patient_info</code><br><br><pre><code class="language-text">subject_id
+hadm_id
+stay_id
+gender
+age
+admission_type
+intime
+outtime
+icu_los
+diagnosis_group
+hospital_expire_flag</code></pre><br><br>### 2. 原始事件表 <code>raw_events</code><br><br><pre><code class="language-text">stay_id
+charttime
+item_name
+value
+unit
+source_table</code></pre><br><br>### 3. 轨迹特征表 <code>trajectory_features</code><br><br><pre><code class="language-text">stay_id
+window_start
+window_end
+hr_mean
+hr_max
+map_mean
+spo2_min
+rr_mean
+temperature_max
+creatinine_last
+wbc_max
+sodium_mean
+potassium_mean
+...</code></pre><br><br>### 4. 治疗上下文表 <code>treatment_context</code><br><br><pre><code class="language-text">stay_id
+circulation_support
+respiratory_support
+fluid_management</code></pre><br><br>### 5. 相似检索结果表 <code>similarity_results</code><br><br><pre><code class="language-text">query_stay_id
+candidate_stay_id
+similarity_score
+rank
+future_trend
+future_risk_level</code></pre><br><br>这样报告的数据存储层就会很清楚。<br><br>---<br><br>## 七、相似度计算方法<br><br>先做一个稳妥版本：<br><br>### 方案 1：标准化向量 + 欧氏距离<br><br>把前 24h 轨迹压缩成特征向量：<br><br><pre><code class="language-text">每个指标的均值、最大值、最小值、最后一次值、变化斜率、波动幅度</code></pre><br><br>然后标准化：<br><br><pre><code class="language-text">z-score 标准化</code></pre><br><br>计算距离：<br><br><pre><code class="language-text">distance = 欧氏距离
+similarity = 1 / (1 + distance)</code></pre><br><br>优点：实现简单，报告好解释。<br><br>### 方案 2：加入治疗上下文过滤<br><br>先要求候选患者满足：<br><br><pre><code class="language-text">循环支持相同或相近
+呼吸支持相同或相近
+液体管理相同或相近</code></pre><br><br>再计算轨迹相似度。<br><br>这个是你的创新点之一。<br><br>### 方案 3：可选增强，DTW 轨迹距离<br><br>如果后面时间够，可以加一个动态时间规整 DTW，用来比较时间序列形状。<br><br>但第一版不要依赖 DTW，避免实现不稳。<br><br>---<br><br>## 八、后续趋势怎么定义<br><br>系统检索 Top-K 相似患者后，需要给出“后续趋势参考”。<br><br>可以定义三个趋势类型：<br><br><pre><code class="language-text">改善：24–48h 综合健康评分下降，或关键异常指标改善
+稳定：综合评分变化不大
+恶化：综合评分上升，或关键异常指标明显恶化</code></pre><br><br>为了简单，可以构造一个健康异常评分：<br><br><pre><code class="language-text">health_score =
+心率异常程度
++ 血压异常程度
++ 血氧异常程度
++ 呼吸频率异常程度
++ 肌酐异常程度
++ 白细胞异常程度
++ 乳酸异常程度</code></pre><br><br>然后比较：<br><br><pre><code class="language-text">score_0_24h 与 score_24_48h</code></pre><br><br>输出：<br><br><pre><code class="language-text">相似患者中：
+50% 稳定
+30% 改善
+20% 恶化</code></pre><br><br>这就能形成“趋势参考”。<br><br>---<br><br>## 九、界面设计<br><br>用 Streamlit 做 4 个页面就够。<br><br>### 页面 1：系统首页 / 数据概览<br><br>展示：<br><br><pre><code class="language-text">冠心病患者数量
+ICU stay 数量
+满足 48h 轨迹要求的样本数量
+生命体征记录数量
+检验记录数量
+治疗上下文分布</code></pre><br><br>配图：<br><br><pre><code class="language-text">患者数量统计卡片
+缺失率柱状图
+ICU 停留时间分布图</code></pre><br><br>### 页面 2：目标患者轨迹查看<br><br>用户选择一个 <code>stay_id</code>。<br><br>展示：<br><br><pre><code class="language-text">前 24h 心率曲线
+前 24h 血压曲线
+前 24h 血氧曲线
+前 24h 肌酐/WBC 等检验指标
+治疗上下文标签</code></pre><br><br>### 页面 3：相似病例推荐<br><br>展示 Top-K 相似患者：<br><br><pre><code class="language-text">相似排名
+candidate_stay_id
+相似度分数
+治疗上下文
+后续趋势类型</code></pre><br><br>配图：<br><br><pre><code class="language-text">目标患者与 Top-5 相似患者轨迹叠加图
+PCA 二维相似病例分布图</code></pre><br><br>### 页面 4：趋势参考分析<br><br>展示：<br><br><pre><code class="language-text">相似患者后续 24h 趋势分布
+关键指标未来变化均值曲线
+改善/稳定/恶化比例
+重点关注指标</code></pre><br><br>输出一句系统提示：<br><br>&gt; 历史相似患者中，多数在后续 24 小时内呈稳定趋势，但血氧和肌酐波动较明显，建议重点关注呼吸状态和肾功能变化。<br><br>注意，不要写治疗建议，写“观察重点”即可。<br><br>---<br><br>## 十、实验设计<br><br>课程设计里的“实验”建议这样安排：<br><br>### 实验 1：冠心病患者轨迹库构建<br><br>目标：<br><br><pre><code class="language-text">验证系统能从 MIMIC-IV 多表中筛选冠心病患者，并构建 0–24h / 24–48h 轨迹样本。</code></pre><br><br>输出：<br><br><pre><code class="language-text">筛选患者数量
+ICU stay 数量
+最终有效轨迹样本数量
+各指标缺失率</code></pre><br><br>### 实验 2：轨迹相似检索实验<br><br>目标：<br><br><pre><code class="language-text">随机选择若干目标患者，计算其与历史轨迹库的相似度，返回 Top-K 相似患者。</code></pre><br><br>输出：<br><br><pre><code class="language-text">Top-K 相似病例列表
+相似度分数
+轨迹对比图</code></pre><br><br>### 实验 3：治疗上下文匹配对比实验<br><br>做两个版本：<br><br><pre><code class="language-text">版本 A：只看生命体征 + 检验指标
+版本 B：加入治疗上下文过滤</code></pre><br><br>比较：<br><br><pre><code class="language-text">Top-K 候选患者变化
+后续趋势分布是否更集中
+相似病例解释是否更合理</code></pre><br><br>这个实验很适合作为创新点。<br><br>### 实验 4：趋势参考展示实验<br><br>目标：<br><br><pre><code class="language-text">基于 Top-K 相似患者，统计后续 24h 指标变化，生成目标患者趋势参考。</code></pre><br><br>输出：<br><br><pre><code class="language-text">改善/稳定/恶化比例
+后续指标均值曲线
+重点关注指标</code></pre><br><br>---<br><br>## 十一、报告结构<br><br>建议报告按这个结构写：<br><br><pre><code class="language-text">1 绪论
+1.1 研究背景
+1.2 课程设计目标
+1.3 系统主要功能
+
+2 需求分析
+2.1 应用场景分析
+2.2 用户角色分析
+2.3 功能需求
+2.4 非功能需求
+
+3 系统总体设计
+3.1 系统架构设计
+3.2 数据流程设计
+3.3 功能模块设计
+3.4 数据库设计
+
+4 数据处理与轨迹建模
+4.1 数据来源
+4.2 冠心病患者队列筛选
+4.3 健康轨迹构建
+4.4 治疗上下文构建
+4.5 缺失值与异常值处理
+
+5 数据分析方法
+5.1 轨迹特征表示
+5.2 相似度计算方法
+5.3 相似病例 Top-K 检索
+5.4 后续趋势统计方法
+
+6 系统实现
+6.1 开发环境
+6.2 数据处理模块实现
+6.3 相似检索模块实现
+6.4 可视化界面实现
+
+7 实验结果与界面展示
+7.1 数据集统计结果
+7.2 轨迹检索结果
+7.3 治疗上下文对比结果
+7.4 趋势参考结果
+7.5 系统界面展示
+
+8 总结与展望
+8.1 课程设计总结
+8.2 系统不足
+8.3 后续改进方向</code></pre><br><br>这个结构非常贴任务书，也比较容易写高分。<br><br>---<br><br>## 十二、我建议的最终版本<br><br>现在先不要做太大，第一版就做这个：<br><br><pre><code class="language-text">疾病队列：
+冠心病/缺血性心脏病 ICU 患者
+
+输入：
+选择一个目标 stay_id
+
+当前轨迹：
+ICU 入科后 0–24h
+
+趋势参考：
+ICU 入科后 24–48h
+
+轨迹指标：
+生命体征 + 关键检验指标
+
+治疗上下文：
+循环支持、呼吸支持、液体管理
+
+核心算法：
+治疗背景过滤 + 标准化轨迹向量 + Top-K 相似检索
+
+系统输出：
+相似病例推荐
+轨迹对比图
+后续趋势分布
+重点关注指标</code></pre><br><br>这个方案的优点是：<strong>新颖、能落地、系统感强、报告好写、比普通分类任务更像大数据系统。</strong><br><br>下一步你应该先做一件事：<strong>跑队列规模统计</strong>。先确认冠心病患者、ICU stay ≥ 48h 的样本量有多少。只要这个数量不太小，我们就正式锁题。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:03:20</span>
+                </div>
+                <div class="message-content">我现在要查一下数据量了。你告诉我需要查哪些，你需要哪些信息</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:03:26</span>
+                </div>
+                <div class="message-content">你现在先别急着抽特征，第一步只做“可行性体检”：队列规模、48h窗口保留量、核心指标覆盖率、治疗上下文覆盖率。把这些数查出来，我们就能判断冠心病方案是否稳。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:03:26</span>
+                </div>
+                <div class="message-content">你现在需要查 <strong>6 类信息</strong>。查完把结果贴给我，我就能判断：<strong>冠心病队列能不能做、样本够不够、指标选哪些、系统最终怎么定。</strong><br><br>以下默认你用的是 <strong>PostgreSQL + MIMIC-IV 官方 schema</strong>，即：<br><br><pre><code class="language-sql">mimiciv_hosp
+mimiciv_icu</code></pre><br><br>如果你的 schema 名不一样，把前缀替换掉即可。<br><br>---<br><br># 1. 先查冠心病/缺血性心脏病总体规模<br><br>我们先用广义冠心病口径：<br><br><pre><code class="language-text">ICD-9: 410–414
+ICD-10: I20–I25</code></pre><br><br>运行：<br><br><pre><code class="language-sql">WITH cad_adm AS (
+    SELECT DISTINCT subject_id, hadm_id
+    FROM mimiciv_hosp.diagnoses_icd
+    WHERE
+        (icd_version = 9  AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN '410' AND '414')
+        OR
+        (icd_version = 10 AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN 'I20' AND 'I25')
+)
+SELECT
+    COUNT(DISTINCT subject_id) AS n_patients,
+    COUNT(DISTINCT hadm_id) AS n_admissions
+FROM cad_adm;</code></pre><br><br>你需要把这个结果发我：<br><br><pre><code class="language-text">冠心病患者数：
+冠心病住院次数：</code></pre><br><br>---<br><br># 2. 查冠心病患者中有 ICU 记录且满足 48h 窗口的规模<br><br>我们的系统需要：<br><br><pre><code class="language-text">前 24h：作为查询轨迹
+后 24h：作为趋势参考</code></pre><br><br>所以 ICU stay 至少要有 48 小时。<br><br>运行：<br><br><pre><code class="language-sql">WITH cad_adm AS (
+    SELECT DISTINCT subject_id, hadm_id
+    FROM mimiciv_hosp.diagnoses_icd
+    WHERE
+        (icd_version = 9  AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN '410' AND '414')
+        OR
+        (icd_version = 10 AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN 'I20' AND 'I25')
+),
+cad_icu AS (
+    SELECT
+        i.subject_id,
+        i.hadm_id,
+        i.stay_id,
+        i.intime,
+        i.outtime,
+        EXTRACT(EPOCH FROM (i.outtime - i.intime)) / 3600.0 AS icu_hours
+    FROM mimiciv_icu.icustays i
+    INNER JOIN cad_adm c
+        ON i.subject_id = c.subject_id
+       AND i.hadm_id = c.hadm_id
+)
+SELECT
+    COUNT(DISTINCT subject_id) AS n_patients,
+    COUNT(DISTINCT hadm_id) AS n_admissions,
+    COUNT(DISTINCT stay_id) AS n_icu_stays,
+    COUNT(*) FILTER (WHERE icu_hours &gt;= 48) AS n_icu_stays_ge_48h,
+    ROUND(AVG(icu_hours)::numeric, 2) AS avg_icu_hours,
+    ROUND(PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY icu_hours)::numeric, 2) AS median_icu_hours
+FROM cad_icu;</code></pre><br><br>你需要发我：<br><br><pre><code class="language-text">冠心病 ICU stay 数：
+满足 ICU ≥ 48h 的 stay 数：
+平均 ICU 时长：
+中位 ICU 时长：</code></pre><br><br>这个数最关键。  <br>如果 <code>n_icu_stays_ge_48h &gt;= 500</code>，就很稳。  <br>如果 <code>200–500</code>，也能做。  <br>如果 <code>&lt;200</code>，就要考虑扩大到“广义心血管患者”。<br><br>---<br><br># 3. 查冠心病 ICD 子类分布<br><br>这个是为了判断到底是心梗多、慢性冠心病多，还是心绞痛多。<br><br>运行：<br><br><pre><code class="language-sql">SELECT
+    d.icd_version,
+    SUBSTRING(d.icd_code FROM 1 FOR 3) AS icd_prefix,
+    dd.long_title,
+    COUNT(DISTINCT d.subject_id) AS n_patients,
+    COUNT(DISTINCT d.hadm_id) AS n_admissions
+FROM mimiciv_hosp.diagnoses_icd d
+LEFT JOIN mimiciv_hosp.d_icd_diagnoses dd
+    ON d.icd_code = dd.icd_code
+   AND d.icd_version = dd.icd_version
+WHERE
+    (d.icd_version = 9  AND SUBSTRING(d.icd_code FROM 1 FOR 3) BETWEEN '410' AND '414')
+    OR
+    (d.icd_version = 10 AND SUBSTRING(d.icd_code FROM 1 FOR 3) BETWEEN 'I20' AND 'I25')
+GROUP BY d.icd_version, icd_prefix, dd.long_title
+ORDER BY d.icd_version, icd_prefix, n_admissions DESC;</code></pre><br><br>你可以不用全贴，发前 20 行就行。我要看：<br><br><pre><code class="language-text">I20/I21/I22/I25 或 410/411/412/413/414 谁最多</code></pre><br><br>这决定报告里叫“冠心病”还是“缺血性心脏病”更稳。<br><br>---<br><br># 4. 查生命体征覆盖率<br><br>我们暂定核心生命体征：<br><br><pre><code class="language-text">心率 HR
+血压 BP / MAP
+呼吸频率 RR
+血氧 SpO2
+体温 Temperature</code></pre><br><br>先建一个临时队列表，后面查询都会用：<br><br><pre><code class="language-sql">CREATE TEMP TABLE cad_icu48 AS
+WITH cad_adm AS (
+    SELECT DISTINCT subject_id, hadm_id
+    FROM mimiciv_hosp.diagnoses_icd
+    WHERE
+        (icd_version = 9  AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN '410' AND '414')
+        OR
+        (icd_version = 10 AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN 'I20' AND 'I25')
+),
+cad_icu AS (
+    SELECT
+        i.subject_id,
+        i.hadm_id,
+        i.stay_id,
+        i.intime,
+        i.outtime,
+        EXTRACT(EPOCH FROM (i.outtime - i.intime)) / 3600.0 AS icu_hours
+    FROM mimiciv_icu.icustays i
+    INNER JOIN cad_adm c
+        ON i.subject_id = c.subject_id
+       AND i.hadm_id = c.hadm_id
+)
+SELECT *
+FROM cad_icu
+WHERE icu_hours &gt;= 48;</code></pre><br><br>然后查生命体征覆盖率：<br><br><pre><code class="language-sql">WITH vitals AS (
+    SELECT
+        c.stay_id,
+        CASE
+            WHEN ce.itemid = 220045 THEN 'heart_rate'
+            WHEN ce.itemid IN (220050, 220179) THEN 'sbp'
+            WHEN ce.itemid IN (220052, 220181) THEN 'map'
+            WHEN ce.itemid = 220210 THEN 'resp_rate'
+            WHEN ce.itemid = 220277 THEN 'spo2'
+            WHEN ce.itemid IN (223761, 223762) THEN 'temperature'
+        END AS variable,
+        CASE
+            WHEN ce.charttime &gt;= c.intime
+             AND ce.charttime &lt; c.intime + INTERVAL '24 hours'
+                THEN '0_24h'
+            WHEN ce.charttime &gt;= c.intime + INTERVAL '24 hours'
+             AND ce.charttime &lt; c.intime + INTERVAL '48 hours'
+                THEN '24_48h'
+        END AS window
+    FROM cad_icu48 c
+    JOIN mimiciv_icu.chartevents ce
+        ON c.stay_id = ce.stay_id
+    WHERE ce.itemid IN (
+        220045,        -- Heart Rate
+        220050, 220179, -- SBP arterial / non-invasive
+        220052, 220181, -- MAP arterial / non-invasive
+        220210,        -- Respiratory Rate
+        220277,        -- SpO2
+        223761, 223762 -- Temperature
+    )
+    AND ce.valuenum IS NOT NULL
+    AND ce.charttime &gt;= c.intime
+    AND ce.charttime &lt; c.intime + INTERVAL '48 hours'
+)
+SELECT
+    variable,
+    window,
+    COUNT(DISTINCT stay_id) AS stays_with_data
+FROM vitals
+WHERE variable IS NOT NULL AND window IS NOT NULL
+GROUP BY variable, window
+ORDER BY variable, window;</code></pre><br><br>你需要发我这张表。<br><br>我主要看：<br><br><pre><code class="language-text">前 24h 覆盖率是否足够
+后 24h 覆盖率是否足够
+哪些指标可以作为核心轨迹变量</code></pre><br><br>---<br><br># 5. 查实验室检查覆盖率<br><br>建议先查这些：<br><br><pre><code class="language-text">肌酐 creatinine
+尿素氮 bun
+白细胞 wbc
+血红蛋白 hemoglobin
+钠 sodium
+钾 potassium
+乳酸 lactate</code></pre><br><br>运行：<br><br><pre><code class="language-sql">WITH labs AS (
+    SELECT
+        c.stay_id,
+        CASE
+            WHEN le.itemid = 50912 THEN 'creatinine'
+            WHEN le.itemid = 51006 THEN 'bun'
+            WHEN le.itemid = 51301 THEN 'wbc'
+            WHEN le.itemid = 51222 THEN 'hemoglobin'
+            WHEN le.itemid = 50983 THEN 'sodium'
+            WHEN le.itemid = 50971 THEN 'potassium'
+            WHEN le.itemid = 50813 THEN 'lactate'
+        END AS variable,
+        CASE
+            WHEN le.charttime &gt;= c.intime
+             AND le.charttime &lt; c.intime + INTERVAL '24 hours'
+                THEN '0_24h'
+            WHEN le.charttime &gt;= c.intime + INTERVAL '24 hours'
+             AND le.charttime &lt; c.intime + INTERVAL '48 hours'
+                THEN '24_48h'
+        END AS window
+    FROM cad_icu48 c
+    JOIN mimiciv_hosp.labevents le
+        ON c.subject_id = le.subject_id
+       AND c.hadm_id = le.hadm_id
+    WHERE le.itemid IN (
+        50912, -- Creatinine
+        51006, -- Urea Nitrogen / BUN
+        51301, -- WBC
+        51222, -- Hemoglobin
+        50983, -- Sodium
+        50971, -- Potassium
+        50813  -- Lactate
+    )
+    AND le.valuenum IS NOT NULL
+    AND le.charttime &gt;= c.intime
+    AND le.charttime &lt; c.intime + INTERVAL '48 hours'
+)
+SELECT
+    variable,
+    window,
+    COUNT(DISTINCT stay_id) AS stays_with_data
+FROM labs
+WHERE variable IS NOT NULL AND window IS NOT NULL
+GROUP BY variable, window
+ORDER BY variable, window;</code></pre><br><br>你也把这张表发我。<br><br>如果乳酸覆盖率低，可以删掉。  <br>如果肌酐、BUN、WBC、血红蛋白、钠、钾覆盖率不错，就足够了。<br><br>---<br><br># 6. 查治疗上下文是否好做<br><br>我们计划加入三个轻量治疗上下文：<br><br><pre><code class="language-text">循环支持
+呼吸支持
+液体管理</code></pre><br><br>你先不用精确抽取，先查有没有对应数据和大致覆盖率。<br><br>## 6.1 循环支持候选 itemid<br><br>先查 ICU 输入事件里有没有升压药/强心药：<br><br><pre><code class="language-sql">SELECT
+    itemid,
+    label,
+    category
+FROM mimiciv_icu.d_items
+WHERE LOWER(label) LIKE '%norepinephrine%'
+   OR LOWER(label) LIKE '%epinephrine%'
+   OR LOWER(label) LIKE '%phenylephrine%'
+   OR LOWER(label) LIKE '%dopamine%'
+   OR LOWER(label) LIKE '%dobutamine%'
+   OR LOWER(label) LIKE '%vasopressin%'
+   OR LOWER(label) LIKE '%milrinone%'
+ORDER BY label;</code></pre><br><br>把结果发我。<br><br>## 6.2 呼吸支持候选 itemid<br><br><pre><code class="language-sql">SELECT
+    itemid,
+    label,
+    category
+FROM mimiciv_icu.d_items
+WHERE LOWER(label) LIKE '%ventilator%'
+   OR LOWER(label) LIKE '%ventilation%'
+   OR LOWER(label) LIKE '%intubation%'
+   OR LOWER(label) LIKE '%o2%'
+   OR LOWER(label) LIKE '%oxygen%'
+ORDER BY label;</code></pre><br><br>把结果发我前几十行即可。<br><br>## 6.3 液体管理相关数据量<br><br>先简单查 inputevents 和 outputevents 在冠心病 ICU 48h 队列中的覆盖：<br><br><pre><code class="language-sql">SELECT
+    'inputevents_0_24h' AS source,
+    COUNT(DISTINCT ie.stay_id) AS stays_with_data
+FROM cad_icu48 c
+JOIN mimiciv_icu.inputevents ie
+    ON c.stay_id = ie.stay_id
+WHERE ie.starttime &gt;= c.intime
+  AND ie.starttime &lt; c.intime + INTERVAL '24 hours'
+
+UNION ALL
+
+SELECT
+    'outputevents_0_24h' AS source,
+    COUNT(DISTINCT oe.stay_id) AS stays_with_data
+FROM cad_icu48 c
+JOIN mimiciv_icu.outputevents oe
+    ON c.stay_id = oe.stay_id
+WHERE oe.charttime &gt;= c.intime
+  AND oe.charttime &lt; c.intime + INTERVAL '24 hours';</code></pre><br><br>你把结果发我。<br><br>---<br><br># 你最终需要发我这些结果<br><br>按这个格式贴回来就行：<br><br><pre><code class="language-text">1. 冠心病总体规模
+n_patients =
+n_admissions =
+
+2. 冠心病 ICU 队列
+n_patients =
+n_admissions =
+n_icu_stays =
+n_icu_stays_ge_48h =
+avg_icu_hours =
+median_icu_hours =
+
+3. ICD 子类分布
+贴前 20 行
+
+4. 生命体征覆盖率
+贴 SQL 结果表
+
+5. 实验室检查覆盖率
+贴 SQL 结果表
+
+6. 治疗上下文
+6.1 升压药/强心药候选 itemid 表
+6.2 呼吸支持候选 itemid 表
+6.3 inputevents/outputevents 覆盖率</code></pre><br><br>查完这些，我就可以帮你决定：<br><br>1. 是否坚持做冠心病；<br>2. 最终保留哪些轨迹指标；<br>3. 治疗上下文怎么定义；<br>4. 数据库表结构怎么设计；<br>5. Streamlit 界面和实验流程怎么安排；<br>6. 报告题目和系统架构图怎么写。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:18:55</span>
+                </div>
+                <div class="message-content"># MIMIC-IV v3.1 冠心病/缺血性心脏病数据探查报告<br><br><strong>日期</strong>: 2026-05-25  <br><strong>数据源</strong>: <code>/mnt/diskb5/dataset/MIMIC_Data/mimic-iv-3.1</code>  <br><strong>口径</strong>: ICD-9: 410–414 / ICD-10: I20–I25<br><br>---<br><br>## 1. 冠心病总体规模<br><br>| 指标 | 值 |<br>|------|-----|<br>| n_patients | <strong>46,062</strong> |<br>| n_admissions | <strong>108,833</strong> |<br><br>---<br><br>## 2. 冠心病 ICU 队列<br><br>| 指标 | 值 |<br>|------|-----|<br>| n_patients | 23,123 |<br>| n_admissions | 28,916 |<br>| n_icu_stays | 32,451 |<br>| <strong>n_icu_stays_ge_48h</strong> | <strong>16,661</strong> |<br>| avg_icu_hours | 86.01 |<br>| median_icu_hours | 49.19 |<br><br>&gt; 判定：<strong>n_icu_stays_ge_48h = 16,661 &gt;&gt; 500</strong>，队列规模非常充裕，完全满足建模需求。<br><br>---<br><br>## 3. ICD 子类分布（按 prefix 汇总）<br><br>| icd_version | prefix | n_patients | n_admissions | 含义 |<br>|-------------|--------|------------|--------------|------|<br>| 9 | <strong>414</strong> | 22,485 | 49,324 | 其他慢性缺血性心脏病 |<br>| 9 | <strong>412</strong> | 7,595 | 15,180 | 陈旧性心肌梗死 |<br>| 9 | 410 | 5,352 | 6,697 | 急性心肌梗死 |<br>| 9 | 411 | 3,459 | 4,004 | 其他急性/亚急性缺血性心脏病 |<br>| 9 | 413 | 2,516 | 3,067 | 心绞痛 |<br>| 10 | <strong>I25</strong> | 24,342 | 50,432 | 慢性缺血性心脏病 |<br>| 10 | <strong>I21</strong> | 8,149 | 9,812 | 急性心肌梗死 |<br>| 10 | I24 | 1,579 | 1,687 | 其他急性缺血性心脏病 |<br>| 10 | I20 | 463 | 516 | 心绞痛 |<br>| 10 | I22 | 116 | 123 | 再发性心肌梗死 |<br>| 10 | I23 | 112 | 117 | 心肌梗死后并发症 |<br><br>&gt; 结论：<strong>I25 + 414（慢性缺血性心脏病）占绝对主导</strong>，I20（心绞痛）和 I21/410（急性心梗）反而不是主体。<br>&gt; 建议命名统一用 <strong>"缺血性心脏病"</strong>，比"冠心病"更准确反映队列特征。<br><br>---<br><br>## 4. 生命体征覆盖率（cad_icu48: 16,661 stays）<br><br>| variable | time_window | stays_with_data | 覆盖率 |<br>|----------|-------------|-----------------|--------|<br>| heart_rate | 0_24h | 16,640 | 99.9% |<br>| heart_rate | 24_48h | 16,634 | 99.8% |<br>| map | 0_24h | 16,558 | 99.4% |<br>| map | 24_48h | 16,379 | 98.3% |<br>| resp_rate | 0_24h | 16,618 | 99.7% |<br>| resp_rate | 24_48h | 16,597 | 99.6% |<br>| sbp | 0_24h | 16,546 | 99.3% |<br>| sbp | 24_48h | 16,371 | 98.3% |<br>| spo2 | 0_24h | 16,638 | 99.9% |<br>| spo2 | 24_48h | 16,626 | 99.8% |<br>| temperature | 0_24h | 15,686 | 94.1% |<br>| temperature | 24_48h | 15,885 | 95.3% |<br><br>&gt; 结论：<strong>所有核心生命体征覆盖率极高</strong>（前24h均 &gt; 94%，心率/SpO2/RR &gt; 99.6%）。前后24h覆盖均衡，完全满足轨迹建模需求。<br>&gt; 核心轨迹变量建议：heart_rate, sbp/map, resp_rate, spo2, temperature 全部可用。<br><br>---<br><br>## 5. 实验室检查覆盖率（cad_icu48: 16,661 stays）<br><br>| variable | time_window | stays_with_data | 覆盖率 |<br>|----------|-------------|-----------------|--------|<br>| bun | 0_24h | 16,533 | 99.2% |<br>| bun | 24_48h | 16,322 | 98.0% |<br>| creatinine | 0_24h | 16,536 | 99.2% |<br>| creatinine | 24_48h | 16,326 | 98.0% |<br>| hemoglobin | 0_24h | 16,471 | 98.9% |<br>| hemoglobin | 24_48h | 16,241 | 97.5% |<br>| <strong>lactate</strong> | <strong>0_24h</strong> | <strong>12,039</strong> | <strong>72.3%</strong> |<br>| <strong>lactate</strong> | <strong>24_48h</strong> | <strong>6,386</strong> | <strong>38.3%</strong> |<br>| potassium | 0_24h | 16,509 | 99.1% |<br>| potassium | 24_48h | 16,323 | 98.0% |<br>| sodium | 0_24h | 16,529 | 99.2% |<br>| sodium | 24_48h | 16,334 | 98.0% |<br>| wbc | 0_24h | 16,472 | 98.9% |<br>| wbc | 24_48h | 16,240 | 97.5% |<br><br>&gt; 结论：<br>&gt; - <strong>肌酐、BUN、钠、钾、WBC、血红蛋白</strong>覆盖率极好（前24h均 &gt; 98%），可作为核心实验室变量。<br>&gt; - <strong>乳酸</strong>前24h覆盖率仅 72.3%，后24h仅 38.3%，建议<strong>删除</strong>。<br><br>---<br><br>## 6. 治疗上下文<br><br>### 6.1 升压药 / 强心药候选 itemid<br><br>| itemid | label | category |<br>|--------|-------|----------|<br>| 221653 | Dobutamine | Medications |<br>| 221662 | Dopamine | Medications |<br>| 221289 | Epinephrine | Medications |<br>| 229617 | Epinephrine. | Medications |<br>| 221986 | Milrinone | Medications |<br>| 221906 | Norepinephrine | Medications |<br>| 221749 | Phenylephrine | Medications |<br>| 229632 | Phenylephrine (200/250) | Medications |<br>| 229631 | Phenylephrine (200/250)_OLD_1 | Medications |<br>| 229630 | Phenylephrine (50/250) | Medications |<br>| 229789 | Phenylephrine (Intubation) | Intubation |<br>| 222315 | Vasopressin | Medications |<br><br>&gt; <strong>循环支持数据充分</strong>，主要升压药（去甲、多巴胺、去氧肾上腺素、血管加压素）的 itemid 明确。<br><br>### 6.2 呼吸支持候选 itemid（共136条，以下为前40条）<br><br>关键 itemid 包括：Ventilator 相关、O2 flow、FiO2、ETT/Intubation 相关、EtCO2 等，覆盖呼吸支持各维度。<br><br>&gt; <strong>呼吸支持相关 itemid 丰富</strong>，可从 FiO2、通气模式、O2流量等维度构建特征。<br><br>### 6.3 液体管理数据覆盖<br><br>| source | stays_with_data | 覆盖率 |<br>|--------|-----------------|--------|<br>| inputevents_0_24h | 14,724 | 88.4% |<br>| outputevents_0_24h | 16,075 | 96.5% |<br><br>&gt; <strong>液体出入量数据充分</strong>，outputevents 覆盖率尤其高（96.5%）。<br><br>---<br><br>## 总体结论<br><br>1. <strong>队列规模充裕</strong>：16,661 条 ICU stay ≥ 48h，远超 500 阈值<br>2. <strong>命名建议</strong>：使用「缺血性心脏病」(Ischemic Heart Disease)，因为队列中 I25+414（慢性）占主导，而非 I20（心绞痛）或 I21/410（急性心梗）<br>3. <strong>核心轨迹变量</strong>（6 维生命体征 + 6 项实验室）覆盖极好，可直接使用<br>4. <strong>乳酸建议删除</strong>（72%/38% 覆盖率偏低）<br>5. <strong>治疗上下文</strong>（循环/呼吸/液体）三个维度数据均可获得，适合做轻量治疗上下文特征<br></div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:19:02</span>
+                </div>
+                <div class="message-content">这份探查结果非常好，已经足够把课程设计主题<strong>正式定下来</strong>了。<br><br>我建议最终题目定为：<br><br>&gt; <strong>基于 MIMIC-IV 的缺血性心脏病患者健康轨迹相似检索与趋势参考系统设计</strong><br><br>不要再用“冠心病”作为唯一表述，或者可以写成：<br><br>&gt; <strong>基于 MIMIC-IV 的冠心病/缺血性心脏病患者健康轨迹相似检索与趋势参考系统设计</strong><br><br>更准确、更稳。<br><br>你的数据探查说明这个题目完全可行，而且比普通分类系统更有“大数据系统”味道。任务书要求的是现实应用数据分析系统，并且报告里必须包含架构图、应用层界面、数据存储层、数据分析层和 Python 数据分析实现；你现在这个方案正好能覆盖这些内容。fileciteturn0file0<br><br>## 当前方案可以正式锁定<br><br>### 1. 疾病队列<br><br>使用：<br><br><pre><code class="language-text">缺血性心脏病 / Ischemic Heart Disease
+
+ICD-9: 410–414
+ICD-10: I20–I25</code></pre><br><br>你已经得到：<br><br><pre><code class="language-text">总体患者数：46,062
+总体住院记录：108,833
+ICU stay ≥ 48h：16,661</code></pre><br><br>这个规模完全够了。课程设计里可以直接写：<br><br>&gt; 本系统基于 MIMIC-IV v3.1 构建缺血性心脏病 ICU 患者健康轨迹库，共筛选得到 16,661 条满足 48 小时观察窗口要求的 ICU stay，具备较好的数据规模和时间序列分析基础。<br><br>这比 UCI 299 条强太多。<br><br>---<br><br>### 2. 时间窗口<br><br>固定为：<br><br><pre><code class="language-text">查询窗口：ICU 入科后 0–24h
+参考窗口：ICU 入科后 24–48h</code></pre><br><br>系统含义是：<br><br>&gt; 用户选择一个目标患者，系统根据该患者前 24 小时的健康轨迹，在历史轨迹库中检索相似患者，并展示这些相似患者后续 24 小时的健康变化。<br><br>这里不要写“精准预测”，写“趋势参考”更稳。<br><br>---<br><br>### 3. 核心轨迹变量<br><br>我建议最终保留这 12 个变量：<br><br><strong>生命体征 6 项：</strong><br><br><pre><code class="language-text">heart_rate
+sbp
+map
+resp_rate
+spo2
+temperature</code></pre><br><br><strong>实验室检查 6 项：</strong><br><br><pre><code class="language-text">bun
+creatinine
+hemoglobin
+potassium
+sodium
+wbc</code></pre><br><br>乳酸删掉是对的。它前 24h 覆盖率 72.3%，后 24h 只有 38.3%，会显著增加缺失处理压力，而且不是课程设计必须项。<br><br>---<br><br>### 4. 治疗上下文<br><br>正式保留三个轻量标签：<br><br><pre><code class="language-text">循环支持：是否使用升压药 / 强心药
+呼吸支持：是否存在呼吸支持相关记录
+液体管理：是否存在输入/输出液体管理记录</code></pre><br><br>这三个标签不一定直接进入轨迹向量，而是作为<strong>检索前置过滤条件</strong>或<strong>相似度加权项</strong>。<br><br>我更推荐：<br><br><pre><code class="language-text">先按治疗上下文匹配或加权
+再计算生理轨迹相似度</code></pre><br><br>报告里可以写：<br><br>&gt; 为降低治疗混杂对相似轨迹检索的影响，系统在生命体征和实验室检查轨迹之外，引入循环支持、呼吸支持和液体管理三个轻量治疗上下文标签，用于约束相似病例检索范围。<br><br>这会显得你对系统可信性有认真考虑。<br><br>---<br><br>## 现在这个课程设计的核心创新点<br><br>可以总结成三点：<br><br>### 创新点 1：从“分类预测”转向“相似轨迹检索”<br><br>不是简单判断患者是否死亡、是否高危，而是建立历史患者轨迹库，为目标患者检索最相似的历史病例。<br><br>### 创新点 2：基于后续轨迹做趋势参考<br><br>系统不仅返回相似患者，还统计这些患者 24–48h 的指标变化，形成“稳定、改善、恶化”等趋势参考。<br><br>### 创新点 3：引入治疗上下文约束<br><br>相似性不只看生命体征和检验指标，也考虑循环支持、呼吸支持、液体管理，避免把治疗背景完全不同的患者直接比较。<br><br>这三个创新点已经足够支撑“创新性”维度。<br><br>---<br><br>## 我建议报告里的系统功能设计为 5 个模块<br><br>### 1. 数据管理模块<br><br>展示数据源、队列规模、变量覆盖率、缺失情况。<br><br>### 2. 患者轨迹查询模块<br><br>用户选择一个 <code>stay_id</code>，系统展示该患者 0–24h 健康轨迹。<br><br>### 3. 相似病例检索模块<br><br>系统计算目标患者与历史患者的轨迹相似度，返回 Top-K 相似患者。<br><br>### 4. 后续趋势参考模块<br><br>展示 Top-K 相似患者在 24–48h 的指标变化，包括平均趋势、个体轨迹、改善/稳定/恶化比例。<br><br>### 5. 可视化与解释模块<br><br>展示相似度分数、关键相似变量、治疗上下文标签、趋势参考结论。<br><br>---<br><br>## 当前最小可实现版本<br><br>你可以先做这个版本：<br><br><pre><code class="language-text">输入：
+用户在 Streamlit 中选择一个 stay_id
+
+系统处理：
+1. 读取该 stay_id 的 0–24h 轨迹
+2. 根据治疗上下文筛选候选患者
+3. 计算目标患者与候选患者的轨迹相似度
+4. 返回 Top-5 / Top-10 相似患者
+5. 统计这些患者 24–48h 的趋势
+
+输出：
+1. 目标患者 0–24h 轨迹图
+2. Top-K 相似患者表格
+3. 目标患者与相似患者轨迹对比图
+4. 相似患者后续 24h 平均趋势图
+5. 趋势参考结论</code></pre><br><br>这已经能完整满足课程设计要求，不需要上复杂深度学习。<br><br>---<br><br>下一步要定的是：<strong>轨迹相似度算法</strong>。<br><br>请选择一个：<br><br><strong>A. 标准化特征向量 + 欧氏距离 / 余弦相似度</strong>  <br>最稳，最好实现。把每个患者 0–24h 的每个指标提取成均值、最大值、最小值、斜率、波动程度，然后计算相似度。<br><br><strong>B. 多变量时间序列 + DTW 动态时间规整</strong>  <br>更有亮点，可以处理时间错位，但实现和解释稍复杂。<br><br><strong>C. 两阶段方案：先用 A 做主系统，再用 DTW 做扩展对比</strong>  <br>最适合高分：主系统稳定，扩展实验体现能力。<br><br>我推荐 <strong>C</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:20:45</span>
+                </div>
+                <div class="message-content">我现在想把需要的数据抽出来打包然后下载到本地来落地，在服务器有点不太方便。我需要怎么抽、抽哪些？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:20:48</span>
+                </div>
+                <div class="message-content">可以，现在应该先把服务器上的 MIMIC 大库压缩成一个“课程设计专用小数据包”。目标不是全量搬回本地，而是只抽出系统需要的队列表、轨迹特征表、趋势参考表和少量明细表。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:20:57</span>
+                </div>
+                <div class="message-content">数据包建议做成“分析就绪版”：本地不需要带几十 GB 的 chartevents/labevents 原表，只带 16,661 条 stay 的队列、4 小时分箱轨迹、检索特征和治疗上下文。这样 Streamlit、本地建模、报告截图都会很顺。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:21:45</span>
+                </div>
+                <div class="message-content">可以。你现在应该抽一个<strong>课程设计专用分析包</strong>，而不是把 MIMIC-IV 原始大表搬回本地。<br><br>MIMIC-IV 的 ICU 模块本来就包含 <code>icustays</code>、<code>chartevents</code>、<code>inputevents</code>、<code>outputevents</code> 等表，适合抽生命体征、治疗和出入量；Hosp 模块包含诊断、实验室检查、住院信息等，适合筛选缺血性心脏病队列和补充化验数据。citeturn869061search0turn869061search2<br><br>下面是我建议你抽的数据。<br><br>---<br><br># 一、最终本地数据包抽哪些<br><br>本地只需要这 7 类文件：<br><br><pre><code class="language-text">mimic_ihd_trajectory_package/
+├── README.md
+├── metadata/
+│   ├── itemids_vitals.csv
+│   ├── itemids_labs.csv
+│   ├── itemids_vasopressor.csv
+│   └── itemids_respiratory_support.csv
+├── data/
+│   ├── cohort_ihd_icu48.parquet
+│   ├── vitals_4h_bins.parquet
+│   ├── labs_24h_windows.parquet
+│   ├── treatment_context_0_24h.parquet
+│   ├── query_features_0_24h.parquet
+│   ├── future_features_24_48h.parquet
+│   └── app_patient_index.parquet
+└── scripts/
+    ├── 01_extract_from_mimic.sql
+    ├── 02_build_features.py
+    └── 03_validate_package.py</code></pre><br><br>不要下载这些原始大表：<br><br><pre><code class="language-text">chartevents.csv.gz
+labevents.csv.gz
+inputevents.csv.gz
+outputevents.csv.gz</code></pre><br><br>它们太大，本地开发没必要。<br><br>---<br><br># 二、每个文件具体放什么<br><br>## 1. <code>cohort_ihd_icu48.parquet</code><br><br>这是主队列表，一行一个 ICU stay。<br><br>字段建议：<br><br><pre><code class="language-text">subject_id
+hadm_id
+stay_id
+gender
+anchor_age
+admittime
+dischtime
+intime
+outtime
+icu_hours
+hospital_expire_flag
+los_hospital_hours
+ihd_icd_prefixes</code></pre><br><br>队列口径：<br><br><pre><code class="language-text">ICD-9: 410–414
+ICD-10: I20–I25
+ICU stay &gt;= 48h</code></pre><br><br>你探查出来是 <strong>16,661 条 ICU stay</strong>，这个作为本地系统主样本完全够。<br><br>---<br><br>## 2. <code>vitals_4h_bins.parquet</code><br><br>生命体征用 <strong>4 小时一个时间片</strong>，覆盖 0–48h。<br><br>一行是：<br><br><pre><code class="language-text">stay_id
+variable
+bin_id
+bin_start_hour
+bin_end_hour
+mean_value
+min_value
+max_value
+std_value
+n_obs</code></pre><br><br><code>bin_id</code> 取值：<br><br><pre><code class="language-text">0: 0–4h
+1: 4–8h
+2: 8–12h
+3: 12–16h
+4: 16–20h
+5: 20–24h
+6: 24–28h
+7: 28–32h
+8: 32–36h
+9: 36–40h
+10: 40–44h
+11: 44–48h</code></pre><br><br>变量保留：<br><br><pre><code class="language-text">heart_rate
+sbp
+map
+resp_rate
+spo2
+temperature</code></pre><br><br>这些变量你已经验证覆盖率很高，适合做轨迹曲线。<br><br>---<br><br>## 3. <code>labs_24h_windows.parquet</code><br><br>实验室检查不要强行做 4 小时曲线，很多化验不是连续监测。建议按两个窗口聚合：<br><br><pre><code class="language-text">0–24h
+24–48h</code></pre><br><br>一行是：<br><br><pre><code class="language-text">stay_id
+variable
+window
+mean_value
+first_value
+last_value
+min_value
+max_value
+delta_value
+n_obs</code></pre><br><br>变量保留：<br><br><pre><code class="language-text">bun
+creatinine
+hemoglobin
+potassium
+sodium
+wbc</code></pre><br><br>乳酸删掉，理由很充分：前 24h 覆盖率还可以，但 24–48h 覆盖率太低。<br><br>---<br><br>## 4. <code>treatment_context_0_24h.parquet</code><br><br>治疗上下文只抽前 24h，因为它用于“相似患者检索前置约束”。<br><br>字段建议：<br><br><pre><code class="language-text">stay_id
+circulation_support_flag
+respiratory_support_flag
+fluid_input_ml_0_24h
+fluid_output_ml_0_24h
+net_fluid_ml_0_24h
+fluid_context_level</code></pre><br><br>其中：<br><br><pre><code class="language-text">circulation_support_flag:
+前 24h 是否使用升压药/强心药
+
+respiratory_support_flag:
+前 24h 是否存在呼吸支持相关记录
+
+fluid_context_level:
+按 net_fluid_ml_0_24h 或 input_ml 分成 low / medium / high</code></pre><br><br>注意：不要把“是否有 inputevents / outputevents”直接作为液体管理标签，因为你的覆盖率太高，几乎人人都有，区分度会差。液体管理最好用<strong>输入量、输出量、净液体量</strong>。<br><br>---<br><br>## 5. <code>query_features_0_24h.parquet</code><br><br>这是本地相似检索真正使用的特征表，一行一个 stay。<br><br>字段建议：<br><br><pre><code class="language-text">stay_id
+heart_rate_bin0_mean
+...
+heart_rate_bin5_mean
+sbp_bin0_mean
+...
+temperature_bin5_mean
+bun_mean_0_24h
+bun_last_0_24h
+bun_delta_0_24h
+...
+wbc_mean_0_24h
+wbc_last_0_24h
+wbc_delta_0_24h
+circulation_support_flag
+respiratory_support_flag
+net_fluid_ml_0_24h</code></pre><br><br>也就是说：<br><br>生命体征：用 0–24h 的 6 个 4h bin。  <br>实验室检查：用 0–24h 的均值、末次值、变化量。  <br>治疗上下文：用于筛选或加权。<br><br>---<br><br>## 6. <code>future_features_24_48h.parquet</code><br><br>这是“相似患者后续趋势参考”用的表。<br><br>字段建议：<br><br><pre><code class="language-text">stay_id
+heart_rate_mean_24_48h
+heart_rate_delta_24_48h
+heart_rate_trend_label
+sbp_mean_24_48h
+sbp_delta_24_48h
+sbp_trend_label
+...
+creatinine_delta_24_48h
+creatinine_trend_label
+overall_trend_label</code></pre><br><br><code>overall_trend_label</code> 可以先粗略定义为：<br><br><pre><code class="language-text">stable
+improved
+worsened
+mixed</code></pre><br><br>课程设计够用了，不要复杂化。<br><br>---<br><br>## 7. <code>app_patient_index.parquet</code><br><br>这个给 Streamlit 下拉框用，避免界面加载大表。<br><br>字段：<br><br><pre><code class="language-text">stay_id
+subject_id
+hadm_id
+age
+gender
+icu_hours
+hospital_expire_flag
+circulation_support_flag
+respiratory_support_flag
+fluid_context_level
+short_description</code></pre><br><br>界面显示可以是：<br><br><pre><code class="language-text">stay_id=xxxx | age=68 | male | ICU=72.4h | circulation_support=Yes</code></pre><br><br>---<br><br># 三、建议抽取 SQL 骨架<br><br>下面假设你已经把 MIMIC-IV 装成 PostgreSQL schema：<br><br><pre><code class="language-text">mimiciv_hosp
+mimiciv_icu</code></pre><br><br>## 1. 抽主队列<br><br><pre><code class="language-sql">CREATE MATERIALIZED VIEW IF NOT EXISTS course_ihd_icu48 AS
+WITH ihd_adm AS (
+    SELECT
+        subject_id,
+        hadm_id,
+        STRING_AGG(DISTINCT SUBSTRING(icd_code FROM 1 FOR 3), ',') AS ihd_icd_prefixes
+    FROM mimiciv_hosp.diagnoses_icd
+    WHERE
+        (icd_version = 9  AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN '410' AND '414')
+        OR
+        (icd_version = 10 AND SUBSTRING(icd_code FROM 1 FOR 3) BETWEEN 'I20' AND 'I25')
+    GROUP BY subject_id, hadm_id
+),
+icu_base AS (
+    SELECT
+        i.subject_id,
+        i.hadm_id,
+        i.stay_id,
+        i.intime,
+        i.outtime,
+        EXTRACT(EPOCH FROM (i.outtime - i.intime)) / 3600.0 AS icu_hours
+    FROM mimiciv_icu.icustays i
+    INNER JOIN ihd_adm c
+        ON i.subject_id = c.subject_id
+       AND i.hadm_id = c.hadm_id
+)
+SELECT
+    b.subject_id,
+    b.hadm_id,
+    b.stay_id,
+    p.gender,
+    p.anchor_age,
+    a.admittime,
+    a.dischtime,
+    b.intime,
+    b.outtime,
+    b.icu_hours,
+    a.hospital_expire_flag,
+    EXTRACT(EPOCH FROM (a.dischtime - a.admittime)) / 3600.0 AS los_hospital_hours,
+    c.ihd_icd_prefixes
+FROM icu_base b
+JOIN ihd_adm c
+    ON b.subject_id = c.subject_id
+   AND b.hadm_id = c.hadm_id
+LEFT JOIN mimiciv_hosp.patients p
+    ON b.subject_id = p.subject_id
+LEFT JOIN mimiciv_hosp.admissions a
+    ON b.hadm_id = a.hadm_id
+WHERE b.icu_hours &gt;= 48;</code></pre><br><br>导出：<br><br><pre><code class="language-bash">psql -d mimiciv -c "\copy (SELECT * FROM course_ihd_icu48) TO '/tmp/cohort_ihd_icu48.csv' CSV HEADER"</code></pre><br><br>---<br><br>## 2. 抽生命体征 4 小时分箱<br><br>常用 itemid 先按下面这组，最好再用 <code>d_items</code> 核验一次：<br><br><pre><code class="language-text">heart_rate: 220045
+sbp: 220050, 220179
+map: 220052, 220181
+resp_rate: 220210
+spo2: 220277
+temperature: 223761, 223762</code></pre><br><br>SQL：<br><br><pre><code class="language-sql">CREATE MATERIALIZED VIEW IF NOT EXISTS course_vitals_4h_bins AS
+WITH vitals_raw AS (
+    SELECT
+        c.stay_id,
+        CASE
+            WHEN ce.itemid = 220045 THEN 'heart_rate'
+            WHEN ce.itemid IN (220050, 220179) THEN 'sbp'
+            WHEN ce.itemid IN (220052, 220181) THEN 'map'
+            WHEN ce.itemid = 220210 THEN 'resp_rate'
+            WHEN ce.itemid = 220277 THEN 'spo2'
+            WHEN ce.itemid IN (223761, 223762) THEN 'temperature'
+        END AS variable,
+        FLOOR(EXTRACT(EPOCH FROM (ce.charttime - c.intime)) / 3600.0 / 4.0)::int AS bin_id,
+        CASE
+            WHEN ce.itemid = 223761 THEN (ce.valuenum - 32.0) * 5.0 / 9.0
+            ELSE ce.valuenum
+        END AS value
+    FROM mimiciv_icu.chartevents ce
+    JOIN course_ihd_icu48 c
+        ON ce.stay_id = c.stay_id
+    WHERE ce.charttime &gt;= c.intime
+      AND ce.charttime &lt;  c.intime + INTERVAL '48 hours'
+      AND ce.valuenum IS NOT NULL
+      AND ce.itemid IN (
+          220045,
+          220050, 220179,
+          220052, 220181,
+          220210,
+          220277,
+          223761, 223762
+      )
+),
+vitals_clean AS (
+    SELECT *
+    FROM vitals_raw
+    WHERE
+        bin_id BETWEEN 0 AND 11
+        AND (
+            (variable = 'heart_rate'  AND value BETWEEN 20 AND 300)
+            OR (variable = 'sbp'       AND value BETWEEN 40 AND 300)
+            OR (variable = 'map'       AND value BETWEEN 20 AND 200)
+            OR (variable = 'resp_rate' AND value BETWEEN 1  AND 80)
+            OR (variable = 'spo2'      AND value BETWEEN 50 AND 100)
+            OR (variable = 'temperature' AND value BETWEEN 25 AND 45)
+        )
+)
+SELECT
+    stay_id,
+    variable,
+    bin_id,
+    bin_id * 4 AS bin_start_hour,
+    (bin_id + 1) * 4 AS bin_end_hour,
+    AVG(value) AS mean_value,
+    MIN(value) AS min_value,
+    MAX(value) AS max_value,
+    STDDEV(value) AS std_value,
+    COUNT(*) AS n_obs
+FROM vitals_clean
+GROUP BY stay_id, variable, bin_id;</code></pre><br><br>导出：<br><br><pre><code class="language-bash">psql -d mimiciv -c "\copy (SELECT * FROM course_vitals_4h_bins) TO '/tmp/vitals_4h_bins.csv' CSV HEADER"</code></pre><br><br>---<br><br>## 3. 抽实验室检查 0–24h / 24–48h<br><br>常用 lab itemid：<br><br><pre><code class="language-text">bun: 51006
+creatinine: 50912
+hemoglobin: 51222
+potassium: 50971
+sodium: 50983
+wbc: 51300, 51301</code></pre><br><br>SQL：<br><br><pre><code class="language-sql">CREATE MATERIALIZED VIEW IF NOT EXISTS course_labs_24h_windows AS
+WITH labs_raw AS (
+    SELECT
+        c.stay_id,
+        CASE
+            WHEN le.itemid = 51006 THEN 'bun'
+            WHEN le.itemid = 50912 THEN 'creatinine'
+            WHEN le.itemid = 51222 THEN 'hemoglobin'
+            WHEN le.itemid = 50971 THEN 'potassium'
+            WHEN le.itemid = 50983 THEN 'sodium'
+            WHEN le.itemid IN (51300, 51301) THEN 'wbc'
+        END AS variable,
+        CASE
+            WHEN le.charttime &gt;= c.intime
+             AND le.charttime &lt;  c.intime + INTERVAL '24 hours'
+                THEN '0_24h'
+            WHEN le.charttime &gt;= c.intime + INTERVAL '24 hours'
+             AND le.charttime &lt;  c.intime + INTERVAL '48 hours'
+                THEN '24_48h'
+        END AS window,
+        le.charttime,
+        le.valuenum AS value
+    FROM mimiciv_hosp.labevents le
+    JOIN course_ihd_icu48 c
+        ON le.subject_id = c.subject_id
+       AND le.hadm_id = c.hadm_id
+    WHERE le.charttime &gt;= c.intime
+      AND le.charttime &lt;  c.intime + INTERVAL '48 hours'
+      AND le.valuenum IS NOT NULL
+      AND le.itemid IN (51006, 50912, 51222, 50971, 50983, 51300, 51301)
+),
+labs_clean AS (
+    SELECT *
+    FROM labs_raw
+    WHERE window IS NOT NULL
+      AND (
+          (variable = 'bun'        AND value BETWEEN 1 AND 300)
+          OR (variable = 'creatinine' AND value BETWEEN 0.1 AND 30)
+          OR (variable = 'hemoglobin' AND value BETWEEN 3 AND 25)
+          OR (variable = 'potassium'  AND value BETWEEN 1 AND 10)
+          OR (variable = 'sodium'     AND value BETWEEN 100 AND 180)
+          OR (variable = 'wbc'        AND value BETWEEN 0.1 AND 300)
+      )
+),
+ranked AS (
+    SELECT
+        *,
+        FIRST_VALUE(value) OVER (
+            PARTITION BY stay_id, variable, window
+            ORDER BY charttime
+        ) AS first_value,
+        FIRST_VALUE(value) OVER (
+            PARTITION BY stay_id, variable, window
+            ORDER BY charttime DESC
+        ) AS last_value
+    FROM labs_clean
+)
+SELECT
+    stay_id,
+    variable,
+    window,
+    AVG(value) AS mean_value,
+    MIN(first_value) AS first_value,
+    MIN(last_value) AS last_value,
+    MIN(value) AS min_value,
+    MAX(value) AS max_value,
+    MIN(last_value) - MIN(first_value) AS delta_value,
+    COUNT(*) AS n_obs
+FROM ranked
+GROUP BY stay_id, variable, window;</code></pre><br><br>---<br><br>## 4. 抽治疗上下文<br><br>### 4.1 循环支持<br><br>使用你已经确认的升压药/强心药 itemid：<br><br><pre><code class="language-sql">CREATE MATERIALIZED VIEW IF NOT EXISTS course_circulation_support_0_24h AS
+SELECT
+    c.stay_id,
+    CASE WHEN COUNT(*) &gt; 0 THEN 1 ELSE 0 END AS circulation_support_flag
+FROM course_ihd_icu48 c
+LEFT JOIN mimiciv_icu.inputevents ie
+    ON ie.stay_id = c.stay_id
+   AND ie.starttime &lt; c.intime + INTERVAL '24 hours'
+   AND COALESCE(ie.endtime, ie.starttime) &gt;= c.intime
+   AND ie.itemid IN (
+        221653, 221662, 221289, 229617,
+        221986, 221906, 221749, 229632,
+        229631, 229630, 229789, 222315
+   )
+GROUP BY c.stay_id;</code></pre><br><br>### 4.2 呼吸支持<br><br>先把你探查到的呼吸支持 itemid 存成一张表，叫：<br><br><pre><code class="language-text">course_resp_support_itemids(itemid)</code></pre><br><br>然后：<br><br><pre><code class="language-sql">CREATE MATERIALIZED VIEW IF NOT EXISTS course_respiratory_support_0_24h AS
+SELECT
+    c.stay_id,
+    CASE WHEN COUNT(*) &gt; 0 THEN 1 ELSE 0 END AS respiratory_support_flag
+FROM course_ihd_icu48 c
+LEFT JOIN mimiciv_icu.chartevents ce
+    ON ce.stay_id = c.stay_id
+   AND ce.charttime &gt;= c.intime
+   AND ce.charttime &lt;  c.intime + INTERVAL '24 hours'
+   AND ce.itemid IN (SELECT itemid FROM course_resp_support_itemids)
+GROUP BY c.stay_id;</code></pre><br><br>### 4.3 液体管理<br><br><pre><code class="language-sql">CREATE MATERIALIZED VIEW IF NOT EXISTS course_fluid_context_0_24h AS
+WITH input_ml AS (
+    SELECT
+        c.stay_id,
+        SUM(CASE WHEN ie.amountuom ILIKE '%ml%' THEN ie.amount ELSE 0 END) AS fluid_input_ml_0_24h
+    FROM course_ihd_icu48 c
+    LEFT JOIN mimiciv_icu.inputevents ie
+        ON ie.stay_id = c.stay_id
+       AND ie.starttime &gt;= c.intime
+       AND ie.starttime &lt;  c.intime + INTERVAL '24 hours'
+       AND ie.amount IS NOT NULL
+    GROUP BY c.stay_id
+),
+output_ml AS (
+    SELECT
+        c.stay_id,
+        SUM(oe.value) AS fluid_output_ml_0_24h
+    FROM course_ihd_icu48 c
+    LEFT JOIN mimiciv_icu.outputevents oe
+        ON oe.stay_id = c.stay_id
+       AND oe.charttime &gt;= c.intime
+       AND oe.charttime &lt;  c.intime + INTERVAL '24 hours'
+       AND oe.value IS NOT NULL
+    GROUP BY c.stay_id
+)
+SELECT
+    c.stay_id,
+    COALESCE(i.fluid_input_ml_0_24h, 0) AS fluid_input_ml_0_24h,
+    COALESCE(o.fluid_output_ml_0_24h, 0) AS fluid_output_ml_0_24h,
+    COALESCE(i.fluid_input_ml_0_24h, 0) - COALESCE(o.fluid_output_ml_0_24h, 0) AS net_fluid_ml_0_24h
+FROM course_ihd_icu48 c
+LEFT JOIN input_ml i ON c.stay_id = i.stay_id
+LEFT JOIN output_ml o ON c.stay_id = o.stay_id;</code></pre><br><br>最后合并：<br><br><pre><code class="language-sql">CREATE MATERIALIZED VIEW IF NOT EXISTS course_treatment_context_0_24h AS
+SELECT
+    c.stay_id,
+    COALESCE(cs.circulation_support_flag, 0) AS circulation_support_flag,
+    COALESCE(rs.respiratory_support_flag, 0) AS respiratory_support_flag,
+    fc.fluid_input_ml_0_24h,
+    fc.fluid_output_ml_0_24h,
+    fc.net_fluid_ml_0_24h
+FROM course_ihd_icu48 c
+LEFT JOIN course_circulation_support_0_24h cs
+    ON c.stay_id = cs.stay_id
+LEFT JOIN course_respiratory_support_0_24h rs
+    ON c.stay_id = rs.stay_id
+LEFT JOIN course_fluid_context_0_24h fc
+    ON c.stay_id = fc.stay_id;</code></pre><br><br>---<br><br># 四、本地特征怎么生成<br><br>服务器只负责抽取和粗聚合。真正的检索特征建议在本地用 Python 生成。<br><br>核心逻辑：<br><br><pre><code class="language-python">import pandas as pd
+import numpy as np
+
+vitals = pd.read_parquet("data/vitals_4h_bins.parquet")
+labs = pd.read_parquet("data/labs_24h_windows.parquet")
+treat = pd.read_parquet("data/treatment_context_0_24h.parquet")
+cohort = pd.read_parquet("data/cohort_ihd_icu48.parquet")
+
+# 0-24h 生命体征：bin 0-5
+v0 = vitals[vitals["bin_id"].between(0, 5)].copy()
+v0["feature"] = (
+    v0["variable"] + "_bin" + v0["bin_id"].astype(str) + "_mean"
+)
+v0_wide = v0.pivot_table(
+    index="stay_id",
+    columns="feature",
+    values="mean_value",
+    aggfunc="mean"
+).reset_index()
+
+# 24-48h 生命体征：bin 6-11
+v1 = vitals[vitals["bin_id"].between(6, 11)].copy()
+v1["feature"] = (
+    v1["variable"] + "_bin" + v1["bin_id"].astype(str) + "_mean"
+)
+v1_wide = v1.pivot_table(
+    index="stay_id",
+    columns="feature",
+    values="mean_value",
+    aggfunc="mean"
+).reset_index()
+
+# 0-24h labs
+l0 = labs[labs["window"] == "0_24h"].copy()
+l0_mean = l0.pivot_table(index="stay_id", columns="variable", values="mean_value")
+l0_last = l0.pivot_table(index="stay_id", columns="variable", values="last_value")
+l0_delta = l0.pivot_table(index="stay_id", columns="variable", values="delta_value")
+
+l0_mean.columns = [f"{c}_mean_0_24h" for c in l0_mean.columns]
+l0_last.columns = [f"{c}_last_0_24h" for c in l0_last.columns]
+l0_delta.columns = [f"{c}_delta_0_24h" for c in l0_delta.columns]
+
+labs0_wide = pd.concat([l0_mean, l0_last, l0_delta], axis=1).reset_index()
+
+# 查询特征
+query_features = (
+    cohort[["stay_id"]]
+    .merge(v0_wide, on="stay_id", how="left")
+    .merge(labs0_wide, on="stay_id", how="left")
+    .merge(treat, on="stay_id", how="left")
+)
+
+# 缺失值填充：用全队列中位数
+for col in query_features.columns:
+    if col != "stay_id" and pd.api.types.is_numeric_dtype(query_features[col]):
+        query_features[col] = query_features[col].fillna(query_features[col].median())
+
+query_features.to_parquet("data/query_features_0_24h.parquet", index=False)</code></pre><br><br>---<br><br># 五、趋势标签怎么做<br><br>课程设计不需要复杂医学标签。可以先用几个核心变化量定义：<br><br><pre><code class="language-python">def trend_label(delta, improve_direction="down", threshold=0.05):
+    if pd.isna(delta):
+        return "unknown"
+    if abs(delta) &lt;= threshold:
+        return "stable"
+    if improve_direction == "down":
+        return "improved" if delta &lt; 0 else "worsened"
+    else:
+        return "improved" if delta &gt; 0 else "worsened"</code></pre><br><br>更稳的做法是只给<strong>描述性趋势</strong>，不要强行判断临床改善：<br><br><pre><code class="language-text">heart_rate: 上升 / 下降 / 稳定
+sbp: 上升 / 下降 / 稳定
+spo2: 上升 / 下降 / 稳定
+creatinine: 上升 / 下降 / 稳定
+wbc: 上升 / 下降 / 稳定</code></pre><br><br>然后综合成：<br><br><pre><code class="language-text">overall_trend_label:
+stable
+vital_signs_worsened
+renal_function_worsened
+mixed_change</code></pre><br><br>---<br><br># 六、打包命令<br><br>服务器上建议这样放：<br><br><pre><code class="language-bash">mkdir -p /tmp/mimic_ihd_trajectory_package/{data,metadata,scripts}</code></pre><br><br>如果你从 PostgreSQL 导出 CSV，先转 Parquet：<br><br><pre><code class="language-python">import pandas as pd
+from pathlib import Path
+
+data_dir = Path("/tmp/mimic_ihd_trajectory_package/data")
+
+for csv_path in data_dir.glob("*.csv"):
+    df = pd.read_csv(csv_path)
+    out = csv_path.with_suffix(".parquet")
+    df.to_parquet(out, index=False)
+    print(csv_path.name, "-&gt;", out.name, df.shape)</code></pre><br><br>压缩：<br><br><pre><code class="language-bash">cd /tmp
+tar -czf mimic_ihd_trajectory_package_20260525.tar.gz mimic_ihd_trajectory_package</code></pre><br><br>下载到本地：<br><br><pre><code class="language-bash">scp -P 3276 username@server_ip:/tmp/mimic_ihd_trajectory_package_20260525.tar.gz .</code></pre><br><br>---<br><br># 七、不要抽什么<br><br>为了课程设计，先别抽这些：<br><br><pre><code class="language-text">notes / discharge notes
+prescriptions 全量
+procedures 全量
+microbiologyevents
+emar / pharmacy 全量
+完整 chartevents
+完整 labevents
+完整 inputevents
+完整 outputevents</code></pre><br><br>理由很简单：它们会让本地开发变慢，而且和当前系统核心功能关系不大。<br><br>---<br><br># 八、最推荐的本地最小数据包<br><br>先做这个版本就够：<br><br><pre><code class="language-text">cohort_ihd_icu48.parquet
+vitals_4h_bins.parquet
+labs_24h_windows.parquet
+treatment_context_0_24h.parquet
+query_features_0_24h.parquet
+future_features_24_48h.parquet
+app_patient_index.parquet</code></pre><br><br>大小应该会非常可控，估计几十 MB 到几百 MB 以内，远比搬 MIMIC 原始表舒服。<br><br>还有一点很重要：MIMIC-IV 和派生数据仍然受 PhysioNet DUA 约束，PhysioNet 明确提醒派生数据和模型也应按敏感信息处理，不要把数据包发给第三方或上传到在线服务；如果分享资源，应在相同协议下通过 PhysioNet 分享。citeturn557295search0turn557295search1</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:37:23</span>
+                </div>
+                <div class="message-content">我抽好了：""  1. vitals 4h bin 粒度的 NULL：query_features 中 heart_rate_bin0 非空只有 15,019（90.2%），是因为不是每个 stay 在每个 4h<br>  窗口都有测量。这在相似检索时需要用均值/前向填充处理。<br>  2. overall_trend_label 分布：stable 60.3%，mixed 13.6%，improved 13.1%，worsened 13.0% — 分布合理。<br>  3. 治疗上下文区分度：circulation_support 46.4%、respiratory_support 56.7% — 不是几乎全有/全无，有筛选和加权价值。<br>  4. 总数据量 13.3 MB，没有下载原始大表，本地开发完全可用。""，你有什么数据细节需要询问的吗？没有的话我就打包了</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:37:32</span>
+                </div>
+                <div class="message-content">没有阻塞性问题了，<strong>可以打包</strong>。<br><br>你现在这版数据已经很适合本地开发：数据量小、队列规模够、趋势标签分布合理、治疗上下文有区分度，也符合课程设计对“数据分析系统”的要求。任务书要求重点是系统架构、界面展示、数据存储层、数据分析层和 Python 分析实现，不要求把 MIMIC 原始大表搬到本地。fileciteturn0file0<br><br>但在打包前，我建议你最后确认这几件事，避免后面开发时踩坑。<br><br>## 打包前必须确认<br><br>### 1. 所有表的 <code>stay_id</code> 是否一致<br><br>确认这几个表都能和 cohort 对齐：<br><br><pre><code class="language-text">cohort_ihd_icu48
+vitals_4h_bins
+labs_24h_windows
+treatment_context_0_24h
+query_features_0_24h
+future_features_24_48h
+app_patient_index</code></pre><br><br>重点看：<br><br><pre><code class="language-text">query_features_0_24h 行数是否接近 16,661
+future_features_24_48h 行数是否接近 16,661
+app_patient_index 是否一行一个 stay_id
+stay_id 是否无重复</code></pre><br><br>### 2. 相似检索时不能把目标患者自己检索出来<br><br>后面写代码时要加：<br><br><pre><code class="language-python">candidates = candidates[candidates["stay_id"] != target_stay_id]</code></pre><br><br>这个很重要。否则 Top-1 永远是自己，演示会很假。<br><br>### 3. 缺失值处理规则要固定并写进 README<br><br>你说 <code>heart_rate_bin0</code> 非空只有 90.2%，这是可以接受的。建议 README 里写清楚：<br><br><pre><code class="language-text">生命体征 4h bin 缺失值：
+优先使用同一 stay 内前向/后向填充；
+仍缺失时使用队列中位数填充。
+
+实验室检查缺失值：
+使用队列中位数填充。
+
+治疗上下文缺失值：
+flag 缺失填 0；
+液体输入/输出缺失填 0。</code></pre><br><br>不过我更建议本地开发时这样做：<br><br><pre><code class="language-text">生命体征：先按患者内时间顺序 ffill/bfill，再用全队列中位数补齐。
+实验室：直接用全队列中位数。
+治疗 flag：缺失填 0。</code></pre><br><br>### 4. <code>overall_trend_label</code> 的定义要保存<br><br>你现在分布很好：<br><br>```text<br>stable 60.3%<br>mixed 13.</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:44:20</span>
+                </div>
+                <div class="message-content">A</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:44:27</span>
+                </div>
+                <div class="message-content">好，那轨迹相似度算法就定为 <strong>A：标准化特征向量 + 欧氏距离 / 余弦相似度</strong>。<br><br>这个选择很稳，适合课程设计：实现清楚、报告好写、界面容易解释，而且不会把工作量拖到时间序列算法细节里。任务书重点是系统架构、界面展示、数据分析实现和结果说明，不要求做复杂模型创新。fileciteturn0file0<br><br>## 当前算法方案正式确定<br><br>每个 ICU stay 的前 24h 轨迹不直接用原始时间序列，而是转成一个固定长度的特征向量。<br><br>例如每个变量提取：<br><br><pre><code class="language-text">均值 mean
+最大值 max
+最小值 min
+标准差 std
+最后一次值 last
+变化斜率 slope</code></pre><br><br>12 个核心变量：<br><br><pre><code class="language-text">heart_rate, sbp, map, resp_rate, spo2, temperature
+bun, creatinine, hemoglobin, potassium, sodium, wbc</code></pre><br><br>每个变量 6 个统计特征，那么每个患者轨迹就是：<br><br><pre><code class="language-text">12 × 6 = 72 维轨迹特征</code></pre><br><br>再加 3 个治疗上下文标签：<br><br><pre><code class="language-text">循环支持 circulation_support
+呼吸支持 respiratory_support
+液体管理 fluid_management</code></pre><br><br>最终每个患者可以表示为：<br><br><pre><code class="language-text">stay_id
+subject_id
+hadm_id
+72维健康轨迹特征
+3维治疗上下文标签
+24–48h后续趋势标签/统计结果</code></pre><br><br>## 相似检索逻辑<br><br>我建议采用这个流程：<br><br><pre><code class="language-text">1. 用户选择目标 stay_id
+2. 系统读取目标患者 0–24h 轨迹特征
+3. 根据治疗上下文筛选候选患者
+   例如循环支持、呼吸支持、液体管理标签尽量一致
+4. 对候选患者计算标准化后的欧氏距离
+5. 返回距离最近的 Top-K 相似患者
+6. 统计这些相似患者 24–48h 的后续变化</code></pre><br><br>主算法用 <strong>欧氏距离</strong> 就可以。余弦相似度可以作为备用或对比，但主系统不需要搞复杂。<br><br>## 趋势标签怎么定义<br><br>后续 24h 的趋势不建议做得太医学复杂。可以按核心指标变化分成三类：<br><br><pre><code class="language-text">改善
+稳定
+恶化</code></pre><br><br>比如对每个患者计算 24–48h 相比 0–24h 的变化：<br><br><pre><code class="language-text">MAP 下降明显、SpO2 下降、HR 升高、肌酐升高、BUN 升高、WBC 升高 → 偏恶化
+MAP 稳定、SpO2 稳定、HR 下降或稳定、肾功能指标稳定 → 偏稳定/改善</code></pre><br><br>课程设计里可以先用一个简单的综合趋势评分：<br><br><pre><code class="language-text">trend_score = 
+  +1 × 不利变化指标数量
+  -1 × 有利变化指标数量</code></pre><br><br>然后：<br><br><pre><code class="language-text">trend_score ≥ 2    → 恶化
+-1 ≤ trend_score &lt; 2 → 稳定
+trend_score ≤ -2   → 改善</code></pre><br><br>这个规则不一定临床完美，但课程设计足够用，而且可解释。<br><br>## 当前最终系统定位<br><br>现在可以把系统定义成：<br><br>&gt; 本系统面向缺血性心脏病 ICU 患者，基于 MIMIC-IV 构建历史健康轨迹库。用户选择目标患者后，系统根据其 ICU 入科后前 24 小时生命体征、实验室检查和治疗上下文，检索历史相似患者，并统计相似患者后续 24 小时健康趋势，为医护人员提供相似病例参考和趋势分析支持。<br><br>这个定位已经很完整。<br><br>---<br><br>下一个问题：<strong>你准备用什么技术栈实现系统？</strong><br><br>我建议选 <strong>B</strong>。<br><br><strong>A. Pandas + SQLite + Streamlit</strong>  <br>最简单，适合快速实现，但“大数据系统”味道稍弱。<br><br><strong>B. PySpark + DuckDB/SQLite + Streamlit</strong>  <br>最平衡。PySpark 负责 MIMIC 大表清洗和聚合，DuckDB/SQLite 存储轨迹特征，Streamlit 做界面。最适合课程设计高分。<br><br><strong>C. PySpark + MySQL/PostgreSQL + Streamlit</strong>  <br>系统感最强，但数据库配置和部署工作更多。<br><br><strong>D. 全部用 Pandas + Streamlit，不单独做数据库</strong>  <br>最快，但不建议，数据存储层会显得薄。<br><br>我推荐 <strong>B</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:45:15</span>
+                </div>
+                <div class="message-content">mimic数据我已经完成了抽取，用的是duckdb。我倾向于B</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:45:18</span>
+                </div>
+                <div class="message-content">很好。既然你已经用 <strong>DuckDB 完成 MIMIC 数据抽取</strong>，我建议技术栈定为一个“稳妥但有大数据系统感”的版本：<br><br>&gt; <strong>DuckDB + Python/Pandas/Scikit-learn + Streamlit</strong>  <br>&gt; 报告中架构层面保留 <strong>PySpark/DuckDB 数据处理层</strong>，但实际实现可以主要用 DuckDB 完成。<br><br>也就是说，不一定非要为了“看起来大数据”再强行上 PySpark。DuckDB 本身非常适合处理 MIMIC 这种本地大规模结构化医疗数据，尤其是 CSV/Parquet 多表查询、聚合、窗口统计。你已经抽取好了，再引入 Spark 可能反而增加工程复杂度。<br><br>课程设计里可以这样写，更稳：<br><br><pre><code class="language-text">数据处理层：
+系统采用 DuckDB 对 MIMIC-IV 多源表进行本地分析型查询和批量聚合，
+完成缺血性心脏病 ICU 患者筛选、时间窗口切分、生命体征聚合、
+实验室检查聚合和治疗上下文特征提取。
+
+数据分析层：
+使用 Python、Pandas、Scikit-learn 完成轨迹特征标准化、相似度计算、
+Top-K 相似病例检索和后续趋势统计。
+
+应用展示层：
+使用 Streamlit 实现患者查询、轨迹可视化、相似病例推荐和趋势参考展示。</code></pre><br><br>这样完全能满足任务书对<strong>数据存储层、数据分析层、应用层界面</strong>的要求。fileciteturn0file0<br><br>## 技术栈最终建议<br><br>我建议最终采用：<br><br><pre><code class="language-text">数据源：
+MIMIC-IV v3.1
+
+数据抽取与存储：
+DuckDB
+
+数据处理：
+SQL + Python/Pandas
+
+数据分析：
+Scikit-learn
+- StandardScaler
+- Euclidean distance
+- Top-K nearest neighbors
+
+界面实现：
+Streamlit
+
+可视化：
+Plotly / Matplotlib</code></pre><br><br>其中 DuckDB 既可以承担“数据存储层”，也可以承担“数据处理层”的一部分。<br><br>## 报告里可以这样描述架构<br><br><pre><code class="language-text">数据源层：
+MIMIC-IV 原始医疗数据，包括 ICU stay、生命体征、实验室检查、输入输出事件、诊断信息等。
+
+数据存储层：
+使用 DuckDB 建立本地分析型数据库，存储患者基本信息表、轨迹特征表、
+治疗上下文表、后续趋势表和相似检索结果表。
+
+数据处理层：
+基于 SQL 完成疾病队列筛选、时间窗口切分、指标聚合、缺失值处理和特征构建。
+
+数据分析层：
+基于标准化轨迹特征计算患者相似度，检索 Top-K 相似病例，
+并统计相似病例后续 24 小时健康趋势。
+
+应用层：
+使用 Streamlit 提供患者选择、轨迹展示、相似病例推荐、趋势参考和统计报表功能。</code></pre><br><br>这个就很像一个完整系统，而不是单纯跑了个模型。<br><br>## 我建议你接下来把数据整理成 4 张核心表<br><br>### 1. <code>patient_index</code><br><br>每条 ICU stay 一行。<br><br><pre><code class="language-text">stay_id
+subject_id
+hadm_id
+intime
+outtime
+age
+gender
+icd_group
+icu_hours
+hospital_expire_flag</code></pre><br><br>### 2. <code>trajectory_features_0_24h</code><br><br>前 24 小时轨迹特征表。<br><br><pre><code class="language-text">stay_id
+heart_rate_mean
+heart_rate_min
+heart_rate_max
+heart_rate_std
+heart_rate_last
+heart_rate_slope
+...
+wbc_mean
+wbc_min
+wbc_max
+wbc_std
+wbc_last
+wbc_slope</code></pre><br><br>### 3. <code>treatment_context_0_24h</code><br><br>治疗上下文表。<br><br><pre><code class="language-text">stay_id
+circulation_support
+respiratory_support
+fluid_management
+input_volume_24h
+output_volume_24h
+net_fluid_24h</code></pre><br><br>### 4. <code>future_trend_24_48h</code><br><br>后续 24 小时趋势表。<br><br><pre><code class="language-text">stay_id
+heart_rate_delta
+map_delta
+spo2_delta
+creatinine_delta
+bun_delta
+wbc_delta
+trend_score
+trend_label</code></pre><br><br>这样后面做系统就很顺：<br><br><pre><code class="language-text">选择 stay_id
+→ 查 trajectory_features_0_24h
+→ 查 treatment_context_0_24h
+→ 在候选库里计算相似度
+→ 查 future_trend_24_48h
+→ 展示趋势参考</code></pre><br><br>## 当前方案基本可以锁定为<br><br>&gt; <strong>基于 MIMIC-IV 和 DuckDB 的缺血性心脏病患者健康轨迹相似检索与趋势参考系统</strong><br><br>这个题目既有现实应用，又有系统设计，又有数据分析，还能体现大数据课程知识应用。<br><br>下一步只需要确定一个关键细节：<br><br><strong>你现在抽取好的数据是“原始长表”，还是已经聚合成“每个 stay_id 一行的特征表”？</strong><br><br>选一个：<br><br><strong>A. 原始长表</strong>：比如每条生命体征/检验记录一行，还需要继续聚合。  <br><strong>B. 半聚合表</strong>：已经按 stay_id、变量、时间窗口聚合了一部分。  <br><strong>C. 完整特征表</strong>：已经是一行一个 stay_id，可以直接做相似检索。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:50:11</span>
+                </div>
+                <div class="message-content">你先把整个课程设计写一个设计文档吧。我会交给我本地agent继续推进。你主要完成上层设计，这很重要，因为这会影响我后续落地是否能满足此次课程设计的要求与得分点（你可以在设计分档里强调）。如果关于上层设计你还有需要向我提问，以达到足够的把握</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:50:22</span>
+                </div>
+                <div class="message-content">我现在不需要再追问，已有信息足够做上层设计。下面我会按“能交给本地 agent 直接推进”的形式写：目标、系统边界、数据表、算法、界面、实验、报告结构和评分分档都会固定下来。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:50:22</span>
+                </div>
+                <div class="message-content">下面是可以直接交给本地 agent 推进的<strong>上层设计文档 v1.0</strong>。我已经按课程设计任务书的要求来设计：必须覆盖<strong>系统架构图及描述、应用层界面、数据存储层、数据分析层、Python 工具实现界面、数据分析功能与结果</strong>等内容；报告还需要体现设计质量、能力水平和创新性。fileciteturn0file0<br><br>---<br><br># 课程设计上层设计文档 v1.0<br><br>## 1. 课程设计题目<br><br>推荐正式题目：<br><br>&gt; <strong>基于 MIMIC-IV 的缺血性心脏病患者健康轨迹相似检索与趋势参考系统设计</strong><br><br>备选题目：<br><br>&gt; <strong>面向缺血性心脏病患者的健康轨迹相似病例推荐与趋势分析系统</strong><br><br>我更推荐第一个。它明确了数据源、疾病对象、系统功能和数据分析任务。<br><br>---<br><br>## 2. 主题定位<br><br>本课程设计不采用传统的“训练模型预测死亡率”路线，而是设计一个更具系统感和应用感的<strong>患者健康轨迹检索系统</strong>。<br><br>系统面向缺血性心脏病 ICU 患者，基于 MIMIC-IV 数据构建历史患者健康轨迹库。用户选择一个目标患者后，系统根据其 ICU 入科后前 24 小时的生命体征、实验室检查和治疗上下文，在历史患者轨迹库中检索相似患者，并统计这些相似患者在后续 24 小时的健康变化，为医护人员提供相似病例参考和趋势分析支持。<br><br>核心思想：<br><br><pre><code class="language-text">目标患者前 24h 健康轨迹
+        ↓
+匹配治疗上下文相近的历史患者
+        ↓
+计算轨迹相似度
+        ↓
+返回 Top-K 相似患者
+        ↓
+统计相似患者 24–48h 后续趋势
+        ↓
+形成趋势参考与可视化结果</code></pre><br><br>系统定位必须注意：<br><br>&gt; 本系统不是临床诊断系统，也不直接给出治疗方案，而是一个基于历史数据的相似病例检索与趋势参考工具。<br><br>这句话很重要，可以避免报告中被质疑“医学预测不可靠”或“系统越界”。<br><br>---<br><br>## 3. 课程设计目标<br><br>### 3.1 总体目标<br><br>设计并实现一个基于 MIMIC-IV 数据的缺血性心脏病患者健康轨迹相似检索系统，实现患者队列筛选、轨迹特征构建、治疗上下文匹配、相似病例检索、后续趋势统计和可视化展示。<br><br>### 3.2 具体目标<br><br>系统应完成以下功能：<br><br>1. 构建缺血性心脏病 ICU 患者轨迹数据库。<br>2. 提取患者 ICU 入科后 0–24h 的健康轨迹特征。<br>3. 提取患者 0–24h 的轻量治疗上下文标签。<br>4. 基于轨迹特征进行 Top-K 相似患者检索。<br>5. 统计相似患者在 24–48h 的后续健康趋势。<br>6. 使用 Streamlit 实现可交互界面。<br>7. 在课程设计报告中展示系统架构、界面、数据存储设计、算法实现和分析结果。<br><br>---<br><br>## 4. 数据基础<br><br>### 4.1 数据源<br><br>数据源为：<br><br><pre><code class="language-text">MIMIC-IV v3.1</code></pre><br><br>本系统使用 MIMIC-IV 中与 ICU 和住院诊断相关的数据表，包括但不限于：<br><br><pre><code class="language-text">mimiciv_hosp.diagnoses_icd
+mimiciv_hosp.patients
+mimiciv_hosp.admissions
+mimiciv_hosp.labevents
+mimiciv_icu.icustays
+mimiciv_icu.chartevents
+mimiciv_icu.inputevents
+mimiciv_icu.outputevents</code></pre><br><br>### 4.2 疾病队列定义<br><br>疾病对象为：<br><br><pre><code class="language-text">缺血性心脏病 / Ischemic Heart Disease</code></pre><br><br>ICD 筛选口径：<br><br><pre><code class="language-text">ICD-9: 410–414
+ICD-10: I20–I25</code></pre><br><br>根据已有数据探查结果：<br><br><pre><code class="language-text">缺血性心脏病患者数：46,062
+住院记录数：108,833
+ICU stay 数量：32,451
+ICU stay ≥ 48h 数量：16,661</code></pre><br><br>因此，本课程设计的数据规模充足，不需要使用 UCI 小规模数据集作为主数据。<br><br>### 4.3 时间窗口设计<br><br>系统采用固定时间窗口：<br><br><pre><code class="language-text">查询窗口：ICU 入科后 0–24h
+趋势参考窗口：ICU 入科后 24–48h</code></pre><br><br>设计理由：<br><br>1. 前 24h 数据覆盖率高。<br>2. 24–48h 可以作为后续趋势观察窗口。<br>3. 需要 ICU stay ≥ 48h，已有样本数 16,661，规模充足。<br>4. 时间窗口简单，便于实现和解释。<br><br>---<br><br>## 5. 系统总体架构<br><br>报告中的架构图建议画成五层：<br><br><pre><code class="language-text">数据源层
+  ↓
+数据存储层
+  ↓
+数据处理层
+  ↓
+数据分析层
+  ↓
+应用展示层</code></pre><br><br>### 5.1 数据源层<br><br>数据源层负责提供原始医疗数据，包括：<br><br><pre><code class="language-text">患者基本信息
+住院记录
+ICU stay 记录
+诊断 ICD 编码
+生命体征记录
+实验室检查记录
+输入事件
+输出事件
+治疗相关事件</code></pre><br><br>### 5.2 数据存储层<br><br>使用 DuckDB 作为本地分析型数据库，存储原始抽取表、中间处理表和最终分析表。<br><br>DuckDB 适合本项目，因为它支持本地大规模结构化数据分析、SQL 查询、多表连接和批量聚合。<br><br>建议存储表包括：<br><br><pre><code class="language-text">patient_index
+trajectory_features_0_24h
+treatment_context_0_24h
+future_trend_24_48h
+similarity_results</code></pre><br><br>### 5.3 数据处理层<br><br>数据处理层负责：<br><br><pre><code class="language-text">缺血性心脏病患者筛选
+ICU stay ≥ 48h 筛选
+时间窗口切分
+生命体征聚合
+实验室检查聚合
+治疗上下文特征提取
+缺失值处理
+异常值处理
+特征标准化准备</code></pre><br><br>主要工具：<br><br><pre><code class="language-text">DuckDB SQL
+Python
+Pandas</code></pre><br><br>### 5.4 数据分析层<br><br>数据分析层负责：<br><br><pre><code class="language-text">轨迹特征向量构建
+治疗上下文匹配
+标准化处理
+欧氏距离计算
+Top-K 相似患者检索
+后续趋势评分
+趋势标签生成
+相似患者趋势统计</code></pre><br><br>主要工具：<br><br><pre><code class="language-text">scikit-learn
+numpy
+pandas</code></pre><br><br>### 5.5 应用展示层<br><br>应用展示层使用 Streamlit 实现，提供：<br><br><pre><code class="language-text">数据概览
+患者选择
+目标患者轨迹展示
+相似病例推荐
+趋势参考展示
+关键指标解释</code></pre><br><br>---<br><br>## 6. 数据表设计<br><br>### 6.1 patient_index<br><br>每个 ICU stay 一行。<br><br>字段建议：<br><br><pre><code class="language-text">stay_id
+subject_id
+hadm_id
+intime
+outtime
+icu_hours
+age
+gender
+admission_type
+hospital_expire_flag
+icd_group</code></pre><br><br>用途：<br><br>1. 存储患者索引。<br>2. 支持前端选择患者。<br>3. 支持系统概览统计。<br>4. 支持后续表连接。<br><br>---<br><br>### 6.2 trajectory_features_0_24h<br><br>每个 ICU stay 一行，表示患者 ICU 入科后前 24h 的健康轨迹特征。<br><br>核心变量保留 12 个：<br><br>生命体征：<br><br><pre><code class="language-text">heart_rate
+sbp
+map
+resp_rate
+spo2
+temperature</code></pre><br><br>实验室检查：<br><br><pre><code class="language-text">bun
+creatinine
+hemoglobin
+potassium
+sodium
+wbc</code></pre><br><br>每个变量提取 6 类统计特征：<br><br><pre><code class="language-text">mean
+min
+max
+std
+last
+slope</code></pre><br><br>例如：<br><br><pre><code class="language-text">heart_rate_mean
+heart_rate_min
+heart_rate_max
+heart_rate_std
+heart_rate_last
+heart_rate_slope
+...
+creatinine_mean
+creatinine_min
+creatinine_max
+creatinine_std
+creatinine_last
+creatinine_slope</code></pre><br><br>总维度：<br><br><pre><code class="language-text">12 个变量 × 6 个特征 = 72 维</code></pre><br><br>说明：<br><br>乳酸 lactate 不作为核心变量，因为你已有探查结果显示其后 24h 覆盖率较低，会增加缺失处理难度。<br><br>---<br><br>### 6.3 treatment_context_0_24h<br><br>每个 ICU stay 一行，表示前 24h 治疗上下文。<br><br>字段建议：<br><br><pre><code class="language-text">stay_id
+circulation_support
+respiratory_support
+fluid_management
+input_volume_24h
+output_volume_24h
+net_fluid_24h</code></pre><br><br>其中三个核心治疗标签为：<br><br><pre><code class="language-text">circulation_support: 是否存在循环支持
+respiratory_support: 是否存在呼吸支持
+fluid_management: 是否存在液体管理记录</code></pre><br><br>设计理由：<br><br>相似轨迹检索不能只看生命体征和检验指标。两个患者前 24h 生理状态相似，但如果治疗背景完全不同，后续趋势参考意义会下降。因此系统引入轻量治疗上下文，降低治疗混杂影响。<br><br>实现上不需要复杂治疗建模，只需要做粗粒度标签。<br><br>---<br><br>### 6.4 future_trend_24_48h<br><br>每个 ICU stay 一行，表示后续 24h 趋势。<br><br>字段建议：<br><br><pre><code class="language-text">stay_id
+heart_rate_delta
+map_delta
+spo2_delta
+resp_rate_delta
+temperature_delta
+creatinine_delta
+bun_delta
+wbc_delta
+hemoglobin_delta
+potassium_delta
+sodium_delta
+trend_score
+trend_label</code></pre><br><br>其中：<br><br><pre><code class="language-text">delta = 24–48h 指标统计值 - 0–24h 指标统计值</code></pre><br><br>核心趋势标签：<br><br><pre><code class="language-text">improved
+stable
+worsened</code></pre><br><br>中文界面中显示为：<br><br><pre><code class="language-text">改善
+稳定
+恶化</code></pre><br><br>---<br><br>### 6.5 similarity_results<br><br>可以选择是否持久化。如果系统实时计算速度够快，可以不存。如果想体现数据存储层，可以存储查询结果。<br><br>字段建议：<br><br><pre><code class="language-text">query_stay_id
+similar_stay_id
+rank
+distance
+similarity_score
+same_circulation_support
+same_respiratory_support
+same_fluid_management
+similar_patient_trend_label
+created_at</code></pre><br><br>---<br><br>## 7. 核心算法设计<br><br>### 7.1 轨迹特征构建<br><br>对每个 stay_id，在 0–24h 内对 12 个变量提取统计特征。<br><br>每个变量特征：<br><br><pre><code class="language-text">mean: 平均水平
+min: 最低值
+max: 最高值
+std: 波动程度
+last: 窗口末次值
+slope: 变化趋势</code></pre><br><br>slope 可以用简单线性回归斜率计算，也可以先简化为：<br><br><pre><code class="language-text">slope = last - first</code></pre><br><br>课程设计中推荐先用：<br><br><pre><code class="language-text">slope = last - first</code></pre><br><br>理由是实现简单、可解释性强。<br><br>---<br><br>### 7.2 缺失值处理<br><br>建议规则：<br><br>1. 若核心生命体征缺失严重，剔除该 stay。<br>2. 单个统计特征缺失时，用全队列中位数填充。<br>3. 实验室检查变量覆盖率较高，可以保留。<br>4. lactate 不纳入核心变量。<br><br>报告中可以写：<br><br>&gt; 为保证轨迹向量维度一致，系统对缺失统计特征采用中位数填充，并删除覆盖率明显不足的乳酸变量。<br><br>---<br><br>### 7.3 特征标准化<br><br>由于不同指标量纲不同，必须标准化。<br><br>使用：<br><br><pre><code class="language-python">sklearn.preprocessing.StandardScaler</code></pre><br><br>标准化对象：<br><br><pre><code class="language-text">72 维轨迹特征</code></pre><br><br>治疗上下文标签不直接参与 StandardScaler，可以用于候选筛选或相似度加权。<br><br>---<br><br>### 7.4 治疗上下文匹配<br><br>推荐采用“先筛选，后计算距离”的方式。<br><br>流程：<br><br><pre><code class="language-text">输入目标 stay_id
+    ↓
+读取目标患者治疗标签
+    ↓
+优先筛选治疗标签完全一致的候选患者
+    ↓
+如果候选数量不足，则允许部分标签一致
+    ↓
+在候选患者中计算轨迹距离</code></pre><br><br>推荐规则：<br><br><pre><code class="language-text">第一优先级：三个治疗标签完全一致
+第二优先级：至少两个治疗标签一致
+第三优先级：至少一个治疗标签一致</code></pre><br><br>为了系统稳定，可以设置最小候选数：<br><br><pre><code class="language-text">min_candidates = 100</code></pre><br><br>若完全匹配候选少于 100，则放宽匹配条件。<br><br>这部分是高分点，因为它体现了对医疗数据中治疗混杂问题的考虑。<br><br>---<br><br>### 7.5 相似度计算<br><br>主方法使用欧氏距离。<br><br>对标准化后的轨迹特征向量：<br><br><pre><code class="language-text">x_i = 患者 i 的 72 维轨迹向量
+x_q = 目标患者 q 的 72 维轨迹向量</code></pre><br><br>距离：<br><br><pre><code class="language-text">distance(q, i) = sqrt(sum((x_q - x_i)^2))</code></pre><br><br>距离越小，轨迹越相似。<br><br>为了前端显示更直观，可以把距离转换成相似度分数：<br><br><pre><code class="language-text">similarity_score = 1 / (1 + distance)</code></pre><br><br>Top-K 推荐：<br><br><pre><code class="language-text">按照 distance 从小到大排序，返回 Top-K</code></pre><br><br>推荐默认：<br><br><pre><code class="language-text">K = 5 或 10</code></pre><br><br>前端可以提供选项：<br><br><pre><code class="language-text">Top-5
+Top-10
+Top-20</code></pre><br><br>---<br><br>### 7.6 后续趋势评分<br><br>系统需要把相似患者后续 24h 的变化转化为可解释趋势。<br><br>建议定义一个简单的趋势评分：<br><br>对以下指标判断不利变化：<br><br><pre><code class="language-text">heart_rate 上升明显
+map 下降明显
+spo2 下降明显
+resp_rate 上升明显
+creatinine 上升明显
+bun 上升明显
+wbc 上升明显
+temperature 上升明显或异常</code></pre><br><br>可以先采用规则阈值：<br><br><pre><code class="language-text">heart_rate_delta &gt; 10        → 不利变化 +1
+map_delta &lt; -5               → 不利变化 +1
+spo2_delta &lt; -2              → 不利变化 +1
+resp_rate_delta &gt; 3          → 不利变化 +1
+creatinine_delta &gt; 0.3       → 不利变化 +1
+bun_delta &gt; 5                → 不利变化 +1
+wbc_delta &gt; 2                → 不利变化 +1</code></pre><br><br>然后：<br><br><pre><code class="language-text">trend_score = 不利变化指标数量</code></pre><br><br>趋势标签：<br><br><pre><code class="language-text">trend_score &gt;= 3  → 恶化
+trend_score 1–2   → 稳定/轻度波动
+trend_score 0     → 改善或稳定</code></pre><br><br>更稳妥的标签可以设为：<br><br><pre><code class="language-text">0–1: 稳定/改善
+2–3: 波动
+&gt;=4: 恶化</code></pre><br><br>但为了界面简单，建议最终使用三类：<br><br><pre><code class="language-text">改善
+稳定
+恶化</code></pre><br><br>注意：报告中要强调这是“数据分析规则”，不是临床诊断标准。<br><br>---<br><br>## 8. 系统功能设计<br><br>### 8.1 功能模块一：数据概览<br><br>展示内容：<br><br><pre><code class="language-text">总患者数
+总 ICU stay 数
+满足 48h 窗口的 ICU stay 数
+核心变量覆盖率
+治疗上下文覆盖率
+趋势标签分布</code></pre><br><br>图表建议：<br><br><pre><code class="language-text">队列规模卡片
+变量覆盖率柱状图
+趋势标签饼图或柱状图
+治疗上下文分布图</code></pre><br><br>课程设计价值：<br><br>体现数据采集、清洗、存储和统计分析能力。<br><br>---<br><br>### 8.2 功能模块二：患者轨迹查询<br><br>输入：<br><br><pre><code class="language-text">选择 stay_id</code></pre><br><br>展示：<br><br><pre><code class="language-text">患者基本信息
+ICU stay 时间
+年龄、性别
+诊断类别
+治疗上下文标签
+前 24h 生命体征曲线
+前 24h 实验室检查摘要</code></pre><br><br>图表建议：<br><br><pre><code class="language-text">心率趋势图
+MAP 趋势图
+SpO2 趋势图
+呼吸频率趋势图
+肌酐/BUN 趋势图
+WBC/血红蛋白趋势图</code></pre><br><br>课程设计价值：<br><br>满足应用层界面展示要求。<br><br>---<br><br>### 8.3 功能模块三：相似病例检索<br><br>输入：<br><br><pre><code class="language-text">目标 stay_id
+Top-K 数量
+是否启用治疗上下文匹配</code></pre><br><br>输出表格：<br><br><pre><code class="language-text">排名
+相似 stay_id
+距离
+相似度分数
+循环支持是否一致
+呼吸支持是否一致
+液体管理是否一致
+后续趋势标签</code></pre><br><br>图表建议：<br><br><pre><code class="language-text">目标患者 vs Top-5 相似患者轨迹对比图
+Top-K 距离条形图
+治疗上下文匹配情况表</code></pre><br><br>课程设计价值：<br><br>体现核心数据分析算法。<br><br>---<br><br>### 8.4 功能模块四：后续趋势参考<br><br>基于 Top-K 相似患者，展示：<br><br><pre><code class="language-text">相似患者后续 24h 趋势分布
+相似患者 24–48h 平均指标变化
+恶化患者比例
+稳定患者比例
+改善患者比例
+重点关注指标</code></pre><br><br>输出示例：<br><br><pre><code class="language-text">在 Top-10 相似患者中：
+6 人后续趋势稳定
+3 人出现指标恶化
+1 人出现改善
+
+相似患者群体中，SpO2 和 MAP 是变化最明显的指标。
+建议在后续观察中重点关注血氧、平均动脉压和肾功能指标。</code></pre><br><br>注意措辞：<br><br>不要写：<br><br><pre><code class="language-text">系统预测该患者会恶化。</code></pre><br><br>要写：<br><br><pre><code class="language-text">历史相似患者中恶化比例较高，提示该患者后续变化值得重点关注。</code></pre><br><br>---<br><br>### 8.5 功能模块五：分析报告导出，可选<br><br>这个不是必须，但可以作为加分项。<br><br>功能：<br><br><pre><code class="language-text">导出目标患者轨迹分析摘要
+导出 Top-K 相似患者结果
+导出趋势参考结论</code></pre><br><br>形式：<br><br><pre><code class="language-text">CSV
+HTML
+PDF，可选</code></pre><br><br>课程设计不强制做 PDF，优先保证 Streamlit 展示完整。<br><br>---<br><br>## 9. 系统界面设计<br><br>建议 Streamlit 左侧导航栏包括：<br><br><pre><code class="language-text">1. 系统首页
+2. 数据概览
+3. 患者轨迹查询
+4. 相似病例检索
+5. 趋势参考分析
+6. 方法说明</code></pre><br><br>### 9.1 系统首页<br><br>内容：<br><br><pre><code class="language-text">系统名称
+系统简介
+数据来源
+核心流程图
+主要功能入口</code></pre><br><br>首页文案示例：<br><br>&gt; 本系统面向缺血性心脏病 ICU 患者，基于 MIMIC-IV 构建历史健康轨迹库。用户选择目标患者后，系统根据其前 24 小时生命体征、实验室检查和治疗上下文，检索历史相似病例，并统计相似病例后续 24 小时健康趋势，为医护人员提供趋势参考。<br><br>---<br><br>### 9.2 数据概览页<br><br>显示：<br><br><pre><code class="language-text">队列规模
+变量覆盖率
+治疗上下文分布
+趋势标签分布</code></pre><br><br>---<br><br>### 9.3 患者轨迹查询页<br><br>控件：<br><br><pre><code class="language-text">selectbox: stay_id
+multiselect: 展示变量
+radio: 生命体征 / 实验室检查</code></pre><br><br>显示：<br><br><pre><code class="language-text">患者基本信息卡片
+0–24h 指标轨迹图
+治疗上下文标签</code></pre><br><br>---<br><br>### 9.4 相似病例检索页<br><br>控件：<br><br><pre><code class="language-text">selectbox: 目标 stay_id
+slider: Top-K
+checkbox: 是否启用治疗上下文匹配
+button: 开始检索</code></pre><br><br>显示：<br><br><pre><code class="language-text">Top-K 相似病例表格
+相似度柱状图
+轨迹叠加对比图</code></pre><br><br>---<br><br>### 9.5 趋势参考分析页<br><br>显示：<br><br><pre><code class="language-text">Top-K 相似患者后续趋势分布
+24–48h 平均趋势曲线
+关键指标变化表
+趋势参考文本</code></pre><br><br>---<br><br>### 9.6 方法说明页<br><br>显示：<br><br><pre><code class="language-text">队列筛选方法
+轨迹特征构建方法
+治疗上下文匹配方法
+相似度计算公式
+趋势标签规则
+系统局限性</code></pre><br><br>这个页面能提高报告和系统的一致性。<br><br>---<br><br>## 10. 实验设计<br><br>课程设计中的“实验”不要写成科研论文式模型对比，而是写成系统功能验证与数据分析实验。<br><br>### 10.1 实验一：数据队列构建与覆盖率分析<br><br>目的：<br><br>验证 MIMIC-IV 中缺血性心脏病 ICU 队列是否满足轨迹分析需求。<br><br>内容：<br><br><pre><code class="language-text">统计患者数、住院数、ICU stay 数
+筛选 ICU stay ≥ 48h
+统计生命体征覆盖率
+统计实验室检查覆盖率
+统计治疗上下文覆盖率</code></pre><br><br>已有结果可以直接写入报告。<br><br>高分点：<br><br>说明为什么删除 lactate，为什么保留 12 个核心变量。<br><br>---<br><br>### 10.2 实验二：轨迹特征构建实验<br><br>目的：<br><br>将不规则时间序列转化为统一维度的轨迹特征向量。<br><br>内容：<br><br><pre><code class="language-text">每个 stay_id 构建 72 维轨迹向量
+统计缺失填充情况
+检查特征分布
+标准化处理</code></pre><br><br>输出：<br><br><pre><code class="language-text">轨迹特征表样例
+特征维度说明
+部分变量分布图</code></pre><br><br>---<br><br>### 10.3 实验三：相似病例检索实验<br><br>目的：<br><br>验证系统能否根据目标患者检索历史相似轨迹。<br><br>内容：<br><br><pre><code class="language-text">随机选择若干目标 stay_id
+计算 Top-K 相似病例
+展示相似度分数
+展示轨迹叠加图</code></pre><br><br>输出：<br><br><pre><code class="language-text">Top-K 表格
+目标患者与相似患者轨迹对比图</code></pre><br><br>---<br><br>### 10.4 实验四：治疗上下文匹配对比实验<br><br>这是推荐加入的高分实验。<br><br>设计两个版本：<br><br><pre><code class="language-text">版本 A：不考虑治疗上下文，直接按轨迹距离检索
+版本 B：先匹配治疗上下文，再按轨迹距离检索</code></pre><br><br>比较：<br><br><pre><code class="language-text">Top-K 相似患者是否变化
+治疗标签一致率是否提高
+后续趋势分布是否更集中
+结果解释性是否更好</code></pre><br><br>这个实验不需要证明医学上绝对正确，只要说明：<br><br>&gt; 加入治疗上下文后，系统推荐的相似患者在治疗背景上更一致，结果更便于解释。<br><br>这是设计质量和创新性的加分点。<br><br>---<br><br>### 10.5 实验五：后续趋势参考实验<br><br>目的：<br><br>验证系统能根据相似患者后续变化形成趋势参考。<br><br>内容：<br><br><pre><code class="language-text">统计 Top-K 相似患者的趋势标签
+计算改善/稳定/恶化比例
+展示关键指标后续变化
+生成趋势参考文本</code></pre><br><br>输出：<br><br><pre><code class="language-text">趋势分布图
+关键指标变化表
+系统生成的趋势参考说明</code></pre><br><br>---<br><br>## 11. 评分导向设计分档<br><br>### 11.1 合格版：必须完成<br><br>完成这些就能满足课程设计基本要求。<br><br><pre><code class="language-text">1. DuckDB 中完成队列数据整理
+2. 构建 patient_index
+3. 构建 trajectory_features_0_24h
+4. 构建 future_trend_24_48h
+5. 实现欧氏距离 Top-K 检索
+6. Streamlit 展示患者选择、相似患者表格、趋势图
+7. 报告包含系统架构图、界面截图、数据分析结果</code></pre><br><br>风险：能完成，但创新性一般。<br><br>---<br><br>### 11.2 高分版：推荐目标<br><br>建议你按这个标准推进。<br><br><pre><code class="language-text">1. 完成合格版所有内容
+2. 加入 treatment_context_0_24h
+3. 支持治疗上下文匹配
+4. 做“无治疗上下文 vs 有治疗上下文”的检索对比
+5. 展示变量覆盖率和数据质量分析
+6. 展示目标患者与 Top-K 相似患者轨迹叠加图
+7. 展示后续趋势分布和重点关注指标
+8. 报告中明确系统创新点和局限性</code></pre><br><br>这是最适合你当前时间和数据条件的版本。<br><br>---<br><br>### 11.3 冲刺版：可选加分<br><br>时间充足时再做。<br><br><pre><code class="language-text">1. 支持 Top-K 参数调节
+2. 支持不同相似度指标切换：欧氏距离 / 余弦相似度
+3. 支持结果导出
+4. 加入患者聚类模块
+5. 加入系统缓存 similarity_results
+6. 做更多病例展示
+7. 增加系统使用说明页</code></pre><br><br>不要一开始就追冲刺版。先把高分版做稳。<br><br>---<br><br>## 12. 报告结构建议<br><br>课程设计报告建议按以下结构写。<br><br><pre><code class="language-text">1 绪论
+  1.1 研究背景
+  1.2 设计目的
+  1.3 系统主要功能
+  1.4 本文组织结构
+
+2 需求分析
+  2.1 应用场景分析
+  2.2 用户需求分析
+  2.3 功能需求
+  2.4 非功能需求
+
+3 系统总体设计
+  3.1 系统架构设计
+  3.2 数据流程设计
+  3.3 功能模块设计
+  3.4 技术路线设计
+
+4 数据存储与数据处理设计
+  4.1 数据源介绍
+  4.2 缺血性心脏病患者队列构建
+  4.3 数据表设计
+  4.4 数据清洗与缺失值处理
+  4.5 轨迹特征构建
+
+5 数据分析方法设计
+  5.1 健康轨迹表示方法
+  5.2 治疗上下文建模
+  5.3 相似度计算方法
+  5.4 Top-K 相似病例检索
+  5.5 后续趋势评分方法
+
+6 系统实现
+  6.1 开发环境
+  6.2 DuckDB 数据存储实现
+  6.3 Python 数据分析实现
+  6.4 Streamlit 界面实现
+  6.5 核心功能展示
+
+7 实验结果与系统展示
+  7.1 数据规模与覆盖率结果
+  7.2 患者轨迹查询结果
+  7.3 相似病例检索结果
+  7.4 治疗上下文对比结果
+  7.5 后续趋势参考结果
+
+8 总结与展望
+  8.1 课程设计总结
+  8.2 系统创新点
+  8.3 系统不足
+  8.4 后续改进方向
+
+参考文献</code></pre><br><br>注意任务书要求正文层级用：<br><br><pre><code class="language-text">1、1.1、1.1.1……</code></pre><br><br>并且正文格式有宋体、小四、固定行距 20 磅、页边距等要求，最终排版时要对齐任务书。fileciteturn0file0<br><br>---<br><br>## 13. 报告中的创新点写法<br><br>建议写三点。<br><br>### 创新点一：面向轨迹检索而非单点预测<br><br>传统课程设计常见做法是训练分类模型预测是否患病或是否死亡。本系统从历史患者轨迹库出发，设计相似病例检索机制，为目标患者提供后续趋势参考，更接近真实医疗数据查询和辅助分析场景。<br><br>### 创新点二：融合生命体征与实验室检查构建健康轨迹<br><br>系统不是使用单一表格特征，而是从 ICU 时间序列数据中提取生命体征和实验室检查的统计特征，构建患者前 24 小时健康轨迹向量。<br><br>### 创新点三：引入轻量治疗上下文<br><br>系统考虑循环支持、呼吸支持和液体管理三个治疗上下文标签</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 14:52:31</span>
+                </div>
+                <div class="message-content">你先把整个课程设计写一个设计文档吧。我会交给我本地agent继续推进。你主要完成上层设计，这很重要，因为这会影响我后续落地是否能满足此次课程设计的要求与得分点（你可以在设计分档里强调）。如果关于上层设计你还有需要向我提问，以达到足够的把握。<br>抽取出来的数据文件："""<br> 数据文件（data/ 目录，均为 .parquet 格式）<br><br>  ┌─────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────┐<br>  │              文件               │                                          内容                                           │<br>  ├─────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┤<br>  │ cohort_ihd_icu48.parquet        │ 主队列数据，16,661 条 ICU 记录                                                          │<br>  ├─────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┤<br>  │ vitals_4h_bins.parquet          │ 6 项生命体征（心率、收缩压、平均动脉压、呼吸率、血氧、体温），按 4 小时分箱，覆盖 0-48h │<br>  ├─────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┤<br>  │ labs_24h_windows.parquet        │ 6 项实验室指标（BUN、肌酐、血红蛋白、钾、钠、白细胞），按 24 小时窗口汇总               │<br>  ├─────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┤<br>  │ treatment_context_0_24h.parquet │ 前 24 小时治疗背景：循环支持（血管加压药）、呼吸支持（机械通气）、液体平衡水平          │<br>  ├─────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┤<br>  │ query_features_0_24h.parquet    │ 扁平特征表，用于相似性搜索                                                              │<br>  ├─────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┤<br>  │ future_features_24_48h.parquet  │ 24-48h 趋势标签，供参考展示                                                             │<br>  ├─────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┤<br>  │ app_patient_index.parquet       │ 轻量索引，供 Streamlit 下拉菜单使用                                                     │<br>  └─────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────┘<br><br>  元数据（metadata/ 目录）<br><br>  4 个 CSV 文件，分别记录了生命体征、实验室、血管加压药、呼吸支持的 itemid 映射关系。<br><br>  脚本（scripts/ 目录）<br><br>  - 01_extract_from_mimic.sql — MIMIC 数据库提取 SQL 参考<br>  - 02_build_features.py — 构建衍生特征表<br>  - 03_validate_package.py — 数据包完整性校验<br><br>  ---<br>"""</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 14:52:51</span>
+                </div>
+                <div class="message-content">下面这份可以直接交给你的本地 agent 继续推进。它不是最终报告正文，而是<strong>课程设计上层设计文档 + 实施规格书</strong>。我会按“稳妥高分”的目标来设计，重点保证：主题明确、系统完整、能落地、能写报告、能做界面、能体现大数据课程知识。<br><br>---<br><br># 课程设计上层设计文档<br><br>## 题目<br><br><strong>基于 MIMIC-IV 的缺血性心脏病患者健康轨迹相似检索与趋势参考系统设计</strong><br><br>备选标题：<br><br><strong>面向缺血性心脏病患者的健康轨迹检索与相似病例趋势参考系统</strong><br><br>推荐使用第一个。它明确包含数据源、疾病对象、核心方法和系统目标。<br><br>---<br><br>## 1. 课程设计定位<br><br>### 1.1 任务要求理解<br><br>本课程设计要求结合现实应用场景设计一个数据分析系统，报告中必须包含系统架构图及描述、应用层功能、数据存储层设计、数据分析层算法与工具、Python 等工具实现的应用界面，以及数据分析功能和最终分析结果。评分维度包括设计质量、能力水平和创新性。fileciteturn1file0<br><br>因此，本项目不能只做一个单独的机器学习模型，也不能只做数据统计图表，而应该体现为一个完整的数据分析系统。<br><br>### 1.2 本项目的核心定位<br><br>本项目设计一个面向缺血性心脏病 ICU 患者的健康轨迹相似检索系统。用户选择一个目标患者 ICU stay 后，系统根据该患者 ICU 入科后前 24 小时的生命体征、实验室检查和治疗上下文，在历史患者轨迹库中检索最相似的患者，并展示这些相似患者在后续 24 小时内的健康变化趋势。<br><br>系统输出的不是“医学诊断”或“精准预测”，而是：<br><br>&gt; 基于历史相似病例的后续趋势参考。<br><br>这个定位更适合课程设计，原因是它具有真实应用价值、系统结构完整、数据处理链路清楚，而且比传统“死亡风险预测”或“疾病分类”更有新颖性。<br><br>---<br><br>## 2. 项目目标<br><br>### 2.1 总体目标<br><br>构建一个基于 MIMIC-IV 数据的缺血性心脏病患者健康轨迹相似检索与趋势参考系统，实现患者轨迹库管理、目标患者查询、相似病例推荐、后续趋势分析和可视化展示。<br><br>### 2.2 具体目标<br><br>1. 构建缺血性心脏病 ICU 患者轨迹数据库。<br>2. 使用 ICU 入科后 0–24 小时数据表示患者当前健康轨迹。<br>3. 引入循环支持、呼吸支持、液体管理三个轻量治疗上下文，降低治疗背景差异对相似检索的干扰。<br>4. 基于标准化特征向量和欧氏距离实现 Top-K 相似病例检索。<br>5. 统计相似患者 24–48 小时的后续趋势，提供目标患者的健康趋势参考。<br>6. 使用 Streamlit 实现系统界面，展示患者选择、轨迹曲线、相似病例列表、后续趋势分布和系统解释结果。<br><br>---<br><br>## 3. 选题价值与创新点<br><br>### 3.1 现实应用价值<br><br>ICU 患者在短时间内会产生大量生命体征、检验、治疗和结局数据。对于缺血性心脏病患者，医护人员不仅关心当前状态，还希望参考历史相似患者的后续变化，从而辅助判断患者是否可能趋于稳定、继续恶化或需要重点观察。<br><br>本系统以“相似病例检索”为核心，将历史患者数据转化为可查询、可对比、可解释的趋势参考工具。<br><br>### 3.2 与传统任务的区别<br><br>传统课程设计常见做法是：<br><br><pre><code class="language-text">输入患者特征 → 训练分类模型 → 输出是否死亡/是否高危</code></pre><br><br>本项目采用：<br><br><pre><code class="language-text">输入目标患者当前轨迹 → 检索历史相似轨迹 → 展示相似患者后续变化 → 给出趋势参考</code></pre><br><br>这个方案更像一个真实的数据分析系统，而不是单纯模型实验。<br><br>### 3.3 创新点<br><br>#### 创新点 1：健康轨迹相似检索<br><br>系统不直接做单点分类，而是将患者前 24 小时状态表示为健康轨迹特征向量，并从历史轨迹库中检索相似患者。<br><br>#### 创新点 2：相似病例后续趋势参考<br><br>系统不仅返回相似患者列表，还统计这些患者在 24–48 小时内的生命体征和实验室指标变化，用于辅助理解目标患者可能的后续发展方向。<br><br>#### 创新点 3：治疗上下文约束<br><br>系统加入循环支持、呼吸支持、液体管理三个治疗上下文标签，在相似检索时避免将治疗背景完全不同的患者直接比较，提高结果解释性。<br><br>#### 创新点 4：完整的数据系统链路<br><br>项目覆盖数据抽取、轨迹构建、特征存储、相似检索、趋势分析、可视化界面，符合大数据系统课程设计对系统性和工程能力的要求。<br><br>---<br><br>## 4. 数据基础<br><br>### 4.1 数据来源<br><br>数据来源为 MIMIC-IV v3.1，本项目已经完成数据抽取和特征构建，数据以 <code>.parquet</code> 格式保存在 <code>data/</code> 目录下。<br><br>### 4.2 队列定义<br><br>疾病对象为缺血性心脏病患者。<br><br>筛选口径：<br><br><pre><code class="language-text">ICD-9：410–414
+ICD-10：I20–I25</code></pre><br><br>筛选结果：<br><br><pre><code class="language-text">总体患者数：46,062
+总体住院记录数：108,833
+ICU 患者数：23,123
+ICU 记录数：32,451
+ICU stay ≥ 48h：16,661</code></pre><br><br>最终系统使用 ICU stay ≥ 48h 的 16,661 条记录，因为系统需要使用：<br><br><pre><code class="language-text">0–24h：目标查询轨迹
+24–48h：后续趋势参考</code></pre><br><br>### 4.3 已抽取数据文件<br><br>| 文件 | 用途 |<br>|---|---|<br>| <code>cohort_ihd_icu48.parquet</code> | 主队列数据，16,661 条 ICU stay |<br>| <code>vitals_4h_bins.parquet</code> | 6 项生命体征，按 4 小时分箱，覆盖 0–48h |<br>| <code>labs_24h_windows.parquet</code> | 6 项实验室指标，按 24 小时窗口汇总 |<br>| <code>treatment_context_0_24h.parquet</code> | 前 24 小时治疗背景 |<br>| <code>query_features_0_24h.parquet</code> | 0–24h 扁平特征表，用于相似检索 |<br>| <code>future_features_24_48h.parquet</code> | 24–48h 后续趋势标签与统计结果 |<br>| <code>app_patient_index.parquet</code> | 应用端患者索引，用于 Streamlit 下拉菜单 |<br><br>### 4.4 元数据文件<br><br><code>metadata/</code> 目录包含 4 个 CSV 文件，分别记录：<br><br>1. 生命体征 itemid 映射。<br>2. 实验室检查 itemid 映射。<br>3. 血管加压药 itemid 映射。<br>4. 呼吸支持 itemid 映射。<br><br>这些元数据应该在报告中作为“数据来源与变量定义”的支撑材料出现。<br><br>---<br><br>## 5. 系统总体架构<br><br>### 5.1 架构总览<br><br>系统采用五层架构：<br><br><pre><code class="language-text">数据源层
+  ↓
+数据处理层
+  ↓
+数据存储层
+  ↓
+数据分析层
+  ↓
+应用展示层</code></pre><br><br>### 5.2 架构图建议<br><br>报告中的架构图应包含以下内容：<br><br><pre><code class="language-text">┌──────────────────────────────────────────────┐
+│                  应用展示层                   │
+│ Streamlit Web App                             │
+│ 患者查询｜轨迹展示｜相似病例推荐｜趋势参考     │
+└──────────────────────────────────────────────┘
+                        ↑
+┌──────────────────────────────────────────────┐
+│                  数据分析层                   │
+│ 特征标准化｜治疗上下文匹配｜欧氏距离检索       │
+│ Top-K 相似病例｜后续趋势统计｜可解释性分析     │
+└──────────────────────────────────────────────┘
+                        ↑
+┌──────────────────────────────────────────────┐
+│                  数据存储层                   │
+│ DuckDB / Parquet                              │
+│ 队列表｜轨迹特征表｜治疗上下文表｜趋势标签表   │
+└──────────────────────────────────────────────┘
+                        ↑
+┌──────────────────────────────────────────────┐
+│                  数据处理层                   │
+│ SQL + Python                                  │
+│ 队列筛选｜时间窗口切分｜缺失处理｜特征构建     │
+└──────────────────────────────────────────────┘
+                        ↑
+┌──────────────────────────────────────────────┐
+│                  数据源层                     │
+│ MIMIC-IV v3.1                                 │
+│ ICU｜诊断｜生命体征｜实验室检查｜治疗记录      │
+└──────────────────────────────────────────────┘</code></pre><br><br>### 5.3 各层职责<br><br>#### 5.3.1 数据源层<br><br>负责提供原始医疗数据，包括 ICU stay、诊断、生命体征、实验室检查、输入输出、用药和治疗记录。<br><br>#### 5.3.2 数据处理层<br><br>负责将 MIMIC-IV 原始多表数据转换为系统可用的数据资产，包括：<br><br>1. 缺血性心脏病患者筛选。<br>2. ICU stay ≥ 48h 样本筛选。<br>3. 0–24h 查询窗口构建。<br>4. 24–48h 趋势参考窗口构建。<br>5. 生命体征 4 小时分箱。<br>6. 实验室检查 24 小时汇总。<br>7. 治疗上下文提取。<br>8. 缺失值处理和特征标准化准备。<br><br>#### 5.3.3 数据存储层<br><br>使用 Parquet 和 DuckDB 存储结构化数据。<br><br>核心表包括：<br><br><pre><code class="language-text">cohort_ihd_icu48
+vitals_4h_bins
+labs_24h_windows
+treatment_context_0_24h
+query_features_0_24h
+future_features_24_48h
+app_patient_index</code></pre><br><br>#### 5.3.4 数据分析层<br><br>负责完成：<br><br>1. 患者轨迹表示。<br>2. 治疗上下文匹配。<br>3. 特征标准化。<br>4. 欧氏距离计算。<br>5. Top-K 相似患者检索。<br>6. 相似患者后续趋势统计。<br>7. 指标变化解释。<br>8. 趋势参考生成。<br><br>#### 5.3.5 应用展示层<br><br>使用 Streamlit 实现交互式界面，用户可以选择目标患者，查看其前 24 小时轨迹、治疗上下文、相似病例、后续趋势和系统解释。<br><br>---<br><br>## 6. 核心业务流程<br><br>### 6.1 用户使用流程<br><br><pre><code class="language-text">用户进入系统
+  ↓
+在患者列表中选择目标 stay_id
+  ↓
+系统展示目标患者基本信息和 0–24h 健康轨迹
+  ↓
+用户设置 Top-K 参数
+  ↓
+系统根据治疗上下文筛选候选患者
+  ↓
+系统计算目标患者与候选患者的轨迹相似度
+  ↓
+系统返回 Top-K 相似患者
+  ↓
+系统展示相似患者 24–48h 后续趋势
+  ↓
+系统生成趋势参考说明</code></pre><br><br>### 6.2 系统输出<br><br>系统最终输出包括：<br><br>1. 目标患者基本信息。<br>2. 目标患者 0–24h 生命体征曲线。<br>3. 目标患者实验室检查摘要。<br>4. 目标患者治疗上下文标签。<br>5. Top-K 相似患者列表。<br>6. 相似度分数。<br>7. 相似患者后续趋势分布。<br>8. 相似患者 24–48h 指标变化图。<br>9. 系统生成的趋势参考文本。<br><br>---<br><br>## 7. 功能模块设计<br><br>### 7.1 数据概览模块<br><br>#### 功能目标<br><br>展示系统数据资产规模和数据质量。<br><br>#### 展示内容<br><br>1. 总 ICU stay 数。<br>2. 缺血性心脏病 ICU stay 数。<br>3. ICU stay ≥ 48h 数。<br>4. 生命体征覆盖率。<br>5. 实验室检查覆盖率。<br>6. 治疗上下文覆盖情况。<br>7. 趋势标签分布。<br><br>#### 高分点<br><br>这个模块能体现你不是只拿数据跑模型，而是完成了数据质量分析和数据系统建设。<br><br>---<br><br>### 7.2 患者选择模块<br><br>#### 功能目标<br><br>允许用户从系统内选择一个目标患者。<br><br>#### 输入<br><br><code>stay_id</code><br><br>#### 数据来源<br><br><code>app_patient_index.parquet</code><br><br>#### 展示字段建议<br><br><pre><code class="language-text">stay_id
+subject_id
+hadm_id
+age
+gender
+icu_hours
+icd_group
+hospital_expire_flag</code></pre><br><br>如果为了隐私和展示简洁，可以只显示：<br><br><pre><code class="language-text">stay_id
+年龄段
+性别
+ICU 停留时长
+主要诊断类别</code></pre><br><br>---<br><br>### 7.3 目标患者轨迹展示模块<br><br>#### 功能目标<br><br>展示目标患者 ICU 入科后 0–24h 的健康轨迹。<br><br>#### 数据来源<br><br><pre><code class="language-text">vitals_4h_bins.parquet
+labs_24h_windows.parquet
+treatment_context_0_24h.parquet</code></pre><br><br>#### 展示内容<br><br>生命体征曲线：<br><br><pre><code class="language-text">heart_rate
+sbp
+map
+resp_rate
+spo2
+temperature</code></pre><br><br>实验室检查摘要：<br><br><pre><code class="language-text">bun
+creatinine
+hemoglobin
+potassium
+sodium
+wbc</code></pre><br><br>治疗上下文：<br><br><pre><code class="language-text">循环支持：有/无
+呼吸支持：有/无
+液体管理水平：低/中/高 或 数值</code></pre><br><br>#### 高分点<br><br>这个模块对应任务书中的“应用层界面展示”，要在报告中放截图并配文字说明。<br><br>---<br><br>### 7.4 相似病例检索模块<br><br>#### 功能目标<br><br>根据目标患者前 24 小时健康轨迹，从历史轨迹库中检索 Top-K 相似患者。<br><br>#### 输入<br><br><pre><code class="language-text">目标 stay_id
+Top-K 参数
+是否启用治疗上下文匹配</code></pre><br><br>#### 核心数据<br><br><code>query_features_0_24h.parquet</code><br><br>#### 检索流程<br><br><pre><code class="language-text">1. 读取目标患者 query_features
+2. 排除目标患者自身
+3. 根据治疗上下文筛选候选患者
+4. 对数值特征进行标准化
+5. 计算目标患者与候选患者的欧氏距离
+6. 按距离升序排序
+7. 返回 Top-K 相似患者</code></pre><br><br>#### 推荐默认参数<br><br><pre><code class="language-text">Top-K = 10
+相似度算法 = 标准化欧氏距离
+治疗上下文 = 启用</code></pre><br><br>---<br><br>### 7.5 后续趋势参考模块<br><br>#### 功能目标<br><br>根据 Top-K 相似患者在 24–48h 的变化，生成目标患者的后续趋势参考。<br><br>#### 数据来源<br><br><code>future_features_24_48h.parquet</code><br><br>#### 展示内容<br><br>1. 相似患者后续趋势标签分布。<br>2. 改善、稳定、恶化比例。<br>3. 后续 24h 生命体征均值变化。<br>4. 后续 24h 实验室指标变化。<br>5. 重点关注指标。<br>6. 系统趋势参考说明。<br><br>#### 趋势说明模板<br><br><pre><code class="language-text">在治疗背景相近且前 24 小时健康轨迹相似的历史患者中，
+约 {stable_ratio}% 的患者在后续 24 小时内保持稳定，
+约 {worse_ratio}% 的患者出现恶化趋势，
+约 {better_ratio}% 的患者出现改善趋势。
+
+相似患者群体中变化较明显的指标包括：
+{key_variables}。
+
+因此，系统建议对目标患者后续 24 小时重点关注：
+{attention_variables}。</code></pre><br><br>注意报告中要明确写：<br><br>&gt; 本系统提供的是基于历史相似病例的趋势参考，不作为临床诊断或治疗决策依据。<br><br>---<br><br>### 7.6 相似病例解释模块<br><br>#### 功能目标<br><br>解释为什么这些患者被认为相似。<br><br>#### 展示内容<br><br>1. 总相似度分数。<br>2. 各变量对距离的贡献。<br>3. 治疗上下文是否一致。<br>4. 目标患者与相似患者的关键指标对比。<br><br>#### 实现建议<br><br>对标准化后的特征计算差异绝对值：<br><br><pre><code class="language-text">feature_contribution = abs(target_feature - candidate_feature)</code></pre><br><br>距离贡献大的变量说明两者差异大，贡献小的变量说明两者更相似。<br><br>展示时可以写：<br><br><pre><code class="language-text">主要相似指标：心率、血氧、肌酐、钾、平均动脉压
+主要差异指标：体温、白细胞</code></pre><br><br>这个模块非常加分，因为它提升了系统解释性。<br><br>---<br><br>## 8. 数据分析方法设计<br><br>### 8.1 患者轨迹表示<br><br>每个患者的前 24 小时轨迹被表示为一个固定长度特征向量。<br><br>生命体征按 4 小时分箱，0–24h 共 6 个时间片：<br><br><pre><code class="language-text">0–4h
+4–8h
+8–12h
+12–16h
+16–20h
+20–24h</code></pre><br><br>每个生命体征变量可以直接使用 6 个时间片的数值，也可以使用统计特征。<br><br>推荐主方案：<br><br><pre><code class="language-text">使用 query_features_0_24h.parquet 中已经构建好的扁平特征。</code></pre><br><br>如果需要在报告中解释，可以写为：<br><br><pre><code class="language-text">系统将患者 0–24h 的生命体征时间序列、实验室检查汇总值和治疗上下文转换为固定长度特征向量，用于后续相似度计算。</code></pre><br><br>### 8.2 特征标准化<br><br>由于不同变量量纲不同，例如心率、血压、肌酐、白细胞数值范围差异较大，因此相似度计算前必须进行标准化。<br><br>推荐方法：<br><br><pre><code class="language-text">StandardScaler</code></pre><br><br>公式：<br><br><pre><code class="language-text">z = (x - μ) / σ</code></pre><br><br>报告中说明：<br><br>&gt; 标准化可以避免数值范围较大的指标在距离计算中占据过高权重。<br><br>### 8.3 治疗上下文匹配<br><br>治疗上下文包括：<br><br><pre><code class="language-text">circulation_support
+respiratory_support
+fluid_management</code></pre><br><br>推荐默认策略：<br><br><pre><code class="language-text">优先检索治疗上下文完全一致的患者；
+如果候选患者数量不足，则放宽为至少两个治疗上下文一致。</code></pre><br><br>这样比硬筛选更稳，避免某些目标患者候选数量过少。<br><br>#### 推荐规则<br><br><pre><code class="language-text">Step 1：筛选三个治疗上下文均一致的候选患者。
+Step 2：如果候选数 ≥ 50，则在该集合中检索 Top-K。
+Step 3：如果候选数 &lt; 50，则放宽为至少两个上下文一致。
+Step 4：如果仍不足，则使用全队列检索，但在结果中标记治疗上下文差异。</code></pre><br><br>这个设计很实用，也能写成系统鲁棒性设计。<br><br>### 8.4 相似度计算<br><br>主算法使用标准化欧氏距离。<br><br>公式：<br><br><pre><code class="language-text">distance(x, y) = sqrt(Σ(x_i - y_i)^2)</code></pre><br><br>距离越小，患者轨迹越相似。<br><br>为了展示友好，可以将距离转换为相似度分数：<br><br><pre><code class="language-text">similarity = 1 / (1 + distance)</code></pre><br><br>或者归一化到 0–100：<br><br><pre><code class="language-text">similarity_score = 100 × (1 - normalized_distance)</code></pre><br><br>为了避免解释复杂，界面里可以显示：<br><br><pre><code class="language-text">相似度分数：0.87
+距离：1.42</code></pre><br><br>主排序仍然使用距离。<br><br>### 8.5 后续趋势定义<br><br>后续趋势来自 <code>future_features_24_48h.parquet</code>。<br><br>建议趋势类别：<br><br><pre><code class="language-text">改善
+稳定
+恶化</code></pre><br><br>如果该文件中已经有趋势标签，直接使用。<br><br>如果需要本地 agent 重新定义，建议使用综合趋势评分：<br><br>不利变化包括：<br><br><pre><code class="language-text">heart_rate 上升明显
+map 下降明显
+spo2 下降明显
+resp_rate 上升明显
+creatinine 上升明显
+bun 上升明显
+wbc 上升明显
+hemoglobin 下降明显</code></pre><br><br>有利变化包括：<br><br><pre><code class="language-text">heart_rate 回落
+map 稳定或改善
+spo2 上升
+resp_rate 回落
+creatinine 下降或稳定
+bun 下降或稳定
+wbc 下降或稳定</code></pre><br><br>可以构建：<br><br><pre><code class="language-text">trend_score = 不利变化数量 - 有利变化数量</code></pre><br><br>分类规则：<br><br><pre><code class="language-text">trend_score &gt;= 2：恶化
+-1 &lt;= trend_score &lt; 2：稳定
+trend_score &lt;= -2：改善</code></pre><br><br>课程设计报告中不要把这个说成医学金标准，而要说成：<br><br>&gt; 基于多指标变化规则构建的趋势参考标签。<br><br>---<br><br>## 9. Streamlit 应用界面设计<br><br>### 9.1 页面结构<br><br>推荐做 5 个页面。<br><br><pre><code class="language-text">1. 系统首页
+2. 数据概览
+3. 患者轨迹查询
+4. 相似病例检索
+5. 趋势参考分析</code></pre><br><br>如果时间紧，可以合并为 3 个页面：<br><br><pre><code class="language-text">1. 数据概览
+2. 患者查询与相似检索
+3. 趋势参考与结果解释</code></pre><br><br>### 9.2 系统首页<br><br>展示内容：<br><br>1. 系统名称。<br>2. 项目背景。<br>3. 数据规模。<br>4. 系统流程图。<br>5. 功能入口。<br><br>首页推荐文案：<br><br><pre><code class="language-text">本系统面向缺血性心脏病 ICU 患者，基于 MIMIC-IV 历史患者轨迹库，
+通过相似病例检索方法，为目标患者提供后续健康趋势参考。
+系统综合利用生命体征、实验室检查和治疗上下文信息，
+支持患者轨迹查看、相似病例推荐和后续趋势可视化分析。</code></pre><br><br>### 9.3 数据概览页<br><br>展示图表：<br><br>1. 队列规模指标卡。<br>2. ICU stay 时长分布。<br>3. ICD 子类分布。<br>4. 生命体征覆盖率柱状图。<br>5. 实验室检查覆盖率柱状图。<br>6. 治疗上下文比例饼图或柱状图。<br><br>### 9.4 患者轨迹查询页<br><br>交互控件：<br><br><pre><code class="language-text">选择 stay_id
+选择展示变量
+选择时间范围：0–24h / 0–48h</code></pre><br><br>图表：<br><br>1. 心率 4 小时趋势。<br>2. MAP / SBP 趋势。<br>3. SpO2 趋势。<br>4. 呼吸率趋势。<br>5. 体温趋势。<br>6. 实验室指标卡片。<br>7. 治疗上下文标签。<br><br>### 9.5 相似病例检索页<br><br>交互控件：<br><br><pre><code class="language-text">Top-K 数量：5 / 10 / 20
+是否启用治疗上下文匹配：是 / 否
+相似度算法：欧氏距离</code></pre><br><br>展示内容：<br><br>1. Top-K 相似患者表格。<br>2. 相似度分数。<br>3. 治疗上下文一致性。<br>4. 目标患者与相似患者关键指标对比。<br>5. 轨迹叠加图。<br><br>Top-K 表格字段建议：<br><br><pre><code class="language-text">rank
+stay_id
+similarity_score
+distance
+circulation_support
+respiratory_support
+fluid_management
+future_trend_label
+icu_hours</code></pre><br><br>### 9.6 趋势参考分析页<br><br>展示内容：<br><br>1. Top-K 相似患者趋势分布。<br>2. 后续 24h 改善/稳定/恶化比例。<br>3. 相似患者 24–48h 平均趋势曲线。<br>4. 关键指标变化表。<br>5. 自动生成趋势参考说明。<br><br>推荐图表：<br><br><pre><code class="language-text">趋势标签柱状图
+相似患者后续指标均值曲线
+目标患者与相似患者均值对比图
+关键指标 delta 条形图</code></pre><br><br>---<br><br>## 10. 报告结构建议<br><br>最终课程设计报告建议按下面结构写。注意任务书要求正文层次序号为 <code>1、1.1、1.1.1……</code>，格式上要符合宋体、小四、固定行距 20 磅等要求。fileciteturn1file1<br><br>### 1. 绪论<br><br>#### 1.1 研究背景<br><br>写缺血性心脏病患者 ICU 监测数据量大，医护人员需要参考历史相似病例理解患者后续变化。<br><br>#### 1.2 课程设计目的<br><br>结合大数据系统课程知识，完成数据采集、存储、处理、分析和可视化系统设计。<br><br>#### 1.3 系统设计目标<br><br>写本系统实现健康轨迹检索、相似病例推荐和趋势参考。<br><br>### 2. 需求分析<br><br>#### 2.1 应用场景<br><br>ICU 医护人员或随访管理人员选择目标患者，查看相似病例及后续趋势。<br><br>#### 2.2 功能需求<br><br>包括数据概览、患者查询、轨迹展示、相似检索、趋势分析。<br><br>#### 2.3 非功能需求<br><br>包括可解释性、可扩展性、查询效率、数据质量控制。<br><br>### 3. 数据来源与数据预处理<br><br>#### 3.1 数据来源<br><br>介绍 MIMIC-IV v3.1。<br><br>#### 3.2 队列筛选<br><br>写 ICD-9 410–414、ICD-10 I20–I25，ICU stay ≥ 48h。<br><br>#### 3.3 数据文件说明<br><br>列出 7 个 parquet 文件。<br><br>#### 3.4 数据质量分析<br><br>写生命体征和实验室检查覆盖率，说明乳酸被删除的原因。<br><br>#### 3.5 治疗上下文构建<br><br>写循环支持、呼吸支持、液体管理。<br><br>### 4. 系统总体设计<br><br>#### 4.1 系统架构图<br><br>放五层架构图。<br><br>#### 4.2 数据源层设计<br><br>介绍 MIMIC-IV 数据。<br><br>#### 4.3 数据存储层设计<br><br>介绍 Parquet + DuckDB。<br><br>#### 4.4 数据处理层设计<br><br>介绍 SQL + Python 数据处理流程。<br><br>#### 4.5 数据分析层设计<br><br>介绍标准化、相似度检索、趋势统计。<br><br>#### 4.6 应用层设计<br><br>介绍 Streamlit 页面。<br><br>### 5. 数据分析方法实现<br><br>#### 5.1 轨迹特征构建<br><br>写 0–24h 特征向量。<br><br>#### 5.2 特征标准化<br><br>写 StandardScaler。<br><br>#### 5.3 治疗上下文匹配<br><br>写先筛选治疗背景相近患者。<br><br>#### 5.4 相似病例检索算法<br><br>写欧氏距离和 Top-K 检索。<br><br>#### 5.5 后续趋势分析<br><br>写 24–48h 趋势标签和统计方法。<br><br>### 6. 系统实现与界面展示<br><br>#### 6.1 开发环境<br><br>写 Python、DuckDB、Pandas、Scikit-learn、Streamlit、Plotly。<br><br>#### 6.2 数据概览界面<br><br>放截图和说明。<br><br>#### 6.3 患者轨迹查询界面<br><br>放截图和说明。<br><br>#### 6.4 相似病例推荐界面<br><br>放截图和说明。<br><br>#### 6.5 趋势参考分析界面<br><br>放截图和说明。<br><br>### 7. 实验结果与分析<br><br>#### 7.1 队列构建结果<br><br>写 16,661 ICU stay。<br><br>#### 7.2 数据覆盖率结果<br><br>写生命体征和实验室检查覆盖率。<br><br>#### 7.3 相似检索案例分析<br><br>选择 1–3 个目标患者做案例展示。<br><br>#### 7.4 治疗上下文匹配效果分析<br><br>比较启用和不启用治疗上下文时 Top-K 结果差异。<br><br>#### 7.5 后续趋势参考结果<br><br>展示相似患者后续趋势分布。<br><br>### 8. 总结与展望<br><br>#### 8.1 课程设计总结<br><br>总结完成了数据系统设计、轨迹检索、趋势分析和界面展示。<br><br>#### 8.2 不足<br><br>写趋势标签为规则构建，不能替代临床判断；治疗上下文仍然粗粒度；目前只使用 0–48h 窗口。<br><br>#### 8.3 展望<br><br>后续可加入更多疾病队列、更多时间窗口、DTW 时间序列相似度、深度学习轨迹模型、出院后随访数据等。<br><br>---<br><br>## 11. 评分导向设计分档<br><br>### 11.1 及格版<br><br>完成以下内容即可基本满足任务书：<br><br>1. 使用已有 parquet 数据。<br>2. Streamlit 可以选择患者。<br>3. 展示目标患者生命体征。<br>4. 实现欧氏距离 Top-K 相似检索。<br>5. 展示相似患者表格。<br>6. 报告包含架构图、界面截图、数据分析结果。<br><br>这个版本能交，但创新性和系统完整性一般。<br><br>### 11.2 稳妥高分版<br><br>必须完成以下内容：<br><br>1. 数据概览页。<br>2. 患者轨迹查询页。<br>3. 相似病例检索页。<br>4. 趋势参考分析页。<br>5. 治疗上下文匹配。<br>6. Top-K 相似患者后续趋势分布。<br>7. 至少 2 个案例分析。<br>8. 报告中明确说明数据源层、存储层、处理层、分析层、应用层。<br>9. 加入系统创新点总结。<br><br>这是我建议你实际交付的版本。<br><br>### 11.3 冲刺加分版<br><br>时间充足时增加：<br><br>1. 启用治疗上下文 vs 不启用治疗上下文的对比实验。<br>2. 相似病例解释模块，展示哪些变量贡献了相似性。<br>3. 趋势标签分布和关键指标变化解释。<br>4. 结果导出功能，例如导出相似病例报告。<br>5. 在报告中加入系统流程图、数据库表结构图、算法流程图。<br><br>这些内容会明显提高“设计质量、能力水平、创新性”三个评分维度的表现。<br><br>---<br><br>## 12. 本地 Agent 实施任务清单<br><br>### 12.1 数据检查<br><br>本地 agent 先完成：<br><br><pre><code class="language-text">1. 检查 data/ 下所有 parquet 是否可正常读取。
+2. 检查每个文件的字段名。
+3. 检查 stay_id 是否能在所有核心表中关联。
+4. 检查 query_features_0_24h 是否存在缺失值。
+5. 检查 future_features_24_48h 是否已有 trend_label。</code></pre><br><br>### 12.2 相似检索函数<br><br>实现函数：<br><br><pre><code class="language-python">def retrieve_similar_patients(
+    target_stay_id,
+    query_features,
+    treatment_context,
+    top_k=10,
+    use_treatment_context=True
+):
+    """
+    输入目标 stay_id，返回 Top-K 相似患者。
+    """</code></pre><br><br>核心逻辑：<br><br><pre><code class="language-text">1. 找到目标患者特征。
+2. 排除目标患者自身。
+3. 根据治疗上下文筛选候选集。
+4. 对数值特征 StandardScaler 标准化。
+5. 计算欧氏距离。
+6. 返回 Top-K。</code></pre><br><br>### 12.3 趋势参考函数<br><br>实现函数：<br><br><pre><code class="language-python">def summarize_future_trends(similar_stays, future_features):
+    """
+    输入 Top-K 相似患者，返回后续趋势统计。
+    """</code></pre><br><br>输出：<br><br><pre><code class="language-text">趋势标签分布
+关键指标平均变化
+改善/稳定/恶化比例
+趋势参考文本</code></pre><br><br>### 12.4 Streamlit 页面<br><br>建议文件结构：<br><br><pre><code class="language-text">app.py
+src/
+  data_loader.py
+  retrieval.py
+  trend_analysis.py
+  visualization.py
+  utils.py
+data/
+  *.parquet
+metadata/
+  *.csv
+scripts/
+  01_extract_from_mimic.sql
+  02_build_features.py
+  03_validate_package.py</code></pre><br><br>### 12.5 报告素材自动生成<br><br>本地 agent 应该自动导出：<br><br><pre><code class="language-text">figures/
+  architecture.png
+  data_overview.png
+  patient_trajectory_case1.png
+  similar_patients_case1.png
+  future_trend_case1.png
+  treatment_context_comparison.png
+
+tables/
+  cohort_summary.csv
+  variable_coverage.csv
+  topk_case1.csv
+  trend_summary_case1.csv</code></pre><br><br>这些图表后续可以直接放进报告。<br><br>---<br><br>## 13. 风险与规避方案<br><br>### 13.1 风险：系统被认为不像“大数据”<br><br>规避：<br><br>强调 MIMIC-IV 多表数据、16,661 条 ICU stay、4 小时分箱轨迹、Parquet/DuckDB 存储和批量数据处理。<br><br>不要把项目写成“小模型训练”，而要写成“医疗轨迹数据分析系统”。<br><br>### 13.2 风险：相似检索被质疑不能预测未来<br><br>规避：<br><br>不要使用“精准预测”表述，统一使用：<br><br><pre><code class="language-text">趋势参考
+相似病例参考
+辅助分析
+历史轨迹对照</code></pre><br><br>### 13.3 风险：治疗影响未来趋势<br><br>规避：<br><br>报告中明确加入治疗上下文匹配，并写：<br><br>&gt; 为降低治疗混杂影响，系统在相似检索中引入循环支持、呼吸支持和液体管理三个治疗上下文。<br><br>### 13.4 风险：医学解释过度<br><br>规避：<br><br>所有建议都写成“重点关注指标”，不要写成治疗方案。<br><br>例如可以写：<br><br><pre><code class="language-text">建议重点关注血氧、平均动脉压和肌酐变化。</code></pre><br><br>不要写：<br><br><pre><code class="language-text">建议使用某种药物或治疗方式。</code></pre><br><br>### 13.5 风险：界面只有图，没有系统功能<br><br>规避：<br><br>Streamlit 必须包含交互：<br><br><pre><code class="language-text">选择患者
+选择 Top-K
+是否启用治疗上下文
+查看相似患者
+查看趋势参考</code></pre><br><br>这样才像应用层系统。<br><br>---<br><br>## 14. 最终交付物<br><br>### 14.1 系统代码<br><br><pre><code class="language-text">Streamlit 应用
+数据加载模块
+相似检索模块
+趋势分析模块
+可视化模块</code></pre><br><br>### 14.2 数据资产<br><br><pre><code class="language-text">data/*.parquet
+metadata/*.csv</code></pre><br><br>### 14.3 图表素材<br><br><pre><code class="language-text">系统架构图
+数据流程图
+界面截图
+相似检索结果图
+趋势分析图</code></pre><br><br>### 14.4 课程设计报告<br><br>报告必须包含：<br><br><pre><code class="language-text">系统架构图及描述
+应用层功能说明
+数据存储层说明
+数据分析层算法说明
+Python 界面展示
+数据分析实现过程
+最终分析结果
+总结与展望</code></pre><br><br>这正好对齐任务书要求。fileciteturn1file0<br><br>---<br><br># 最终建议<br><br>这个课程设计不要再往“死亡预测”“诊断分类”“康复轨迹预测”上偏。最终主线应稳定为：<br><br>&gt; <strong>历史患者健康轨迹库 + 相似病例检索 + 后续趋势参考 + Streamlit 可视化系统</strong><br><br>这是最适合你当前数据、时间和课程任务的方案。<br><br>本地 agent 下一步应该优先做三件事：<br><br>1. 跑通 <code>stay_id → Top-K 相似患者</code>。<br>2. 跑通 <code>Top-K → 24–48h 趋势统计</code>。<br>3. 做出 Streamlit 三页核心界面：数据概览、患者检索、趋势参考。<br><br>只要这三件事完成，报告就有足够内容支撑高分。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/26 14:10:33</span>
+                </div>
+                <div class="message-content">我做好交上去了嘿嘿，你可以看看https://acknowledge-diy-interesting-flow.trycloudflare.com/</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/26 14:10:38</span>
+                </div>
+                <div class="message-content">太好了，恭喜交上去！我帮你快速看一下这个在线版本，重点看它是否像一个完整课程设计系统：主题表达、页面结构、功能闭环、展示效果和可能被老师问到的点。</div>
+            </div></div></div></body></html>

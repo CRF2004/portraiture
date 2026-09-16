@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 可视化工具</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Claude Code 可视化工具</h1>
+            <div class="metadata">ID: 69d87313-9be0-8322-a960-7019272117b0 | 2026/4/10 11:49:12</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 11:49:10</span>
+                </div>
+                <div class="message-content">目前有没有claude code可以使用的可视化的，甚至可以自动的fork工具？我发现不fork的话很容易达到最大上下文</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 11:49:14</span>
+                </div>
+                <div class="message-content">结论先说清楚：<strong>目前“Claude Code 可视化 + 自动 fork / 自动分支管理”的成熟一体化工具还没有</strong>。生态里已经有一些<strong>半成品 / 组合式方案</strong>，但离你说的那种“像 IDE 一样自动帮你 fork、切上下文、管理多分支”的体验还有差距。<br><br>我按你关心的两个点拆开说：<strong>（1）可视化 / UI</strong> 和 <strong>（2）自动 fork / 上下文隔离</strong>。<br><br>---<br><br># 一、可视化（UI）：已经有，但偏“壳层工具”<br><br>### ✅ 推荐：entity["software","Claude Code UI (CloudCLI)","open source web UI for Claude Code"]<br>- GitHub 项目：claudecodeui  <br>- 本质：给 Claude Code / Cursor CLI / Codex 套一个 Web UI<br>- 能力：<br>  - 项目 + session 可视化管理<br>  - 聊天界面 + 文件树 + terminal<br>  - 支持远程访问（手机也能用）<br>  - 可接 Task 管理（类似 agent pipeline）<br><br>👉 关键点：<br>- 它<strong>解决的是“CLI 太难用”问题</strong><br>- <strong>不解决上下文爆炸 / 自动 fork</strong><br><br>📌 官方描述里也明确：只是“manage sessions &amp; projects” citeturn0search0<br><br>---<br><br>### ⚠️ 生态现状（重要）<br>目前 Claude Code 生态有明显缺口：<br><br>- ❌ 没有统一 dashboard（session / token / MCP / cost）<br>- ❌ 没有可视化配置（skills / hooks 都要手写）<br>- ❌ 没有 context profiler（哪个模块吃 token）  <br>citeturn0search3<br><br>👉 这就是你“容易爆上下文”的根本原因之一：<strong>工具层几乎没观测能力</strong><br><br>---<br><br># 二、自动 fork / 上下文管理：目前基本没有“官方级方案”<br><br>你说的这个点其实是核心痛点：<br><br>&gt; “不 fork 很容易达到最大上下文”<br><br>这是对的，而且原因很具体：<br><br>### 💣 MCP + tools 会吃爆 context<br>- 每个 tool：~600–800 tokens<br>- 一个 MCP server：2万 tokens<br>- 10 个 server：≈20万 tokens（直接爆） citeturn0search1<br><br>👉 这意味着：<br>&gt; 你还没开始写代码，context 已经被吃光了<br><br>---<br><br>## 现有 workaround（但都不优雅）<br><br>### 1️⃣ 手动 fork（主流做法）<br>- 新 session / 新分支<br>- copy 关键 context<br>- 重新 prompt<br><br>👉 缺点：完全手工<br><br>---<br><br>### 2️⃣ “伪 fork”：子 agent / subagent<br>一些人用：<br>- 多 agent（planner / coder / reviewer）<br>- 每个 agent 一个 session<br><br>👉 本质：<strong>人为拆 context</strong><br><br>---<br><br>### 3️⃣ 社区工具（接近你想要的方向）<br><br>#### （a）Context 分析工具<br>- CAT（Context Analyzer Terminal）<br>- 能看到每个 tool 吃多少 tokens<br><br>👉 解决：<br>✔ 为什么爆  <br>❌ 怎么自动避免  <br><br>---<br><br>#### （b）MCP filter / middleware<br>- 只加载部分 tools<br>- 减少 context 占用<br><br>👉 但：<br>- 配置复杂<br>- 不是自动的<br><br>---<br><br>#### （c）“UI-aware agent”（实验型）<br>比如：<br>- tauri-pilot（让 Claude 能操作 UI）<br><br>👉 方向是对的，但还很早期（更偏 agent automation）<br><br>---<br><br># 三、有没有“自动 fork”的工具？<br><br>👉 结论很明确：<br><br><strong>现在没有成熟工具做到：</strong><br>- 自动检测 context 临界<br>- 自动切 session<br>- 自动迁移必要上下文<br>- 自动管理分支/任务树<br><br>---<br><br># 四、如果你想接近“自动 fork体验”，推荐这样组合<br><br>这是目前比较实用的一套工程化方案：<br><br>### ✅ 架构建议（实战有效）<br><br>#### 1️⃣ 用 UI 管 session<br>- Claude Code UI（CloudCLI）<br><br>#### 2️⃣ 强制分层 agent<br>例如：<br>- planner（短 context）<br>- coder（短 context）<br>- reviewer（短 context）<br><br>👉 不要一个 agent 干所有事<br><br>---<br><br>#### 3️⃣ 引入“context slicing”<br>核心思路：<br>- 不传 repo 全量<br>- 只传：<br>  - 当前文件<br>  - 依赖摘要<br>  - interface<br><br>👉 类似：<br><pre><code class="language-text">/context add fileA
+/context summarize moduleB</code></pre><br><br>---<br><br>#### 4️⃣ 做“半自动 fork”<br>你可以自己实现一个轻量脚本：<br><br>触发条件：<br>- token &gt; 70%<br>- response 变慢 / degraded<br><br>自动执行：<br>1. summarize 当前 session<br>2. 新 session<br>3. 注入 summary + task<br><br>👉 这其实是很多团队内部在做的<br><br>---<br><br># 五、如果你愿意更激进一点（前沿方向）<br><br>未来趋势已经很明显：<br><br>### 🔥 下一代工具会是：<br>- “任务树驱动”（类似 Git + DAG）<br>- 自动 fork / merge context<br>- 每个节点一个 agent<br><br>类似：<br>- Devin / Cognition 系<br>- Cursor background agents（雏形）<br><br>---<br><br># 总结（给你一个判断标准）<br><br>你现在遇到的问题，本质是：<br><br>&gt; Claude Code = 强 agent + 极弱工程系统<br><br>所以才会：<br>- 没 UI<br>- 没 context 管理<br>- 没 fork 机制<br><br>---<br><br># 👉 直接回答你的问题<br><br>- ✔ 可视化工具：有（CloudCLI）<br>- ❌ 自动 fork：基本没有成熟方案<br>- ⚠️ 上下文管理：仍然是“工程问题”，不是产品能力<br><br>---<br><br>如果你愿意，我可以帮你设计一个<strong>“自动 fork + context 管理”的最小实现（脚本 + prompt + agent结构）</strong>，这个东西在实际项目里非常有用，而且不复杂。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 11:52:49</span>
+                </div>
+                <div class="message-content">你给我一个设计方案吧，我打算自己做一个。你说的都挺好，而且还有可以参考的github项目。我希望是可以自动fork+可视化+token计算（mcp消耗、skill消耗等）</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 11:52:53</span>
+                </div>
+                <div class="message-content">很好，这个方向是对的，而且<strong>现在确实是“工具空白期”</strong>，自己做一个是有价值的。我给你一个<strong>工程级设计方案（偏可落地）</strong>，重点围绕你要的三件事：<br><br>&gt; ✅ 自动 fork  <br>&gt; ✅ 可视化  <br>&gt; ✅ token / context 精细观测（MCP / skills / tools）<br><br>我会按<strong>系统架构 → 核心模块 → 关键算法 → 数据结构 → 技术选型 → MVP路径</strong>来讲，尽量让你可以直接开工。<br><br>---<br><br># 一、整体架构（核心思路）<br><br>本质你要做的不是 UI 工具，而是一个：<br><br>&gt; <strong>“Context Orchestrator（上下文编排器）”</strong><br><br>### 🔧 架构分层<br><br><pre><code class="language-text">┌──────────────────────┐
+                │      Frontend UI      │
+                │  (Session Graph)      │
+                └─────────┬────────────┘
+                          │
+                ┌─────────▼────────────┐
+                │   Orchestrator Core   │
+                │  (核心控制层)         │
+                ├─────────┬────────────┤
+                │         │            │
+        ┌───────▼───┐ ┌───▼────────┐ ┌─▼────────────┐
+        │Context     │ │Token Profiler│ │Fork Manager │
+        │Manager     │ │(关键模块)    │ │(核心模块)   │
+        └───────┬───┘ └────┬────────┘ └────┬────────┘
+                │            │               │
+        ┌───────▼────────────▼──────────────▼───────┐
+        │          Claude Code / MCP Layer          │
+        └──────────────────────────────────────────┘</code></pre><br><br>---<br><br># 二、核心模块设计<br><br>---<br><br>## 1️⃣ Token Profiler（最关键）<br><br>👉 这是你系统的“感知层”，没有它就无法自动 fork<br><br>### 功能<br>- 统计：<br>  - 每轮 prompt token<br>  - 每个 tool / MCP server token<br>  - 每个 skill token<br>- 实时 context 占用率<br>- breakdown：<br><br><pre><code class="language-json">{
+  "total": 120000,
+  "messages": 20000,
+  "tools": 40000,
+  "mcp_servers": {
+    "github": 12000,
+    "notion": 8000
+  },
+  "skills": 15000
+}</code></pre><br><br>---<br><br>### 实现方式（关键点）<br><br>#### 方法1：hook Claude Code 请求<br>- 拦截：<br>  - system prompt<br>  - messages<br>  - tool schemas<br>- 用 tokenizer 计算（如 tiktoken / anthropic tokenizer）<br><br>#### 方法2：MCP wrapping<br>- 给每个 MCP server 加 wrapper<br>- 统计其 schema + 返回内容 token<br><br>---<br><br>### 输出指标（用于 fork 判断）<br><br><pre><code class="language-python">context_ratio = used_tokens / max_tokens
+
+risk_level:
+    &lt;0.6 → safe
+    0.6–0.8 → warning
+    &gt;0.8 → critical</code></pre><br><br>---<br><br>## 2️⃣ Context Manager（上下文切片）<br><br>👉 控制“传什么给模型”<br><br>### 核心能力<br><br>#### ✅ context 分层<br><br><pre><code class="language-text">L1: system prompt
+L2: 当前任务
+L3: 当前文件
+L4: 相关依赖摘要
+L5: 历史对话（可裁剪）
+L6: tools / MCP schemas</code></pre><br><br>---<br><br>#### ✅ 动态裁剪策略<br><br>当 token 超标：<br><br>1. 删除旧对话<br>2. 压缩历史（summarize）<br>3. 移除不必要 tools<br>4. 精简 MCP schema<br><br>---<br><br>#### ✅ context snapshot<br><br>每个 session 保存：<br><br><pre><code class="language-json">{
+  "task": "...",
+  "files": ["a.py", "b.py"],
+  "summary": "...",
+  "state": {...}
+}</code></pre><br><br>👉 用于 fork 迁移<br><br>---<br><br>## 3️⃣ Fork Manager（核心创新点）<br><br>👉 你这个项目最有价值的部分<br><br>---<br><br>### 🔥 fork 触发策略<br><br>#### 条件（可组合）：<br><br><pre><code class="language-python">if (
+    context_ratio &gt; 0.8
+    or response_latency &gt; threshold
+    or hallucination_risk ↑
+):
+    trigger_fork()</code></pre><br><br>---<br><br>### 🔥 fork 执行流程<br><br><pre><code class="language-text">[旧 session]
+     ↓
+1. summarize context
+     ↓
+2. 提取关键状态
+     ↓
+3. 创建新 session
+     ↓
+4. 注入精简 context
+     ↓
+5. 继续任务</code></pre><br><br>---<br><br>### 🔥 fork 数据结构<br><br><pre><code class="language-json">{
+  "parent_session": "A",
+  "child_session": "B",
+  "summary": "...",
+  "carried_context": [
+    "task",
+    "fileA.py",
+    "api_spec"
+  ]
+}</code></pre><br><br>---<br><br>### 🔥 fork 类型（建议支持）<br><br>| 类型 | 用途 |<br>|------|------|<br>| soft fork | 清理 context |<br>| task fork | 拆子任务 |<br>| retry fork | 修复错误 |<br>| branch fork | 多方案并行 |<br><br>---<br><br>## 4️⃣ Session Graph（可视化核心）<br><br>👉 你UI的亮点<br><br>---<br><br>### UI结构<br><br><pre><code class="language-text">A
+       / \
+      B   C
+     /
+    D</code></pre><br><br>---<br><br>### 每个节点显示：<br><br>- token 使用<br>- MCP 使用<br>- 当前任务<br>- fork 原因<br><br>---<br><br>### 技术实现<br><br>前端：<br>- React + D3.js / React Flow<br><br>---<br><br># 三、关键算法（自动 fork 核心）<br><br>---<br><br>## 🔥 算法1：context 压缩<br><br><pre><code class="language-python">def compress_context(messages):
+    return summarize(messages[-N:])</code></pre><br><br>---<br><br>## 🔥 算法2：最小可迁移上下文（关键）<br><br>目标：<br><br>&gt; 用最少 token 保持任务连续性<br><br>---<br><br>### 提取内容：<br><br><pre><code class="language-python">{
+  "goal": "...",
+  "current_state": "...",
+  "relevant_files": "...",
+  "constraints": "..."
+}</code></pre><br><br>---<br><br>👉 prompt：<br><br><pre><code class="language-text">Summarize current coding state with:
+- goal
+- progress
+- pending tasks
+- required files</code></pre><br><br>---<br><br>## 🔥 算法3：tool pruning<br><br><pre><code class="language-python">def select_tools(task):
+    return [tool for tool in all_tools if tool.relevant(task)]</code></pre><br><br>---<br><br># 四、数据存储设计<br><br>---<br><br>### session 表<br><br><pre><code class="language-sql">sessions(
+  id,
+  parent_id,
+  summary,
+  token_usage,
+  created_at
+)</code></pre><br><br>---<br><br>### messages 表<br><br><pre><code class="language-sql">messages(
+  session_id,
+  role,
+  content,
+  tokens
+)</code></pre><br><br>---<br><br>### tool_usage 表<br><br><pre><code class="language-sql">tool_usage(
+  session_id,
+  tool_name,
+  tokens
+)</code></pre><br><br>---<br><br># 五、技术选型建议<br><br>---<br><br>## 后端<br>- Node.js / Python（推荐 Python）<br>- FastAPI（轻量）<br><br>---<br><br>## 前端<br>- React<br>- React Flow（画 graph）<br><br>---<br><br>## token计算<br>- tiktoken（OpenAI）<br>- anthropic tokenizer（Claude）<br><br>---<br><br>## 存储<br>- SQLite（MVP）<br>- 后期：PostgreSQL<br><br>---<br><br># 六、MVP开发路径（非常关键）<br><br>---<br><br>## 🥇 Phase 1（1周）<br>- token profiler<br>- session 记录<br>- CLI hook Claude Code<br><br>👉 目标：<br>✔ 看见 token 怎么爆的<br><br>---<br><br>## 🥈 Phase 2（2周）<br>- 自动 summarize<br>- 手动 fork<br>- session graph UI<br><br>---<br><br>## 🥉 Phase 3（3–4周）<br>- 自动 fork<br>- tool pruning<br>- context slicing<br><br>---<br><br>## 🏁 Phase 4（进阶）<br>- 多 agent<br>- 并行分支<br>- 自动 merge<br><br>---<br><br># 七、可以参考的方向（不是直接现成工具）<br><br>你可以借鉴：<br><br>- Claude Code UI（UI层）<br>- MCP server selector（context控制思路）<br>- Devin-like agent（task tree）<br><br>---<br><br># 八、给你一个最小可行 demo 思路<br><br>你可以从这个最小版本开始：<br><br><pre><code class="language-bash">claude-code → proxy → your system → Claude API</code></pre><br><br>proxy 做：<br>- 记录 tokens<br>- 判断是否 fork<br>- 自动 summarize<br>- 创建新 session<br><br>---<br><br># 最后一句（关键判断）<br><br>你这个项目的核心不是 UI，而是：<br><br>&gt; <strong>“如何在 token 限制下维持长期任务连续性”</strong><br><br>只要你把：<br>- Token Profiler<br>- Fork Manager<br><br>做好了，这个工具就已经有独特价值了。<br><br>---<br><br>如果你下一步想继续，我可以帮你把：<br><br>👉 <strong>fork 的 prompt 模板 + context summary 模板（直接可用）</strong><br><br>或者：<br><br>👉 <strong>系统的最小代码骨架（FastAPI + proxy）</strong><br><br>给你搭出来。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 11:56:07</span>
+                </div>
+                <div class="message-content">目前有没有用于自动构建类似这种工具的skill？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 11:56:11</span>
+                </div>
+                <div class="message-content">结论先给你：<strong>没有现成“一个 skill 就能自动搭出你这套系统（自动 fork + 可视化 + token profiler）”的方案</strong>。但已经有一些<strong>可拼装的 skill / 框架组合</strong>，可以大幅降低你实现成本，尤其在：<br><br>- agent orchestration（任务编排）<br>- memory / context 管理<br>- tool / MCP 管理<br>- tracing / token 观测<br><br>我给你按“是否接近你目标能力”来拆。<br><br>---<br><br># 一、最接近你需求的 skill / 框架（强相关）<br><br>## 1️⃣ entity["software","LangGraph","agent orchestration framework"]（最推荐）<br><br>👉 这是目前<strong>最接近“自动 fork 思想”的工具</strong><br><br>### 为什么重要<br>LangGraph 本质是：<br>&gt; <strong>有状态的 agent graph（状态机 + DAG）</strong><br><br>你要的 fork，其实就是：<br>&gt; 从一个节点分叉出多个执行路径<br><br>---<br><br>### 它已经帮你解决的<br><br>✔ 多节点（类似 session）  <br>✔ 状态传递（类似 context snapshot）  <br>✔ 分支执行（类似 fork）  <br>✔ 可视化（基础 graph）<br><br>---<br><br>### 但缺的<br><br>❌ token profiler  <br>❌ 自动 fork 策略  <br>❌ MCP context 控制  <br><br>---<br><br>👉 结论：<br>你可以把它当：<br><br>&gt; <strong>Fork Manager + Session Graph 的底层引擎</strong><br><br>---<br><br>## 2️⃣ entity["software","LangSmith","LLM observability platform"]（强烈建议）<br><br>👉 这是你做 <strong>token profiler / tracing 的最佳现成能力</strong><br><br>---<br><br>### 能力<br><br>✔ token 使用统计  <br>✔ 每一步调用 trace  <br>✔ tool 调用链  <br>✔ latency / error tracking  <br><br>---<br><br>### 和你系统的关系<br><br>| 你的模块 | LangSmith |<br>|----------|-----------|<br>| Token Profiler | ✔ 80%</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 11:56:46</span>
+                </div>
+                <div class="message-content">目前有没有用于自动构建claude code工具（插件mcp、skill）的skill？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 11:56:53</span>
+                </div>
+                <div class="message-content">有，但需要先给你一个<strong>非常关键的结论</strong>：<br><br>&gt; ❗目前不存在“Claude Code 自动构建 Skill + MCP + 插件生态的一站式官方工具链”<br>&gt; 但已经出现了两类<strong>半自动 meta-skill / skill generator 体系</strong>，正在快速成型。<br><br>我按“真实可用程度 + 你能直接用来做系统”的角度给你拆。<br><br>---<br><br># 一、已经存在的“Skill 自动生成工具”（核心答案）<br><br>## 1️⃣ MCP Server Generator Skill（最接近你要的）<br>👉 本质：<strong>自动生成 MCP server + Claude Code 集成 skill</strong><br><br>特点：<br>- 自动 scaffold TypeScript MCP server<br>- 自动生成 tool schema<br>- 自动写 Claude Code integration config<br>- 支持 API wrapper / browser automation / DB tool<br><br>📌 关键能力：<br>- “从自然语言 → MCP server”<br>- “从 MCP server → Claude skill 使用说明”<br><br>来源：citeturn0search2<br><br>👉 这类工具已经接近：<br>&gt; “skill = MCP 工程的编译产物”<br><br>---<br><br>## 2️⃣ MCP Server Dev Skill（官方 workflow skill）<br><br>这是 Anthropic 官方插件体系里的一个 skill：<br><br>👉 能做三件事：<br>1. 设计 MCP server 架构<br>2. 选择 tool pattern（search/execute / one-tool-per-action）<br>3. 自动 scaffold project<br><br>📌 特点（很重要）：<br>- 已经内置“5阶段 build workflow”<br>- 会自动帮你选 deployment model<br>- 会生成可部署 MCP server<br><br>来源：citeturn0search0<br><br>👉 但它的问题是：<br>- ❌ 不会“持续进化 skill”<br>- ❌ 不会做 skill graph / skill registry<br><br>---<br><br>## 3️⃣ Skill Generator Meta-Skill（社区版本）<br><br>这一类才是你真正关心的：<br><br>👉 核心能力：<br>- 输入：workflow 描述<br>- 输出：<code>.claude/skills/...</code><br>- 支持 sequential / autonomous skill pattern<br><br>📌 本质：<br>&gt; “skill 生成 skill”<br><br>来源：citeturn0search3<br><br>---<br><br>## 4️⃣ MCP → Skill 自动转换工具（关键趋势）<br><br>最近社区出现一个很重要方向：<br><br>### 👉 mcp-skill-creator（meta skill）<br><br>能力：<br>- 输入 MCP server config<br>- 自动生成 skill.md<br>- 自动写 tool routing logic<br>- 自动写 trigger rules（非常关键）<br><br>来源：citeturn0search4<br><br>---<br><br># 二、目前生态的真实结构（你必须理解）<br><br>现在 Claude Code 的“扩展系统”其实是三层：<br><br><pre><code class="language-text">Level 1: MCP (tool layer)
+Level 2: Skill (usage logic layer)
+Level 3: Meta-skill (generator layer)</code></pre><br><br>---<br><br>## 🔥 当前你看到的“自动构建能力”其实只发生在：<br><br>### ✔ MCP → Skill（半自动）<br>### ✔ Prompt → MCP scaffold（自动）<br><br>---<br><br>## ❌ 但缺失的关键能力：<br><br>### 1. Skill 自我演化<br>- skill usage log → recompile skill ❌<br><br>### 2. Skill dependency graph<br>- skill A 依赖 skill B ❌<br><br>### 3. Skill + MCP unified registry<br>- 类似 package manager ❌<br><br>### 4. 自动 skill fork / versioning<br>- 你前面提的 fork 机制 ❌（完全空白）<br><br>---<br><br># 三、有没有“自动构建 Claude Code 工具（skill + MCP）”的 Skill？<br><br>### 👉 结论很直接：<br><br>&gt; ✔ 有“单点生成器”<br>&gt; ❌ 没有“闭环自动构建系统”<br><br>---<br><br>## 现有最接近闭环的是：<br><br>### 🧠 1. MCP Server Generator<br>- 生成 MCP server<br>- 生成 Claude integration<br>- 但不会管理 skill lifecycle<br><br>---<br><br>### 🧠 2. Plugin Generator Skill<br>- 自动分析 codebase<br>- 生成 skill + agent + validation hook<br>- 偏“项目级 bootstrap”<br><br>来源：citeturn0search5<br><br>---<br><br>### 🧠 3. skill-generator meta skill<br>- 可以生成 skill<br>- 但不理解 MCP runtime<br><br>---<br><br># 四、为什么还没有“自动 skill 工厂”？<br><br>核心原因其实是工程约束：<br><br>## 1️⃣ MCP schema 太重<br>- tool schema ≈ context killer<br>- 自动生成容易爆 context<br><br>---<br><br>## 2️⃣ Skill 本质不是 prompt<br>而是：<br><br>&gt; instruction + trigger logic + workflow state<br><br>所以必须：<br>- 有执行轨迹<br>- 有 runtime feedback loop<br><br>---<br><br>## 3️⃣ 缺少 execution telemetry<br>目前 Claude Code：<br><br>- ❌ 没有 skill usage tracing<br>- ❌ 没有 tool call graph<br>- ❌ 没有 skill effectiveness score<br><br>---<br><br># 五、但你关心的方向：已经有“雏形系统”了<br><br>你可以把现有生态看成：<br><br><pre><code class="language-text">Prompt
+              ↓
+      MCP Server Generator
+              ↓
+        MCP Tool Runtime
+              ↓
+     Skill Generator (meta)
+              ↓
+        Claude Code Skill</code></pre><br><br>---<br><br># 六、如果你要做（非常关键建议）<br><br>你想做的其实不是 skill generator，而是：<br><br>&gt; 🚀 “Skill Compiler + Runtime Observability System”<br><br>---<br><br>## 我给你一个明确设计定位：<br><br>### 🧠 你的系统应该叫：<br><br>&gt; <strong>SkillOS / MCP Skill Compiler</strong><br><br>---<br><br>## 核心能力（比现有工具高一代）<br><br>### 1️⃣ Skill Compiler<br>- MCP → skill<br>- repo → skill<br>- prompt → skill<br><br>---<br><br>### 2️⃣ Skill Runtime Tracing（关键差异）<br>- 记录 skill 被调用路径<br>- 记录 tool chain<br>- 记录 token cost<br><br>---<br><br>### 3️⃣ Auto Skill Fork（你前面提的）<br>- skill 版本分叉<br>- A/B skill testing<br><br>---<br><br>### 4️⃣ Skill Optimization Loop<br>- usage log → refine skill prompt<br>- usage failure → patch skill<br><br>---<br><br># 七、如果总结成一句话<br><br>现在已有：<br><br>&gt; ✔ skill generator（写 skill）<br>&gt; ✔ MCP generator（写 tool）<br><br>但还没有：<br><br>&gt; ❌ skill runtime system（运行 + 演化 + fork + profiling）<br><br>---<br><br># 如果你下一步想继续<br><br>我可以帮你把这个系统直接拆成：<br><br>### 👉 “Skill Compiler v0.1 架构图 + 数据结构 + MCP wrapper设计”<br><br>或者更狠一点：<br><br>### 👉 “自动 skill fork + token profiler + MCP wrapper 最小可运行代码”<br><br>这个已经是可以做成 GitHub project 的级别了。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 11:57:47</span>
+                </div>
+                <div class="message-content">我们打算做的这个东西，更像是skill还是mcp还是什么</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 11:58:09</span>
+                </div>
+                <div class="message-content">你们要做的东西<strong>既不是纯 Skill，也不是纯 MCP</strong>，而是一个更高一层的系统：  <br><br>&gt; <strong>“LLM Agent Runtime + Context/Tool Orchestration Layer（编排与运行时系统）”</strong><br><br>如果一定要给它一个工程归类：<br><br>&gt; ✅ <strong>核心 = Orchestrator（编排器）</strong>  <br>&gt; MCP / Skill = 被编排的“执行单元”<br><br>---<br><br># 一、先把三者边界讲清楚（非常关键）<br><br>## 1️⃣ MCP（Model Context Protocol）<br>本质：<strong>工具层（Tool Runtime）</strong><br><br>- 提供 function calling 能力<br>- 标准化 external tools（DB / GitHub / browser / etc）<br>- 解决：*“模型如何调用外部系统”*<br><br>👉 MCP = “API 插槽”<br><br>---<br><br>## 2️⃣ Skill（Claude Code Skill / agent skill）<br>本质：<strong>行为逻辑层（Prompt + Workflow）</strong><br><br>- 定义“怎么做任务”<br>- 包含：<br>  - instruction<br>  - workflow steps<br>  - tool usage patterns<br><br>👉 Skill = “行为脚本 / 策略”<br><br>---<br><br>## 3️⃣ 你们想做的系统（关键）<br>你们真正要做的是：<br><br>&gt; <strong>管理 Skill + MCP 的运行时 + 自动拆分/合并 context + fork graph</strong><br><br>---<br><br># 二、你的系统到底属于哪一层？<br><br>我给你一个明确分层：<br><br><pre><code class="language-text">Level 0: MCP
+→ tools（执行能力）
+
+Level 1: Skill
+→ how to use tools（策略）
+
+Level 2: Agent Runtime（Claude Code现在缺的）
+→ how skills execute over time
+
+Level 3: Orchestrator（你要做的）
+→ how agents split / fork / evolve / observe</code></pre><br><br>---<br><br># 三、结论（最重要一句）<br><br>&gt; ❌ 你不是在做 MCP  <br>&gt; ❌ 也不是在做 Skill  <br><br>&gt; ✅ 你在做的是：<br><br># 👉 “Agent Operating System（Agent OS）”<br><br>或者更工程化一点：<br><br># 👉 “Context-aware LLM Execution Runtime”<br><br>---<br><br># 四、为什么不能归类成 Skill 或 MCP？<br><br>## ❌ 如果是 Skill：<br><br>Skill 只能：<br>- 描述任务流程<br>- 调工具<br><br>但不能：<br>- 控制 context 生命周期<br>- 自动 fork<br>- 管理 session graph<br>- 做 token profiling<br><br>👉 Skill 太“静态”<br><br>---<br><br>## ❌ 如果是 MCP：<br><br>MCP 只能：<br>- 提供 tools<br><br>但不能：<br>- 管理 reasoning<br>- 管理 workflow<br>- 管理 multi-agent<br><br>👉 MCP 太“底层”<br><br>---<br><br># 五、你们系统的本质（更准确）<br><br>你们系统其实是在补 Claude Code 缺的三块：<br><br>---<br><br>## 1️⃣ Context Layer（Claude缺失）<br>- token tracking<br>- context slicing<br>- compression<br>- snapshot<br><br>---<br><br>## 2️⃣ Execution Layer（Skill增强）<br>- skill runtime<br>- workflow graph<br>- task decomposition<br><br>---<br><br>## 3️⃣ Control Layer（核心创新）<br>- auto fork<br>- session branching<br>- multi-agent coordination<br>- replay/debug<br><br>---<br><br># 六、一个更工程化的定义<br><br>如果写在 README 里，我建议这样定义：<br><br>&gt; <strong>We build a Context-Oriented Agent Runtime that orchestrates Skills and MCP tools with automatic context partitioning, execution tracing, and session forking.</strong><br><br>---<br><br># 七、系统定位图（你应该长这样）<br><br><pre><code class="language-text">┌────────────────────┐
+                │   UI / Graph View   │
+                └─────────┬──────────┘
+                          │
+                ┌─────────▼──────────┐
+                │  Orchestrator Core  │  ← 你们的核心
+                ├────────────────────┤
+                │ - Fork Manager      │
+                │ - Context Engine    │
+                │ - Token Profiler    │
+                │ - Skill Runtime     │
+                └─────────┬──────────┘
+                          │
+        ┌─────────────────┴─────────────────┐
+        │                                   │
+   ┌────▼─────┐                      ┌──────▼──────┐
+   │  Skills   │                      │    MCP      │
+   │ (logic)   │                      │ (tools)     │
+   └───────────┘                      └─────────────┘</code></pre><br><br>---<br><br># 八、如果硬要给产品命名（建议）<br><br>不要叫 MCP tool / skill tool，会太窄。<br><br>可以考虑：<br><br>### 更准确命名：<br>- Agent Runtime<br>- Context Orchestrator<br>- LLM Execution OS<br>- Skill Runtime Engine<br><br>---<br><br># 九、一个关键产品洞察（很重要）<br><br>你们做的不是：<br><br>&gt; “让 Claude 更聪明”<br><br>而是：<br><br>&gt; “让 Claude 不会因为 context 爆炸而变笨，并且可以分叉思考”<br><br>---<br><br># 十、最重要的判断结论<br><br>如果你问一句话总结：<br><br>&gt; ❓我们做的到底是什么？<br><br>### 答案是：<br><br>&gt; <strong>一个介于 MCP（工具层）和 Skill（行为层）之上的“Agent操作系统”，负责控制 context 生命周期、任务分解和执行图。</strong><br><br>---<br><br>如果你下一步要继续，我可以帮你把这个系统进一步压成：<br><br>### 👉 MVP 设计（3个模块 + 1个API）<br>或者  <br>### 👉 技术选型 + repo结构（可以直接开 GitHub）  <br>或者  <br>### 👉 “auto-fork + skill runtime”的最小实现代码骨架<br><br>这个项目其实已经可以进入“可做产品”的阶段了。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 12:00:30</span>
+                </div>
+                <div class="message-content">但是Context Orchestrator好整合吗？目前来说mcp、skill的整合好像都是很方便的，基本上npm或者clone、配置一下基本就能用了，Context Orchestrator的话会不会比较麻烦</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 12:00:34</span>
+                </div>
+                <div class="message-content">你的判断是对的：<strong>Context Orchestrator 的“工程复杂度”和 MCP/Skill 完全不是一个量级</strong>。但关键点在于——它“麻烦”主要不是技术实现难，而是<strong>边界不清 + 插入点不标准化</strong>。<br><br>我给你拆清楚：它到底难在哪里、哪里其实很简单、以及怎么做才能“像 MCP 一样好集成”。<br><br>---<br><br># 一、先说结论（非常重要）<br><br>&gt; ❗Context Orchestrator <strong>不能做成“npm install 一把梭”的插件</strong><br>&gt; 但可以做成：<br><br>&gt; ✅ “外置 runtime + MCP proxy + SDK hook 三件套”<br><br>也就是说：<br><br>&gt; ✔ MCP / Skill = 插件  <br>&gt; ✔ Orchestrator = <strong>运行环境（runtime layer）</strong><br><br>---<br><br># 二、为什么 MCP / Skill 很“好装”，Orchestrator 很难？<br><br>## 1️⃣ MCP / Skill 的本质是“局部增强”<br><br>它们有一个非常重要特点：<br><br>&gt; 👉 不改变主控制流（control flow）<br><br>### MCP：<br>- 只是 tool registry<br>- model 什么时候 call tool 是模型自己决定<br><br>### Skill：<br>- 只是 prompt + workflow<br>- 不控制 execution runtime<br><br>📌 所以它们是：<br>&gt; “外挂”<br><br>---<br><br>## 2️⃣ Context Orchestrator 是“控制流接管”<br><br>你要做的是：<br><br>- 什么时候 fork<br>- 什么时候压缩 context<br>- 哪些 messages 保留<br>- 哪些 MCP 被加载<br>- 哪个 skill 生效<br>- session 怎么分叉<br><br>👉 本质是：<br><br>&gt; ❗你在接管 agent 的“生命周期调度器”<br><br>这就是复杂的原因。<br><br>---<br><br># 三、真正的难点只有三个（不是技术多复杂）<br><br>## ❌ 难点1：没有官方 hook 点<br><br>你需要控制：<br><br>- request前 context<br>- response后状态<br>- tool call中间态<br><br>但现实是：<br><br>&gt; Claude Code / API 没有完整 lifecycle hooks<br><br>👉 所以你必须“外置代理层”<br><br>---<br><br>## ❌ 难点2：context 是“隐式状态”<br><br>MCP是显式的：<br><br><pre><code class="language-json">tool_call → input/output</code></pre><br><br>但 context 是：<br><br>- message history<br>- hidden system prompt<br>- tool schemas<br>- memory injection<br><br>👉 你必须自己 reconstruct state<br><br>---<br><br>## ❌ 难点3：fork 是“语义问题”，不是工程问题<br><br>什么时候 fork？<br><br>- token 过高？<br>- 任务分歧？<br>- hallucination 风险？<br>- tool overload？<br><br>👉 没有标准答案，只能 heuristic<br><br>---<br><br># 四、但重点来了：其实可以做得“像 MCP 一样简单”<br><br>关键是你不能做“框架”，要做：<br><br>&gt; 👉 <strong>“proxy + runtime + optional SDK”</strong><br><br>---<br><br># 五、推荐架构（让它变简单）<br><br>## ✔ 正确做法：三层结构<br><br>``<code>text id="r8n9q2"<br>          Claude Code / Agent<br>                    │<br>        ┌───────────▼───────────┐<br>        │   Orchestrator Proxy   │  ← 核心（必须）<br>        └───────┬───────┬───────┘<br>                │       │<br>     MCP Layer   │   Skill Layer<br>                 │<br>        ┌────────▼────────┐<br>        │ Context Engine   │<br>        │ Fork Manager     │<br>        │ Token Profiler   │<br>        └──────────────────┘<br><pre><code class="language-text">---
+
+## ✔ 关键设计点：Proxy化
+
+你不让用户“集成系统”，而是：
+
+&gt; 👉 只需要把 Claude 请求指向你的 proxy
+
+类似：</code></pre>bash id="k7xv2a"<br>export ANTHROPIC_BASE_URL=http://localhost:xxxx<br><pre><code class="language-text">或者：</code></pre>bash id="n4qz91"<br>claude-code --proxy http://localhost:xxxx<br><pre><code class="language-text">---
+
+# 六、为什么这样就“不麻烦了”？
+
+因为你把复杂性全部藏起来：
+
+### 用户看到的是：</code></pre>bash id="p9m3cx"<br>npm install orchestrator<br>orchestrator start<br></code>`<code><br><br>### 实际发生的是：<br><br>- context tracking<br>- MCP profiling<br>- skill routing<br>- fork decision<br>- session snapshot<br><br>全部在 proxy 内部完成<br><br>---<br><br># 七、你真正要做的不是“集成 MCP/Skill”<br><br>而是：<br><br>&gt; ❗“让 MCP/Skill 不知道自己在被管理”<br><br>---<br><br># 八、MVP复杂度拆解（真实情况）<br><br>我给你一个非常现实的评估：<br><br>## 🟢 MCP / Skill 集成难度<br>- 低（1-2天）<br>- npm / config 即可<br><br>---<br><br>## 🟡 Context Orchestrator MVP<br>如果做最小版本：<br><br>### 你只做三件事：<br><br>### 1️⃣ Proxy layer<br>- intercept request<br>- record tokens<br><br>### 2️⃣ context snapshot<br>- 保存 session state<br><br>### 3️⃣ manual fork API<br>- </code>/fork session`<br><br>👉 这个其实：<br><br>&gt; 🔧 3–5天可以做出来<br><br>---<br><br>## 🔴 完整版本（自动 fork + graph + optimization）<br>- 2–6周<br>- 难点在 heuristic tuning<br><br>---<br><br># 九、关键设计建议（避免做成“重系统”）<br><br>## ❗不要一开始做：<br><br>- skill compiler ❌<br>- MCP registry ❌<br>- full agent OS ❌<br><br>---<br><br>## ✔ 一开始只做：<br><br>&gt; <strong>Context Proxy + Fork Engine</strong><br><br>---<br><br># 十、最重要的产品判断<br><br>你现在的问题本质是：<br><br>&gt; MCP / Skill 是“插件生态”<br>&gt; Context Orchestrator 是“操作系统”<br><br>---<br><br>### 所以差异是：<br><br>| 类别 | MCP/Skill | Context Orchestrator |<br>|------|----------|----------------------|<br>| 性质 | 插件 | runtime |<br>| 集成 | 简单 | 必须 proxy |<br>| 控制 | 局部 | 全局 |<br>| 复杂度 | 低 | 中-高 |<br><br>---<br><br># 十一、给你的建议（非常具体）<br><br>如果你要做这个项目，我建议你这样定位：<br><br>## 🎯 v0.1（必须这样做）<br><br>&gt; “Claude Code Context Proxy”<br><br>功能只有：<br><br>- token tracking<br>- session log<br>- manual fork<br><br>---<br><br>## 🎯 v0.2<br><br>- auto fork heuristic<br>- MCP usage profiling<br><br>---<br><br>## 🎯 v1.0<br><br>- graph UI<br>- skill routing<br>- multi-agent<br><br>---<br><br># 十二、最终结论<br><br>回答你的问题：<br><br>&gt; ❓Context Orchestrator 会不会很麻烦？<br><br>### 答案是：<br><br>&gt; ✔ <strong>做成“系统”会很麻烦</strong><br>&gt; ✔ <strong>做成“proxy runtime”其实不麻烦</strong><br>&gt; ❗难点不是工程，是架构边界<br><br>---<br><br>如果你下一步想继续，我可以帮你直接落到：<br><br>### 👉 “最小 proxy 架构（FastAPI + Claude API + token tracker）”<br>或者  <br>### 👉 “auto-fork heuristic（可直接用的规则集）”<br>或者  <br>### 👉 “MCP/Skill 如何在 orchestrator 里做 routing 设计”<br><br>这个项目已经进入“可以写 repo”的阶段了。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 12:03:02</span>
+                </div>
+                <div class="message-content">我没理解，意思是让用户把我的项目clone下来，然后用claude code之前设置一下proxy，让它走我的proxy就可以了吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 12:03:05</span>
+                </div>
+                <div class="message-content">对，你理解的是<strong>最核心的集成路径之一，而且是最现实的一条路</strong>——但需要我帮你把边界说得更精确一点，否则很容易走偏。<br><br>---<br><br># 一、先回答你的问题（明确版）<br><br>&gt; ❓是不是 clone 项目 + 设置 proxy 就能用？<br><br>### ✔ 是的（但只对“API代理型Orchestrator”成立）<br><br>用户流程可以是：<br><br>``<code>bash id="p3x8q1"<br>git clone your-orchestrator<br>cd your-orchestrator<br>docker compose up<br><pre><code class="language-text">然后配置：</code></pre>bash id="k1v7zm"<br>ANTHROPIC_BASE_URL=http://localhost:xxxx<br><pre><code class="language-text">或者 Claude Code / agent SDK 指向你的 endpoint。
+
+---
+
+👉 之后所有请求流向：</code></pre><br>Claude Code → 你的 Proxy → Claude API<br><pre><code class="language-text">---
+
+# 二、但关键点来了（很多人会误解这里）
+
+你这个 proxy **不是简单转发请求**，否则毫无意义。
+
+你做的是：
+
+&gt; ❗“LLM 请求的中间执行层（Execution Middleware）”
+
+---
+
+# 三、你的系统实际插在这里</code></pre>text id="v7m2qk"<br>Claude Code<br>    ↓<br>[你的 Orchestrator Proxy]<br>    ↓<br>Claude API<br><pre><code class="language-text">但你 proxy 做的不只是转发，而是：
+
+---
+
+## ✔ 1️⃣ Request rewrite（核心）
+
+你可以改：
+
+- system prompt
+- context window
+- tool schema（MCP）
+- skill injection
+
+---
+
+## ✔ 2️⃣ Context tracking
+
+你记录：
+
+- token usage
+- message growth
+- tool explosion
+- MCP schema size
+
+---
+
+## ✔ 3️⃣ Decision layer（关键差异）
+
+你可以在 proxy 里做：
+
+### 👉 是否 fork？</code></pre>python id="x9n2vd"<br>if context_tokens &gt; 0.75 * limit:<br>    create_new_session()<br><pre><code class="language-text">---
+
+### 👉 是否压缩 context？</code></pre>python id="q8m3lv"<br>if old_messages &gt; threshold:<br>    summarize()<br><pre><code class="language-text">---
+
+### 👉 是否禁用 MCP？</code></pre>python id="c4v7nz"<br>if tool_tokens &gt; budget:<br>    prune_tools()<br><pre><code class="language-text">---
+
+# 四、所以你的理解要升级一下
+
+你说的是：
+
+&gt; “用户设置 proxy 就行了？”
+
+### ✔ 对，但真正本质是：
+
+&gt; ❗用户不是在“换 endpoint”
+&gt; ❗而是在“换 runtime”
+
+---
+
+# 五、为什么 MCP / Skill 不需要 proxy，但你需要？
+
+## MCP / Skill：
+
+- 插件模式
+- 不控制主流程
+- 只扩展能力
+
+👉 不需要改请求链路
+
+---
+
+## Context Orchestrator：
+
+你要做的是：
+
+&gt; 控制“整个 agent 的生命周期”
+
+所以必须：
+
+- intercept request
+- modify context
+- split sessions
+- re-route calls
+
+👉 只能靠 proxy / SDK hook
+
+---
+
+# 六、正确产品形态（非常重要）
+
+你这个项目**不应该是 library，而是 runtime**
+
+## ❌ 错误形态：</code></pre>bash id="v2m8kq"<br>npm install context-orchestrator<br>import { fork } from ...<br><pre><code class="language-text">👉 这是做不动的（太底层）
+
+---
+
+## ✔ 正确形态：</code></pre>bash id="r8xq2m"<br>orchestrator serve<br><pre><code class="language-text">或者 docker：</code></pre>bash id="m9p2vn"<br>docker run orchestrator<br><pre><code class="language-text">---
+
+# 七、用户体验（你最终要做到的）
+
+用户只做三件事：
+
+---
+
+## 1️⃣ 启动 runtime</code></pre>bash id="n3qv7x"<br>orchestrator start<br><pre><code class="language-text">---
+
+## 2️⃣ 指向 proxy</code></pre>bash id="t6k9zm"<br>export ANTHROPIC_BASE_URL=http://localhost:3000<br><pre><code class="language-text">---
+
+## 3️⃣ 看 dashboard</code></pre>bash id="p0v7xn"<br>http://localhost:3000<br></code>``<br><br>---<br><br># 八、你这个系统真正的价值点<br><br>不是 proxy 本身，而是：<br><br>---<br><br>## 🔥 1. Context 可观测性（Claude Code没有）<br><br>- token breakdown<br>- MCP explosion tracking<br>- skill cost<br><br>---<br><br>## 🔥 2. 自动 fork（核心差异）<br><br>- session tree<br>- branch reasoning<br>- task splitting<br><br>---<br><br>## 🔥 3. runtime control（最核心）<br><br>- rewrite context<br>- prune tools<br>- inject summaries<br><br>---<br><br># 九、一个非常重要的判断<br><br>如果你只做 proxy：<br><br>&gt; ❌ 那只是“API gateway”，没价值<br><br>如果你做 proxy + runtime logic：<br><br>&gt; ✔ 你就是在做“LLM operating system”<br><br>---<br><br># 十、我帮你把定位再压缩一句（很关键）<br><br>你这个产品不是：<br><br>&gt; “让 Claude 更好用的工具”<br><br>而是：<br><br>&gt; <strong>“控制 Claude 如何思考与分叉的运行时系统”</strong><br><br>---<br><br># 十一、最终回答你的问题（精简版）<br><br>&gt; ❓是不是 clone + proxy 就可以？<br><br>### ✔ 是的，但前提是：<br><br>你做的不是 proxy tool，而是：<br><br>&gt; <strong>proxy + context engine + fork controller 的 runtime</strong><br><br>否则：<br><br>- 只是转发请求 ❌<br>- 不会有任何护城河 ❌<br><br>---<br><br># 如果你下一步想继续，我可以帮你做三件更关键的东西：<br><br>### 1️⃣ 最小 proxy 架构（FastAPI + Claude SDK）<br>### 2️⃣ 自动 fork 判定规则（production级 heuristic）<br>### 3️⃣ MCP + skill 在 proxy 中的 routing 设计<br><br>这个项目已经可以进入“repo设计阶段”了，不是概念阶段了。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 12:05:49</span>
+                </div>
+                <div class="message-content">那你之前给我的方案需要改吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 12:05:52</span>
+                </div>
+                <div class="message-content">需要<strong>改，但不是推翻，而是“收敛 + 降维 + 重新定边界”</strong>。<br><br>你之前那个方案的问题不在“方向错”，而在于：<br><br>&gt; ❗把 Orchestrator 设计成了“系统级平台（Agent OS）”，但你现在真正能落地的是“Proxy-based Runtime v0”<br><br>---<br><br># 一、先给结论（非常重要）<br><br>你之前的方案：<br><br>&gt; 🧠 Context Orchestrator = Skill + MCP + Fork + UI + Profiler 全家桶<br><br>### ✔ 理论上正确  <br>### ❌ 但对 MVP 来说过重<br><br>---<br><br># 二、需要怎么改（一句话版本）<br><br>&gt; ❗从“Agent 操作系统”降级为  <br>&gt; 👉 <strong>“Context-aware LLM Proxy Runtime”</strong><br><br>---<br><br># 三、结构层面的调整（关键）<br><br>## ❌ 你之前的设计问题<br><br>原方案隐含了：<br><br>- 直接控制 Skill runtime ❌（做不到/不稳定）<br>- MCP 深度调度 ❌（过早优化）<br>- 多 agent graph ❌（复杂度爆炸）<br>- 完整 UI system ❌（非核心）<br><br>👉 本质问题：<br><br>&gt; ❗把“未来形态”当成“MVP架构”<br><br>---<br><br>## ✔ 正确调整后的架构（可落地版）<br><br>``<code>text id="k9xq2m"<br>            Claude Code / Agent<br>                     ↓<br>        ┌─────────────────────────┐<br>        │   Context Proxy Runtime   │  ← 唯一核心<br>        ├─────────────────────────┤<br>        │ 1. Request interceptor   │<br>        │ 2. Token profiler        │<br>        │ 3. Context slicer        │<br>        │ 4. Fork engine (simple)  │<br>        └──────────┬──────────────┘<br>                   ↓<br>              Claude API<br><pre><code class="language-text">---
+
+# 四、你之前方案 vs 新方案对比
+
+## ❌ 原方案（过度设计）
+
+- Skill compiler
+- MCP registry
+- Agent OS
+- Graph UI system
+- Multi-agent orchestration
+
+👉 问题：**没有 runtime anchor**
+
+---
+
+## ✔ 新方案（可落地 MVP）
+
+只保留三件事：
+
+### 1️⃣ Proxy（必须）
+- 所有请求都经过
+
+### 2️⃣ Context engine（必须）
+- token tracking
+- summarization
+- pruning
+
+### 3️⃣ Fork engine（核心差异）
+- session split
+- context snapshot
+
+---
+
+# 五、UI 和 MCP / Skill 怎么处理？（重点）
+
+## ❌ 不要在 MVP 里“整合它们”
+
+改为：
+
+### ✔ Phase 1：只观测
+
+- MCP = log
+- Skill = log
+
+👉 不参与决策
+
+---
+
+### ✔ Phase 2：轻度参与
+
+- MCP token profiling
+- skill cost estimation
+
+---
+
+### ✔ Phase 3：再做 routing
+
+---
+
+# 六、最关键的设计哲学变化
+
+## 你之前是：
+
+&gt; “我要做一个可以管理 MCP + Skill + Agent 的系统”
+
+---
+
+## 现在应该是：
+
+&gt; “我要做一个不会让 context 爆炸的 Claude Runtime”
+
+---
+
+# 七、fork 机制也要降级（非常关键）
+
+## ❌ 原设计：
+
+- 自动 fork graph
+- multi-branch execution
+- task DAG
+
+---
+
+## ✔ MVP 版本：
+
+只做：</code></pre>python id="m8qv2z"<br>if context_usage &gt; 0.8:<br>    summarize()<br>    start_new_session()<br><pre><code class="language-text">👉 就一件事：
+
+&gt; **“防止 context 爆炸”**
+
+---
+
+# 八、UI 也要收敛
+
+## ❌ 不要：
+
+- full graph UI
+- skill visual editor
+- MCP dashboard
+
+---
+
+## ✔ 只做：
+
+- session list
+- token usage bar
+- fork history
+
+---
+
+# 九、重新定义你的产品（最重要）
+
+## 现在你的系统应该叫：
+
+&gt; ❌ Context Orchestrator（太大）
+
+## ✔ 改成：
+
+&gt; **Claude Context Proxy Runtime**
+
+或者更产品化：
+
+&gt; **Claude Execution Gateway**
+
+---
+
+# 十、最终架构（MVP级）</code></pre>text id="v7m3qk"<br>           User (Claude Code)<br>                    ↓<br>        ┌───────────────────────┐<br>        │ Claude Proxy Runtime   │<br>        ├───────────────────────┤<br>        │ - intercept request    │<br>        │ - token counter        │<br>        │ - context summarizer   │<br>        │ - fork switcher        │<br>        └───────────────────────┘<br>                    ↓<br>              Claude API<br></code>``<br><br>---<br><br># 十一、为什么这个改动是必要的？<br><br>因为：<br><br>## MCP / Skill 是：<br>&gt; 插件系统（add-on）<br><br>## 你做的是：<br>&gt; 运行时系统（execution layer）<br><br>---<br><br>但 runtime 有一个原则：<br><br>&gt; ❗必须先稳定“最小闭环”，再扩展能力<br><br>---<br><br># 十二、给你一个判断标准（很实用）<br><br>如果某个功能：<br><br>| 能不能没有 proxy实现？ | 是否应该放进 v0 |<br>|-----------------------|------------------|<br>| token tracking        | ✔ 必须 |<br>| fork session          | ✔ 必须 |<br>| MCP routing           | ❌ 不要 |<br>| skill generator       | ❌ 不要 |<br>| graph UI              | ❌ 不要 |<br><br>---<br><br># 十三、最终回答你的问题<br><br>&gt; ❓之前方案要改吗？<br><br>### ✔ 要改，但方式是：<br><br>&gt; ❗“删掉 70% 功能，只保留 runtime 核心”<br><br>---<br><br># 十四、如果你下一步想继续，我建议做这三件事（优先级最高）<br><br>### 1️⃣ 我帮你画 MVP proxy 架构 + API设计<br>### 2️⃣ 给你 fork + summarize 的 production级 prompt<br>### 3️⃣ 给你 MCP/Skill 的 logging 插桩方案（很关键）<br><br>这个项目现在已经不是“设计问题”，而是：<br><br>&gt; 👉 <strong>可以开始写第一个 runnable prototype 了</strong></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 12:07:46</span>
+                </div>
+                <div class="message-content">你给我一个新的方案吧。包括需求、初步架构设计、初步实现路径</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 12:07:50</span>
+                </div>
+                <div class="message-content">下面给你一版<strong>重新收敛后的方案</strong>（我会刻意把“研究性架构”降到工程可落地层面），目标是：  <br><br>&gt; 做一个<strong>可以真正跑起来、能逐步增强到 auto-fork + MCP/Skill 管理 + token 可观测的系统</strong><br><br>我会分三部分：<br><br>1. 需求定义（重新收敛范围）<br>2. 初步架构（可实现、不会过度设计）<br>3. 实现路径（按 3 个里程碑走）<br><br>---<br><br># 一、需求定义（重新收敛版本）<br><br>你这个系统不要一开始就做“Agent OS”，否则会失控。<br><br>我们把需求压缩成 4 个核心能力：<br><br>---<br><br>## 1️⃣ Context 可观测（必须）<br><br>目标：你要“看见 Claude 在怎么用 token”<br><br>能力：<br><br>- 总 token 使用<br>- MCP tool token 占比<br>- skill prompt injection 占比<br>- 历史消息增长曲线<br><br>👉 输出：<br><br>``<code>json id="ctx1"<br>{<br>  "total_tokens": 120000,<br>  "mcp_tokens": 30000,<br>  "skill_tokens": 15000,<br>  "messages_tokens": 75000<br>}<br><pre><code class="language-text">---
+
+## 2️⃣ Context 控制（核心）
+
+目标：你可以“改 Claude 的输入”
+
+能力：
+
+- context 压缩（summarize history）
+- tool pruning（控制 MCP）
+- prompt injection（skill）
+- context window trimming
+
+---
+
+## 3️⃣ Session 管理（必须）
+
+目标：你可以“管理对话生命周期”
+
+能力：
+
+- session 创建
+- session 保存
+- session restore
+- session fork（手动 + 半自动）
+
+---
+
+## 4️⃣ Fork（v1 重点）
+
+目标：解决你现在的痛点：
+
+&gt; context 爆炸 + 长任务断裂
+
+能力：
+
+- 手动 fork
+- 条件 fork（token /任务复杂度）
+- fork graph
+
+---
+
+# 二、初步架构设计（现实可落地）
+
+这里我给你一个**能直接开 repo 的结构**。
+
+---
+
+## 🔷 系统架构（v0-v1）</code></pre>text id="arch1"<br>                 ┌──────────────────────┐<br>                 │     Web Dashboard     │<br>                 │ (session + graph UI)  │<br>                 └─────────┬────────────┘<br>                           │<br>                 ┌─────────▼────────────┐<br>                 │   Orchestrator API    │<br>                 │     (FastAPI)         │<br>                 ├─────────┬────────────┤<br>                 │         │            │<br>     ┌───────────▼───┐ ┌──▼──────────┐ ┌▼─────────────┐<br>     │ Context Engine │ │ Fork Engine │ │ Token Profiler│<br>     └───────────┬───┘ └────┬────────┘ └────┬─────────┘<br>                 │           │               │<br>                 └────┬──────┴──────┬──────┘<br>                      │             │<br>            ┌─────────▼─────────────▼─────────┐<br>            │        Proxy Layer (关键)        │<br>            │  Claude Code / API Intercept    │<br>            └─────────┬───────────────────────┘<br>                      │<br>                 Claude API<br><pre><code class="language-text">---
+
+## 🔷 核心设计原则（很重要）
+
+### ✔ 1. Proxy-first
+所有请求必须经过 proxy
+
+---
+
+### ✔ 2. Orchestrator 不依赖 Claude Code 内部
+（避免 SDK lock-in）
+
+---
+
+### ✔ 3. 所有能力都基于 request/response hook
+
+---
+
+# 三、核心模块拆解（工程级）
+
+---
+
+## 1️⃣ Proxy Layer（最重要）
+
+### 职责：
+
+- intercept request
+- intercept response
+- inject context modifications
+
+---
+
+### 做法：</code></pre>python id="proxy1"<br>POST /v1/messages → your proxy<br><pre><code class="language-text">内部流程：</code></pre>text id="flow1"<br>client request<br>   ↓<br>context profiler<br>   ↓<br>context engine (rewrite)<br>   ↓<br>Claude API<br>   ↓<br>response profiler<br>   ↓<br>session store<br><pre><code class="language-text">---
+
+## 2️⃣ Token Profiler（必须）
+
+### 功能：
+
+- 计算 prompt tokens
+- MCP tool tokens
+- skill tokens
+
+---
+
+### 技术实现：
+
+- tiktoken / anthropic tokenizer
+- MCP schema size estimation
+- message-level token tracking
+
+---
+
+## 3️⃣ Context Engine（核心）
+
+### 功能：
+
+#### A. context压缩</code></pre>python id="ctx2"<br>def compress(messages):<br>    return summarize(messages[:-k]) + recent_messages<br><pre><code class="language-text">---
+
+#### B. tool pruning</code></pre>python id="ctx3"<br>def prune_tools(tools, budget):<br>    return sorted(tools, key=relevance)[:budget]<br><pre><code class="language-text">---
+
+#### C. skill injection</code></pre>python id="ctx4"<br>system_prompt += selected_skill_prompt<br><pre><code class="language-text">---
+
+## 4️⃣ Fork Engine（v1重点）
+
+### fork触发条件：</code></pre>python id="fork1"<br>if (<br>    token_usage &gt; 0.75 * limit<br>    or task_complexity &gt; threshold<br>    or tool_conflict_detected<br>):<br>    fork_session()<br><pre><code class="language-text">---
+
+### fork内容：</code></pre>json id="fork2"<br>{<br>  "parent_session": "A",<br>  "summary": "...",<br>  "carried_state": {<br>    "goal": "...",<br>    "files": ["..."],<br>    "constraints": "..."<br>  }<br>}<br></code>``<br><br>---<br><br>## 5️⃣ Session Store<br><br>最简单版本：<br><br>- SQLite（够用）<br>- 后面再换 Postgres<br><br>---<br><br># 四、初步实现路径（非常关键）<br><br>我帮你拆成 <strong>3 个阶段（每阶段都有产出）</strong><br><br>---<br><br># 🥇 Phase 1（最小可运行系统）<br><br>&gt; 目标：你能“看到 Claude token 是怎么爆的”<br><br>---<br><br>### 做三件事：<br><br>## 1. proxy server<br><br>- FastAPI<br>- forward Claude API<br><br>---<br><br>## 2. token logger<br><br>- request token<br>- response token<br><br>---<br><br>## 3. session storage<br><br>- SQLite<br><br>---<br><br>### 产出：<br><br>✔ CLI可用  <br>✔ 能记录所有请求  <br>✔ 能看 token 曲线  <br><br>---<br><br># 🥈 Phase 2（可控系统）<br><br>&gt; 目标：你可以“控制 context”<br><br>---<br><br>### 加入：<br><br>## 1. context trimming<br><br>- 历史压缩<br><br>## 2. tool pruning<br><br>- MCP控制<br><br>## 3. skill injection<br><br>- system prompt管理<br><br>---<br><br>### 产出：<br><br>✔ token下降  <br>✔ context可控  <br>✔ tool不会爆炸  <br><br>---<br><br># 🥉 Phase 3（核心产品形态）<br><br>&gt; 目标：自动 fork + graph<br><br>---<br><br>### 加入：<br><br>## 1. fork engine<br><br>- 手动 fork<br>- 自动 fork<br><br>## 2. session graph<br><br>- React Flow<br><br>## 3. replay system<br><br>- session回放<br><br>---<br><br>### 产出：<br><br>✔ session tree  <br>✔ 自动分叉  <br>✔ 可视化系统  <br><br>---<br><br># 五、最终产品形态（你真正要做的）<br><br>如果做完，你的系统不是：<br><br>&gt; ❌ MCP tool manager  <br>&gt; ❌ skill generator  <br><br>而是：<br><br>&gt; ✔ <strong>Claude Execution Runtime</strong><br>&gt; ✔ <strong>Context Operating System</strong><br><br>---<br><br># 六、最关键的设计判断（帮你避免走偏）<br><br>### ❌ 不要做：<br><br>- skill compiler<br>- MCP registry<br>- agent framework<br><br>---<br><br>### ✔ 只做三件事：<br><br>1. proxy（必须）<br>2. context engine（核心）<br>3. fork engine（差异化）<br><br>---<br><br># 七、我帮你总结一句最重要的话<br><br>&gt; 你这个系统的本质不是“扩展 Claude”，而是“接管 Claude 的执行生命周期”。<br><br>---<br><br># 如果你下一步想继续，我可以帮你直接补三块关键工程内容：<br><br>### 1️⃣ FastAPI proxy 最小代码骨架  <br>### 2️⃣ 自动 fork heuristic（生产级规则）  <br>### 3️⃣ session graph 数据结构 + 前端设计  <br><br>这个已经是可以开始写 GitHub repo 的级别了。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/10 12:12:11</span>
+                </div>
+                <div class="message-content">叫什么名字好呢</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/10 12:12:14</span>
+                </div>
+                <div class="message-content">名字这件事建议你别走“炫概念路线”，要走<strong>工程可理解 + 可扩展 + 不误导定位</strong>。你这个产品本质不是 MCP/Skill 工具，而是：<br><br>&gt; <strong>LLM execution runtime + context/fork orchestrator</strong><br><br>所以命名要避免这些坑：<br>- ❌ “agent framework”（太泛）<br>- ❌ “MCP tool”（太窄）<br>- ❌ “skill builder”（误导成 prompt 工具）<br>- ❌ “Claude something”（强绑定单模型）<br><br>---<br><br># 一、命名原则（建议你遵守）<br><br>一个好的名字要满足：<br><br>### 1️⃣ 表达“运行时/控制层”<br>关键词：<br>- runtime<br>- orchestrator<br>- engine<br>- system<br>- OS<br><br>---<br><br>### 2️⃣ 能体现“context / fork”<br>关键词：<br>- context<br>- session<br>- graph<br>- flow<br>- branch<br><br>---<br><br>### 3️⃣ 不绑定 Claude / MCP<br>否则后面会被锁死生态<br><br>---<br><br># 二、我给你分三种命名风格（你可以选路线）<br><br>---<br><br># 🥇 第一类：工程正统型（推荐）<br><br>适合开源 / 做基础设施 / 做长期项目<br><br>### ⭐ 推荐名字：<br><br>## 1. ContextOS<br>&gt; 最直接、最清晰<br><br>含义：<br>- context = 核心资源<br>- OS = runtime system<br><br>✔ 优点：<br>- 一眼懂<br>- 可扩展 agent / tool / memory<br>- 很“基础设施感”<br><br>---<br><br>## 2. Orchestrix<br>（orchestrate + matrix）<br><br>✔ 优点：<br>- 有“控制系统”感觉<br>- 不绑定具体模型<br>- 很适合做 platform<br><br>---<br><br>## 3. SessionOS<br>✔ 非常贴合你的 fork + session graph<br><br>含义：<br>&gt; 管理 LLM session 生命周期的 OS<br><br>---<br><br># 🥈 第二类：偏产品化 / SaaS<br><br>适合未来做商业产品<br><br>---<br><br>## 4. Flowmind<br>含义：<br>- flow = context flow<br>- mind = LLM reasoning<br><br>✔ 优点：<br>- 很产品化<br>- UI很好做<br>- 适合 dashboard<br><br>---<br><br>## 5. BranchAI<br>直接点出核心能力：<br><br>&gt; 自动 fork / branch reasoning<br><br>✔ 优点：<br>- 非常差异化<br>- 很适合你“auto-fork”核心卖点<br><br>---<br><br>## 6. LoopAI<br>含义：<br>&gt; context loop + execution loop<br><br>✔ 优点：<br>- 简洁<br>- tech感强<br>- 适合 dev tool<br><br>---<br><br># 🥉 第三类：偏底层/infra（最强推荐）<br><br>如果你想做“类 Kubernetes / Docker 的 AI runtime”<br><br>---<br><br>## 7. Cortex<br>含义：<br>&gt; 大脑执行层 / context processing layer<br><br>✔ 非常强 infra 感<br>✔ 很多 AI infra 会用类似名字<br><br>---<br><br>## 8. Fluxor<br>（flux + orchestrator）<br><br>✔ 很适合：<br>- context流<br>- session流<br>- fork流<br><br>---<br><br>## 9. Lattice<br>含义：<br>&gt; session graph / fork graph<br><br>✔ 非常贴合你“session tree”<br><br>---<br><br># 三、我帮你筛一个“最适合你当前项目”的结论<br><br>结合你做的东西：<br><br>- context profiling<br>- auto fork<br>- session graph<br>- MCP/skill runtime<br>- proxy-based architecture<br><br>👉 你最匹配的名字其实是：<br><br>---<br><br># 🏆 最推荐（3选1）<br><br>## 🥇 ContextOS（最稳）<br>👉 适合做基础设施 + 长期项目<br><br>---<br><br>## 🥈 SessionOS（最贴功能）<br>👉 强调 fork + session graph<br><br>---<br><br>## 🥉 BranchAI（最有产品爆点）<br>👉 强调你最独特能力：auto-fork<br><br>---<br><br># 四、如果你想更“产品差异化一点”<br><br>我给你一个更狠的命名策略：<br><br>&gt; ❗名字直接绑定你核心 feature，而不是系统类型<br><br>例如：<br><br>- ForkAI（强烈建议）<br>- ContextFork<br>- SessionBranch<br><br>👉 这类名字的好处：<br>- 一眼知道你解决什么问题<br>- 非常适合 launch / YC / Product Hunt<br><br>---<br><br># 五、如果让我帮你拍板（工程+产品兼顾）<br><br>我会这样选：<br><br>### 👉 repo 名：<br>&gt; ContextOS<br><br>### 👉 产品名：<br>&gt; BranchAI<br><br>### 👉 内部模块：<br>- Fork Engine<br>- Context Engine<br>- Session Graph<br><br>---<br><br># 六、最后给你一句非常关键的建议<br><br>&gt; 名字不要提前“做品牌”，先做“可被理解的系统边界”。<br><br>因为你这个项目本质还在：<br>&gt; infra / runtime layer 早期阶段<br><br>名字太花会反过来限制架构演进。<br><br>---<br><br>如果你下一步要继续，我可以帮你把：<br><br>- repo结构（monorepo还是service拆分）<br>- MVP第一版目录设计<br>- 或者 logo / 产品定位一句话<br><br>直接一起定下来。</div>
+            </div></div></div></body></html>

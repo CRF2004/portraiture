@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缓存命中率下降分析</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>缓存命中率下降分析</h1>
+            <div class="metadata">ID: 6a101f82-e208-83ec-9145-0df09a8bbad0 | 2026/5/22 17:19:02</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/22 17:18:58</span>
+                </div>
+                <div class="message-content">[object Object]<br>[object Object]<br>[object Object]<br>我deepseek-v4-pro的缓冲命中率怎么下降了这么多。今天差了600万token</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/22 17:19:24</span>
+                </div>
+                <div class="message-content">从截图看，<strong>确实不是小波动，是命中率明显掉了</strong>。<br><br>| 日期 | 命中缓存输入 | 未命中缓存输入 | 输入总量 | 缓存命中率 |<br>|---|---:|---:|---:|---:|<br>| 2026-05-18 | 38.57M | 1.23M | 39.81M | <strong>96.91%</strong> |<br>| 2026-05-21 | 49.09M | 2.26M | 51.36M | <strong>95.59%</strong> |<br>| 2026-05-22 | 35.81M | 5.00M | 40.81M | <strong>87.75%</strong> |<br><br>今天 5/22 相比昨天 5/21：<br><br>- 总输入少了约 <strong>1055 万 token</strong><br>- 但未命中缓存反而多了约 <strong>274 万 token</strong><br>- 缓存命中率从 <strong>95.59% 掉到 87.75%</strong><br>- 按昨天的命中率算，今天本应只有约 <strong>180 万未命中</strong><br>- 实际是 <strong>500 万未命中</strong><br>- 所以今天额外未命中大约 <strong>320 万 input token</strong><br><br>你说“差了 600 万 token”，如果是按成本感受或者按平时 96%～97% 命中率预期来算，体感接近是合理的；但按截图严格折算，<strong>缓存额外损失大概是 320 万～374 万 input token</strong>，不是完整 600 万。<br><br>最可能的原因不是模型输出问题，而是<strong>前缀缓存被打断了</strong>。DeepSeek 这类缓存一般对“前面完全相同的一段 token”敏感，只要靠前位置变了，后面一大段都可能不命中。<br><br>重点排查这几个：<br><br>1. <strong>system prompt / tools schema / RAG 上下文今天变了</strong>  <br>   比如工具列表顺序、JSON schema、函数描述、知识库片段顺序，只要变动在前面，缓存命中会大跌。<br><br>2. <strong>把时间戳、请求 ID、用户 ID、随机 trace 放在了 prompt 前面</strong>  <br>   这很常见。每天日期、会话 ID、动态 metadata 如果放在 system 或开头，会让本来能复用的长前缀全部失效。  <br>   正确做法是：稳定内容放最前，动态内容尽量放最后。<br><br>3. <strong>今天请求更分散，复用前缀少了</strong>  <br>   比如昨天大量请求来自同一个工作流，今天来自多个项目、多个 agent、多个 prompt 模板，命中率自然会掉。<br><br>4. <strong>agent 动态注入 memory / 文件 / 检索结果的位置变了</strong>  <br>   如果 RAG 结果被塞在系统提示词附近，且每次不同，会严重破坏缓存。最好把固定模板放前面，检索结果靠后。<br><br>5. <strong>模型名或路由变了</strong>  <br>   例如 <code>deepseek-v4-pro</code> 实际后端版本、区域、供应商路由、fallback 模型发生变化，也可能导致缓存不可复用。这个需要看服务商后台日志确认。<br><br>我建议你马上做一个简单定位：抽今天和昨天各 20 条请求，把<strong>前 2000～8000 token 的 prompt 做 hash</strong>。如果 hash 今天每条都不一样，而昨天大量相同，问题就在 prompt 组装；如果 hash 基本一样但仍不命中，才更像是供应商缓存侧、模型版本或路由问题。<br><br>最该先查的是：<strong>今天有没有新增日期、trace、session、memory、tools schema 或 RAG 内容被放到了 prompt 开头。</strong> 这个最容易造成你截图里这种从 95%+ 掉到 88% 的情况。</div>
+            </div></div></div></body></html>

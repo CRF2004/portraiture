@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图着色与线性规划</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>图着色与线性规划</h1>
+            <div class="metadata">ID: 6950a9fc-f9f0-8324-963a-49dab193137b | 2025/12/28 11:54:59</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2025/12/28 11:54:58</span>
+                </div>
+                <div class="message-content">着色问题一般都是用线性规划模型求解吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2025/12/28 11:54:59</span>
+                </div>
+                <div class="message-content">不完全是。<strong>图着色问题并不“一般”用线性规划直接求解</strong>，而是根据问题规模、精确性要求和应用场景，采用不同类型的模型与算法。更准确的说法是：<br><br>&gt; <strong>经典图着色问题本质上是一个离散组合优化问题，标准建模是整数规划（IP / ILP），而非纯线性规划（LP）。</strong><br><br>下面系统说明。<br><br>---<br><br>## 1. 图着色问题的本质<br><br>以最常见的<strong>顶点着色问题</strong>为例：<br><br>- 给定无向图 \(G=(V,E)\)<br>- 为每个顶点分配一个颜色<br>- 相邻顶点颜色不同<br>- 目标：使用尽可能少的颜色（最小色数 \(\chi(G)\)）<br><br>这是一个<strong>NP-hard 的组合优化问题</strong>。<br><br>---<br><br>## 2. 标准数学模型：0-1 整数规划（ILP）<br><br>### 2.1 决策变量<br><br>设最多允许 \(K\) 种颜色：<br><br>\[<br>x_{ik} =<br>\begin{cases}<br>1, &amp; \text{顶点 } i \text{ 使用颜色 } k \\<br>0, &amp; \text{否则}<br>\end{cases}<br>\]<br><br>\[<br>y_k =<br>\begin{cases}<br>1, &amp; \text{颜色 } k \text{ 被使用} \\<br>0, &amp; \text{否则}<br>\end{cases}<br>\]<br><br>---<br><br>### 2.2 约束条件<br><br>1. <strong>每个顶点必须且只能用一种颜色</strong><br>\[<br>\sum_{k=1}^K x_{ik} = 1,\quad \forall i\in V<br>\]<br><br>2. <strong>相邻顶点不能同色</strong><br>\[<br>x_{ik} + x_{jk} \le 1,\quad \forall (i,j)\in E,\ \forall k<br>\]<br><br>3. <strong>颜色启用约束</strong><br>\[<br>x_{ik} \le y_k,\quad \forall i,k<br>\]<br><br>---<br><br>### 2.3 目标函数<br><br>\[<br>\min \sum_{k=1}^K y_k<br>\]<br><br>👉 这是一个<strong>典型的 0-1 整数线性规划问题（ILP）</strong>。<br><br>---<br><br>## 3. 纯线性规划（LP）能不能解？<br><br>### 结论：<strong>一般不能直接得到整数可行解</strong><br><br>- 若放松整数约束 \(x_{ik} \in [0,1]\)<br>- 得到的是 <strong>LP 松弛</strong><br>- 解通常是<strong>分数解</strong>，无法直接作为合法着色方案<br><br>例如：<br>\[<br>x_{i1}=0.5,\ x_{i2}=0.5<br>\]<br><br>在实际着色中是无意义的。<br><br>---<br><br>## 4. 为什么还要提线性规划？<br><br>线性规划主要用于<strong>间接或近似层面</strong>：<br><br>### 4.1 LP 松弛 + 分支定界（Branch &amp; Bound）<br><br>- 商业/学术求解器（CPLEX、Gurobi）<br>- 实际解的是 <strong>ILP</strong><br>- 内部大量使用 LP 作为子问题<br><br>👉 <strong>不是“用 LP 建模”，而是“用 LP 辅助求解”</strong><br><br>---<br><br>### 4.2 半定规划（SDP）<br><br>著名结果：<br>- <strong>Lovász θ 函数</strong><br>- 用 SDP 给出图色数的<strong>下界</strong><br><br>这在理论与近似算法中很重要，但不是直接求最优着色。<br><br>---<br><br>### 4.3 启发式 + LP<br><br>- 列生成<br>- 拉格朗日松弛<br>- 割平面<br><br>用于<strong>大规模实例的近似求解</strong>。<br><br>---<br><br>## 5. 实际中更常见的方法<br><br>### 5.1 启发式 / 元启发式（非常常用）<br><br>- 贪心算法（DSATUR）<br>- 局部搜索<br>- 模拟退火<br>- 遗传算法<br><br>👉 尤其在<strong>大规模图</strong>中，比 ILP 更实用。<br><br>---<br><br>### 5.2 特殊图 → 多项式算法<br><br>- 二分图：2-着色（BFS/DFS）<br>- 区间图、弦图：可多项式时间最优着色<br><br>---<br><br>## 6. 总结一句话<br><br>&gt; <strong>图着色问题本质是整数规划问题，而不是线性规划问题。</strong>  <br>&gt; 线性规划更多用于：<br>&gt; - ILP 的松弛与求解过程<br>&gt; - 理论分析（下界）<br>&gt; - 近似算法<br><br>如果你是<strong>运筹学 / 优化建模考试</strong>语境下问这个问题，标准回答应是：<br><br>&gt; <strong>着色问题通常建模为 0-1 整数线性规划，而非纯线性规划。</strong><br><br>如果你愿意，我也可以：<br>- 帮你写一个「考试版」标准模型<br>- 或对比着色问题与设施选址、覆盖模型之间的关系</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2025/12/28 11:56:57</span>
+                </div>
+                <div class="message-content">着色问题是不是有个定理，图G=(V,E)，Δ=max{d(v), v∈V}为图G顶点最大度数，则着色数目&lt;=节点最大度数+1？ 这个怎么理解</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2025/12/28 11:56:57</span>
+                </div>
+                <div class="message-content">是的，你说的这个结论是<strong>一个非常经典、而且在考试中经常出现的定理</strong>。表述如下。<br><br>---<br><br>## 1. 定理表述（Brooks 定理的常见弱形式）<br><br>设  <br>\[<br>G=(V,E)<br>\]<br>是一个<strong>简单无向图</strong>，  <br>\[<br>\Delta=\max_{v\in V} d(v)<br>\]<br>为图的<strong>最大顶点度数</strong>，  <br>则有：<br><br>\[<br>\chi(G)\le \Delta+1<br>\]<br><br>其中 \(\chi(G)\) 为图的<strong>顶点着色数</strong>。<br><br>⚠️ 注意：这是一个<strong>普遍成立的上界</strong>，不是紧界。<br><br>---<br><br>## 2. 这个结论从哪来？（核心直觉）<br><br>理解关键在于下面一句话：<br><br>&gt; 一个顶点最多只和 \(\Delta\) 个顶点相邻，因此最多“被禁止” \(\Delta\) 种颜色。<br><br>如果你准备了 \(\Delta+1\) 种颜色，那么<strong>总能给这个顶点选到一种未被邻居使用的颜色</strong>。<br><br>---<br><br>## 3. 形式化理解：贪心着色证明思路<br><br>这是一个<strong>构造性证明</strong>，通常用<strong>贪心算法</strong>说明。<br><br>### 步骤 1：给顶点排一个顺序<br>任意排列顶点：<br>\[<br>v_1, v_2, \dots, v_n<br>\]<br><br>### 步骤 2：按顺序着色<br>对每个顶点 \(v_i\)：<br><br>- 它之前已经着色的邻居数量 ≤ \(\Delta\)<br>- 已被使用的颜色数 ≤ \(\Delta\)<br>- 共有 \(\Delta+1\) 种颜色可选<br><br>👉 一定存在至少一种颜色不冲突。<br><br>因此，整个图可以用 \(\Delta+1\) 种颜色完成着色。<br><br>---<br><br>## 4. 一个简单例子帮助理解<br><br>### 例 1：完全图 \(K_{n}\)<br><br>- 每个顶点度数：\(d(v)=n-1\)<br>- \(\Delta=n-1\)<br>- 实际着色数：<br>\[<br>\chi(K_n)=n=\Delta+1<br>\]<br><br>👉 上界是<strong>紧的</strong>。<br><br>---<br><br>### 例 2：环图 \(C_6\)<br><br>- \(\Delta=2\)<br>- 实际着色数：<br>\[<br>\chi(C_6)=2 &lt; \Delta+1=3<br>\]<br><br>👉 上界<strong>不是紧的</strong>。<br><br>---<br><br>## 5. 与 Brooks 定理的关系（进阶但常考）<br><br>你提到的结论其实是：<br><br>&gt; <strong>“任何图都可以用 \(\Delta+1\) 种颜色着色”</strong><br><br>而<strong>Brooks 定理</strong>给出的是<strong>更强的结论</strong>：<br><br>&gt; 若连通图 \(G\) 既不是完全图 \(K_{\Delta+1}\)，也不是奇环，则  <br>&gt; \[<br>&gt; \chi(G)\le \Delta<br>&gt; \]<br><br>也就是说：<br><br>- <strong>只有两类图</strong>需要 \(\Delta+1\) 种颜色：<br>  1. 完全图  <br>  2. 奇数长度环<br><br>---<br><br>## 6. 考试/作业中如何“标准理解和表述”<br><br>如果你是在<strong>图论 / 运筹学 / 算法设计</strong>语境中，可以这样理解并作答：<br><br>&gt; 每个顶点的度数不超过 \(\Delta\)，在贪心着色过程中，一个顶点至多与 \(\Delta\) 个已着色邻接点相邻，因此最多排除 \(\Delta\) 种颜色。只要提供 \(\Delta+1\) 种颜色，就一定存在一种合法颜色可选，从而得到 \(\chi(G)\le \Delta+1\)。<br><br>---<br><br>## 7. 和你之前学的内容的连接<br><br>你前面问过：<br>- 图着色的整数规划模型<br>- 贪心算法<br>- 最大度数的作用<br><br>这个定理正好是：<br>- <strong>贪心着色的理论保证</strong><br>- <strong>启发式算法的最坏情况上界</strong><br>- <strong>ILP 模型中颜色数 \(K\) 的一个合理上界</strong><br><br>---<br><br>如果你愿意，我可以：<br>- 给你一个<strong>一页纸“考试级证明”版本</strong><br>- 或帮你区分「\(\Delta\)、\(\chi(G)\)、\(\omega(G)\)（团数）」之间的关系</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2025/12/28 12:01:28</span>
+                </div>
+                <div class="message-content">"""<br>物资储存问题。有的化学物品不能放在一个存储室，问至少要多少个存储室。用vi表示n种化学品，vi与vj相邻，当且仅当两化学品不相容。然后就转化为染色问题。<br>"""<br>帮我给个实际题目的例子，并给出解法</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2025/12/28 12:01:28</span>
+                </div>
+                <div class="message-content">下面我给你一个<strong>完整、可落笔写答案的“实际题目 + 建模 + 解法”示例</strong>，完全对应你给出的文字描述，适合出现在<strong>运筹学 / 图论 / 建模类考试或作业</strong>中。<br><br>---<br><br>## 一、实际题目示例（问题背景）<br><br>某实验室需要存储 <strong>6 种化学品</strong>  <br>\[<br>V=\{A,B,C,D,E,F\}<br>\]<br><br>由于安全原因，部分化学品<strong>不能存放在同一个存储室</strong>。已知不相容关系如下：<br><br>- A 不能与 B、C 同室<br>- B 不能与 C、D 同室<br>- C 不能与 D、E 同室<br>- D 不能与 E、F 同室<br>- E 不能与 F 同室<br><br>问：<strong>至少需要多少个存储室，才能安全存放所有化学品？</strong><br><br>---<br><br>## 二、图论建模（转化为着色问题）<br><br>### 1. 构造冲突图<br><br>- 顶点：每种化学品一个顶点  <br>  \[<br>  V=\{A,B,C,D,E,F\}<br>  \]<br><br>- 边：两种化学品不相容，则连一条边<br><br>边集：<br>\[<br>E=\{(A,B),(A,C),(B,C),(B,D),(C,D),(C,E),(D,E),(D,F),(E,F)\}<br>\]<br><br>这是一个<strong>无向简单图</strong>。<br><br>---<br><br>### 2. 问题转化<br><br>- <strong>每个存储室 ↔ 一种颜色</strong><br>- <strong>相邻顶点不能同色 ↔ 不相容化学品不能同室</strong><br>- <strong>最少存储室数 ↔ 图的最小着色数 \(\chi(G)\)</strong><br><br>---<br><br>## 三、求解方法一：图论 + 贪心着色（直观解法）<br><br>### 1. 计算最大度数<br><br>各顶点度数：<br><br>- \(d(A)=2\)<br>- \(d(B)=3\)<br>- \(d(C)=4\)<br>- \(d(D)=4\)<br>- \(d(E)=3\)<br>- \(d(F)=2\)<br><br>\[<br>\Delta=4<br>\]<br><br>由定理：<br>\[<br>\chi(G)\le \Delta+1=5<br>\]<br><br>这是<strong>上界</strong>。<br><br>---<br><br>### 2. 实际着色（构造解）<br><br>按顺序着色（例如：C, D, B, E, A, F）：<br><br>| 化学品 | 相邻已着色 | 颜色 |<br>|------|------------|------|<br>| C | — | 1 |<br>| D | C | 2 |<br>| B | C,D | 3 |<br>| E | C,D | 3 |<br>| A | B,C | 2 |<br>| F | D,E | 1 |<br><br>👉 实际只用了 <strong>3 种颜色</strong>。<br><br>---<br><br>### 3. 着色结果解释<br><br>- 存储室 1：C, F  <br>- 存储室 2：D, A  <br>- 存储室 3：B, E  <br><br>因此：<br><br>\[<br>\boxed{\chi(G)=3}<br>\]<br><br>即 <strong>至少需要 3 个存储室</strong>。<br><br>---<br><br>## 四、求解方法二：0–1 整数规划模型（标准建模解法）<br><br>（这是你前面问过的，非常适合写“建模 + 求解”）<br><br>### 1. 决策变量<br><br>设最多使用 \(K=4\) 个存储室（足够大即可）：<br><br>\[<br>x_{ik}=<br>\begin{cases}<br>1, &amp; \text{化学品 } i \text{ 存入存储室 } k \\<br>0, &amp; \text{否则}<br>\end{cases}<br>\]<br><br>\[<br>y_k=<br>\begin{cases}<br>1, &amp; \text{存储室 } k \text{ 被使用} \\<br>0, &amp; \text{否则}<br>\end{cases}<br>\]<br><br>---<br><br>### 2. 约束条件<br><br>1. <strong>每种化学品必须放在一个存储室</strong><br>\[<br>\sum_{k=1}^K x_{ik}=1,\quad \forall i<br>\]<br><br>2. <strong>不相容化学品不能同室</strong><br>\[<br>x_{ik}+x_{jk}\le 1,\quad \forall (i,j)\in E,\ \forall k<br>\]<br><br>3. <strong>存储室启用约束</strong><br>\[<br>x_{ik}\le y_k,\quad \forall i,k<br>\]<br><br>4. <strong>变量取值</strong><br>\[<br>x_{ik},y_k\in\{0,1\}<br>\]<br><br>---<br><br>### 3. 目标函数<br><br>\[<br>\min \sum_{k=1}^K y_k<br>\]<br><br>---<br><br>### 4. 求解结果<br><br>用整数规划求解器可得：<br><br>\[<br>\sum y_k = 3<br>\]<br><br>即最少需要 <strong>3 个存储室</strong>。<br><br>---<br><br>## 五、为什么这个例子“很标准”<br><br>这个例子完整体现了：<br><br>1. <strong>实际问题 → 冲突关系</strong><br>2. <strong>冲突关系 → 无向图</strong><br>3. <strong>无向图 → 顶点着色</strong><br>4. <strong>着色数 → 最少资源数</strong><br><br>是：<br>- 运筹学考试<br>- 图论建模<br>- 安全/排班/资源隔离问题<br><br>中<strong>最典型的着色应用模板</strong>。<br><br>---<br><br>## 六、你写作业/考试时可以直接用的总结句<br><br>&gt; 将化学品视为顶点，不相容关系视为边，则问题转化为求图的最小着色数。每一种颜色对应一个存储室，相邻顶点不同色保证了不相容化学品不被放在同一存储室中。<br><br>如果你需要，我可以再给你一个：<br>- <strong>更贴近真实安全规范的数据版本</strong><br>- 或一个 <strong>“只用 Δ+1 上界直接估计”的简化解法版本</strong></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2025/12/28 14:36:15</span>
+                </div>
+                <div class="message-content">我看课本上“存储室启用约束”是设y为颜色总数（存储桶数），然后y&gt;=Σx</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2025/12/28 14:36:17</span>
+                </div>
+                <div class="message-content">你这个疑问<strong>非常关键，而且你对课本的理解方向是对的</strong>。这里确实存在<strong>两种不同但等价的建模方式</strong>，课本用的是<strong>更简化、偏教学型的写法</strong>。我按“为什么能这么写—它和常见模型的关系—什么时候这样写是合理的”给你系统解释。<br><br>---<br><br>## 一、你看到的课本写法是什么<br><br>课本中通常写成类似：<br><br>- 设  <br>  \[<br>  x_{ik} =<br>  \begin{cases}<br>  1, &amp; \text{顶点 } i \text{ 使用颜色 } k \\<br>  0, &amp; \text{否则}<br>  \end{cases}<br>  \]<br><br>- 设  <br>  \[<br>  y = \text{使用的颜色总数（存储室数）}<br>  \]<br><br>并给出约束（你说的）：<br><br>\[<br>\boxed{y \ge \sum_{k=1}^K x_{ik},\quad \forall i}<br>\]<br><br>或者在有些书里写成：<br><br>\[<br>\boxed{y \ge \sum_{k=1}^K x_{ik}}<br>\]<br><br>（不同教材写法略有差异）<br><br>---<br><br>## 二、这个约束“为什么看起来怪”<br><br>如果你用<strong>严格的着色模型思维</strong>来看，会觉得：<br><br>- \(\sum_k x_{ik} = 1\)，因为每个顶点只能用一种颜色  <br>- 那么  <br>  \[<br>  y \ge 1<br>  \]<br>  好像根本<strong>没起到限制作用</strong><br><br>👉 你的直觉是<strong>完全正确的</strong>：  <br><strong>这个约束并不是在逐个“启用颜色”，而是在“统计最大使用颜色编号”</strong>。<br><br>---<br><br>## 三、关键差别：颜色是“编号的”，不是“是否启用的”<br><br>课本模型默认了一个<strong>隐含前提</strong>：<br><br>&gt; 颜色是<strong>有序的</strong>，编号为  <br>&gt; \[<br>&gt; 1,2,\dots,y<br>&gt; \]<br><br>也就是说：<br><br>- 如果使用了颜色 5<br>- 那么颜色 1–4 一定“存在”<br>- 不允许“跳号”<br><br>这是<strong>教学中非常常见的假设</strong>。<br><br>---<br><br>## 四、课本模型的真实含义（正确理解方式）<br><br>课本真正想表达的是这个模型：<br><br>### 1. 决策变量<br><br>\[<br>x_{ik}=<br>\begin{cases}<br>1, &amp; \text{顶点 } i \text{ 用颜色 } k \\<br>0, &amp; \text{否则}<br>\end{cases}<br>\]<br><br>\[<br>y = \max\{k \mid \exists i,\ x_{ik}=1\}<br>\]<br><br>但这个“max”是非线性的，于是用线性约束逼近：<br><br>---<br><br>### 2. 正确的等价线性约束（常见教材写法）<br><br>\[<br>\boxed{k\cdot x_{ik} \le y,\quad \forall i,k}<br>\]<br><br>或者简化写成：<br><br>\[<br>\boxed{y \ge kx_{ik},\quad \forall i,k}<br>\]<br><br>这才是<strong>逻辑正确、数学严谨的版本</strong>。<br><br>---<br><br>### 3. 为什么你看到的是 \(y \ge \sum x\)<br><br>在很多入门教材里，会进一步<strong>粗略简化</strong>为：<br><br>\[<br>y \ge \sum_{k=1}^K x_{ik},\quad \forall i<br>\]<br><br>原因是：<br><br>- 每个顶点只会选一个颜色<br>- 颜色编号连续<br>- 最终目标是最小化 \(y\)<br><br>👉 在这种教学语境下，模型“能用、能算、概念清楚”，但<strong>不严谨</strong>。<br><br>---<br><br>## 五、和你之前见到的 \(y_k\) 启用变量模型的关系<br><br>### 你熟悉的标准严谨模型<br><br>\[<br>x_{ik} \le y_k<br>\]<br><br>\[<br>\min \sum_k y_k<br>\]<br><br>这是：<br>- <strong>完全严谨</strong><br>- <strong>工业级建模</strong><br>- 求解器友好<br><br>---<br><br>### 课本模型<br><br>\[<br>\min y<br>\]<br><br>\[<br>y \ge kx_{ik}<br>\]<br><br>这是：<br>- <strong>教学型</strong><br>- 利用“颜色编号有序”的假设<br>- 变量更少<br><br>---<br><br>### 二者关系一句话总结<br><br>&gt; 课本模型是把所有 \(y_k\) 压缩成了一个变量 \(y\)，并通过颜色编号顺序隐含地表示“是否启用”。<br><br>---<br><br>## 六、什么时候该用哪一种<br><br>### 考试 / 教材推导<br>✔ 用课本的 \(y\) 模型  <br>✔ 表达清楚“y 表示使用颜色总数”<br><br>---<br><br>### 实际求解 / 写论文 / 编程<br>✔ 用 \(y_k\) 启用变量  <br>✔ 模型更清晰、可扩展<br><br>---<br><br>## 七、你可以在答题中这样“解释一句”<br><br>如果老师比较严谨，你可以加一句：<br><br>&gt; 由于颜色编号按顺序使用，变量 \(y\) 表示所使用的最大颜色编号，因此通过约束 \(y \ge kx_{ik}\) 保证若某顶点使用第 \(k\) 种颜色，则总颜色数不少于 \(k\)。<br><br>这句话<strong>非常加分</strong>。<br><br>---<br><br>如果你愿意，我可以：<br>- 帮你把<strong>课本模型 ↔ 标准 ILP 模型</strong>一一对应写成对照表  <br>- 或直接帮你整理一份 <strong>“图着色建模常见写法总结页”</strong></div>
+            </div></div></div></body></html>

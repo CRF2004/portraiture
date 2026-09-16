@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图表重叠调整建议</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>图表重叠调整建议</h1>
+            <div class="metadata">ID: 6a13a6dd-cd30-83ec-a3b8-3ba866860e25 | 2026/5/25 09:34:37</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:34:34</span>
+                </div>
+                <div class="message-content">tab:cross_architecture_ass（Table VI）和新的 fig_ass_heatmap（Fig 4）我感觉重叠了太多：<br><br>  - 两者都是 5疾病 × 3架构，展示 CODE 和 PTB-XL 的 ASS 值<br>  - Table VI 多了：PSS 列、算子上标（L/L*）、bootstrap CI 文字<br><br><br>我应该怎么调整</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:35:16</span>
+                </div>
+                <div class="message-content">你这个判断是对的。<strong>Table VI 和 Fig. 4 现在承担了同一个核心任务：展示 15 个 model–disease pair 的 CODE/PTB-XL ASS 和最终 tier</strong>。当前文中 Table VI 已经是 “每个 cell 报告 ASS（CODE/PTB-XL）和 evidence tier”，Fig. 4 又是 “每个 cell 显示 ASS，背景色编码 tier”，所以确实重复。fileciteturn2file3<br><br>我建议这样改：<strong>主文保留 Fig. 4 作为主结果图；Table VI 改成“完整数值审计表”放 Supplementary，或在主文中大幅压缩成 tier-decision table。</strong><br><br>### 最推荐方案：Fig. 4 主文，Table VI 进补充材料<br><br>Fig. 4 的作用改成：<strong>一眼看出结果格局</strong>。<br><br>也就是让读者马上看到三件事：<br><br>1. CRBBB/CLBBB 全架构、双数据集稳定支持；<br>2. 1AVB/AFIB 全部不支持；<br>3. SBRAD 架构依赖，ResNet 是 EL，其他不是。<br><br>但 Fig. 4 里不要再塞太多数字。可以保留 ASS 数值，但不要再放 CI、PSS、L/L* 上标；或者更干净一点，<strong>Fig. 4 只显示 tier 颜色 + ASS 正负/大小，不显示完整精确数值</strong>。完整 ASS、PSS、CI、bootstrap probability、operator note 都交给 Supplementary Table。<br><br>Table VI 如果进 Supplementary，可以改名为：<br><br>&gt; <strong>Supplementary Table Sx. Full cross-architecture audit statistics under the primary operator.</strong><br><br>列可以改成 15 行展开式，而不是 5×3 矩阵：<br><br>| Disease | Evidence | Architecture | CODE ASS [95% CI] | CODE PSS | PTB-XL ASS [95% CI] | PTB-XL PSS | CDDC | Tier | Operator |<br>|---|---|---|---|---|---|---|---|---|---|<br><br>这样它和 Fig. 4 的功能就不一样了：  <br><strong>Fig. 4 = pattern summary；Table Sx = reproducibility/statistical record。</strong><br><br>### 如果你必须保留 Table VI 在主文<br><br>那就反过来处理：<strong>Table VI 保留完整数值，Fig. 4 去数值化。</strong><br><br>Fig. 4 可以只做 evidence-tier map：<br><br>- 颜色表示 PS / EL / NS；<br>- cell 内只写 <code>PS</code>, <code>EL</code>, <code>NS</code>，或者写 <code>+/+</code>, <code>+/0</code>, <code>-/-</code> 表示 CODE/PTB-XL 方向；<br>- 不写 ASS 精确值；<br>- caption 说明完整 ASS/PSS/CI 见 Table VI。<br><br>这样 Fig. 4 的作用就不是重复表格，而是帮助读者“扫一眼看结论”。<br><br>### 我不建议的做法<br><br>不要让 Fig. 4 和 Table VI 都同时包含：<br><br>- CODE ASS；<br>- PTB-XL ASS；<br>- 5 疾病 × 3 架构；<br>- final tier；<br>- operator 标记。<br><br>这会让审稿人觉得你在用两个版面讲同一件事，而且 Results 已经明确写了最终结论：6/15 Pathway-supported、1/15 Evidence-limited、8/15 Not supported。fileciteturn2file0<br><br>### 我会怎么具体改<br><br>主文保留：<br><br><strong>Fig. 4. Evidence-tier heatmap across 15 model–disease audits.</strong>  <br>显示 tier 和 ASS 方向/强度，突出整体格局。<br><br>主文 Table VI 改成一个更小的 summary table：<br><br>| Disease / evidence | ResNet | SE-ResNet | Transformer | Main interpretation |<br>|---|---|---|---|---|<br>| 1AVB / PR timing | NS | NS | NS | Matched QRS control dominates |<br>| CRBBB / QRS morphology | PS | PS | PS | Stable across architectures and datasets |<br>| CLBBB / QRS morphology | PS | PS | PS | Stable across architectures and datasets |<br>| SBRAD / rate | EL | NS | NS | Architecture-dependent |<br>| AFIB / atrial activity | NS | NS | NS | Zero-masking positive was operator artifact |<br><br>然后在 caption 或正文写：<br><br>&gt; Full ASS, PSS, bootstrap confidence intervals, and operator annotations are reported in Supplementary Table Sx.<br><br>这样主文的逻辑会更干净：  <br><strong>Fig. 4 给视觉总览，summary table 给最终判定，supplementary table 给完整统计细节。</strong></div>
+            </div></div></div></body></html>

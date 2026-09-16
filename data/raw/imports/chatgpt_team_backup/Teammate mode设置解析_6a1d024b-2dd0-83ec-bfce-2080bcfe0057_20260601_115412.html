@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teammate mode设置解析</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Teammate mode设置解析</h1>
+            <div class="metadata">ID: 6a1d024b-2dd0-83ec-bfce-2080bcfe0057 | 2026/6/1 11:54:12</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/6/1 11:54:08</span>
+                </div>
+                <div class="message-content">claude code设置里面有个 Teammate mode 是什么意思？它的几个可选值代表什么设置？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/6/1 11:54:12</span>
+                </div>
+                <div class="message-content">我会先核对 Claude Code 目前官方文档里的设置说明，再解释这个选项本身和每个可选值的实际含义。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/6/1 11:54:19</span>
+                </div>
+                <div class="message-content"><code>Teammate mode</code> 不是“协作权限”或“模型聪明程度”的设置，而是 <strong>Claude Code 的 Agent Teams 里，多个 teammate/队友会话在终端里怎么显示</strong>。Agent Teams 是一种实验功能：一个 Claude Code 会话当 team lead，其他独立 Claude Code 实例当 teammates，各自有独立上下文窗口，可以通过任务列表和消息协作。citeturn300223view0<br><br>几个可选值一般是：<br><br>| 值 | 含义 | 适合场景 |<br>|---|---|---|<br>| <code>auto</code> | 自动选择显示方式。官方说明是：能用 split panes 时用分屏，否则用 <code>in-process</code>。CLI 里它是默认值。citeturn470271view1turn470271view2 | 不想折腾，推荐默认用这个 |<br>| <code>in-process</code> | 所有 teammates 都在你当前主终端里运行。用 <code>Shift+Down</code> 在 lead 和不同 teammate 之间切换，并直接给某个 teammate 发消息；不需要额外安装，任何终端基本都能用。citeturn300223view0 | 最稳、最省事，VS Code 终端/普通终端优先用 |<br>| <code>tmux</code> | 使用分屏模式：每个 teammate 有自己的 pane，可以同时看多个 teammate 的输出，也可以点进某个 pane 直接交互。需要 <code>tmux</code>，或 iTerm2 配合相关 CLI/Python API。citeturn300223view0 | 你想实时观察多个 agent 并行工作，且熟悉 tmux/iTerm2 |<br><br>配置示例：<br><br><pre><code class="language-json">{
+  "teammateMode": "in-process"
+}</code></pre><br><br>也可以只对本次启动临时覆盖：<br><br><pre><code class="language-bash">claude --teammate-mode in-process</code></pre><br><br>官方也说明 <code>--teammate-mode</code> 会覆盖 <code>settings.json</code> 里的 <code>teammateMode</code>，但只影响当前这次 session。citeturn470271view2<br><br>我的建议：<strong>普通用户选 <code>auto</code> 或 <code>in-process</code> 就行</strong>。只有你明确想用分屏同时盯多个 Claude Code 队友，才选 <code>tmux</code>。另外 Agent Teams 会明显增加 token 使用量，因为每个 teammate 都是独立上下文窗口，队伍越大成本越高。citeturn470271view0</div>
+            </div></div></div></body></html>

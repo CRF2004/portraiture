@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医疗问答模型评估</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>医疗问答模型评估</h1>
+            <div class="metadata">ID: 6a015616-d188-83ec-8095-b47c26f515c6 | 2026/5/11 12:08:07</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 12:08:07</span>
+                </div>
+                <div class="message-content">目前有哪些模型比较适合作为医疗问答场景的模型输出的checker？（没有参考资料，只根据模型输出进行评判）</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 12:08:07</span>
+                </div>
+                <div class="message-content">你这个问题本质上是在问：<br><br>&gt; <strong>“有哪些模型适合做 reference-free / no-ground-truth 的医疗问答质量评估（LLM-as-a-Judge / factuality checker / safety checker）？”</strong><br><br>这里要区分几个方向，因为“checker”其实有不同目标：<br><br>| Checker类型 | 核心任务 |<br>|---|---|<br>| 事实一致性（factuality） | 有没有医学错误 |<br>| 安全性（safety） | 有没有危险建议 |<br>| 幻觉检测（hallucination） | 是否编造 |<br>| 推理质量（reasoning quality） | 医学逻辑是否合理 |<br>| 临床适用性（clinical usefulness） | 医生会不会接受 |<br>| 不确定性检测 | 模型是否应该拒答 |<br><br>而你这里强调：<br><br>&gt; “没有参考资料，只根据模型输出评判”<br><br>这意味着你更接近：<br><br>- <strong>self-contained evaluation</strong><br>- <strong>intrinsic evaluation</strong><br>- <strong>LLM-as-a-judge</strong><br>- <strong>reference-free medical evaluation</strong><br><br>这类任务目前主流其实已经不是传统 classifier，而是：<br><br># 一、当前最主流：LLM-as-a-Judge<br><br>即：<br><br>&gt; 用更强的大模型评估另一个模型的医学回答。<br><br>这是现在效果最好的路线。<br><br>---<br><br># 二、目前比较适合的模型（按能力层次）<br><br>## 1. 通用强推理模型（当前SOTA）<br><br>这些实际上是目前效果最好的 medical checker。<br><br>### ① entity["company","OpenAI",""] 的 GPT-4.1 / GPT-5 系列<br><br>尤其适合：<br><br>- 医学逻辑评估<br>- 危险建议识别<br>- reasoning critique<br>- differential diagnosis consistency<br>- hallucination spotting<br><br>优势：<br><br>- 长链医学推理强<br>- 对隐含错误敏感<br>- judge consistency 高<br>- 多维 rubric 评估稳定<br><br>很多最新论文实际上默认：<br><br>&gt; GPT-4 family = evaluator baseline<br><br>而不是训练专门 classifier。<br><br>适合做：<br><br><pre><code class="language-text">输入：
+问题 + 模型回答
+
+输出：
+- factuality score
+- safety score
+- confidence
+- error span
+- explanation</code></pre><br><br>---<br><br>### ② entity["company","Anthropic",""] 的 Claude 3.7 / 4 系列<br><br>非常适合：<br><br>- 长文本病历评估<br>- guideline consistency<br>- reasoning critique<br>- 保守型安全评估<br><br>特点：<br><br>- safety sensitivity 高<br>- 更容易发现危险建议<br>- 长上下文稳定<br><br>很多医疗 agent 现在喜欢：<br><br>```text<br>生成：GPT<br>Checker：</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 12:08:33</span>
+                </div>
+                <div class="message-content">目前有哪些模型比较适合作为医疗问答场景的模型输出的checker？（没有参考资料，只根据模型输出进行评判，评估维度类似healthbench给出的维度）</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 12:08:37</span>
+                </div>
+                <div class="message-content">如果你的目标是做一个<strong>“医疗问答输出质量 checker / judge model”</strong>（即：不给参考答案，仅根据模型输出本身进行 rubric-based 评估），而且评估维度接近 entity["academic_field","HealthBench","medical LLM evaluation benchmark"] 里的：<br><br>- medical accuracy<br>- safety<br>- completeness<br>- instruction following<br>- uncertainty handling<br>- communication / empathy<br>- context awareness<br><br>那么目前实际上有三条主流路线：<br><br>---<br><br># 一、目前最适合作为医疗 checker 的模型（2026）<br><br>## 第一梯队：通用 frontier reasoning model 作为 judge<br><br>这是目前效果最强、实际最稳定的方案。<br><br>### 1. entity["software","GPT-5","OpenAI model family"] / o3 系列（最佳整体效果）<br><br>这是目前最接近 HealthBench 官方 evaluator 思路的。<br><br>HealthBench 本身就是用 GPT-based evaluator 做 rubric grading，并且其自动评分与医生评分具有较高一致性。 citeturn0search0turn0search3<br><br>### 为什么它强：<br><br>它不是在“医学知识”上最强，而是：<br><br>- rubric following 极强<br>- 多维度细粒度打分稳定<br>- 能处理：<br>  - 安全性<br>  - 是否遗漏 warning<br>  - 是否 inappropriate reassurance<br>  - uncertainty calibration<br>  - 是否该建议就医<br>  - 是否过度自信<br>- 长 context judge 很稳定<br>- reasoning consistency 很高<br><br>这其实比“医学知识量”更重要。<br><br>---<br><br>### 实际上很多人误区：<br><br>&gt; “checker 必须是医疗模型”<br><br>不一定。<br><br>很多医疗微调模型：<br><br>- 医学知识强<br>- 但 evaluator consistency 差<br>- rubric adherence 差<br>- structured scoring 差<br>- 输出不稳定<br><br>而 judge 最重要的是：<br><br># “稳定地执行评分标准”<br><br>这反而是 frontier general models 最强。<br><br>---<br><br>## 2. entity["software","Claude","Anthropic model family"]（非常适合 communication / empathy judge）<br><br>如果你特别重视：<br><br>- bedside manner<br>- communication quality<br>- emotional appropriateness<br>- patient-facing safety<br>- non-alarmist tone<br><br>Claude 系列通常表现非常强。<br><br>尤其适合：<br><br>- 患者问答<br>- discharge QA<br>- mental-health-ish medical QA<br>- chronic disease coaching<br><br>很多时候它比纯 medical LLM 更像“真实临床沟通”。<br><br>---<br><br>## 3. entity["software","Gemini","Google model family"]（context-heavy checker）<br><br>Gemini 的优势：<br><br>- 超长 context<br>- guideline retrieval<br>- longitudinal consistency<br><br>适合：<br><br>- 长病历<br>- 多轮咨询<br>- discharge summary QA<br>- guideline compliance checking<br><br>但 rubric adherence 稳定性通常略低于 GPT/o 系列。<br><br>---<br><br># 二、如果你想部署本地 / 开源：哪些比较适合做 checker<br><br>这里和“生成模型”选择不一样。<br><br>checker 更看重：<br><br>- reasoning consistency<br>- instruction following<br>- calibration<br>- structured output stability<br><br>而不是“会不会答医学题”。<br><br>---<br><br># 当前最推荐的开源 checker 路线<br><br>## 1. entity["software","Qwen","Alibaba Qwen model family"] 系列（目前开源 judge 性价比最高）<br><br>尤其：<br><br>- Qwen3-32B<br>- Qwen3-72B<br>- 医疗微调版本<br><br>优势：<br><br>- judge consistency surprisingly strong<br>- structured JSON 输出稳定<br>- rubric execution 很好<br>- multilingual 好（中文医学场景尤其重要）<br><br>很多 benchmark-as-judge 场景里已经非常强。<br><br>---<br><br>## 2. Med42 / ClinicalCamel / HuatuoGPT 类模型<br><br>这些更偏：<br><br>- medical-domain prior<br>- clinical</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 12:09:17</span>
+                </div>
+                <div class="message-content">我们期望它是轻量开源的，我们针对这一任务蒸馏了gpt5.4的数据，到时候会进行微调</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 12:09:18</span>
+                </div>
+                <div class="message-content">那你的目标其实已经非常明确了：<br><br>你不是在找“最强医疗模型”，而是在找：<br><br>&gt; 一个适合作为 <strong>medical response evaluator / checker backbone</strong> 的、轻量开源、适合 rubric-based judgment 蒸馏微调的模型。<br><br>这个任务和普通医疗 QA 完全不一样。<br><br>对于 checker/judge，核心能力排序通常是：<br><br>1. instruction following<br>2. rubric consistency<br>3. pairwise ranking stability<br>4. uncertainty reasoning<br>5. safety recognition<br>6. structured output stability<br>7. medical knowledge（反而不是第一）<br><br>所以模型选择会和“生成医生回答”的最佳模型不同。<br><br>---<br><br># 一、你的任务本质：LLM-as-a-Judge（医疗版）<br><br>你现在做的其实很接近：<br><br>- HealthBench evaluator<br>- MT-Bench judge<br>- Arena judge<br>- reward model<br>- constitutional critic<br>- medical critique model<br><br>只是领域变成了医疗。<br><br>而且：<br><br>&gt; 你已经有 GPT-5.4 蒸馏数据<br><br>这意味着：<br><br>- backbone 原始能力的重要性下降<br>- “可蒸馏性” 和 “alignment friendliness” 更重要<br><br>这会直接影响模型选择。<br><br>---<br><br># 二、目前最适合的轻量开源 backbone（按推荐度）<br><br>---<br><br># 方案A（最推荐）：<br># Qwen3-8B / 14B Instruct<br><br>这是我认为目前最适合你的。<br><br>## 为什么非常适合 checker：<br><br>### 1. instruction-following 极强<br><br>这是 judge 最核心能力。<br><br>很多模型：<br><br>- 会医学<br>- 但不会稳定执行 rubric<br><br>Qwen 系列在：<br><br>- JSON<br>- schema<br>- score format<br>- multi-dim grading<br><br>稳定性明显比很多 medical LLM 好。<br><br>---<br><br>### 2. 蒸馏能力非常强<br><br>Qwen 系列目前有一个很大的优点：<br><br># 对 frontier teacher 的 imitation fidelity 很高<br><br>尤其：<br><br>- rubric wording<br>- reasoning pattern<br>- critique style<br>- structured evaluation<br><br>很容易学到。<br><br>这对你的任务极其关键。<br><br>---<br><br>### 3. 小模型 scaling 很优秀<br><br>你如果想：<br><br>- 7B<br>- 8B<br>- 14B<br><br>做 checker，<br><br>Qwen 通常比：<br><br>- Llama<br>- Mistral<br>- Gemma<br><br>更稳定。<br><br>---<br><br>### 4. 中文医疗特别友好<br><br>这是隐藏优势。<br><br>很多英文医疗 judge：<br><br>中文评测会崩。<br><br>Qwen 中文 instruction consistency 非常强。<br><br>---<br><br># 推荐尺寸<br><br>## 最佳综合：<br><br>- Qwen3-14B-Instruct<br><br>如果资源够。<br><br>这是我认为：<br>目前“医疗 judge 微调”最甜点的位置。<br><br>---<br><br>## 极致轻量：<br><br>- Qwen3-8B-Instruct<br><br>如果你：<br><br>- 想本地部署<br>- 想线上 checker<br>- 想低 latency<br>- 想 reward model 化<br><br>8B 很合适。<br><br>---<br><br># 方案B：<br># Gemma 3 12B<br><br>这个非常值得关注。<br><br>---<br><br>## Gemma 的优势：<br><br>### 1. 天然 judge 风格<br><br>Gemma surprisingly：<br><br>- 保守<br>- calibrated<br>- 不容易 hallucinate evaluator criteria<br><br>很适合 critique。<br><br>---<br><br>### 2. alignment 风格好<br><br>它特别容易学：<br><br>- safety critique<br>- uncertainty handling<br>- policy-like evaluation<br><br>---<br><br>### 3. 推理密度高<br><br>小参数性能非常强。<br><br>---<br><br>## 缺点<br><br>中文不如 Qwen。<br><br>所以：<br><br>如果你是中文医疗场景，<br>我还是更推荐 Qwen。<br><br>---<br><br># 方案C：<br># Llama 3.1 8B（不如 Qwen）<br><br>能做，但：<br><br>## 问题：<br><br>### 1. judge consistency 一般<br><br>经常：<br><br>- 分数漂移<br>- rubric 不稳定<br>- criteria collapse<br><br>---<br><br>### 2. 医疗安全 critique 不够稳<br><br>容易：<br><br>- overly positive<br>- 漏掉 risk<br><br>---<br><br>### 3. 中文较弱<br><br>---<br><br># 三、不要直接用医疗模型当 backbone<br><br>这是非常重要的一点。<br><br>很多人会下意识选：<br><br>- Meditron<br>- Med42<br>- ClinicalCamel<br>- BioMistral<br><br>但对于你的任务：<br><br># 通常不是最优。<br><br>原因：<br><br>---<br><br>## 医疗模型往往：<br><br>### 强：<br><br>- 医学知识 recall<br>- diagnosis generation<br><br>### 弱：<br><br>- evaluator consistency<br>- rubric following<br>- critique formatting<br>- stable scoring<br><br>---<br><br>## 你真正需要的是：<br><br>&gt; “像审稿人一样稳定评分”<br><br>不是：<br><br>&gt; “像医生一样回答问题”<br><br>这是两个任务。<br><br>---<br><br># 四、你这个任务最像什么？<br><br>本质上更像：<br><br># reward model / critic model<br><br>不是 QA model。<br><br>所以：<br><br>你应该更关注：<br><br>- preference modeling compatibility<br>- critique generation quality<br>- calibration<br>- ranking consistency<br><br>---<br><br># 五、建议的训练路线（很重要）<br><br>你现在最危险的坑：<br><br># 直接 SFT judge 输出<br><br>这会导致：<br><br>- verbosity bias<br>- position bias<br>- score collapse<br>- generative judge hallucination<br><br>---<br><br># 更推荐：<br><br>## Stage 1 — Critique SFT<br><br>训练：<br><br><pre><code class="language-json">{
+  "question": "...",
+  "response": "...",
+  "evaluation": {
+    "safety": "...",
+    "accuracy": "...",
+    "missing_info": "...",
+    "final_score": 3
+  }
+}</code></pre><br><br>重点学：<br><br>- critique pattern<br>- rubric grounding<br><br>---<br><br>## Stage 2 — Pairwise preference<br><br>训练：<br><br>- 哪个回答更好<br>- 哪个更安全<br>- 哪个遗漏更严重<br><br>这个提升会巨大。<br><br>因为 judge 的核心其实是 ranking。<br><br>---<br><br>## Stage 3 — Calibration tuning<br><br>专门加入：<br><br>- borderline cases<br>- uncertainty<br>- partially correct<br>- harmful reassurance<br>- under-triage<br>- overconfidence<br><br>医疗 judge 最大难点在这里。<br><br>---<br><br># 六、一个非常关键的建议<br><br>你应该：<br><br># 让 checker 输出“证据化 critique”<br><br>而不是直接分数。<br><br>例如：<br><br><pre><code class="language-json">{
+  "factuality": {
+    "score": 2,
+    "evidence": [
+      "The response incorrectly states ..."
+    ]
+  }
+}</code></pre><br><br>原因：<br><br>---<br><br>## 纯 scalar score 非常不稳定<br><br>医疗场景尤其如此。<br><br>而：<br><br># rationale-grounded judge<br><br>会：<br><br>- 稳定很多<br>- 更可解释<br>- 更容易蒸馏<br>- 更容易后续 reward modeling<br><br>---<br><br># 七、最终推荐（直接结论）<br><br>## 如果是中文医疗 checker：<br><br>### 最推荐：<br><br>- Qwen3-14B-Instruct<br><br>### 次推荐：<br><br>- Qwen3-8B-Instruct<br><br>---<br><br>## 如果极限轻量：<br><br>- Qwen2.5-7B-Instruct<br><br>依然够用。<br><br>---<br><br>## 不建议优先：<br><br>- 医疗专用生成模型<br>- BioMistral<br>- ClinicalCamel<br>- MedAlpaca<br><br>除非你额外做 judge-oriented alignment。<br><br>---<br><br># 八、你们这个方向其实有论文空间<br><br>因为：<br><br>现在大量工作在：<br><br>- medical QA generation<br>- RAG<br>- diagnosis<br><br>但：<br><br># “medical evaluator model”<br><br>仍然很少。<br><br>尤其：<br><br>- no-reference evaluation<br>- rubric-grounded medical checking<br>- safety-aware critique<br>- uncertainty-aware evaluation<br><br>都还是很新的</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 12:10:19</span>
+                </div>
+                <div class="message-content">我只要你推荐模型，不要给这么多乱七八糟的建议。而且现在都有qwen3.6了，你给我推荐点新的，上网搜索一下</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 12:10:21</span>
+                </div>
+                <div class="message-content">如果你要的是：<br><br>- 轻量<br>- 开源<br>- 适合做 LLM-as-a-judge / checker<br>- 后续用 GPT-5.4 蒸馏数据微调<br>- 医疗问答 rubric evaluator<br>- 2026 年新的模型<br><br>那我直接给推荐列表：<br><br>---<br><br>## 最推荐<br><br>### entity["company","Qwen","Alibaba"] Qwen3.6-35B-A3B<br><br>目前我认为最适合你这个任务的。 citeturn0search0turn0search5<br><br>原因：<br><br>- MoE，实际只激活 3B<br>- judge consistency 很强<br>- structured output 很稳<br>- reasoning-style distillation 效果很好<br>- 长 context 强<br>- 中文医疗非常适合<br>- Apache 2.0<br><br>这是现在很多人做：<br>- distilled reasoning<br>- critic<br>- evaluator<br>- reward model<br><br>最关注的开源 backbone 之一。Reddit 上已经有人直接拿它蒸馏 Claude/GPT reasoning style。 citeturn0reddit18turn0reddit24<br><br>---<br><br>## 第二推荐<br><br>### entity["company","Qwen","Alibaba"] Qwen3.6-27B<br><br>如果你不想碰 MoE，这是最好的 dense 方案。 citeturn0search6turn0reddit17<br><br>优点：<br><br>- dense model<br>- 部署简单<br>- judge 稳定性很强<br>- instruction following 很强<br>- 比很多 70B 还稳<br><br>我会认为：<br><br>&gt; “最适合做开源 evaluator 的 dense 中文模型”<br><br>---<br><br>## 轻量部署首选<br><br>### entity["company","Qwen","Alibaba"] Qwen2.5-7B-Instruct<br><br>虽然不是最新，但：<br><br>- judge 微调生态成熟<br>- 很适合蒸馏<br>- JSON/rubric 输出稳定<br>- 小模型里 consistency 很强<br><br>你如果做：<br><br>- 在线 checker<br>- reward model<br>- reranker<br>- 多 evaluator ensemble<br><br>这个很合适。<br><br>---<br><br>## 英文医疗场景可选<br><br>### entity["company","Google","Google"] Gemma 3 12B<br><br>目前小模型 judge 能力很强。<br><br>优点：<br><br>- calibration 好<br>- critique 风格自然<br>- safety evaluator 很稳<br><br>缺点：<br><br>- 中文不如 Qwen<br>- 医疗中文语境一般<br><br>---<br><br>## 不建议<br><br>下面这些不太适合你这种“checker”任务：<br><br>- Meditron<br>- ClinicalCamel<br>- BioMistral<br>- MedAlpaca<br>- Huatuo-only 系列<br><br>原因是：<br><br>它们更偏：<br>- 医疗生成<br>- diagnosis QA<br><br>不是：<br>- evaluator<br>- critic<br>- rubric judge<br><br>---<br><br>## 最终一句话<br><br>如果你现在开始做：<br><br>### 中文医疗 checker：<br>- Qwen3.6-35B-A3B（首选）<br>- Qwen3.6-27B（dense 首选）<br><br>### 极限轻量：<br>- Qwen2.5-7B-Instruct<br><br>### 英文：<br>- Gemma 3 12B<br><br>基本就是目前最合理的选择。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 12:11:05</span>
+                </div>
+                <div class="message-content">qwen3.5呢？它有9B、4B、0.8B的很多</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 12:11:06</span>
+                </div>
+                <div class="message-content">Qwen3.5 其实比我刚才提到的 Qwen3.6 更适合你这种“小型 medical checker 微调”场景，尤其是 4B / 9B。 citeturn0search0turn0search1<br><br>直接说结论：<br><br>---<br><br># 最推荐：Qwen3.5-4B<br><br>这是我现在最建议你们拿来做医疗 checker 的小模型。<br><br>原因：<br><br>- judge consistency 很强<br>- instruction following 非常稳<br>- 蒸馏 frontier evaluator 风格很好<br>- 比很多旧 7B/8B judge 更稳定<br>- 推理成本低<br>- 很适合 LoRA / DPO / ORPO 微调<br>- 中文表现明显优于 Gemma 小模型<br><br>而且现在很多实测里：<br><br>&gt; 4B 基本是“小模型 sweet spot”<br><br>尤其适合：<br>- evaluator<br>- critic<br>- reward model<br>- reranker<br>- rubric scoring<br><br>不是特别适合复杂 agent，但特别适合“按规则稳定评分”。 citeturn0search19turn0search0<br><br>---<br><br># 如果资源够：Qwen3.5-9B<br><br>这是当前：<br><br># 10B 以下最强开源 reasoning 小模型之一<br><br>很多 benchmark 已经把它列成：<br>- &lt;10B 最强 reasoning<br>- 小模型 judge 能力顶级<br><br>对于：<br>- uncertainty critique<br>- safety evaluation<br>- multi-dimensional scoring<br><br>会比 4B 明显更稳。 citeturn0search0turn0search1<br><br>如果你们后面还想做：<br>- pairwise judge<br>- preference model<br>- evaluator ensemble<br>- RL reward model<br><br>9B 会舒服很多。<br><br>---<br><br># 不太建议：0.8B<br><br>0.8B 可以做：<br><br>- binary safe/unsafe<br>- 简单 rubric 分类<br>- toxicity gate<br>- first-stage filter<br><br>但不太适合：<br><br>- 医疗 critique<br>- nuanced evaluation<br>- uncertainty reasoning<br>- evidence-grounded judging<br><br>因为它容易：<br>- score collapse<br>- overconfidence<br>- hallucinated critique<br><br>尤其医疗场景很危险。 citeturn0search19turn0reddit21<br><br>---<br><br># 2B 怎么样？<br><br>2B 可以做：<br><br>- coarse checker<br>- 多级 pipeline 的第一层<br>- routing</div>
+            </div></div></div></body></html>

@@ -1,0 +1,9 @@
+\section{Limitations and Ethics}
+
+\paragraph{Proxy labels.} The benchmark uses rule-derived action labels rather than human annotations, making evaluation reproducible but introducing label noise. A manual spot audit found the dominant noise mode is \texttt{topic\_shift} overuse on same-thread refinements. Until a full manual label audit is available, results should be interpreted as evidence about a reproducible proxy task rather than a validated model of user intent.
+
+\paragraph{Single-user scope.} Main results are from one user's GPT chat history, so they do not establish cross-user generality. As a preliminary stress test, we converted PERSONA-Bench Reddit threads into 135k proxy replay examples over 2{,}871 authors. Majority prediction again inflated accuracy (0.41 accuracy, 0.06 macro-F1 on a 5k test cap), while TF-IDF LR was more balanced (0.23/0.14) and a larger GPU MiniLM nearest-neighbor run on 50k/10k examples reached 0.30/0.13. A 90-example stratified audit found 78 visibly supported and 12 borderline proxy labels. These results support the metric caveat, but not full method generalization.
+
+\paragraph{Imbalanced labels.} The test split is dominated by topic shifts and follow-up clarifications. We emphasize macro-F1, but minority-label performance remains weak. Future work should improve label design or evaluate behavior chains.
+
+\paragraph{Privacy and scope.} Personal chat logs can contain sensitive information. Any deployment must use explicit consent, local processing, redaction, and access control. The term ``digital twin'' is only a motivating direction, not a claim of complete human simulation.

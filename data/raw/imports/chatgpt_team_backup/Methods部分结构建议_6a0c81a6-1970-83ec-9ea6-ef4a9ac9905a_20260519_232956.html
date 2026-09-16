@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods部分结构建议</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Methods部分结构建议</h1>
+            <div class="metadata">ID: 6a0c81a6-1970-83ec-9ea6-ef4a9ac9905a | 2026/5/19 23:29:56</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/19 23:29:53</span>
+                </div>
+                <div class="message-content">你觉得methods部分这样组织结构可以吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/19 23:29:56</span>
+                </div>
+                <div class="message-content">整体看，<strong>Methods 现在的组织结构比之前清楚很多，主线是成立的</strong>：先讲 audit 总体框架，再讲数据集、疾病面板、扰动设计、指标分层、模型、统计分析。这个顺序基本符合读者理解路径：<strong>你要审计什么 → 用什么数据 → 审计哪些疾病/通路 → 怎么扰动 → 怎么判定 → 用哪些模型验证 → 怎么统计</strong>。fileciteturn0file0<br><br>但我觉得还有几个结构性问题，会影响审稿人阅读。<br><br>## 1. 最大问题：Methods 里“主方法”和“实验实现细节”有点混在一起<br><br>现在 III-A 到 III-E 是方法核心，III-F、III-G 是实验设置和统计分析。这个本身没问题，但 III-D “Perturbation Design” 里面承担了太多任务：<br><br>它同时讲了：<br><br>- perturbation taxonomy；<br>- operator 选择；<br>- local window；<br>- global transform；<br>- SBRAD hybrid；<br>- AFIB dual-class；<br>- sample size；<br>- bootstrap。<br><br>这会让读者觉得 Methods 的重心有点散。尤其是 SBRAD 和 AFIB 的特殊处理比较多，容易打断“统一 audit protocol”的感觉。<br><br>我建议把 III-D 拆得更有层次：<br><br><strong>D. Perturbation Design and Operators</strong>  <br>先只讲共性：local window、global transform、linear interpolation、matched controls、operator selection rationale。<br><br>然后新增一个小节：<br><br><strong>E. Disease-Specific Perturbation Instantiation</strong>  <br>专门讲 1AVB / BBB / SBRAD / AFIB 各自怎么落地。这样 Table II 也更自然。<br><br>现在的 III-E “Audit Metrics and Evidence Tiers” 可以顺延为 III-F。<br><br>## 2. III-B 数据集部分写得扎实，但“label circularity risk”放在这里有点突兀<br><br>你在 III-B 里写 CODE-15% 的自动标签可能导致模型学习自动标注逻辑，而 PTB-XL cardiologist-validated 作为 external credibility buffer。这个观点很重要，但放在 dataset description 里面会让 Methods 像 Discussion。<br><br>更好的处理方式是：<br><br>在 III-B 保留一句简洁说明：<br><br>&gt; Because CODE-15% labels are automatically derived, all internal findings are interpreted as model behavior relative to the source label system; PTB-XL fold 10 provides the cardiologist-validated external check.<br><br>然后把现在那段比较详细的 “risk varies by disease...” 移到 Discussion 或 Limitations。否则 Methods 会显得解释性太强，不够“程序化”。<br><br>## 3. III-C 疾病面板很好，但应该更突出“预注册/预定义”的地位<br><br>III-C 现在是合理的，但我建议把它写得更像一个<strong>audit specification</strong>，而不是普通疾病介绍。<br><br>也就是说，你要强调：<br><br>&gt; The disease panel defines the audit hypotheses before model evaluation.<br><br>因为你论文的核心不是“我们选了五个病”，而是“我们把医学知识转化为可检验的 pathway hypothesis”。<br><br>可以把 III-C 开头改成更硬一点：<br><br>&gt; The audit panel functions as the protocol’s hypothesis layer. For each disease, we define before perturbation analysis: the expected positive pathway, matched controls, and ambiguous alternatives that should not be treated as confirmatory evidence.<br><br>这样审稿人会更容易接受你的 matched-control audit 是“方法”，不是事后解释。<br><br>## 4. Evidence tiers 放得对，但规则还可以更早“预告”<br><br>现在 III-A 里面提到了三档：Pathway-supported / Evidence-limited / Not supported，III-E 再正式定义。这个是可以的。<br><br>不过我建议在 III-A 只保留框架，不要写太多 tier 细节；III-E 里集中定义。否则读者会感觉同一件事被说了两遍。<br><br>特别是 III-A 的四阶段概述已经很长，可以压缩一点。Methods 的 Study Overview 应该像地图，不应该把后面的小节内容提前讲太满。<br><br>## 5. Statistical Analysis 放最后合理，但可以分成“audit statistics”和“classification statistics”<br><br>III-G 现在包含：<br><br>- patient-level bootstrap；<br>- model comparison；<br>- multiplicity control；<br>- feature-space validation。<br><br>这几类东西目标不同。建议至少在文字结构上分清楚：<br><br><strong>G. Statistical Analysis</strong><br><br>1. <strong>Uncertainty for pathway audit</strong>  <br>   patient-level bootstrap, ASS CI。<br><br>2. <strong>Classification-model comparison</strong>  <br>   DeLong, permutation tests, Holm correction。<br><br>3. <strong>Multiplicity control for external ASS tests</strong>  <br>   BH-FDR。<br><br>4. <strong>Feature-space validation</strong>  <br>   PTB-XL+ and PR baseline。<br><br>这样读者不会觉得统计方法堆在一起。<br><br>## 我建议的最终 Methods 大纲<br><br>我会改成这样：<br><br><strong>III. Methods</strong><br><br><strong>A. Study Design and Audit Workflow</strong>  <br>一句话讲核心问题：high AUROC ≠ pathway-specific evidence。然后四步流程，但压缩。<br><br><strong>B. Datasets and External Validation Setting</strong>  <br>CODE-15%、PTB-XL、split、preprocessing、frozen transfer。label circularity 简写。<br><br><strong>C. Disease-Centered Audit Specification</strong>  <br>五个疾病、expected pathway、matched controls、ambiguous pathway。Table I 放这里。<br><br><strong>D. Perturbation Operators and Intervention Classes</strong>  <br>linear interpolation 为什么是 primary；local window vs global transform；zero-masking 只作为 sensitivity/operator-disclosure。<br><br><strong>E. Disease-Specific Perturbation Protocols</strong>  <br>1AVB、CRBBB、CLBBB、SBRAD、AFIB 分别怎么扰动。Table II 放这里。sample size 也放这里。<br><br><strong>F. Audit Metrics and Evidence Tiers</strong>  <br>ASS、PSS、CDDC、KAS；三档 evidence tier。<br><br><strong>G. Models and Representation Levels</strong>  <br>XGBoost simple / Clinical-MVP / ResNet / SE-ResNet / Transformer。强调是 audit instantiation，不是模型创新。<br><br><strong>H. Statistical Analysis</strong>  <br>bootstrap、model comparison、BH-FDR、external feature-space validation。<br><br>## 总体判断<br><br><strong>可以，但还没到最顺。</strong>  <br>现在的结构已经能讲清楚方法，但最大的问题是：<strong>III-D 太重，III-B 有一点 discussion 化，III-G 有点统计方法堆叠。</strong><br><br>你这篇 Methods 最需要保护的是一个清晰主线：<br><br>&gt; We define disease-specific pathway hypotheses, perturb target and matched-control regions under a predefined operator, compute ASS, and test whether the pathway conclusion survives external transfer.<br><br>所有小节都应该服务这条线。现在已经接近了，再把“疾病特异实现”和“通用方法定义”拆开，Methods 会更像一篇方法论文，而不是一个复杂实验报告。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/19 23:30:33</span>
+                </div>
+                <div class="message-content">你觉得methods部分这样组织结构可以吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/19 23:30:35</span>
+                </div>
+                <div class="message-content">整体上，<strong>Methods 这样组织是可以的，而且主线很清楚</strong>：先讲 audit 框架，再讲数据集，再讲疾病面板、扰动设计、指标分层、模型和统计分析。这个顺序基本符合读者理解逻辑：<strong>为什么做 → 在什么数据上做 → 审什么疾病 → 怎么扰动 → 怎么判定证据 → 用什么模型 → 怎么统计</strong>。fileciteturn0file0<br><br>不过我建议你做几处结构性微调，让 Methods 更像一个“可复现协议”，而不是把概念、实验设计和解释逻辑混在一起。<br><br><strong>我觉得最该改的是 III-A。</strong>  <br>现在 Study Overview 里已经提前讲了四阶段流程、operator、ASS、CDDC、evidence tiers、external validation，信息密度很高。作为 overview 可以，但有点像把后面每节都浓缩讲了一遍。建议 III-A 保留“整体流程图式描述”，但减少指标和规则细节，把细节留给 III-D 和 III-E。这样读者不会在开头就被 ASS、CDDC、tier rule 压住。<br><br><strong>III-B 放得对，但可以更早强调 internal/external 的角色差异。</strong>  <br>CODE-15% 是训练和内部 audit，PTB-XL fold 10 是 external credibility set，这个逻辑很重要。你现在已经写了 label circularity risk，这一段很有价值，建议保留，但可以更明确地分成三个小段：Internal cohort、External cohort、Transfer/evaluation protocol。这样审稿人会更容易看到你不是简单做 dataset validation，而是在用外部数据验证 pathway conclusion。<br><br><strong>III-C 和 III-D 的边界可以再清一点。</strong>  <br>III-C 应该只负责回答：“为什么选这五个病？每个病对应什么临床 pathway 和 matched controls？”  <br>III-D 再回答：“这些 pathway/control 具体怎么 perturb？”  <br>现在 III-C 里有些 clinical anchoring 的内容已经开始解释 control 的合理性，没问题，但别太深入 operator 和 perturbation implementation，不然和 III-D 重叠。<br><br><strong>III-D 是 Methods 的核心，结构最好再更工程化一点。</strong>  <br>我建议改成：<br><br>1. Common perturbation setup  <br>   包括 R-peak detection、12-lead application、matched subset、bootstrap、exclusion rule。<br><br>2. Primary operator selection  <br>   线性插值为什么是 primary；zero-masking 为什么只做 sensitivity。<br><br>3. Local-window perturbations  <br>   1AVB、CRBBB、CLBBB、AFIB atrial window。<br><br>4. Global-transform perturbations  <br>   SBRAD rate normalization、AFIB RR regularization。<br><br>5. Operator-sensitivity analyses  <br>   放到最后，并明确“不用于 evidence tiering”。<br><br>这样比现在 “Perturbation Operator and Protocol → Class I → Class II” 更容易复现，也更能防止审稿人质疑 operator 是 post-hoc 选的。<br><br><strong>III-E 很关键，但现在标题里 “Audit Metrics and Evidence Tiers” 合理，内容略显重。</strong>  <br>建议把公式、CDDC、PSS、KAS 和 tier rules 分成更明显的小标题。尤其 evidence tier 的规则应该像 protocol checklist 一样清楚，因为这是你全文结论的“判案标准”。这里写得越机械、越预先定义，越有说服力。<br><br><strong>III-F 模型部分放在 perturbation 和 metric 后面是可以的。</strong>  <br>通常 Methods 会先讲 models 再讲 perturbation，但你的文章贡献是 audit protocol，不是 architecture。所以先讲 audit design，再讲 models as instantiations，是合理的。建议你在 III-F 开头明确一句：这些模型不是本文主要贡献，而是用于测试 protocol 的 representation/architecture ladder。你现在已经有这个意思，可以再压实。<br><br><strong>III-G 统计分析放最后也对。</strong>  <br>这里写得比较完整，patient-level bootstrap、DeLong、permutation、BH-FDR 都交代了。唯一建议是把“primary uncertainty quantification”和“secondary model comparison”区分得更强，避免审稿人觉得统计方法太多、主次不清。<br><br>我的总体判断：<strong>结构大方向没问题，但 Methods 现在偏“解释型 Methods”，可以改得更“协议型 Methods”。</strong> 也就是说，每节标题和段落都应尽量服务于复现：输入是什么、操作是什么、输出是什么、判定规则是什么。这样会更贴合你这篇文章的卖点——一个 matched-control pathway audit protocol，而不是单纯 ECG classification 实验。</div>
+            </div></div></div></body></html>

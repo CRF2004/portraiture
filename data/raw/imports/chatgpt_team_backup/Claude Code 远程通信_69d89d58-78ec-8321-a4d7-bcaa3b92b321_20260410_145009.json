@@ -1,0 +1,1142 @@
+{
+  "title": "Claude Code 远程通信",
+  "create_time": 1775803809.589033,
+  "update_time": 1775803984.258102,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "69d89d58-78ec-8321-a4d7-bcaa3b92b321",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://machina.directory/mcp/classfang-ssh-mcp-server",
+    "https://machina.directory/mcp/classfang-ssh-mcp-server?utm_source=chatgpt.com",
+    "https://mcpservers.org/servers/shaike1/mcp-server-ssh?utm_source=chatgpt.com",
+    "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+    "https://github.com/classfang/ssh-mcp-server/blob/main/README_CN.md",
+    "https://mcpservers.org/servers/shaike1/mcp-server-ssh",
+    "https://deb.nodesource.com/setup_20.x"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": null,
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "3ebd6b98-f7ff-484b-ae12-00abb7900f6b"
+      ]
+    },
+    "3ebd6b98-f7ff-484b-ae12-00abb7900f6b": {
+      "id": "3ebd6b98-f7ff-484b-ae12-00abb7900f6b",
+      "message": {
+        "id": "3ebd6b98-f7ff-484b-ae12-00abb7900f6b",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "5297263d-b757-4ebc-9ed9-2fbb5b623a32"
+      ]
+    },
+    "5297263d-b757-4ebc-9ed9-2fbb5b623a32": {
+      "id": "5297263d-b757-4ebc-9ed9-2fbb5b623a32",
+      "message": {
+        "id": "5297263d-b757-4ebc-9ed9-2fbb5b623a32",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "3ebd6b98-f7ff-484b-ae12-00abb7900f6b",
+      "children": [
+        "694199fa-3745-4e3e-8c57-4ebfedf1eef0"
+      ]
+    },
+    "694199fa-3745-4e3e-8c57-4ebfedf1eef0": {
+      "id": "694199fa-3745-4e3e-8c57-4ebfedf1eef0",
+      "message": {
+        "id": "694199fa-3745-4e3e-8c57-4ebfedf1eef0",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "5297263d-b757-4ebc-9ed9-2fbb5b623a32",
+      "children": [
+        "e077a128-6289-4983-ac5c-ba5243b3cc24"
+      ]
+    },
+    "e077a128-6289-4983-ac5c-ba5243b3cc24": {
+      "id": "e077a128-6289-4983-ac5c-ba5243b3cc24",
+      "message": {
+        "id": "e077a128-6289-4983-ac5c-ba5243b3cc24",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775803809.411606,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "d68ecff6-6153-47ed-a96b-839481dc9b48",
+          "message_source": null,
+          "turn_exchange_id": "e5998e33-0a50-41a9-a946-0e36dbe4a8b7",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "694199fa-3745-4e3e-8c57-4ebfedf1eef0",
+      "children": [
+        "f3ac1f29-762c-4d92-b1a9-431bc3aeab03"
+      ]
+    },
+    "f3ac1f29-762c-4d92-b1a9-431bc3aeab03": {
+      "id": "f3ac1f29-762c-4d92-b1a9-431bc3aeab03",
+      "message": {
+        "id": "f3ac1f29-762c-4d92-b1a9-431bc3aeab03",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775803806.326,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "目前有没有一些mcp或者skill，可以让claude code实现与远程服务器的连接（比如ssh之类的）？我想将本地的claude code与远程的claude code实现通信"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "d68ecff6-6153-47ed-a96b-839481dc9b48",
+          "message_source": null,
+          "turn_exchange_id": "e5998e33-0a50-41a9-a946-0e36dbe4a8b7",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e077a128-6289-4983-ac5c-ba5243b3cc24",
+      "children": [
+        "6fec1a3a-95c4-44b3-8aa8-18bf92497a43"
+      ]
+    },
+    "6fec1a3a-95c4-44b3-8aa8-18bf92497a43": {
+      "id": "6fec1a3a-95c4-44b3-8aa8-18bf92497a43",
+      "message": {
+        "id": "6fec1a3a-95c4-44b3-8aa8-18bf92497a43",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775803809.517625,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "d68ecff6-6153-47ed-a96b-839481dc9b48",
+          "message_type": "next",
+          "turn_exchange_id": "e5998e33-0a50-41a9-a946-0e36dbe4a8b7",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "f3ac1f29-762c-4d92-b1a9-431bc3aeab03",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f3ac1f29-762c-4d92-b1a9-431bc3aeab03",
+      "children": [
+        "41687303-5fcb-4cd5-9226-2c5aba3b4381"
+      ]
+    },
+    "41687303-5fcb-4cd5-9226-2c5aba3b4381": {
+      "id": "41687303-5fcb-4cd5-9226-2c5aba3b4381",
+      "message": {
+        "id": "41687303-5fcb-4cd5-9226-2c5aba3b4381",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775803809.51734,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "有，但要先把现实情况说清楚：**“Claude Code ↔ 远程 Claude Code 直接通信”目前没有官方标准能力**，但可以通过两类路径实现你要的效果：\n\n---\n\n# 1. 现成可用的 MCP / Skill 方向（SSH / Remote）\n\n## A. MCP SSH / Remote Shell 类（最直接）\n\n目前社区里比较常见的是这一类 MCP Server：\n\n### ① SSH MCP Server（最接近你需求）\n功能：\n- 建立 SSH 连接\n- 执行远程命令\n- 读写远程文件\n- 作为 tool 暴露给 Claude Code\n\n典型能力形态：\n- `ssh_exec(command)`\n- `ssh_read_file(path)`\n- `ssh_write_file(path)`\n- `ssh_list_dir(path)`\n\n👉 适合：把远程服务器当“工具执行环境”\n\n---\n\n### ② Remote FS MCP（文件系统映射）\n类似：\n- 把远程目录 mount 成 tool\n- Claude Code 直接像操作本地一样操作远程文件\n\n底层实现：\n- SSHFS / SFTP / rsync\n\n👉 适合：开发同步 + 代码编辑\n\n---\n\n### ③ Terminal / Shell MCP（本地代理 + SSH）\n一些 MCP 实现会提供：\n\n- `run_shell()`\n- `run_remote_shell(host, command)`\n\n本质：\n- 本地 MCP server 做 proxy\n- 再 SSH 到远程执行\n\n---\n\n## B. Claude Code “Skills”方式（如果你指的是 skill system）\n\nSkill 本身通常：\n- 不负责网络连接\n- 但可以封装：\n  - ssh tool usage pattern\n  - remote execution workflow\n\n例如：\n- `deploy_skill`\n- `remote_debug_skill`\n\n👉 本质仍然是 MCP tool wrapper\n\n---\n\n# 2. 你真正想要的：本地 Claude Code ↔ 远程 Claude Code 通信\n\n这个需求要拆一下：\n\n## ❗关键事实\nClaude Code 本身：\n- 没有“进程间协议（Claude ↔ Claude）”\n- 没有官方 multi-agent networking API\n\n所以你要做的是：\n\n> 用 MCP + SSH + message relay 实现“代理通信层”\n\n---\n\n# 3. 推荐架构（实用）\n\n## 🧠 架构目标\n\n让两个 Claude Code：\n\n- Local Claude Code（主控）\n- Remote Claude Code（执行/子agent）\n\n通过 MCP 通信：\n\n---\n\n## ✅ 架构方案：SSH Relay MCP（推荐）\n\n```\nLocal Claude Code\n        │\n        │ MCP Tool Call\n        ▼\nSSH MCP Server\n        │\n        ├── SSH exec → Remote Claude Code runtime\n        │\n        ├── send task.json\n        │\n        ├── read result.json\n        ▼\nRemote machine\n   └── Claude Code (daemon mode or CLI wrapper)\n```\n\n---\n\n## 🔧 Remote 端需要一个“Claude Runner”\n\n你在远程机器上跑一个常驻服务：\n\n### 方式 A：CLI wrapper（简单）\n```bash\nclaude-code run --input task.json --output result.json\n```\n\n### 方式 B：daemon agent（更强）\n- HTTP server / WebSocket server\n- 接收任务\n- 调用 Claude Code\n- 返回结果\n\n---\n\n## 🔁 通信协议建议（关键）\n\n用文件或 JSON RPC：\n\n### request.json\n```json\n{\n  \"task_id\": \"123\",\n  \"instruction\": \"Refactor this module\",\n  \"context\": \"...\"\n}\n```\n\n### result.json\n```json\n{\n  \"task_id\": \"123\",\n  \"output\": \"...\",\n  \"logs\": \"...\"\n}\n```\n\n---\n\n# 4. 更高级方案（Agent Mesh）\n\n如果你想做“Claude Code ↔ Claude Code 多节点协作”：\n\n## 🌐 Agent Mesh 架构\n\n- Local Claude = planner\n- Remote Claude A = coder\n- Remote Claude B = tester\n- Remote Claude C = data fetcher\n\n通信方式：\n- MCP tool router\n- SSH + message queue\n- Redis / NATS / RabbitMQ（更专业）\n\n---\n\n# 5. 现成替代方案（你可能会感兴趣）\n\n虽然不是 MCP，但已经很接近你要的能力：\n\n## ① OpenHands（前 Agent 工程）\n- 支持远程执行环境\n- 类似 Claude agent + sandbox\n\n## ② SWE-Agent / DevAgent 系列\n- 支持 remote execution loop\n- 任务拆分 + 回传\n\n## ③ Aider + SSH workflow\n- 本地控制 remote repo\n- 通过 git + ssh 协作\n\n---\n\n# 6. 我给你的结论（工程选型）\n\n如果你目标是：\n\n## ✔ 快速实现\n👉 用：\n- SSH MCP Server\n- + remote claude CLI wrapper\n\n---\n\n## ✔ 稳定工程系统\n👉 用：\n- MCP tool layer（SSH + FS）\n- + remote agent daemon\n- + JSON RPC protocol\n\n---\n\n## ✔ 多 Claude 协同系统（研究级）\n👉 用：\n- MCP Router\n- + message queue (Redis/NATS)\n- + multi-agent orchestration\n\n---\n\n# 7. 如果你愿意，我可以帮你继续往下做\n\n可以帮你直接设计一套：\n\n### 👉 “Claude Code Remote Orchestrator v1”\n包含：\n- MCP server 设计\n- SSH tool schema\n- remote agent runtime\n- message protocol\n- npm package结构\n- 最小可运行 demo\n\n甚至可以帮你：\n> 写一个可直接 clone 的 repo scaffold\n\n只要你说你偏向：\n- 简单可用版\n- 工程生产版\n- 还是 multi-agent research版"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "code_blocks": {
+            "0": {
+              "id": "cyg4cr",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "q0337u",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "otzddk",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "2q2y7w",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "search_result_groups": [],
+          "request_id": "d68ecff6-6153-47ed-a96b-839481dc9b48",
+          "message_type": "next",
+          "turn_exchange_id": "e5998e33-0a50-41a9-a946-0e36dbe4a8b7",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "5742ea76-d8fa-4bcc-9d3d-0311907c81fb",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "6fec1a3a-95c4-44b3-8aa8-18bf92497a43",
+      "children": [
+        "9efe2d83-7125-4394-beb8-b1693bbe91da"
+      ]
+    },
+    "9efe2d83-7125-4394-beb8-b1693bbe91da": {
+      "id": "9efe2d83-7125-4394-beb8-b1693bbe91da",
+      "message": {
+        "id": "9efe2d83-7125-4394-beb8-b1693bbe91da",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775803964.06,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "https://github.com/classfang/ssh-mcp-server/blob/main/README_CN.md\n有了这个的话，可以在本地claude code帮我在远程服务器部署claude code吗"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "41d41dcf-45a7-489e-8379-9a4a64d8ebea",
+          "message_source": null,
+          "turn_exchange_id": "5bc3031a-b5be-45d3-9029-36156e4ef807",
+          "resolved_model_slug": "gpt-5-3-mini",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "41687303-5fcb-4cd5-9226-2c5aba3b4381",
+      "children": [
+        "4bc90e14-45a8-4cec-8707-7af427a61ca2"
+      ]
+    },
+    "4bc90e14-45a8-4cec-8707-7af427a61ca2": {
+      "id": "4bc90e14-45a8-4cec-8707-7af427a61ca2",
+      "message": {
+        "id": "4bc90e14-45a8-4cec-8707-7af427a61ca2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775803970.2826765,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [
+            {
+              "matched_text": "entity[\"<entity_category>\", \"<entity_name>\", \"<city, state/province, country | address>\"]",
+              "prefix": null,
+              "start_idx": 3185,
+              "end_idx": 3277,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "<entity_name>",
+              "prompt_text": "<entity_name>",
+              "type": "entity",
+              "name": "<entity_name>",
+              "category": "<entity_category>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": {
+                "disambiguation": "<city, state/province, country | address>"
+              },
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<ref_id>\", \"<entity_name>\"]",
+              "prefix": null,
+              "start_idx": 3341,
+              "end_idx": 3379,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "<entity_name>",
+              "prompt_text": "<entity_name>",
+              "type": "entity",
+              "name": "<entity_name>",
+              "category": "<ref_id>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\",1]",
+              "prefix": null,
+              "start_idx": 6886,
+              "end_idx": 6930,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "product[\"turnXproductY\", \"Levi's Jeans 500\", {\"render_as\":\"hero\", \"description\":\"$single-sentence-product-description\"}]",
+              "prefix": null,
+              "start_idx": 6992,
+              "end_idx": 7115,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "product[\"turnXproductY\", \"Product Name\", {\"render_as\":\"block\", \"description\":\"$single-sentence-product-description\"}]",
+              "prefix": null,
+              "start_idx": 7187,
+              "end_idx": 7307,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "products{\"selections\":[[\"turnXproductY\",\"Display title\"],[\"turnXproductZ,turnXproductW\",\"Merged card title\"]],\"tags\":[\"optional tag\",\"optional tag\"]}",
+              "prefix": null,
+              "start_idx": 7854,
+              "end_idx": 8006,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\"]",
+              "prefix": null,
+              "start_idx": 8527,
+              "end_idx": 8569,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_1_FROM_TOOL>\",\"Product A\"]",
+              "prefix": null,
+              "start_idx": 8673,
+              "end_idx": 8723,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product A",
+              "prompt_text": "Product A",
+              "type": "entity",
+              "name": "Product A",
+              "category": "<PRODUCT_REF_1_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_2_FROM_TOOL>\",\"Product B\"]",
+              "prefix": null,
+              "start_idx": 8726,
+              "end_idx": 8776,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product B",
+              "prompt_text": "Product B",
+              "type": "entity",
+              "name": "Product B",
+              "category": "<PRODUCT_REF_2_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_3_FROM_TOOL>\",\"Product C\"]",
+              "prefix": null,
+              "start_idx": 8779,
+              "end_idx": 8829,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product C",
+              "prompt_text": "Product C",
+              "type": "entity",
+              "name": "Product C",
+              "category": "<PRODUCT_REF_3_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_4_FROM_TOOL>\",\"Product D\"]",
+              "prefix": null,
+              "start_idx": 8832,
+              "end_idx": 8882,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product D",
+              "prompt_text": "Product D",
+              "type": "entity",
+              "name": "Product D",
+              "category": "<PRODUCT_REF_4_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "entity[\"<PRODUCT_REF_5_FROM_TOOL>\",\"Product E\"]",
+              "prefix": null,
+              "start_idx": 8885,
+              "end_idx": 8935,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Product E",
+              "prompt_text": "Product E",
+              "type": "entity",
+              "name": "Product E",
+              "category": "<PRODUCT_REF_5_FROM_TOOL>",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            },
+            {
+              "matched_text": "explore_more{\\\"selections\\\":[[\\\"turn0product1\\\",\\\"Product Title\\\"],[\\\"turn0product2\\\",\\\"Product Title\\\"],...]}",
+              "prefix": null,
+              "start_idx": 9531,
+              "end_idx": 9644,
+              "safe_urls": [],
+              "refs": [],
+              "alt": null,
+              "prompt_text": null,
+              "type": "hidden",
+              "invalid": true
+            },
+            {
+              "matched_text": "entity[\"turnXproductY\",\"Display title\"]",
+              "prefix": null,
+              "start_idx": 14927,
+              "end_idx": 14969,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "Display title",
+              "prompt_text": "Display title",
+              "type": "entity",
+              "name": "Display title",
+              "category": "turnXproductY",
+              "priority": 1,
+              "metadata": null,
+              "entity_data": null,
+              "extra_params": null,
+              "status": "done",
+              "notes": null,
+              "entity_index": null,
+              "id": null
+            }
+          ],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "request_id": "41d41dcf-45a7-489e-8379-9a4a64d8ebea",
+          "message_type": "next",
+          "turn_exchange_id": "5bc3031a-b5be-45d3-9029-36156e4ef807",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "parent_id": "9efe2d83-7125-4394-beb8-b1693bbe91da",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "assistant",
+        "channel": null
+      },
+      "parent": "9efe2d83-7125-4394-beb8-b1693bbe91da",
+      "children": [
+        "ae11172a-d47e-4d57-a993-a686971418d7"
+      ]
+    },
+    "ae11172a-d47e-4d57-a993-a686971418d7": {
+      "id": "ae11172a-d47e-4d57-a993-a686971418d7",
+      "message": {
+        "id": "ae11172a-d47e-4d57-a993-a686971418d7",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1775803970.229443,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "unknown",
+          "response_format_name": null,
+          "text": "search(\"https://github.com/classfang/ssh-mcp-server/blob/main/README_CN.md\\n\\u6709\\u4e86\\u8fd9\\u4e2a\\u7684\\u8bdd\\uff0c\\u53ef\\u4ee5\\u5728\\u672c\\u5730claude code\\u5e2e\\u6211\\u5728\\u8fdc\\u7a0b\\u670d\\u52a1\\u5668\\u90e8\\u7f72claude code\\u5417\")"
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "request_id": "41d41dcf-45a7-489e-8379-9a4a64d8ebea",
+          "message_type": "next",
+          "turn_exchange_id": "5bc3031a-b5be-45d3-9029-36156e4ef807",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "parent_id": "4bc90e14-45a8-4cec-8707-7af427a61ca2",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web",
+        "channel": null
+      },
+      "parent": "4bc90e14-45a8-4cec-8707-7af427a61ca2",
+      "children": [
+        "92f23db6-21c9-48b3-8aae-ff5547b9fa97"
+      ]
+    },
+    "92f23db6-21c9-48b3-8aae-ff5547b9fa97": {
+      "id": "92f23db6-21c9-48b3-8aae-ff5547b9fa97",
+      "message": {
+        "id": "92f23db6-21c9-48b3-8aae-ff5547b9fa97",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1775803970.8455632,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "ssh-mcp-server README_CN claude code ssh mcp server features"
+            ]
+          },
+          "request_id": "41d41dcf-45a7-489e-8379-9a4a64d8ebea",
+          "message_type": "next",
+          "turn_exchange_id": "5bc3031a-b5be-45d3-9029-36156e4ef807",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "parent_id": "cc1587d2-1c24-4cce-aef7-a5340c1982df",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ae11172a-d47e-4d57-a993-a686971418d7",
+      "children": [
+        "a7594b1e-d83d-47b4-a7ba-5a1d4f2d5585"
+      ]
+    },
+    "a7594b1e-d83d-47b4-a7ba-5a1d4f2d5585": {
+      "id": "a7594b1e-d83d-47b4-a7ba-5a1d4f2d5585",
+      "message": {
+        "id": "a7594b1e-d83d-47b4-a7ba-5a1d4f2d5585",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1775803971.169068,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "结论先说清楚：\n\n> **可以做到“用本地 Claude Code 通过 SSH MCP 在远程服务器部署 Claude Code”，但这件事本质是“自动化安装 + 远程 CLI 执行”，不是 MCP 直接帮你“迁移 Claude Code 会话”。**\n\n你给的这个 `ssh-mcp-server` 是**完全可以实现这个目标的关键组件之一**。citeturn0search0\n\n---\n\n# 1. 你这个需求可以拆成 3 件事\n\n你想做的是：\n\n> 本地 Claude Code → SSH → 远程服务器 → 安装/运行 Claude Code\n\n实际流程是：\n\n### Step A：远程环境准备\n- 安装 Node / Python / runtime\n- 配好 API Key（Anthropic / Claude Code CLI）\n\n### Step B：部署 Claude Code CLI（或等价运行环境）\n- npm / curl 安装\n- 或 git clone + build\n\n### Step C：验证 + 运行 remote Claude agent\n\n---\n\n# 2. 用 ssh-mcp-server 能不能做到？\n\n## ✔ 可以做什么\n这个 MCP server本质提供：\n\n- SSH 执行命令\n- 文件上传下载\n- 远程 shell automation citeturn0search3\n\n所以 Claude Code 可以：\n\n✔ 在远程执行\n```bash\nnpm install -g claude-code\n```\n\n✔ 上传脚本\n✔ 修改配置\n✔ 启动进程\n\n---\n\n## ❌ 但它“不负责”的事\n它不会：\n\n- 自动理解“部署 Claude Code 的完整流程”\n- 管理长时间 daemon（除非你自己写 MCP workflow）\n- 维护 remote agent 状态\n\n这些要你自己设计 workflow\n\n---\n\n# 3. 你真正要做的是一个“Remote Bootstrap Script”\n\n最靠谱方案是：\n\n## ✅ 在 MCP 里让 Claude 执行这个流程\n\n### Step 1：SSH MCP 连接服务器\n\n---\n\n### Step 2：执行 bootstrap\n\nClaude Code 会帮你跑：\n\n```bash\n# 1. install node\ncurl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -\nsudo apt-get install -y nodejs\n\n# 2. install claude code\nnpm install -g @anthropic-ai/claude-code\n\n# 3. set api key\nexport ANTHROPIC_API_KEY=xxx\n\n# 4. test\nclaude --version\n```\n\n---\n\n### Step 3：验证 remote Claude\n\n```bash\nclaude \"hello\"\n```\n\n---\n\n# 4. 更关键的一点：你说的“远程 Claude Code 通信”\n\n这里有一个容易误解点：\n\n## ❗ MCP 不等于 Claude ↔ Claude 通信\n\nssh-mcp-server只是：\n\n> Claude → tool → SSH → remote shell\n\n不是：\n\n> Claude instance ↔ Claude instance protocol\n\n---\n\n# 5. 如果你想要“真正的双 Claude 系统”\n\n你需要加一层：\n\n## 🧠 Remote Claude Agent Wrapper（关键）\n\n在远程服务器上跑：\n\n```bash\nclaude-code daemon\n```\n\n或者：\n\n```bash\nnode agent.js\n```\n\n功能：\n\n- 接收 task.json\n- 调用 claude-code\n- 返回 result.json\n\n---\n\n然后 MCP 做：\n\n```text\nlocal Claude → ssh-mcp → remote agent → claude-code runtime\n```\n\n---\n\n# 6. 推荐你用的最终架构（实战级）\n\n## 🔧 架构\n\n```\n[Local Claude Code]\n        |\n        | MCP (ssh-mcp-server)\n        v\n[Remote SSH Server]\n        |\n        | runs\n        v\n[Claude Code CLI / Agent Runtime]\n        |\n        | outputs JSON\n        v\n[Result back to local Claude]\n```\n\n---\n\n# 7. 一句话回答你的问题\n\n> ✔ 能不能用 ssh-mcp-server 让本地 Claude Code 帮你在远程部署 Claude Code？\n\n### ✔ 答案是：\n可以，而且是典型用法\n\n但前提是：\n\n- 你要自己定义“部署脚本 + workflow”\n- MCP 只是执行通道，不是自动运维系统\n\n---\n\n# 8. 如果你想再往前一步（建议）\n\n我可以帮你直接设计一个更强版本：\n\n### 🚀 “Claude Remote Deployment System v1”\n\n包含：\n\n- 一键 install Claude Code remote\n- MCP tool：`deploy_claude_server()`\n- health check\n- remote agent daemon\n- task queue（可选 Redis）\n- 自动 recovery\n\n甚至可以做到：\n\n> “本地 Claude 直接指挥远程 Claude 做开发”\n\n---\n\n如果你愿意，可以告诉我你目标是：\n\n- A：只是部署 Claude Code\n- B：做 remote dev environment\n- C：做 multi-agent system（Claude cluster）\n\n我可以给你对应的完整架构 + 可运行实现路径。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn0search0",
+              "prefix": null,
+              "start_idx": 175,
+              "end_idx": 194,
+              "safe_urls": [
+                "https://machina.directory/mcp/classfang-ssh-mcp-server",
+                "https://machina.directory/mcp/classfang-ssh-mcp-server?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([Machina](https://machina.directory/mcp/classfang-ssh-mcp-server?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "ssh — MCP Server — Machina",
+                  "url": "https://machina.directory/mcp/classfang-ssh-mcp-server?utm_source=chatgpt.com",
+                  "attribution": "Machina",
+                  "pub_date": null,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn0search3",
+              "prefix": null,
+              "start_idx": 606,
+              "end_idx": 625,
+              "safe_urls": [
+                "https://mcpservers.org/servers/shaike1/mcp-server-ssh",
+                "https://mcpservers.org/servers/shaike1/mcp-server-ssh?utm_source=chatgpt.com"
+              ],
+              "refs": [],
+              "alt": "([Awesome MCP Servers](https://mcpservers.org/servers/shaike1/mcp-server-ssh?utm_source=chatgpt.com))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "MCP SSH Server | Awesome MCP Servers",
+                  "url": "https://mcpservers.org/servers/shaike1/mcp-server-ssh?utm_source=chatgpt.com",
+                  "attribution": "Awesome MCP Servers",
+                  "pub_date": null,
+                  "snippet": "",
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "refs": [
+                    {
+                      "turn_index": 0,
+                      "ref_type": "search",
+                      "ref_index": 3
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 2688,
+              "end_idx": 2688,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "ssh — MCP Server — Machina",
+                  "url": "https://machina.directory/mcp/classfang-ssh-mcp-server?utm_source=chatgpt.com",
+                  "attribution": "Machina"
+                },
+                {
+                  "title": "MCP SSH Server | Awesome MCP Servers",
+                  "url": "https://mcpservers.org/servers/shaike1/mcp-server-ssh?utm_source=chatgpt.com",
+                  "attribution": "Awesome MCP Servers"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://machina.directory/mcp/classfang-ssh-mcp-server",
+            "https://machina.directory/mcp/classfang-ssh-mcp-server?utm_source=chatgpt.com",
+            "https://mcpservers.org/servers/shaike1/mcp-server-ssh",
+            "https://mcpservers.org/servers/shaike1/mcp-server-ssh?utm_source=chatgpt.com"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "mcpindex.net",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mcpindex.net/en/mcpserver/tufantunc-ssh-mcp?utm_source=chatgpt.com",
+                  "title": "Ssh MCP - MCP Server",
+                  "snippet": "SSH MCP  Visit Repo105  Add to Cursor  MCP server exposing SSH control for Linux and Windows servers via Model Context Protocol. Securely execute remote shell commands with password or SSH key authen...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": 1759536000,
+                  "attribution": "mcpindex.net"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "mcpmarket.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mcpmarket.com/server/ssh-manager?utm_source=chatgpt.com",
+                  "title": "SSH Manager: Seamless Remote Server Control in Claude Code",
+                  "snippet": "SSH Manager: Seamless Remote Server Control in Claude Code  1.   2. Servers 3. SSH Manager  SSH MANAGER  Image: bvisiblebybvisible  •  71  •  Developer ToolsProductivity & WorkflowDeployment & DevOps...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "attribution": "mcpmarket.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://mcpmarket.com/ja/server/ssh-manager?utm_source=chatgpt.com",
+                  "title": "SSH Manager: Seamless Remote Server Control in Claude Code",
+                  "snippet": "SSH Manager: Seamless Remote Server Control in Claude Code  1.   2. サーバー 3. SSH Manager  SSH MANAGER  Image: bvisiblebybvisible  •  71  •  開発者ツール生産性とワークフローデプロイメントとDevOps  Facilitates seamless managem...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "attribution": "mcpmarket.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "mcp.pizza",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mcp.pizza/mcp-server/7ru9/ssh-mcp?utm_source=chatgpt.com",
+                  "title": "ssh- MCP Server | MCP.pizza | MCP.pizza",
+                  "snippet": "SSH-MCP  MCP.Pizza Chef: tufantunc  ssh-mcp is an MCP server that exposes SSH control for Linux and Windows servers, allowing LLMs and MCP clients to execute shell commands securely via the Model Con...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "attribution": "mcp.pizza"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.mcp.pizza/mcp-server/gpof/mcp-server-ssh?utm_source=chatgpt.com",
+                  "title": "mcp-server-ssh MCP Server | MCP.pizza | MCP.pizza",
+                  "snippet": "MCP-SERVER-SSH  MCP.Pizza Chef: shaike1  The mcp-server-ssh is a robust SSH server implementation designed for the Model Context Protocol (MCP). It facilitates secure remote command execution and com...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "attribution": "mcp.pizza"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "mcpexplorer.co",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mcpexplorer.co/mcps/462?utm_source=chatgpt.com",
+                  "title": "SSH MCP Server | MCP Explorer",
+                  "snippet": "SSH MCP SERVER  SSH MCP Server is a local Model Context Protocol (MCP) server that exposes SSH control for Linux and Windows systems, enabling LLMs and other MCP clients to execute shell commands sec...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": 1762646400,
+                  "attribution": "mcpexplorer.co"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "claude.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://docs.claude.com/zh-CN/docs/claude-code/mcp?utm_source=chatgpt.com",
+                  "title": "通过 MCP 将 Claude Code 连接到工具 - Claude Docs",
+                  "snippet": "​  安装 MCP 服务器  MCP 服务器可以根据您的需求以三种不同的方式进行配置：    ​  选项 1：添加远程 HTTP 服务器  HTTP 服务器是连接到远程 MCP 服务器的推荐选项。这是云服务最广泛支持的传输方式。  `# 基本语法 claude mcp add --transport http <nam e> <ur l>  真实示例：连接到 NOTION claude mcp...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "attribution": "claude.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "mcpnow.io",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.mcpnow.io/en/server/ssh-shaike1-mcp-server-ssh?utm_source=chatgpt.com",
+                  "title": "SSH MCP Server for Secure Remote Command Execution | MCP NOW",
+                  "snippet": "SSH  STDIO  Secure SSH server for remote command execution and file operations via MCP.  Install  52 Stars  1 Views  0 Adds  Author  shaike1  Tag  Communication Tools  +2  Version  Last Updated  View...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "attribution": "mcpnow.io"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "mcp-container.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mcp-container.com/en/mcp/5babba9a-a6e6-4812-9ab5-dfb36b53cf96?utm_source=chatgpt.com",
+                  "title": "ssh-mcp - MCP Tool for Claude Integration | Model Context Protocol | MCP Container | MCP Container - MCP Tools Discovery",
+                  "snippet": "SSH-MCP  MCP server exposing SSH control for Linux servers via Model Context Protocol.  0GitHub  GitHub Stars  82  User Rating  Not Rated  Favorites  0  Views  116  Forks  10  Issues  0  READMEInstal...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "attribution": "mcp-container.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "aibase.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mcp.aibase.com/server/1917146818955374593?utm_source=chatgpt.com",
+                  "title": "ssh-mcp - An MCP server that supports password and key authentication and securely executes remote shell commands via SSH",
+                  "snippet": "SSH MCP  Operating system automationDeveloper tools Remote.TypeScript  2 points  10.1K  MCP Submission Open Site  OVERVIEW  CONTENT DETAILS  ALTERNATIVES  WHAT IS SSH MCP SERVER?  SSH MCP Server is a...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "attribution": "aibase.com"
+                }
+              ]
+            }
+          ],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-3-mini",
+          "code_blocks": {
+            "0": {
+              "id": "0hx30v",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "ayu13t",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "0ggzkm",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "htpdt4",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "4": {
+              "id": "v4vgyi",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "5": {
+              "id": "3ny5w7",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "6": {
+              "id": "38kqiw",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "request_id": "41d41dcf-45a7-489e-8379-9a4a64d8ebea",
+          "message_type": "next",
+          "turn_exchange_id": "5bc3031a-b5be-45d3-9029-36156e4ef807",
+          "model_slug": "gpt-5-3-mini",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "0e69b99e-fcd0-455d-8b3a-66d51cb4f222",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "92f23db6-21c9-48b3-8aae-ff5547b9fa97",
+      "children": []
+    }
+  },
+  "current_node": "a7594b1e-d83d-47b4-a7ba-5a1d4f2d5585"
+}

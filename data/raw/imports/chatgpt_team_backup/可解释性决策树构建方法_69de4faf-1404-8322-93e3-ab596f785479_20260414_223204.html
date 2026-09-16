@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可解释性决策树构建方法</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>可解释性决策树构建方法</h1>
+            <div class="metadata">ID: 69de4faf-1404-8322-93e3-ab596f785479 | 2026/4/14 22:32:04</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/14 22:32:03</span>
+                </div>
+                <div class="message-content">现在是不是已经有一些方法，是通过修改输入特征看输出的变动来构建决策树，有点类似“蒸馏”出一个更简单更具可解释性的模型的论文研究？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/14 22:32:04</span>
+                </div>
+                <div class="message-content">是的，这一类方法已经比较成熟了，通常归在<strong>可解释性（XAI）+ 模型蒸馏（model distillation）</strong>或<strong>全局替代模型（global surrogate models）</strong>这一范式下。你描述的“通过扰动输入特征、观察输出变化来构建决策树”，本质上对应几条主流技术路线：<br><br>---<br><br>## 1️⃣ 全局替代模型（Global Surrogate Tree）<br><br>最直接的一类方法就是：<br><br>&gt; 用一个<strong>决策树</strong>去拟合黑盒模型 \( f(x) \) 的输出，而不是拟合真实标签<br><br>### 核心思想<br>- 输入：原始特征 \( x \)<br>- 标签：黑盒模型预测 \( f(x) \)<br>- 训练：一个简单模型（如 decision tree）<br><br>### 代表工作<br>- entity["paper","Distilling a Neural Network Into a Soft Decision Tree","Frosst and Hinton 2017"]  <br>- entity["paper","Interpretable Machine Learning: A Guide for Making Black Box Models Explainable","Molnar book"]（系统总结 surrogate 方法）<br><br>### 特点<br>- ✔ 全局解释（global interpretability）<br>- ✔ 可以直接得到规则路径<br>- ❌ fidelity（拟合黑盒程度）不一定高<br>- ❌ 高维/强非线性时树会变复杂<br><br>---<br><br>## 2️⃣ 基于扰动的局部解释 → 再结构化（LIME → Tree）<br><br>你说的“修改输入看输出变化”，最典型就是：<br><br>- entity["paper","Why Should I Trust You? Explaining the Predictions of Any Classifier","LIME paper Ribeiro et al. 2016"]  <br><br>### 思路<br>1. 在某个样本附近 perturb 输入<br>2. 观察模型输出变化<br>3. 拟合一个局部线性模型<br><br>👉 扩展方向：<br>- 把多个局部解释拼起来 → 构建树结构<br>- 或者直接用 perturbation 数据训练树<br><br>---<br><br>## 3️⃣ 基于 SHAP 的 Tree Approximation<br><br>更“工程化”和当前更常见的一条路线：<br><br>- entity["paper","A Unified Approach to Interpreting Model Predictions","SHAP Lundberg and Lee 2017"]  <br><br>### 方法<br>1. 用 SHAP 计算特征贡献<br>2. 基于 SHAP 值进行：<br>   - rule extraction<br>   - tree fitting<br>   - feature splitting<br><br>### 衍生方法<br>- TreeSHAP + surrogate tree<br>- RuleFit（线性模型 + tree rules）<br><br>👉 本质：<br>不是直接 perturb，而是用“近似 Shapley 值”衡量扰动影响<br><br>---<br><br>## 4️⃣ 专门做“Rule Extraction / Tree Extraction”的方法<br><br>这一类更贴近你说的“蒸馏成树”：<br><br>### 经典方法<br>- entity["paper","Extracting Decision Trees from Trained Neural Networks","Craven and Shavlik 1996"]（很早但思想一致）<br>- entity["paper","TREPAN","Craven 1996 algorithm"]  <br><br>### TREPAN 的关键点（非常接近你描述）<br>- 主动 query 黑盒模型<br>- 人工生成样本（perturbation）<br>- 用这些样本训练决策树<br>- 控制树复杂度<br><br>👉 这就是：<br><strong>通过输入扰动 + 输出观察 → 构建树</strong><br><br>---<br><br>## 5️⃣ 现代深度学习蒸馏到树（Neural → Tree Distillation）<br><br>更近几年的方向：<br><br>- entity["paper","Born Again Trees","Breiman-inspired distillation"]  <br>- entity["paper","Deep Neural Decision Trees","Kontschieder et al."]  <br><br>### 特点<br>- 用 soft labels（概率分布）蒸馏<br>- 有时加入结构约束（让树更浅）<br>- 或直接训练“可微分决策树”<br><br>---<br><br>## 6️⃣ Counterfactual / Sensitivity → Tree<br><br>更偏你说的“看变化”：<br><br>- 基于 counterfactual：<br>  - 改一个 feature，看 prediction flip<br>- 收集：<br>  - 决策边界附近样本<br>- 再拟合：<br>  - decision tree / rule list<br><br>👉 本质：<br>在 decision boundary 上采样 → 提取规则<br><br>---<br><br># 🧠 总结（给你一个结构化理解）<br><br>你描述的方法其实可以形式化为：<br><br>\[<br>\text{Sample } x' \sim \mathcal{N}(x) \quad \rightarrow \quad y' = f(x') \quad \rightarrow \quad \text{fit tree}<br>\]<br><br>这在学术上对应三类：<br><br>| 路线 | 是否 perturb | 是否全局 | 代表 |<br>|------|------------|----------|------|<br>| Surrogate tree | ❌（原数据） | ✅ | global surrogate |<br>| LIME-like | ✅ | ❌ | 局部解释 |<br>| TREPAN / extraction | ✅（主动采样） | ✅ | 你说的最接近 |<br><br>👉 <strong>最接近你描述的就是：TREPAN + surrogate tree + distillation 的结合体</strong><br><br>---<br><br># 🧩 给你一个更“研究导向”的判断<br><br>如果你是做论文/项目，我建议你这样定位这个方向：<br><br>&gt; <strong>“Black-box model → interpretable tree via active perturbation sampling”</strong><br><br>可以作为一个明确研究问题：<br><br>- 如何采样（random vs boundary-aware）<br>- 如何保证 fidelity<br>- 如何控制树复杂度<br>- 如何处理高维医疗数据（你现在的场景）<br><br>---<br><br>如果你愿意，我可以帮你进一步往“论文创新点”上推一层，比如：<br>- 医疗场景下的 tree distillation 怎么做才有 publishable novelty  <br>- 或者结合你现在的 ECG / knowledge graph 任务设计一个方法框架</div>
+            </div></div></div></body></html>

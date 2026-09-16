@@ -1,0 +1,63 @@
+source_type: chatgpt_export
+source_label: chatgpt_team_backup
+input_root: data/raw/imports/chatgpt_team_backup
+
+file_discovery:
+  include_extensions:
+    - .json
+    - .md
+  prefer_json_as_canonical: true
+  pair_markdown_with_json: true
+  recursive: true
+
+conversation_identity:
+  derive_from: json_field
+  conversation_id_field: conversation_id
+  title_field: title
+  created_at_field: create_time
+  updated_at_field: update_time
+  model_field: default_model_slug
+
+message_extraction:
+  source_container: mapping
+  message_id_field: id
+  parent_field: parent
+  children_field: children
+  content_path:
+    - message
+    - content
+    - parts
+  author_role_path:
+    - message
+    - author
+    - role
+  create_time_path:
+    - message
+    - create_time
+  metadata_path:
+    - message
+    - metadata
+  supported_roles:
+    - user
+    - assistant
+    - system
+    - tool
+  normalize_roles:
+    system: assistant
+    tool: assistant
+
+normalization:
+  strip_empty_messages: true
+  join_content_parts_with: "\n\n"
+  trim_whitespace: true
+  estimate_tokens: true
+  primary_language_detection: optional
+
+outputs:
+  imported_source_manifest: data/interim/normalized/imported_sources.jsonl
+  conversations: data/interim/normalized/conversations.jsonl
+  messages: data/interim/normalized/messages.jsonl
+
+notes:
+  - Markdown files are kept as auxiliary human-readable renderings, not canonical parse inputs.
+  - Nested folders under the import root should be preserved as metadata for later topic grouping.

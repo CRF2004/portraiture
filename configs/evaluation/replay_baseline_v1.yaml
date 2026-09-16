@@ -1,0 +1,28 @@
+inputs:
+  replay_examples: data/processed/replay/replay_examples.jsonl
+  turns: data/interim/segmented/turns.jsonl
+  messages: data/interim/normalized/messages.jsonl
+
+outputs:
+  predictions_baseline: data/processed/evaluation/predictions_baseline.jsonl
+  predictions_state_aware: data/processed/evaluation/predictions_state_aware.jsonl
+  predictions_refined: data/processed/evaluation/predictions_refined.jsonl
+  divergences_baseline: data/processed/evaluation/divergences_baseline.jsonl
+  divergences_state_aware: data/processed/evaluation/divergences_state_aware.jsonl
+  divergences_refined: data/processed/evaluation/divergences_refined.jsonl
+  refinements: data/processed/evaluation/refinements.jsonl
+  profile_snapshots_baseline: data/processed/evaluation/profile_snapshots_baseline.jsonl
+  profile_snapshots_refined: data/processed/evaluation/profile_snapshots_refined.jsonl
+  persona_facts: data/processed/evaluation/persona_facts.jsonl
+  dynamic_states: data/processed/evaluation/dynamic_states.jsonl
+  memory_nodes: data/processed/evaluation/memory_nodes.jsonl
+  metrics: data/processed/evaluation/metrics.jsonl
+
+task:
+  topic_shift_similarity_threshold: 0.08
+
+evaluation:
+  predictor_name: nearest_neighbor_majority_baseline
+  run_id: run_replay_eval_baseline_v1
+  top_k: 3
+  neighbor_similarity_floor: 0.02

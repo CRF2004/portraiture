@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods部分改进建议</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Methods部分改进建议</h1>
+            <div class="metadata">ID: 6a0c1647-7330-83ec-a9b0-ad2150d81487 | 2026/5/19 15:51:07</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/19 15:51:05</span>
+                </div>
+                <div class="message-content">你觉得目前methods部分会不会写得有点问题？会不会太散了</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/19 15:51:06</span>
+                </div>
+                <div class="message-content">会，有点散，而且不是“小问题”，主要是 <strong>Methods 现在承担了太多角色</strong>：既在讲数据和模型，又在讲审计框架，又在解释为什么选线性插值，还在补充外部验证、统计检验、证据分级。内容本身大多是有价值的，但组织方式让读者会觉得“方法很多、线索很多、主次不够清楚”。fileciteturn0file0<br><br>我觉得最大的问题有 4 个：<br><br><strong>第一，Methods 的主线不够突出。</strong>  <br>你的论文核心不是“训练了几个模型”，而是“提出 matched-control pathway audit”。但 Methods 里一开始是 Dataset，然后 Disease map，然后 Model-agnostic protocol，然后 Supporting models，再进入一堆模型细节。读者会被带偏，以为这是一篇模型比较论文，而不是审计方法论文。<br><br>更好的顺序应该是：<br><br>1. Overall audit design  <br>2. Dataset and label mapping  <br>3. Disease-centered audit panel  <br>4. Perturbation design and matched controls  <br>5. Audit metrics and evidence tiers  <br>6. Models used to instantiate the audit  <br>7. External validation  <br>8. Statistical analysis<br><br>也就是说，先把“审计协议”讲清楚，再说用哪些模型和数据来跑这个协议。<br><br><strong>第二，模型细节太抢戏。</strong>  <br>XGBoost 98D、Clinical-MVP 110D、ResNet、SE-ResNet、Transformer 的细节写得很满，甚至包括很多训练参数、特征维度、训练时间、参数量。问题是：这些不是核心方法，而是“支撑模型”。现在写法会让 Methods 显得像几个实验拼起来的。<br><br>建议把主文中的模型部分压缩成“用于验证协议的三层 representation ladder”，细节放 Supplement。主文保留这些就够了：<br><br>- XGBoost simple features：低信号访问 baseline；<br>- XGBoost Clinical-MVP：显式 timing/morphology feature baseline；<br>- Raw-signal models：ResNet primary，SE-ResNet/Transformer 作为 architecture sensitivity check；<br>- 训练协议简述即可。<br><br>像具体 kernel、stage、参数量、训练时间、早停 epoch，这些可以移到 Supplement，除非你要证明模型本身是贡献。<br><br><strong>第三，扰动方法相关内容分散了。</strong>  <br>你现在有：<br><br>- H. PR-Window Occlusion Experiment  <br>- I. Predefined Perturbation Operator  <br>- J. Perturbation Taxonomy  <br>- M. Evaluation and Audit Metrics  <br>- N. Evidence-Classification Rules  <br><br>这些其实都属于同一个核心方法链条：<strong>怎么扰动 → 怎么比较 target/control → 怎么计算 ASS → 怎么分级证据</strong>。现在拆得太碎，读者要来回拼。<br><br>我建议合并成一个更强的核心小节：<br><br><strong>Matched-Control Perturbation Audit</strong><br><br>里面按顺序讲：<br><br>1. disease target and matched controls；<br>2. local-window vs global-transform perturbations；<br>3. primary operator: linear interpolation；<br>4. target/control effect measured by ΔAUROC；<br>5. ASS definition；<br>6. evidence tiers。<br><br>这样审稿人会更容易看出你的方法是一个完整协议，而不是几个实验组件。<br><br><strong>第四，Evidence tiers 放得太晚。</strong>  <br>“Pathway-supported / Evidence-limited / Not supported”其实是你的论文判断标准，非常关键。现在放在 Methods 最后，前面读者已经看了很多实验设计，但还不知道你最终怎么判定。建议提前到 audit metric 后面，甚至可以在 Overall audit design 中先概述一次。<br><br>我会把 Methods 改成下面这种结构：<br><br><pre><code class="language-text">III. METHODS
+
+A. Study Overview: Matched-Control Pathway Audit
+   - 一段讲清楚核心问题、输入、输出、四步流程
+   - 最好对应 Fig. 1
+
+B. Datasets and External Validation Setting
+   - CODE-15%
+   - PTB-XL fold 10
+   - label mapping
+   - label circularity risk 简写
+
+C. Disease-Centered Audit Panel
+   - 五个疾病
+   - target pathway
+   - matched controls
+   - ambiguous pathway
+   - Table I/II 可合并或精简
+
+D. Perturbation Design
+   - Class I: local window
+   - Class II: global transformation
+   - linear interpolation as primary operator
+   - zero-masking/beat-inpainting 只作为 supplement operator-sensitivity
+
+E. Audit Metrics and Evidence Tiers
+   - ΔAUROC
+   - ASS
+   - CDDC
+   - Pathway-supported / Evidence-limited / Not supported
+
+F. Models Used to Instantiate the Audit
+   - representation ladder
+   - XGBoost simple
+   - Clinical-MVP
+   - ResNet primary
+   - SE-ResNet/Transformer sensitivity
+
+G. Statistical Analysis
+   - bootstrap CI
+   - DeLong / permutation tests
+   - multiple correction</code></pre><br><br>还有一个具体提醒：<strong>现在 Fig. 1 的说明有点危险。</strong>  <br>图注里说这个图保留了旧分析标签，“Supportive evidence: AFIB” 是早期 zero-masking 分析，主结果已经变成 Not supported。这个虽然诚实，但在主文 Figure 1 里出现“图和最终结果不一致”，会让审稿人觉得稿件还没清理干净。我的建议是：<strong>直接改图，不要在图注里解释旧版本错误。</strong> 主文图必须和最终结论一致。<br><br>总体判断：Methods 不是内容不够，而是<strong>太像“实验记录汇总”</strong>，还没有完全变成“审稿人一眼能抓住的审计方法”。你现在最该做的不是继续加细节，而是重排主线、压缩模型细节、把 perturbation-audit-metric-tier 变成一条非常清楚的方法链。</div>
+            </div></div></div></body></html>

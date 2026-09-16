@@ -1,0 +1,1428 @@
+{
+  "title": "Δprob与ΔAUROC区别",
+  "create_time": 1778472297.615538,
+  "update_time": 1778472319.554301,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a015554-7640-83ec-9e4d-85705631d030",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.statefarm.com",
+    "physionet.org",
+    "https://www.progressive.com",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+    "https://github.com/openclaw/openclaw"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "3646ac0e-e449-453e-b341-1071b152cc2f"
+      ]
+    },
+    "3646ac0e-e449-453e-b341-1071b152cc2f": {
+      "id": "3646ac0e-e449-453e-b341-1071b152cc2f",
+      "message": {
+        "id": "3646ac0e-e449-453e-b341-1071b152cc2f",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "fcef697e-15c9-4535-94fc-c2ca86818f47"
+      ]
+    },
+    "fcef697e-15c9-4535-94fc-c2ca86818f47": {
+      "id": "fcef697e-15c9-4535-94fc-c2ca86818f47",
+      "message": {
+        "id": "fcef697e-15c9-4535-94fc-c2ca86818f47",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "3646ac0e-e449-453e-b341-1071b152cc2f",
+      "children": [
+        "a20b1acc-389f-4373-8d06-4ad8f9baf3a9"
+      ]
+    },
+    "a20b1acc-389f-4373-8d06-4ad8f9baf3a9": {
+      "id": "a20b1acc-389f-4373-8d06-4ad8f9baf3a9",
+      "message": {
+        "id": "a20b1acc-389f-4373-8d06-4ad8f9baf3a9",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "fcef697e-15c9-4535-94fc-c2ca86818f47",
+      "children": [
+        "41fece83-8ac2-4e31-905a-e43310749183"
+      ]
+    },
+    "41fece83-8ac2-4e31-905a-e43310749183": {
+      "id": "41fece83-8ac2-4e31-905a-e43310749183",
+      "message": {
+        "id": "41fece83-8ac2-4e31-905a-e43310749183",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778472296.962733,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_source": null,
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a20b1acc-389f-4373-8d06-4ad8f9baf3a9",
+      "children": [
+        "3f6ce785-2a61-4944-92ae-044f80a4ad1b"
+      ]
+    },
+    "3f6ce785-2a61-4944-92ae-044f80a4ad1b": {
+      "id": "3f6ce785-2a61-4944-92ae-044f80a4ad1b",
+      "message": {
+        "id": "3f6ce785-2a61-4944-92ae-044f80a4ad1b",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778472295.292,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "论文为什么说”””**测量**：对每种条件，我们计算 ResNet 对每个样本预测的 1AVB 概率。主要指标是 1AVB 阳性样本上的配对概率变化（Δprob）： \n\r\n$$\r\n\\Delta\\text{prob} = p(\\text{1AVB}|\\text{clean}) - p(\\text{1AVB}|\\text{occluded})\r\n$$\r\n\r\n正向 Δprob 表示该片段被遮盖后，模型降低了对 1AVB 的置信度。文中所有地方，ΔAUROC 都表示从干净信号到扰动信号的 AUROC 变化（正值表示性能下降）。““”\nΔp和ΔAUROC有什么区别吗？论文不是主要汇报ΔAUROC吗\n"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "attachments": [
+            {
+              "id": "file_00000000e6047207867518f908c7c5e6",
+              "size": 1700410,
+              "name": "main.pdf",
+              "mime_type": "application/pdf",
+              "source": "local",
+              "is_big_paste": false
+            }
+          ],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_source": null,
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "resolved_model_slug": "gpt-5-5",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "41fece83-8ac2-4e31-905a-e43310749183",
+      "children": [
+        "6ef913a6-02a3-44e7-b48c-0bb15bc43f44"
+      ]
+    },
+    "6ef913a6-02a3-44e7-b48c-0bb15bc43f44": {
+      "id": "6ef913a6-02a3-44e7-b48c-0bb15bc43f44",
+      "message": {
+        "id": "6ef913a6-02a3-44e7-b48c-0bb15bc43f44",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.1230378,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_browsing_display",
+          "result": "",
+          "summary": "",
+          "assets": null,
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "command": "spinner",
+          "status": "running",
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "3f6ce785-2a61-4944-92ae-044f80a4ad1b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "3f6ce785-2a61-4944-92ae-044f80a4ad1b",
+      "children": [
+        "33cd9cec-5d6e-49d6-b3a0-1b237191a033"
+      ]
+    },
+    "33cd9cec-5d6e-49d6-b3a0-1b237191a033": {
+      "id": "33cd9cec-5d6e-49d6-b3a0-1b237191a033",
+      "message": {
+        "id": "33cd9cec-5d6e-49d6-b3a0-1b237191a033",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.4007454,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 1 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "6ef913a6-02a3-44e7-b48c-0bb15bc43f44",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "6ef913a6-02a3-44e7-b48c-0bb15bc43f44",
+      "children": [
+        "7192ea46-5c22-4bbc-ae8f-5bae1259c878"
+      ]
+    },
+    "7192ea46-5c22-4bbc-ae8f-5bae1259c878": {
+      "id": "7192ea46-5c22-4bbc-ae8f-5bae1259c878",
+      "message": {
+        "id": "7192ea46-5c22-4bbc-ae8f-5bae1259c878",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.4782043,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 1\nBeyond Discrimination: A Matched-Control\nPathway Audit for Evaluating ECG Classifier\nTrustworthiness\nAnonymous\nAbstract—Background: ECG classifiers routinely achieve high\ndiscrimination, yet may rely on clinically irrelevant signal regions.\nExisting explanation methods rarely test whether disease-specific\nregions dominate over matched anatomical controls, whether\npathway conclusions survive dataset shift, or whether results\nare robust to the perturbation operator itself—sensitivity is not\nspecificity.\nMethods: We propose a model-agnostic matched-control per￾turbation audit for evaluating ECG classifier trustworthiness.\nThe protocol compares targeted perturbations against anatomi￾cally adjacent controls, qualifies the perturbation operator via a\npreregistered validity battery, and evaluates pathway specificity\nunder frozen-weight transfer to an independent cardiologist￾validated dataset. Tiered decision rules—supportive, conditional\nsupportive, inconclusive, failed—standardize interpretation un￾der operator dependence and external transfer. Five diagnoses\nspanning timing, morphology, and rhythm pathways serve as a\ncase-study panel across four architectures and two datasets.\nResults: 1AVB is the anchor demonstration: although PR￾segment perturbation produces a large AUROC drop, matched\nQRS controls reverse the interpretation, yielding negative\nanatomical specificity under the qualified linear-interpolation\noperator (ResNet ASS= −0.332) and on the external dataset\n(ASS= −0.251). This indicates that target-only perturbation can\nproduce false-positive pathway claims. A preregistered validity\nbattery shows that zero-masking creates boundary artifacts that\ninflate control-region disruption; linear interpolation is qualified\nas the primary operator. Under this protocol, QRS-morphology\npathways achieve positive specificity across all architectures—\nCLBBB (0.346/0.441/0.433) and CRBBB (0.453/0.363/0.382)—\nclassified as conditional supportive. Both rhythm-atrial path￾ways fail under qualified operators: AFIB atrial-window ASS\nis negative across all architectures, revealing the initial zero￾masking positive as operator artifact; SBRAD rate-pathway ASS\nis positive only on ResNet, failing cross-architecture consistency.\nThree of five pathways fail the qualified-operator specificity test.\nFrozen-weight transfer preserves AUROC> 0.93 for all diseases.\nConclusions: Standard discrimination metrics are insufficient\nfor evaluating clinical trustworthiness. The matched-control audit\nprotocol, with operator qualification and external transfer, can\ndistinguish pathway-specific signal use from correlated signal use\nand operator artifacts. The method is not specific to ECG and\ncan inform explanation evaluation in other biomedical signal\ndomains.\nIndex Terms—ECG classification, explanation evaluation,\nmatched-control perturbation, pathway audit, operator qualifica￾tion, cross-dataset transfer, model trustworthiness, patient-level\nvalidation\nI. INTRODUCTION\nDeep learning classifiers for electrocardiogram (ECG) anal￾ysis now achieve high discrimination across a growing set of\ncardiac conditions [1]–[4], aided by large public datasets such\nas PTB-XL [5] and CODE-15% [6]. But strong discrimination\ndoes not tell us whether a model relies on clinically meaningful\nsignal regions. A 1AVB classifier might depend on QRS\nmorphology instead of PR-interval timing; an AFIB classi￾fier might use ventricular rate irregularity, atrial waveform\nfeatures, or unrelated shortcuts. Standard benchmark metrics\ncannot distinguish these cases. Moreover, existing explanation\nmethods rarely test whether disease-relevant regions dominate\nover matched controls, or whether pathway dependence holds\nup under dataset shift—sensitivity is not specificity, and ex￾planation conclusions can be fragile under distribution shift\n[7], [8].\nWe address these gaps with a model-agnostic, matched￾control perturbation audit protocol. For each diagnosis we pre￾specify an expected positive pathway (e.g., the PR segment\nfor 1AVB, the QRS complex for bundle branch block) and\ncompare targeted perturbations against anatomically adjacent\ncontrol regions that should matter less. A pathway claim is\naccepted only if the target perturbation is more disruptive\nthan its strongest matched control—a stricter criterion than\nperturbation sensitivity alone. We further evaluate pathway\nspecificity under frozen-weight transfer from CODE-15% to\ncardiologist-validated PTB-XL fold 10, providing an external\ncheck on whether explanation conclusions are dataset-specific.\nThe protocol is model-agnostic: the same perturbation design\napplies to any classifier accepting 12-lead ECG input, and\nthe five diseases are a case-study panel chosen to span three\ndiagnostic pathway categories (timing, morphology, rhythm),\nnot an exhaustive clinical survey.\nWe instantiate the audit across four model architectures\n(XGBoost, ResNet, SE-ResNet, and a lightweight Trans￾former) at three representation levels—simple summary fea￾tures, timing-enriched handcrafted features, and raw signal—\nto assess whether pathway dependence is consistent across\narchitectures and levels of signal access. The protocol is\nevaluated internally on CODE-15% (345,779 exams, patient￾level split) and externally on PTB-XL fold 10 (cardiologist￾validated labels).\nOur primary contribution is the audit protocol itself—\na structured method for evaluating whether ECG classifiers\nbase decisions on clinically meaningful signal regions, rather\nthan on correlated but clinically non-specific features. We\nshow that a matched-control design with external transfer\ncan separate pathway claims that remain anatomically specific\nand externally consistent from those that do not, and can\nidentify cases where target perturbation alone would produce",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "33cd9cec-5d6e-49d6-b3a0-1b237191a033",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "33cd9cec-5d6e-49d6-b3a0-1b237191a033",
+      "children": [
+        "add5ed83-cbeb-4f48-83a2-af65833b0c4d"
+      ]
+    },
+    "add5ed83-cbeb-4f48-83a2-af65833b0c4d": {
+      "id": "add5ed83-cbeb-4f48-83a2-af65833b0c4d",
+      "message": {
+        "id": "add5ed83-cbeb-4f48-83a2-af65833b0c4d",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.5446284,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 2 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "7192ea46-5c22-4bbc-ae8f-5bae1259c878",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "7192ea46-5c22-4bbc-ae8f-5bae1259c878",
+      "children": [
+        "22a29961-1195-48c0-ac52-f8dba1bb335e"
+      ]
+    },
+    "22a29961-1195-48c0-ac52-f8dba1bb335e": {
+      "id": "22a29961-1195-48c0-ac52-f8dba1bb335e",
+      "message": {
+        "id": "22a29961-1195-48c0-ac52-f8dba1bb335e",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.5954626,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 2\nmisleading conclusions. The protocol also reveals that the\nperturbation operator itself is a critical methodological vari￾able: zero-masking, the most common occlusion method in the\nliterature, creates hard-boundary artifacts that inflate control￾region disruption and can reverse specificity conclusions. A\ncontinuity-preserving operator (linear interpolation) eliminates\nthis artifact and provides more conservative, anatomically\ninterpretable ASS estimates. The protocol thus addresses a gap\nbetween standard discrimination benchmarks (which measure\nonly predictive accuracy) and clinical trustworthiness (which\nrequires evidence about how models arrive at decisions).\nII. RELATED WORK\nA. ECG Classification with Deep Learning\n1D convolutional neural networks (CNNs) and residual\narchitectures have become the dominant paradigm for auto￾mated ECG classification. Hannun et al. [1] demonstrated\ncardiologist-level arrhythmia detection using a 34-layer 1D\nCNN on ambulatory ECGs. On the PTB-XL benchmark,\nStrodthoff et al. [2] established strong baselines with 1D\nResNets and fully convolutional networks across 71 diagnostic\nclasses; their follow-up review [3] confirmed that ResNet-style\narchitectures remain competitive against newer alternatives.\nMehari and Strodthoff [9] further advanced PTB-XL bench￾marks through self-supervised pre-training, while Chen et\nal. [10] and Zubair et al. [11] contributed targeted architectures\nfor multi-class and imbalanced ECG classification.\nBeyond vanilla ResNets, SE-ResNet [12] adds channel-wise\nattention and lightweight Transformer adaptations [13] have\nbeen applied via patch-based self-attention. Recent hybrid\narchitectures combine these paradigms—Cardioformer [14]\ncouples multi-granularity patching with Transformer layers,\nwhile xECGArch [15] separates morphology and rhythm pro￾cessing with dual CNNs. ECG-JEPA [16] pushed PTB-XL\nperformance to AUROC=0.945 through JEPA pre-training\non over one million records spanning ten datasets including\nCODE-15%. Foundation models such as ECG-FM [17] fur￾ther scale pre-training, though their explanation behavior and\npathway-level auditability remain unexplored. Prior to the deep\nlearning era, classical machine learning methods—including\nXGBoost, random forests, and support vector machines—\nwere widely applied to handcrafted ECG features and remain\ncompetitive baselines on structured feature sets [18], [19].\nDespite these advances across both classical and deep\nlearning paradigms, the common evaluation framework em￾phasizes discrimination metrics on held-out test splits. It\nremains unclear whether these models base their decisions\non disease-relevant signal regions, and whether region-specific\ndependence survives cross-dataset transfer. This gap motivates\nour multi-level audit protocol, which applies identical pathway\nquestions across representation levels—from a feature-based\nXGBoost baseline to a raw-signal ResNet—allowing us to\nassess pathway dependence across both classical and deep\nlearning models.\nB. Explainability and Perturbation Methods\nPost-hoc explanation methods—including saliency maps,\nocclusion-based sensitivity, guided backpropagation, and in￾tegrated gradients—have been systematically evaluated on\nECG tasks. Storas et al. [20] compared nine gradient-based ˚\nmethods on synthetic 12-lead ECGs and found that no sin￾gle method works best across all measurement tasks, with\nconsiderable disagreement between human expert evaluation\nand perturbation-based metrics. Suh et al. [21] evaluated\neleven attribution methods across five large ECG datasets\nand reported that Guided Grad-CAM best aligned with car￾diologists’ assessment while localization-based metrics better\nreflected human judgment than perturbation-based ones. Al￾Zaiti et al. [22] found that clinically deployed saliency maps\nfor occlusion MI detection were rated only slightly clinically\nrelevant by practicing clinicians, underscoring the gap between\ncurrent explanation quality and clinical expectations.\nPerturbation-based evaluation—in which input regions are\nremoved or altered to measure prediction change—provides\na more direct test of feature dependence than gradient-based\nattributions alone. Wagner et al. [23] proposed a structured\nXAI framework for ECG that combines occlusion-based san￾ity checks, glocal attribution aggregation, and concept-based\nanalysis, providing quantitative evidence that model behav￾ior can align with cardiologists’ decision rules. Bender et\nal. [24] demonstrated that a ResNet trained for 12-lead ECG\nclassification learns features analogous to clinical diagnostic\ncriteria including P-wave morphology, QRS duration, and PR\ninterval. Recent work has also applied wave masking and\nreconstruction-based perturbation strategies [25], [26], and\nShapley-value-based ablation [27] to quantify localized feature\nimportance in ECG classifiers.\nDespite these advances, three limitations persist. First, exist￾ing perturbation studies rarely incorporate matched anatomical\ncontrols: they test whether a region matters, but not whether\ndisease-specific regions matter more than adjacent control re￾gions. Second, explanation conclusions are typically validated\nonly within the training distribution. Adebayo et al. [7] showed\nthat saliency maps can fail basic sanity checks under simple\ninput transformations, and Ong Ly et al. [28] demonstrated\nthat hidden data acquisition biases in ECG datasets can inflate\nmodel performance by up to 20%, with AUROC dropping\nfrom 0.90 to 0.70 under external validation. Third, few stud￾ies test whether explanation claims survive external dataset\nshift [8]. These gaps directly motivate our matched-control\nperturbation design with frozen-weight cross-dataset transfer.\nC. Dataset Use and Cross-Dataset Validation\nThe two largest public 12-lead ECG datasets—PTB-XL [5]\n(21,837 records, cardiologist-validated labels) and CODE-15%\n[6] (345,779 exams, automated labels)—have enabled a wide\nrange of deep learning studies. PTB-XL provides carefully\nannotated multi-label diagnoses with rich metadata including\nsignal quality indicators and demographic attributes, while\nCODE-15% offers an order of magnitude more samples but\nwith labels derived from an automated interpretation system.\nThis label-source asymmetry introduces a critical distinction:\nmodels trained on CODE-15% may learn to replicate the\nautomated labeling logic rather than physician-level diagnostic\nfeatures, creating a label circularity risk that varies by disease",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "add5ed83-cbeb-4f48-83a2-af65833b0c4d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "add5ed83-cbeb-4f48-83a2-af65833b0c4d",
+      "children": [
+        "9ef07ed0-a2bc-4410-ab2a-9b202c3d5d2e"
+      ]
+    },
+    "9ef07ed0-a2bc-4410-ab2a-9b202c3d5d2e": {
+      "id": "9ef07ed0-a2bc-4410-ab2a-9b202c3d5d2e",
+      "message": {
+        "id": "9ef07ed0-a2bc-4410-ab2a-9b202c3d5d2e",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.6078103,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 3 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "22a29961-1195-48c0-ac52-f8dba1bb335e",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "22a29961-1195-48c0-ac52-f8dba1bb335e",
+      "children": [
+        "4cadbab3-c386-40c7-b239-dbdc3b3d3ec1"
+      ]
+    },
+    "4cadbab3-c386-40c7-b239-dbdc3b3d3ec1": {
+      "id": "4cadbab3-c386-40c7-b239-dbdc3b3d3ec1",
+      "message": {
+        "id": "4cadbab3-c386-40c7-b239-dbdc3b3d3ec1",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.683651,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 3\ncategory. The PTB-XL+ dataset [29] supplements PTB-XL\nwith 71 handcrafted features spanning heart rate variability,\nQRS morphology, and signal quality metrics, enabling direct\ncomparisons between learned representations and classical\nECG parameters.\nCross-dataset validation remains underutilized in the ECG\ndeep learning literature, and where it has been attempted,\nthe results are sobering. Bickmann et al. [18] benchmarked\ntime-series versus feature-based methods on PTB-XL but\ndid not include external validation. Soltanieh et al. [30]\naddressed out-of-distribution generalization for self-supervised\nECG representations, showing that dataset shift degrades stan￾dard supervised baselines. Frank et al. [31] reported that\nmodels achieving AUROC>0.90 within-dataset for myocardial\nischemia detection experienced substantial performance drops\nacross six public ECG databases. At the foundation-model\nscale, ECGFounder [32] and recent benchmarking efforts [33]\nconfirm that cross-domain generalization remains a key chal￾lenge even for large pre-trained models with diverse training\ndata.\nThe consistent picture is that external validation across\ndatasets with different label sources, populations, and acqui￾sition protocols is widely recommended but rarely executed,\nand even less often applied to explanation claims. Our study\naddresses this gap through frozen-weight transfer from CODE￾15% to cardiologist-validated PTB-XL fold 10, treating the\nexternal dataset as a simultaneous check on both prediction\nquality and pathway explanation consistency.\nD. Clinical Pathway and Mechanistic Analysis\nClinical ECG interpretation relies on well-defined phys￾iological features: PR interval for atrioventricular conduc￾tion timing, QRS duration and morphology for ventricular\nconduction, RR interval regularity for rhythm classification,\nand P-wave morphology for atrial activity assessment [34].\nThese features define distinct diagnostic pathways for condi￾tions such as 1AVB (prolonged PR>200ms), bundle branch\nblocks (wide QRS>120ms with characteristic terminal/lateral\nR patterns), sinus bradycardia (low ventricular rate), and atrial\nfibrillation (absent or fibrillatory atrial activity).\nRecent studies have directly tested whether deep ECG\nmodels learn these clinically meaningful features. Hempel et\nal. [35] extended an XAI framework to match deep learning\nrelevances with PR interval and QRS duration from PTB-XL+,\nreporting that 96.0% of high-confidence 1AVB predictions had\nPR>200ms and 98.6% of high-confidence LBBB predictions\nhad QRS>120ms—strong evidence that the model internally\nrepresents clinical thresholds. Riberg et al. [36] performed a\nconcordance analysis between ResNet predictions and cardi￾ology guideline thresholds, finding that RR interval features\ndominated for sinus bradycardia and tachycardia while mor￾phological features showed weaker correlation. Hammer et\nal. [37] introduced an architecture that explicitly separates\nrhythm (long-term) and morphology (short-term) processing,\ndemonstrating that fused explanations correlate with clinical\ndiagnostic criteria. A systematic review by Ayano et al. [38]\nconfirmed that interpretable ML studies for ECG increasingly\ntarget clinical parameters such as PR interval, QRS duration,\nand RR variability.\nDespite this progress, a critical gap remains: existing studies\nconfirm that models attend to clinically relevant features,\nbut they do not test whether a disease-specific signal region\ndominates over anatomically adjacent controls, or whether\nsuch pathway specificity survives dataset shift. Demonstrating\nfeature relevance is not the same as demonstrating feature\nspecificity. Our disease-centered, matched-control perturbation\naudit addresses this gap: for five diagnoses spanning timing,\nmorphology, and rhythm pathways, we pre-specify expected\npositive regions grounded in clinical physiology, compare\ntargeted perturbations against matched controls, and verify\npathway specificity under frozen-weight external transfer. This\ndesign transforms clinical pathway knowledge into testable,\nfalsifiable audit criteria.\nIII. METHODS\nA. Dataset\nCODE-15%: Brazilian ECG dataset with 345,779 12-lead\nexams (400Hz, 10-second duration) from 233,770 patients.\nWe use five target conditions because they span three distinct\ndiagnostic pathways: 1AVB (timing), CRBBB/CLBBB (mor￾phology), and SBRAD/AFIB (rhythm). Their prevalences are\n1.65%, 2.80%, 1.74%, 1.62%, and 2.03%, respectively.\nLabel source and circularity risk: Labels were derived\nfrom the CODE dataset’s automated ECG interpretation sys￾tem. CODE serves as an automated-label internal audit cohort.\nThe risk of label circularity—where the model reproduces the\nautomated labeling logic instead of recovering physician-level\ndiagnostic mechanisms—varies by disease:\n• 1AVB—Highest risk: The label definition (PR>200ms)\nand PR-interval proxy features overlap heavily, so models\nmay learn the automated threshold instead of clinical AV￾conduction features.\n• SBRAD—High risk: Heart-rate-based rules\n(HR<60bpm) directly overlap with the label source,\nmaking learned rate-threshold behavior hard to\ndistinguish from label replication.\n• CRBBB/CLBBB—Moderate risk: QRS morphology\ncriteria (width >120ms, terminal R′\n/broad R patterns)\nmay align with the automated interpretation system’s\nfeature extraction.\n• AFIB—Moderate risk: P-wave absence and atrial activ￾ity metrics may overlap with the rhythm classifier com￾ponent of the automated system, though RR irregularity\nalone provides only a partial signal.\nTo buffer these risks, we treat PTB-XL fold 10 (cardiologist￾validated labels) as the primary external validation, and we\nrecommend interpreting internal CODE findings as evidence\nabout model behavior relative to the existing automated￾label system, not as evidence of physician-level diagnostic\nreasoning.\nPatient-level split: 60% train (207,232 samples), 20% vali￾dation (69,045 samples), 20% test (69,520 samples). Random\nseed 42 for reproducibility. Patient-level splitting ensures no\npatient appears in multiple splits, preventing leakage from\npatient-specific patterns.",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "9ef07ed0-a2bc-4410-ab2a-9b202c3d5d2e",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9ef07ed0-a2bc-4410-ab2a-9b202c3d5d2e",
+      "children": [
+        "21fe6ba8-16d0-4a30-8133-9ee87da24e79"
+      ]
+    },
+    "21fe6ba8-16d0-4a30-8133-9ee87da24e79": {
+      "id": "21fe6ba8-16d0-4a30-8133-9ee87da24e79",
+      "message": {
+        "id": "21fe6ba8-16d0-4a30-8133-9ee87da24e79",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.6970732,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 4 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "4cadbab3-c386-40c7-b239-dbdc3b3d3ec1",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4cadbab3-c386-40c7-b239-dbdc3b3d3ec1",
+      "children": [
+        "3da3c080-cbb7-4ff9-a348-f4f5bdada508"
+      ]
+    },
+    "3da3c080-cbb7-4ff9-a348-f4f5bdada508": {
+      "id": "3da3c080-cbb7-4ff9-a348-f4f5bdada508",
+      "message": {
+        "id": "3da3c080-cbb7-4ff9-a348-f4f5bdada508",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.7044914,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 4\nB. Disease-Centered Finding Map and Audit Panel\nThe audit framework is built around a compact, literature￾guided finding map covering five diagnoses: 1AVB, CRBBB,\nCLBBB, SBRAD, and AFIB. For each disease we pre-specify\n(i) the expected positive pathway, (ii) matched negative/control\nregions that should produce smaller effects, and (iii) any\nambiguous pathway treated as hypothesis-testing. The map is\nintentionally compact and disease-centered.\nSBRAD now contributes matched pathway audits on both\nCODE and PTB-XL via rate normalization with QRS and ST\ncontrols, so it enters pathway-score aggregation as a narrower\ncross-dataset audit case. AFIB is handled differently from the\noutset: RR irregularity alone is an explicit ambiguity test.\nC. The Audit Protocol as a Model-Agnostic Method\nThe audit protocol is designed to be model-agnostic:\nthe same perturbation windows, matched-control compar￾isons, and evaluation metrics apply to any classifier that\naccepts 12-lead ECG input, regardless of architecture (con￾volutional, transformer-based, tree-based, or hybrid). The five\ndiagnoses—1AVB, CRBBB, CLBBB, SBRAD, and AFIB—\nserve as a case-study panel chosen to span three clinically\ndistinct diagnostic pathway categories (timing, morphology,\nrhythm), and are not intended as an exhaustive clinical survey.\nThe protocol itself does not depend on the specific diseases,\nthe model architecture, or the training dataset. We demon￾strate this model-agnostic property by instantiating the audit\nacross four architectures (XGBoost, ResNet, SE-ResNet, and a\nlightweight Transformer) and three representation levels, with\nexternal validation on an independent cardiologist-validated\ndataset.\nD. Supporting Models and Representation Ladder\nWe use three representations to support the audit protocol:\n(i) simple summary features, (ii) timing-enriched handcrafted\nfeatures, and (iii) raw-signal deep learning. Together they span\nthe range from minimal to full signal access. Secondary archi￾tectures (SE-ResNet and a lightweight Transformer) provide\ncontext for how sensitive the audit conclusions are to model\nchoice [12], [13].\nE. Supporting Feature-Space Baseline: XGBoost + Simple\nSummary Features (98D)\nFeature extraction (98 dimensions):\n• Rhythm features (14): RR intervals\n(Mean/Std/Min/Max/Median/Range), HR (Mean/Std),\nHRV (RMSSD/SDNN/pNN50/CV), RR Irregularity,\nQRS Count\n• Amplitude features (84): Per-lead statistics\n(Mean/Std/Min/Max/Range/RMS/PeakToPeak) for\n12 leads\nNo demographic or site metadata were included in this feature\nset.\nRole in the study: This is the lowest-access baseline. It tests\nhow far rhythm and coarse amplitude summaries can go before\nexplicit timing or raw waveform detail becomes necessary.\nModel: XGBoost with one-vs-rest strategy per disease.\nHyperparameters (nestimators = 100, max depth = 8,\nlearning rate = 0.1) were selected via 5-fold cross￾validation on the training set, searching over max depth ∈\n{4, 6, 8, 10} and learning rate ∈ {0.01, 0.05, 0.1, 0.2}, with\nnestimators determined by early stopping (patience=10 on val￾idation log-loss). scale pos weight was set inversely pro￾portional to class prevalence for class balancing. The same\nhyperparameter search protocol was applied to all feature sets\n(rhythm-only, amplitude-only, combined, clinical-MVP).\nThreshold tuning: Per-label optimal thresholds were se￾lected on the validation set by maximizing F1 score. The same\nprotocol was applied identically to all methods.\nF. Supporting Timing-Enriched Feature Model: XGBoost +\nClinical-MVP Features (110D)\nTo test whether explicit timing access closes the 1AVB\ngap, we designed a Clinical-MVP (Clinically Meaningful Vital\nParameters) feature set with four physiological blocks:\nBlock 1—Signal Quality (2 features): Signal-to-noise\nratio (SNR dB) and baseline wander index (low-frequency\npower ratio), computed from lead II. These are quality-control\nfeatures.\nBlock 2—Rhythm & Rate (15 features): Beat count, heart\nrate statistics (mean, std, min, max), RR interval statistics\n(mean, std, min, max, median, range), and RR variability\nmetrics (RMSSD, SDNN, CV, pNN50, RR irregularity index).\nComputed from R-peak positions detected via NeuroKit2’s\nElgendi algorithm [39].\nBlock 3—AV Conduction Timing (6 features): PR-proxy\ninterval statistics (median, mean, std, min, max) and P￾wave detectability. P-waves were detected as the maximum\namplitude point in an 80–200ms window preceding each R￾peak (Lead II), with the PR-proxy computed as the temporal\ndistance from P-wave peak to subsequent R-peak—an AV￾conduction timing surrogate (not equivalent to the clinical PR\ninterval, which is measured from P-wave onset to QRS onset).\nPhysiological constraints (PR-proxy ∈ [80, 400]ms, P-wave\n∈ [60, 140]ms) were applied to filter implausible detections.\nBlock 4—QRS Morphology & Conduction (15 features):\nQRS duration statistics (mean, std, min, max), QRS frontal\naxis computed from net deflection in leads I and aVF [34],\nR/S amplitude ratio statistics, terminal S-wave amplitude, and\nadditional morphological descriptors.\nPer-lead amplitude statistics (72 features: mean, std, min,\nmax, range, RMS for 12 leads) were included, matching the\namplitude block from the simple feature set. Total: 2 signal\nquality + 15 rhythm + 6 AV timing + 15 QRS morphology +\n72 amplitude = 110 dimensions.\nImplementation: We used NeuroKit2 [39] for R-peak de￾tection (∼2ms/sample) and custom SciPy signal processing\nfor P-wave detection, QRS duration estimation, QRS axis\ncomputation, and R/S ratio calculation. The pipeline provides\npragmatic proxy measurements, not clinical fiducial annota￾tion. This hybrid approach processed all 345,779 exams in\napproximately 2 hours (∼50 samples/second).",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "21fe6ba8-16d0-4a30-8133-9ee87da24e79",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "21fe6ba8-16d0-4a30-8133-9ee87da24e79",
+      "children": [
+        "c0e3973a-ef7e-455b-ae9c-5316949bc1f4"
+      ]
+    },
+    "c0e3973a-ef7e-455b-ae9c-5316949bc1f4": {
+      "id": "c0e3973a-ef7e-455b-ae9c-5316949bc1f4",
+      "message": {
+        "id": "c0e3973a-ef7e-455b-ae9c-5316949bc1f4",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.7113557,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 5 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "3da3c080-cbb7-4ff9-a348-f4f5bdada508",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "3da3c080-cbb7-4ff9-a348-f4f5bdada508",
+      "children": [
+        "393bebb6-f01d-4ae3-bfcb-d5c9c9e0d414"
+      ]
+    },
+    "393bebb6-f01d-4ae3-bfcb-d5c9c9e0d414": {
+      "id": "393bebb6-f01d-4ae3-bfcb-d5c9c9e0d414",
+      "message": {
+        "id": "393bebb6-f01d-4ae3-bfcb-d5c9c9e0d414",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.723933,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 5\nTABLE I\nDISEASE-CENTERED AUDIT PANEL USED THROUGHOUT THE STUDY.\nDisease Expected positive pathway Matched controls Ambiguous pathway\n1AVB PR prolongation / AV conduction timing ST segment, random non-PR window, isolated QRS P-wave visibility\nCRBBB QRS widening / terminal R’ morphology ST segment, random non-QRS window, PR timing Axis-related variation\nCLBBB QRS widening / broad lateral R morphology ST segment, non-QRS atrial window, PR timing Secondary ST-T changes\nSBRAD Low ventricular rate / long RR QRS morphology, ST segment Sinus P consistency\nAFIB Atrial activity / P-wave absence ST segment, shifted pre-QRS control, isolated QRS RR irregularity alone\nFig. 1. Overall audit framework. The protocol proceeds in four stages: (1) a disease-centered finding map pre-specifies expected positive pathways, matched\ncontrols, and ambiguous pathways for five diagnoses; (2) three representation levels (simple features, timing-enriched Clinical-MVP features, raw-signal\nResNet) instantiate the audit across increasing levels of signal access; (3) targeted perturbations (PR-window, QRS-complex, RR-regularization, atrial-window\ninpainting) are evaluated under matched-control comparisons, producing pathway-specific audit scores (ASS, CDDC); (4) frozen-weight transfer to cardiologist￾validated PTB-XL fold 10 checks whether pathway specificity persists under dataset shift.\nG. Supporting Raw-Signal Model: 1D ResNet\nArchitecture:\n• Input: Raw 12-lead ECG (12 × 4096), z-score normal￾ized per lead\n• Preprocessing: Original signals (4000 samples at 400Hz,\n10s duration) were resampled to 4096 samples via linear\ninterpolation, extending the temporal window to 10.24s.\nThis preserves the full 10s recording while providing a\npower-of-two input length compatible with 4× downsam￾pling stages.\n• Backbone: 4 ResNet stages with residual blocks:\n– Stage 1: 2 blocks, 64 channels, kernel=7, stride=2\n– Stage 2: 2 blocks, 128 channels, kernel=7, stride=2\n– Stage 3: 2 blocks, 256 channels, kernel=7, stride=2\n– Stage 4: 2 blocks, 512 channels, kernel=7, stride=2\n• Residual block: Conv1D → BatchNorm → ReLU →\nConv1D → BatchNorm → skip connection → ReLU\n• Pooling: AdaptiveAvgPool1D(1) → flatten to 512-dim\nvector\n• Classifier: Dropout(0.2) → Linear(512 → 5) → Sigmoid\n• Loss: BCEWithLogitsLoss with per-class weights (in￾verse prevalence)\n• Parameters: 1.2M trainable parameters\n• Complexity: 0.8 GFLOPs per sample\nTraining: Adam optimizer (lr=0.001), ReduceLROn￾Plateau scheduler (factor=0.5, patience=5), early stopping\n(patience=10 on validation loss), batch size 64, trained for\nup to 50 epochs (early stopping typically triggered at epoch\n23–28). Training time: 2.5 hours on A100 GPU (single run).\nMulti-seed training: To assess statistical robustness, we\ntrained 4 independent ResNet runs: 3 with different model\ninitialization seeds (42, 123, 456) on the primary patient\nsplit (seed=42), and 1 on a second independent patient split\n(seed=123) with model seed 42. All other hyperparameters\nwere identical. This lets us estimate both within-split variance",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "c0e3973a-ef7e-455b-ae9c-5316949bc1f4",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "c0e3973a-ef7e-455b-ae9c-5316949bc1f4",
+      "children": [
+        "f089ef57-a21c-48f7-ac32-43a239f94ab5"
+      ]
+    },
+    "f089ef57-a21c-48f7-ac32-43a239f94ab5": {
+      "id": "f089ef57-a21c-48f7-ac32-43a239f94ab5",
+      "message": {
+        "id": "f089ef57-a21c-48f7-ac32-43a239f94ab5",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.734248,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 6 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "393bebb6-f01d-4ae3-bfcb-d5c9c9e0d414",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "393bebb6-f01d-4ae3-bfcb-d5c9c9e0d414",
+      "children": [
+        "4a72acc5-88ce-4c05-a89a-07f808fd2674"
+      ]
+    },
+    "4a72acc5-88ce-4c05-a89a-07f808fd2674": {
+      "id": "4a72acc5-88ce-4c05-a89a-07f808fd2674",
+      "message": {
+        "id": "4a72acc5-88ce-4c05-a89a-07f808fd2674",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.7414627,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 6\n(model seed sensitivity) and cross-split generalization (patient\nsplit sensitivity).\nCompetitive DL baseline—SE-ResNet: To check whether\nmodern architectural enhancements help, we trained an\nSE-ResNet-1D (Squeeze-and-Excitation ResNet) with\nidentical architecture, hyperparameters, and data splits as\nthe baseline ResNet. SE blocks add channel-wise attention\nafter each residual block: AdaptiveAvgPool1d →\nLinear(C, C//16) → ReLU → Linear(C//16,\nC) → Sigmoid → channel-wise multiply,\nadding 87K parameters (1.3M total). The SE reduction\nratio was set to 16 following standard practice [12], [40].\nTraining converged at epoch 10 (early stopping, best val\nMicro-F1=0.7410).\nCompetitive DL baseline—Lightweight 1D Transformer:\nTo test whether a patch-based self-attention architecture of￾fers advantages over the convolutional ResNet for ECG, we\ntrained a lightweight 1D transformer. It shares the same conv\nstem (Conv1d(12→64, k=15, s=2) → BN → ReLU →\nMaxPool(k=3, s=2)), producing 64-channel × 1024-length\nfeatures. A patch embedding layer (Conv1d(64→160, k=16,\ns=16)) partitions features into 64 patches of dimension 160.\nA learnable CLS token is prepended with learnable 1D\nposition embeddings [13]. A 4-layer Transformer encoder\n(d=160, heads=8, MLP ratio=4, gelu activation, pre-norm,\ndropout=0.1) processes the sequence, and the CLS token\noutput feeds a linear classifier (160→5). Total parameters:\n1,424,293 (comparable to ResNet’s 1.2M). Training used the\nidentical protocol as ResNet: Adam (lr=0.001), ReduceLROn￾Plateau (factor=0.5, patience=3), early stopping (patience=10\non validation loss), batch size 128. Training completed 50\nepochs (val Micro-F1=0.6168, no early stop triggered).\nThreshold tuning: Same validation-based approach as XG￾Boost.\nH. PR-Window Occlusion Experiment\nTo test whether 1AVB performance is sensitive to pertur￾bation of PR-segment information, we performed a targeted\nocclusion experiment:\nHypothesis: If the 1AVB classifier depends on information\nconcentrated in the PR segment, occluding that region should\ncause a larger degradation in 1AVB prediction probability than\noccluding a control region of equal length.\nSample selection: All 1AVB-positive samples from the\ntest set (n = 1, 084) plus an equal number of matched\n1AVB-negative controls (n = 1, 084), totaling 2,168 samples.\nSamples with fewer than 3 detectable R-peaks were excluded\n(54 samples, 2.5%).\nOcclusion conditions (within-subject design):\n1) PR-window occlusion: For each heartbeat, a 160ms\nwindow centered at (R peak − 120ms) was set to zero,\ntargeting the PR segment including the P-wave and PR\ninterval\n2) ST-segment occlusion (anatomical control): A 160ms\nwindow centered at (R peak + 80ms) was set to zero,\ntargeting the ST segment which should be irrelevant for\n1AVB detection\n3) Random-window occlusion (spatial control): A ran￾dom 160ms window (excluding QRS) was set to zero\n4) Clean (baseline): Original unmodified signal\nMeasurement: For each condition, we computed the\nResNet-predicted 1AVB probability for every sample. The\nprimary metric was the paired probability change (∆prob)\non 1AVB-positive samples: ∆prob = p(1AVB | clean) −\np(1AVB | occluded). Positive ∆prob indicates the model\nreduced its 1AVB confidence when that segment was occluded.\nThroughout this paper, ∆AUROC denotes the change in AU￾ROC from clean to perturbed signals (positive values indicate\ndegradation).\nBootstrap CI: 95% confidence intervals on paired effects\nwere computed via patient-level bootstrap (n = 1, 000 itera￾tions).\nI. Extended Perturbation Experiments and Validity Battery\nTo examine additional disease-specific pathways beyond\nPR-segment/1AVB, we performed two additional perturbation\nexperiments and an 8-run preregistered perturbation-validity\nbattery testing whether matched-control conclusions are robust\nto perturbation operator, dose, and lead scope.\nQRS occlusion → BBB (CRBBB + CLBBB): For BBB￾positive samples (n = 3, 184) and matched negative controls\n(n = 3, 184), a 160ms window centered at each R-peak\nwas perturbed across all 12 leads using linear interpolation\n(primary operator). The QRS complex is clinically diagnostic\nfor BBB (widened QRS > 120ms, characteristic rSR′ pattern).\nTwo anatomical controls followed the same protocol: ST￾segment perturbation (160ms at R peak + 40ms) and random￾window perturbation (160ms excluding QRS, 5 random place￾ments per exam with logit averaging). The same R-peak\ndetection, matched-subset protocol, and patient-level paired\nbootstrap (n = 1, 000) were used as in the PR occlusion\nexperiment. All three perturbation operators from the validity\nbattery were tested: zero-masking, linear interpolation (pri￾mary), and beat-conditioned inpainting.\nPreregistered validity battery: To test whether matched￾control conclusions are operator-artifacts rather than pathway￾specific signal use, we conducted an 8-run confirmatory bat￾tery with preregistered hypotheses, endpoints, and pass/fail\ncriteria (see Supplement for full preregistration block). Pri￾mary: ResNet; Sentinel: SE-ResNet. Disease-pathway pairs:\nCLBBB/QRS (expected positive specificity) and 1AVB/PR\n(expected non-specific). Three operators: zero-masking, lin￾ear interpolation (continuity-preserving), and beat-conditioned\ninpainting (amplitude-aligned adjacent-beat replacement). Ad￾ditional dimensions: dose-response (40/80/160/240 ms), lead￾local specificity (precordial V1/V2/V6 vs limb leads). All runs\nuse identical matched positive/negative subsets and patient￾level bootstrap CIs (1,000 iterations). The preregistered pri￾mary endpoint requires ASS> 0 with CI lower bound > 0 for\n≥2 of 3 operators (CLBBB) and ASS≤ 0 with CI upper bound\n≤ 0 for ≥2 of 3 operators (1AVB). Secondary endpoints: dose￾response monotonicity and lead-local specificity.\nRR regularization → AFIB: For AFIB-positive samples\n(n = 1, 256) and matched negative controls (n = 1, 256),",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "f089ef57-a21c-48f7-ac32-43a239f94ab5",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f089ef57-a21c-48f7-ac32-43a239f94ab5",
+      "children": [
+        "4faf3019-64c7-4514-9970-e09cca2d714f"
+      ]
+    },
+    "4faf3019-64c7-4514-9970-e09cca2d714f": {
+      "id": "4faf3019-64c7-4514-9970-e09cca2d714f",
+      "message": {
+        "id": "4faf3019-64c7-4514-9970-e09cca2d714f",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.754234,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 7 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "4a72acc5-88ce-4c05-a89a-07f808fd2674",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4a72acc5-88ce-4c05-a89a-07f808fd2674",
+      "children": [
+        "f9e62416-7e72-4ba2-bca3-446a3d911876"
+      ]
+    },
+    "f9e62416-7e72-4ba2-bca3-446a3d911876": {
+      "id": "f9e62416-7e72-4ba2-bca3-446a3d911876",
+      "message": {
+        "id": "f9e62416-7e72-4ba2-bca3-446a3d911876",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.7626188,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 7\neach heartbeat (bounded by midpoints between consecutive\nR-peaks) was time-warped to the median RR interval length.\nThis preserves per-beat QRS morphology while disrupting\nRR-interval irregularity. Beat-order permutation served as a\nfunctional control: beats were randomly permuted, preserving\nthe set of RR intervals but destroying their temporal order. If\nResNet relies strongly on RR irregularity for AFIB detection,\nRR regularization should cause greater degradation than beat\npermutation.\nJ. Statistical Comparisons\nModel comparison: Pairwise model comparisons (ResNet\nvs XGBoost Simple, ResNet vs XGBoost Clinical-MVP, XG￾Boost Clinical-MVP vs Simple) were performed per disease\non the shared test set (n = 69, 203). For AUROC, we used\nthe DeLong test [41] for paired comparisons on identical test\nsamples. For F1, we used vectorized paired permutation tests\nwith 5,000 resamples. Swap masks were generated simul￾taneously for all permutations, predictions were exchanged\nbetween models per sample, and per-disease F1 differences\nwere recomputed without Python-level loops over permuta￾tions [42]. Two-sided p-values were computed as the propor￾tion of |permuted ∆F1| ≥ |observed ∆F1|. Holm-Bonferroni\ncorrection was applied to this family of 18 comparisons (3\nmodel pairs × 5 diseases + 3 macro-F1). We treat patient-level\nbootstrap CIs (1,000 replicates) as the primary uncertainty\nquantification throughout this paper [43]. By contrast, permu￾tation p-values and DeLong tests operate at the sample level\n(n ≈ 69, 500 ECGs from approximately 47,000 unique pa￾tients in the test partition; mean 1.48 samples/patient). Because\nwithin-patient correlations reduce the effective sample size,\nsample-level tests may produce optimistic p-values and are\nreported for completeness only as approximate secondary in￾dicators. A patient-clustered bootstrap for AUROC differences\nor a cluster-robust variance estimator for DeLong tests would\nprovide more conservative inference and remains important\nfuture methodological work.\nCross-dataset validation: XGBoost models (nestimators =\n100, max depth = 8, learning rate = 0.1) were trained\non PTB-XL+ 12SL features (783D) using official PTB-XL\npatient-level folds (1–8 train, 9 validation for threshold tuning,\n10 test) [18], [29]. Labels were mapped from SCP-ECG codes\nto the 5 target diseases using strict primary diagnostic codes\nonly. PTB-XL fold 10 (n = 2, 198) has higher label quality\nthan the other folds because its labels were validated by car￾diologists [5]. It serves as the main external credibility cohort,\nbut it does not fully resolve the automated-label circularity of\nthe internal CODE audit.\nK. Frozen-Model External Validation\nTo assess model-level generalization and provide a stronger\nexternal check against label circularity, we applied the CODE￾trained 1D ResNet without fine-tuning to PTB-XL [4], [5],\n[44] raw 12-lead signals. PTB-XL contains 21,837 ECG\nrecords from 18,885 patients at 500Hz (PhysioNet); after label\nmapping and filtering, 21,799 records remained. We used the\nofficial patient-level folds: folds 1–8 for reference, fold 9\n(n = 2, 183) for target-domain threshold retuning, and fold\n10 (n = 2, 198) for testing. Fold 10 labels were validated\nby cardiologists [5]. Folds 9 and 10 have higher label quality\nthan folds 1–8 because both underwent at least one round of\nhuman evaluation in the PTB-XL annotation protocol1\n; fold\n10 is the primary external credibility set in this study, while\nfold 9 threshold retuning is a practical secondary analysis.\nPreprocessing: Signals were downsampled from 500Hz to\n400Hz via Fourier resampling to match CODE-15% input\nrate, then trimmed/padded to 4,096 samples (10.24s). Z-score\nnormalization was applied per lead. Lead order (I, II, III, AVR,\nAVL, AVF, V1–V6) matched CODE-15% ordering.\nLabel mapping: SCP-ECG diagnostic codes were mapped\nto the 5 target diseases using strict primary code matching\n(same mapping as Section 2.7 cross-dataset validation). Only\nfold 10 labels are cardiologist-validated.\nPR rule baseline: To contextualize the 1AVB results, we\ncomputed PR intervals using NeuroKit2’s wavelet-based ECG\ndelineation (ecg_delineate, peaks method) on the original\n500Hz signal. P-wave onsets were identified via wavelet\ndecomposition of the P-QRS-T complex, and PR interval\nwas measured from P-wave onset to subsequent R-peak for\neach beat (median across valid beats, physiological bounds\n80–400ms). This rule-based comparator is intentionally nar￾rower than the learned models—a pragmatic sanity check,\nnot a physician-adjudicated reference. A PR>200ms threshold\nyields binary predictions; the continuous PR interval yields\nAUROC. We compare ResNet AUROC against PR interval\nAUROC via the DeLong test.\nEvaluation: We used the identical evaluation protocol as\nCODE-15%. Thresholds were retuned on fold 9 (F1-max\nper disease) as a target-domain operating-point adaptation.\nBootstrap CIs (n = 1, 000, patient-level) and DeLong tests\nwere computed. Total inference time was approximately 5\nminutes on a single GPU.\nThreshold sensitivity analysis: Because we retune thresh￾olds on PTB-XL fold 9 instead of carrying them over from\nCODE, the external evaluation is not fully zero-shot—it is\na frozen model with target-domain threshold calibration. To\nquantify the contribution of threshold adaptation, we report\nthree tiers: (1) strict frozen—CODE validation thresholds\napplied directly to PTB-XL fold 10; (2) calibrated transfer—\nthresholds retuned on PTB-XL fold 9; (3) oracle upper\nbound—optimal thresholds computed directly on fold 10. AU￾ROC is threshold-invariant and serves as the primary frozen￾generalization metric; F1 depends on operating-point choice\nand should be interpreted with threshold sensitivity in mind.\nL. Evaluation and Audit Metrics\nWe report standard prediction metrics per disease (F1,\nAUROC, AUPRC, sensitivity, specificity) and overall (Micro￾F1, Macro-F1), but the audit interpretation centers on four\n1\nIn the PTB-XL dataset, folds 9 and 10 were explicitly reserved for\nhuman evaluation; fold 10 underwent full cardiologist validation, while fold\n9 received at least one human-assessment pass. We therefore use fold 10 as\nthe primary external credibility set and treat fold 9 threshold retuning as a\npractical secondary analysis, following the recommended PTB-XL split [5].",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "4faf3019-64c7-4514-9970-e09cca2d714f",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4faf3019-64c7-4514-9970-e09cca2d714f",
+      "children": [
+        "777f60e1-5375-4c3c-9322-b5263bfdc06e"
+      ]
+    },
+    "777f60e1-5375-4c3c-9322-b5263bfdc06e": {
+      "id": "777f60e1-5375-4c3c-9322-b5263bfdc06e",
+      "message": {
+        "id": "777f60e1-5375-4c3c-9322-b5263bfdc06e",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.7705007,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 8 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "f9e62416-7e72-4ba2-bca3-446a3d911876",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f9e62416-7e72-4ba2-bca3-446a3d911876",
+      "children": [
+        "1a2a4092-ee27-40b6-9048-33362526bc5a"
+      ]
+    },
+    "1a2a4092-ee27-40b6-9048-33362526bc5a": {
+      "id": "1a2a4092-ee27-40b6-9048-33362526bc5a",
+      "message": {
+        "id": "1a2a4092-ee27-40b6-9048-33362526bc5a",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.783195,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 8\nTABLE II\nNOTATION QUICK REFERENCE\nSymbol Definition\nASS Anatomical Specificity Score: ∆AUROCtarget − maxc ∆AUROCc. Positive = target dominates all controls.\nPSS Pathway Sensitivity Score: AUROCclean − AUROCtarget. Raw clean-to-target drop.\nCDDC Cross-Dataset Direction Consistency: whether ASS has the same sign on CODE and PTB-XL.\nKAS Knowledge Alignment Score: supplementary disease-level pathway separation summary.\nL Linear interpolation (qualified operator; Protocol v2).\nL* Linear-interpolation controls with rate-normalization target (SBRAD hybrid protocol).\nZ Zero-masking operator (disqualified per validity battery). Retained for historical comparison.\nprototype summaries derived from matched perturbation re￾sults. These summaries are exploratory and designed for the\ncurrent five-disease panel.\nAnatomical Specificity Score (ASS) — the primary audit\nsummary — compares the target pathway against its strongest\nmatched control:\nASS(d, f) = ∆AUROCtarget(d, f) − max\nc∈Cf\n∆AUROCc(d).\nA positive ASS indicates the target perturbation is more\ndisruptive than any matched control; a negative ASS indicates\nat least one control is more disruptive.\nCross-Dataset Direction Consistency (CDDC) checks\nwhether the same pathway has the same effect direction on\nCODE and PTB-XL, reported with bootstrap-based direction\nstability. AUROC is threshold-invariant and serves as the\nprimary metric for cross-dataset comparisons.\nPathway Sensitivity Score (PSS) — a secondary summary\n— measures clean-to-target degradation:\nPSS(d, f) = AUROCclean(d) − AUROCtarget(d, f).\nKnowledge Alignment Score (KAS) — included in sup￾plementary material — summarizes whether expected positive\npathways dominate negative/control pathways for the same\ndisease. With only five diseases, interpretability is limited;\nKAS is reported for completeness but not used as a primary\nclaim.\nASS and CDDC (with bootstrap CIs and direction stability)\nare the two primary audit summaries used throughout this\npaper. PSS and KAS provide secondary context.\nM. Tiered Decision Rules for Claim Classification\nThe validity battery (Table XI; full preregistration block in\nSupplementary Material) demonstrates that pathway conclu￾sions depend critically on the perturbation operator. To prevent\noperator selection from becoming a post-hoc degree of free￾dom, we pre-specify a tiered claim-classification framework\nthat constrains what can be claimed under each pattern of\nevidence.\nOperator qualification. An operator is qualified if it passes\na preregistered validity screen assessing (i) signal continuity at\nperturbation boundaries (absence of hard-boundary artifacts),\n(ii) sensitivity to targeted physiological content (nonzero PSS\nfor known pathway-positive cases), and (iii) dose-response\nmonotonicity (larger windows produce larger effects). The\nvalidity battery (Table XI) qualifies linear interpolation as\nthe primary operator; zero-masking and beat-conditioned in￾painting are disqualified for pathway-specificity claims due to\nboundary artifacts and insensitivity, respectively.\nClaim tiers. For each disease-pathway pair, evidence is\nclassified into one of four tiers based on the qualified-operator\nresults:\n1) Supportive: At least one qualified operator yields ASS>\n0 with CI lower bound > 0 internally, AND external\nASS maintains the same direction with CI lower bound\n> 0.\n2) Conditional supportive: A qualified operator yields\nASS> 0 internally, but either (a) only one qualified\noperator is available (single-operator evidence), or (b)\nexternal CI crosses or approaches zero. Operator sign￾flip under disqualified operators does not invalidate\nconditional support but must be disclosed.\n3) Inconclusive: Qualified operators disagree in sign, or\nno qualified operator has been tested for this disease￾pathway pair.\n4) Failed: All qualified operators yield ASS≤ 0, OR the\nbest qualified operator yields ASS> 0 internally but\nexternal ASS reverses sign with CI excluding zero.\nThese tiers are assigned at the end of the audit (Section 3.5)\nand constrain the vocabulary used throughout the paper: “sup￾portive” and “conditional supportive” correspond to tiers 1\nand 2 respectively; “transfer-stressed” and “matched-control\nfailure” map to tiers 3 and 4. Tier boundaries are conservative\nby design—when only one operator is qualified (as in the\npresent study), the maximum achievable tier is conditional\nsupportive.\nIV. RESULTS\nA. Classification Context: The Limits of Discrimination Met￾rics\nBefore applying the perturbation audit, we establish base￾line classification performance to demonstrate that all models\nachieve high discrimination—and that this fact alone reveals\nnothing about pathway trustworthiness. This section is inten￾tionally brief; the core contribution begins with the matched￾control perturbation audit in Section 3.2.\nAll five diseases achieve AUROC> 0.98 on ResNet (Ta￾ble III), with Micro-F1= 0.736. SE-ResNet is statistically\nindistinguishable from ResNet (Macro-F1 ∆ = −0.0003,\np = 0.6158). The lightweight Transformer lags substantially\non rhythm disorders (SBRAD F1 0.284 vs 0.669; AFIB\nF1 0.595 vs 0.774) but preserves BBB detection (CRBBB\n∆ = −0.003, p = 0.299). XGBoost with timing-enriched\nClinical-MVP features (110D) closes approximately 55% of\nthe gap to ResNet (Micro-F1 0.654 vs 0.736).\nThe key observation for what follows: All five diseases\nappear “solved” by discrimination metrics alone (AUROC>\n0.98). But discrimination cannot distinguish a model that uses\nclinically meaningful signal regions from one that exploits\ncorrelated shortcuts. The matched-control perturbation audit\nis designed to make this distinction explicit.\nFull feature ablation, per-disease metrics, score distribu￾tion analysis, paired permutation tests, and the representation\nladder heatmap are in Supplementary Tables S11–S13 and\nSupplementary Figure 2.",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "777f60e1-5375-4c3c-9322-b5263bfdc06e",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "777f60e1-5375-4c3c-9322-b5263bfdc06e",
+      "children": [
+        "38e374de-3abe-4313-b48b-b45165b2c754"
+      ]
+    },
+    "38e374de-3abe-4313-b48b-b45165b2c754": {
+      "id": "38e374de-3abe-4313-b48b-b45165b2c754",
+      "message": {
+        "id": "38e374de-3abe-4313-b48b-b45165b2c754",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.8021383,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 9 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "1a2a4092-ee27-40b6-9048-33362526bc5a",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "1a2a4092-ee27-40b6-9048-33362526bc5a",
+      "children": [
+        "38acc6fa-0ee2-4c58-aca1-85a348b2b3b2"
+      ]
+    },
+    "38acc6fa-0ee2-4c58-aca1-85a348b2b3b2": {
+      "id": "38acc6fa-0ee2-4c58-aca1-85a348b2b3b2",
+      "message": {
+        "id": "38acc6fa-0ee2-4c58-aca1-85a348b2b3b2",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.816808,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 9\nTABLE III\n1D RESNET ON RAW SIGNALS: PER-DISEASE PERFORMANCE\nDisease F1 AUROC AUPRC Sens. Spec.\n1AVB 0.5731 0.9850 0.5423 0.6458 0.9903\nCRBBB 0.8080 0.9945 0.8149 0.8840 0.9913\nCLBBB 0.8029 0.9957 0.8214 0.8542 0.9948\nSBRAD 0.6690 0.9927 0.6439 0.7975 0.9897\nAFIB 0.7739 0.9902 0.7657 0.8065 0.9949\nOverall: Micro-F1: 0.7359, Macro-F1: 0.7254\nRaw-signal ResNet (1.2M parameters) serves as the primary\nperturbation-audit instrument. All diseases achieve AUROC\n> 0.98, providing a strong supporting model for the perturba￾tion protocol. Training is highly stable across seeds (within￾split Micro-F1 SD=0.0025; cross-split ∆ = +0.0061; Sup￾plementary Tables S5–S6). Patient-level bootstrap CIs confirm\nstable performance (Supplementary Table S4).\nTo contextualize the ResNet baseline and assess architec￾ture sensitivity, we trained two additional raw-signal models\nunder identical data splits and training protocols. SE-ResNet\n(1.3M parameters, channel-wise attention) is near-identical to\nResNet (Micro-F1 0.7361 vs 0.7359; Macro-F1 ∆ = −0.0003,\np = 0.6158; Supplementary Tables S2, S8). A lightweight 1D\nTransformer (1.42M parameters, 4 layers, patch-based self￾attention) underperforms ResNet overall (Micro-F1 0.6045 vs\n0.7359, ∆ = −0.131; Supplementary Tables S3, S9), but\nthe gap is disease-dependent: BBB detection is preserved\n(CRBBB F1 0.8048 vs 0.8080, CLBBB 0.8066 vs 0.8029; both\np ≥ 0.30), while rhythm disorders are substantially weaker\n(SBRAD 0.2844 vs 0.6690, AFIB 0.5848 vs 0.7739; both\np < 0.0002). This architecture-level contrast is informative\nfor the audit: morphology-pathway dependence appears robust\nto architecture choice, while rhythm-pathway dependence is\narchitecture-sensitive in this configuration.\nFigure 2 provides the same comparison as a compact visual\nsummary.\nThe ladder establishes that different diseases require dif￾ferent levels of signal access, and that different architectures\nrespond differently to the same information. Rhythm and\namplitude summaries are sufficient for rhythm and BBB\ndisorders respectively, while timing-enriched features and raw\nsignals are needed most clearly for 1AVB. Raw signals\nadd residual information beyond explicit proxies: ResNet\nremains higher than Clinical-MVP, especially for 1AVB and\nAFIB. Among raw-signal architectures, SE-ResNet is tied\nwith ResNet, while the tested Transformer shows architecture￾specific rhythm weakness. These patterns motivate the use of\nmultiple representation levels and architectures in the audit\nprotocol: if pathway conclusions were drawn from a single\nmodel, architecture-specific behavior could be mistaken for\ngeneral pathway dependence.\nB. The Case for Matched Controls: 1AVB as Anchor Demon￾stration\n1) Why Target-Only Perturbation Is Insufficient: The 1AVB\nReversal: Overall degradation:\nPaired probability effects (1AVB-positive samples, n =\n1, 030): See Supplementary Table S12 for the paired proba￾bility effects. PR-window occlusion increased false-negative\nprobability by +32.7% on 1AVB-positive cases (95% CI\n[0.3094, 0.3445]), with ST-segment and random-window con￾trols showing smaller effects (+13.2% and +20.4%).\n1AVB is the paper’s central demonstration case. PR￾window occlusion causes a large and clinically plausible AU￾ROC drop (∆ = −0.226). ST and random controls are much\nsmaller (−0.005/ − 0.034). A standard perturbation study—\nthe kind common in the explainability literature—would stop\nhere and conclude that the model depends specifically on PR￾segment information, a publishable positive result consistent\nwith clinical knowledge (PR>200ms defines 1AVB). Matched\nQRS occlusion reveals the reversal: on the same matched\ncohort, QRS occlusion is more disruptive than PR occlusion\n(∆AUROC= −0.351 vs −0.226), yielding CODE ASS=\n−0.125 (95% CI [−0.150, −0.100]). The target perturbation\nis large—but not larger than a matched control. Without\nmatched controls, 1AVB would have been misclassified as\na supportive pathway-specificity example. This reversal is\nnot an edge case: it is the expected outcome whenever the\nmodel’s decision function depends on a broader signal region\nthan the clinically expected one, and it demonstrates exactly\nwhy matched controls are not an optional refinement but a\nnecessary safeguard against false-positive pathway claims in\nperturbation-based explanation studies.\nThe paired analysis confirms that PR-segment occlusion\nincreases false-negative probability on true 1AVB cases by\n+32.7% with tight bootstrap CIs—so the pathway-sensitive\nbehavior is real, but it is not pathway-specific. ResNet re￾sponds to PR-region information for 1AVB, but this depen￾dence is entangled with other waveform content strongly\nenough that the audit protocol classifies 1AVB as a matched￾control failure, not as a supportive example.\n2) Converging Evidence: 1AVB Replication Across Opera￾tors, Architectures, and Datasets: A potential concern with\nzero-masking occlusion is that replacing signal segments with\nzeros creates “off-manifold” samples—inputs outside the dis￾tribution of natural ECG signals—which may induce artifacts\ninstead of revealing genuine feature reliance. To address this,\nwe compared three PR-window occlusion methods on the\nPTB-XL external validation set (fold 10, matched 1AVB+/−\nsubset, n = 155) [25], [45]:\n1) Zero-masking (original method): Replace PR window\nwith zeros\n2) Inpainting (continuity-preserving): Linear interpolation",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "38e374de-3abe-4313-b48b-b45165b2c754",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "38e374de-3abe-4313-b48b-b45165b2c754",
+      "children": [
+        "2afc1600-d684-498f-a7ff-1649252b9183"
+      ]
+    },
+    "2afc1600-d684-498f-a7ff-1649252b9183": {
+      "id": "2afc1600-d684-498f-a7ff-1649252b9183",
+      "message": {
+        "id": "2afc1600-d684-498f-a7ff-1649252b9183",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.8316102,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 10 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "38acc6fa-0ee2-4c58-aca1-85a348b2b3b2",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "38acc6fa-0ee2-4c58-aca1-85a348b2b3b2",
+      "children": [
+        "33def85c-986f-451c-8750-b682d44e06a6"
+      ]
+    },
+    "33def85c-986f-451c-8750-b682d44e06a6": {
+      "id": "33def85c-986f-451c-8750-b682d44e06a6",
+      "message": {
+        "id": "33def85c-986f-451c-8750-b682d44e06a6",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.839708,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 10\nTABLE IV\nPERFORMANCE COMPARISON ACROSS METHODS\nMethod Micro-F1 1AVB CRBBB CLBBB SBRAD AFIB\nRhythm-only (14D) 0.1547 0.0578 0.0950 0.0545 0.6447 0.5395\nAmplitude-only (84D) 0.2898 0.0662 0.6746 0.6461 0.1845 0.1524\nXGBoost Simple (98D) 0.5121 0.0808 0.6779 0.6675 0.6402 0.5643\nXGBoost Clinical-MVP (110D) 0.6542 0.4472 0.7243 0.7367 0.6274 0.6877\n1D ResNet (Raw) 0.7359 0.5731 0.8080 0.8029 0.6690 0.7739\nSE-ResNet-1D (Raw) 0.7361 0.5670 0.8086 0.8109 0.6674 0.7718\n1D Transformer (Raw) 0.6045 0.4021 0.8048 0.8066 0.2844 0.5848\n1AVB CRBBB CLBBB SBRAD AFIB\nDisease\nRhythm-only\nAmplitude-only\nXGBoost Simple\nClinical-MVP\nResNet\nSE-ResNet\nTransformer\nRepresentation / model\n0.06 0.10 0.05 0.64 0.54\n0.07 0.67 0.65 0.18 0.15\n0.08 0.68 0.67 0.64 0.56\n0.45 0.72 0.74 0.63 0.69\n0.57 0.81 0.80 0.67 0.77\n0.57 0.81 0.81 0.67 0.77\n0.40 0.80 0.81 0.28 0.58\nRepresentation ladder heatmap (F1)\n0.0\n0.1\n0.2\n0.3\n0.4\n0.5\n0.6\n0.7\n0.8\nF1 score\n0.0 0.2 0.4 0.6 0.8\nMicro-F1\n0.155\n0.290\n0.512\n0.654\n0.736\n0.736\n0.605\nOverall access\nFig. 2. Representation ladder showing per-disease F1 (left) and overall Micro-F1 (right) across seven methods spanning three representation levels—from\nrhythm-only features (14D) to raw-signal architectures. Higher values (darker) indicate stronger performance. See Table IV for exact values.\nTABLE V\nPR-WINDOW OCCLUSION: 1AVB PERFORMANCE DEGRADATION\nCondition 1AVB AUROC 1AVB F1 ∆AUROC\nClean (baseline) 0.9853 0.7826 –\nPR-window occluded (target) 0.7597 0.2200 −0.2256\nMatched QRS occluded (control) 0.6343 – −0.3514\nST-segment occluded (control) 0.9801 0.6193 −0.0052\nRandom-window occluded (control) 0.9516 0.4559 −0.0337\nbetween window endpoints, maintaining signal continu￾ity\n3) Gaussian noise (statistics-preserving): Replace with\nGaussian noise matching local signal power\nPR-window perturbation robustness was evaluated on PTB￾XL fold 10 across three methods with the following AUROC\ndegradation pattern:\nAll three perturbation methods (note small external sam￾ple, n = 155) substantially degrade 1AVB AUROC, pro￾viding converging evidence that PR-region information mat￾ters for 1AVB classification. Inpainting—the most continuity￾preserving method tested—causes the largest degradation\n(∆AUROC= −0.225), 2.2× larger than zero-masking\n(∆AUROC= −0.102). This pattern argues against zero￾masking artifacts being the sole explanation: a perturbation\nthat better preserves the surrounding waveform still produces\na strong effect. Gaussian noise causes the smallest degradation\n(∆AUROC= −0.052), suggesting that local signal statistics\nalone are insufficient and that temporal structure within the\nPR segment matters. But the matched-control PTB-XL audit\nstill fails specificity: PR inpainting drops AUROC by 0.224,\nwhereas matched QRS inpainting drops it by 0.476, yielding\nPTB-XL ASS= −0.251. The subsequent CODE-level validity\nbattery (Section 3.3) confirms this across three operators and\ntwo architectures: 1AVB ASS is negative under all conditions,\nmaking 1AVB the most robustly replicated matched-control\nfailure in the audit panel. We therefore treat the PTB-XL\nrobustness experiment as additional evidence that the model\nreacts to PR-region damage within an externally failed 1AVB\naudit, not as evidence of pathway specificity or an audit￾positive result.\n3) Operator Qualification: The Perturbation-Validity Bat￾tery for QRS-Pathway Audits: Before extending the audit to\nthe remaining disease-pathway pairs, we address a method￾ological question raised by the 1AVB case: does the perturba￾tion operator itself affect matched-control conclusions? To test\nthis, we applied a preregistered 8-run validity battery compar-",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "2afc1600-d684-498f-a7ff-1649252b9183",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2afc1600-d684-498f-a7ff-1649252b9183",
+      "children": [
+        "83fd9585-0578-4e92-a54b-2b4436ca2947"
+      ]
+    },
+    "83fd9585-0578-4e92-a54b-2b4436ca2947": {
+      "id": "83fd9585-0578-4e92-a54b-2b4436ca2947",
+      "message": {
+        "id": "83fd9585-0578-4e92-a54b-2b4436ca2947",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.8803005,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 11 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "33def85c-986f-451c-8750-b682d44e06a6",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "33def85c-986f-451c-8750-b682d44e06a6",
+      "children": [
+        "4718270b-4a28-4e56-8f4e-947f0da4b2fe"
+      ]
+    },
+    "4718270b-4a28-4e56-8f4e-947f0da4b2fe": {
+      "id": "4718270b-4a28-4e56-8f4e-947f0da4b2fe",
+      "message": {
+        "id": "4718270b-4a28-4e56-8f4e-947f0da4b2fe",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.8905456,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 11\nTABLE VI\nQRS OCCLUSION: CLBBB PERFORMANCE UNDER TWO PERTURBATION\nOPERATORS (MATCHED SUBSET n = 2, 566)\nCondition Operator CLBBB AUROC ∆AUROC\nClean (baseline) – 0.992 –\nQRS-perturbed (target) Zero 0.658 −0.334\nST-perturbed (control) Zero 0.286 −0.706\nRandom-perturbed (control) Zero 0.991 −0.002\nQRS-perturbed (target) Linear 0.670 −0.322\nST-perturbed (control) Linear 0.827 −0.166\nRandom-perturbed (control) Linear 0.990 −0.002\ning three perturbation operators—zero-masking, linear interpo￾lation, and beat-conditioned inpainting—on CLBBB/QRS and\n1AVB/PR using ResNet and SE-ResNet. The full preregistra￾tion block (hypotheses, endpoints, pass/fail criteria, analysis\nskeleton) is provided in the Supplementary Material.\nWhy operator qualification matters. The validity battery\nreveals that the perturbation operator is an important influence\non pathway conclusions. Under zero-masking, CLBBB ASS=\n−0.010 (95% CI [−0.011, −0.008])—appearing to falsify\nQRS pathway specificity. Under beat-conditioned inpainting,\nall deltas approach zero (CLBBB ASS= −0.011). Under\nlinear interpolation, CLBBB ASS= +0.083 (95% CI [0.073,\n0.094]). The same disease-pathway pair yields three different\nconclusions depending solely on the perturbation operator.\nThis is not a failure of the audit protocol—it is a diagnostic:\nthe operator that creates the least artifact (linear interpolation,\nwhich preserves signal continuity) produces the most inter￾pretable behavior, while zero-masking’s hard-boundary dis￾continuity inflates ST-segment disruption by 4.3× (∆AUROC\n0.706 vs 0.166). We therefore qualify linear interpolation\nas the primary operator and disqualify zero-masking and\nbeat-inpainting for pathway-specificity claims. All subsequent\npathway conclusions are operator-qualified (tiered decision\nrules, Section 2.11).\nThe validity battery results and the subsequent systematic\npanel are organized as follows:\nQRS occlusion → BBB (matched subset: 3,184 positive\n+ 3,184 negative, 209 failed R-peak detection): For CRBBB\nand CLBBB, a 160ms window centered at the R-peak (QRS\ncomplex) was perturbed. CLBBB was tested under both zero￾masking and linear interpolation (primary operator); CRBBB\nwas tested under zero-masking only. ST-segment and random￾window controls follow the same protocol as the PR occlusion\nexperiment. A preregistered validity battery (Table XI) addi￾tionally tested beat-conditioned inpainting.\nOperator comparison (CLBBB, matched subset n =\n2, 566): The perturbation operator critically affects the\nmatched-control conclusion. Under zero-masking, ST-segment\ndisruption is massively inflated: ST ∆AUROC= 0.706 vs QRS\ntarget ∆AUROC= 0.334, yielding ASS= −0.010 (95% CI\n[−0.011, −0.008]). This occurs because zero-masking creates\na sharp signal discontinuity at the window boundary—an\nunnatural artifact that convolutional filters respond to strongly.\nLinear interpolation eliminates this boundary artifact: ST\n∆AUROC drops to 0.166 while QRS target ∆AUROC remains\nTABLE VII\nRR REGULARIZATION: AFIB PERFORMANCE DEGRADATION\nCondition AFIB AUROC ∆AUROC\nClean 0.980 –\nRR-regularized 0.973 −0.007\nBeat-permuted (control) 0.972 −0.008\nstable at 0.322, yielding ASS= +0.083 (95% CI [0.073,\n0.094]). Beat-conditioned inpainting is too conservative to be\nuseful—all deltas near zero (QRS target ∆AUROC= 0.0002,\nST ∆AUROC= 0.0007, ASS= −0.011). We therefore adopt\nlinear interpolation as the primary operator for all perturbation\nanalyses: it preserves signal continuity, produces anatomically\ninterpretable ASS values, and avoids both the boundary arti￾facts of zero-masking and the insensitivity of beat-inpainting.\nRR regularization → AFIB (matched subset: 1,256 posi￾tive + 1,256 negative, 113 failed): Each heartbeat was time￾warped to the median RR interval. This preserves per-beat\nQRS morphology while destroying RR-interval irregularity.\nBeat-order permutation served as a functional control (pre￾serves RR interval set but destroys temporal order).\nPaired probability effects (AFIB-positive samples): RR￾regularized ∆Prob= +0.083 [0.075, 0.090].\nQRS occlusion substantially reduces BBB detection on\nCODE. Under the original zero-masking protocol, CRBBB\nAUROC drops from 0.991 to 0.494 (∆ = −0.497) and\nCLBBB from 0.991 to 0.645 (∆ = −0.346), consistent with\nstrong internal sensitivity to QRS-complex information. The\nsubsequent validity battery (Section 3.3, Table XI) focused\noperator comparison on CLBBB: under linear interpolation,\nQRS-target ∆AUROC= 0.322 (stable across operators), while\nST-control ∆AUROC drops from 0.706 (zero-masking arti￾fact) to 0.166 (linear interpolation), transforming CLBBB ASS\nfrom −0.010 to +0.083. This already hints that not all BBB\npathway claims are equally clean, and that the perturbation\noperator is a first-order variable. AFIB shows minimal RR￾dependence: RR regularization degraded AFIB AUROC by\nonly 0.007, and the beat-permutation control showed nearly\nidentical degradation (∆ = −0.008). This near-null result,\nindistinguishable from the control, suggests that RR irregu￾larity alone is not the dominant pathway for AFIB detection\nin ResNet. In summary, the internal perturbation results sepa￾rate a strong morphology-sensitive group (BBB), an RR-null\nAFIB result, and a 1AVB result whose PR sensitivity already\nfails matched-control specificity. Later external analysis shows\nthat CLBBB retains QRS specificity under transfer, whereas\nCRBBB does not.\n4) AFIB Atrial-Window Audit: AFIB detection in ResNet\nrelies primarily on atrial-window information, not RR ir￾regularity (∆AUROC −0.112 vs −0.007, PTB-XL). Among\nthe five diseases, AFIB is the clearest case where the audit\nchallenged a simplified assumption and redirected attention\ntoward a more informative pathway. The conventional view\nis that AFIB classifiers depend primarily on RR irregular￾ity. Our results contradict this. RR regularization produced\nnear-null degradation (∆AUROC= −0.007), indistinguishable\nfrom the beat-permutation control (∆AUROC= −0.008).",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "83fd9585-0578-4e92-a54b-2b4436ca2947",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "83fd9585-0578-4e92-a54b-2b4436ca2947",
+      "children": [
+        "850ded8f-e132-46d0-8b31-250246c6ef70"
+      ]
+    },
+    "850ded8f-e132-46d0-8b31-250246c6ef70": {
+      "id": "850ded8f-e132-46d0-8b31-250246c6ef70",
+      "message": {
+        "id": "850ded8f-e132-46d0-8b31-250246c6ef70",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.903886,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\n<PARSED TEXT FOR PAGE: 12 / 28>",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "4718270b-4a28-4e56-8f4e-947f0da4b2fe",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4718270b-4a28-4e56-8f4e-947f0da4b2fe",
+      "children": [
+        "b42afc3f-6041-46e3-b1ca-2a60efce2632"
+      ]
+    },
+    "b42afc3f-6041-46e3-b1ca-2a60efce2632": {
+      "id": "b42afc3f-6041-46e3-b1ca-2a60efce2632",
+      "message": {
+        "id": "b42afc3f-6041-46e3-b1ca-2a60efce2632",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.9126148,
+        "update_time": null,
+        "content": {
+          "content_type": "tether_quote",
+          "url": "file_00000000e6047207867518f908c7c5e6",
+          "domain": "main.pdf",
+          "text": "fileciteturn0file0\n\nIEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS, VOL. XX, NO. XX, MONTH 2025 12\n−0.3 −0.2 −0.1 0.0 0.1 0.2 0.3 0.4 0.5\nASS\n1AVB\nCRBBB\nCLBBB\nSBRAD\nAFIB\nreplicated failure\ntransfer-stressed\nstrong support\nnarrow support\nstrong support\ncircle = CODE square = PTB-XL\nCODE vs PTB-XL transfer summary\nFig. 3. Cross-dataset transfer summary comparing CODE-15% (circles) and PTB-XL (squares) ASS (Anatomical Specificity Score) values for each disease￾pathway pair. Positive ASS indicates target perturbation dominates controls; negative ASS indicates a control is more disruptive. Preserved direction across\ndatasets indicates externally consistent pathway specificity; divergence indicates transfer stress.\nThis indicates that RR irregularity alone is not the dominant\nAFIB pathway for ResNet. By contrast, atrial-window inpaint￾ing caused substantially larger degradation on both PTB-XL\n(∆AUROC= −0.112) and CODE (∆AUROC= −0.142), with\nsmall matched controls. The atrial-window effect replicated\nacross both datasets (PTB-XL ASS= 0.093, CODE ASS=\n0.129, CDDC= 1.0). Important update: The subsequent\nhomogeneous linear-interpolation experiment (Section 3.3, Ta￾ble X) revealed that these positive zero-masking ASS values\nwere operator artifacts. Under the qualified linear-interpolation\noperator, CODE AFIB atrial-window ASS is negative across\nall three architectures (−0.200 / −0.229 / −0.402), with very\nlow PSS (0.034–0.075). The zero-masking positive pattern was\nproduced by hard-boundary discontinuities, not by genuine\natrial-window information use. This case is now classified as\nFailed under the qualified operator, and it serves as a caution￾ary result: directionally consistent, cross-dataset positive ASS\npatterns can be operator artifacts.\nThe detailed experiment follows below.\nMethods: Because RR regularization produced only min￾imal AFIB degradation, we next tested whether AFIB per￾formance was more sensitive to perturbation of atrial-window\ninformation than to nearby control regions. The atrial win￾dow was defined as [QRS onset−220ms, QRS onset−40ms],\ntargeting the P-wave region in sinus rhythm and fibrillatory\nactivity in AFIB. Three perturbation methods were applied:\n(1) zero-masking (replacing the target window with zeros),\n(2) linear inpainting (interpolating between window bound￾aries to preserve signal continuity), and (3) band-limited\nTABLE VIII\nAFIB ATRIAL PERTURBATION ON PTB-XL FOLD 10\nCondition AFIB AUROC ∆AUROC\nClean (baseline) 0.966 –\nAtrial Inpainting 0.854 −0.112\nST Control (zero) 0.961 −0.006\nAtrial Zero-mask 0.936 −0.030\nAtrial Gaussian noise 0.942 −0.024\nGaussian noise (matching local signal power, 0.5–40 Hz).\nTwo anatomical controls were used: an ST-segment win￾dow [QRS onset+40ms, QRS onset+200ms] and a shifted\npre-QRS control [QRS onset−360ms, QRS onset−180ms].\nPaired permutation tests (5,000 iterations) compared pertur￾bation conditions on the identical matched sample set. The\nprimary endpoint was the paired AUROC difference between\natrial inpainting and ST-segment control.\nPTB-XL fold 10 (matched AFIB+/− subset, n = 293, 144\nAFIB+, 149 AFIB−, 293 valid, 0 dropped):\nPrimary endpoint: Atrial Inpainting vs ST Control, D =\n−0.106 [−0.147, −0.072], p = 0.0002 (5,000 paired permu￾tations, 1,000 bootstrap).\nCODE-15% test set (matched AFIB+/− subset, n =\n2, 385, 1,171 AFIB+,\nThe file is too long and its contents have been truncated.",
+          "title": "main.pdf",
+          "tether_id": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "command": "context_stuff",
+          "is_visually_hidden_from_conversation": false,
+          "retrieval_turn_number": 0,
+          "retrieval_file_index": 0,
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "850ded8f-e132-46d0-8b31-250246c6ef70",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "850ded8f-e132-46d0-8b31-250246c6ef70",
+      "children": [
+        "01252996-6dbb-4689-9d8b-4845997a833f"
+      ]
+    },
+    "01252996-6dbb-4689-9d8b-4845997a833f": {
+      "id": "01252996-6dbb-4689-9d8b-4845997a833f",
+      "message": {
+        "id": "01252996-6dbb-4689-9d8b-4845997a833f",
+        "author": {
+          "role": "tool",
+          "name": "file_search",
+          "metadata": {}
+        },
+        "create_time": 1778472297.9245133,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "The file contents provided above are truncated/partial snippets. The complete content for these files IS accessible via querying.\n\nIf the user asks a question related to these files, and the provided snippets do not clearly answer it, you **MUST** use the `file_search` tool to search the full document contents before responding.\n\n## How to invoke the file_search tool\nIf the user's query isn't sufficiently answered by the provided snippets, parsed text, or images, you should invoke `file_search.msearch`.\nTo search the full content of the available files, you **must** send one message with recipient `to=file_search.msearch` in the analysis channel. Your message should be structured exactly as follows:\n```\n{\n  'queries': ['Example query 1', 'Example query 2']  // List of up to five queries to search for.\n}\n```\n\nCarefully balance the number of `file_search` calls and the quality of your response with the latency incurred by `file_search` calls.\n\nImportant guidelines for query formatting:\n- Your message must be a valid JSON object. Do not include any extraneous text, backticks, markdown formatting, or comments beyond what is shown.\n- The `queries` field must be a list of strings.\n- One of the queries **MUST** exactly match the user's original question, but stripped of any extraneous details, and with ambiguous references clearly resolved using context from the conversation. It **MUST** be a complete sentence.\n- Even if you suspect the user meant something else, one query **MUST** still be their original question.\n\n## How to handle results from file_search\nThe file search tool will respond with the relevant search results from the full files. After you receive these results:\n- Carefully evaluate each result to determine its relevance and quality.\n- Use the high-quality and relevant results to inform your answer to the user's question.\n- When possible, reuse information from prior file_search results and avoid repeating identical queries.\n\n## Tool usage instructions and ordering\nWhen the user asks a question, carefully consider whether the provided snippets sufficiently answer the query, whether you need to invoke `file_search.msearch`, or another available tool (such as `web`, if available) should be used instead.\n\nTool-ordering Guidelines:\n1. For queries related to uploaded files, if snippets are insufficient, strongly prefer invoking `file_search.msearch` over other tools.\n    - Avoid using `web.run`, `python` analysis, or any other tools until you have either:\n        - Confirmed with high confidence the answer is not in the files, or\n        - Have high confidence `file_search_tool` queries are not sufficient to answer the query.\n2. Avoid usage of `web_search/web.run` for queries related to uploaded files\n    - Carefully consider whether the user's query is better answered by web search results rather than available snippets or results from `file_search_tool`.\n    - Unless the user's query is clearly unrelated to the uploaded files, prefer using `file_search.msearch`. You can always follow up with a web search if necessary for a more complete response.\n3. Avoid using `python` unless necessary or requested by user.\n    - If the user's query is answerable from the parsed text and images from the uploaded files, or from `file_search_tool`, do not invoke `python`.\n\nAlways keep this instruction in mind for the rest of the conversation, as the user may reference these files or ask related questions later on."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_visually_hidden_from_conversation": false,
+          "command": "prompt",
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "parent_id": "b42afc3f-6041-46e3-b1ca-2a60efce2632",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b42afc3f-6041-46e3-b1ca-2a60efce2632",
+      "children": [
+        "9e45fd55-c45f-405f-8e5f-f27c225b8ee2"
+      ]
+    },
+    "9e45fd55-c45f-405f-8e5f-f27c225b8ee2": {
+      "id": "9e45fd55-c45f-405f-8e5f-f27c225b8ee2",
+      "message": {
+        "id": "9e45fd55-c45f-405f-8e5f-f27c225b8ee2",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778472297.9348505,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "01252996-6dbb-4689-9d8b-4845997a833f",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "01252996-6dbb-4689-9d8b-4845997a833f",
+      "children": [
+        "14287f20-a945-405e-bb79-83c4eb117e50"
+      ]
+    },
+    "14287f20-a945-405e-bb79-83c4eb117e50": {
+      "id": "14287f20-a945-405e-bb79-83c4eb117e50",
+      "message": {
+        "id": "14287f20-a945-405e-bb79-83c4eb117e50",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778472297.475403,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "有区别，而且这篇论文里两者承担的是**不同层级的证据**。\n\n你可以把它理解成：\n\n- **Δprob**：单个样本层面的“置信度变化”\n- **ΔAUROC**：整个数据集层面的“分类能力变化”\n\n论文最终主要依赖的是 **ΔAUROC / ASS**，而 Δprob 更像是一个辅助的局部现象验证。\n\n---\n\n# 1. Δprob 是什么？\n\n论文定义：\n\n\\[\n\\Delta\\text{prob}\n=\np(\\text{1AVB}|\\text{clean})\n-\np(\\text{1AVB}|\\text{occluded})\n\\]\n\n意思是：\n\n对于某个阳性样本：\n\n- 原始 ECG：\n  - 模型预测 1AVB 概率 = 0.92\n- 遮挡 PR segment 后：\n  - 概率变成 0.55\n\n那么：\n\n\\[\n\\Delta prob = 0.92-0.55=0.37\n\\]\n\n说明：\n\n> 遮挡 PR 区域后，模型对“这是1AVB”的信心下降了 37%。\n\n它反映的是：\n\n> 模型对某区域的“依赖程度”。\n\n这是**sample-level / probability-level**指标。\n\n---\n\n# 2. ΔAUROC 是什么？\n\n论文真正核心的是：\n\n\\[\n\\Delta AUROC\n=\nAUROC_{clean}\n-\nAUROC_{perturbed}\n\\]\n\n比如：\n\n- clean AUROC = 0.985\n- PR occlusion 后 = 0.760\n\n则：\n\n\\[\n\\Delta AUROC = 0.225\n\\]\n\n它表示：\n\n> 遮挡后，整个分类器的区分能力下降了多少。\n\n这是：\n\n- dataset-level\n- discrimination-level\n- 全局性能指标\n\n---\n\n# 3. 两者为什么不能等价？\n\n这是关键。\n\n因为：\n\n> 概率变化 ≠ 分类能力变化\n\n举个例子。\n\n---\n\n## 情况 A：Δprob 很大，但 AUROC 几乎不变\n\n假设：\n\n所有阳性样本：\n\n- 从 0.99 → 0.80\n\n所有阴性样本：\n\n- 从 0.01 → 0.00\n\n那么：\n\n- Δprob 很大\n- 但排序关系没变\n\n模型仍然：\n\n- 阳性 > 阴性\n\n于是：\n\n- AUROC 几乎不变\n\n---\n\n## 情况 B：Δprob 不大，但 AUROC 大幅下降\n\n假设：\n\n阳性：\n\n- 0.60 → 0.52\n\n阴性：\n\n- 0.48 → 0.50\n\n虽然每个样本只变一点：\n\n但：\n\n- 排序开始混乱\n- 阳性阴性大量重叠\n\n于是：\n\n- AUROC 明显下降\n\n---\n\n所以：\n\n# Δprob 关注：\n\n“模型信心是否变化”\n\n# ΔAUROC 关注：\n\n“模型判别能力是否被破坏”\n\n这是两个不同层面的东西。\n\n---\n\n# 4. 为什么论文主要汇报 ΔAUROC？\n\n因为这篇论文的目标不是：\n\n> “模型会不会看某个区域”\n\n而是：\n\n> “某个区域是否真正支撑了疾病判别能力”\n\n这是全文最核心的思想。\n\n论文反复强调：\n\n> sensitivity is not specificity\n\n即：\n\n- 模型对某区域敏感\n≠\n- 模型真正依赖该区域完成诊断\n\n所以他们最终采用：\n\n\\[\nASS\n=\n\\Delta AUROC_{target}\n-\n\\max(\\Delta AUROC_{control})\n\\]\n\n也就是：\n\n# “目标区域造成的性能下降”\n\n是否：\n\n# “比所有 matched control 更大”\n\n这已经是：\n\n- pathway specificity\n- anatomical specificity\n- diagnostic reliance\n\n层面的东西了。\n\n而不是简单的：\n\n“模型概率掉了多少”。\n\n---\n\n# 5. 那为什么还要报告 Δprob？\n\n因为 Δprob 有一个优点：\n\n## 它更直观\n\n比如论文这里：\n\n> PR-window occlusion increased false-negative probability by +32.7%\n\n读者一下就能理解：\n\n- 遮挡 PR 后\n- 模型明显没那么敢判 1AVB 了\n\n这是一种：\n\n- local evidence\n- intuitive evidence\n- sanity check\n\n但它不能证明：\n\n# “PR 比 QRS 更重要”\n\n因为：\n\nQRS 可能让概率掉得更多。\n\n所以最终还是要看：\n\n\\[\n\\Delta AUROC_{PR}\n\\quad vs \\quad\n\\Delta AUROC_{QRS}\n\\]\n\n这才是 matched-control audit 的核心。\n\n---\n\n# 6. 这篇论文里的逻辑链\n\n论文其实是：\n\n## 第一层：Δprob\n\n证明：\n\n> “PR 被遮挡后，模型确实会受影响”\n\n即：\n\n- pathway-sensitive behavior is real\n\n---\n\n## 第二层：ΔAUROC\n\n证明：\n\n> “QRS 遮挡影响更大”\n\n即：\n\n\\[\n\\Delta AUROC_{QRS}\n>\n\\Delta AUROC_{PR}\n\\]\n\n---\n\n## 第三层：ASS\n\n于是：\n\n\\[\nASS < 0\n\\]\n\n说明：\n\n> PR dependence 存在，但不具有 anatomical specificity。\n\n这是全文最关键的结论。\n\n---\n\n# 7. 用一句话总结\n\n这篇论文里：\n\n- **Δprob** 用来证明：\n  - “模型会受到该区域影响”\n\n- **ΔAUROC** 用来证明：\n  - “该区域是否真正支撑分类能力”\n\n而：\n\n- **ASS**\n  - 才是最终 pathway audit 的核心指标。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5",
+          "search_result_groups": [],
+          "request_id": "d9023f96-e639-4dfd-b587-11925d450301",
+          "message_type": "next",
+          "turn_exchange_id": "b805624d-cbfa-424a-af73-13454b06fefd",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "9e45fd55-c45f-405f-8e5f-f27c225b8ee2",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "9e45fd55-c45f-405f-8e5f-f27c225b8ee2",
+      "children": []
+    }
+  },
+  "current_node": "14287f20-a945-405e-bb79-83c4eb117e50"
+}

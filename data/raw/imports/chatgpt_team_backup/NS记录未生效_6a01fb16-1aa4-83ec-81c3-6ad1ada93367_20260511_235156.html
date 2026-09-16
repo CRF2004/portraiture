@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS记录未生效</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>NS记录未生效</h1>
+            <div class="metadata">ID: 6a01fb16-1aa4-83ec-81c3-6ad1ada93367 | 2026/5/11 23:51:56</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 23:51:54</span>
+                </div>
+                <div class="message-content">""背景<br>服务器：阿里云，IP 8.134.135.36<br>Viora 已部署，pm2 管理，运行在 localhost:5050<br>cloudflared v2026.3.0 已安装并运行（pm2 管理），Tunnel Token 已配置，4 个边缘节点已连接（sjc06, sjc07, sjc01, lax01）<br>域名 filegear-sg.me 注册后 DNS 由 Listen53 管理（NS: ns01la.ggff.net, nsla01.listen53.net 等）<br>已完成的配置<br>Cloudflare Dashboard：域名 filegear-sg.me 已添加，状态显示 "active"<br>NS 记录：在注册商处设置为 Cloudflare 提供的 NS（annalise.ns.cloudflare.com, merlin.ns.cloudflare.com）<br>CNAME 记录：在 Cloudflare Dashboard 添加：<br>类型：CNAME<br>名称：viora<br>目标：e338559e-bdb0-439a-afc1-ae65e367604f.cfargotunnel.com<br>代理：Proxied (橙色云)<br>cloudflared 配置：~/.cloudflared/cloudflared-config.yml 包含 ingress 规则，将 viora.filegear-sg.me 转发到 http://localhost:5050<br>Tunnel Token：从 Cloudflare 获取，已保存到 ~/.cloudflared/tunnel-token<br>当前 DNS 查询结果<br>code<br> Copy<br># NS 记录（仍然是 Listen53，不是 Cloudflare）<br>dig filegear-sg.me NS → ns01la.ggff.net, nsla01.listen53.net, nsla02.listen53.net, ns02la.ggff.net<br><br># .me TLD 权威服务器确认<br>dig @a0.me.afilias-nst.info filegear-sg.me NS → nsla01.listen53.net, nsla02.listen53.net<br><br># Cloudflare DNS 服务器返回 "Not Authoritative"<br>dig @annalise.ns.cloudflare.com filegear-sg.me SOA → REFUSED (Not Authoritative)<br><br># viora 子域名无解析结果<br>dig viora.filegear-sg.me → (empty)<br>核心问题<br>.me 根服务器显示的 NS 记录仍然是 Listen53，不是 Cloudflare。 说明 NS 记录修改在注册商侧尚未生效。Cloudflare DNS 对该域名返回 "Not Authoritative"，证明 Cloudflare 没有获得这个域名的权威解析权。<br><br>用户在注册商处写的 NS 记录是 Cloudflare 的，但 .me TLD 层面仍然指向 Listen53（a0.me.afilias-nst.info 返回的仍然是 nsla01.listen53.net）。NS 记录传播可能需要更长时间，或者注册商侧的修改没有正确提交。""<br>我该怎么办</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 23:51:56</span>
+                </div>
+                <div class="message-content">你现在的问题本质上不是 Tunnel、不是 cloudflared、也不是 Viora。<br><br>真正的问题只有一个：<br><br>&gt; <code>.me</code> 顶级域的权威 NS 还没有切换到 Cloudflare。<br><br>所以现在：<br><br>- Cloudflare Dashboard 虽然显示 active<br>- tunnel 也正常<br>- CNAME 也配置好了<br>- cloudflared ingress 也没问题<br><br>但：<br><br>&gt; 外部世界根本没有向 Cloudflare 查询你的域名。<br><br>而是仍然向 Listen53 查询。<br><br>因此 <code>viora.filegear-sg.me</code> 永远不会生效。<br><br>---<br><br># 你当前状态的关键证据<br><br>你已经验证了：<br><br><pre><code class="language-bash">dig @a0.me.afilias-nst.info filegear-sg.me NS</code></pre><br><br>返回：<br><br><pre><code class="language-text">nsla01.listen53.net
+nsla02.listen53.net</code></pre><br><br>这说明：<br><br>## .me 注册局（Registry）还没更新 NS 委派<br><br>这是最终权威。<br><br>而：<br><br><pre><code class="language-bash">dig @annalise.ns.cloudflare.com filegear-sg.me SOA</code></pre><br><br>返回：<br><br><pre><code class="language-text">REFUSED (Not Authoritative)</code></pre><br><br>说明：<br><br>## Cloudflare 还没真正接管这个域名<br><br>---<br><br># 所以你现在应该做什么<br><br>分三种情况。<br><br>---<br><br># 情况 1（最常见）：注册商根本没提交成功<br><br>这是最可能的。<br><br>很多亚洲小注册商 / 二级 reseller：<br><br>- UI 显示修改成功<br>- 实际没提交 Registry<br>- 或者需要额外点击 Save / Apply<br>- 或者后台人工审核<br><br>尤其你这个 Listen53 很像 reseller DNS。<br><br>---<br><br># 第一件事：重新检查注册商后台<br><br>你需要确认：<br><br>## 1. NS 是否是：<br><br><pre><code class="language-text">annalise.ns.cloudflare.com
+merlin.ns.cloudflare.com</code></pre><br><br>必须完全一致。<br><br>不能：<br><br>- 多空格<br>- 拼错<br>- 少 <code>.com</code><br>- 有隐藏旧 NS<br><br>---<br><br>## 2. 是否有 “提交 / 保存 / 应用” 按钮<br><br>很多面板：<br><br>- 修改后只是暂存<br>- 还要 Apply<br><br>---<br><br>## 3. 是否同时存在：<br><br>- “自定义 DNS”<br>- “DNS Hosting”<br>- “Child Nameserver”<br>- “Glue Record”<br><br>有些注册商会混淆。<br><br>你真正需要改的是：<br><br># 域名 NS 委派（Delegation）<br><br>不是 DNS Record。<br><br>---<br><br># 第二件事：等<br><br><code>.me</code> 的 NS 更新：<br><br>通常：<br><br>- 5 分钟 ～ 2 小时<br><br>偶尔：<br><br>- 24 小时<br><br>极少：<br><br>- 48 小时<br><br>但：<br><br>&gt; 如果 6~12 小时后 Registry 仍然没变，大概率是注册商没提交成功。<br><br>---<br><br># 你应该持续观察这个命令<br><br>每隔 10~20 分钟：<br><br><pre><code class="language-bash">dig @a0.me.afilias-nst.info filegear-sg.me NS</code></pre><br><br>只有当它变成：<br><br><pre><code class="language-text">annalise.ns.cloudflare.com
+merlin.ns.cloudflare.com</code></pre><br><br>你整个系统才会瞬间恢复正常。<br><br>---<br><br># 一旦 NS 生效，会发生什么<br><br>Cloudflare 会开始 authoritative。<br><br>然后：<br><br><pre><code class="language-bash">dig viora.filegear-sg.me</code></pre><br><br>会返回：<br><br><pre><code class="language-text">xxx.cfargotunnel.com</code></pre><br><br>然后：<br><br><pre><code class="language-bash">curl https://viora.filegear-sg.me</code></pre><br><br>就能访问。<br><br>---<br><br># 你现在不用再折腾的东西<br><br>这些都已经没问题：<br><br>## 不用动：<br><br>- cloudflared tunnel<br>- pm2<br>- ingress<br>- localhost:5050<br>- CNAME<br>- proxy<br>- token<br><br>因为：<br><br>&gt; 你已经建立了 Tunnel 到 Cloudflare Edge。<br><br>只是 DNS 还没把流量导过去。<br><br>---<br><br># 你现在可以额外验证的一件事<br><br>直接验证 Tunnel 是否正常：<br><br><pre><code class="language-bash">cloudflared tunnel info</code></pre><br><br>应该能看到：<br><br>- 4 connectors healthy<br>- active<br><br>以及：<br><br><pre><code class="language-bash">curl http://localhost:5050</code></pre><br><br>应该有响应。<br><br>如果这两个正常：<br><br>&gt; 你只差 NS 生效。<br><br>---<br><br># 如果 12 小时还没变怎么办<br><br>直接联系注册商客服：<br><br>告诉他们：<br><br><pre><code class="language-text">The registry-level NS delegation for filegear-sg.me
+has not been updated.
+
+Current authoritative NS at .me registry:
+nsla01.listen53.net
+nsla02.listen53.net
+
+Expected:
+annalise.ns.cloudflare.com
+merlin.ns.cloudflare.com
+
+Please verify the nameserver delegation was successfully submitted to the registry.</code></pre><br><br>这是最关键的一句话：<br><br>&gt; verify the nameserver delegation was successfully submitted to the registry<br><br>因为你现在的问题就在 Registry Delegation。<br><br>---<br><br># 最后给你一个判断标准<br><br>## 现在（失败状态）<br><br><pre><code class="language-bash">dig @a0.me.afilias-nst.info filegear-sg.me NS</code></pre><br><br>结果：<br><br><pre><code class="language-text">listen53</code></pre><br><br>→ 还没切换。<br><br>---<br><br>## 正确状态（成功）<br><br><pre><code class="language-text">annalise.ns.cloudflare.com
+merlin.ns.cloudflare.com</code></pre><br><br>一旦出现：<br><br>- Cloudflare 立即 authoritative<br>- Tunnel 立即生效<br>- viora 子域名立即可访问<br><br>这是整个问题的唯一关键节点。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 09:36:06</span>
+                </div>
+                <div class="message-content">[object Object]<br>应该选哪个</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 09:36:09</span>
+                </div>
+                <div class="message-content">选：<br><br># Published application<br><br>也就是左上角那个。<br><br>因为你现在的目标是：<br><br>&gt; 把服务器上的 <code>localhost:5050</code> 暴露成公网网站  <br>&gt; <code>https://viora.filegear-sg.me</code><br><br>这正是：<br><br><pre><code class="language-text">Publish local applications to the Internet via public hostname</code></pre><br><br>对应的场景。<br><br>---<br><br>你后面应该这样填：<br><br>## Public Hostname<br><br><pre><code class="language-text">viora.filegear-sg.me</code></pre><br><br>---<br><br>## Service Type<br><br><pre><code class="language-text">HTTP</code></pre><br><br>---<br><br>## URL<br><br><pre><code class="language-text">localhost:5050</code></pre><br><br>或者：<br><br><pre><code class="language-text">http://localhost:5050</code></pre><br><br>---<br><br># 然后保存<br><br>Cloudflare 会自动：<br><br>- 创建 tunnel route<br>- 自动生成 DNS（通常是 CNAME 到 cfargotunnel）<br>- 绑定 ingress<br><br>这比你手写 ingress + DNS 更稳定。<br><br>---<br><br># 你现在其实有两种方案<br><br>## 方案 A（推荐）<br><br>完全使用 Cloudflare Dashboard 管理：<br><br>- Published application<br>- 自动 DNS<br>- 自动 route<br><br>这样：<br><br>甚至可以不写：<br><br><pre><code class="language-yaml">ingress:</code></pre><br><br>---<br><br>## 方案 B（你现在部分在做）<br><br>本地：<br><br><pre><code class="language-yaml">ingress:</code></pre><br><br>+ 手动 DNS<br><br>也能工作。<br><br>---<br><br># 建议你现在直接：<br><br>## 删除你手写的：<br><br><pre><code class="language-yaml">ingress:</code></pre><br><br>以及：<br><br>Cloudflare 里那个手动 CNAME。<br><br>然后：<br><br># 全部改成 Dashboard Published application<br><br>这是目前 cloudflared 官方最稳的方式。<br><br>---<br><br># 最终正确架构<br><br>应该是：<br><br><pre><code class="language-text">Browser
+  ↓
+Cloudflare Edge
+  ↓
+Tunnel
+  ↓
+cloudflared
+  ↓
+localhost:5050</code></pre><br><br>---<br><br># 一个非常重要的点<br><br>即使你现在配置对了：<br><br>&gt; 只要 NS 还没切到 Cloudflare，域名依然不会生效。<br><br>所以：<br><br>你现在可以先把 route 配好。<br><br>真正生效仍然取决于：<br><br><pre><code class="language-bash">dig @a0.me.afilias-nst.info filegear-sg.me NS</code></pre><br><br>什么时候变成：<br><br><pre><code class="language-text">annalise.ns.cloudflare.com
+merlin.ns.cloudflare.com</code></pre><br><br>这才是最后开关。</div>
+            </div></div></div></body></html>

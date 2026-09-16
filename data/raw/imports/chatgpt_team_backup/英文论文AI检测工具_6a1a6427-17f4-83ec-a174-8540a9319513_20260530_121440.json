@@ -1,0 +1,2537 @@
+{
+  "title": "英文论文AI检测工具",
+  "create_time": 1780114480.12726,
+  "update_time": 1780114507.217595,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a1a6427-17f4-83ec-a174-8540a9319513",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.scribbr.com/ai-tools/best-ai-detector/",
+    "https://quillbot.com/ai-content-detector",
+    "https://www.turnitin.com/solutions/topics/ai-writing/",
+    "https://www.openai.com",
+    "https://gptzero.me/",
+    "https://paperpal.com/tools/ai-detector",
+    "https://docs.google.com/document/d/"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "b10a21c0-d146-488b-b73a-998b544b3b9b"
+      ]
+    },
+    "b10a21c0-d146-488b-b73a-998b544b3b9b": {
+      "id": "b10a21c0-d146-488b-b73a-998b544b3b9b",
+      "message": {
+        "id": "b10a21c0-d146-488b-b73a-998b544b3b9b",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "22402e10-f3a6-4446-ad45-5986e2b40443"
+      ]
+    },
+    "22402e10-f3a6-4446-ad45-5986e2b40443": {
+      "id": "22402e10-f3a6-4446-ad45-5986e2b40443",
+      "message": {
+        "id": "22402e10-f3a6-4446-ad45-5986e2b40443",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b10a21c0-d146-488b-b73a-998b544b3b9b",
+      "children": [
+        "ffeb9d5a-616f-40d7-b67d-6f91ab862478"
+      ]
+    },
+    "ffeb9d5a-616f-40d7-b67d-6f91ab862478": {
+      "id": "ffeb9d5a-616f-40d7-b67d-6f91ab862478",
+      "message": {
+        "id": "ffeb9d5a-616f-40d7-b67d-6f91ab862478",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "22402e10-f3a6-4446-ad45-5986e2b40443",
+      "children": [
+        "373bdc7c-0aca-4bdc-b605-955d4f0920c2"
+      ]
+    },
+    "373bdc7c-0aca-4bdc-b605-955d4f0920c2": {
+      "id": "373bdc7c-0aca-4bdc-b605-955d4f0920c2",
+      "message": {
+        "id": "373bdc7c-0aca-4bdc-b605-955d4f0920c2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ffeb9d5a-616f-40d7-b67d-6f91ab862478",
+      "children": [
+        "f44111f0-4317-46a6-92c1-149db6fa5daf"
+      ]
+    },
+    "f44111f0-4317-46a6-92c1-149db6fa5daf": {
+      "id": "f44111f0-4317-46a6-92c1-149db6fa5daf",
+      "message": {
+        "id": "f44111f0-4317-46a6-92c1-149db6fa5daf",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114478.318,
+        "update_time": 1780114504.807271,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "有没有英文论文ai率免费检测工具"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_source": null,
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "373bdc7c-0aca-4bdc-b605-955d4f0920c2",
+      "children": [
+        "61eede8c-cb4b-4c68-b260-65e5196818d6"
+      ]
+    },
+    "61eede8c-cb4b-4c68-b260-65e5196818d6": {
+      "id": "61eede8c-cb4b-4c68-b260-65e5196818d6",
+      "message": {
+        "id": "61eede8c-cb4b-4c68-b260-65e5196818d6",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114479.9597437,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f44111f0-4317-46a6-92c1-149db6fa5daf",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f44111f0-4317-46a6-92c1-149db6fa5daf",
+      "children": [
+        "12b29395-22c2-4927-a20e-626c45816f4f"
+      ]
+    },
+    "12b29395-22c2-4927-a20e-626c45816f4f": {
+      "id": "12b29395-22c2-4927-a20e-626c45816f4f",
+      "message": {
+        "id": "12b29395-22c2-4927-a20e-626c45816f4f",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114481.393831,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "aeb32775-1077-437a-ac98-211ed5d4c733"
+        },
+        "status": "in_progress",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "aeb32775-1077-437a-ac98-211ed5d4c733",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "skip_reasoning_title": "跳过",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "61eede8c-cb4b-4c68-b260-65e5196818d6",
+      "children": [
+        "ae0b5701-f371-48da-bb3a-e3aa2633ee98"
+      ]
+    },
+    "ae0b5701-f371-48da-bb3a-e3aa2633ee98": {
+      "id": "ae0b5701-f371-48da-bb3a-e3aa2633ee98",
+      "message": {
+        "id": "ae0b5701-f371-48da-bb3a-e3aa2633ee98",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114480.008228,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "我会按“英文论文/学术写作、免费或有免费额度、可用性较高”来筛一遍，并顺手提醒哪些结果别太当真。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "is_thinking_preamble_message": true,
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "12b29395-22c2-4927-a20e-626c45816f4f",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "12b29395-22c2-4927-a20e-626c45816f4f",
+      "children": [
+        "26b21147-4819-42c3-ad49-d1cfd765c734"
+      ]
+    },
+    "26b21147-4819-42c3-ad49-d1cfd765c734": {
+      "id": "26b21147-4819-42c3-ad49-d1cfd765c734",
+      "message": {
+        "id": "26b21147-4819-42c3-ad49-d1cfd765c734",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780114482.656339,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "free AI detector academic writing English papers free AI content checker 2026",
+              "Turnitin AI writing detection student access free alternatives academic paper AI detector 2026",
+              "GPTZero free AI detector academic writing pricing free 2026",
+              "QuillBot AI detector free English academic writing 2026"
+            ]
+          },
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "7696db47-85f7-4007-b0fa-18365c28d02c",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ae0b5701-f371-48da-bb3a-e3aa2633ee98",
+      "children": [
+        "f573b41e-9d43-42ff-9452-ffc185fa233f"
+      ]
+    },
+    "f573b41e-9d43-42ff-9452-ffc185fa233f": {
+      "id": "f573b41e-9d43-42ff-9452-ffc185fa233f",
+      "message": {
+        "id": "f573b41e-9d43-42ff-9452-ffc185fa233f",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114480.008228,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"search_query\":[{\"q\":\"free AI detector academic writing English papers free AI content checker 2026\"},{\"q\":\"Turnitin AI writing detection student access free alternatives academic paper AI detector 2026\"},{\"q\":\"GPTZero free AI detector academic writing pricing free 2026\"},{\"q\":\"QuillBot AI detector free English academic writing 2026\"}],\"response_length\":\"short\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "61526808-f5b7-4027-b990-9524623c3dbb",
+          "reasoning_status": "is_reasoning",
+          "search_queries": [
+            {
+              "type": "search",
+              "q": "free AI detector academic writing English papers free AI content checker 2026"
+            },
+            {
+              "type": "search",
+              "q": "Turnitin AI writing detection student access free alternatives academic paper AI detector 2026"
+            },
+            {
+              "type": "search",
+              "q": "GPTZero free AI detector academic writing pricing free 2026"
+            },
+            {
+              "type": "search",
+              "q": "QuillBot AI detector free English academic writing 2026"
+            }
+          ],
+          "search_display_string": "正在搜索网页",
+          "searched_display_string": "已搜索网页",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "浏览免费AI检测工具和替代方案",
+          "reasoning_titles": [
+            "浏览免费AI检测工具和替代方案"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "26b21147-4819-42c3-ad49-d1cfd765c734",
+      "children": [
+        "ccea82fa-eac2-40c2-abd2-799a9381c16b"
+      ]
+    },
+    "ccea82fa-eac2-40c2-abd2-799a9381c16b": {
+      "id": "ccea82fa-eac2-40c2-abd2-799a9381c16b",
+      "message": {
+        "id": "ccea82fa-eac2-40c2-abd2-799a9381c16b",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780114482.6562378,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_model_queries": {
+            "type": "search_model_queries",
+            "queries": [
+              "free AI detector academic writing English papers free AI content checker 2026",
+              "Turnitin AI writing detection student access free alternatives academic paper AI detector 2026",
+              "GPTZero free AI detector academic writing pricing free 2026",
+              "QuillBot AI detector free English academic writing 2026"
+            ]
+          },
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f573b41e-9d43-42ff-9452-ffc185fa233f",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "浏览免费AI检测工具和替代方案",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f573b41e-9d43-42ff-9452-ffc185fa233f",
+      "children": [
+        "b42abfb2-1fcf-4063-a87f-edd912023dce"
+      ]
+    },
+    "b42abfb2-1fcf-4063-a87f-edd912023dce": {
+      "id": "b42abfb2-1fcf-4063-a87f-edd912023dce",
+      "message": {
+        "id": "b42abfb2-1fcf-4063-a87f-edd912023dce",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780114482.6536179,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "mydetector.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mydetector.ai/",
+                  "title": "Free AI Detector - Accurate AI checker for chatGPT & More",
+                  "snippet": "Effortlessly detect AI-generated text using this free checker tool, which supports uploading large files in multiple formats. With the MyDetector AI detector ...Read more",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mydetector.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "turnitin.app",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://turnitin.app/",
+                  "title": "Turnitin AI Detector - Free & Unlimited Words & No Signup",
+                  "snippet": "Detect AI-generated content from ChatGPT, GPT-5, Claude, Gemini and more. Just paste and run. Unlimited free words. No signup required.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "turnitin.app"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "gptzero.me",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/",
+                  "title": "AI Detector - Free AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "snippet": "GPTZero detects AI content from ChatGPT, GPT-5, Claude, Gemini, and checks writing quality to make every word worth reading. ... Add to Google Docs - it's free!Read more",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "gptzero.me"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/pricing",
+                  "title": "Pricing",
+                  "snippet": "Ready-to-use code available in 17 different languages, including Node.JS, Python, C#, Java, PHP, and more. View Pricing Contact Sales. Code snippet.Read more",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "gptzero.me"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/news/best-ai-detectors/",
+                  "title": "9 Best AI Detectors With The Highest Accuracy in 2026",
+                  "snippet": "2 Jan 2026 — Pricing: GPTZero has a free plan covering 10,000 words per month ... Pricing: Offers free basic access, with premium features, including enhanced ...Read more",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": 1767390180,
+                  "result_source": "bright",
+                  "attribution": "gptzero.me"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "quillbot.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/ai-content-detector",
+                  "title": "AI Detector - Advanced AI Checker for ChatGPT, GPT-5 & ...",
+                  "snippet": "Quillbot's Free AI Detector - Use our AI checker to analyze text and identify content generated from ChatGPT, GPT-5, Gemini, Claude, and other AI platforms.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/",
+                  "title": "Quillbot: Write, Design & Create",
+                  "snippet": "Write effortlessly and efficiently with Quillbot's suite of AI tools. Paraphrase, check grammar, analyze tone, improve fluency, and more.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/blog/ai-writing-tools/ai-detectors-for-educational-institutions/",
+                  "title": "AI Detector for Educational Institutions | 2026 Guide",
+                  "snippet": "12 May 2026 — Tools like QuillBot's AI Detector can support educators by identifying patterns that may need closer review while also providing writing support ...",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": 1778591582,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/ai-writing-tools",
+                  "title": "Free AI Writing Tools",
+                  "snippet": "Identify any copied text in your writing and locate missed citations in minutes. AI Detector. Instantly detect any writing that may be AI-generated.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/essay-checker",
+                  "title": "Free AI-Powered Essay and Paper Checker—Quillbot AI",
+                  "snippet": "Utilize our AI-powered essay and paper checker for precise analysis and correction. Enhance your writing with our efficient AI essay and paper checker tool.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "paperpal.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://paperpal.com/tools/ai-detector",
+                  "title": "AI Detector: Free AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "snippet": "Free AI Detector for Essays and Papers. Detect AI written and edited text from ChatGPT, Gemini, Claude, and other AI tools. Review clearly before you submit.Read more",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "paperpal.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://paperpal.com/blog/news-updates/turnitin-alternatives-for-students-and-researchers",
+                  "title": "5 Turnitin Alternatives For Students & Researchers (Tested ...",
+                  "snippet": "10 Jan 2026 — AI detectors similar to Turnitin include GPTZero, Copyleaks, Originality.ai, Scribbr, and Grammarly (Premium). Among these, Paperpal stands out ...",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": 1768028442,
+                  "result_source": "bright",
+                  "attribution": "paperpal.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://paperpal.com/blog/news-updates/top-gptzero-alternatives",
+                  "title": "6 Free GPTZero Alternatives for AI Detection in 2026 ...",
+                  "snippet": "19 Jan 2026 — QuillBot's AI Detector is one best GPTZero alternatives for students thanks to its affordable pricing. The AI detector goes beyond percentage ...Read more",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": 1768819432,
+                  "result_source": "bright",
+                  "attribution": "paperpal.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "researcher.life",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://researcher.life/blog/article/7-best-free-ai-detectors-for-students/",
+                  "title": "7 Best Free AI Detectors for Students in 2026 -",
+                  "snippet": "29 Jan 2026 — Free AI detection tools let you preview whether your writing could be flagged, helping you revise before submission.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researcher.life"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.reddit.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.reddit.com/r/BypassAIDetector_/comments/1q693x3/turnitin_alternatives_for_ai_detection_2026_tools/",
+                  "title": "Turnitin Alternatives for AI Detection (2026) – Tools I've ...",
+                  "snippet": "Turnitin Alternatives for AI Detection (2026) – Tools I've Tried and What Actually Works · 1. Winston AI · 2. GPTZero · 3. CopyLeaks · 4. ZeroGPT · 5 ...",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": 1767771087.835,
+                  "result_source": "bright",
+                  "attribution": "www.reddit.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.scribbr.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 ...",
+                  "snippet": "22 Apr 2026 — The best free AI detectors (2026) are Scribbr and QuillBot, both correctly identified 78% of our testing texts. The most accurate AI ...",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": 1776850432,
+                  "result_source": "bright",
+                  "attribution": "www.scribbr.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.turnitin.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.turnitin.com/solutions/topics/ai-writing/",
+                  "title": "AI Checker Solutions: Ensure Academic Integrity",
+                  "snippet": "Our AI checker provides valuable insights on how much of a student's submission is authentic, human-written content versus likely AI-generated from ChatGPT or ...",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "www.turnitin.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "proofademic.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://proofademic.ai/",
+                  "title": "AI Detector - Free AI Checker for Students & Educators",
+                  "snippet": "Detect AI content in essays, assignments, and academic writing. Built for teachers and students. Fast, accurate, and trusted by thousands of educators.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "proofademic.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "aitextools.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://aitextools.com/turnitin-alternative",
+                  "title": "Best Turnitin Alternative (2026) - Free AI Detection",
+                  "snippet": "Looking for a Turnitin alternative? AI Text Tools offers free AI detection to check your work before submission - no institutional access needed. Plus built-in ...",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "aitextools.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.theverge.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.theverge.com/news/760508/grammarly-ai-agents-help-students-educators",
+                  "title": "Grammarly says its AI agent can predict an A paper",
+                  "snippet": "Grammarly has introduced a suite of AI agents aimed at enhancing the writing experience for both students and educators, available through its new AI-native writing platform, Docs. These tools are free for Grammarly Free and Pro users. Designed to support student learning while promoting skill development, the AI agents offer advanced assistance such as an AI grader that predicts a potential grade based on course requirements and instructor data, and tailor suggestions to improve writing. Other tools include a proofreader agent, a citation finder, a paraphrasing agent, and a reader reaction predictor that forecasts how readers might respond.\n\nFor educators, Grammarly is rolling out AI and plagiarism detection tools that compare submissions to vast academic and online databases. However, these particular tools are currently limited to Grammarly Pro users. All AI agents will be extended to Enterprise and Education users later in the year, with additional tools to be announced. Grammarly emphasizes the importance of AI literacy in education and career readiness, aiming to help students develop skills for a future that includes working with AI.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "news",
+                    "ref_index": 35
+                  },
+                  "pub_date": 1755522000,
+                  "result_source": "labrador",
+                  "attribution": "www.theverge.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.adelaidenow.com.au",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.adelaidenow.com.au/education/higher-education/robocheating-fiasco-saw-australian-catholic-university-students-falsely-accused-of-using-ai-by-an-unreliable-ai-tool/news-story/4a08732c84499263a709ec3bb1980802",
+                  "title": "ACU 'robo-cheating' scandal: students falsely accused of using AI",
+                  "snippet": "Australian Catholic University (ACU) has admitted to wrongfully accusing students of academic misconduct through the use of an unreliable AI detection tool, Turnitin Indicator. The university employed the tool to identify AI-generated student assignments, but many students were falsely accused without just cause, leading to lengthy and stressful investigation processes. One student reported that the ordeal took six months to resolve, delaying graduation and future academic opportunities. In March, ACU ceased using Turnitin Indicator due to its limited reliability, false negatives, and lack of transparency. About half of ACU’s 6,000 academic misconduct cases last year involved AI, but a quarter were dismissed, particularly when AI detection was the sole evidence. The burden of proving innocence largely fell on students. ACU has since improved its case management systems and investigation timelines. Other universities, such as Curtin University, also plan to stop using Turnitin Indicator, aiming to promote trust and fairness in assessments. Concerns about AI detection tools have also surfaced at other institutions, including Swinburne University.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "news",
+                    "ref_index": 36
+                  },
+                  "pub_date": 1759987380,
+                  "result_source": "labrador",
+                  "attribution": "www.adelaidenow.com.au"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.axios.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.axios.com/2025/03/04/turnitin-students-teachers-ai-canvas",
+                  "title": "Turnitin's new \"canvas\" lets students use AI and show their work",
+                  "snippet": "Turnitin has announced a new tool called \"Clarity,\" aimed at addressing the growing impact of AI in education, especially with the rise of ChatGPT and AI features in mainstream software. Scheduled for release in the third quarter of 2025, Clarity is an online canvas that allows students to work on assignments using approved AI tools while demonstrating their creative process. The goal is to provide transparency for educators without overwhelming them with excessive data on every draft or edit. Turnitin acknowledges that despite advancements in AI, plagiarism rates have not declined. Clarity seeks to offer a structured environment for AI-assisted work, balancing innovation with academic integrity. This paid addition to Turnitin’s offerings comes as schools and educators navigate varied approaches to generative AI and explore ways it might also ease their workloads.",
+                  "ref_id": {
+                    "turn_index": 981993,
+                    "ref_type": "news",
+                    "ref_index": 41
+                  },
+                  "pub_date": 1741090500,
+                  "result_source": "labrador",
+                  "attribution": "www.axios.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a1a6432adf88327b8448f9bade788b7",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "ccea82fa-eac2-40c2-abd2-799a9381c16b",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "浏览免费AI检测工具和替代方案",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ccea82fa-eac2-40c2-abd2-799a9381c16b",
+      "children": [
+        "f77497ca-a8f1-445a-8f9f-d9e69efb7452"
+      ]
+    },
+    "f77497ca-a8f1-445a-8f9f-d9e69efb7452": {
+      "id": "f77497ca-a8f1-445a-8f9f-d9e69efb7452",
+      "message": {
+        "id": "f77497ca-a8f1-445a-8f9f-d9e69efb7452",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114484.496967,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn981993search3\"},{\"ref_id\":\"turn981993search4\"},{\"ref_id\":\"turn981993search6\"},{\"ref_id\":\"turn981993search12\"},{\"ref_id\":\"turn981993search13\"}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "99e2de16-b319-4949-a8b7-cf40e5e80faa",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索官方Turnitin指南和AI检测器限制",
+          "reasoning_titles": [
+            "搜索官方Turnitin指南和AI检测器限制"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "b42abfb2-1fcf-4063-a87f-edd912023dce",
+      "children": [
+        "9c0601ba-ca0b-42de-b69c-b573ec1154b8"
+      ]
+    },
+    "9c0601ba-ca0b-42de-b69c-b573ec1154b8": {
+      "id": "9c0601ba-ca0b-42de-b69c-b573ec1154b8",
+      "message": {
+        "id": "9c0601ba-ca0b-42de-b69c-b573ec1154b8",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780114486.4504128,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "quillbot.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/ai-content-detector",
+                  "title": "AI Detector - Advanced AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "snippet": "Total lines: 398\n",
+                  "ref_id": {
+                    "turn_index": 375457,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "quillbot.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "paperpal.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://paperpal.com/tools/ai-detector",
+                  "title": "AI Detector: Free AI Checker for ChatGPT, GPT-5 & Gemini | Paperpal",
+                  "snippet": "Total lines: 602\n",
+                  "ref_id": {
+                    "turn_index": 375457,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "paperpal.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "gptzero.me",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/pricing",
+                  "title": "Pricing",
+                  "snippet": "Total lines: 146\n",
+                  "ref_id": {
+                    "turn_index": 375457,
+                    "ref_type": "view",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "gptzero.me"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.scribbr.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                  "snippet": "Total lines: 680\n",
+                  "ref_id": {
+                    "turn_index": 375457,
+                    "ref_type": "view",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.scribbr.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.turnitin.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.turnitin.com/solutions/topics/ai-writing/",
+                  "title": "AI Checker Solutions: Ensure Academic Integrity | Turnitin",
+                  "snippet": "Total lines: 465\n",
+                  "ref_id": {
+                    "turn_index": 375457,
+                    "ref_type": "view",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.turnitin.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a1a6432adf88327b8448f9bade788b7",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f77497ca-a8f1-445a-8f9f-d9e69efb7452",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "搜索官方Turnitin指南和AI检测器限制",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f77497ca-a8f1-445a-8f9f-d9e69efb7452",
+      "children": [
+        "64e79c7a-4e71-441c-b6e6-7b410391bb7e"
+      ]
+    },
+    "64e79c7a-4e71-441c-b6e6-7b410391bb7e": {
+      "id": "64e79c7a-4e71-441c-b6e6-7b410391bb7e",
+      "message": {
+        "id": "64e79c7a-4e71-441c-b6e6-7b410391bb7e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114490.143782,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "寻找AI检测工具信息",
+              "content": "我要去搜索Scribbr官方的AI检测页面，可能还需要查找Paperpal、Quillbot等工具。我看到GPTZero的免费计划在官网上提到10k字符的免费额度，不过定价细节不太有用，我就直接从官网了解一下。",
+              "chunks": [
+                "我要去搜索Scribbr官方的AI检测页面，可能还需要查找Paperpal、Quillbot等工具。",
+                "我看到GPTZero的免费计划在官网上提到10k字符的免费额度，不过定价细节不太有用，我就直接从官网了解一下。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "627f64f1-5e92-4033-9cd6-481cd6152c4f"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "13c82ae1-e41e-4b36-b6a2-e3bcbeb54456",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9c0601ba-ca0b-42de-b69c-b573ec1154b8",
+      "children": [
+        "adc677c8-e885-4d0d-87b3-50df166631fa"
+      ]
+    },
+    "adc677c8-e885-4d0d-87b3-50df166631fa": {
+      "id": "adc677c8-e885-4d0d-87b3-50df166631fa",
+      "message": {
+        "id": "adc677c8-e885-4d0d-87b3-50df166631fa",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114486.786284,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"open\":[{\"ref_id\":\"turn981993search2\"},{\"ref_id\":\"turn981993search12\",\"lineno\":320},{\"ref_id\":\"turn981993search12\",\"lineno\":333}],\"response_length\":\"medium\"}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "64e79c7a-4e71-441c-b6e6-7b410391bb7e",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "寻找Scribbr, Paperpal, Quillbot和GPTZero信息",
+          "reasoning_titles": [
+            "寻找Scribbr, Paperpal, Quillbot和GPTZero信息"
+          ],
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "web.run",
+        "channel": null
+      },
+      "parent": "64e79c7a-4e71-441c-b6e6-7b410391bb7e",
+      "children": [
+        "2d2ed317-d346-4edd-b1c4-078385667300"
+      ]
+    },
+    "2d2ed317-d346-4edd-b1c4-078385667300": {
+      "id": "2d2ed317-d346-4edd-b1c4-078385667300",
+      "message": {
+        "id": "2d2ed317-d346-4edd-b1c4-078385667300",
+        "author": {
+          "role": "tool",
+          "name": "web.run",
+          "metadata": {
+            "real_author": "tool:web.run"
+          }
+        },
+        "create_time": 1780114489.6534038,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "gptzero.me",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/",
+                  "title": "AI Detector - Free AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "snippet": "Total lines: 266\n",
+                  "ref_id": {
+                    "turn_index": 543928,
+                    "ref_type": "view",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "gptzero.me"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "www.scribbr.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                  "snippet": "Total lines: 680\n",
+                  "ref_id": {
+                    "turn_index": 543928,
+                    "ref_type": "view",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.scribbr.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                  "snippet": "Total lines: 680\n",
+                  "ref_id": {
+                    "turn_index": 543928,
+                    "ref_type": "view",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": null,
+                  "attribution": "www.scribbr.com"
+                }
+              ]
+            }
+          ],
+          "debug_sonic_thread_id": "thread_6a1a6432adf88327b8448f9bade788b7",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "adc677c8-e885-4d0d-87b3-50df166631fa",
+          "reasoning_status": "is_reasoning",
+          "tool_icons": [
+            "default"
+          ],
+          "reasoning_title": "寻找Scribbr, Paperpal, Quillbot和GPTZero信息",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "adc677c8-e885-4d0d-87b3-50df166631fa",
+      "children": [
+        "0a51e8d9-562a-4edb-a59a-2b44ca8b8193"
+      ]
+    },
+    "0a51e8d9-562a-4edb-a59a-2b44ca8b8193": {
+      "id": "0a51e8d9-562a-4edb-a59a-2b44ca8b8193",
+      "message": {
+        "id": "0a51e8d9-562a-4edb-a59a-2b44ca8b8193",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114494.640762,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "列出免费AI检测工具并注明限制",
+              "content": "我要直接给出答案，包括列表和来源，例如：\n\n- QuillBot的AI检测器免费，1200字每次检查，但可能存在跟官方信息的差异；\n- Scribbr提供500字检测无注册限制；\n- Paperpal专注学术检测，可能需要注册；\n- GPTZero免费检测最大10,000字符；\n- Sapling不太偏向学术；\n- Turnitin通常不免费，且需注意假网站。",
+              "chunks": [
+                "我要直接给出答案，包括列表和来源，例如：",
+                "QuillBot的AI检测器免费，1200字每次检查，但可能存在跟官方信息的差异；",
+                "Scribbr提供500字检测无注册限制；",
+                "Paperpal专注学术检测，可能需要注册；",
+                "GPTZero免费检测最大10,000字符；",
+                "Sapling不太偏向学术；",
+                "Turnitin通常不免费，且需注意假网站。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "f6de3e20-2ada-4607-b921-2bf867793748"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "f6de3e20-2ada-4607-b921-2bf867793748",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780114480.019329,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "2d2ed317-d346-4edd-b1c4-078385667300",
+      "children": [
+        "066a0fa8-92f6-40b9-af4e-f6d2ae52d0ee"
+      ]
+    },
+    "066a0fa8-92f6-40b9-af4e-f6d2ae52d0ee": {
+      "id": "066a0fa8-92f6-40b9-af4e-f6d2ae52d0ee",
+      "message": {
+        "id": "066a0fa8-92f6-40b9-af4e-f6d2ae52d0ee",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780114495.92645,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 15s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 15,
+          "reasoning_start_time": 1780114480.019329,
+          "reasoning_end_time": 1780114495.9098608,
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "0a51e8d9-562a-4edb-a59a-2b44ca8b8193",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0a51e8d9-562a-4edb-a59a-2b44ca8b8193",
+      "children": [
+        "92699300-1048-4566-8924-96dfcaa2f86b"
+      ]
+    },
+    "92699300-1048-4566-8924-96dfcaa2f86b": {
+      "id": "92699300-1048-4566-8924-96dfcaa2f86b",
+      "message": {
+        "id": "92699300-1048-4566-8924-96dfcaa2f86b",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {
+            "real_author": "tool:web"
+          }
+        },
+        "create_time": 1780114490.023449,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "有。英文论文可以先用这些**免费或有免费额度**的 AI 率检测工具，但别把结果当成“判决书”。\n\n| 工具 | 适合情况 | 免费限制/特点 |\n|---|---|---|\n| **QuillBot AI Detector** | 快速查英文段落、论文部分 | 免费、可显示 AI-generated / Human-written / AI-refined 分类；第三方测试称免费版每次约 1200 词、无需注册、次数不限。citeturn375457view0turn543928view1 |\n| **Scribbr Free AI Detector** | 学生论文、essay 初筛 | 免费、无需注册；第三方测试称每次约 500 词、次数不限。citeturn543928view2 |\n| **Paperpal AI Detector** | 更偏学术论文/英文科研写作 | 官方定位就是 “Essays and Papers”，会给句子级别提示，适合论文投稿前自查。citeturn375457view1 |\n| **GPTZero** | 查长一点的英文内容、看高亮 | 可直接粘贴检测；页面显示未登录可检测到 10,000 characters，超过需免费账号。citeturn543928view0 |\n| **Sapling AI Detector** | 备用交叉检查 | 免费、无需注册，但第三方测试准确率低于 QuillBot / Scribbr。citeturn543928view2 |\n\n**我建议的用法：**  \n先用 **QuillBot + Scribbr/Paperpal** 交叉检测。不要整篇一次性全丢进去，最好按 **Abstract、Introduction、Literature Review、Methodology、Discussion** 分段检测，这样更容易找出被标高的部分。\n\n**注意：Turnitin 的 AI 检测一般不是给学生免费直接用的。** 官方说它的 AI checker 是集成在教育机构/教师使用的产品和 LMS 流程里，所以网上那些写着 “Free Turnitin AI Detector” 的站点要小心，很多不是 Turnitin 官方。citeturn375457view4\n\n最重要的一点：**AI 检测器会误判。** Scribbr 的测试也说明 AI 检测器不能 100% 准确，混合人写+AI修改、专业领域文本、改写过的文本都更难判断；结果只能作为参考，不应作为学术诚信的唯一证据。citeturn375457view3"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "content_references": [
+            {
+              "matched_text": "citeturn375457view0turn543928view1",
+              "prefix": null,
+              "start_idx": 214,
+              "end_idx": 252,
+              "safe_urls": [
+                "https://quillbot.com/ai-content-detector",
+                "https://www.scribbr.com/ai-tools/best-ai-detector/"
+              ],
+              "refs": [],
+              "alt": "([quillbot.com](https://quillbot.com/ai-content-detector))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "AI Detector - Advanced AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "url": "https://quillbot.com/ai-content-detector",
+                  "attribution": "quillbot.com",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [
+                    {
+                      "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                      "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                      "pub_date": null,
+                      "snippet": null,
+                      "result_source": null,
+                      "attribution": "Scribbr"
+                    }
+                  ],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    },
+                    {
+                      "turn_index": 2,
+                      "ref_type": "view",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn543928view2",
+              "prefix": null,
+              "start_idx": 333,
+              "end_idx": 355,
+              "safe_urls": [
+                "https://www.scribbr.com/ai-tools/best-ai-detector/"
+              ],
+              "refs": [],
+              "alt": "([Scribbr](https://www.scribbr.com/ai-tools/best-ai-detector/))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "attribution": "Scribbr",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 2,
+                      "ref_type": "view",
+                      "ref_index": 2
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn375457view1",
+              "prefix": null,
+              "start_idx": 449,
+              "end_idx": 471,
+              "safe_urls": [
+                "https://paperpal.com/tools/ai-detector"
+              ],
+              "refs": [],
+              "alt": "([paperpal.com](https://paperpal.com/tools/ai-detector))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "AI Detector: Free AI Checker for ChatGPT, GPT-5 & Gemini | Paperpal",
+                  "url": "https://paperpal.com/tools/ai-detector",
+                  "attribution": "paperpal.com",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 1
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn543928view0",
+              "prefix": null,
+              "start_idx": 552,
+              "end_idx": 574,
+              "safe_urls": [
+                "https://gptzero.me/"
+              ],
+              "refs": [],
+              "alt": "([GPTZero](https://gptzero.me/))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "AI Detector - Free AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "url": "https://gptzero.me/",
+                  "attribution": "GPTZero",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 2,
+                      "ref_type": "view",
+                      "ref_index": 0
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn543928view2",
+              "prefix": null,
+              "start_idx": 653,
+              "end_idx": 675,
+              "safe_urls": [
+                "https://www.scribbr.com/ai-tools/best-ai-detector/"
+              ],
+              "refs": [],
+              "alt": "([Scribbr](https://www.scribbr.com/ai-tools/best-ai-detector/))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "attribution": "Scribbr",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 2,
+                      "ref_type": "view",
+                      "ref_index": 2
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn375457view4",
+              "prefix": null,
+              "start_idx": 979,
+              "end_idx": 1001,
+              "safe_urls": [
+                "https://www.turnitin.com/solutions/topics/ai-writing/"
+              ],
+              "refs": [],
+              "alt": "([turnitin.com](https://www.turnitin.com/solutions/topics/ai-writing/))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "AI Checker Solutions: Ensure Academic Integrity | Turnitin",
+                  "url": "https://www.turnitin.com/solutions/topics/ai-writing/",
+                  "attribution": "turnitin.com",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 4
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": "citeturn375457view3",
+              "prefix": null,
+              "start_idx": 1109,
+              "end_idx": 1131,
+              "safe_urls": [
+                "https://www.scribbr.com/ai-tools/best-ai-detector/"
+              ],
+              "refs": [],
+              "alt": "([Scribbr](https://www.scribbr.com/ai-tools/best-ai-detector/))",
+              "prompt_text": null,
+              "type": "grouped_webpages",
+              "items": [
+                {
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "attribution": "Scribbr",
+                  "pub_date": null,
+                  "snippet": null,
+                  "attribution_segments": null,
+                  "supporting_websites": [],
+                  "result_source": null,
+                  "refs": [
+                    {
+                      "turn_index": 1,
+                      "ref_type": "view",
+                      "ref_index": 3
+                    }
+                  ],
+                  "hue": null,
+                  "attributions": null
+                }
+              ],
+              "fallback_items": null,
+              "status": "done",
+              "error": null,
+              "style": null
+            },
+            {
+              "matched_text": " ",
+              "prefix": null,
+              "start_idx": 1131,
+              "end_idx": 1132,
+              "safe_urls": [],
+              "refs": [],
+              "alt": "",
+              "prompt_text": null,
+              "type": "sources_footnote",
+              "sources": [
+                {
+                  "title": "AI Detector - Advanced AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "url": "https://quillbot.com/ai-content-detector",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 Guide)",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/",
+                  "attribution": "Scribbr"
+                },
+                {
+                  "title": "AI Detector: Free AI Checker for ChatGPT, GPT-5 & Gemini | Paperpal",
+                  "url": "https://paperpal.com/tools/ai-detector",
+                  "attribution": "paperpal.com"
+                },
+                {
+                  "title": "AI Detector - Free AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "url": "https://gptzero.me/",
+                  "attribution": "GPTZero"
+                },
+                {
+                  "title": "AI Checker Solutions: Ensure Academic Integrity | Turnitin",
+                  "url": "https://www.turnitin.com/solutions/topics/ai-writing/",
+                  "attribution": "turnitin.com"
+                }
+              ],
+              "has_images": false
+            }
+          ],
+          "safe_urls": [
+            "https://gptzero.me/",
+            "https://paperpal.com/tools/ai-detector",
+            "https://quillbot.com/ai-content-detector",
+            "https://www.scribbr.com/ai-tools/best-ai-detector/",
+            "https://www.turnitin.com/solutions/topics/ai-writing/"
+          ],
+          "search_result_groups": [
+            {
+              "type": "search_result_group",
+              "domain": "mydetector.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mydetector.ai/?utm_source=chatgpt.com",
+                  "title": "Free AI Detector - Accurate AI checker for chatGPT & More",
+                  "snippet": "Effortlessly detect AI-generated text using this free checker tool, which supports uploading large files in multiple formats. With the MyDetector AI detector ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 0
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "mydetector.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "turnitin.app",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://turnitin.app/?utm_source=chatgpt.com",
+                  "title": "Turnitin AI Detector - Free & Unlimited Words & No Signup",
+                  "snippet": "Detect AI-generated content from ChatGPT, GPT-5, Claude, Gemini and more. Just paste and run. Unlimited free words. No signup required.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 1
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "turnitin.app"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "gptzero.me",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/?utm_source=chatgpt.com",
+                  "title": "AI Detector - Free AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "snippet": "GPTZero detects AI content from ChatGPT, GPT-5, Claude, Gemini, and checks writing quality to make every word worth reading. ... Add to Google Docs - it's free!Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 2
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "gptzero.me"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/pricing?utm_source=chatgpt.com",
+                  "title": "Pricing",
+                  "snippet": "Ready-to-use code available in 17 different languages, including Node.JS, Python, C#, Java, PHP, and more. View Pricing Contact Sales. Code snippet.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 6
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "gptzero.me"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://gptzero.me/news/best-ai-detectors/?utm_source=chatgpt.com",
+                  "title": "9 Best AI Detectors With The Highest Accuracy in 2026",
+                  "snippet": "2 Jan 2026 — Pricing: GPTZero has a free plan covering 10,000 words per month ... Pricing: Offers free basic access, with premium features, including enhanced ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 10
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "gptzero.me"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "quillbot.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/ai-content-detector?utm_source=chatgpt.com",
+                  "title": "AI Detector - Advanced AI Checker for ChatGPT, GPT-5 & ...",
+                  "snippet": "Quillbot's Free AI Detector - Use our AI checker to analyze text and identify content generated from ChatGPT, GPT-5, Gemini, Claude, and other AI platforms.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 3
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/?utm_source=chatgpt.com",
+                  "title": "Quillbot: Write, Design & Create",
+                  "snippet": "Write effortlessly and efficiently with Quillbot's suite of AI tools. Paraphrase, check grammar, analyze tone, improve fluency, and more.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 7
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/blog/ai-writing-tools/ai-detectors-for-educational-institutions/?utm_source=chatgpt.com",
+                  "title": "AI Detector for Educational Institutions | 2026 Guide",
+                  "snippet": "12 May 2026 — Tools like QuillBot's AI Detector can support educators by identifying patterns that may need closer review while also providing writing support ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 11
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/ai-writing-tools?utm_source=chatgpt.com",
+                  "title": "Free AI Writing Tools",
+                  "snippet": "Identify any copied text in your writing and locate missed citations in minutes. AI Detector. Instantly detect any writing that may be AI-generated.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 14
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/essay-checker?utm_source=chatgpt.com",
+                  "title": "Free AI-Powered Essay and Paper Checker—Quillbot AI",
+                  "snippet": "Utilize our AI-powered essay and paper checker for precise analysis and correction. Enhance your writing with our efficient AI essay and paper checker tool.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 18
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/grammar-check?utm_source=chatgpt.com",
+                  "title": "Free AI Grammar Checker (no sign-up required)",
+                  "snippet": "Grammar check for free! Paste your text in the grammar checker and hit the button to fix all grammar, spelling, and punctuation errors using cutting-edge AI ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 24
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://quillbot.com/blog/education/ai-tools-for-students/?utm_source=chatgpt.com",
+                  "title": "10 Best AI Tools for Students in 2026 | Tips & Guide",
+                  "snippet": "16 Mar 2026 — Explore the top 10 AI tools to boost your success with reading, studying, writing, proofreading, presentations, and more.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 28
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "quillbot.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "paperpal.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://paperpal.com/tools/ai-detector?utm_source=chatgpt.com",
+                  "title": "AI Detector: Free AI Checker for ChatGPT, GPT-5 & Gemini",
+                  "snippet": "Free AI Detector for Essays and Papers. Detect AI written and edited text from ChatGPT, Gemini, Claude, and other AI tools. Review clearly before you submit.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 4
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "paperpal.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://paperpal.com/blog/news-updates/turnitin-alternatives-for-students-and-researchers?utm_source=chatgpt.com",
+                  "title": "5 Turnitin Alternatives For Students & Researchers (Tested ...",
+                  "snippet": "10 Jan 2026 — AI detectors similar to Turnitin include GPTZero, Copyleaks, Originality.ai, Scribbr, and Grammarly (Premium). Among these, Paperpal stands out ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 5
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "paperpal.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://paperpal.com/blog/news-updates/top-gptzero-alternatives?utm_source=chatgpt.com",
+                  "title": "6 Free GPTZero Alternatives for AI Detection in 2026 ...",
+                  "snippet": "19 Jan 2026 — QuillBot's AI Detector is one best GPTZero alternatives for students thanks to its affordable pricing. The AI detector goes beyond percentage ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 17
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "paperpal.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "researcher.life",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://researcher.life/blog/article/7-best-free-ai-detectors-for-students/?utm_source=chatgpt.com",
+                  "title": "7 Best Free AI Detectors for Students in 2026 -",
+                  "snippet": "29 Jan 2026 — Free AI detection tools let you preview whether your writing could be flagged, helping you revise before submission.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 8
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "researcher.life"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "reddit.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.reddit.com/r/BypassAIDetector_/comments/1q693x3/turnitin_alternatives_for_ai_detection_2026_tools/?utm_source=chatgpt.com",
+                  "title": "Turnitin Alternatives for AI Detection (2026) – Tools I've ...",
+                  "snippet": "Turnitin Alternatives for AI Detection (2026) – Tools I've Tried and What Actually Works · 1. Winston AI · 2. GPTZero · 3. CopyLeaks · 4. ZeroGPT · 5 ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 9
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "reddit.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "scribbr.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.scribbr.com/ai-tools/best-ai-detector/?utm_source=chatgpt.com",
+                  "title": "12 Best AI Detectors | Free & Premium Tools Tested (2026 ...",
+                  "snippet": "22 Apr 2026 — The best free AI detectors (2026) are Scribbr and QuillBot, both correctly identified 78% of our testing texts. The most accurate AI ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 12
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "scribbr.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "turnitin.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.turnitin.com/solutions/topics/ai-writing/?utm_source=chatgpt.com",
+                  "title": "AI Checker Solutions: Ensure Academic Integrity",
+                  "snippet": "Our AI checker provides valuable insights on how much of a student's submission is authentic, human-written content versus likely AI-generated from ChatGPT or ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 13
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "turnitin.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "proofademic.ai",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://proofademic.ai/?utm_source=chatgpt.com",
+                  "title": "AI Detector - Free AI Checker for Students & Educators",
+                  "snippet": "Detect AI content in essays, assignments, and academic writing. Built for teachers and students. Fast, accurate, and trusted by thousands of educators.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 15
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "proofademic.ai"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "aitextools.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://aitextools.com/turnitin-alternative?utm_source=chatgpt.com",
+                  "title": "Best Turnitin Alternative (2026) - Free AI Detection",
+                  "snippet": "Looking for a Turnitin alternative? AI Text Tools offers free AI detection to check your work before submission - no institutional access needed. Plus built-in ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 16
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "aitextools.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://aitextools.com/ai-detector-free?utm_source=chatgpt.com",
+                  "title": "AI Detector Free: 8 Best Free AI Detection Tools 2026",
+                  "snippet": "The best free AI detector in 2026 is AITextTools, offering 95%+ accuracy with no sign-up required. Other strong free options include GPTZero (limited free tier) ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 23
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "aitextools.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "grammarly.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.grammarly.com/ai-detector?utm_source=chatgpt.com",
+                  "title": "AI Detector: Ranked #1 Free AI Checker for ChatGPT",
+                  "snippet": "Navigate responsible AI use with our AI checker, trained to identify AI-generated text. A clear score shows how much of your work appears to be written with AI.Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 19
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "grammarly.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "finalscanpro.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://finalscanpro.com/site/free-ai-detector/?utm_source=chatgpt.com",
+                  "title": "Free AI Detector — Best Turnitin Alternative for Accurate ...",
+                  "snippet": "Free AI content detector to scan your writing for machine-generated text, preserve authenticity, and ensure trust.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 20
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "finalscanpro.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "aithor.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://aithor.com/blog/gptzero-review?utm_source=chatgpt.com",
+                  "title": "GPTZero Review 2026: AI Detection Accuracy Test ...",
+                  "snippet": "3 Apr 2026 — ZeroGPT is one of the most popular free AI detectors on the market, used by millions of students, teachers, and content creators each month. But ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 21
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "aithor.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "supwriter.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://supwriter.com/blog/turnitin-ai-detector-free-alternatives?utm_source=chatgpt.com",
+                  "title": "Turnitin AI Detector: 7 Free Alternatives",
+                  "snippet": "1 Mar 2026 — Looking for free alternatives to Turnitin's AI detector? We tested 7 options and ranked them by accuracy, speed, and reliability.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 22
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "supwriter.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "uncovai.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://uncovai.com/best-free-ai-text-detector-2026/?utm_source=chatgpt.com",
+                  "title": "Best Free AI Text Detector in 2026: 7 Tools Ranked",
+                  "snippet": "Best free AI text detectors in 2026, tested and ranked. Find out which tools actually work — and how UncovAI catches what others miss.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 25
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "uncovai.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "substack.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://mohababdelkarim.substack.com/p/which-ai-detector-is-most-similar?utm_source=chatgpt.com",
+                  "title": "Which AI Detector Is Most Similar to Turnitin in 2026?",
+                  "snippet": "Proofademic AI is the best overall AI detector in 2026 and the closest alternative to Turnitin. Across all the tests and independent reviews, ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 26
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "substack.com"
+                },
+                {
+                  "type": "search_result",
+                  "url": "https://mohababdelkarim.substack.com/p/quillbot-ai-detector-vs-proofademic?utm_source=chatgpt.com",
+                  "title": "QuillBot AI Detector vs Proofademic (2026 Test)",
+                  "snippet": "This design makes it easier for teachers, editors, and students to understand why certain sections of writing appear more AI-like than others.",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 30
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "substack.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "growthrocks.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://growthrocks.com/blog/free-ai-detectors/?utm_source=chatgpt.com",
+                  "title": "We Tested 8 Free AI Detectors — Only 3 Got It Right (2026)",
+                  "snippet": "18 Dec 2025 — GPTZero delivered perfect accuracy across all three versions. It correctly identified human writing (97% human), detected AI with minor edits ( ...Read more",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 27
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "growthrocks.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "yepboost.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://yepboost.com/blog/best-ai-detector-2026?utm_source=chatgpt.com",
+                  "title": "8 Best AI Detectors 2026: Free & Paid Tools Compared ...",
+                  "snippet": "12 Dec 2025 — Looking for the best AI detector in 2026? We tested 8 top tools including GPTZero, Turnitin & Grammarly. Find the most accurate AI checker ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 29
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "yepboost.com"
+                }
+              ]
+            },
+            {
+              "type": "search_result_group",
+              "domain": "youtube.com",
+              "entries": [
+                {
+                  "type": "search_result",
+                  "url": "https://www.youtube.com/watch?v=hPyHIHW4lcI&utm_source=chatgpt.com",
+                  "title": "GPTZero Review 2026: Is This AI Detector Actually the BEST?",
+                  "snippet": "Learn How to Use AI to Write 12+ Successful Books a Year! Join the Story Hacker Waitlist & Get FREE AI Prompts today (note the $9 tier ...",
+                  "ref_id": {
+                    "turn_index": 0,
+                    "ref_type": "search",
+                    "ref_index": 31
+                  },
+                  "pub_date": null,
+                  "result_source": "bright",
+                  "attribution": "youtube.com"
+                }
+              ]
+            }
+          ],
+          "story_events": [],
+          "citations": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "request_id": "wfr_019e77173ad97ba5b1240b3d6fee6fbd",
+          "message_type": "next",
+          "turn_exchange_id": "65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "066a0fa8-92f6-40b9-af4e-f6d2ae52d0ee",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-3800a2b4-916d-4893-9073-11a64842bc67:IN",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-65d9dfcf-f27e-4c00-8dca-6a0ed666a12b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "066a0fa8-92f6-40b9-af4e-f6d2ae52d0ee",
+      "children": []
+    }
+  },
+  "current_node": "92699300-1048-4566-8924-96dfcaa2f86b"
+}

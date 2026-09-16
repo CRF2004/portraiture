@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扰动算子与零掩码</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>扰动算子与零掩码</h1>
+            <div class="metadata">ID: 6a02c650-28cc-83ec-a0cd-080ad72654d2 | 2026/5/12 14:19:00</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 14:18:57</span>
+                </div>
+                <div class="message-content">翻译：""1. The perturbation operator critically determines ASS<br>sign—and zero-masking creates artifacts. A preregistered<br>8-run validity battery (Table XI) tested three operators on<br>ResNet (CLBBB/QRS and 1AVB/PR) plus an SE-ResNet<br>sentinel. Under zero-masking, CLBBB ASS= −0.010 (95%<br>CI [−0.011, −0.008]) because ST-segment occlusion causes<br>an artifactually large AUROC drop (∆ = 0.706). This is a<br>hard-boundary artifact: zero-masking creates a sharp signal<br>discontinuity that convolutional filters respond to strongly,<br>independent of the physiological content of the occluded<br>region. Linear interpolation eliminates the boundary and re<br>stores interpretable behavior: ST ∆AUROC drops to 0.166<br>while QRS target ∆AUROC remains stable at 0.322, yield<br>ing CLBBB ASS= +0.083 (95% CI [0.073, 0.094]). Beat<br>conditioned inpainting is too conservative to discriminate<br>(all deltas ≈ 0). The validity battery therefore (i) identifies<br>linear interpolation as the preferred operator for matched<br>control perturbation studies, (ii) reveals that the previously<br>reported “ST-segment universal disruptor” finding is largely<br>a zero-masking artifact, and (iii) demonstrates that operator<br>sensitivity is itself a diagnostic—conclusions that depend on<br>the perturbation operator are fragile and should not be treated<br>as evidence of pathway specificity.""</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 14:19:00</span>
+                </div>
+                <div class="message-content"><strong>翻译：</strong><br><br>---<br><br><strong>1. 扰动算子在决定 ASS 符号方面起关键作用——而零掩码（zero-masking）会产生伪影。</strong>  <br>一项预注册的 8 轮有效性测试（表 XI）在 ResNet（CLBBB/QRS 与 1AVB/PR）以及一个 SE-ResNet 哨兵模型上评估了三种扰动算子。<br><br>在零掩码条件下，由于 ST 段被遮挡导致 AUROC 出现人为的大幅下降（Δ = 0.706），CLBBB 的 ASS 为 −0.010（95% CI [−0.011, −0.008]）。  <br>这是一种“硬边界伪影”：零掩码会产生突兀的信号不连续，而卷积滤波器会对此产生强烈响应，这种响应与被遮挡区域的生理学内容无关。<br><br>线性插值消除了该边界效应，并恢复了可解释的行为：ST 的 ΔAUROC 降至 0.166，而 QRS 目标的 ΔAUROC 保持稳定在 0.322，从而使 CLBBB 的 ASS 变为 +0.083（95% CI [0.073, 0.094]）。<br><br>Beat-conditioned inpainting 则过于保守，几乎无法区分（所有 Δ≈0）。<br><br>因此，该有效性测试表明：  <br>(i) 线性插值是匹配对照扰动研究中更优的算子；  <br>(ii) 先前关于“ST 段是通用干扰因素”的结论主要源于零掩码伪影；  <br>(iii) 扰动算子本身具有诊断意义——那些依赖特定扰动算子的结论是脆弱的，不应被视为通路特异性证据。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/12 14:25:24</span>
+                </div>
+                <div class="message-content">翻译：""Preregistered validity battery: To test whether matched<br>control conclusions are operator-artifacts rather than pathway<br>specific signal use, we conducted an 8-run confirmatory bat<br>tery with preregistered hypotheses, endpoints, and pass/fail<br>criteria (see Supplement for full preregistration block). Pri<br>mary: ResNet; Sentinel: SE-ResNet. Disease-pathway pairs:<br>CLBBB/QRS (expected positive specificity) and 1AVB/PR<br>(expected non-specific). Three operators: zero-masking, lin<br>ear interpolation (continuity-preserving), and beat-conditioned<br>inpainting (amplitude-aligned adjacent-beat replacement). Ad<br>ditional dimensions: dose-response (40/80/160/240 ms), lead<br>local specificity (precordial V1/V2/V6 vs limb leads). All runs<br>use identical matched positive/negative subsets and patient<br>level bootstrap CIs (1,000 iterations). The preregistered pri<br>mary endpoint requires ASS&gt; 0 with CI lower bound &gt; 0 for<br>≥2of 3 operators (CLBBB) and ASS≤ 0 with CI upper bound<br>≤0for ≥2of3operators (1AVB). Secondary endpoints: dose<br>response monotonicity and lead-local specificity.""</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/12 14:25:27</span>
+                </div>
+                <div class="message-content"><strong>翻译：</strong><br><br>---<br><br><strong>预注册有效性测试：</strong>  <br>为检验“匹配对照结论”是否实际上是由扰动算子引起的伪影，而非真实的通路特异性信号，我们进行了一个包含 8 次运行的确认性实验，并预先注册了假设、评价指标与通过/失败标准（完整预注册内容见补充材料）。<br><br>主要模型为 ResNet；哨兵模型为 SE-ResNet。  <br>疾病-通路配对包括：CLBBB/QRS（预期具有正向特异性）以及 1AVB/PR（预期为非特异性）。<br><br>使用三种扰动算子：零掩码（zero-masking）、线性插值（保持连续性）以及 beat-conditioned inpainting（基于相邻心搏幅度对齐的替换方法）。<br><br>额外分析维度包括：剂量-反应关系（40/80/160/240 ms）以及导联局部特异性（胸前导联 V1/V2/V6 vs 肢体导联）。<br><br>所有实验均使用相同的匹配正负样本子集，并采用患者级 bootstrap 置信区间（1,000 次迭代）。<br><br>预注册的主要终点要求：  <br>- 对于 CLBBB：在 ≥3 种算子中至少 2 种满足 ASS &gt; 0 且置信区间下界 &gt; 0  <br>- 对于 1AVB：在 ≥3 种算子中至少 2 种满足 ASS ≤ 0 且置信区间上界 ≤ 0  <br><br>次要终点包括：剂量-反应的单调性，以及导联局部特异性。</div>
+            </div></div></div></body></html>

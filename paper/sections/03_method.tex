@@ -1,0 +1,44 @@
+\section{Replay Benchmark and Method}
+\label{sec:method}
+
+\subsection{Replay task}
+
+Let a user's chat history be segmented into episodes. Each replay example is a tuple $(c_i, y_i, s_i)$, where $c_i$ is the context of recent user turns, $y_i$ is the proxy next-action label of the target user turn, and $s_i$ is an observed dynamic-state hint derived from the context. The prediction task is to infer $y_i$ from $c_i$ using only training examples and permitted state/profile information.
+
+The action label space contains conversational actions such as asking for an example, asking why, comparing options, requesting implementation guidance, challenging or refining a prior answer, providing more context, asking a follow-up clarification, and shifting topic. Coarse labels group these actions into broader categories such as clarification, expansion, planning, comparison, and shift.
+
+\subsection{Pipeline}
+
+The pipeline has five stages. First, raw GPT export data is normalized into conversations, messages, sessions, episodes, and turns. Second, replay examples are built by selecting a context window and a target user turn from each episode. Third, proxy action labels and observed state hints are assigned with deterministic rules. Fourth, candidate predictors are trained or configured using only training examples. Fifth, each predictor is evaluated on held-out replay examples and divergences are recorded for error analysis. This structure is deliberately modular: label construction, state routing, persona extraction, and refinement can be audited separately.
+
+\subsection{Proxy labels}
+
+The benchmark uses real historical user messages, but the action labels are proxy labels. They are assigned by deterministic rules over the target user text and its relation to the previous user text. For example, text containing comparison markers is mapped to \emph{compare options}; implementation markers map to \emph{request how-to}; low similarity to the previous turn can indicate \emph{topic shift}. This makes the benchmark reproducible, but it also introduces label noise. We therefore treat the task as proxy replay evaluation, not as human-annotated intent recognition.
+
+\subsection{Explicit representation}
+
+The system materializes three kinds of user representation:
+\begin{itemize}
+    \item \textbf{Persona facts}: relatively stable preferences or interaction habits inferred from training data.
+    \item \textbf{Dynamic states}: context-specific states such as active problem, current goal, blocking issue, or current stance.
+    \item \textbf{Memory nodes}: episodic or semantic records derived from historical conversations.
+\end{itemize}
+
+This explicit structure is useful because it exposes which signals are used. It also allows leakage checks: updates based on held-out examples must not be used to improve held-out predictions.
+The same separation also matches the broader memory-augmented-agent literature, where persistent memory is treated as a controllable state rather than a hidden side effect \cite{packer2023memgpt,zhang2024memorysurvey}.
+
+\subsection{Compared systems}
+
+\paragraph{Off.} The no-state baseline predicts from nearest-neighbor similarity among training replay contexts using Jaccard word-overlap similarity without state hints.
+
+\paragraph{Heuristic state hint.} Maps marker-detected states to action-label hints, testing whether hand-written state cues help replay.
+
+\paragraph{Learned state router.} A Naive Bayes text classifier trained only on training contexts to predict a state type and value. The predicted state is mapped to an action hint and combined with the nearest-neighbor candidate list. This isolates the value of learning the state selector from context.
+
+\paragraph{State prior.} Predicts the training-set majority action for each observed state type/value. It is intentionally simple and strong on dominant modes, testing whether high accuracy can be obtained by state-action priors without balanced action modeling.
+
+\subsection{Training and inference protocol}
+
+All predictors are fit after the data split is fixed. For the learned router, the input is replay context text and the target is the rule-observed state type/value from training examples. At test time, the router predicts a state, converts it into an action hint, and re-ranks the nearest-neighbor candidates. The heuristic variant uses the same action-hint interface but obtains state hints from hand-written markers. The state-prior baseline removes context similarity entirely, predicting the most frequent training action for each observed state. This shared interface isolates how state is obtained and used.
+
+The evaluation enforces two leakage barriers: held-out target turns are never used to construct training examples, and any profile, state-action mapping, or prior used at inference is estimated from training data only. Earlier refinement experiments leaked held-out information by updating the profile store while iterating over the full replay set; all paper claims use leakage-free settings and refinement is not claimed as a generalization mechanism.

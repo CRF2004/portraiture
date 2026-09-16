@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-masking 支持分析</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Zero-masking 支持分析</h1>
+            <div class="metadata">ID: 6a23a23b-5724-83ec-8453-adc5634f127c | 2026/6/6 12:30:21</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/6/6 12:30:19</span>
+                </div>
+                <div class="message-content">“ a frequently<br>used choice in ECG occlusion analysis is zero-masking—setting<br>signal samples or segments to zero” 这个论点能不能被""[8] J. Paraliˇc, M. Kol´arik, Z. Paraliˇcov´a, O. Lohaj, and A. Jozef´ık,<br>“Perturbation-based explainable AI for ECG sensor data,” Applied<br>Sciences, vol. 13, no. 3, p. 1805, 2023.<br>[9] M. Resta, A. Monreale, and D. Bacciu, “Occlusion-based explanations<br>in deep recurrent models for biomedical signals,” Entropy, vol. 23, no. 8,<br>p. 1064, 2021."" 所支持？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/6/6 12:30:20</span>
+                </div>
+                <div class="message-content">我会按“能支持什么强度的表述”来判断：先看两篇是否真的使用 zero-masking，再看它们能不能支撑 “frequently used choice” 这种频率性判断。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/6/6 12:30:45</span>
+                </div>
+                <div class="message-content">可以支持，但<strong>支持强度不完全够</strong>。<br><br>这两篇能很好支持这句话的后半部分：<strong>zero-masking = 将 ECG/生理信号片段置零</strong>。Paralič et al. 明确写到其 ECG perturbation 方法会“remove, mask, or alter”部分 ECG，并且在其实现中“selected interval ... set to zero”。citeturn683900view0 Resta et al. 也明确在 biomedical signal occlusion 中使用 zero values，并且在 PTBDB ECG 分类任务中比较了 zero 与 mean 两种 occlusion value。citeturn256209view0turn256209view2<br><br>但它们<strong>不太足以单独支撑</strong> “<strong>frequently used choice</strong>” 这个频率性判断。因为：<br><br>1. <strong>[8] Paralič et al.</strong> 是一个 ECG-specific 的 zero-masking 实例，能证明“ECG perturbation/occlusion 中有人这样做”。  <br>2. <strong>[9] Resta et al.</strong> 是 biomedical signals 的 occlusion 方法论文，包含 ECG/PTBDB 实验，也能作为 zero occlusion 在 ECG/生理信号中的实例。  <br>3. 但“frequently used” 暗示你已经观察到文献中较多方法都这样做，最好还要有综述或多篇 ECG XAI/occlusion 文献共同支撑，而不只是两篇例子。<br><br>更稳的写法是：<br><br>&gt; A simple and commonly adopted perturbation choice in ECG and biomedical-signal occlusion analysis is zero-masking, i.e., replacing signal samples or segments with zeros [8], [9].<br><br>如果你想更审稿安全，可以进一步降调：<br><br>&gt; Zero-masking has been used as a perturbation operator in ECG and biomedical-signal occlusion analysis, where selected signal intervals are replaced by zeros [8], [9].<br><br>如果你一定要保留 <strong>frequently used</strong>，建议再补 1 篇 ECG XAI review 或 2–3 篇 ECG occlusion/perturbation 实证论文。仅靠这两篇，审稿人挑剔的话可能会说：它们证明了“used”，但没有证明“frequently used”。</div>
+            </div></div></div></body></html>

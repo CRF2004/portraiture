@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedFact-Synth 数据集解析</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MedFact-Synth 数据集解析</h1>
+            <div class="metadata">ID: 6a013fcd-410c-83ec-b887-c51c64a89b66 | 2026/5/11 10:33:05</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 10:33:05</span>
+                </div>
+                <div class="message-content">https://huggingface.co/datasets/ncbi/MedFact-Synth 这个数据集的格式怎么理解？我想把它整理成微调的形式，要怎么做？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 10:33:06</span>
+                </div>
+                <div class="message-content">这个数据集本质上是一个 <strong>“医学事实验证（medical fact-checking）+ rationale generation”</strong> 数据集。  <br>它不是传统的 instruction-following QA，而是：<br><br>&gt; 给定一个医学 claim（断言） + 一篇 article（证据文献）  <br>&gt; 模型需要判断：<br>&gt; - 支持 / 反对 / 中立 的程度<br>&gt; - 并生成推理解释（rationale）<br><br>数据集主页已经把字段定义得比较清楚了。citeturn0search0<br><br>---<br><br># 一、先理解它到底是什么任务<br><br>它的数据结构：<br><br><pre><code class="language-text">claim + source(article)
+    ↓
+生成：
+    synthetic_label (-2~2)
+    assistant_prompt（推理+结论）</code></pre><br><br>本质上类似：<br><br><pre><code class="language-text">输入：
+Claim: XXX
+Article: YYY
+
+输出：
+This article partially supports the claim because...
+Label: +1</code></pre><br><br>---<br><br># 二、字段怎么理解（核心）<br><br>下面是最关键的字段：<br><br>| 字段 | 含义 | 微调是否保留 |<br>|---|---|---|<br>| claim | 待验证断言 | ✅ |<br>| source | 证据文献 | ✅ |<br>| synthetic_label | 标签（-2~2） | ✅ |<br>| assistant_prompt | 模型推理结果 | ✅ |<br>| user_prompt | 已经构造好的用户输入 | 可选 |<br>| system_prompt | system instruction | 可选 |<br>| claim_potential | support/refute（生成时的意图） | ❌通常不用 |<br>| pmid | PubMed ID | ❌通常不用 |<br><br>---<br><br># 三、synthetic_label 怎么理解<br><br>这是 5 分类：<br><br>| label | 含义 |<br>|---|---|<br>| -2 | Strong Contradiction |<br>| -1 | Partial Contradiction |<br>| 0 | Neutral |<br>| +1 | Partial Support |<br>| +2 | Strong Support |<br><br>这意味着：<br><br>这个数据集既可以做：<br><br>---<br><br>## 1. 分类任务（推荐）<br><br>输入：<br><br><pre><code class="language-text">Claim + Article</code></pre><br><br>输出：<br><br><pre><code class="language-text">2</code></pre><br><br>或者：<br><br><pre><code class="language-text">Strong Support</code></pre><br><br>---<br><br>## 2. CoT/Rationale 微调（更推荐）<br><br>输入：<br><br><pre><code class="language-text">Claim + Article</code></pre><br><br>输出：<br><br><pre><code class="language-text">The article directly supports...
+Therefore the label is +2.</code></pre><br><br>这其实就是 assistant_prompt 的用途。<br><br>---<br><br># 四、assistant_prompt 是什么<br><br>这是最容易误解的地方。<br><br>它其实已经是：<br><br>&gt; 一个完整的 reasoning answer<br><br>里面包含：<br><br>- 思维链（think）<br>- rationale<br>- 最终标签<br><br>例如：<br><br><pre><code class="language-text">&lt;think&gt;
+The article discusses...
+...
+&lt;/think&gt;
+
+The article strongly supports the claim.
+Label: 2</code></pre><br><br>因此：<br><br># 这个数据集天然适合：<br><br>- SFT<br>- CoT SFT<br>- reasoning distillation<br>- verifier training<br>- reward modeling<br><br>---<br><br># 五、推荐你怎么整理成微调格式<br><br>这取决于你要训练什么。<br><br>---<br><br># 方案1（最推荐）：Instruction SFT<br><br>这是最标准的。<br><br>## 转换后：<br><br><pre><code class="language-json">{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a biomedical fact-checking expert."
+    },
+    {
+      "role": "user",
+      "content": "Claim: ...\n\nArticle: ..."
+    },
+    {
+      "role": "assistant",
+      "content": "The article partially supports..."
+    }
+  ]
+}</code></pre><br><br>这是最适合：<br><br>- Qwen<br>- Llama<br>- DeepSeek<br>- Mistral<br>- Meditron<br><br>这类 chat model 的。<br><br>---<br><br># 方案2：纯分类微调<br><br>如果你想训练 verifier：<br><br><pre><code class="language-json">{
+  "text": "Claim: ... Article: ...",
+  "label": 2
+}</code></pre><br><br>适合：<br><br>- BERT<br>- BioBERT<br>- PubMedBERT<br>- DeBERTa<br><br>---<br><br># 方案3：Chain-of-Thought 微调（非常适合）<br><br>你可以保留 <code>&lt;think&gt;</code>：<br><br><pre><code class="language-json">{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Claim: ...\n\nArticle: ..."
+    },
+    {
+      "role": "assistant",
+      "content": "&lt;think&gt;...&lt;/think&gt;\n\nLabel: +1"
+    }
+  ]
+}</code></pre><br><br>这很适合：<br><br>- reasoning SFT<br>- medical rationale generation<br>- verifier reasoning<br><br>其实这个数据集就是朝这个方向设计的。citeturn0search0<br><br>---<br><br># 六、实际推荐的数据整理方式（非常重要）<br><br>我建议你：<br><br># 不要直接使用 user_prompt / assistant_prompt<br><br>而是：<br><br># 自己重新构造<br><br>因为原始 prompt：<br><br>- 很长<br>- 冗余<br>- 有大量模板文字<br>- token 浪费严重<br><br>---<br><br># 推荐重构方式<br><br>## 输入<br><br><pre><code class="language-text">Claim:
+{claim}
+
+Article:
+{source}</code></pre><br><br>---<br><br>## 输出（简洁版）<br><br><pre><code class="language-text">Reasoning:
+{rationale}
+
+Verdict: Strong Support</code></pre><br><br>---<br><br># 七、如何从 assistant_prompt 提取 rationale<br><br>assistant_prompt 里面通常：<br><br><pre><code class="language-text">&lt;think&gt;
+...
+&lt;/think&gt;</code></pre><br><br>你可以：<br><br>---<br><br>## 保留 think<br><br>适合 reasoning model：<br><br><pre><code class="language-python">reasoning = assistant_prompt</code></pre><br><br>---<br><br>## 去掉 think，只保留最终解释<br><br>适合普通 SFT：<br><br><pre><code class="language-python">import re
+
+clean = re.sub(r"&lt;think&gt;.*?&lt;/think&gt;", "", text, flags=re.S)</code></pre><br><br>---<br><br># 八、推荐的数据格式（最终）<br><br>我最推荐这个：<br><br><pre><code class="language-json">{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a biomedical evidence verification expert."
+    },
+    {
+      "role": "user",
+      "content": "Claim:\n...\n\nArticle:\n..."
+    },
+    {
+      "role": "assistant",
+      "content": "&lt;think&gt;...&lt;/think&gt;\n\nVerdict: Partial Support"
+    }
+  ]
+}</code></pre><br><br>这是目前最通用的 chat-SFT 格式。<br><br>---<br><br># 九、HuggingFace 读取代码<br><br>你可以直接：<br><br><pre><code class="language-python">from datasets import load_dataset
+
+ds = load_dataset("ncbi/MedFact-Synth")</code></pre><br><br>然后：<br><br><pre><code class="language-python">sample = ds["train"][0]
+
+print(sample.keys())</code></pre><br><br>会看到：<br><br><pre><code class="language-python">dict_keys([
+    'idx',
+    'claim_pmid',
+    'claim_potential',
+    'claim',
+    'source_pmid',
+    'source',
+    'synthetic_label',
+    'system_prompt',
+    'user_prompt',
+    'assistant_prompt'
+])</code></pre><br><br>---<br><br># 十、一个完整转换脚本（推荐）<br><br><pre><code class="language-python">from datasets import load_dataset
+import json
+
+label_map = {
+    -2: "Strong Contradiction",
+    -1: "Partial Contradiction",
+     0: "Neutral",
+     1: "Partial Support",
+     2: "Strong Support"
+}
+
+ds = load_dataset("ncbi/MedFact-Synth", split="train")
+
+output = []
+
+for x in ds:
+
+    user = f"""Claim:
+{x['claim']}
+
+Article:
+{x['source']}"""
+
+    assistant = f"""{x['assistant_prompt']}
+
+Verdict: {label_map[int(x['synthetic_label'])]}"""
+
+    output.append({
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are a biomedical evidence verification expert."
+            },
+            {
+                "role": "user",
+                "content": user
+            },
+            {
+                "role": "assistant",
+                "content": assistant
+            }
+        ]
+    })
+
+with open("medfact_sft.jsonl", "w") as f:
+    for item in output:
+        f.write(json.dumps(item) + "\n")</code></pre><br><br>---<br><br># 十一、这个数据集真正适合什么<br><br>这个数据集非常适合：<br><br>| 任务 | 适合程度 |<br>|---|---|<br>| 医学RAG verifier | ⭐⭐⭐⭐⭐ |<br>| claim verification | ⭐⭐⭐⭐⭐ |<br>| evidence attribution | ⭐⭐⭐⭐⭐ |<br>| medical reasoning SFT | ⭐⭐⭐⭐⭐ |<br>| 医学分类 | ⭐⭐⭐ |<br>| 通用问答 | ⭐ |<br><br>因为它不是 QA 数据集。<br><br>---<br><br># 十二、你需要特别注意的问题<br><br>这个数据集：<br><br># article 非常长<br><br>很多 source：<br><br>- 3000~10000 token<br><br>所以：<br><br>---<br><br>## 必须考虑：<br><br>### 1. 截断<br><br>例如：<br><br><pre><code class="language-python">source[:4000]</code></pre><br><br>---<br><br>### 2. chunk<br><br>或者：<br><br><pre><code class="language-python">abstract only</code></pre><br><br>---<br><br>### 3. 长上下文模型<br><br>例如：<br><br>- Qwen3-32B<br>- DeepSeek-R1<br>- Llama-4<br>- Longformer<br><br>---<br><br># 十三、一个更高级的思路（很适合你）<br><br>你最近在做：<br><br>- 医学知识图谱<br>- 医学推理<br>- 可解释性<br><br>这个数据集特别适合做：<br><br># “claim-level verifier”<br><br>例如：<br><br><pre><code class="language-text">模型生成医学结论
+    ↓
+MedFact verifier 判断：
+    support / contradiction</code></pre><br><br>这其实已经接近：<br><br>- retrieval verifier<br>- hallucination detection<br>- evidence attribution<br><br>方向了。<br><br>---<br><br>数据集主页：  <br>urlMedFact-Synth Datasetturn0search0</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 10:37:07</span>
+                </div>
+                <div class="message-content">我需要从本地加载数据集（已经下载好了），</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 10:37:08</span>
+                </div>
+                <div class="message-content">如果你已经把 urlMedFact-Synth 数据集https://huggingface.co/datasets/ncbi/MedFact-Synth 下载到本地，通常有两种情况：<br><br>---<br><br># 一、先看你下载后的目录结构<br><br>你先：<br><br><pre><code class="language-python">import os
+
+for root, dirs, files in os.walk("你的数据集目录"):
+    print(root, files[:5])</code></pre><br><br>一般会看到类似：<br><br><pre><code class="language-text">MedFact-Synth/
+    train.parquet
+    validation.parquet
+    test.parquet</code></pre><br><br>或者：<br><br><pre><code class="language-text">MedFact-Synth/
+    data/
+        train-00000-of-00001.parquet</code></pre><br><br>---<br><br># 二、最常见情况：本地 parquet 文件<br><br>这是 HuggingFace datasets 最常见的格式。<br><br>---<br><br>## 方法1：datasets.load_dataset 加载（推荐）<br><br>例如：<br><br><pre><code class="language-python">from datasets import load_dataset
+
+ds = load_dataset(
+    "parquet",
+    data_files={
+        "train": "MedFact-Synth/train.parquet",
+        "validation": "MedFact-Synth/validation.parquet",
+        "test": "MedFact-Synth/test.parquet"
+    }
+)
+
+print(ds)</code></pre><br><br>---<br><br>## 如果只有 train<br><br><pre><code class="language-python">ds = load_dataset(
+    "parquet",
+    data_files="MedFact-Synth/train.parquet"
+)</code></pre><br><br>---<br><br># 三、如果是 HuggingFace cache 格式<br><br>有时候你下载的是：<br><br><pre><code class="language-text">~/.cache/huggingface/datasets/...</code></pre><br><br>这种直接：<br><br><pre><code class="language-python">from datasets import load_from_disk
+
+ds = load_from_disk("本地目录")</code></pre><br><br>例如：<br><br><pre><code class="language-python">ds = load_from_disk("./MedFact-Synth")</code></pre><br><br>---<br><br># 四、如何判断该用哪个<br><br>看目录里有没有：<br><br>## 情况A<br><br><pre><code class="language-text">dataset_info.json
+state.json
+data-00000-of-00001.arrow</code></pre><br><br>这是：<br><br><pre><code class="language-python">load_from_disk()</code></pre><br><br>---<br><br>## 情况B<br><br><pre><code class="language-text">train.parquet</code></pre><br><br>这是：<br><br><pre><code class="language-python">load_dataset("parquet")</code></pre><br><br>---<br><br>## 情况C<br><br><pre><code class="language-text">train.jsonl</code></pre><br><br>这是：<br><br><pre><code class="language-python">load_dataset("json")</code></pre><br><br>---<br><br># 五、最稳妥的方法（推荐你直接这样）<br><br>你可以直接：<br><br><pre><code class="language-python">from datasets import load_dataset
+import glob
+
+files = glob.glob("MedFact-Synth/**/*.parquet", recursive=True)
+
+print(files)</code></pre><br><br>然后：<br><br><pre><code class="language-python">ds = load_dataset(
+    "parquet",
+    data_files=files
+)</code></pre><br><br>---<br><br># 六、加载后查看结构<br><br><pre><code class="language-python">print(ds)
+
+sample = ds["train"][0]
+
+print(sample.keys())</code></pre><br><br>应该能看到：<br><br><pre><code class="language-python">dict_keys([
+    'idx',
+    'claim',
+    'source',
+    'synthetic_label',
+    'assistant_prompt',
+    ...
+])</code></pre><br><br>---<br><br># 七、直接转 SFT 格式（本地版）<br><br>你本地加载后：<br><br>```python<br>from datasets import load_dataset<br>import json<br><br>ds = load_dataset(<br>    "parquet",<br>    data_files="MedFact-Synth/train.parquet"<br>)["train"]<br><br>output = []<br><br>for x in ds:<br><br>    messages = [<br>        {<br>            "role": "system",<br>            "content": "You are a biomedical evidence verification expert."<br>        },<br>        {<br>            "role": "user",<br>            "content": f"Claim:\n{x['claim']}\n\nArticle:\n{x['source']}"<br>        },<br>        {<br>            "role": "assistant",<br>            "content": x["assistant_prompt"]<br>        }<br>    ]<br><br>    output.append({<br>        "messages": messages<br>    })<br><br>with open("medfact_sft.jsonl", "</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 10:41:00</span>
+                </div>
+                <div class="message-content">我需要从本地加载数据集（已经下载好了），告诉我每个字段由哪些json字段拼成</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 10:41:03</span>
+                </div>
+                <div class="message-content">如果你已经把 urlMedFact-Synth Datasethttps://huggingface.co/datasets/ncbi/MedFact-Synth 下载到本地，通常会看到：<br><br><pre><code class="language-text">train.jsonl
+validation.jsonl
+test.jsonl</code></pre><br><br>或者 parquet。<br><br>这个数据集的单条数据，本质上是：<br><br><pre><code class="language-json">{
+  "idx": "...",
+  "claim_pmid": "...",
+  "claim_potential": "...",
+  "claim": "...",
+  "source_pmid": "...",
+  "source": "...",
+  "synthetic_label": 2,
+  "system_prompt": "...",
+  "user_prompt": "...",
+  "assistant_prompt": "..."
+}</code></pre><br><br>你现在真正关心的是：<br><br># “微调时，每个字段应该由哪些 json 字段拼接出来”<br><br>下面直接给你对应关系。<br><br>---<br><br># 一、最推荐的 SFT 格式<br><br>推荐转换成：<br><br><pre><code class="language-json">{
+  "messages": [
+    {"role": "system", "content": "..."},
+    {"role": "user", "content": "..."},
+    {"role": "assistant", "content": "..."}
+  ]
+}</code></pre><br><br>---<br><br># 二、字段映射关系（核心）<br><br>## 1. system<br><br>来自：<br><br><pre><code class="language-python">system = sample["system_prompt"]</code></pre><br><br>不过：<br><br># 实际上建议不要直接用原 system_prompt<br><br>因为原始 prompt 往往很长。<br><br>建议改成固定模板：<br><br><pre><code class="language-python">system = "You are a biomedical evidence verification expert."</code></pre><br><br>---<br><br># 2. user<br><br>user 通常由：<br><br><pre><code class="language-python">claim + source</code></pre><br><br>拼接。<br><br>即：<br><br><pre><code class="language-python">user = f"""
+Claim:
+{sample["claim"]}
+
+Article:
+{sample["source"]}
+"""</code></pre><br><br>---<br><br># 3. assistant<br><br>assistant 来自：<br><br><pre><code class="language-python">assistant_prompt</code></pre><br><br>即：<br><br><pre><code class="language-python">assistant = sample["assistant_prompt"]</code></pre><br><br>但建议：<br><br># 再补一个 verdict<br><br>因为 assistant_prompt 有时没有标准化输出。<br><br>建议：<br><br><pre><code class="language-python">label_map = {
+    -2: "Strong Contradiction",
+    -1: "Partial Contradiction",
+     0: "Neutral",
+     1: "Partial Support",
+     2: "Strong Support"
+}
+
+assistant = f"""
+{sample["assistant_prompt"]}
+
+Verdict: {label_map[sample["synthetic_label"]]}
+"""</code></pre><br><br>---<br><br># 三、最终真正的拼接关系<br><br>这是你最需要的：<br><br>| SFT字段 | 由哪些原字段组成 |<br>|---|---|<br>| system | system_prompt（或自定义固定system） |<br>| user | claim + source |<br>| assistant | assistant_prompt + synthetic_label |<br><br>---<br><br># 四、为什么不建议直接使用 user_prompt<br><br>因为：<br><br><pre><code class="language-python">sample["user_prompt"]</code></pre><br><br>通常长这样：<br><br><pre><code class="language-text">You are provided with a claim and article...
+Determine whether...</code></pre><br><br>问题：<br><br>- 太模板化<br>- token 浪费<br>- instruction 重复<br>- 对 SFT 没价值<br><br>因此：<br><br># 更推荐自己构造<br><br>即：<br><br><pre><code class="language-python">Claim:
+...
+
+Article:
+...</code></pre><br><br>---<br><br># 五、推荐的最终 JSONL 格式<br><br>建议最终：<br><br><pre><code class="language-json">{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a biomedical evidence verification expert."
+    },
+    {
+      "role": "user",
+      "content": "Claim:\n...\n\nArticle:\n..."
+    },
+    {
+      "role": "assistant",
+      "content": "&lt;think&gt;...&lt;/think&gt;\n\nVerdict: Partial Support"
+    }
+  ]
+}</code></pre><br><br>---<br><br># 六、本地加载方法<br><br>## 如果是 json/jsonl<br><br><pre><code class="language-python">import json
+
+data = []
+
+with open("train.jsonl", "r", encoding="utf-8") as f:
+    for line in f:
+        data.append(json.loads(line))</code></pre><br><br>---<br><br>## 如果是 parquet（HF默认很常见）<br><br><pre><code class="language-python">from datasets import load_dataset
+
+ds = load_dataset(
+    "parquet",
+    data_files="train.parquet"
+)</code></pre><br><br>或者：<br><br><pre><code class="language-python">import pandas as pd
+
+df = pd.read_parquet("train.parquet")</code></pre><br><br>---<br><br># 七、完整转换代码（本地版）<br><br>这是你真正能直接跑的。<br><br><pre><code class="language-python">import json
+
+label_map = {
+    -2: "Strong Contradiction",
+    -1: "Partial Contradiction",
+     0: "Neutral",
+     1: "Partial Support",
+     2: "Strong Support"
+}
+
+output = []
+
+with open("train.jsonl", "r", encoding="utf-8") as f:
+
+    for line in f:
+
+        x = json.loads(line)
+
+        system = "You are a biomedical evidence verification expert."
+
+        user = f"""Claim:
+{x["claim"]}
+
+Article:
+{x["source"]}"""
+
+        assistant = f"""{x["assistant_prompt"]}
+
+Verdict: {label_map[int(x["synthetic_label"])]}
+"""
+
+        sample = {
+            "messages": [
+                {
+                    "role": "system",
+                    "content": system
+                },
+                {
+                    "role": "user",
+                    "content": user
+                },
+                {
+                    "role": "assistant",
+                    "content": assistant
+                }
+            ]
+        }
+
+        output.append(sample)
+
+with open("medfact_sft.jsonl", "w", encoding="utf-8") as f:
+    for x in output:
+        f.write(json.dumps(x, ensure_ascii=False) + "\n")</code></pre><br><br>---<br><br># 八、如果你想做“更适合 reasoning model”的版本<br><br>建议：<br><br># 保留 think<br><br>因为 assistant_prompt 通常：<br><br><pre><code class="language-text">&lt;think&gt;
+...
+&lt;/think&gt;</code></pre><br><br>这种数据很适合：<br><br>- DeepSeek-R1风格<br>- QwQ风格<br>- reasoning distillation<br><br>---<br><br># 九、如果你想做“小模型分类器”<br><br>那就别 messages。<br><br>直接：<br><br><pre><code class="language-json">{
+  "input": "Claim: ... Article: ...",
+  "label": 2
+}</code></pre><br><br>即可。<br><br>适合：<br><br>- PubMedBERT<br>- BioClinicalBERT<br>- DeBERTa-v3<br><br>---<br><br># 十、这个数据集一个非常重要的问题<br><br>很多人会忽略：<br><br># source 极长<br><br>很多：<br><br><pre><code class="language-text">3000~12000 token</code></pre><br><br>所以你最好：<br><br>---<br><br>## 方案1（推荐）<br><br>只保留 abstract：<br><br><pre><code class="language-python">source[:4000]</code></pre><br><br>---<br><br>## 方案2<br><br>做 chunk：<br><br><pre><code class="language-python">chunk_size = 2048</code></pre><br><br>---<br><br>## 方案3<br><br>做 RAG retrieval<br><br>而不是直接全塞。<br><br>---<br><br># 十一、你现在最推荐的训练方式（结合你方向）<br><br>你做医学KG + 医学推理的话：<br><br>我最建议：<br><br># “Verifier SFT”<br><br>即：<br><br><pre><code class="language-text">claim + evidence
+    ↓
+生成：
+support/refute + rationale</code></pre><br><br>这和：<br><br>- 医学 hallucination detection<br>- retrieval verification<br>- evidence attribution<br>- KG reasoning verifier<br><br>高度一致。</div>
+            </div></div></div></body></html>

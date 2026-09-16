@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-06-28T22:47:08.961293",
+  "n_train": 179,
+  "n_val": 38,
+  "n_test": 40,
+  "default_label": "topic_shift",
+  "test_label_distribution": {
+    "request_how_to": 3,
+    "topic_shift": 12,
+    "follow_up_clarification": 17,
+    "compare_options": 3,
+    "provide_more_context": 2,
+    "ask_why": 1,
+    "ask_for_example": 2
+  },
+  "device": "cuda",
+  "lexical_baseline": {
+    "point_estimates": {
+      "lexical_nn": {
+        "accuracy": 0.325,
+        "macro_f1": 0.13022774327122152
+      },
+      "lexical_state": {
+        "accuracy": 0.325,
+        "macro_f1": 0.13022774327122152
+      }
+    },
+    "bootstrap_ci": {
+      "lexical_nn_accuracy": {
+        "mean": 0.32552749999999997,
+        "std": 0.0746280187186273,
+        "ci_95_lower": 0.175,
+        "ci_95_upper": 0.475
+      },
+      "lexical_nn_macro_f1": {
+        "mean": 0.1375822482743181,
+        "std": 0.05111875690440775,
+        "ci_95_lower": 0.05714285714285714,
+        "ci_95_upper": 0.2482654241987947
+      }
+    },
+    "state_ablation": {
+      "identical": 40,
+      "total": 40,
+      "fraction": 1.0
+    }
+  },
+  "embedding_baselines": {
+    "BAAI/bge-small-zh-v1.5": {
+      "model_key": "bge-small-zh-v1.5",
+      "embedding_dim": 512,
+      "point_estimates": {
+        "embedding_nn": {
+          "accuracy": 0.3,
+          "macro_f1": 0.06593406593406594
+        },
+        "embedding_state": {
+          "accuracy": 0.3,
+          "macro_f1": 0.06593406593406594
+        }
+      },
+      "bootstrap_ci": {
+        "embedding_nn_accuracy": {
+          "mean": 0.30064250000000003,
+          "std": 0.07308682413497122,
+          "ci_95_lower": 0.15,
+          "ci_95_upper": 0.45
+        },
+        "embedding_nn_macro_f1": {
+          "mean": 0.07400309202114676,
+          "std": 0.0183511990082922,
+          "ci_95_lower": 0.0425531914893617,
+          "ci_95_upper": 0.1142857142857143
+        }
+      },
+      "identity_check": {
+        "nn_vs_state_identical": 40,
+        "total": 40,
+        "fraction": 1.0
+      },
+      "mcnemar_vs_lexical": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_0.05": false,
+        "b": 1,
+        "c": 2
+      }
+    },
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": {
+      "model_key": "paraphrase-multilingual-MiniLM-L12-v2",
+      "embedding_dim": 384,
+      "point_estimates": {
+        "embedding_nn": {
+          "accuracy": 0.35,
+          "macro_f1": 0.1601731601731602
+        },
+        "embedding_state": {
+          "accuracy": 0.35,
+          "macro_f1": 0.1601731601731602
+        }
+      },
+      "bootstrap_ci": {
+        "embedding_nn_accuracy": {
+          "mean": 0.350605,
+          "std": 0.07584167173076481,
+          "ci_95_lower": 0.2,
+          "ci_95_upper": 0.5
+        },
+        "embedding_nn_macro_f1": {
+          "mean": 0.1705989089337437,
+          "std": 0.05547301766838056,
+          "ci_95_lower": 0.0813224854021818,
+          "ci_95_upper": 0.29080519749612865
+        }
+      },
+      "identity_check": {
+        "nn_vs_state_identical": 40,
+        "total": 40,
+        "fraction": 1.0
+      },
+      "mcnemar_vs_lexical": {
+        "chi2": 0.0,
+        "p_value": 1.0,
+        "significant_0.05": false,
+        "b": 5,
+        "c": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "input": "data/processed/personaconvbench/replay_examples.jsonl",
+  "model": "/root/models/all-MiniLM-L6-v2-min",
+  "splits": {
+    "train": 50000,
+    "val": 5000,
+    "test": 10000
+  },
+  "train_users": 1090,
+  "test_users": 196,
+  "top_k": 5,
+  "runtime_sec": 63.96337890625,
+  "test_label_distribution": {
+    "agree_or_affirm": 690,
+    "ask_question": 3779,
+    "cite_evidence": 242,
+    "disagree_or_correct": 1119,
+    "elaborate_argument": 31,
+    "humor_or_reaction": 180,
+    "personal_experience": 1642,
+    "short_reply": 828,
+    "topic_branch": 1489
+  },
+  "results": [
+    {
+      "variant": "embedding_nn::/root/models/all-MiniLM-L6-v2-min",
+      "n": 10000,
+      "accuracy": 0.2959,
+      "macro_f1": 0.12920813949503382,
+      "prediction_distribution": {
+        "agree_or_affirm": 468,
+        "ask_question": 5468,
+        "cite_evidence": 197,
+        "disagree_or_correct": 971,
+        "elaborate_argument": 18,
+        "humor_or_reaction": 70,
+        "personal_experience": 1437,
+        "short_reply": 332,
+        "topic_branch": 1039
+      }
+    }
+  ]
+}

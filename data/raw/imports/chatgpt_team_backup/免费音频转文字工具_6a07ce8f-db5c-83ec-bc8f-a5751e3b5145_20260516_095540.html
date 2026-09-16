@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免费音频转文字工具</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>免费音频转文字工具</h1>
+            <div class="metadata">ID: 6a07ce8f-db5c-83ec-bc8f-a5751e3b5145 | 2026/5/16 09:55:40</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/16 09:55:39</span>
+                </div>
+                <div class="message-content">有没有什么免费音频转文字的工具</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/16 09:55:40</span>
+                </div>
+                <div class="message-content">我会按“真正免费/本地离线/网页省事/中文效果”几个场景来分，避免只给一堆名字。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/16 09:55:45</span>
+                </div>
+                <div class="message-content">有，按你的用途我建议这样选：<br><br>| 场景 | 推荐工具 | 特点 |<br>|---|---|---|<br>| <strong>想完全免费、隐私好</strong> | <strong>Whisper 本地版</strong> | 开源免费，中文可用，音频不上传；但需要本地配置。OpenAI Whisper 本身是开源语音识别模型，支持多语言识别。citeturn908980search0turn908980search4 |<br>| <strong>电脑配置一般，想跑得快</strong> | <strong>whisper.cpp</strong> | Whisper 的高性能 C/C++ 实现，支持 CPU、本地运行，也支持多种硬件加速。citeturn908980search2 |<br>| <strong>不想折腾，直接网页上传</strong> | <strong>TurboScribe 免费版</strong> | 网页工具，中文音视频转文字，免费版每天 3 次转写。citeturn908980search10 |<br>| <strong>短音频临时用</strong> | <strong>WhisperWebUI</strong> | 在线 Whisper 转写，支持 MP3、WAV、M4A、MP4 等，免费版适合短文件。citeturn908980search3 |<br>| <strong>英文会议/课堂录音</strong> | <strong>Otter.ai 免费版</strong> | 更适合英文会议纪要，免费版有月度分钟限制。citeturn908980news29 |<br><br>我的建议很直接：<br><br>如果你只是偶尔转录，<strong>先用 TurboScribe 或 WhisperWebUI</strong>，省事。  <br>如果你经常转录论文访谈、会议录音、隐私音频，<strong>装本地 Whisper / whisper.cpp</strong>，长期最划算。<br><br>中文音频的话，优先试：<br><br>1. <strong>TurboScribe</strong><br>2. <strong>Whisper 本地版</strong><br>3. <strong>WhisperWebUI</strong><br><br>不要太迷信“免费在线工具”，很多只是免费试用，长音频、批量导出、说话人分离通常会收费。</div>
+            </div></div></div></body></html>

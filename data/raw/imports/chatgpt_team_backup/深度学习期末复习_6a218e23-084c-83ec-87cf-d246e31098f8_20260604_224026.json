@@ -1,0 +1,489 @@
+{
+  "title": "深度学习期末复习",
+  "create_time": 1780584026.897045,
+  "update_time": 1780586517.785817,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a218e23-084c-83ec-87cf-d246e31098f8",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.openai.com",
+    "https://docs.google.com/document/d/"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "4dc523e9-9b57-4204-86fd-dc7d7042c8da"
+      ]
+    },
+    "4dc523e9-9b57-4204-86fd-dc7d7042c8da": {
+      "id": "4dc523e9-9b57-4204-86fd-dc7d7042c8da",
+      "message": {
+        "id": "4dc523e9-9b57-4204-86fd-dc7d7042c8da",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "89e5d720-f06b-40c2-92f8-009d5b0db4e4"
+      ]
+    },
+    "89e5d720-f06b-40c2-92f8-009d5b0db4e4": {
+      "id": "89e5d720-f06b-40c2-92f8-009d5b0db4e4",
+      "message": {
+        "id": "89e5d720-f06b-40c2-92f8-009d5b0db4e4",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4dc523e9-9b57-4204-86fd-dc7d7042c8da",
+      "children": [
+        "d6b010ef-fed9-42b6-bfc0-1bb4d51882a3"
+      ]
+    },
+    "d6b010ef-fed9-42b6-bfc0-1bb4d51882a3": {
+      "id": "d6b010ef-fed9-42b6-bfc0-1bb4d51882a3",
+      "message": {
+        "id": "d6b010ef-fed9-42b6-bfc0-1bb4d51882a3",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "89e5d720-f06b-40c2-92f8-009d5b0db4e4",
+      "children": [
+        "83cb9d77-bd4d-46a7-bca2-a0356fdf6740"
+      ]
+    },
+    "83cb9d77-bd4d-46a7-bca2-a0356fdf6740": {
+      "id": "83cb9d77-bd4d-46a7-bca2-a0356fdf6740",
+      "message": {
+        "id": "83cb9d77-bd4d-46a7-bca2-a0356fdf6740",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d6b010ef-fed9-42b6-bfc0-1bb4d51882a3",
+      "children": [
+        "187a1043-96d1-4c3a-a55a-b7a1dae1de0a"
+      ]
+    },
+    "187a1043-96d1-4c3a-a55a-b7a1dae1de0a": {
+      "id": "187a1043-96d1-4c3a-a55a-b7a1dae1de0a",
+      "message": {
+        "id": "187a1043-96d1-4c3a-a55a-b7a1dae1de0a",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780584024.487,
+        "update_time": 1780584099.442026,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "深度学习准备期末考了，\n题型是：\"\"\" \n选择\r\n填空\r\n简答\r\n综合（解决实际问题）\r\n\r\n\r\n\"\"\"，还说会考代码。\n考前老师画的范围是：\"\"\"\n大纲回顾\r\n深度学习基础\r\n·线性回归\r\nSoftmax回归\r\n·多层感知机\r\n·模型选择\r\n·过拟合、欠拟合\r\n权重衰退\r\nDropout\r\n卷积神经网络循环神经网络\r\nLeNet\r\n-RNN.GRU, LSTM\r\n·AlexNet\r\n深层、双向RNN\r\n*VGG\r\nSeq25eq\r\nNN\r\nGoogleNet\r\nResNet\r\n注意力机制\r\n*Seq2seq+attention\r\n计算机视觉\r\n·图片增广\r\nTransformer\r\nBERT\r\n应用\r\n房价预测\r\n·图片分类\r\n物体检测\r\n语义分割\r\nBERT\r\n·样式迁移\r\n语言模型\r\n·机器翻译\r\n\"自然话言推理\r\n数值稳定性\r\n·微调\r\n模型初始化和激活:R-CNN,SSD, YOLO\r\n函数\r\n·FCN\r\n·样式迁移\r\n性能\r\n.CPU. GPU, ASIC\r\n使用(多)GPU\r\n分布式\"\"\"\n\n\n你能不能帮我押题。 我还有好多内容没看，但是看不进去了。。说实话那个教材看的我有点懵，都不知道要怎么考，哪些是重点。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-eff04699-d74c-4df0-ba62-90479fbd39f2",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eff04699-d74c-4df0-ba62-90479fbd39f2:AU",
+          "request_id": "wfr_019e93133b327acc9418222d75c87f35",
+          "message_source": null,
+          "turn_exchange_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "working_turn_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "83cb9d77-bd4d-46a7-bca2-a0356fdf6740",
+      "children": [
+        "ed869991-4886-48bb-b64e-d5cc36d1417d"
+      ]
+    },
+    "ed869991-4886-48bb-b64e-d5cc36d1417d": {
+      "id": "ed869991-4886-48bb-b64e-d5cc36d1417d",
+      "message": {
+        "id": "ed869991-4886-48bb-b64e-d5cc36d1417d",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780584026.7314248,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e93133b327acc9418222d75c87f35",
+          "message_type": "next",
+          "turn_exchange_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "working_turn_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "187a1043-96d1-4c3a-a55a-b7a1dae1de0a",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eff04699-d74c-4df0-ba62-90479fbd39f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "187a1043-96d1-4c3a-a55a-b7a1dae1de0a",
+      "children": [
+        "a713d1bb-cb95-4b56-b510-fdc3cd6858e0"
+      ]
+    },
+    "a713d1bb-cb95-4b56-b510-fdc3cd6858e0": {
+      "id": "a713d1bb-cb95-4b56-b510-fdc3cd6858e0",
+      "message": {
+        "id": "a713d1bb-cb95-4b56-b510-fdc3cd6858e0",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780584028.768419,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [
+            {
+              "summary": "制定复习计划与考点预测",
+              "content": "用户想要考试预测与学习计划。考虑不需要联网查询，可以通过现有的资料提供高概率考点。可以依据题型和范围进行预测，比如提供高概率的“A档”考点，重点是重要概念和代码示例。结构可以分为计划表与公式，可能包含PyTorch代码模型和训练流程。引导用户不要紧张，合理采用分阶段复习。",
+              "chunks": [
+                "用户想要考试预测与学习计划。",
+                "考虑不需要联网查询，可以通过现有的资料提供高概率考点。",
+                "可以依据题型和范围进行预测，比如提供高概率的“A档”考点，重点是重要概念和代码示例。",
+                "结构可以分为计划表与公式，可能包含PyTorch代码模型和训练流程。",
+                "引导用户不要紧张，合理采用分阶段复习。"
+              ],
+              "finished": true
+            }
+          ],
+          "source_analysis_msg_id": "6e903f5e-3d24-4a45-800d-924ae1086672"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e93133b327acc9418222d75c87f35",
+          "message_type": "next",
+          "turn_exchange_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "working_turn_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "parent_id": "6e903f5e-3d24-4a45-800d-924ae1086672",
+          "classifier_response": "default",
+          "reasoning_start_time": 1780584026.7861207,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eff04699-d74c-4df0-ba62-90479fbd39f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "ed869991-4886-48bb-b64e-d5cc36d1417d",
+      "children": [
+        "458ec99b-7861-4cec-929c-a9cab9c411fe"
+      ]
+    },
+    "458ec99b-7861-4cec-929c-a9cab9c411fe": {
+      "id": "458ec99b-7861-4cec-929c-a9cab9c411fe",
+      "message": {
+        "id": "458ec99b-7861-4cec-929c-a9cab9c411fe",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780584038.024303,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考 11s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 11,
+          "reasoning_start_time": 1780584026.7861207,
+          "reasoning_end_time": 1780584038.018608,
+          "request_id": "wfr_019e93133b327acc9418222d75c87f35",
+          "message_type": "next",
+          "turn_exchange_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "working_turn_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "a713d1bb-cb95-4b56-b510-fdc3cd6858e0",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eff04699-d74c-4df0-ba62-90479fbd39f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "a713d1bb-cb95-4b56-b510-fdc3cd6858e0",
+      "children": [
+        "2bab201b-01b9-406c-a2d0-95bbf8c5c279"
+      ]
+    },
+    "2bab201b-01b9-406c-a2d0-95bbf8c5c279": {
+      "id": "2bab201b-01b9-406c-a2d0-95bbf8c5c279",
+      "message": {
+        "id": "2bab201b-01b9-406c-a2d0-95bbf8c5c279",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1780584026.778395,
+        "update_time": 1780586517.781655,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "能。你现在不要再“从头啃教材”了，效率会很低。按你老师画的范围，这门课大概率不是考特别深的数学证明，而是考：**基本概念 + 模型区别 + 代码框架 + 实际任务怎么选模型/调参**。\n\n我给你按“押题优先级”来排。\n\n---\n\n# 一、最可能考的核心重点\n\n## 第一档：很可能考，必须会\n\n### 1. 过拟合、欠拟合、模型选择\n\n这几乎一定会考选择、填空、简答或综合题。\n\n你要会说：\n\n**欠拟合**：模型太简单，训练误差和测试误差都高。  \n解决：增大模型、增加特征、训练更久、降低正则化。\n\n**过拟合**：训练误差低，测试误差高。  \n解决：增加数据、数据增强、权重衰退、Dropout、早停、简化模型。\n\n**模型选择**：训练集训练，验证集调参，测试集最后评估。\n\n高频简答题：\n\n> 为什么不能用测试集调参？\n\n答：因为测试集用于最终评估泛化能力，如果用测试集调参，会导致测试结果被“泄露”，评估不真实。\n\n---\n\n### 2. 线性回归、Softmax 回归、MLP\n\n这是深度学习基础部分，选择、填空、代码都很容易考。\n\n你要掌握：\n\n**线性回归**  \n用于回归问题，输出连续值。  \n损失函数常用平方损失：\n\n\\[\nl=\\frac{1}{2}(y-\\hat y)^2\n\\]\n\n**Softmax 回归**  \n用于多分类问题。  \n输出经过 softmax 得到每一类概率：\n\n\\[\nsoftmax(o_i)=\\frac{e^{o_i}}{\\sum_j e^{o_j}}\n\\]\n\n损失函数常用交叉熵。\n\n**MLP 多层感知机**  \n在线性层之间加入激活函数，例如 ReLU，否则多层线性层叠加仍然等价于一个线性层。\n\n高频题：\n\n> 为什么 MLP 需要激活函数？\n\n答：如果没有非线性激活函数，多层线性变换仍然可以合并成一个线性变换，模型表达能力不会增强。\n\n---\n\n### 3. 权重衰退、Dropout\n\n这个非常爱考。\n\n**权重衰退**本质是 L2 正则化：\n\n\\[\nL + \\lambda ||w||^2\n\\]\n\n作用：限制权重过大，缓解过拟合。\n\n**Dropout**  \n训练时随机丢弃一部分神经元，测试时使用完整网络。  \n作用：减少神经元之间的依赖，缓解过拟合。\n\n高频填空：\n\n> Dropout 通常只在训练阶段使用，测试阶段关闭。\n\n---\n\n### 4. 卷积神经网络 CNN、LeNet、AlexNet、VGG、GoogLeNet、ResNet\n\n这部分大概率会考模型结构区别。\n\n你不用死背全部细节，但要知道：\n\n| 模型 | 核心特点 |\n|---|---|\n| LeNet | 早期 CNN，用于手写数字识别 |\n| AlexNet | 更深，使用 ReLU、Dropout、数据增强，推动深度学习发展 |\n| VGG | 使用多个小卷积核，例如 3×3，结构规整 |\n| GoogLeNet | Inception 模块，多尺度卷积 |\n| ResNet | 残差连接，解决深层网络退化问题 |\n\nResNet 必须会：\n\n\\[\ny = F(x) + x\n\\]\n\n高频简答：\n\n> ResNet 为什么能训练很深的网络？\n\n答：通过残差连接让信息和梯度更容易传播，缓解梯度消失和网络退化问题。\n\n---\n\n### 5. RNN、GRU、LSTM、双向 RNN\n\n这部分也很可能考简答或选择。\n\n你要会区分：\n\n| 模型 | 特点 |\n|---|---|\n| RNN | 处理序列数据，有隐藏状态 |\n| GRU | 有更新门、重置门，结构比 LSTM 简单 |\n| LSTM | 有输入门、遗忘门、输出门，缓解长期依赖问题 |\n| 双向 RNN | 同时利用过去和未来上下文 |\n\n高频题：\n\n> 为什么普通 RNN 难以处理长序列？\n\n答：因为反向传播时容易出现梯度消失或梯度爆炸，导致长期依赖难以学习。\n\n---\n\n### 6. Seq2Seq + Attention\n\n你老师范围里专门写了 `Seq2seq+attention`，这个非常值得押。\n\nSeq2Seq 用于机器翻译：\n\n编码器：把输入序列编码成隐藏状态。  \n解码器：根据编码结果逐步生成输出序列。\n\n普通 Seq2Seq 的问题：所有信息压缩到一个固定长度向量，长句效果差。\n\nAttention 的作用：解码时根据当前状态，对输入不同位置分配不同权重。\n\n高频简答：\n\n> Attention 机制解决了什么问题？\n\n答：解决了 Seq2Seq 中固定长度上下文向量的信息瓶颈，使解码器能够动态关注输入序列中不同位置的信息。\n\n---\n\n### 7. Transformer、BERT\n\n这个几乎必考，特别是选择、填空、简答。\n\nTransformer 核心：\n\n- 不使用 RNN\n- 依赖自注意力机制\n- 可以并行计算\n- 使用位置编码表示词序\n\n自注意力公式最好背：\n\n\\[\nAttention(Q,K,V)=softmax(\\frac{QK^T}{\\sqrt{d_k}})V\n\\]\n\nBERT 核心：\n\n- 基于 Transformer Encoder\n- 双向编码\n- 预训练 + 微调\n- 常用于自然语言推理、文本分类、问答等任务\n\n高频题：\n\n> BERT 为什么是双向的？\n\n答：BERT 使用 Transformer Encoder，通过自注意力同时建模左右上下文，因此能够获得双向语义表示。\n\n---\n\n### 8. 数值稳定性、初始化、激活函数\n\n这部分容易出填空和简答。\n\n重点：\n\n**梯度消失**：梯度越来越小，前面层学不到。  \n**梯度爆炸**：梯度越来越大，训练不稳定。\n\n解决方法：\n\n- 合理初始化，例如 Xavier、He 初始化\n- 使用 ReLU\n- Batch Normalization\n- 残差连接\n- 梯度裁剪，尤其是 RNN\n\n激活函数：\n\n| 函数 | 特点 |\n|---|---|\n| Sigmoid | 输出 0 到 1，容易梯度消失 |\n| Tanh | 输出 -1 到 1，也可能梯度消失 |\n| ReLU | 简单高效，缓解梯度消失 |\n| Softmax | 多分类输出概率 |\n\n---\n\n# 二、代码最可能考什么\n\n老师说会考代码，一般不会让你手写很复杂的完整工程。更可能考这些。\n\n## 1. PyTorch 训练基本流程\n\n这个必须会。\n\n```python\nfor epoch in range(num_epochs):\n    model.train()\n    for X, y in train_iter:\n        y_hat = model(X)\n        loss = loss_fn(y_hat, y)\n\n        optimizer.zero_grad()\n        loss.backward()\n        optimizer.step()\n```\n\n核心顺序一定要记住：\n\n```python\n预测 -> 计算损失 -> 梯度清零 -> 反向传播 -> 参数更新\n```\n\n高频填空：\n\n```python\noptimizer.zero_grad()\nloss.backward()\noptimizer.step()\n```\n\n---\n\n## 2. 定义 MLP\n\n```python\nimport torch\nfrom torch import nn\n\nmodel = nn.Sequential(\n    nn.Flatten(),\n    nn.Linear(784, 256),\n    nn.ReLU(),\n    nn.Dropout(0.5),\n    nn.Linear(256, 10)\n)\n```\n\n考点：\n\n- `Flatten()`：把图片拉平成向量\n- `Linear(784, 256)`：全连接层\n- `ReLU()`：非线性激活\n- `Dropout(0.5)`：随机丢弃 50%\n- 最后一层输出类别数，例如 10 类就是 10\n\n---\n\n## 3. 定义 CNN\n\n```python\nmodel = nn.Sequential(\n    nn.Conv2d(1, 6, kernel_size=5),\n    nn.ReLU(),\n    nn.MaxPool2d(kernel_size=2, stride=2),\n    nn.Conv2d(6, 16, kernel_size=5),\n    nn.ReLU(),\n    nn.MaxPool2d(kernel_size=2, stride=2),\n    nn.Flatten(),\n    nn.Linear(16 * 4 * 4, 120),\n    nn.ReLU(),\n    nn.Linear(120, 84),\n    nn.ReLU(),\n    nn.Linear(84, 10)\n)\n```\n\n这里像 LeNet，可能考你补空。\n\n重点看懂：\n\n```python\nnn.Conv2d(输入通道数, 输出通道数, kernel_size)\n```\n\n例如 RGB 图片输入通道是 3，灰度图输入通道是 1。\n\n---\n\n## 4. 损失函数选择\n\n| 任务 | 最常用损失 |\n|---|---|\n| 回归 | MSELoss |\n| 多分类 | CrossEntropyLoss |\n| 二分类 | BCELoss 或 BCEWithLogitsLoss |\n| 语义分割 | CrossEntropyLoss |\n| 目标检测 | 分类损失 + 边界框回归损失 |\n\nPyTorch 多分类常用：\n\n```python\nloss_fn = nn.CrossEntropyLoss()\n```\n\n注意：`CrossEntropyLoss` 通常直接接收原始 logits，不需要你手动先 softmax。\n\n---\n\n## 5. GPU 代码\n\n这个也可能考填空。\n\n```python\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\nmodel = model.to(device)\n\nfor X, y in train_iter:\n    X = X.to(device)\n    y = y.to(device)\n```\n\n---\n\n# 三、综合题最可能怎么考\n\n综合题一般不是让你证明，而是给一个实际问题，让你设计方案。\n\n## 押题 1：房价预测\n\n题目可能是：\n\n> 给定房屋面积、房间数、地理位置等特征，预测房价，应该用什么模型？如何处理数据？如何防止过拟合？\n\n答题模板：\n\n这是一个回归问题，可以使用线性回归或多层感知机。  \n数据预处理包括缺失值处理、数值特征标准化、类别特征独热编码。  \n损失函数使用均方误差。  \n使用训练集训练，验证集调参，测试集评估。  \n为了防止过拟合，可以使用权重衰退、Dropout、早停或增加数据。\n\n---\n\n## 押题 2：图片分类\n\n题目可能是：\n\n> 要识别猫狗图片，应如何设计深度学习模型？\n\n答题模板：\n\n这是图像分类任务，可以使用 CNN，例如 LeNet、AlexNet、VGG、ResNet。  \n输入图片先进行 resize、归一化和数据增强。  \n模型通过卷积层提取局部特征，通过池化降低空间尺寸，最后用全连接层或全局平均池化输出类别。  \n损失函数使用交叉熵，优化器可以使用 SGD 或 Adam。  \n过拟合时可以使用数据增强、Dropout、权重衰退或迁移学习。\n\n---\n\n## 押题 3：机器翻译\n\n题目可能是：\n\n> 如何用深度学习实现英文到中文翻译？\n\n答题模板：\n\n这是序列到序列任务，可以使用 Seq2Seq、Seq2Seq+Attention 或 Transformer。  \n编码器将源语言句子编码为隐藏表示，解码器逐步生成目标语言。  \nAttention 可以让模型在生成每个词时关注源句子的不同位置。  \nTransformer 使用自注意力机制，支持并行训练，能更好建模长距离依赖。  \n训练时使用交叉熵损失，推理时可以使用贪心搜索或束搜索。\n\n---\n\n## 押题 4：目标检测\n\n题目可能是：\n\n> 图片中不仅要判断有没有车，还要标出车的位置，用什么模型？\n\n答题模板：\n\n这是目标检测任务，不仅需要分类，还需要定位。  \n可以使用 R-CNN、SSD、YOLO 等模型。  \nR-CNN 系列精度较高但速度较慢。  \nSSD 和 YOLO 属于单阶段检测方法，速度较快，适合实时检测。  \n模型输出包括类别概率和边界框坐标。\n\n---\n\n## 押题 5：语义分割\n\n题目可能是：\n\n> 自动驾驶中要识别道路、车辆、行人、天空等每个像素的类别，用什么模型？\n\n答题模板：\n\n这是语义分割任务，需要对图像中每个像素分类。  \n可以使用 FCN。  \nFCN 将传统 CNN 的全连接层替换为卷积层，并通过上采样恢复空间分辨率。  \n损失函数通常使用像素级交叉熵。\n\n---\n\n## 押题 6：自然语言推理 / BERT 微调\n\n题目可能是：\n\n> 判断两个句子之间是蕴含、矛盾还是中立，用什么模型？\n\n答题模板：\n\n这是自然语言推理任务，可以使用预训练 BERT 微调。  \n输入格式通常为 `[CLS] 句子A [SEP] 句子B [SEP]`。  \n使用 `[CLS]` 对应的输出表示进行分类。  \nBERT 先在大规模语料上预训练，再在具体任务数据集上微调，能够提升下游任务效果。\n\n---\n\n# 四、选择题和填空题高频点\n\n这些直接背。\n\n1. 线性回归用于 **回归问题**。\n2. Softmax 回归用于 **多分类问题**。\n3. 分类任务常用损失函数是 **交叉熵损失**。\n4. 回归任务常用损失函数是 **均方误差**。\n5. Dropout 主要用于缓解 **过拟合**。\n6. 权重衰退相当于 **L2 正则化**。\n7. CNN 适合处理 **图像数据**。\n8. RNN 适合处理 **序列数据**。\n9. LSTM 通过门控机制缓解 **长期依赖问题**。\n10. Transformer 的核心是 **自注意力机制**。\n11. BERT 基于 Transformer 的 **Encoder**。\n12. ResNet 的核心结构是 **残差连接**。\n13. VGG 的特点是大量使用 **小卷积核 3×3**。\n14. GoogLeNet 的核心是 **Inception 模块**。\n15. YOLO 是 **单阶段目标检测模型**。\n16. FCN 用于 **语义分割**。\n17. 图片增广可以缓解 **过拟合**。\n18. 梯度爆炸可以用 **梯度裁剪** 缓解。\n19. GPU 适合深度学习是因为它擅长 **并行计算**。\n20. 微调是指在 **预训练模型基础上针对下游任务继续训练**。\n\n---\n\n# 五、简答题押题\n\n## 1. 简述过拟合和欠拟合的区别。\n\n欠拟合是模型过于简单，训练误差和测试误差都较高。  \n过拟合是模型过度记住训练集，训练误差低但测试误差高。  \n欠拟合可以通过增加模型复杂度、增加特征、训练更久解决。  \n过拟合可以通过增加数据、正则化、Dropout、数据增强、早停解决。\n\n---\n\n## 2. 为什么 CNN 适合图像任务？\n\nCNN 使用卷积核提取局部特征，参数共享减少参数量，平移不变性使其适合处理图像。池化层可以降低空间尺寸并增强鲁棒性。因此 CNN 在图片分类、目标检测、语义分割中表现良好。\n\n---\n\n## 3. RNN、GRU、LSTM 的区别。\n\nRNN 用隐藏状态处理序列数据，但容易出现梯度消失，难以学习长期依赖。  \nGRU 使用更新门和重置门控制信息流，结构较简单。  \nLSTM 使用输入门、遗忘门、输出门和记忆单元，更适合处理长期依赖。\n\n---\n\n## 4. Attention 的作用是什么？\n\nAttention 让模型在生成当前输出时，根据相关性动态关注输入序列的不同位置。它解决了传统 Seq2Seq 把全部信息压缩到固定长度向量中的瓶颈问题，尤其适合机器翻译等序列任务。\n\n---\n\n## 5. Transformer 相比 RNN 有什么优势？\n\nTransformer 不依赖循环结构，而是使用自注意力机制建模序列中任意位置之间的关系。它可以并行计算，训练效率更高，并且更容易捕捉长距离依赖。\n\n---\n\n## 6. 什么是微调？\n\n微调是指先使用大规模数据训练一个预训练模型，然后在具体任务的小数据集上继续训练部分或全部参数。这样可以利用预训练模型学到的通用特征，提高下游任务效果。\n\n---\n\n# 六、考前最值得背的公式\n\n你现在不用背太多，背这些就够应付大部分题。\n\n## Softmax\n\n\\[\nsoftmax(o_i)=\\frac{e^{o_i}}{\\sum_j e^{o_j}}\n\\]\n\n## 交叉熵\n\n\\[\nL=-\\sum_i y_i \\log \\hat y_i\n\\]\n\n单标签分类时常写成：\n\n\\[\nL=-\\log \\hat y_y\n\\]\n\n## 权重衰退\n\n\\[\nL' = L + \\lambda ||w||^2\n\\]\n\n## Attention\n\n\\[\nAttention(Q,K,V)=softmax(\\frac{QK^T}{\\sqrt{d_k}})V\n\\]\n\n## 卷积输出尺寸\n\n\\[\n\\frac{n-k+2p}{s}+1\n\\]\n\n其中：\n\n- \\(n\\)：输入尺寸\n- \\(k\\)：卷积核大小\n- \\(p\\)：padding\n- \\(s\\)：stride\n\n这个公式很可能考填空或计算。\n\n---\n\n# 七、最后复习策略：不要平均用力\n\n你现在最应该按这个顺序复习：\n\n## 先看 1 小时：基础和防过拟合\n\n重点：\n\n- 线性回归\n- Softmax\n- MLP\n- 过拟合 / 欠拟合\n- 权重衰退\n- Dropout\n- 训练集 / 验证集 / 测试集\n\n这部分最容易拿分。\n\n---\n\n## 再看 1.5 小时：CNN 和经典网络\n\n重点：\n\n- CNN 基本结构\n- 卷积、池化、padding、stride\n- LeNet、AlexNet、VGG、GoogLeNet、ResNet 区别\n- 图片分类、目标检测、语义分割\n\n---\n\n## 再看 1.5 小时：RNN、Seq2Seq、Attention、Transformer、BERT\n\n重点：\n\n- RNN 为什么适合序列\n- LSTM / GRU 解决什么问题\n- Seq2Seq 怎么做机器翻译\n- Attention 作用\n- Transformer 的自注意力\n- BERT 预训练 + 微调\n\n---\n\n## 最后 1 小时：代码模板\n\n别死磕细节，重点背：\n\n- 训练循环\n- `zero_grad`\n- `backward`\n- `step`\n- `CrossEntropyLoss`\n- `nn.Sequential`\n- `Conv2d`\n- `Dropout`\n- `.to(device)`\n\n---\n\n# 八、我最押的综合大题\n\n我觉得最可能从下面几个里面出：\n\n1. **给一个图片分类任务，让你设计 CNN 方案，并说明如何防止过拟合。**\n2. **给一个机器翻译任务，让你比较 Seq2Seq、Attention、Transformer。**\n3. **给一个房价预测任务，让你说明数据处理、模型、损失函数、评估方法。**\n4. **给一个目标检测/语义分割任务，让你区分分类、检测、分割。**\n5. **给一个训练现象，比如训练误差低测试误差高，让你判断过拟合并提出解决方法。**\n6. **给一段 PyTorch 代码，让你补 `zero_grad()`、`backward()`、`step()`、损失函数或网络层。**\n\n---\n\n# 九、最短救命版\n\n现在真的看不进去了，就背这几句话：\n\n**过拟合**：训练好、测试差；用 Dropout、权重衰退、数据增强、早停。  \n**欠拟合**：训练和测试都差；增大模型、增加特征、训练更久。  \n**CNN**：图像；卷积提特征，池化降维。  \n**RNN/LSTM/GRU**：序列；LSTM/GRU 解决长期依赖。  \n**Attention**：让模型关注输入中重要位置。  \n**Transformer**：自注意力，可并行，适合长距离依赖。  \n**BERT**：Transformer Encoder，双向预训练，微调用于下游 NLP。  \n**ResNet**：残差连接，解决深层网络难训练。  \n**YOLO/SSD/R-CNN**：目标检测。  \n**FCN**：语义分割。  \n**训练代码顺序**：forward → loss → zero_grad → backward → step。\n\n这套背熟，至少能把选择、填空、简答和综合题的大部分分拿住。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "code_blocks": {
+            "0": {
+              "id": "t3tots",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "1": {
+              "id": "q1kfl3",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "2": {
+              "id": "m1go23",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "3": {
+              "id": "3ovgwi",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "4": {
+              "id": "3vewcw",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "5": {
+              "id": "islpg9",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "6": {
+              "id": "eab39n",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            },
+            "7": {
+              "id": "2gf2v2",
+              "edited": false,
+              "previewable": false,
+              "preview_language": null
+            }
+          },
+          "search_result_groups": [],
+          "available_steer_turn_actions": [
+            "answer_now"
+          ],
+          "request_id": "wfr_019e93133b327acc9418222d75c87f35",
+          "message_type": "next",
+          "turn_exchange_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "working_turn_id": "dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": true,
+          "parent_id": "458ec99b-7861-4cec-929c-a9cab9c411fe",
+          "async_source": "saserver-australiaeast-prod.fck9d:conversation-turn-eff04699-d74c-4df0-ba62-90479fbd39f2:AU",
+          "is_temporal_turn": true,
+          "stream_topic_id": "conversation-turn-dbadc6db-ccf9-4bb0-80f5-bc918c38e670",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "458ec99b-7861-4cec-929c-a9cab9c411fe",
+      "children": []
+    }
+  },
+  "current_node": "2bab201b-01b9-406c-a2d0-95bbf8c5c279"
+}

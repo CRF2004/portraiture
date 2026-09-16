@@ -1,0 +1,469 @@
+{
+  "title": "BH-FDR多重性控制翻译",
+  "create_time": 1778839938.801061,
+  "update_time": 1778839944.885467,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a06f17e-fb4c-83ec-8ff7-1007a113947c",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "physionet.org",
+    "https://www.openai.com",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "58c2a343-59e8-4463-b025-f7c8772bf731"
+      ]
+    },
+    "58c2a343-59e8-4463-b025-f7c8772bf731": {
+      "id": "58c2a343-59e8-4463-b025-f7c8772bf731",
+      "message": {
+        "id": "58c2a343-59e8-4463-b025-f7c8772bf731",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "acf67d6a-ede9-4aba-9b20-628866f45d93"
+      ]
+    },
+    "acf67d6a-ede9-4aba-9b20-628866f45d93": {
+      "id": "acf67d6a-ede9-4aba-9b20-628866f45d93",
+      "message": {
+        "id": "acf67d6a-ede9-4aba-9b20-628866f45d93",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "58c2a343-59e8-4463-b025-f7c8772bf731",
+      "children": [
+        "96f9c114-7f76-40a9-aa38-e9e3ade31599"
+      ]
+    },
+    "96f9c114-7f76-40a9-aa38-e9e3ade31599": {
+      "id": "96f9c114-7f76-40a9-aa38-e9e3ade31599",
+      "message": {
+        "id": "96f9c114-7f76-40a9-aa38-e9e3ade31599",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "acf67d6a-ede9-4aba-9b20-628866f45d93",
+      "children": [
+        "99d31ad8-1f68-463b-8a33-b125a47e8e46"
+      ]
+    },
+    "99d31ad8-1f68-463b-8a33-b125a47e8e46": {
+      "id": "99d31ad8-1f68-463b-8a33-b125a47e8e46",
+      "message": {
+        "id": "99d31ad8-1f68-463b-8a33-b125a47e8e46",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "96f9c114-7f76-40a9-aa38-e9e3ade31599",
+      "children": [
+        "69fd94df-4ae1-458d-998b-5161f818adc7"
+      ]
+    },
+    "69fd94df-4ae1-458d-998b-5161f818adc7": {
+      "id": "69fd94df-4ae1-458d-998b-5161f818adc7",
+      "message": {
+        "id": "69fd94df-4ae1-458d-998b-5161f818adc7",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778839938.301444,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "f8bc5695-0d1f-4e69-b7ce-1fbec875a447",
+          "message_source": null,
+          "turn_exchange_id": "b09f8004-9780-4752-b116-a2c321e4d25d",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "99d31ad8-1f68-463b-8a33-b125a47e8e46",
+      "children": [
+        "adb4ba03-5f95-45a4-a34a-f68564f1b866"
+      ]
+    },
+    "adb4ba03-5f95-45a4-a34a-f68564f1b866": {
+      "id": "adb4ba03-5f95-45a4-a34a-f68564f1b866",
+      "message": {
+        "id": "adb4ba03-5f95-45a4-a34a-f68564f1b866",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778839937.798,
+        "update_time": 1778839942.336301,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "翻译：\"\"BH-FDRMULTIPLICITYCONTROLFORTHE15EXTERNAL\r\nPRIMARY-OPERATORPATHWAY-SPECIFICITYTESTS(H0:ASS≤0,\r\nONE-SIDED).BOOTSTRAPp-VALUE=1−PR(ASS¿0),CONSERVATIVELY\r\nBOUNDEDAT1/(B+1)FORPR(ASS>0)=1.0.q-VALUESCOMPUTED\r\nVIATHESTOREYPROCEDURE.\"\""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "f8bc5695-0d1f-4e69-b7ce-1fbec875a447",
+          "message_source": null,
+          "turn_exchange_id": "b09f8004-9780-4752-b116-a2c321e4d25d",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "69fd94df-4ae1-458d-998b-5161f818adc7",
+      "children": [
+        "054456e2-55f8-411a-872f-585b54782c60"
+      ]
+    },
+    "054456e2-55f8-411a-872f-585b54782c60": {
+      "id": "054456e2-55f8-411a-872f-585b54782c60",
+      "message": {
+        "id": "054456e2-55f8-411a-872f-585b54782c60",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778839938.6165276,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "command": "prompt",
+          "contextual_answers_message_type": "sources_and_filters_prompt",
+          "chime_version": 1,
+          "request_id": "f8bc5695-0d1f-4e69-b7ce-1fbec875a447",
+          "message_type": "next",
+          "turn_exchange_id": "b09f8004-9780-4752-b116-a2c321e4d25d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "adb4ba03-5f95-45a4-a34a-f68564f1b866",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "adb4ba03-5f95-45a4-a34a-f68564f1b866",
+      "children": [
+        "b1121d61-80eb-4bd8-8ba7-ad9b114ead63"
+      ]
+    },
+    "b1121d61-80eb-4bd8-8ba7-ad9b114ead63": {
+      "id": "b1121d61-80eb-4bd8-8ba7-ad9b114ead63",
+      "message": {
+        "id": "b1121d61-80eb-4bd8-8ba7-ad9b114ead63",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778839938.682738,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "chime_version": 1,
+          "request_id": "f8bc5695-0d1f-4e69-b7ce-1fbec875a447",
+          "message_type": "next",
+          "turn_exchange_id": "b09f8004-9780-4752-b116-a2c321e4d25d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "054456e2-55f8-411a-872f-585b54782c60",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "054456e2-55f8-411a-872f-585b54782c60",
+      "children": [
+        "b39ac06e-b876-4dff-8be2-b4306d00c1d4"
+      ]
+    },
+    "b39ac06e-b876-4dff-8be2-b4306d00c1d4": {
+      "id": "b39ac06e-b876-4dff-8be2-b4306d00c1d4",
+      "message": {
+        "id": "b39ac06e-b876-4dff-8be2-b4306d00c1d4",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778839939.690384,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "935caad4-1eb6-4c58-bf25-5d22f9564c75"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "hide_inline_actions": true,
+          "disable_turn_actions": true,
+          "chime_version": 1,
+          "request_id": "f8bc5695-0d1f-4e69-b7ce-1fbec875a447",
+          "message_type": "next",
+          "turn_exchange_id": "b09f8004-9780-4752-b116-a2c321e4d25d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "parent_id": "935caad4-1eb6-4c58-bf25-5d22f9564c75",
+          "classifier_response": "default",
+          "reasoning_start_time": 1778839938.6377203,
+          "skip_reasoning_title": "跳过",
+          "can_save": false,
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b1121d61-80eb-4bd8-8ba7-ad9b114ead63",
+      "children": [
+        "4306454d-7472-4994-a29b-11896281ced5"
+      ]
+    },
+    "4306454d-7472-4994-a29b-11896281ced5": {
+      "id": "4306454d-7472-4994-a29b-11896281ced5",
+      "message": {
+        "id": "4306454d-7472-4994-a29b-11896281ced5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778839940.255806,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "已思考若干秒"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 1,
+          "reasoning_start_time": 1778839938.6377203,
+          "reasoning_end_time": 1778839939.9911685,
+          "request_id": "f8bc5695-0d1f-4e69-b7ce-1fbec875a447",
+          "message_type": "next",
+          "turn_exchange_id": "b09f8004-9780-4752-b116-a2c321e4d25d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": false,
+          "parent_id": "b39ac06e-b876-4dff-8be2-b4306d00c1d4",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "b39ac06e-b876-4dff-8be2-b4306d00c1d4",
+      "children": [
+        "d4b01505-4d61-4b23-ab5d-286d77b9b8e1"
+      ]
+    },
+    "d4b01505-4d61-4b23-ab5d-286d77b9b8e1": {
+      "id": "d4b01505-4d61-4b23-ab5d-286d77b9b8e1",
+      "message": {
+        "id": "d4b01505-4d61-4b23-ab5d-286d77b9b8e1",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778839938.677045,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "翻译如下：\n\n**针对 15 项外部主要算子通路特异性检验的 BH-FDR 多重性控制**  \n（原假设 H0：ASS ≤ 0，单侧检验）。Bootstrap p 值定义为：\n\n\\[\np = 1 - \\Pr(ASS > 0)\n\\]\n\n当 \\(\\Pr(ASS > 0)=1.0\\) 时，p 值保守地限定为：\n\n\\[\n\\frac{1}{B+1}\n\\]\n\nq 值采用 Storey 方法计算。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "search_result_groups": [],
+          "request_id": "f8bc5695-0d1f-4e69-b7ce-1fbec875a447",
+          "message_type": "next",
+          "turn_exchange_id": "b09f8004-9780-4752-b116-a2c321e4d25d",
+          "model_slug": "gpt-5-5-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "standard",
+          "can_save": true,
+          "parent_id": "4306454d-7472-4994-a29b-11896281ced5",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "4306454d-7472-4994-a29b-11896281ced5",
+      "children": []
+    }
+  },
+  "current_node": "d4b01505-4d61-4b23-ab5d-286d77b9b8e1"
+}

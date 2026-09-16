@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG 不确定性选择性预测</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ECG 不确定性选择性预测</h1>
+            <div class="metadata">ID: 69deec9e-47d0-83a1-9710-a21d8a5c5a27 | 2026/4/15 09:40:47</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/4/15 09:40:41</span>
+                </div>
+                <div class="message-content">《Nested Evaluation of Selective Prediction for ECG<br>Diagnosis: Confidence Uncertainty Outperforms<br>Knowledge-Graph Disagreement》 有没有类似的论文研究？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/4/15 09:40:49</span>
+                </div>
+                <div class="message-content">你提到的这篇：<br><br>&gt; *Nested Evaluation of Selective Prediction for ECG Diagnosis: Confidence Uncertainty Outperforms Knowledge-Graph Disagreement*<br><br>本质上是在做三件事的交叉：<br><br>1. <strong>Selective prediction / abstention（选择性预测）</strong><br>2. <strong>Uncertainty vs. alternative signals（如KG disagreement）</strong><br>3. <strong>医学场景（ECG诊断）</strong><br><br>类似工作的确不少，但<strong>同时把“选择性预测 + 不确定性 + 外部知识（KG）对比”结合得这么明确的论文，其实还不算多</strong>。我给你按“研究脉络”拆开，并列出最接近的论文类型（含你可以直接 follow 的方向）。<br><br>---<br><br># 一、最直接相关：ECG + 不确定性 + selective prediction<br><br>### 1️⃣ 不确定性驱动的 selective prediction（强相关）<br><br>- entity["paper","Uncertainty estimation for deep learning-based automated analysis of 12-lead electrocardiograms","ECG uncertainty paper"]  <br>  👉 核心：用 <strong>epistemic + aleatoric uncertainty</strong> 做 triage / selective prediction  <br><br>关键点：<br>- 用 MC dropout / ensemble 等得到预测分布<br>- 用 variance 作为 uncertainty<br>- 可以“拒绝预测”（abstain）<br><br>&gt; 本质上就是你那篇 paper 的 baseline 类型  <br>&gt; ——“confidence/uncertainty &gt; decision threshold → 保留，否则拒绝” citeturn0search1  <br><br>---<br><br>### 2️⃣ 显式优化“低置信度拒绝”的模型<br><br>- entity["paper","A Reliable Deep Learning Model for ECG Interpretation: Mitigating Overconfidence and Direct Uncertainty Quantification","ECG uncertainty Dirichlet"]  <br><br>关键贡献：<br>- 用 Dirichlet / evidential deep learning<br>- 直接输出 uncertainty（不是后处理）<br>- 用 uncertainty threshold 做 selective prediction  <br><br>实验现象：<br>- 降低不确定性阈值 → 性能持续提升（典型 selective prediction曲线） citeturn0search2  <br><br>👉 这类论文和你那篇的<strong>核心对照组是完全一致的</strong><br><br>---<br><br># 二、Selective prediction / uncertainty evaluation（方法论层）<br><br>这类不是 ECG-specific，但方法和你提到的论文几乎同一条线。<br><br>### 3️⃣ selective prediction evaluation 经典问题<br><br>- entity["paper","Revisiting the Evaluation of Uncertainty Estimation and Its Application to Explore Model Complexity-Uncertainty Trade-Off","uncertainty evaluation paper"]  <br><br>核心：<br>- selective prediction = <strong>risk–coverage tradeoff</strong><br>- 提出更合理的 evaluation metrics  <br><br>👉 你那篇“Nested evaluation”其实就在做类似的事情（更复杂版本）<br><br>---<br><br>### 4️⃣ 不确定性综述（框架性）<br><br>- entity["paper","A Survey of Uncertainty in Deep Neural Networks","uncertainty survey"]  <br><br>关键分类：<br>- epistemic vs aleatoric<br>- calibration vs selective prediction  <br><br>👉 你那篇 paper 的理论基础几乎都在这里 citeturn0academia14  <br><br>---<br><br># 三、Knowledge Graph + 医疗诊断（对照方向）<br><br>你那篇的一个亮点是：<br><br>&gt; 用 <strong>KG disagreement 作为 alternative uncertainty signal</strong><br><br>类似思路可以在以下方向找到：<br><br>---<br><br>### 5️⃣ 医疗KG + ECG / 诊断模型<br><br>- entity["paper","Cardiologist-level interpretable knowledge-fused deep neural network for automatic arrhythmia diagnosis","SJTU ECG KG model"]  <br><br>特点：<br>- 用医学知识增强模型<br>- 提供“解释性决策路径”<br><br>👉 但注意：<br>- 这类工作<strong>很少把 KG disagreement 当 uncertainty proxy</strong><br>- 更多是“增强模型”，而不是“评估信号” citeturn0search0  <br><br>---<br><br>### 6️⃣ 不确定知识图谱（理论基础）<br><br>- entity["paper","Embedding Uncertain Knowledge Graphs","UKGE"]  <br><br>核心思想：<br>- KG 本身就有 uncertainty（confidence score）<br><br>👉 你那篇 paper 实际是在做：<br><br>&gt; 用 KG consistency → proxy uncertainty  <br><br>这在 KG 领域是合理的扩展<br><br>---<br><br># 四、和你这篇最“结构上类似”的研究模式<br><br>如果抽象一下，这篇论文其实属于：<br><br>### 👉 “多视角 uncertainty proxy 对比” 研究<br><br>类似的套路在这些方向很常见：<br><br>---<br><br>## 模式 A：model uncertainty vs ensemble disagreement<br>- deep ensemble disagreement<br>- MC dropout variance<br><br>👉 和你 paper 中：<br>- confidence uncertainty ✔<br>- KG disagreement ✔  <br>完全同构<br><br>---<br><br>## 模式 B：internal vs external knowledge inconsistency<br>- model vs rule-based system<br>- model vs ontology<br><br>👉 你这篇其实是：<br>&gt; neural model vs KG reasoning 的 disagreement<br><br>---<br><br>## 模式 C：selective prediction benchmarking<br>- 不同 uncertainty signal → risk-coverage 曲线比较<br><br>👉 “Nested evaluation”就是在做这个<br><br>---<br><br># 五、给你总结一下“最近最接近的论文类型”<br><br>如果你要找“类似论文”，可以重点搜这几类关键词：<br><br>### 🔹 1. ECG + uncertainty + triage<br>- uncertainty-guided triage<br>- ECG abstention learning<br><br>### 🔹 2. selective prediction + healthcare<br>- risk-coverage medical AI<br>- abstention in diagnosis<br><br>### 🔹 3. multi-source uncertainty<br>- disagreement-based uncertainty<br>- ensemble vs knowledge-based uncertainty<br><br>### 🔹 4. knowledge graph + uncertainty<br>- KG consistency / contradiction detection<br>- neuro-symbolic uncertainty<br><br>---<br><br># 六、一个关键判断（很重要）<br><br>你这篇 paper 的<strong>真正创新点不是“uncertainty”本身</strong>，而是：<br><br>&gt; 👉 <strong>证明：KG disagreement ≠ 好的 uncertainty proxy</strong><br><br>换句话说，它在做：<br><br>- uncertainty signal 的 <strong>validity study</strong><br><br>而不是：<br>- 提出新模型<br><br>---<br><br># 七、如果你想继续往这个方向做（建议）<br><br>可以考虑这些更前沿的切入点：<br><br>### 1️⃣ 多源 uncertainty 融合<br>- model uncertainty<br>- KG disagreement<br>- clinician disagreement  <br><br>👉 做 calibration / fusion<br><br>---<br><br>### 2️⃣ uncertainty → downstream decision<br>- triage policy learning<br>- cost-sensitive abstention<br><br>---<br><br>### 3️⃣ 反向问题（更有意思）<br>&gt; 为什么 KG disagreement 不好？<br><br>可能原因：<br>- KG coverage sparse<br>- rule rigidity<br>- mismatch with data distribution<br><br>---<br><br>如果你愿意，我可以帮你做一件更“论文级”的事情：<br><br>👉 <strong>把这篇 paper 放到完整 research landscape 里（含可以投 JBI / Nature Digital Medicine 的选题方向）</strong>  <br>甚至可以帮你找“能发的改进点”。</div>
+            </div></div></div></body></html>

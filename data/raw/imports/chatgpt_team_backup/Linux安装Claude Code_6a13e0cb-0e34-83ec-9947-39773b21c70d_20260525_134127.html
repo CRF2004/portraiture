@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux安装Claude Code</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Linux安装Claude Code</h1>
+            <div class="metadata">ID: 6a13e0cb-0e34-83ec-9947-39773b21c70d | 2026/5/25 13:41:27</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 13:41:25</span>
+                </div>
+                <div class="message-content">有没有最新linux服务器（国内）安装claude code的方法。我有node但是版本太低（不想升级。这是跟别人公用的工具）。我想走国内镜像安装到/mnt/diskb5/rongfeng_private</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:41:27</span>
+                </div>
+                <div class="message-content">我会按“尽量不碰系统环境、只写入你的私有目录”的思路给方案，并先核对一下 Claude Code 当前安装要求，避免给你过期命令。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:41:41</span>
+                </div>
+                <div class="message-content">我查到的关键变化是：现在官方推荐 native installer，但 npm 仍然可用；npm 安装要求 Node.js 18+，而且官方明确不建议 sudo 全局安装。你的场景最稳的是“私有 Node + 私有 npm prefix + 国内 npm registry”。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:41:59</span>
+                </div>
+                <div class="message-content">可以。你的场景不要升级系统 Node，直接在 <code>/mnt/diskb5/rongfeng_private</code> 放一套<strong>私有 Node + 私有 Claude Code</strong> 最稳。官方现在推荐 native installer，但 npm 方式仍可用；npm 方式要求 Node.js 18+，且官方不建议 <code>sudo npm install -g</code>。citeturn467703view0turn254483view0<br><br>下面这套命令不会动系统 Node，也不会写系统目录。<br><br><pre><code class="language-bash"># 1. 设置私有安装根目录
+BASE=/mnt/diskb5/rongfeng_private
+mkdir -p "$BASE"/{opt,bin,npm-global,npm-cache,claude-config}
+
+# 2. 判断 CPU 架构
+case "$(uname -m)" in
+  x86_64) NODE_ARCH=x64 ;;
+  aarch64|arm64) NODE_ARCH=arm64 ;;
+  *) echo "Unsupported arch: $(uname -m)"; exit 1 ;;
+esac
+
+# 3. 从国内 npmmirror 下载 Node 22 最新小版本
+NODE_VERSION=$(curl -fsSL https://npmmirror.com/mirrors/node/index.tab | awk '$1 ~ /^v22\./ {print $1; exit}')
+echo "Using Node: $NODE_VERSION linux-$NODE_ARCH"
+
+cd "$BASE/opt"
+curl -fL "https://npmmirror.com/mirrors/node/${NODE_VERSION}/node-${NODE_VERSION}-linux-${NODE_ARCH}.tar.xz" \
+  -o "node-${NODE_VERSION}-linux-${NODE_ARCH}.tar.xz"
+
+tar -xJf "node-${NODE_VERSION}-linux-${NODE_ARCH}.tar.xz"
+ln -sfn "$BASE/opt/node-${NODE_VERSION}-linux-${NODE_ARCH}" "$BASE/node"</code></pre><br><br>然后写一个专用环境文件：<br><br><pre><code class="language-bash">cat &gt; "$BASE/env_claude.sh" &lt;&lt;EOF
+export PATH="$BASE/node/bin:$BASE/npm-global/bin:\$PATH"
+export NPM_CONFIG_PREFIX="$BASE/npm-global"
+export NPM_CONFIG_CACHE="$BASE/npm-cache"
+export NPM_CONFIG_REGISTRY="https://registry.npmmirror.com"
+export CLAUDE_CONFIG_DIR="$BASE/claude-config"
+EOF
+
+source "$BASE/env_claude.sh"
+
+node -v
+npm -v</code></pre><br><br>安装 Claude Code：<br><br><pre><code class="language-bash">npm install -g @anthropic-ai/claude-code@latest --registry=https://registry.npmmirror.com
+
+which claude
+claude --version</code></pre><br><br>以后每次用之前执行：<br><br><pre><code class="language-bash">source /mnt/diskb5/rongfeng_private/env_claude.sh
+claude</code></pre><br><br>嫌麻烦就加到你自己的 <code>~/.bashrc</code>，不会影响别人：<br><br><pre><code class="language-bash">echo 'source /mnt/diskb5/rongfeng_private/env_claude.sh' &gt;&gt; ~/.bashrc</code></pre><br><br>国内服务器还要注意一点：<strong>镜像只能解决安装下载，不保证 Claude Code 运行时能连上 Anthropic。</strong> 官方文档说 Claude Code 运行/认证可能需要访问 <code>api.anthropic.com</code>、<code>claude.ai</code>、<code>platform.claude.com</code> 等；它支持标准 <code>HTTPS_PROXY</code> / <code>HTTP_PROXY</code>，但不支持 SOCKS 代理。citeturn375167view0<br><br>如果你服务器需要代理：<br><br><pre><code class="language-bash">export HTTPS_PROXY=http://127.0.0.1:7890
+export HTTP_PROXY=http://127.0.0.1:7890
+claude</code></pre><br><br>如果你走 API Key：<br><br><pre><code class="language-bash">export ANTHROPIC_API_KEY="你的key"
+claude</code></pre><br><br>如果你走兼容网关/中转，一般是：<br><br><pre><code class="language-bash">export ANTHROPIC_BASE_URL="你的base_url"
+export ANTHROPIC_API_KEY="你的key"
+claude</code></pre><br><br>官方认证优先级里，<code>ANTHROPIC_AUTH_TOKEN</code>、<code>ANTHROPIC_API_KEY</code>、<code>CLAUDE_CODE_OAUTH_TOKEN</code> 都是 Claude Code 支持的终端认证方式；Linux 凭据默认在 <code>~/.claude/.credentials.json</code>，设置 <code>CLAUDE_CONFIG_DIR</code> 后会放到你指定目录下。citeturn653565view0<br><br>我建议你先跑：<br><br><pre><code class="language-bash">source /mnt/diskb5/rongfeng_private/env_claude.sh
+node -v
+npm -v
+claude --version</code></pre><br><br>如果 <code>claude --version</code> 正常，安装就成了；后面报错多半就是网络/认证问题，不是 Node 问题。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 13:45:12</span>
+                </div>
+                <div class="message-content">$ NODE_VERSION=$(curl -fsSL https://npmmirror.com/mirrors/node/index.tab | awk '$1 ~ /^v22\./ {print $1; exit}')<br>curl: (23) Failed writing body (977 != 16366)<br>(base) rongfeng@zyserver:/mnt/diskb5/rongfeng_private$ echo "Using Node: $NODE_VERSION linux-$NODE_ARCH"<br>Using Node: v22.22.3 linux-x64</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:45:17</span>
+                </div>
+                <div class="message-content">这个报错<strong>基本可以忽略</strong>，因为你的变量已经取到了：<br><br><pre><code class="language-bash">Using Node: v22.22.3 linux-x64</code></pre><br><br><code>curl: (23) Failed writing body</code> 的原因大概率是：<code>awk</code> 找到第一个 <code>v22.*</code> 后立刻 <code>exit</code>，管道提前关闭，<code>curl</code> 还想继续写完整的 <code>index.tab</code>，于是报了一个写入失败。<strong>不是下载 Node 失败。</strong><br><br>你可以直接继续执行：<br><br><pre><code class="language-bash">BASE=/mnt/diskb5/rongfeng_private
+NODE_VERSION=v22.22.3
+NODE_ARCH=x64
+
+cd "$BASE/opt"
+
+curl -fL --retry 3 -C - \
+  "https://npmmirror.com/mirrors/node/${NODE_VERSION}/node-${NODE_VERSION}-linux-${NODE_ARCH}.tar.xz" \
+  -o "node-${NODE_VERSION}-linux-${NODE_ARCH}.tar.xz"
+
+tar -xJf "node-${NODE_VERSION}-linux-${NODE_ARCH}.tar.xz"
+
+ln -sfn "$BASE/opt/node-${NODE_VERSION}-linux-${NODE_ARCH}" "$BASE/node"</code></pre><br><br>然后配置环境：<br><br><pre><code class="language-bash">cat &gt; "$BASE/env_claude.sh" &lt;&lt;EOF
+export PATH="$BASE/node/bin:$BASE/npm-global/bin:\$PATH"
+export NPM_CONFIG_PREFIX="$BASE/npm-global"
+export NPM_CONFIG_CACHE="$BASE/npm-cache"
+export NPM_CONFIG_REGISTRY="https://registry.npmmirror.com"
+export CLAUDE_CONFIG_DIR="$BASE/claude-config"
+EOF
+
+source "$BASE/env_claude.sh"
+
+node -v
+npm -v</code></pre><br><br>如果这里显示 Node 22 和 npm 版本，就安装 Claude Code：<br><br><pre><code class="language-bash">npm install -g @anthropic-ai/claude-code@latest --registry=https://registry.npmmirror.com
+
+which claude
+claude --version</code></pre><br><br>以后使用：<br><br><pre><code class="language-bash">source /mnt/diskb5/rongfeng_private/env_claude.sh
+claude</code></pre><br><br>如果你想避免刚才那个 <code>curl: (23)</code>，以后用这种更干净的写法：<br><br><pre><code class="language-bash">curl -fsSL https://npmmirror.com/mirrors/node/index.tab -o "$BASE/node-index.tab"
+NODE_VERSION=$(awk '$1 ~ /^v22\./ {print $1; exit}' "$BASE/node-index.tab")
+echo "$NODE_VERSION"</code></pre></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 13:48:15</span>
+                </div>
+                <div class="message-content">安装成功了，我有个启动脚本，以后可以使用这个来启动吗：""""<br>#!/usr/bin/env bash<br># ============================================================<br># Claude Code - DeepSeek backend startup script<br># 仅对当前启动的 claude 进程生效，不影响其他用户/会话<br># Usage: ./start_claude_deepseek.sh [claude args...]<br># ============================================================<br>set -euo pipefail<br><br>exec env \<br>  USER_ID="john_12879" \<br>  user_id="john_12879" \<br>  CLAUDE_USER_ID="john_12879" \<br>  ANTHROPIC_USER_ID="john_12879" \<br>  ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic" \<br>  ANTHROPIC_AUTH_TOKEN="REDACTED_CREDENTIAL" \<br>  ANTHROPIC_API_KEY="REDACTED_CREDENTIAL" \<br>  API_TIMEOUT_MS="600000" \<br>  ANTHROPIC_MODEL="deepseek-v4-pro" \<br>  ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-v4-pro" \<br>  ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek-v4-pro" \<br>  ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek-v4-flash" \<br>  CLAUDE_CODE_SUBAGENT_MODEL="deepseek-v4-pro" \<br>  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC="1" \<br>  CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK="1" \<br>  NO_PROXY="api.deepseek.com,127.0.0.1,localhost${NO_PROXY:+,$NO_PROXY}" \<br>  no_proxy="api.deepseek.com,127.0.0.1,localhost${no_proxy:+,$no_proxy}" \<br>  claude "$@"""""</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:48:18</span>
+                </div>
+                <div class="message-content">可以用，但我建议你先改两点：不要把 key 明文写在启动脚本里；另外脚本里要显式加载你刚装的私有 Node/Claude 环境，否则换个 shell 可能找不到 <code>claude</code>。我再核对一下 Claude Code 现在对这些环境变量的官方说明。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:48:31</span>
+                </div>
+                <div class="message-content">可以用，但你这版<strong>不建议原样用</strong>。主要有 3 个问题：<br><br>1. <strong>你把 DeepSeek key 明文写进脚本了，而且已经发出来了。建议立刻去 DeepSeek 平台重置/废弃这个 key。</strong><br>2. 脚本没有加载你刚才装在 <code>/mnt/diskb5/rongfeng_private</code> 的私有 Node/Claude 环境，换个 shell 可能找不到 <code>claude</code>。<br>3. DeepSeek 官方 Claude Code 接入示例用的是 <code>ANTHROPIC_AUTH_TOKEN</code>，不需要同时设置 <code>ANTHROPIC_API_KEY</code>；Claude Code 官方也说明环境变量 API key 会影响实际认证方式，进 Claude Code 后可以用 <code>/status</code> 检查当前使用的认证方式。citeturn451572search1turn800377search1<br><br>建议改成这样。<br><br>先建一个只放密钥的文件：<br><br><pre><code class="language-bash">BASE=/mnt/diskb5/rongfeng_private
+
+cat &gt; "$BASE/claude_deepseek.secret.env" &lt;&lt;'EOF'
+ANTHROPIC_AUTH_TOKEN="你的新DeepSeek API Key"
+EOF
+
+chmod 600 "$BASE/claude_deepseek.secret.env"</code></pre><br><br>然后启动脚本写成：<br><br><pre><code class="language-bash">cat &gt; "$BASE/start_claude_deepseek.sh" &lt;&lt;'EOF'
+#!/usr/bin/env bash
+# Claude Code - DeepSeek backend startup script
+# Only affects current claude process.
+
+set -euo pipefail
+
+BASE=/mnt/diskb5/rongfeng_private
+
+# 1. Load private Node / npm / claude environment
+source "$BASE/env_claude.sh"
+
+# 2. Load private DeepSeek key
+if [[ ! -f "$BASE/claude_deepseek.secret.env" ]]; then
+  echo "Missing secret file: $BASE/claude_deepseek.secret.env" &gt;&amp;2
+  exit 1
+fi
+
+set -a
+source "$BASE/claude_deepseek.secret.env"
+set +a
+
+# 3. Avoid inherited conflicting Anthropic credentials
+unset ANTHROPIC_API_KEY
+unset CLAUDE_CODE_OAUTH_TOKEN
+
+# 4. DeepSeek Anthropic-compatible endpoint
+export USER_ID="john_12879"
+export user_id="john_12879"
+export CLAUDE_USER_ID="john_12879"
+export ANTHROPIC_USER_ID="john_12879"
+
+export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+
+export API_TIMEOUT_MS="600000"
+
+export ANTHROPIC_MODEL="deepseek-v4-pro"
+export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-v4-pro"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek-v4-pro"
+export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek-v4-flash"
+
+# 子任务模型：想省钱/快一点用 flash；想稳一点可改成 deepseek-v4-pro
+export CLAUDE_CODE_SUBAGENT_MODEL="deepseek-v4-flash"
+
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC="1"
+export CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK="1"
+
+export NO_PROXY="api.deepseek.com,127.0.0.1,localhost${NO_PROXY:+,$NO_PROXY}"
+export no_proxy="api.deepseek.com,127.0.0.1,localhost${no_proxy:+,$no_proxy}"
+
+exec claude "$@"
+EOF
+
+chmod 700 "$BASE/start_claude_deepseek.sh"</code></pre><br><br>以后启动：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh</code></pre><br><br>进项目目录启动：<br><br><pre><code class="language-bash">cd /path/to/your/project
+/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh</code></pre><br><br>带参数也可以：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh --dangerously-skip-permissions</code></pre><br><br>DeepSeek 官方文档确认 Claude Code 可以通过：<br><br><pre><code class="language-bash">ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic
+ANTHROPIC_AUTH_TOKEN=&lt;DeepSeek API Key&gt;
+ANTHROPIC_MODEL=deepseek-v4-pro</code></pre><br><br>这类环境变量接入。citeturn451572search1<br><br>你原脚本的整体思路是对的：<code>exec env ... claude "$@"</code> 只影响当前启动的 Claude 进程，不会污染其他用户。但我会坚持两个修改：<strong>密钥单独放、启动前 source 私有环境</strong>。这两个不改，在公用服务器上后患比较大。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 13:49:13</span>
+                </div>
+                <div class="message-content">我想写到一个脚本里。放心，这个服务器不对外开放的</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:49:16</span>
+                </div>
+                <div class="message-content">可以写到一个脚本里。你这个场景下建议这样写：<strong>脚本自己加载私有 Node/Claude 环境 + 内置 DeepSeek Key + 启动 Claude Code</strong>。<br><br>把下面保存为：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh</code></pre><br><br>内容：<br><br><pre><code class="language-bash">#!/usr/bin/env bash
+# ============================================================
+# Claude Code - DeepSeek backend startup script
+# 仅影响当前启动的 claude 进程，不影响其他用户/会话
+# Usage:
+#   /mnt/diskb5/rongfeng_private/start_claude_deepseek.sh [claude args...]
+# ============================================================
+
+set -euo pipefail
+
+BASE="/mnt/diskb5/rongfeng_private"
+
+# 1. 加载你私有安装的 Node / npm / Claude Code
+if [[ -f "$BASE/env_claude.sh" ]]; then
+  # shellcheck disable=SC1091
+  source "$BASE/env_claude.sh"
+else
+  export PATH="$BASE/node/bin:$BASE/npm-global/bin:$PATH"
+  export NPM_CONFIG_PREFIX="$BASE/npm-global"
+  export NPM_CONFIG_CACHE="$BASE/npm-cache"
+  export NPM_CONFIG_REGISTRY="https://registry.npmmirror.com"
+  export CLAUDE_CONFIG_DIR="$BASE/claude-config"
+fi
+
+# 2. DeepSeek API Key
+# 注意：你之前发出来的 key 建议还是重置一下。
+DEEPSEEK_API_KEY="这里换成你的DeepSeek新key"
+
+# 3. 清理可能继承的官方 Claude / Anthropic 认证，避免串环境
+unset CLAUDE_CODE_OAUTH_TOKEN
+unset ANTHROPIC_API_KEY
+unset ANTHROPIC_AUTH_TOKEN
+unset ANTHROPIC_BASE_URL
+
+# 4. DeepSeek Anthropic-compatible backend
+export ANTHROPIC_BASE_URL="https://api.deepseek.com/anthropic"
+export ANTHROPIC_AUTH_TOKEN="$DEEPSEEK_API_KEY"
+
+# 有些中转/兼容层也读取 ANTHROPIC_API_KEY。
+# 如果你发现只设置 AUTH_TOKEN 启动失败，再取消下一行注释。
+# export ANTHROPIC_API_KEY="$DEEPSEEK_API_KEY"
+
+# 5. 用户标识，可保留
+export USER_ID="john_12879"
+export user_id="john_12879"
+export CLAUDE_USER_ID="john_12879"
+export ANTHROPIC_USER_ID="john_12879"
+
+# 6. 模型配置
+export ANTHROPIC_MODEL="deepseek-v4-pro"
+export ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-v4-pro"
+export ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek-v4-pro"
+export ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek-v4-flash"
+
+# 子代理模型：省钱/快用 flash，追求稳定可改成 deepseek-v4-pro
+export CLAUDE_CODE_SUBAGENT_MODEL="deepseek-v4-flash"
+
+# 7. 超时与流式配置
+export API_TIMEOUT_MS="600000"
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC="1"
+export CLAUDE_CODE_DISABLE_NONSTREAMING_FALLBACK="1"
+
+# 8. 代理绕过
+export NO_PROXY="api.deepseek.com,127.0.0.1,localhost${NO_PROXY:+,$NO_PROXY}"
+export no_proxy="api.deepseek.com,127.0.0.1,localhost${no_proxy:+,$no_proxy}"
+
+# 9. 检查 claude 是否存在
+if ! command -v claude &gt;/dev/null 2&gt;&amp;1; then
+  echo "Error: claude command not found." &gt;&amp;2
+  echo "Check whether $BASE/env_claude.sh and private npm install are correct." &gt;&amp;2
+  exit 1
+fi
+
+# 10. 启动 Claude Code
+exec claude "$@"</code></pre><br><br>然后授权：<br><br><pre><code class="language-bash">chmod 700 /mnt/diskb5/rongfeng_private/start_claude_deepseek.sh</code></pre><br><br>启动：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh</code></pre><br><br>在项目目录中启动：<br><br><pre><code class="language-bash">cd /你的/project/目录
+/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh</code></pre><br><br>带参数启动：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh --dangerously-skip-permissions</code></pre><br><br>你原脚本大体没问题，但我建议至少做这三个调整：<br><br>第一，脚本开头一定要加载：<br><br><pre><code class="language-bash">source /mnt/diskb5/rongfeng_private/env_claude.sh</code></pre><br><br>否则以后换终端、换登录方式，可能找不到你私有安装的 <code>claude</code>。<br><br>第二，不要同时默认设置 <code>ANTHROPIC_AUTH_TOKEN</code> 和 <code>ANTHROPIC_API_KEY</code>。先用 <code>ANTHROPIC_AUTH_TOKEN</code>，DeepSeek Claude Code 接入一般走这个。失败了再把 <code>ANTHROPIC_API_KEY</code> 那行打开。<br><br>第三，脚本权限用：<br><br><pre><code class="language-bash">chmod 700 start_claude_deepseek.sh</code></pre><br><br>虽然服务器不对外开放，但这是多人服务器，至少不要让其他普通用户直接读到你的 key。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 13:52:13</span>
+                </div>
+                <div class="message-content">成功了！我可以删掉刚才配的node环境吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 13:52:16</span>
+                </div>
+                <div class="message-content">不建议删掉<strong>私有 Node 环境本体</strong>。你现在的 Claude Code 是通过 npm 安装的，启动脚本里也会加载：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/env_claude.sh</code></pre><br><br>它依赖这些目录：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/node
+/mnt/diskb5/rongfeng_private/npm-global
+/mnt/diskb5/rongfeng_private/claude-config</code></pre><br><br>所以这些<strong>不要删</strong>，否则 <code>claude</code> 大概率会找不到或无法运行。<br><br>可以删的是安装过程中留下的压缩包、索引文件、npm 缓存：<br><br><pre><code class="language-bash">BASE=/mnt/diskb5/rongfeng_private
+
+# 删除 Node 安装包
+rm -f "$BASE"/opt/node-v*-linux-*.tar.xz
+
+# 删除可能保存过的 Node 索引文件
+rm -f "$BASE"/node-index.tab
+
+# 清理 npm 缓存，可选
+rm -rf "$BASE"/npm-cache/*</code></pre><br><br>保留结构建议是：<br><br><pre><code class="language-bash">/mnt/diskb5/rongfeng_private/
+├── node                  # 保留
+├── opt/node-v22...        # 保留
+├── npm-global             # 保留，claude 装在这里
+├── claude-config          # 保留，Claude Code 配置/认证
+├── env_claude.sh          # 保留
+└── start_claude_deepseek.sh # 保留</code></pre><br><br>你可以先验证当前脚本是否独立可用：<br><br><pre><code class="language-bash">cd /tmp
+/mnt/diskb5/rongfeng_private/start_claude_deepseek.sh --version</code></pre><br><br>如果还能输出版本，说明环境没问题。  <br>一句话：<strong>安装包和缓存可以删，Node 运行环境和 npm-global 不要删。</strong></div>
+            </div></div></div></body></html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBHI论文结构建议</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JBHI论文结构建议</h1>
+            <div class="metadata">ID: 6a132743-acec-83ec-b29c-e112ef78e851 | 2026/5/25 00:29:12</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 00:29:09</span>
+                </div>
+                <div class="message-content">JBHI的 Limitations一般写在Discussion里面还是并列？future work呢</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 00:29:11</span>
+                </div>
+                <div class="message-content">我先按 <strong>IEEE Journal of Biomedical and Health Informatics（JBHI）</strong> 来判断；这个属于期刊格式和审稿习惯，最好核一下官方/近期论文惯例再给你结论。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 00:29:28</span>
+                </div>
+                <div class="message-content">一般 <strong>不要把 “Limitations” 做成和 Discussion 完全并列的大章节</strong>，除非你的局限很多、需要重点展开。<br><br>对 <strong>JBHI / IEEE 风格的实证论文</strong>，我建议这样写：<br><br><strong>推荐结构：</strong><br><br><pre><code class="language-text">V. Discussion
+   A. Principal Findings
+   B. Comparison With Previous Work
+   C. Limitations
+   D. Future Work / Future Directions
+
+VI. Conclusion</code></pre><br><br>或者更紧凑：<br><br><pre><code class="language-text">V. Discussion
+   ...
+   Limitations and Future Work
+VI. Conclusion</code></pre><br><br><strong>我的建议：Limitations 放在 Discussion 里；Future Work 可以放在 Discussion 末尾，也可以在 Conclusion 最后一两句点一下。</strong><br><br>更具体地说：<br><br>- <strong>Limitations</strong>：最好作为 <strong>Discussion 的一个 subsection</strong>，例如 <code>V-C. Limitations</code>。这是最稳的写法。<br>- <strong>Future Work</strong>：如果只是几句话，放在 <strong>Discussion 末尾或 Conclusion 末尾</strong>。如果未来方向比较多，可以作为 <code>V-D. Future Work</code>。<br>- <strong>Conclusion</strong>：不要写太长，主要总结贡献和结果；不要在 Conclusion 里第一次大段展开 limitations。<br><br>IEEE 的作者风格手册没有强制要求必须单列 “Limitations” 或 “Future Work”，更多是按文章逻辑组织；而 JBHI 近期/同类文章里也能看到把 “challenges/limitations” 和 “future directions” 分成独立小节后再 conclusion 的写法。citeturn192476search1turn967279search0<br><br>最稳模板：<br><br><pre><code class="language-text">Discussion
+We further discuss the implications of the results, compare our method with prior studies, and analyze its limitations.
+
+Limitations
+First, ...
+
+Future Work
+Future work will focus on ...
+
+Conclusion
+This study proposed ...</code></pre><br><br>如果你现在已经有 <code>Discussion</code> 和 <code>Conclusion</code>，我会选：<strong>Discussion 里面放 “Limitations and Future Work” 小节，Conclusion 只保留核心 takeaway。</strong></div>
+            </div></div></div></body></html>

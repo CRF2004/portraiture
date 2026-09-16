@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Δprob与ΔAUROC区别</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Δprob与ΔAUROC区别</h1>
+            <div class="metadata">ID: 6a015554-7640-83ec-9e4d-85705631d030 | 2026/5/11 12:04:57</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/11 12:04:55</span>
+                </div>
+                <div class="message-content">论文为什么说”””<strong>测量</strong>：对每种条件，我们计算 ResNet 对每个样本预测的 1AVB 概率。主要指标是 1AVB 阳性样本上的配对概率变化（Δprob）： <br><br>$$<br>\Delta\text{prob} = p(\text{1AVB}|\text{clean}) - p(\text{1AVB}|\text{occluded})<br>$$<br><br>正向 Δprob 表示该片段被遮盖后，模型降低了对 1AVB 的置信度。文中所有地方，ΔAUROC 都表示从干净信号到扰动信号的 AUROC 变化（正值表示性能下降）。““”<br>Δp和ΔAUROC有什么区别吗？论文不是主要汇报ΔAUROC吗<br></div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/11 12:04:57</span>
+                </div>
+                <div class="message-content">有区别，而且这篇论文里两者承担的是<strong>不同层级的证据</strong>。<br><br>你可以把它理解成：<br><br>- <strong>Δprob</strong>：单个样本层面的“置信度变化”<br>- <strong>ΔAUROC</strong>：整个数据集层面的“分类能力变化”<br><br>论文最终主要依赖的是 <strong>ΔAUROC / ASS</strong>，而 Δprob 更像是一个辅助的局部现象验证。<br><br>---<br><br># 1. Δprob 是什么？<br><br>论文定义：<br><br>\[<br>\Delta\text{prob}<br>=<br>p(\text{1AVB}|\text{clean})<br>-<br>p(\text{1AVB}|\text{occluded})<br>\]<br><br>意思是：<br><br>对于某个阳性样本：<br><br>- 原始 ECG：<br>  - 模型预测 1AVB 概率 = 0.92<br>- 遮挡 PR segment 后：<br>  - 概率变成 0.55<br><br>那么：<br><br>\[<br>\Delta prob = 0.92-0.55=0.37<br>\]<br><br>说明：<br><br>&gt; 遮挡 PR 区域后，模型对“这是1AVB”的信心下降了 37%。<br><br>它反映的是：<br><br>&gt; 模型对某区域的“依赖程度”。<br><br>这是<strong>sample-level / probability-level</strong>指标。<br><br>---<br><br># 2. ΔAUROC 是什么？<br><br>论文真正核心的是：<br><br>\[<br>\Delta AUROC<br>=<br>AUROC_{clean}<br>-<br>AUROC_{perturbed}<br>\]<br><br>比如：<br><br>- clean AUROC = 0.985<br>- PR occlusion 后 = 0.760<br><br>则：<br><br>\[<br>\Delta AUROC = 0.225<br>\]<br><br>它表示：<br><br>&gt; 遮挡后，整个分类器的区分能力下降了多少。<br><br>这是：<br><br>- dataset-level<br>- discrimination-level<br>- 全局性能指标<br><br>---<br><br># 3. 两者为什么不能等价？<br><br>这是关键。<br><br>因为：<br><br>&gt; 概率变化 ≠ 分类能力变化<br><br>举个例子。<br><br>---<br><br>## 情况 A：Δprob 很大，但 AUROC 几乎不变<br><br>假设：<br><br>所有阳性样本：<br><br>- 从 0.99 → 0.80<br><br>所有阴性样本：<br><br>- 从 0.01 → 0.00<br><br>那么：<br><br>- Δprob 很大<br>- 但排序关系没变<br><br>模型仍然：<br><br>- 阳性 &gt; 阴性<br><br>于是：<br><br>- AUROC 几乎不变<br><br>---<br><br>## 情况 B：Δprob 不大，但 AUROC 大幅下降<br><br>假设：<br><br>阳性：<br><br>- 0.60 → 0.52<br><br>阴性：<br><br>- 0.48 → 0.50<br><br>虽然每个样本只变一点：<br><br>但：<br><br>- 排序开始混乱<br>- 阳性阴性大量重叠<br><br>于是：<br><br>- AUROC 明显下降<br><br>---<br><br>所以：<br><br># Δprob 关注：<br><br>“模型信心是否变化”<br><br># ΔAUROC 关注：<br><br>“模型判别能力是否被破坏”<br><br>这是两个不同层面的东西。<br><br>---<br><br># 4. 为什么论文主要汇报 ΔAUROC？<br><br>因为这篇论文的目标不是：<br><br>&gt; “模型会不会看某个区域”<br><br>而是：<br><br>&gt; “某个区域是否真正支撑了疾病判别能力”<br><br>这是全文最核心的思想。<br><br>论文反复强调：<br><br>&gt; sensitivity is not specificity<br><br>即：<br><br>- 模型对某区域敏感<br>≠<br>- 模型真正依赖该区域完成诊断<br><br>所以他们最终采用：<br><br>\[<br>ASS<br>=<br>\Delta AUROC_{target}<br>-<br>\max(\Delta AUROC_{control})<br>\]<br><br>也就是：<br><br># “目标区域造成的性能下降”<br><br>是否：<br><br># “比所有 matched control 更大”<br><br>这已经是：<br><br>- pathway specificity<br>- anatomical specificity<br>- diagnostic reliance<br><br>层面的东西了。<br><br>而不是简单的：<br><br>“模型概率掉了多少”。<br><br>---<br><br># 5. 那为什么还要报告 Δprob？<br><br>因为 Δprob 有一个优点：<br><br>## 它更直观<br><br>比如论文这里：<br><br>&gt; PR-window occlusion increased false-negative probability by +32.7%<br><br>读者一下就能理解：<br><br>- 遮挡 PR 后<br>- 模型明显没那么敢判 1AVB 了<br><br>这是一种：<br><br>- local evidence<br>- intuitive evidence<br>- sanity check<br><br>但它不能证明：<br><br># “PR 比 QRS 更重要”<br><br>因为：<br><br>QRS 可能让概率掉得更多。<br><br>所以最终还是要看：<br><br>\[<br>\Delta AUROC_{PR}<br>\quad vs \quad<br>\Delta AUROC_{QRS}<br>\]<br><br>这才是 matched-control audit 的核心。<br><br>---<br><br># 6. 这篇论文里的逻辑链<br><br>论文其实是：<br><br>## 第一层：Δprob<br><br>证明：<br><br>&gt; “PR 被遮挡后，模型确实会受影响”<br><br>即：<br><br>- pathway-sensitive behavior is real<br><br>---<br><br>## 第二层：ΔAUROC<br><br>证明：<br><br>&gt; “QRS 遮挡影响更大”<br><br>即：<br><br>\[<br>\Delta AUROC_{QRS}<br>&gt;<br>\Delta AUROC_{PR}<br>\]<br><br>---<br><br>## 第三层：ASS<br><br>于是：<br><br>\[<br>ASS &lt; 0<br>\]<br><br>说明：<br><br>&gt; PR dependence 存在，但不具有 anatomical specificity。<br><br>这是全文最关键的结论。<br><br>---<br><br># 7. 用一句话总结<br><br>这篇论文里：<br><br>- <strong>Δprob</strong> 用来证明：<br>  - “模型会受到该区域影响”<br><br>- <strong>ΔAUROC</strong> 用来证明：<br>  - “该区域是否真正支撑分类能力”<br><br>而：<br><br>- <strong>ASS</strong><br>  - 才是最终 pathway audit 的核心指标。</div>
+            </div></div></div></body></html>

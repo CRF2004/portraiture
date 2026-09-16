@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BH-FDR多重性控制翻译</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BH-FDR多重性控制翻译</h1>
+            <div class="metadata">ID: 6a06f17e-fb4c-83ec-8ff7-1007a113947c | 2026/5/15 18:12:18</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/15 18:12:17</span>
+                </div>
+                <div class="message-content">翻译：""BH-FDRMULTIPLICITYCONTROLFORTHE15EXTERNAL<br>PRIMARY-OPERATORPATHWAY-SPECIFICITYTESTS(H0:ASS≤0,<br>ONE-SIDED).BOOTSTRAPp-VALUE=1−PR(ASS¿0),CONSERVATIVELY<br>BOUNDEDAT1/(B+1)FORPR(ASS&gt;0)=1.0.q-VALUESCOMPUTED<br>VIATHESTOREYPROCEDURE.""</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/15 18:12:18</span>
+                </div>
+                <div class="message-content">翻译如下：<br><br><strong>针对 15 项外部主要算子通路特异性检验的 BH-FDR 多重性控制</strong>  <br>（原假设 H0：ASS ≤ 0，单侧检验）。Bootstrap p 值定义为：<br><br>\[<br>p = 1 - \Pr(ASS &gt; 0)<br>\]<br><br>当 \(\Pr(ASS &gt; 0)=1.0\) 时，p 值保守地限定为：<br><br>\[<br>\frac{1}{B+1}<br>\]<br><br>q 值采用 Storey 方法计算。</div>
+            </div></div></div></body></html>

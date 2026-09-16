@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT表述简化建议</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PPT表述简化建议</h1>
+            <div class="metadata">ID: 6a00a1e2-5600-83ec-bf13-cf27e37feb89 | 2026/5/10 23:19:15</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/10 23:19:14</span>
+                </div>
+                <div class="message-content">""患者： 获得个性化、科学的康复方案；明确康复目标与路径，更安心。<br>家属： 清楚了解康复计划与注意事项；减少照护压力和决策焦虑。<br>医生： 提升方案制定效率与一致性；基于循证依据，专业可靠更省心。<br>""你帮我简化一下表述，将用于ppt展示</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/10 23:19:14</span>
+                </div>
+                <div class="message-content">可以压缩成更“PPT友好”的短句版本：<br><br>- <strong>患者</strong>：获得个性化康复方案，路径清晰、更安心  <br>- <strong>家属</strong>：明确康复计划与注意事项，降低照护与决策压力  <br>- <strong>医生</strong>：提升方案制定效率与一致性，循证支持、更省心</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/10 23:19:43</span>
+                </div>
+                <div class="message-content">""患者： 获得个性化、科学的康复方案；明确康复目标与路径，更安心。<br>家属： 清楚了解康复计划与注意事项；减少照护压力和决策焦虑。<br>医生： 提升方案制定效率与一致性；基于循证依据，专业可靠更省心。<br>""你帮我简化一下表述，将用于ppt展示，句子尽量短且易于理解</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/10 23:19:45</span>
+                </div>
+                <div class="message-content">可以改成这种更适合PPT展示的短句版本：<br><br>- <strong>患者</strong>：获得个性化康复方案；目标清晰，更安心  <br>- <strong>家属</strong>：了解康复计划与注意事项；降低照护与决策压力  <br>- <strong>医生</strong>：提升方案制定效率；基于循证，更规范可靠</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/10 23:20:57</span>
+                </div>
+                <div class="message-content">""患者： 获得专业、可信的解答；减少焦虑，建立信任。<br>家属： 随时获取权威信息；不再反复求证，少走弯路。<br>医生： 减少重复咨询负担；提升医患沟通效率与质量。""继续</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/10 23:20:58</span>
+                </div>
+                <div class="message-content">- <strong>患者</strong>：获得专业可信解答；减少焦虑，增强信任  <br>- <strong>家属</strong>：随时获取权威信息；减少反复求证  <br>- <strong>医生</strong>：减少重复咨询负担；提升沟通效率与质量</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/10 23:22:50</span>
+                </div>
+                <div class="message-content">""患者： 风险早发现、早干预；避免病情恶化，更安全。<br>家属： 及时接收风险提醒；更从容应对突发情况。<br>医生： 主动掌握患者风险状态；优化随访与干预策略。<br>""继续，改的更简洁有力一点</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/10 23:22:51</span>
+                </div>
+                <div class="message-content">- <strong>患者</strong>：风险早发现早干预；降低恶化风险  <br>- <strong>家属</strong>：及时接收风险提醒；应对更从容  <br>- <strong>医生</strong>：实时掌握风险状态；优化随访干预策略</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/10 23:26:20</span>
+                </div>
+                <div class="message-content">""""患者： 获得持续动力与心理支持；更容易坚持，康复更有信心。<br>家属： 理解患者情绪与行为变化；更好支持与陪伴。<br>医生： 识别依从性风险，精准干预；提升长期康复效果。<br>""继续""</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/10 23:26:21</span>
+                </div>
+                <div class="message-content">- <strong>患者</strong>：获得持续支持与动力；提升坚持与信心  <br>- <strong>家属</strong>：理解情绪与行为变化；更好陪伴支持  <br>- <strong>医生</strong>：识别依从性风险；精准干预提升效果</div>
+            </div></div></div></body></html>

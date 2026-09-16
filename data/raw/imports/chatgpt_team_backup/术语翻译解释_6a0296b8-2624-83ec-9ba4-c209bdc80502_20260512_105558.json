@@ -1,0 +1,307 @@
+{
+  "title": "术语翻译解释",
+  "create_time": 1778554558.487189,
+  "update_time": 1778554760.276888,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a0296b8-2624-83ec-9ba4-c209bdc80502",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.statefarm.com",
+    "physionet.org",
+    "https://huggingface.co/datasets/ncbi/MedFact-Synth",
+    "https://github.com/openclaw/openclaw",
+    "https://www.progressive.com"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "auto",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "4ad73539-2ede-45d2-a02e-4f53aeb165ce"
+      ]
+    },
+    "4ad73539-2ede-45d2-a02e-4f53aeb165ce": {
+      "id": "4ad73539-2ede-45d2-a02e-4f53aeb165ce",
+      "message": {
+        "id": "4ad73539-2ede-45d2-a02e-4f53aeb165ce",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "f6775a86-0508-4489-8b30-ceb096c8c92e"
+      ]
+    },
+    "f6775a86-0508-4489-8b30-ceb096c8c92e": {
+      "id": "f6775a86-0508-4489-8b30-ceb096c8c92e",
+      "message": {
+        "id": "f6775a86-0508-4489-8b30-ceb096c8c92e",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "4ad73539-2ede-45d2-a02e-4f53aeb165ce",
+      "children": [
+        "e29f69c6-0166-4930-881c-ee21f9ed74ae"
+      ]
+    },
+    "e29f69c6-0166-4930-881c-ee21f9ed74ae": {
+      "id": "e29f69c6-0166-4930-881c-ee21f9ed74ae",
+      "message": {
+        "id": "e29f69c6-0166-4930-881c-ee21f9ed74ae",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f6775a86-0508-4489-8b30-ceb096c8c92e",
+      "children": [
+        "090c06f1-7be8-4bdd-90dd-36d79da175ef"
+      ]
+    },
+    "090c06f1-7be8-4bdd-90dd-36d79da175ef": {
+      "id": "090c06f1-7be8-4bdd-90dd-36d79da175ef",
+      "message": {
+        "id": "090c06f1-7be8-4bdd-90dd-36d79da175ef",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778554558.295079,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "64865766-d3e9-498e-8d46-b9312745ad0f",
+          "message_source": null,
+          "turn_exchange_id": "9129a03b-1548-4029-9ac2-f7d636707e3a",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e29f69c6-0166-4930-881c-ee21f9ed74ae",
+      "children": [
+        "5f29f4a4-81b5-4f4c-a307-f517afe624d8"
+      ]
+    },
+    "5f29f4a4-81b5-4f4c-a307-f517afe624d8": {
+      "id": "5f29f4a4-81b5-4f4c-a307-f517afe624d8",
+      "message": {
+        "id": "5f29f4a4-81b5-4f4c-a307-f517afe624d8",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778554555.543,
+        "update_time": 1778554566.117755,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\"\"    - Zero-masking\n    - linear interpolation (continuity-preserving)\n    - beat-conditioned inpainting (amplitude-aligned adjacent-beat replacement).\"\"\n这三个怎么翻译"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "64865766-d3e9-498e-8d46-b9312745ad0f",
+          "message_source": null,
+          "turn_exchange_id": "9129a03b-1548-4029-9ac2-f7d636707e3a",
+          "resolved_model_slug": "gpt-5-5",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "090c06f1-7be8-4bdd-90dd-36d79da175ef",
+      "children": [
+        "77f7f80a-31c2-4127-b6e4-06946883602b"
+      ]
+    },
+    "77f7f80a-31c2-4127-b6e4-06946883602b": {
+      "id": "77f7f80a-31c2-4127-b6e4-06946883602b",
+      "message": {
+        "id": "77f7f80a-31c2-4127-b6e4-06946883602b",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778554558.445639,
+        "update_time": null,
+        "content": {
+          "content_type": "model_editable_context",
+          "model_set_context": "",
+          "repository": null,
+          "repo_summary": null,
+          "structured_context": null
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "search_result_groups": [],
+          "request_id": "64865766-d3e9-498e-8d46-b9312745ad0f",
+          "message_type": "next",
+          "turn_exchange_id": "9129a03b-1548-4029-9ac2-f7d636707e3a",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": false,
+          "parent_id": "5f29f4a4-81b5-4f4c-a307-f517afe624d8",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "5f29f4a4-81b5-4f4c-a307-f517afe624d8",
+      "children": [
+        "b49a7111-7521-4619-8df1-31f365188bd5"
+      ]
+    },
+    "b49a7111-7521-4619-8df1-31f365188bd5": {
+      "id": "b49a7111-7521-4619-8df1-31f365188bd5",
+      "message": {
+        "id": "b49a7111-7521-4619-8df1-31f365188bd5",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1778554558.445442,
+        "update_time": 1778554760.276036,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "- **Zero-masking**：零值遮蔽 / 零填充遮蔽  \n  （指把被扰动区域直接置为 0）\n\n- **Linear interpolation (continuity-preserving)**：线性插值（保持连续性）  \n  （利用前后点做线性过渡，使波形连续）\n\n- **Beat-conditioned inpainting (amplitude-aligned adjacent-beat replacement)**：基于心搏条件的修复插值（振幅对齐的相邻心搏替换）  \n  或更偏论文风格：  \n  **基于相邻心搏振幅对齐的条件式波形修复**\n\n其中：\n\n- **beat-conditioned**：以“心搏/beat”为条件的信息约束\n- **inpainting**：原本来自图像领域，医学信号里一般译为“修复”“补全”\n- **amplitude-aligned adjacent-beat replacement**：将相邻心搏经过振幅对齐后，用来替换缺失区域\n\n如果你是写论文方法部分，我更推荐：\n\n> 零值遮蔽、线性连续插值、基于相邻心搏振幅对齐的条件式波形修复\n\n比较自然且符合医学 AI 论文表达。"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-5",
+          "search_result_groups": [],
+          "request_id": "64865766-d3e9-498e-8d46-b9312745ad0f",
+          "message_type": "next",
+          "turn_exchange_id": "9129a03b-1548-4029-9ac2-f7d636707e3a",
+          "model_slug": "gpt-5-5",
+          "default_model_slug": "auto",
+          "can_save": true,
+          "parent_id": "77f7f80a-31c2-4127-b6e4-06946883602b",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "77f7f80a-31c2-4127-b6e4-06946883602b",
+      "children": []
+    }
+  },
+  "current_node": "b49a7111-7521-4619-8df1-31f365188bd5"
+}

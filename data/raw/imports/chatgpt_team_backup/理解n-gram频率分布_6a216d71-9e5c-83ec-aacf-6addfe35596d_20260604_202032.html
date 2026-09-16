@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理解n-gram频率分布</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>理解n-gram频率分布</h1>
+            <div class="metadata">ID: 6a216d71-9e5c-83ec-aacf-6addfe35596d | 2026/6/4 20:20:32</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/6/4 20:20:28</span>
+                </div>
+                <div class="message-content">[object Object]<br>这个图怎么理解？我只知道一元语法 (Unigram)：<br><br>- <br>意思：假设序列中的每个词都是相互独立的<br>。<br><br>- <br>公式：P(x <br>1<br>​<br> ,x <br>2<br>​<br> ,x <br>3<br>​<br> ,x <br>4<br>​<br> )=P(x <br>1<br>​<br> )P(x <br>2<br>​<br> )P(x <br>3<br>​<br> )P(x <br>4<br>​<br> )<br>。<br><br><br>二元语法 (Bigram)：<br><br>- <br>意思：假设序列满足一阶马尔可夫性质，即当前词只取决于前一个词<br>。<br><br>- <br>公式：P(x <br>1<br>​<br> ,x <br>2<br>​<br> ,x <br>3<br>​<br> ,x <br>4<br>​<br> )=P(x <br>1<br>​<br> )P(x <br>2<br>​<br> ∣x <br>1<br>​<br> )P(x <br>3<br>​<br> ∣x <br>2<br>​<br> )P(x <br>4<br>​<br> ∣x <br>3<br>​<br> )<br>。<br><br><br>三元语法 (Trigram)：<br><br>- <br>意思：假设当前词取决于前面两个词<br>。<br>- 公式：P(x <br>1<br>​<br> ,x <br>2<br>​<br> ,x <br>3<br>​<br> ,x <br>4<br>​<br> )=P(x <br>1<br>​<br> )P(x <br>2<br>​<br> ∣x <br>1<br>​<br> )P(x <br>3<br>​<br> ∣x <br>1<br>​<br> ,x <br>2<br>​<br> )P(x <br>4<br>​<br> ∣x <br>2,3<br>​<br> )<br>。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/6/4 20:20:31</span>
+                </div>
+                <div class="message-content">这个图不是在画你写的那些<strong>概率公式本身</strong>，而是在画语料库里 <strong>unigram / bigram / trigram 的出现频率分布</strong>。<br><br>可以这样读：<br><br>横轴 <code>token: x</code>：某个 token 或 n-gram 的编号/排名。  <br>纵轴 <code>frequency: n(x)</code>：这个 token 或 n-gram 在语料中出现了多少次。  <br>两个轴都是对数坐标，所以 <code>10^0, 10^1, 10^2, 10^3</code> 分别表示 1、10、100、1000。<br><br>---<br><br>### 1. 蓝线 unigram 怎么理解？<br><br>unigram 是单个词，比如：<br><br><pre><code class="language-text">the
+cat
+sat
+on
+mat</code></pre><br><br>蓝线最高，说明<strong>单个词最容易重复出现</strong>。<br><br>比如图上左边蓝线大约在 <code>10^3</code>，意思是最常见的一些 unigram 出现了大约 1000 次。<br><br>这很正常，因为常见词会反复出现，比如英文里的 <code>the</code>, <code>of</code>, <code>is</code>，中文里的“的”“是”“我”等。<br><br>---<br><br>### 2. 紫线 bigram 怎么理解？<br><br>bigram 是连续两个词，比如：<br><br><pre><code class="language-text">the cat
+cat sat
+sat on
+on the</code></pre><br><br>紫线整体低于蓝线，说明<strong>两个词的组合比单个词更少重复</strong>。<br><br>例如 <code>the</code> 可能出现 1000 次，但 <code>the cat</code> 可能只出现几十次。因为 <code>the</code> 后面可以接很多词：<br><br><pre><code class="language-text">the cat
+the dog
+the book
+the city</code></pre><br><br>所以 bigram 的频率自然比 unigram 更分散。<br><br>---<br><br>### 3. 绿线 trigram 怎么理解？<br><br>trigram 是连续三个词，比如：<br><br><pre><code class="language-text">the cat sat
+cat sat on
+sat on the</code></pre><br><br>绿线更低，而且右边拖得更长，很多地方频率接近 1。<br><br>这说明：<strong>三个词的组合更具体，所以大多数 trigram 只出现一次或几次。</strong><br><br>例如：<br><br><pre><code class="language-text">I like machine
+like machine learning
+machine learning models</code></pre><br><br>这种三词组合在语料里可能很少完全重复。<br><br>---<br><br>### 4. 这个图真正想表达什么？<br><br>核心结论是：<br><br>&gt; n 越大，n-gram 越稀疏。<br><br>也就是说：<br><br><pre><code class="language-text">unigram：重复多，频率高
+bigram：重复少一些
+trigram：更稀疏，很多只出现一次</code></pre><br><br>这就是为什么 n-gram 语言模型会遇到 <strong>数据稀疏问题</strong>。<br><br>举个例子，假设语料里有一句：<br><br><pre><code class="language-text">I love natural language processing</code></pre><br><br>它产生的 unigram 是：<br><br><pre><code class="language-text">I, love, natural, language, processing</code></pre><br><br>bigram 是：<br><br><pre><code class="language-text">I love
+love natural
+natural language
+language processing</code></pre><br><br>trigram 是：<br><br><pre><code class="language-text">I love natural
+love natural language
+natural language processing</code></pre><br><br>随着 n 变大，组合越来越具体，重复出现的机会越来越小。<br><br>---<br><br>### 5. 和你写的公式有什么关系？<br><br>你的公式是在说语言模型如何计算句子概率。<br><br>比如 trigram 模型：<br><br>\[<br>P(x_1,x_2,x_3,x_4)<br>=<br>P(x_1)P(x_2|x_1)P(x_3|x_1,x_2)P(x_4|x_2,x_3)<br>\]<br><br>注意最后一项应写成：<br><br>\[<br>P(x_4|x_2,x_3)<br>\]<br><br>不是 \(P(x_4|x_{2,3})\)。<br><br>这些概率通常要用频率估计。<br><br>例如 unigram：<br><br>\[<br>P(w)=\frac{count(w)}{\text{所有 unigram 总数}}<br>\]<br><br>bigram：<br><br>\[<br>P(w_i|w_{i-1})<br>=<br>\frac{count(w_{i-1},w_i)}{count(w_{i-1})}<br>\]<br><br>trigram：<br><br>\[<br>P(w_i|w_{i-2},w_{i-1})<br>=<br>\frac{count(w_{i-2},w_{i-1},w_i)}<br>{count(w_{i-2},w_{i-1})}<br>\]<br><br>图里的 <code>frequency n(x)</code> 就是这些 <code>count(...)</code> 的来源。<br><br>---<br><br>所以一句话总结：<br><br><strong>这个图展示的是：unigram、bigram、trigram 在语料中出现次数的分布。unigram 最常见，bigram 次之，trigram 最稀疏；n 越大，很多组合越容易只出现一次，这会让高阶 n-gram 模型更难估计概率。</strong></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/6/4 20:25:53</span>
+                </div>
+                <div class="message-content">题目： 给定一个标签序列（真值）：“A B C D E F” 和一个预测序列：“A B B C D”。<br>计算 1-元语法 (p <br>1<br>​<br> ) 和 2-元语法 (p <br>2<br>​<br> ) 的精确度。<br>假设最短匹配长度 k=2，计算该预测序列的短序列惩罚项（Brevity Penalty）。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/6/4 20:25:56</span>
+                </div>
+                <div class="message-content">给定：<br><br>真值序列：<br><br>\[<br>A\ B\ C\ D\ E\ F<br>\]<br><br>预测序列：<br><br>\[<br>A\ B\ B\ C\ D<br>\]<br><br>预测长度：<br><br>\[<br>c=5<br>\]<br><br>真值长度：<br><br>\[<br>r=6<br>\]<br><br>---<br><br>## 1. 一元语法精确度 \(p_1\)<br><br>预测序列的一元语法：<br><br>\[<br>A,\ B,\ B,\ C,\ D<br>\]<br><br>真值序列的一元语法：<br><br>\[<br>A,\ B,\ C,\ D,\ E,\ F<br>\]<br><br>匹配时通常使用 <strong>截断计数 clipped count</strong>，也就是预测里多出来的重复项不能无限算对。<br><br>预测中：<br><br>| token | 预测次数 | 真值次数 | 截断匹配次数 |<br>|---|---:|---:|---:|<br>| A | 1 | 1 | 1 |<br>| B | 2 | 1 | 1 |<br>| C | 1 | 1 | 1 |<br>| D | 1 | 1 | 1 |<br><br>所以匹配的一元语法数量是：<br><br>\[<br>1+1+1+1=4<br>\]<br><br>预测的一元语法总数是：<br><br>\[<br>5<br>\]<br><br>因此：<br><br>\[<br>p_1=\frac{4}{5}=0.8<br>\]<br><br>---<br><br>## 2. 二元语法精确度 \(p_2\)<br><br>预测序列的二元语法：<br><br>\[<br>AB,\ BB,\ BC,\ CD<br>\]<br><br>真值序列的二元语法：<br><br>\[<br>AB,\ BC,\ CD,\ DE,\ EF<br>\]<br><br>匹配的二元语法有：<br><br>\[<br>AB,\ BC,\ CD<br>\]<br><br>不匹配的是：<br><br>\[<br>BB<br>\]<br><br>所以匹配数量是：<br><br>\[<br>3<br>\]<br><br>预测的二元语法总数是：<br><br>\[<br>4<br>\]<br><br>因此：<br><br>\[<br>p_2=\frac{3}{4}=0.75<br>\]<br><br>---<br><br>## 3. 短序列惩罚项 Brevity Penalty<br><br>标准 BLEU 中：<br><br>\[<br>BP=<br>\begin{cases}<br>1, &amp; c &gt; r \\<br>e^{1-\frac{r}{c}}, &amp; c \le r<br>\end{cases}<br>\]<br><br>这里预测序列长度 \(c=5\)，真值序列长度 \(r=6\)，因为：<br><br>\[<br>5 \le 6<br>\]<br><br>所以：<br><br>\[<br>BP=e^{1-\frac{6}{5}}<br>\]<br><br>\[<br>BP=e^{-0.2}<br>\]<br><br>\[<br>BP \approx 0.8187<br>\]<br><br>---<br><br>最终答案：<br><br>\[<br>p_1=0.8<br>\]<br><br>\[<br>p_2=0.75<br>\]<br><br>\[<br>BP \approx 0.8187<br>\]<br><br>其中 \(k=2\) 可以理解为这里只计算到二元语法，即使用 \(p_1\) 和 \(p_2\)。标准 BLEU 的 Brevity Penalty 本身只依赖预测长度和真值长度，不直接依赖 \(k\)。</div>
+            </div></div></div></body></html>

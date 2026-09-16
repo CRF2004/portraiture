@@ -1,0 +1,707 @@
+{
+  "title": "图像修改请求",
+  "create_time": 1779451219.548827,
+  "update_time": 1779451296.191645,
+  "moderation_results": [],
+  "plugin_ids": null,
+  "conversation_id": "6a10452a-d98c-83ec-8935-394d4284c276",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [
+    "https://www.openai.com"
+  ],
+  "blocked_urls": [],
+  "default_model_slug": "gpt-5-5-thinking",
+  "atlas_mode_enabled": null,
+  "conversation_origin": null,
+  "is_read_only": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "is_temporary_chat": false,
+  "is_do_not_remember": false,
+  "memory_scope": "global_enabled",
+  "context_scopes": [],
+  "sugar_item_id": null,
+  "sugar_item_visible": false,
+  "pinned_time": null,
+  "is_study_mode": false,
+  "owner": null,
+  "mapping": {
+    "client-created-root": {
+      "id": "client-created-root",
+      "message": null,
+      "parent": null,
+      "children": [
+        "0c2d3b4e-d419-427d-87fc-c24ab6cd6ac2"
+      ]
+    },
+    "0c2d3b4e-d419-427d-87fc-c24ab6cd6ac2": {
+      "id": "0c2d3b4e-d419-427d-87fc-c24ab6cd6ac2",
+      "message": {
+        "id": "0c2d3b4e-d419-427d-87fc-c24ab6cd6ac2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "client-created-root",
+      "children": [
+        "58ab999a-6ca6-44f2-ab3b-0319db17eac2"
+      ]
+    },
+    "58ab999a-6ca6-44f2-ab3b-0319db17eac2": {
+      "id": "58ab999a-6ca6-44f2-ab3b-0319db17eac2",
+      "message": {
+        "id": "58ab999a-6ca6-44f2-ab3b-0319db17eac2",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "rebase_developer_message": true,
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "0c2d3b4e-d419-427d-87fc-c24ab6cd6ac2",
+      "children": [
+        "7893b8d6-8e51-4283-abff-d3942e8c664f"
+      ]
+    },
+    "7893b8d6-8e51-4283-abff-d3942e8c664f": {
+      "id": "7893b8d6-8e51-4283-abff-d3942e8c664f",
+      "message": {
+        "id": "7893b8d6-8e51-4283-abff-d3942e8c664f",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "58ab999a-6ca6-44f2-ab3b-0319db17eac2",
+      "children": [
+        "6f2cceb3-4458-4c58-b925-478cca478d35"
+      ]
+    },
+    "6f2cceb3-4458-4c58-b925-478cca478d35": {
+      "id": "6f2cceb3-4458-4c58-b925-478cca478d35",
+      "message": {
+        "id": "6f2cceb3-4458-4c58-b925-478cca478d35",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_contextual_answers_system_message": true,
+          "contextual_answers_message_type": "identity_prompt",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "7893b8d6-8e51-4283-abff-d3942e8c664f",
+      "children": [
+        "f4b0e9f4-3f02-4b1c-a80f-856ec1de617e"
+      ]
+    },
+    "f4b0e9f4-3f02-4b1c-a80f-856ec1de617e": {
+      "id": "f4b0e9f4-3f02-4b1c-a80f-856ec1de617e",
+      "message": {
+        "id": "f4b0e9f4-3f02-4b1c-a80f-856ec1de617e",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779451219.173734,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "request_id": "wfr_019e4f8e31787410bff66313d39a7da9",
+          "message_source": null,
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "is_visually_hidden_from_conversation": true,
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "6f2cceb3-4458-4c58-b925-478cca478d35",
+      "children": [
+        "18dbbc5e-372e-468a-867a-c81e3a8d5c80"
+      ]
+    },
+    "18dbbc5e-372e-468a-867a-c81e3a8d5c80": {
+      "id": "18dbbc5e-372e-468a-867a-c81e3a8d5c80",
+      "message": {
+        "id": "18dbbc5e-372e-468a-867a-c81e3a8d5c80",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779451217.178,
+        "update_time": null,
+        "content": {
+          "content_type": "multimodal_text",
+          "parts": [
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_000000008de072088980fe072997523f",
+              "size_bytes": 110004,
+              "width": 1058,
+              "height": 1304,
+              "fovea": null,
+              "metadata": {
+                "dalle": null,
+                "gizmo": null,
+                "generation": null,
+                "container_pixel_height": null,
+                "container_pixel_width": null,
+                "emu_omit_glimpse_image": null,
+                "emu_patches_override": null,
+                "lpe_keep_patch_ijhw": null,
+                "lpe_delta_encoding_channel": null,
+                "sanitized": true,
+                "asset_pointer_link": null,
+                "watermarked_asset_pointer": null,
+                "is_no_auth_placeholder": null
+              }
+            },
+            "帮我把图中左边男生的头也向右转。下方二维码、时间、右边男生等等都不变"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "attachments": [
+            {
+              "id": "file_000000008de072088980fe072997523f",
+              "size": 110004,
+              "name": "45330a761a4815e15d9ba88942d32b05.jpg",
+              "mime_type": "image/jpeg",
+              "width": 1058,
+              "height": 1304,
+              "source": "library",
+              "library_file_id": "libfile_c6b23c8ebb98819199746cc783d24eec",
+              "is_big_paste": false
+            }
+          ],
+          "developer_mode_connector_ids": [],
+          "selected_sources": [],
+          "selected_github_repos": [],
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "stream_topic_id": "conversation-turn-fe4495e8-220e-43cf-b057-4ee3705da84c",
+          "async_source": "saserver-centralindia-prod.fck9d:conversation-turn-fe4495e8-220e-43cf-b057-4ee3705da84c:IN",
+          "request_id": "wfr_019e4f8e31787410bff66313d39a7da9",
+          "message_source": null,
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "resolved_model_slug": "gpt-5-5-thinking",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f4b0e9f4-3f02-4b1c-a80f-856ec1de617e",
+      "children": [
+        "5ee1e445-421e-44b4-8dec-c535557fc820"
+      ]
+    },
+    "5ee1e445-421e-44b4-8dec-c535557fc820": {
+      "id": "5ee1e445-421e-44b4-8dec-c535557fc820",
+      "message": {
+        "id": "5ee1e445-421e-44b4-8dec-c535557fc820",
+        "author": {
+          "role": "tool",
+          "name": "t2uay3k.sj1i4kz",
+          "metadata": {}
+        },
+        "create_time": 1779451219.542451,
+        "update_time": null,
+        "content": {
+          "content_type": "multimodal_text",
+          "parts": [
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_00000000f6847208b8b9f99a8683a4fc",
+              "size_bytes": 1298739,
+              "width": 1130,
+              "height": 1392,
+              "fovea": null,
+              "metadata": {
+                "dalle": {
+                  "gen_id": "488f4998-797e-4a84-ac7f-60df3d9150e3",
+                  "prompt": "",
+                  "seed": null,
+                  "parent_gen_id": null,
+                  "edit_op": null,
+                  "serialization_title": "DALL-E generation metadata"
+                },
+                "gizmo": null,
+                "generation": {
+                  "gen_id": "488f4998-797e-4a84-ac7f-60df3d9150e3",
+                  "gen_size": "image",
+                  "gen_size_v2": "48",
+                  "seed": null,
+                  "parent_gen_id": null,
+                  "height": 1392,
+                  "width": 1130,
+                  "transparent_background": false,
+                  "serialization_title": "Image Generation metadata",
+                  "orientation": "portrait",
+                  "projection": "rectilinear"
+                },
+                "container_pixel_height": 1392,
+                "container_pixel_width": 1130,
+                "emu_omit_glimpse_image": null,
+                "emu_patches_override": null,
+                "lpe_keep_patch_ijhw": null,
+                "lpe_delta_encoding_channel": null,
+                "sanitized": false,
+                "asset_pointer_link": null,
+                "watermarked_asset_pointer": null,
+                "is_no_auth_placeholder": null
+              }
+            }
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "ghostrider": {
+            "status": "final"
+          },
+          "parent_id": "18dbbc5e-372e-468a-867a-c81e3a8d5c80",
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "image_gen_title": "Graduation moment with a playful kiss",
+          "async_source": "saserver-centralindia-prod.fck9d:ghostrider-user-E0bGLzzQoeO6kV6VulZczs0d-wfr_019e4f8e31787410bff66313d39a7da9:IN",
+          "permissions": [
+            {
+              "type": "notification",
+              "status": "requested",
+              "notification_channel_id": "image_gen",
+              "notification_channel_name": "ImageGen",
+              "notification_priority": 4
+            }
+          ],
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "18dbbc5e-372e-468a-867a-c81e3a8d5c80",
+      "children": [
+        "6d59b8c4-81f2-4ec1-8195-17b55e3ba57d"
+      ]
+    },
+    "6d59b8c4-81f2-4ec1-8195-17b55e3ba57d": {
+      "id": "6d59b8c4-81f2-4ec1-8195-17b55e3ba57d",
+      "message": {
+        "id": "6d59b8c4-81f2-4ec1-8195-17b55e3ba57d",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779451224.865361,
+        "update_time": null,
+        "content": {
+          "content_type": "code",
+          "language": "json",
+          "response_format_name": null,
+          "text": "{\"prompt\":\"Edit Image A. The goal is to change only the left person's head pose so that the left young man's head is also turned to the right, as if he is looking toward the right side of the image, matching the direction change requested by the user. Preserve the left person's body position, clothing, bouquet, overall identity, and approximate placement. Keep the right young man unchanged, including his face, glasses, graduation gown, bouquet, and pose. Keep the entire rest of the image unchanged: the background wall, window, composition, the date text \\\"2026年5月22日\\\", the dotted divider line, the QR code, and the bottom Chinese text. Make this a natural-looking photo edit with consistent lighting and realism.\",\"reference_image_paths\":[\"/mnt/data/ghostwriter_images/context/35fe6e28-bdb2-5dfb-bfcf-2cb5f60aa5a2.jpg\"]}"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200012
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-4-auto-thinking",
+          "model_slug": "gpt-5-4-thinking",
+          "request_id": "wfr_019e4f8edd0379c1b87bda928ce94a1a",
+          "message_type": "next",
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "requested_model_slug": "gpt-5-4-auto-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "is_visually_hidden_from_conversation": true,
+          "parent_id": "cadbfefd-cb5a-49f6-b2a8-585df54149c2",
+          "model_switcher_deny": [],
+          "can_save": false
+        },
+        "recipient": "t2uay3k.sj1i4kz",
+        "channel": "commentary"
+      },
+      "parent": "5ee1e445-421e-44b4-8dec-c535557fc820",
+      "children": [
+        "2ba6785d-6d18-4c0c-aa82-09d113280abd"
+      ]
+    },
+    "2ba6785d-6d18-4c0c-aa82-09d113280abd": {
+      "id": "2ba6785d-6d18-4c0c-aa82-09d113280abd",
+      "message": {
+        "id": "2ba6785d-6d18-4c0c-aa82-09d113280abd",
+        "author": {
+          "role": "tool",
+          "name": "t2uay3k.sj1i4kz",
+          "metadata": {}
+        },
+        "create_time": 1779451288.8177948,
+        "update_time": null,
+        "content": {
+          "content_type": "multimodal_text",
+          "parts": [
+            {
+              "content_type": "image_asset_pointer",
+              "asset_pointer": "sediment://file_00000000f6847208b8b9f99a8683a4fc",
+              "size_bytes": 1298739,
+              "width": 1130,
+              "height": 1392,
+              "fovea": null,
+              "metadata": {
+                "dalle": {
+                  "gen_id": "488f4998-797e-4a84-ac7f-60df3d9150e3",
+                  "prompt": "",
+                  "seed": null,
+                  "parent_gen_id": null,
+                  "edit_op": null,
+                  "serialization_title": "DALL-E generation metadata"
+                },
+                "gizmo": null,
+                "generation": {
+                  "gen_id": "488f4998-797e-4a84-ac7f-60df3d9150e3",
+                  "gen_size": "image",
+                  "gen_size_v2": "48",
+                  "seed": null,
+                  "parent_gen_id": null,
+                  "height": 1392,
+                  "width": 1130,
+                  "transparent_background": false,
+                  "serialization_title": "Image Generation metadata",
+                  "orientation": "portrait",
+                  "projection": "rectilinear"
+                },
+                "container_pixel_height": 1392,
+                "container_pixel_width": 1130,
+                "emu_omit_glimpse_image": null,
+                "emu_patches_override": null,
+                "lpe_keep_patch_ijhw": null,
+                "lpe_delta_encoding_channel": null,
+                "sanitized": false,
+                "asset_pointer_link": null,
+                "watermarked_asset_pointer": null,
+                "is_no_auth_placeholder": null
+              }
+            },
+            "Model caption: A clean, bright indoor photo/layout with a white/light gray wall background and a window on the right side; overall it looks like a graduation-themed portrait and poster-style image. At the top portion, two young East Asian men (light/medium skin tones, likely in their 20s) stand close together in front of a plain wall. On the left is a shorter young man with short black hair, wearing a light/beige/cream sweater or casual top, holding a bouquet of mixed pastel flowers (pink, white, maybe yellow) wrapped in white/very light paper; he has a calm/neutral to slightly affectionate facial expression and looks toward the other man, hands/arms in front holding the bouquet. On the right is a taller young man with black hair and glasses, wearing a black graduation gown or robe with a yellow V-shaped/yoke style collar and a green stripe detail, and a white or light shirt underneath; he holds a large bouquet wrapped in green paper tied with a light ribbon (pale/white ribbon), and he is leaning slightly toward the other person with puckered lips as if about to kiss or make a playful kissy face. The taller man has one arm around or near the smaller man (suggested by close posture), creating a friendly/intimate moment. The right side shows a window with light/blue/gray framing and some faint outside view details. The lower portion of the image is like a printed/graphic layout: large centered black text in a clean font reads “2026年5月22日” (date) above a dotted/separator line, and below that a big black-and-white QR code centered on a white background. Under the QR code, lighter gray Chinese instruction text reads “长按识别二维码观看图片直播” in a small/soft font. The overall composition is evenly lit, simple and minimal, with the photo at the top and the date, divider, QR code, and instruction text below, like a commemorative photo/scan poster.<|has_watermark|>"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 0,
+        "metadata": {
+          "image_gen_title": "Graduation moment with a playful kiss",
+          "permissions": [
+            {
+              "type": "notification",
+              "status": "requested",
+              "notification_channel_id": "image_gen",
+              "notification_channel_name": "ImageGen",
+              "notification_priority": 4
+            }
+          ],
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-4-auto-thinking",
+          "model_slug": "gpt-5-4-thinking",
+          "request_id": "wfr_019e4f8edd0379c1b87bda928ce94a1a",
+          "message_type": "next",
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "requested_model_slug": "gpt-5-4-auto-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "is_visually_hidden_from_conversation": true,
+          "parent_id": "6d59b8c4-81f2-4ec1-8195-17b55e3ba57d",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "6d59b8c4-81f2-4ec1-8195-17b55e3ba57d",
+      "children": [
+        "d55c607a-121b-4382-9bdf-f8d7d69f8a22"
+      ]
+    },
+    "d55c607a-121b-4382-9bdf-f8d7d69f8a22": {
+      "id": "d55c607a-121b-4382-9bdf-f8d7d69f8a22",
+      "message": {
+        "id": "d55c607a-121b-4382-9bdf-f8d7d69f8a22",
+        "author": {
+          "role": "tool",
+          "name": "t2uay3k.sj1i4kz",
+          "metadata": {}
+        },
+        "create_time": 1779451292.210034,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Generated images from the last `image_gen.text2im` call were saved at:\n- /mnt/data/ghostwriter_images/generated/a_clean_bright_indoor_photo_layout_with_a_white_l_1.png (wxh = 1130 x 1392, exact aspect ratio 565:696, close to aspect ratio 4:5)\n\nYou can visually inspect the generated image directly in the tool result above. Only reopen the saved path if you need programmatic processing or want to pass the image into another tool call."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-4-auto-thinking",
+          "model_slug": "gpt-5-4-thinking",
+          "request_id": "wfr_019e4f8edd0379c1b87bda928ce94a1a",
+          "message_type": "next",
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "requested_model_slug": "gpt-5-4-auto-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "is_visually_hidden_from_conversation": true,
+          "parent_id": "2ba6785d-6d18-4c0c-aa82-09d113280abd",
+          "can_save": false
+        },
+        "recipient": "all",
+        "channel": "commentary"
+      },
+      "parent": "2ba6785d-6d18-4c0c-aa82-09d113280abd",
+      "children": [
+        "34ca5ccf-d43f-493f-b555-379fac0ef3f8"
+      ]
+    },
+    "34ca5ccf-d43f-493f-b555-379fac0ef3f8": {
+      "id": "34ca5ccf-d43f-493f-b555-379fac0ef3f8",
+      "message": {
+        "id": "34ca5ccf-d43f-493f-b555-379fac0ef3f8",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779451293.865983,
+        "update_time": null,
+        "content": {
+          "content_type": "thoughts",
+          "thoughts": [],
+          "source_analysis_msg_id": "cadbfefd-cb5a-49f6-b2a8-585df54149c2"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "is_reasoning",
+          "citations": [],
+          "content_references": [],
+          "resolved_model_slug": "gpt-5-4-auto-thinking",
+          "model_slug": "gpt-5-4-thinking",
+          "request_id": "wfr_019e4f8edd0379c1b87bda928ce94a1a",
+          "message_type": "next",
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "requested_model_slug": "gpt-5-4-auto-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "classifier_response": "default",
+          "reasoning_start_time": 1779451225.5071049,
+          "skip_reasoning_title": "Skip",
+          "can_save": false,
+          "parent_id": "0fe2baa0-42d7-4420-8ea1-e95fb9b4431c",
+          "async_source": "saserver-centralindia-prod.fck9d:ghostrider-user-E0bGLzzQoeO6kV6VulZczs0d-wfr_019e4f8e31787410bff66313d39a7da9:IN",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "d55c607a-121b-4382-9bdf-f8d7d69f8a22",
+      "children": [
+        "3aa5f6be-4aae-4ddc-a9e3-c4f4c5537aa7"
+      ]
+    },
+    "3aa5f6be-4aae-4ddc-a9e3-c4f4c5537aa7": {
+      "id": "3aa5f6be-4aae-4ddc-a9e3-c4f4c5537aa7",
+      "message": {
+        "id": "3aa5f6be-4aae-4ddc-a9e3-c4f4c5537aa7",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779451294.256889,
+        "update_time": null,
+        "content": {
+          "content_type": "reasoning_recap",
+          "content": "Thought for 1m 8s"
+        },
+        "status": "finished_successfully",
+        "end_turn": false,
+        "weight": 1,
+        "metadata": {
+          "reasoning_status": "reasoning_ended",
+          "finished_duration_sec": 68,
+          "reasoning_start_time": 1779451225.5071049,
+          "reasoning_end_time": 1779451293.5349865,
+          "request_id": "wfr_019e4f8edd0379c1b87bda928ce94a1a",
+          "message_type": "next",
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "model_slug": "gpt-5-4-auto-thinking",
+          "requested_model_slug": "gpt-5-4-auto-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "parent_id": "34ca5ccf-d43f-493f-b555-379fac0ef3f8",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "34ca5ccf-d43f-493f-b555-379fac0ef3f8",
+      "children": [
+        "d51ac8c8-24fa-4d21-ab1d-f6c6a065fe5c"
+      ]
+    },
+    "d51ac8c8-24fa-4d21-ab1d-f6c6a065fe5c": {
+      "id": "d51ac8c8-24fa-4d21-ab1d-f6c6a065fe5c",
+      "message": {
+        "id": "d51ac8c8-24fa-4d21-ab1d-f6c6a065fe5c",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1779451292.209562,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "story_events": [],
+          "resolved_model_slug": "gpt-5-4-auto-thinking",
+          "model_slug": "gpt-5-4-thinking",
+          "request_id": "wfr_019e4f8edd0379c1b87bda928ce94a1a",
+          "message_type": "next",
+          "turn_exchange_id": "3f95f3ff-9d7a-4101-b65b-322cffda798b",
+          "requested_model_slug": "gpt-5-4-auto-thinking",
+          "default_model_slug": "gpt-5-5-thinking",
+          "thinking_effort": "extended",
+          "can_save": false,
+          "is_visually_hidden_from_conversation": true,
+          "parent_id": "3aa5f6be-4aae-4ddc-a9e3-c4f4c5537aa7",
+          "model_switcher_deny": []
+        },
+        "recipient": "all",
+        "channel": "final"
+      },
+      "parent": "3aa5f6be-4aae-4ddc-a9e3-c4f4c5537aa7",
+      "children": []
+    }
+  },
+  "current_node": "d51ac8c8-24fa-4d21-ab1d-f6c6a065fe5c"
+}

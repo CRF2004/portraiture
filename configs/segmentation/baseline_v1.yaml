@@ -1,0 +1,18 @@
+inputs:
+  conversations: data/interim/normalized/conversations.jsonl
+  messages: data/interim/normalized/messages.jsonl
+
+outputs:
+  sessions: data/interim/segmented/sessions.jsonl
+  episodes: data/interim/segmented/episodes.jsonl
+  turns: data/interim/segmented/turns.jsonl
+
+session_method: time_gap_v1
+episode_method: topic_shift_v1
+
+heuristics:
+  session_gap_minutes: 240
+  episode_gap_minutes: 120
+  topic_shift_similarity_threshold: 0.04
+  min_user_chars_for_similarity: 24
+  topic_summary_chars: 200

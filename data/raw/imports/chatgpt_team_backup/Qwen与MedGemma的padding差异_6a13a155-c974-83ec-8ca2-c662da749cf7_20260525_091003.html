@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen与MedGemma的padding差异</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #10a37f 0%, #0d8a6c 100%); color: #fff; padding: 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 10px; }
+        .metadata { font-size: 13px; opacity: 0.9; }
+        .conversation { padding: 20px; }
+        .message { margin-bottom: 25px; padding: 20px; border-radius: 8px; }
+        .message.user { background: #eef2ff; border-left: 4px solid #4f46e5; }
+        .message.assistant { background: #f9fafb; border-left: 4px solid #10a37f; }
+        .message-header { display: flex; align-items: center; margin-bottom: 12px; font-weight: 600; font-size: 15px; }
+        .role-icon { margin-right: 8px; }
+        .timestamp { font-size: 12px; color: #888; margin-left: auto; font-weight: normal; }
+        pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+        code { font-family: "Consolas", monospace; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Qwen与MedGemma的padding差异</h1>
+            <div class="metadata">ID: 6a13a155-c974-83ec-8ca2-c662da749cf7 | 2026/5/25 09:10:03</div>
+        </div>
+        <div class="conversation">
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:10:01</span>
+                </div>
+                <div class="message-content">""Qwen 训练是 batch_size=4，ms-swift 内部会把 batch 内不同长度的样本 pad 对齐，所以 Qwen 的 LoRA 适配器见过 padding，推理时 left-padding 不影响它。<br><br>  MedGemma 训练是 batch_size=1（27B 太大了，塞不进 batch_size=4），每条样本独立处理从没见过 padding。推理突然来 left-padding，LoRA 适配器不知道怎么处理 pad <br>  位置，就崩了。"" 这是什么意思？意思是qwen有pad token、medgemma没有pad token吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:10:03</span>
+                </div>
+                <div class="message-content">不是。<strong>这段话的意思不是“Qwen 有 pad token、MedGemma 没有 pad token”。</strong><br><br>更准确地说，它在讲的是：<br><br><strong>Qwen 的 LoRA 训练过程中经常见过 padding 场景，而 MedGemma 的 LoRA 训练过程中基本没见过 padding 场景，所以推理时突然使用 left-padding，MedGemma 的 LoRA 行为可能不稳定。</strong><br><br>### 关键区别<br><br>#### 1. pad token 是“词表/模型配置”层面的东西<br><br>模型有没有 <code>pad_token_id</code>，取决于 tokenizer / config。<br><br>比如：<br><br><pre><code class="language-python">tokenizer.pad_token
+tokenizer.pad_token_id
+model.config.pad_token_id</code></pre><br><br>如果没有，也可以经常手动设置成：<br><br><pre><code class="language-python">tokenizer.pad_token = tokenizer.eos_token
+model.config.pad_token_id = tokenizer.eos_token_id</code></pre><br><br>所以“有没有 pad token”是一个配置问题。<br><br>---<br><br>#### 2. “见过 padding”是训练数据分布问题<br><br>你引用的意思主要是这个。<br><br>Qwen 训练时：<br><br><pre><code class="language-text">batch_size = 4</code></pre><br><br>一个 batch 里有 4 条不同长度的样本。为了组成张量，框架会把它们 pad 到同样长度：<br><br><pre><code class="language-text">样本 A: [token token token token]
+样本 B: [pad   pad   token token]
+样本 C: [pad   token token token]
+样本 D: [token token token token]</code></pre><br><br>如果是 left-padding，短样本左边会补 pad。<br><br>所以 Qwen 的 LoRA 在训练时就经常遇到：<br><br><pre><code class="language-text">[PAD PAD PAD 正文正文正文]</code></pre><br><br>这种输入结构。<br><br>---<br><br>MedGemma 训练时：<br><br><pre><code class="language-text">batch_size = 1</code></pre><br><br>每次只处理一条样本，不需要和别的样本对齐长度，所以通常不会产生 padding：<br><br><pre><code class="language-text">[token token token token token]</code></pre><br><br>因此它的 LoRA 训练过程中可能从没见过：<br><br><pre><code class="language-text">[PAD PAD PAD 正文正文正文]</code></pre><br><br>推理时你如果突然给它 left-padding：<br><br><pre><code class="language-text">[PAD PAD PAD 问题内容]</code></pre><br><br>模型主体可能还能靠 attention mask 处理，但 LoRA 适配器的行为不一定稳定，尤其是如果 position_ids、attention_mask、pad_token_id、generation 取最后 token 的逻辑有问题，就可能输出异常或直接崩。<br><br>---<br><br>### 但这段说法有点简化<br><br>严格来说，<strong>只要 attention_mask、position_ids、pad_token_id 都处理正确，padding 理论上不应该严重影响有效 token 的输出。</strong><br><br>所以 MedGemma 出问题，不一定只是因为“LoRA 没见过 padding”。更常见的真实原因可能是：<br><br>1. <code>pad_token_id</code> 没设置，或者设置错了；<br>2. <code>pad_token</code> 被设成了不合适的 token；<br>3. left-padding 时 <code>position_ids</code> 没正确重算；<br>4. 推理代码用 <code>logits[:, -1, :]</code> 取最后位置，但最后位置可能不是有效 token；<br>5. attention mask 没正确传入；<br>6. 训练是 batch_size=1，无 padding，但推理 batch 推理时用了 padding，训练/推理分布不一致。<br><br>---<br><br>### 最直接的理解<br><br>这句话不是说：<br><br><pre><code class="language-text">Qwen 有 pad token，MedGemma 没有 pad token</code></pre><br><br>而是说：<br><br><pre><code class="language-text">Qwen 的 LoRA 训练时见过 padding；
+MedGemma 的 LoRA 训练时没见过 padding；
+所以 MedGemma 推理时突然 left-padding，可能更容易出问题。</code></pre><br><br>不过我会更谨慎地说：<strong>真正要查的是 pad_token_id、attention_mask、position_ids 和推理取 logits 的逻辑，而不是简单归因于“MedGemma 没有 pad token”。</strong></div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:14:30</span>
+                </div>
+                <div class="message-content">所以就是medgemma的适配器有问题，训练有问题？</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:14:33</span>
+                </div>
+                <div class="message-content">不一定能直接说“MedGemma 的适配器有问题、训练有问题”。<br><br>更准确是：<br><br><strong>MedGemma 的 LoRA 适配器本身未必坏了，但它的训练条件和推理条件不一致，导致推理时暴露出问题。</strong><br><br>你可以这样理解：<br><br><pre><code class="language-text">训练时：
+MedGemma LoRA 只见过无 padding 的单条样本
+
+推理时：
+突然给它 batch 推理 + left-padding
+
+结果：
+输入分布变了，LoRA 可能不稳，或者推理代码处理 padding 的逻辑有 bug</code></pre><br><br>所以问题可能在三个层面：<br><br>### 1. 不是 LoRA “坏了”，而是没适应这种输入格式<br><br>如果训练时一直是：<br><br><pre><code class="language-text">[正文 token token token]</code></pre><br><br>推理时突然变成：<br><br><pre><code class="language-text">[PAD PAD PAD 正文 token token token]</code></pre><br><br>这属于<strong>训练/推理分布不一致</strong>。<br><br>这不等于适配器坏了，但说明它对 padding 场景没有鲁棒性。<br><br>---<br><br>### 2. 训练也不一定“错了”<br><br><code>batch_size=1</code> 本身不是错。大模型显存不够时很常见。<br><br>但风险是：模型没有在训练中见过 padding。如果你推理时又必须 batch 推理，就最好训练时也模拟这种场景，比如：<br><br><pre><code class="language-text">batch_size &gt; 1
+gradient_accumulation
+packing=False
+padding=True</code></pre><br><br>或者至少让训练 collator 产生 padding。<br><br>所以更准确地说：<br><br><strong>训练没有错，但训练方式没有覆盖推理时会遇到的 padding 场景。</strong><br><br>---<br><br>### 3. 更常见的是推理 padding 逻辑有问题<br><br>尤其要查这些：<br><br><pre><code class="language-python">tokenizer.pad_token
+tokenizer.pad_token_id
+model.config.pad_token_id
+attention_mask
+position_ids
+tokenizer.padding_side</code></pre><br><br>MedGemma 出问题时，我会优先怀疑：<br><br><pre><code class="language-text">pad_token_id 没设好
+attention_mask 没传对
+left-padding 后 position_ids 没处理好
+推理时取 logits 的位置错了</code></pre><br><br>而不是马上断言：<br><br><pre><code class="language-text">LoRA 适配器训练坏了</code></pre><br><br>---<br><br>### 我的判断<br><br>可以说：<br><br><strong>MedGemma 这个 LoRA 适配器对 padding 不鲁棒，训练和推理不一致。</strong><br><br>但不建议说：<br><br><strong>MedGemma 适配器坏了。</strong><br><br>更不建议简单说：<br><br><strong>MedGemma 训练有问题。</strong><br><br>最准确的说法是：<br><br>&gt; MedGemma 的 LoRA 是在 batch_size=1、无 padding 场景下训练出来的；如果推理时使用 left-padding batch 推理，就可能出现分布不一致。这个问题可能来自 LoRA 没见过 padding，也可能来自 pad_token、attention_mask、position_ids 或 generation 逻辑配置不正确。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:16:05</span>
+                </div>
+                <div class="message-content">那怎么办</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:16:08</span>
+                </div>
+                <div class="message-content">先把问题拆成两类：临时止血和长期修正。临时目标是让推理别崩；长期目标是让 LoRA 在训练时也见过和推理一致的 padding。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:16:31</span>
+                </div>
+                <div class="message-content">建议按这个顺序处理：<br><br>## 1. 先止血：MedGemma 推理先别 batch<br><br>最稳的做法是：<br><br><pre><code class="language-text">MedGemma 推理 batch_size=1
+不要 left-padding
+一条一条跑</code></pre><br><br>这不是最高效，但能最快验证问题是不是 padding 引起的。<br><br>如果这样正常，而 batch 推理崩，就基本说明问题在：<br><br><pre><code class="language-text">batch padding / attention_mask / position_ids / pad_token_id / generation 逻辑</code></pre><br><br>不是模型完全坏了。<br><br>---<br><br>## 2. 检查 pad 配置<br><br>先打印：<br><br><pre><code class="language-python">print(tokenizer.pad_token)
+print(tokenizer.pad_token_id)
+print(model.config.pad_token_id)
+print(tokenizer.eos_token)
+print(tokenizer.eos_token_id)
+print(tokenizer.padding_side)</code></pre><br><br>如果 <code>pad_token_id</code> 是 <code>None</code>，先补上：<br><br><pre><code class="language-python">tokenizer.pad_token = tokenizer.eos_token
+model.config.pad_token_id = tokenizer.eos_token_id
+model.generation_config.pad_token_id = tokenizer.eos_token_id</code></pre><br><br>然后推理时必须传：<br><br><pre><code class="language-python">inputs = tokenizer(
+    texts,
+    return_tensors="pt",
+    padding=True,
+    truncation=True
+).to(model.device)
+
+outputs = model.generate(
+    **inputs,
+    max_new_tokens=512,
+    pad_token_id=tokenizer.pad_token_id,
+    eos_token_id=tokenizer.eos_token_id,
+)</code></pre><br><br>---<br><br>## 3. decoder-only 模型批量生成时，通常还是应该 left-padding<br><br>不要因为 MedGemma left-padding 崩，就马上改成 right-padding。<br><br>Hugging Face 对 decoder-only LLM 的建议是：批量生成时输入长度不同，需要 padding，而这类模型不是训练来“从 pad token 后继续生成”的，所以要 left-padding，并且要传 <code>attention_mask</code>。citeturn598907search0<br><br>所以推理时一般应当是：<br><br><pre><code class="language-python">tokenizer.padding_side = "left"</code></pre><br><br>而不是：<br><br><pre><code class="language-python">tokenizer.padding_side = "right"</code></pre><br><br>如果 left-padding 崩，应该修配置或训练方式，而不是简单换 right-padding。<br><br>---<br><br>## 4. 如果必须 batch 推理：重新训练或补训 LoRA<br><br>你这个情况最合理的长期方案是：<br><br>&gt; 让 MedGemma 的 LoRA 在训练阶段也见过 padding。<br><br>但注意，<code>gradient_accumulation_steps</code> 不能解决这个问题。它只是累积梯度，不会让单个 micro-batch 里出现多条不同长度样本。<br><br>更有用的是下面几种：<br><br>### 方案 A：把训练 micro batch 提到 2 或以上<br><br>例如：<br><br><pre><code class="language-bash">--per_device_train_batch_size 2
+--gradient_accumulation_steps 8
+--padding_side left</code></pre><br><br>ms-swift 文档里也明确有 <code>padding_side</code> 参数，训练 <code>batch_size &gt;= 2</code> 时生效，可选 <code>left</code> 或 <code>right</code>，默认是 <code>right</code>。citeturn332398search2<br><br>如果推理用 left-padding，训练也尽量用：<br><br><pre><code class="language-bash">--padding_side left</code></pre><br><br>这样训练/推理一致。<br><br>### 方案 B：如果 27B 放不下 batch_size=2，就做“人为 padding 训练”<br><br>即使 <code>batch_size=1</code>，也可以在 collator 里把每条样本随机 left-pad 到更长长度，让 LoRA 见过这种结构：<br><br><pre><code class="language-text">[PAD PAD PAD 正文 token token token]</code></pre><br><br>关键是：<br><br><pre><code class="language-text">attention_mask: PAD 位置是 0
+labels: PAD 位置是 -100</code></pre><br><br>这可以模拟 batch padding，不一定非要真实 batch_size&gt;1。<br><br>### 方案 C：降低显存压力后再 batch_size=2<br><br>可以考虑：<br><br><pre><code class="language-text">缩短 max_length
+开启 gradient checkpointing
+用 QLoRA / 4bit
+只训更少 LoRA target modules
+降低图像分辨率或限制 image token 数
+用 ZeRO / FSDP / 多卡</code></pre><br><br>目标不是追求大 batch，而是让每个训练 step 里真实出现 padding。<br><br>---<br><br>## 5. 我会怎么排查<br><br>按优先级：<br><br><pre><code class="language-text">第一步：MedGemma batch_size=1 推理，不 padding
+如果正常，说明模型/LoRA基本没坏
+
+第二步：batch 推理 + left-padding + attention_mask
+如果崩，检查 pad_token_id / position_ids / generate 参数
+
+第三步：相同 batch 里放两条等长输入
+如果等长不崩、不同长崩，基本就是 padding 问题
+
+第四步：重新补训 LoRA，让训练也使用 left-padding</code></pre><br><br>---<br><br>## 结论<br><br>你现在最稳妥的做法是：<br><br><pre><code class="language-text">临时：MedGemma 推理 batch_size=1，避免 padding
+长期：补训/重训 LoRA，让训练阶段也见过 left-padding</code></pre><br><br>不要简单判断“MedGemma 适配器坏了”。更准确是：<br><br>&gt; 这个 MedGemma LoRA 是在无 padding 条件下训出来的，但你现在推理给了它 left-padding batch 输入，训练/推理不一致。要么推理避开 padding，要么训练时补上 padding 场景。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 09:19:52</span>
+                </div>
+                <div class="message-content">第一步试过了，正常。但是很慢啊</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:19:55</span>
+                </div>
+                <div class="message-content">既然单条推理正常，问题已经很清楚了：不是 LoRA 完全坏，而是“批量不同长度 + padding”这条路径不稳。接下来要在速度和稳定性之间折中。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:20:15</span>
+                </div>
+                <div class="message-content">可以先不用重训。最值得先试的是“长度分桶批量推理”：让同一个 batch 里的样本长度尽量接近，padding 很少，速度会比纯 batch=1 好很多，风险也低。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 09:20:15</span>
+                </div>
+                <div class="message-content">对，<strong>batch_size=1 正常但慢</strong>，现在最现实的做法不是继续单条跑，而是换成下面这几种方案。<br><br>## 先别做的事<br><br>不要盲目改成 <code>right-padding</code>。<br><br>MedGemma/Gemma 这类 decoder-only LLM 做批量生成时，Hugging Face 官方文档建议用 <code>left-padding</code>，因为模型不是训练来“从 pad token 后面继续生成”的；tokenizer 会返回 <code>input_ids</code> 和 <code>attention_mask</code>，但 padding 方向仍然会影响生成逻辑。citeturn247537search3<br><br>所以问题不是：<br><br><pre><code class="language-text">left-padding 一定错</code></pre><br><br>而是：<br><br><pre><code class="language-text">你的 MedGemma LoRA / 推理链路对 left-padding 不稳</code></pre><br><br>---<br><br>## 方案 1：长度分桶 batch，最推荐先试<br><br>不要把长短差很多的样本放进同一个 batch。<br><br>比如不要这样：<br><br><pre><code class="language-text">batch 1:
+样本 A: 100 tokens
+样本 B: 1800 tokens
+样本 C: 230 tokens
+样本 D: 1600 tokens</code></pre><br><br>这样短样本会被 pad 很多。<br><br>改成这样：<br><br><pre><code class="language-text">batch 1:
+样本 A: 100 tokens
+样本 B: 120 tokens
+样本 C: 140 tokens
+样本 D: 160 tokens
+
+batch 2:
+样本 E: 1500 tokens
+样本 F: 1600 tokens
+样本 G: 1700 tokens
+样本 H: 1800 tokens</code></pre><br><br>这样 padding 很少，速度比 <code>batch_size=1</code> 快很多，也比乱 batch 稳定。<br><br>简单写法：<br><br><pre><code class="language-python">def bucket_by_length(texts, tokenizer, batch_size=4):
+    items = []
+    for text in texts:
+        ids = tokenizer(text, add_special_tokens=True)["input_ids"]
+        items.append((len(ids), text))
+
+    items.sort(key=lambda x: x[0])
+
+    batches = []
+    for i in range(0, len(items), batch_size):
+        batch = [x[1] for x in items[i:i + batch_size]]
+        batches.append(batch)
+
+    return batches</code></pre><br><br>推理：<br><br><pre><code class="language-python">tokenizer.padding_side = "left"
+tokenizer.pad_token = tokenizer.eos_token
+model.config.pad_token_id = tokenizer.eos_token_id
+model.generation_config.pad_token_id = tokenizer.eos_token_id
+
+for batch_texts in bucket_by_length(texts, tokenizer, batch_size=4):
+    inputs = tokenizer(
+        batch_texts,
+        return_tensors="pt",
+        padding=True,
+        truncation=True,
+    ).to(model.device)
+
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=512,
+        pad_token_id=tokenizer.pad_token_id,
+        eos_token_id=tokenizer.eos_token_id,
+    )</code></pre><br><br>这个方案适合你现在的情况：<strong>不用重训，先把速度拉回来一部分。</strong><br><br>---<br><br>## 方案 2：先测“等长 batch”能不能跑<br><br>你需要做一个很关键的小实验。<br><br>### 实验 A：两条完全相同输入 batch 推理<br><br><pre><code class="language-python">texts = [same_prompt, same_prompt]</code></pre><br><br>如果这个正常，说明：<br><br><pre><code class="language-text">batch 本身没问题
+不同长度 padding 才是问题</code></pre><br><br>### 实验 B：两条长度接近的输入 batch 推理<br><br><pre><code class="language-text">prompt A: 500 tokens
+prompt B: 530 tokens</code></pre><br><br>如果也正常，说明可以用长度分桶解决大部分速度问题。<br><br>### 实验 C：一长一短 batch 推理<br><br><pre><code class="language-text">prompt A: 100 tokens
+prompt B: 2000 tokens</code></pre><br><br>如果这个崩，那就非常明确：<br><br><pre><code class="language-text">padding 数量过多 / position_ids / attention_mask / LoRA 对 pad 不稳</code></pre><br><br>---<br><br>## 方案 3：用更强的推理引擎，比如 vLLM<br><br>如果你现在是裸 <code>transformers.generate()</code> 跑 27B，batch_size=1 慢很正常。<br><br>可以试 vLLM。vLLM 官方文档强调它支持 PagedAttention、continuous batching、chunked prefill 和 prefix caching，这些就是为高吞吐推理服务设计的。citeturn864127search1<br><br>而且 vLLM 也有 LoRA adapter 支持；官方文档说 LoRA adapters 可以用于实现了 <code>SupportsLoRA</code> 的 vLLM 模型，并且可以按请求高效服务。citeturn611608search1<br><br>但这里要谨慎：<strong>MedGemma 27B + LoRA + 多模态/文本模式是否完全兼容，要实测。</strong>MedGemma 是基于 Gemma 3 的医疗模型，Google 文档列出了 4B 多模态、27B 文本和 27B 多模态版本。citeturn955322search8<br><br>如果你用的是 <strong>MedGemma 27B text-only</strong>，vLLM 成功概率更高。  <br>如果你用的是 <strong>MedGemma 27B multimodal</strong>，要小心图像输入、processor、LoRA target modules 的兼容性。<br><br>---<br><br>## 方案 4：短补训 LoRA，让它见过 left-padding<br><br>如果你最终必须稳定 batch 推理，那最好做一次“padding 适应性补训”。<br><br>不一定要完整重训，可以继续训现有 LoRA 几百到几千 step，关键是训练时也用：<br><br><pre><code class="language-text">left-padding
+attention_mask 正确
+pad labels = -100</code></pre><br><br>目标不是让模型学新知识，而是让 LoRA 适应这种输入形态：<br><br><pre><code class="language-text">[PAD PAD PAD 正文 token token token]</code></pre><br><br>这个叫“补训鲁棒性”，不是从头重训。<br><br>---<br><br>## 方案 5：merge LoRA，排除 PEFT wrapper 问题<br><br>这个不一定解决 padding 问题，但值得测一下。<br><br><pre><code class="language-python">from peft import PeftModel
+
+model = PeftModel.from_pretrained(base_model, lora_path)
+model = model.merge_and_unload()
+model.eval()</code></pre><br><br>如果 merge 后 batch 推理正常，说明可能是 PEFT/LoRA wrapper 推理链路的问题。<br><br>如果 merge 后还是崩，那就是模型数学上对这个 padding 分布不稳，或者 tokenizer / position_ids / attention_mask 仍有问题。<br><br>---<br><br>## 我建议你现在按这个顺序做<br><br><pre><code class="language-text">1. 测相同输入 batch=2
+2. 测长度接近的 batch=2 / batch=4
+3. 上长度分桶 batch 推理
+4. 如果还慢，试 vLLM
+5. 如果必须长期稳定 batch，补训 LoRA 见 left-padding</code></pre><br><br>你的临时生产方案应该是：<br><br><pre><code class="language-text">MedGemma 不要随机组 batch
+改成按 token 长度分桶
+batch_size 从 2 开始试
+能稳再升到 4</code></pre><br><br>这比一直 <code>batch_size=1</code> 实际多了。单条正常说明模型没废；现在要做的是<strong>别让 padding 场景把它打爆</strong>。</div>
+            </div>
+            <div class="message user">
+                <div class="message-header">
+                    <span class="role-icon">👤</span>User<span class="timestamp">2026/5/25 15:29:51</span>
+                </div>
+                <div class="message-content">我决定重新微调。有办法让swift的lora适配medgemma吗</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 15:29:55</span>
+                </div>
+                <div class="message-content">可以重新微调，而且方向应该改成“训练时就模拟你实际推理的 padding 形态”。我会按 ms-swift 能落地的配置思路来讲：先确认 MedGemma/Gemma 的 LoRA 支持，再给一套训练配置和排查点。</div>
+            </div>
+            <div class="message assistant">
+                <div class="message-header">
+                    <span class="role-icon">🤖</span>Assistant<span class="timestamp">2026/5/25 15:30:27</span>
+                </div>
+                <div class="message-content">可以。<strong>ms-swift 现在本身支持 MedGemma/Gemma 3 系列</strong>，关键不是“能不能 LoRA”，而是你这次要把训练条件改成和推理一致：<strong>训练时就用 left-padding + micro-batch 内真实有多条不同长度样本</strong>。<br><br>ms-swift 支持的模型表里已经列了 <code>google/medgemma-27b-text-it</code>，模型类型是 <code>gemma3_text</code>；也列了 <code>google/medgemma-4b-it</code>、<code>google/medgemma-27b-it</code> 等多模态版本，模型类型是 <code>gemma3_vision</code>，并要求 <code>transformers&gt;=4.49</code>。citeturn735492view0turn735492view1<br><br>## 你这次微调的核心配置<br><br>重点是这几个参数：<br><br><pre><code class="language-bash">--per_device_train_batch_size 2
+--padding_side left
+--packing false
+--padding_free false
+--group_by_length false</code></pre><br><br>解释一下：<br><br><code>--padding_side left</code> 很关键。ms-swift 文档明确说，训练时 <code>batch_size &gt;= 2</code> 时这个参数才生效；并且推理时如果 <code>batch_size &gt;= 2</code>，只会使用 left-padding。citeturn532574view0<br><br><code>--per_device_train_batch_size 2</code> 也很关键。<strong>注意不是 total batch size &gt;= 2，而是每张卡上的 micro-batch 要 &gt;= 2。</strong>因为 padding 是在每个 dataloader batch 内发生的。<code>gradient_accumulation_steps</code> 只能累积梯度，不能让单个 micro-batch 里出现 padding。ms-swift 文档里也说明 total batch 是由 <code>per_device_train_batch_size * gradient_accumulation_steps * world_size</code> 算出来的，但这不等于 micro-batch 里有多条样本。citeturn553341view2<br><br><code>--packing false</code> / <code>--padding_free false</code> 是为了<strong>不要绕开 padding</strong>。ms-swift 的 <code>padding_free</code> 和 <code>packing</code> 都是为了减少或避免 padding、提高训练效率；但你这次的目标正好相反：让 LoRA 见过 padding。citeturn553341view1<br><br>---<br><br>## 推荐命令：MedGemma 27B text-only<br><br>如果你用的是 <code>google/medgemma-27b-text-it</code>，可以按这个方向：<br><br><pre><code class="language-bash">CUDA_VISIBLE_DEVICES=0,1,2,3 \
+swift sft \
+  --model google/medgemma-27b-text-it \
+  --train_type lora \
+  --dataset /path/to/train.jsonl \
+  --val_dataset /path/to/val.jsonl \
+  --torch_dtype bfloat16 \
+  --quant_method bnb \
+  --quant_bits 4 \
+  --bnb_4bit_quant_type nf4 \
+  --bnb_4bit_compute_dtype bfloat16 \
+  --per_device_train_batch_size 2 \
+  --per_device_eval_batch_size 2 \
+  --gradient_accumulation_steps 8 \
+  --padding_side left \
+  --packing false \
+  --padding_free false \
+  --group_by_length false \
+  --max_length 2048 \
+  --truncation_strategy delete \
+  --learning_rate 1e-4 \
+  --lora_rank 16 \
+  --lora_alpha 32 \
+  --lora_dropout 0.05 \
+  --target_modules q_proj k_proj v_proj o_proj gate_proj up_proj down_proj \
+  --gradient_checkpointing true \
+  --save_steps 200 \
+  --eval_steps 200 \
+  --save_total_limit 3 \
+  --num_train_epochs 2 \
+  --output_dir output/medgemma27b_lora_leftpad</code></pre><br><br>ms-swift 的 LoRA 参数包括 <code>lora_rank</code>、<code>lora_alpha</code>、<code>lora_dropout</code>，默认分别是 8、32、0.05；<code>target_modules</code> 默认是 <code>all-linear</code>，也可以显式指定 <code>q_proj/k_proj/v_proj/o_proj/gate_proj/up_proj/down_proj</code> 这些模块。citeturn229242view0turn229242view1<br><br>---<br><br>## 如果 27B 还是塞不下 batch_size=2<br><br>那就按这个顺序降显存：<br><br>### 1. 先降 <code>max_length</code><br><br>比如从：<br><br><pre><code class="language-bash">--max_length 2048</code></pre><br><br>降到：<br><br><pre><code class="language-bash">--max_length 1536</code></pre><br><br>甚至：<br><br><pre><code class="language-bash">--max_length 1024</code></pre><br><br>你当前问题是 padding 适配，不是追求最长上下文。先让 micro-batch 能到 2，比长上下文更重要。<br><br>### 2. 保持 QLoRA<br><br>也就是：<br><br><pre><code class="language-bash">--quant_method bnb
+--quant_bits 4</code></pre><br><br>ms-swift 当前参数里，加载量化模型用 <code>quant_method</code> 和 <code>quant_bits</code>，4-bit BNB 还可以设置 <code>bnb_4bit_compute_dtype</code> 和 <code>bnb_4bit_quant_type</code>。citeturn553341view0<br><br>### 3. 用多卡 ZeRO<br><br>比如：<br><br><pre><code class="language-bash">--deepspeed zero2</code></pre><br><br>或者显存更紧张时：<br><br><pre><code class="language-bash">--deepspeed zero3</code></pre><br><br>ms-swift 支持内置 DeepSpeed 配置，包括 <code>zero0/zero1/zero2/zero3/zero2_offload/zero3_offload</code>。citeturn553341view2<br><br>### 4. 还不行，就只能自定义 collator<br><br>如果你无论如何只能：<br><br><pre><code class="language-bash">--per_device_train_batch_size 1</code></pre><br><br>那标准 collator 下还是不会产生 padding。此时要做一个自定义数据处理/插件：<strong>即使单条样本，也随机 left-pad 到更长长度</strong>。<br><br>目标是构造这种训练输入：<br><br><pre><code class="language-text">[PAD PAD PAD PAD 正文 token token token]</code></pre><br><br>同时保证：<br><br><pre><code class="language-text">attention_mask: PAD 位置为 0
+labels: PAD 位置为 -100</code></pre><br><br>这个方案比 batch_size=2 麻烦，但本质上可以解决“LoRA 没见过 left-padding”的问题。<br><br>---<br><br>## 多模态 MedGemma 的注意点<br><br>如果你用的是：<br><br><pre><code class="language-bash">google/medgemma-27b-it</code></pre><br><br>而不是：<br><br><pre><code class="language-bash">google/medgemma-27b-text-it</code></pre><br><br>那它是 <code>gemma3_vision</code> 类型。ms-swift 文档里对多模态 LoRA 有个重要行为：<code>target_modules='all-linear'</code> 时，默认 LoRA 主要加在 LLM 部分；<code>freeze_vit</code> 和 <code>freeze_aligner</code> 默认会影响视觉塔和对齐层是否加 LoRA。citeturn229242view1<br><br>如果你的任务是纯文本 checker，我建议直接用：<br><br><pre><code class="language-bash">google/medgemma-27b-text-it</code></pre><br><br>不要用多模态版。少一层 processor / image token / vision tower 复杂度，padding 问题更容易收敛。<br><br>---<br><br>## 训练后必须做的验证<br><br>重新训完不要直接上全量推理，先测这三个：<br><br><pre><code class="language-python"># 1. 单条
+[prompt_a]
+
+# 2. 两条等长
+[prompt_a, prompt_a]
+
+# 3. 两条不同长度，left-padding
+[short_prompt, long_prompt]</code></pre><br><br>第三个正常，才说明这次 LoRA 真的适配了 batch left-padding。<br><br>## 结论<br><br>可以让 swift 的 LoRA 适配 MedGemma。你这次最关键的不是换模型，而是训练命令里必须做到：<br><br><pre><code class="language-bash">--per_device_train_batch_size 2
+--padding_side left
+--packing false
+--padding_free false</code></pre><br><br>并且推理也保持：<br><br><pre><code class="language-python">tokenizer.padding_side = "left"</code></pre><br><br>这才是训练/推理一致。否则你重新训一遍，但还是 <code>batch_size=1</code> 无 padding，问题大概率还会复现。</div>
+            </div></div></div></body></html>
